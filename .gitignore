@@ -1,0 +1,13 @@
+tmp/
+.ssh/
+*.bak
+*.log
+*.swp
+*.tar
+*.tmp
+*.zip
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store

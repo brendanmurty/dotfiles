@@ -1,0 +1,39 @@
+[user]
+	name = Brendan Murty
+	email = b@murty.io
+[color]
+	ui = true
+[color "branch"]
+	current = green
+	local = blue
+	remote = red
+[color "diff"]
+	meta = yellow
+	frag = magenta
+	old = red bold
+	new = green
+[color "status"]
+	added = green
+	changed = green
+	untracked = red
+[color "diff"]
+	whitespace = red reverse
+[core]
+	autocrlf = true
+	editor = "vim"
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[push]
+	default = simple
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	ai = add -i
+	ap = add -p
+	rb = rebase -i
+	ci = commit --verbose
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(green)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit --date=relative
+	ll = !git log --stat
+        sync = "!f(){ local branch=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e \"s/* \\(.*\\)/\\1/\"`; git pull origin $branch && git push origin $branch; }; f"

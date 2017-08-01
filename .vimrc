@@ -15,10 +15,10 @@ set visualbell
 
 syntax on
 colorscheme desert
-highlight Comment         ctermfg=DarkGrey guifg=#444444
-highlight StatusLineNC    ctermfg=Black ctermbg=DarkGrey cterm=bold
-highlight StatusLine      ctermbg=Black ctermfg=LightGrey
-highlight LineNr          ctermbg=Black ctermfg=DarkGrey
+highlight Comment         ctermfg=DarkGrey  guifg=#444444
+highlight StatusLineNC    ctermfg=Black     ctermbg=DarkGrey    cterm=bold
+highlight StatusLine      ctermbg=Black     ctermfg=LightGrey
+highlight LineNr          ctermbg=Black     ctermfg=DarkGrey
 
 " Text formatting
 
@@ -40,3 +40,4 @@ set smartcase
 
 set list listchars=trail:.,tab:>.
 highlight SpecialKey ctermfg=DarkGray ctermbg=Black
+

@@ -14,7 +14,7 @@ set visualbell
 " Syntax highlighting
 
 syntax on
-colorscheme desert
+colorscheme base16-default-dark
 highlight Comment         ctermfg=DarkGrey  guifg=#444444
 highlight StatusLineNC    ctermfg=Black     ctermbg=DarkGrey    cterm=bold
 highlight StatusLine      ctermbg=Black     ctermfg=LightGrey

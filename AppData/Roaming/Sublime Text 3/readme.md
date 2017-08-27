@@ -4,7 +4,7 @@ Here are the contents of my [Sublime Text 3](http://sublimetext.com/3) packages 
 
 To use this configuration in your installation of Sublime Text, start by [installing Package Control](https://packagecontrol.io/installation).
 
-Then [download this repository](https://github.com/brendanmurty/sublime-text-configuration/archive/master.zip) and copy all the files in the ZIP to your computer:
+Then copy all the files in this folder to your computer:
 
 - Windows: `%APPDATA%\Sublime Text 3`
 - OS X: `~/Library/Application Support/Sublime Text 3`

@@ -1,0 +1,22 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_dependencies":
+	[
+		"0_package_control_loader",
+		"bz2"
+	],
+	"installed_packages":
+	[
+		"Dayle Rees Color Schemes",
+		"Material Theme",
+		"Markdown Preview",
+		"Package Control",
+		"Path Tools",
+		"PhpDoc",
+		"Sass",
+		"SideBarEnhancements",
+		"Smarty"
+	]
+}

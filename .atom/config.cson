@@ -1,0 +1,73 @@
+"*":
+  "atom-material-ui":
+    colors:
+      abaseColor: "#2b2f38"
+      accentColor: "#009688"
+    fonts:
+      fontSize: 18
+    tabs:
+      compactTabs: true
+      tintedTabBar: true
+    treeView:
+      blendTabs: true
+    ui:
+      panelContrast: true
+      panelShadows: true
+  core:
+    allowPendingPaneItems: false
+    audioBeep: false
+    autoHideMenuBar: true
+    disabledPackages: [
+      "bracket-matcher"
+      "metrics"
+      "spell-check"
+      "language-gfm"
+      "wrap-guide"
+      "deprecation-cop"
+      "autocomplete-plus"
+      "autocomplete-snippets"
+      "autosave"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "atom-material-ui"
+      "one-dark-syntax"
+    ]
+  editor:
+    fontFamily: "Hack"
+    fontSize: 19
+    invisibles: {}
+    preferredLineLength: 100
+    showIndentGuide: true
+    showLineNumbers: false
+    softWrap: true
+    tabLength: 2
+    tabType: "soft"
+  "file-types":
+    cfg: "source.shell"
+    gpx: "text.html.php"
+  "git-diff":
+    showIconsInEditorGutter: true
+  "line-ending-selector":
+    defaultLineEnding: "LF"
+  welcome:
+    showOnStartup: false
+".html.php.text":
+  editor:
+    tabLength: 4
+".js.source":
+  editor:
+    tabLength: 4
+".php.source":
+  editor:
+    tabLength: 4
+".plain.text":
+  editor:
+    preferredLineLength: 100
+    tabLength: 4
+".python.source":
+  editor:
+    tabLength: 4
+".source.vbs":
+  editor:
+    tabLength: 4

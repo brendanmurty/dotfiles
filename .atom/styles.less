@@ -1,0 +1,126 @@
+// Set a consistent font for the main editor UI elements
+
+.command-palette,
+.command-palette atom-text-editor,
+.command-palette .error-message,
+.config-menu,
+.encoding-selector,
+.find-and-replace,
+.fuzzy-finder,
+.fuzzy-finder atom-text-editor,
+.fuzzy-finder .error-message,
+.grammar-selector,
+.panel-heading,
+.project-find,
+.release-notes,
+.results-view,
+.setting-description,
+.settings-view .alert,
+.settings-view .text,
+.status-bar,
+.tab-bar .tab .title,
+.tree-view,
+.font-size-regular .tree-view .list-item {
+  font-family: "Hack";
+  font-size: 12px;
+}
+
+// Make items in the Command Palette list higher if they don't fit horizontally
+
+.command-palette .list-group li {
+  white-space: normal;
+}
+
+// Ensure settings dropdown options are coloured correctly
+
+.settings-view .form-control option {
+  color: inherit;
+}
+
+// Make tabs wider and use the standard cursor
+
+.tab-bar .tab {
+  cursor: auto;
+  max-width: 14rem;
+}
+
+// Tweak the sidebar folder list
+
+.list-tree .list-item {
+  line-height: 2.8em !important;
+}
+
+// Consistent spacing between tree view icons and their names
+
+.tree-view .name.icon::before {
+  margin-right: 1rem !important;
+}
+
+// Customise the colour of the cursor
+
+atom-text-editor .cursor {
+  border-color: #009688;
+}
+
+// Fix the broken positioning of icons on Windows
+
+.platform-win32 atom-workspace.theme-atom-material-ui .tab-bar .tab .title:before {
+  top: auto;
+}
+
+// Add some padding to the main text area
+
+atom-text-editor {
+  padding: 5px;
+}
+
+// Make the main text area, empty main areas, tree view and scrollbar background darker
+
+atom-text-editor:not(.mini),
+atom-pane-container atom-pane .item-views,
+.panel-contrast .tree-view,
+.panel-left ::-webkit-scrollbar-track {
+  background-color: #060708 !important;
+}
+
+// Make the footer, tab bar and project header use a dark grey background
+
+atom-panel.footer status-bar,
+.tinted-tab-bar .active .tab-bar,
+.panel-contrast .tabBlender {
+  background-color: #111 !important;
+}
+
+// Improve the display of the status bar
+
+atom-panel.footer status-bar {
+  height: 32px;
+  line-height: 32px;
+}
+
+// Remove panel borders
+
+.tool-panel.bottom,
+atom-panel.bottom,
+.tool-panel.footer,
+atom-panel.footer,
+.tool-panel.panel-bottom,
+atom-panel.panel-bottom,
+.tool-panel.panel-footer,
+atom-panel.panel-footer {
+  border: none !important;
+}
+
+// Hide panel toggle buttons
+
+.atom-dock-toggle-button {
+  display: none !important
+}
+
+// Make completed task lines in Markdown and TodoTXT consistent
+
+atom-text-editor .syntax--md.syntax--completed,
+atom-text-editor .syntax--todotxt.syntax--comment {
+  color: #666;
+  font-style: normal;
+}

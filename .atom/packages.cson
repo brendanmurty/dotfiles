@@ -1,0 +1,14 @@
+'packages': [
+  'atom-material-ui'
+  'file-types'
+  'highlight-selected'
+  'language-diff'
+  'language-htaccess'
+  'language-markdown'
+  'language-smarty'
+  'language-todotxt'
+  'language-vbscript'
+  'markdown-pdf'
+  'set-syntax'
+  'seti-icons'
+]

@@ -1,14 +1,21 @@
 # Atom
 
-.apm
-.node-gyp
-.npm
-blob-store
-compile-cache
-dev
-packages
-recovery
-storage
+.atom/.apm
+.atom/.node-gyp
+.atom/.npm
+.atom/blob-store
+.atom/compile-cache
+.atom/dev
+.atom/packages
+.atom/recovery
+.atom/storage
+
+# Sublime Text
+
+*.sublime-license
+*.last-run
+*.cache
+Package Control.cache/
 
 # Windows
 

@@ -1,13 +1,40 @@
-tmp/
-.ssh/
-*.bak
-*.log
-*.swp
-*.tar
-*.tmp
-*.zip
+# Atom
+
+.apm
+.node-gyp
+.npm
+blob-store
+compile-cache
+dev
+packages
+recovery
+storage
+
+# Windows
+
+AppData
+Desktop
+Favorites
+Favourites
 Thumbs.db
 ehthumbs.db
+ehthumbs_vista.db
 Desktop.ini
 $RECYCLE.BIN/
-.DS_Store
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# Mac OS
+
+*.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# General
+
+tmp/
+.ssh/

@@ -1,0 +1,12 @@
+{
+    "editor.fontSize": 18,
+    "editor.fontFamily": "Hack",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.lineNumbers": "off",
+    "editor.wordWrap": true,
+    "editor.quickSuggestionsDelay": 500,
+    "editor.folding": false,
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": false
+}

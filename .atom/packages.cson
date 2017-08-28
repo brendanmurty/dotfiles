@@ -1,5 +1,6 @@
 'packages': [
   'atom-material-ui'
+  'click-link'
   'file-types'
   'highlight-selected'
   'language-diff'

@@ -37,7 +37,7 @@
     fontFamily: "Hack"
     fontSize: 19
     invisibles: {}
-    preferredLineLength: 100
+    preferredLineLength: 110
     showIndentGuide: true
     showLineNumbers: false
     softWrap: true
@@ -71,3 +71,6 @@
 ".source.vbs":
   editor:
     tabLength: 4
+".text.todotxt":
+  editor:
+    softWrapAtPreferredLineLength: true

@@ -63,7 +63,6 @@
     tabLength: 4
 ".plain.text":
   editor:
-    preferredLineLength: 100
     tabLength: 4
 ".python.source":
   editor:

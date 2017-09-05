@@ -1,6 +1,7 @@
 'packages': [
   'atom-material-ui'
   'click-link'
+  'file-icons'
   'file-types'
   'highlight-selected'
   'language-diff'
@@ -11,5 +12,4 @@
   'language-vbscript'
   'markdown-pdf'
   'set-syntax'
-  'seti-icons'
 ]

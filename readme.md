@@ -1,6 +1,6 @@
 # Brendan Murty's dotfiles
 
-My configuration files for use in a Windows 10 development environment.
+Dotfiles for a Windows 10 development environment.
 
 ## Contents
 

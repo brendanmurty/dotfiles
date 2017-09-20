@@ -7,7 +7,14 @@
     "editor.wordWrap": "on",
     "editor.quickSuggestionsDelay": 500,
     "editor.folding": false,
+    "window.menuBarVisibility": "toggle",
+    "window.enableMenuBarMnemonics": true,
     "workbench.activityBar.visible": false,
-    "workbench.statusBar.visible": false,
+    "workbench.statusBar.visible": true,
+    "workbench.colorCustomizations": {
+        "statusBar.background" : "#1A1A1A",
+        "statusBar.noFolderBackground" : "#212121",
+        "statusBar.debuggingBackground": "#263238"
+    },
     "workbench.startupEditor": "newUntitledFile"
 }

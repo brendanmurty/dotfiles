@@ -8,5 +8,6 @@
     "editor.quickSuggestionsDelay": 500,
     "editor.folding": false,
     "workbench.activityBar.visible": false,
-    "workbench.statusBar.visible": false
+    "workbench.statusBar.visible": false,
+    "workbench.startupEditor": "newUntitledFile"
 }

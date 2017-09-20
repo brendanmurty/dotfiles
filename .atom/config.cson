@@ -37,7 +37,7 @@
     fontFamily: "Hack"
     fontSize: 19
     invisibles: {}
-    preferredLineLength: 110
+    preferredLineLength: 120
     showIndentGuide: true
     showLineNumbers: false
     softWrap: true
@@ -46,6 +46,7 @@
   "file-types":
     cfg: "source.shell"
     gpx: "text.html.php"
+    txt: "text.todotxt"
   "git-diff":
     showIconsInEditorGutter: true
   "line-ending-selector":

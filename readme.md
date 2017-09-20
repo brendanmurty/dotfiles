@@ -1,6 +1,6 @@
 # Brendan Murty's dotfiles
 
-User configuration files for Ubuntu 17.04 and Windows 10.
+My configuration files for use in a Windows 10 development environment.
 
 ## Contents
 

@@ -71,6 +71,9 @@
 ".source.vbs":
   editor:
     tabLength: 4
+".text.md":
+  editor:
+    softWrapAtPreferredLineLength: true
 ".text.todotxt":
   editor:
     softWrapAtPreferredLineLength: true

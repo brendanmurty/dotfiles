@@ -10,6 +10,7 @@
     "window.menuBarVisibility": "toggle",
     "window.enableMenuBarMnemonics": true,
     "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Material Theme",
     "workbench.statusBar.visible": true,
     "workbench.colorCustomizations": {
         "statusBar.background" : "#1A1A1A",

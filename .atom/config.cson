@@ -45,7 +45,6 @@
     tabType: "soft"
   "file-types":
     cfg: "source.shell"
-    gpx: "text.html.php"
     txt: "text.todotxt"
   "git-diff":
     showIconsInEditorGutter: true

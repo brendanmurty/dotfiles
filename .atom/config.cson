@@ -13,6 +13,8 @@
     ui:
       panelContrast: true
       panelShadows: true
+  "autocomplete-plus":
+    autoActivationDelay: 100
   core:
     allowPendingPaneItems: false
     audioBeep: false

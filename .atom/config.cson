@@ -21,11 +21,8 @@
       "bracket-matcher"
       "metrics"
       "spell-check"
-      "language-gfm"
       "wrap-guide"
       "deprecation-cop"
-      "autocomplete-plus"
-      "autocomplete-snippets"
       "autosave"
     ]
     telemetryConsent: "no"

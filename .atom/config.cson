@@ -32,6 +32,7 @@
       "atom-material-ui"
       "one-dark-syntax"
     ]
+    uriHandlerRegistration: "always"
   editor:
     fontFamily: "Hack"
     fontSize: 19

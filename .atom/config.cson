@@ -56,6 +56,10 @@
     phpExecutablePath: "C:/xampp/php/php"
     rules: "@PSR2"
     showInfoNotifications: false
+  tabs:
+    displayMruTabList: false
+    enableMruTabSwitching: false
+    enableVcsColoring: true
   welcome:
     showOnStartup: false
 ".html.php.text":

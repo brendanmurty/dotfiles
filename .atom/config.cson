@@ -49,6 +49,12 @@
     showIconsInEditorGutter: true
   "line-ending-selector":
     defaultLineEnding: "LF"
+  "php-cs-fixer":
+    executablePath: "C:/Users/brendan.murty/AppData/Roaming/Composer/vendor/friendsofphp/php-cs-fixer/php-cs-fixer"
+    executeOnSave: true
+    phpExecutablePath: "C:/xampp/php/php"
+    rules: "@PSR2"
+    showInfoNotifications: true
   welcome:
     showOnStartup: false
 ".html.php.text":

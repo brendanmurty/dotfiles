@@ -54,7 +54,7 @@
     executeOnSave: true
     phpExecutablePath: "C:/xampp/php/php"
     rules: "@PSR2"
-    showInfoNotifications: true
+    showInfoNotifications: false
   welcome:
     showOnStartup: false
 ".html.php.text":

@@ -11,5 +11,6 @@
   'language-todotxt'
   'language-vbscript'
   'markdown-pdf'
+  'php-cs-fixer'
   'set-syntax'
 ]

@@ -13,5 +13,6 @@
   'markdown-pdf'
   'pinned-tabs'
   'php-cs-fixer'
+  'pretty-json'
   'set-syntax'
 ]

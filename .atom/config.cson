@@ -15,6 +15,11 @@
       panelShadows: true
   "autocomplete-plus":
     autoActivationDelay: 100
+    scopeBlacklist: [
+      ".md.text"
+      ".text.todotxt"
+      ".text.plain"
+    ]
   core:
     allowPendingPaneItems: false
     audioBeep: false

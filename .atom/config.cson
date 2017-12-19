@@ -1,4 +1,10 @@
 "*":
+  "atom-clock":
+    dateFormat: "h:mma"
+    locale: "en-AU"
+    showClockIcon: true
+    showTooltip: true
+    tooltipDateFormat: "dddd, D MMM YYYY"
   "atom-material-ui":
     colors:
       abaseColor: "#2b2f38"

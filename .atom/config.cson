@@ -45,8 +45,8 @@
     ]
     uriHandlerRegistration: "always"
   editor:
-    fontFamily: "Hack"
-    fontSize: 19
+    fontFamily: "Fira Mono Regular"
+    fontSize: 20
     invisibles: {}
     preferredLineLength: 120
     showIndentGuide: true

@@ -71,6 +71,9 @@
     displayMruTabList: false
     enableMruTabSwitching: false
     enableVcsColoring: true
+  "tool-bar":
+    iconSize: "32px"
+    position: "Left"
   welcome:
     showOnStartup: false
 ".html.php.text":

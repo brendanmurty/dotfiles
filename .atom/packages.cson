@@ -5,6 +5,7 @@
   'docblockr'
   'file-icons'
   'file-types'
+  'flex-tool-bar'
   'highlight-selected'
   'language-diff'
   'language-htaccess'
@@ -16,4 +17,5 @@
   'php-cs-fixer'
   'pretty-json'
   'set-syntax'
+  'tool-bar'
 ]

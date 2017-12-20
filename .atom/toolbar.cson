@@ -1,0 +1,34 @@
+# Flex Tool Bar configuration
+# More information about this: https://atom.io/packages/flex-tool-bar
+[
+  {
+    type: "button"
+    icon: "file-text"
+    callback: "application:new-file"
+    tooltip: "New file"
+  }
+  {
+    type: "button"
+    icon: "file-directory"
+    callback: "application:open-file"
+    tooltip: "Open file"
+  }
+  {
+    type: "button"
+    icon: "file-symlink-directory"
+    callback: "fuzzy-finder:toggle-file-finder"
+    tooltip: "Fuzzy finder"
+  }
+  {
+    type: "button"
+    icon: "cloud-download"
+    callback: "core:save"
+    tooltip: "Save file"
+  }
+  {
+    type: "button"
+    icon: "code"
+    callback: "command-palette:toggle"
+    tooltip: "Command palette"
+  }
+]

@@ -80,15 +80,23 @@ atom-text-editor:not(.mini),
 atom-pane-container atom-pane .item-views,
 .panel-contrast .tree-view,
 .panel-left ::-webkit-scrollbar-track {
-  background-color: #060708 !important;
+  background-color: #0d0f12 !important;
 }
 
-// Make the footer, tab bar and project header use a dark grey background
+// Make the toolbar, footer, tab bar and project header background solid black
 
 atom-panel.footer status-bar,
 .tinted-tab-bar .active .tab-bar,
-.panel-contrast .tabBlender {
-  background-color: #111 !important;
+.panel-contrast .tabBlender,
+.amu-compact-tab-bar .tool-bar,
+.amu-panel-shadows .tool-bar.tool-bar-vertical .tool-bar-btn:first-child {
+  background-color: #000 !important;
+}
+
+// Line up the toolbar icons with the file tabs
+.amu-panel-shadows .tool-bar.tool-bar-vertical .tool-bar-btn {
+  height: 45px;
+  width: 45px;
 }
 
 // Improve the display of the status bar

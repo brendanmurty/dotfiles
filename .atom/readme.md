@@ -13,5 +13,5 @@ Here's how to use these settings in your own Atom installation:
 4. Close Atom
 5. Copy all files in this folder (besides `readme.md`, `packages.cson` and `screenshot.png`) to your *.atom* folder (`~/.atom` on Linux and Mac or `%USERPROFILE%\.atom` on Windows)
 6. Open Atom to use the new font, packages and configuration files
-7. Update the path for the PHP CS Fixer executable in the `php-cs-fixer > executablePath` section in [config.cson](config.cson)
+7. Update the path for the PHP executables in the `php-cs-fixer` section in [config.cson](config.cson)
 8. Restart Atom

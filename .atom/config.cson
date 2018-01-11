@@ -63,10 +63,9 @@
     defaultLineEnding: "LF"
   "php-cs-fixer":
     executablePath: "C:/Users/brendan.murty/AppData/Roaming/Composer/vendor/friendsofphp/php-cs-fixer/php-cs-fixer"
-    executeOnSave: true
-    phpExecutablePath: "C:/xampp/php/php"
+    phpExecutablePath: "C:/PHP/php.exe"
     rules: "@PSR2"
-    showInfoNotifications: false
+    showInfoNotifications: true
   tabs:
     displayMruTabList: false
     enableMruTabSwitching: false

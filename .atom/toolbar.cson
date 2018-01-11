@@ -31,4 +31,10 @@
     callback: "command-palette:toggle"
     tooltip: "Command palette"
   }
+  {
+    type: "button"
+    icon: "check"
+    callback: "php-cs-fixer:fix"
+    tooltip: "PHP CS Fixer"
+  }
 ]

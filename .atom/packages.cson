@@ -16,6 +16,7 @@
   'pinned-tabs'
   'php-cs-fixer'
   'pretty-json'
+  'rainglow'
   'set-syntax'
   'tool-bar'
 ]

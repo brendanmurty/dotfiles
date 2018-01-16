@@ -41,7 +41,7 @@
     telemetryConsent: "no"
     themes: [
       "atom-material-ui"
-      "one-dark-syntax"
+      "rainglow"
     ]
     uriHandlerRegistration: "always"
   editor:
@@ -66,6 +66,8 @@
     phpExecutablePath: "C:/PHP/php.exe"
     rules: "@PSR2"
     showInfoNotifications: true
+  rainglow:
+    SelectSyntax: "rainbow-contrast-rainglow-syntax"
   tabs:
     displayMruTabList: false
     enableMruTabSwitching: false

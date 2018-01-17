@@ -94,6 +94,7 @@ atom-panel.footer status-bar,
 }
 
 // Line up the toolbar icons with the file tabs
+
 .amu-panel-shadows .tool-bar.tool-bar-vertical .tool-bar-btn {
   height: 45px;
   width: 45px;
@@ -131,4 +132,20 @@ atom-text-editor .syntax--md.syntax--completed,
 atom-text-editor .syntax--todotxt.syntax--comment {
   color: #666;
   font-style: normal;
+}
+
+// Improve the display of code comments
+
+.syntax--comment,
+.syntax--comment .syntax--class,
+.syntax--comment .syntax--keyword,
+.syntax--comment .syntax--punctuation {
+  color: #627288;
+}
+
+// Improve the display of selected content
+
+atom-text-editor .find-result .region,
+atom-text-editor .selection .region {
+  background-color: #222830;
 }

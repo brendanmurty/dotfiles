@@ -1,5 +1,4 @@
-Atom Configuration
-=======
+# Atom Configuration
 
 [![Screenshot of Atom with my configuration applied](screenshot.png)](https://raw.githubusercontent.com/brendanmurty/dotfiles/master/.atom/screenshot.png)
 

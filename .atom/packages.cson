@@ -18,5 +18,6 @@
   'pretty-json'
   'rainglow'
   'set-syntax'
+  'symbol-gen'
   'tool-bar'
 ]

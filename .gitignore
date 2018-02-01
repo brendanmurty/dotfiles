@@ -45,3 +45,4 @@ $RECYCLE.BIN/
 tmp/
 .ssh/
 .tags
+.tags_swap

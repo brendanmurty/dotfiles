@@ -25,11 +25,11 @@
 [push]
 	default = simple
 [alias]
-  br = branch
-  cam = commit -am
-  ci = commit --verbose
+	br = branch
+	cam = commit -am
+	ci = commit --verbose
 	co = checkout
-  cm = commit -m
+	cm = commit -m
 	st = status
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	rb = rebase -i

@@ -25,14 +25,14 @@
 [push]
 	default = simple
 [alias]
-	br = branch
-	cam = commit -am
-	ci = commit --verbose
-	co = checkout
-	cm = commit -m
-	st = status
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-	rb = rebase -i
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(green)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit --date=relative
-	ll = !git log --stat
-        sync = "!f(){ local branch=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e \"s/* \\(.*\\)/\\1/\"`; git pull origin $branch && git push origin $branch; }; f"
+  br = branch
+  cam = commit -am
+  ci = commit --verbose
+  co = checkout
+  cm = commit -m
+  st = status
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  rb = rebase -i
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(green)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit --date=relative
+  ll = !git log --stat
+  sync = "!f(){ local branch=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e \"s/* \\(.*\\)/\\1/\"`; git pull origin $branch && git push origin $branch; }; f"

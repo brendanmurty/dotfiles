@@ -13,7 +13,6 @@
       fontSize: 18
     tabs:
       compactTabs: true
-      tintedTabBar: true
     treeView:
       blendTabs: true
     ui:

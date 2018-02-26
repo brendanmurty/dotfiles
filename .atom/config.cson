@@ -36,6 +36,8 @@
       "wrap-guide"
       "deprecation-cop"
       "autosave"
+      "language-gfm"
+      "whitespace"
     ]
     telemetryConsent: "no"
     themes: [
@@ -52,7 +54,7 @@
     showLineNumbers: false
     softWrap: true
     tabLength: 2
-    tabType: "soft"
+    tabType: "auto"
   "file-types":
     cfg: "source.shell"
     txt: "text.todotxt"

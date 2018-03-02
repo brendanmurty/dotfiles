@@ -1,3 +1,6 @@
+'atom-workspace':
+  'ctrl-alt-t': 'unset!'
+  'ctrl-alt-shift-t': 'tool-bar:toggle'
 'body':
   'ctrl-tab': 'pane:show-next-item'
   'ctrl-shift-tab': 'pane:show-previous-item'

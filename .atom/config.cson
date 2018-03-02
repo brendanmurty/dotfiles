@@ -63,8 +63,8 @@
   "line-ending-selector":
     defaultLineEnding: "LF"
   "php-cs-fixer":
-    executablePath: "C:/Users/brendan.murty/AppData/Roaming/Composer/vendor/friendsofphp/php-cs-fixer/php-cs-fixer"
-    phpExecutablePath: "C:/PHP/php.exe"
+    executablePath: ""
+    phpExecutablePath: ""
     rules: "@PSR2"
     showInfoNotifications: true
   rainglow:

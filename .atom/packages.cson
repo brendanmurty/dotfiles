@@ -8,6 +8,7 @@
   'file-types'
   'flex-tool-bar'
   'highlight-selected'
+  'language-blade'
   'language-diff'
   'language-htaccess'
   'language-markdown'

@@ -38,6 +38,7 @@
       "autosave"
       "language-gfm"
       "whitespace"
+      "symbols-view"
     ]
     telemetryConsent: "no"
     themes: [

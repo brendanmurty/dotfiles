@@ -1,8 +1,8 @@
 'packages': [
   'atom-clock'
+  'atom-ctags'
   'atom-material-ui'
   'click-link'
-  'ctags'
   'docblockr'
   'editorconfig'
   'file-icons'

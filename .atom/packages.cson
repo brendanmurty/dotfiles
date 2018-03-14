@@ -2,6 +2,7 @@
   'atom-clock'
   'atom-material-ui'
   'click-link'
+  'ctags'
   'docblockr'
   'editorconfig'
   'file-icons'

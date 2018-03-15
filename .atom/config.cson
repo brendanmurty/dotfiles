@@ -5,6 +5,13 @@
     showClockIcon: true
     showTooltip: true
     tooltipDateFormat: "ddd D MMM YYYY"
+  "atom-ctags":
+    cmdArgs: "--exclude=vendor --exclude=node_modules"
+  "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnSave: true
+      formatOnType: false
+    use: {}
   "atom-material-ui":
     colors:
       abaseColor: "#2b2f38"
@@ -77,14 +84,22 @@
   "tool-bar":
     iconSize: "32px"
     position: "Left"
+    visible: false
   welcome:
     showOnStartup: false
+".blade.html.php.text":
+  editor:
+    commentEnd: " --}}"
+    commentStart: "{{-- "
 ".html.php.text":
   editor:
     tabLength: 4
 ".js.source":
   editor:
     tabLength: 4
+".md.text":
+  editor:
+    softWrapAtPreferredLineLength: true
 ".php.source":
   editor:
     tabLength: 4
@@ -97,9 +112,6 @@
 ".source.vbs":
   editor:
     tabLength: 4
-".text.md":
-  editor:
-    softWrapAtPreferredLineLength: true
 ".text.todotxt":
   editor:
     softWrapAtPreferredLineLength: true

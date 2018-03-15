@@ -133,6 +133,15 @@ atom-text-editor .selection .region {
   background-color: #222830;
 }
 
+// Improve the display of Atom IDE highlights
+
+atom-text-editor .region.datatip-highlight-region,
+atom-text-editor .region.datatip-highlight-region.datatip-highlight-region-active {
+  animation: none;
+  background: #00302c;
+  background-size: auto;
+}
+
 // Make completed task lines in Markdown and TodoTXT consistent
 
 atom-text-editor .syntax--md.syntax--completed,

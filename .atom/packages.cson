@@ -10,6 +10,7 @@
   'flex-tool-bar'
   'highlight-selected'
   'ide-php'
+  'ide-typescript'
   'language-blade'
   'language-diff'
   'language-htaccess'

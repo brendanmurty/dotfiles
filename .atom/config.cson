@@ -26,7 +26,7 @@
       panelContrast: true
       panelShadows: true
   "autocomplete-plus":
-    autoActivationDelay: 100
+    autoActivationDelay: 500
     scopeBlacklist: [
       ".md.text"
       ".text.todotxt"

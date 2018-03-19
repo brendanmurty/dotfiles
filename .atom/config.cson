@@ -5,8 +5,6 @@
     showClockIcon: true
     showTooltip: true
     tooltipDateFormat: "ddd D MMM YYYY"
-  "atom-ctags":
-    cmdArgs: "--exclude=vendor --exclude=node_modules"
   "atom-ide-ui":
     "atom-ide-code-format":
       formatOnSave: true
@@ -70,11 +68,6 @@
     showIconsInEditorGutter: true
   "line-ending-selector":
     defaultLineEnding: "LF"
-  "php-cs-fixer":
-    executablePath: ""
-    phpExecutablePath: ""
-    rules: "@PSR2"
-    showInfoNotifications: true
   rainglow:
     SelectSyntax: "rainbow-contrast-rainglow-syntax"
   tabs:

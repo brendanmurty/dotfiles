@@ -1,6 +1,5 @@
 'packages': [
   'atom-clock'
-  'atom-ctags'
   'atom-ide-ui'
   'atom-material-ui'
   'docblockr'
@@ -18,12 +17,9 @@
   'language-todotxt'
   'language-vbscript'
   'language-vue'
-  'markdown-pdf'
   'pinned-tabs'
-  'php-cs-fixer'
   'pretty-json'
   'rainglow'
   'set-syntax'
-  'symbol-gen'
   'tool-bar'
 ]

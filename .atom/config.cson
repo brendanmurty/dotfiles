@@ -9,6 +9,10 @@
     "atom-ide-code-format":
       formatOnSave: true
       formatOnType: false
+    hyperclick:
+      darwinTriggerKeys: "altKey,metaKey"
+      linuxTriggerKeys: "ctrlKey,altKey"
+      win32TriggerKeys: "ctrlKey,altKey"
     use: {}
   "atom-material-ui":
     colors:

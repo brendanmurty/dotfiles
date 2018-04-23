@@ -46,3 +46,5 @@ tmp/
 .ssh/
 .tags
 .tags_swap
+node_modules/
+vendor/

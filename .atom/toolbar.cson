@@ -5,36 +5,36 @@
     type: "button"
     icon: "file-text"
     callback: "application:new-file"
-    tooltip: "New file"
+    tooltip: "New File"
   }
   {
     type: "button"
     icon: "file-directory"
     callback: "application:open-file"
-    tooltip: "Open file"
+    tooltip: "Open File"
   }
   {
     type: "button"
     icon: "file-symlink-directory"
     callback: "fuzzy-finder:toggle-file-finder"
-    tooltip: "Fuzzy finder"
+    tooltip: "Fuzzy Finder"
   }
   {
     type: "button"
-    icon: "cloud-download"
+    icon: "checklist"
     callback: "core:save"
-    tooltip: "Save file"
+    tooltip: "Save File"
   }
   {
     type: "button"
     icon: "code"
     callback: "command-palette:toggle"
-    tooltip: "Command palette"
+    tooltip: "Command Palette"
   }
   {
     type: "button"
-    icon: "check"
-    callback: "php-cs-fixer:fix"
-    tooltip: "PHP CS Fixer"
+    icon: "cloud-upload"
+    callback: "remote-sync:upload-file"
+    tooltip: "Remote Sync: Upload"
   }
 ]

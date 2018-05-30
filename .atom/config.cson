@@ -9,11 +9,14 @@
     "atom-ide-code-format":
       formatOnSave: true
       formatOnType: false
+    "atom-ide-diagnostics-ui": {}
     hyperclick:
       darwinTriggerKeys: "altKey,metaKey"
       linuxTriggerKeys: "ctrlKey,altKey"
       win32TriggerKeys: "ctrlKey,altKey"
-    use: {}
+    use:
+      "atom-ide-diagnostics": "never"
+      "atom-ide-diagnostics-ui": "never"
   "atom-material-ui":
     colors:
       abaseColor: "#2b2f38"

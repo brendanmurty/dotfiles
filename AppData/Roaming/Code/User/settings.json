@@ -1,6 +1,9 @@
 {
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "workbench.colorTheme": "Night Owl No Italics",
+    "editor.fontFamily": "Fira Mono",
     "editor.fontSize": 18,
-    "editor.fontFamily": "Hack",
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
     "editor.lineNumbers": "off",
@@ -10,7 +13,6 @@
     "window.menuBarVisibility": "toggle",
     "window.enableMenuBarMnemonics": true,
     "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "Material Theme",
     "workbench.statusBar.visible": true,
     "workbench.colorCustomizations": {
         "statusBar.background" : "#1A1A1A",

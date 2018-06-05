@@ -4,6 +4,7 @@
     "workbench.colorTheme": "Night Owl No Italics",
     "editor.fontFamily": "Fira Mono",
     "editor.fontSize": 18,
+    "editor.fontWeight": "normal",
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
     "editor.lineNumbers": "off",
@@ -12,12 +13,17 @@
     "editor.folding": false,
     "window.menuBarVisibility": "toggle",
     "window.enableMenuBarMnemonics": true,
-    "workbench.activityBar.visible": false,
+    "workbench.activityBar.visible": true,
     "workbench.statusBar.visible": true,
     "workbench.colorCustomizations": {
         "statusBar.background" : "#1A1A1A",
         "statusBar.noFolderBackground" : "#212121",
         "statusBar.debuggingBackground": "#263238"
     },
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.enablePreview": false,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.historyExplorer.enabled": true
 }

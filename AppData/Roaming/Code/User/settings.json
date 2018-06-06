@@ -11,6 +11,7 @@
     "editor.wordWrap": "on",
     "editor.quickSuggestionsDelay": 500,
     "editor.folding": false,
+    "window.zoomLevel": 0.5,
     "window.menuBarVisibility": "toggle",
     "window.enableMenuBarMnemonics": true,
     "workbench.activityBar.visible": true,

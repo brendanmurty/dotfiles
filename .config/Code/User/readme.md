@@ -8,7 +8,7 @@ Here's how to use these:
 1. Install the [Hack font](https://github.com/chrissimpkins/Hack)
 2. Install [Visual Studio Code](https://code.visualstudio.com/)
 3. Open Visual Studio Code
-4. Install the [Material Theme](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme) package
+4. Install the [Night Owl](https://marketplace.visualstudio.com/items?itemName=sdras.night-owl) theme
 
 Then copy all the files in this folder to your computer:
 

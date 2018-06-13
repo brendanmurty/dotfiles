@@ -27,6 +27,7 @@
 [alias]
 	br = branch
 	cam = commit -am
+	cbr = checkout -b
 	ci = commit --verbose
 	co = checkout
 	cm = commit -m

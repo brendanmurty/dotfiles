@@ -1,0 +1,8 @@
+[
+	{ "keys": ["ctrl+\\"], "command": "toggle_side_bar" },
+	{ "keys": ["f5"], "command": "refresh_folder_list" },
+    { "keys": ["ctrl+up"], "command": "swap_line_up", "args": {} },
+    { "keys": ["ctrl+down"], "command": "swap_line_down", "args": {} },
+    { "keys": ["ctrl+shift+up"], "command": "noop" },
+    { "keys": ["ctrl+shift+down"], "command": "noop" }
+]

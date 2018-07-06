@@ -78,6 +78,8 @@
     showIconsInEditorGutter: true
   "line-ending-selector":
     defaultLineEnding: "LF"
+  "open-files":
+    collapsable: false
   rainglow:
     SelectSyntax: "rainbow-contrast-rainglow-syntax"
   tabs:

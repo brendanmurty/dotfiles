@@ -107,6 +107,23 @@ atom-panel.footer status-bar {
   line-height: 32px;
 }
 
+// Improve the display of the Tree View items
+
+.list-group li:not(.list-nested-item).selected:not(.header)::before,
+.list-tree li:not(.list-nested-item).selected:not(.header)::before,
+.list-group li.list-nested-item.selected > .list-item:not(.header)::before,
+.list-tree li.list-nested-item.selected > .list-item:not(.header)::before,
+.list-group .selected::before,
+.list-tree .selected::before {
+  height: 36px;
+}
+
+// Tweak the alignment of the Open Files list in the Tree View
+
+.tree-view .list-tree.has-collapsable-children .list-nested-item > .list-tree > li {
+  padding-left: 8px;
+}
+
 // Remove panel borders
 
 .tool-panel.bottom,

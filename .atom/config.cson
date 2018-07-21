@@ -79,6 +79,7 @@
   "line-ending-selector":
     defaultLineEnding: "LF"
   "open-files":
+    animationDuration: 0
     collapsable: false
   rainglow:
     SelectSyntax: "rainbow-contrast-rainglow-syntax"

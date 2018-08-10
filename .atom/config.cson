@@ -81,6 +81,7 @@
   "open-files":
     animationDuration: 0
     collapsable: false
+    delay: 0
   rainglow:
     SelectSyntax: "rainbow-contrast-rainglow-syntax"
   tabs:

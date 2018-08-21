@@ -1,7 +1,7 @@
 {
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
-    "workbench.colorTheme": "Night Owl No Italics",
+    "workbench.colorTheme": "Material Theme Darker High Contrast",
     "editor.fontFamily": "Fira Mono",
     "editor.fontSize": 18,
     "editor.fontWeight": "normal",
@@ -11,15 +11,34 @@
     "editor.wordWrap": "on",
     "editor.quickSuggestionsDelay": 500,
     "editor.folding": false,
+    "editor.tokenColorCustomizations": {
+        "comments": "#666666"
+    },
     "window.zoomLevel": 0.5,
     "window.menuBarVisibility": "toggle",
     "window.enableMenuBarMnemonics": true,
     "workbench.activityBar.visible": true,
     "workbench.statusBar.visible": true,
     "workbench.colorCustomizations": {
-        "statusBar.background" : "#1A1A1A",
-        "statusBar.noFolderBackground" : "#212121",
-        "statusBar.debuggingBackground": "#263238"
+        "editor.background": "#000000",
+        "statusBar.background": "#1A1A1A",
+        "statusBar.noFolderBackground": "#212121",
+        "statusBar.debuggingBackground": "#263238",
+        "activityBarBadge.background": "#64FFDA",
+        "list.activeSelectionForeground": "#64FFDA",
+        "list.inactiveSelectionForeground": "#64FFDA",
+        "list.highlightForeground": "#64FFDA",
+        "scrollbarSlider.activeBackground": "#64FFDA50",
+        "editorSuggestWidget.highlightForeground": "#64FFDA",
+        "textLink.foreground": "#64FFDA",
+        "progressBar.background": "#64FFDA",
+        "pickerGroup.foreground": "#64FFDA",
+        "tab.activeBorder": "#64FFDA",
+        "notificationLink.foreground": "#64FFDA",
+        "editorWidget.resizeBorder": "#64FFDA",
+        "editorWidget.border": "#64FFDA",
+        "settings.modifiedItemForeground": "#64FFDA",
+        "panelTitle.activeBorder": "#64FFDA"
     },
     "workbench.startupEditor": "newUntitledFile",
     "workbench.editor.enablePreview": false,
@@ -27,6 +46,9 @@
         "suppressShowKeyBindingsNotice": true
     },
     "gitlens.historyExplorer.enabled": true,
-    "workbench.iconTheme": "vs-minimal",
-    "breadcrumbs.enabled": true
+    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "breadcrumbs.enabled": true,
+    "materialTheme.fixIconsRunning": false,
+    "materialTheme.accentPrevious": "",
+    "materialTheme.accent": "Bright Teal"
 }

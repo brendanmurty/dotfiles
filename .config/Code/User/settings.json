@@ -1,7 +1,5 @@
 {
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
-    "workbench.colorTheme": "Material Theme Darker High Contrast",
+    "breadcrumbs.enabled": true,
     "editor.fontFamily": "Fira Mono",
     "editor.fontSize": 18,
     "editor.fontWeight": "normal",
@@ -14,11 +12,24 @@
     "editor.tokenColorCustomizations": {
         "comments": "#666666"
     },
+    "explorer.confirmDelete": false,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.historyExplorer.enabled": true,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "materialTheme.accent": "Bright Teal",
+    "materialTheme.accentPrevious": "",
+    "materialTheme.fixIconsRunning": false,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
     "window.zoomLevel": 0.5,
     "window.menuBarVisibility": "toggle",
     "window.enableMenuBarMnemonics": true,
     "workbench.activityBar.visible": true,
-    "workbench.statusBar.visible": true,
+    "workbench.colorTheme": "Material Theme Darker High Contrast",
     "workbench.colorCustomizations": {
         "editor.background": "#000000",
         "statusBar.background": "#1A1A1A",
@@ -40,15 +51,8 @@
         "settings.modifiedItemForeground": "#64FFDA",
         "panelTitle.activeBorder": "#64FFDA"
     },
-    "workbench.startupEditor": "newUntitledFile",
     "workbench.editor.enablePreview": false,
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
-    "gitlens.historyExplorer.enabled": true,
-    "workbench.iconTheme": "eq-material-theme-icons-darker",
-    "breadcrumbs.enabled": true,
-    "materialTheme.fixIconsRunning": false,
-    "materialTheme.accentPrevious": "",
-    "materialTheme.accent": "Bright Teal"
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.statusBar.visible": true,
+    "workbench.iconTheme": "eq-material-theme-icons-darker"    
 }

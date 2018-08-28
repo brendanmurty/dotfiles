@@ -21,8 +21,9 @@
 .tab-bar .tab .title,
 .tree-view,
 .font-size-regular .tree-view .list-item {
-  font-family: "Fira Mono Regular";
-  font-size: 12px;
+  font-family: "Fira Mono";
+  font-weight: 600;
+  font-size: 13px;
 }
 
 // Make items in the Command Palette list higher if they don't fit horizontally
@@ -74,13 +75,14 @@ atom-text-editor {
   padding: 5px;
 }
 
-// Make the main text area, empty main areas, tree view and scrollbar background darker
+// Make the main text area, line number gutter, empty main areas, tree view and scrollbar background darker
 
 atom-text-editor:not(.mini),
 atom-pane-container atom-pane .item-views,
 .panel-contrast .tree-view,
-.panel-left ::-webkit-scrollbar-track {
-  background-color: #0d0f12 !important;
+.panel-left ::-webkit-scrollbar-track,
+atom-text-editor .gutter {
+  background-color: #000 !important;
 }
 
 // Make the toolbar, footer, tab bar and project header background solid black

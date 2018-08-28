@@ -6,6 +6,7 @@
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
     "editor.lineNumbers": "off",
+    "editor.minimap.enabled": false,
     "editor.wordWrap": "on",
     "editor.quickSuggestionsDelay": 500,
     "editor.folding": false,

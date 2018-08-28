@@ -44,7 +44,6 @@
     disabledPackages: [
       "bracket-matcher"
       "metrics"
-      "spell-check"
       "wrap-guide"
       "deprecation-cop"
       "autosave"
@@ -54,6 +53,7 @@
       "background-tips"
       "exception-reporting"
       "notifications"
+      "spell-check"
     ]
     telemetryConsent: "no"
     themes: [
@@ -62,12 +62,12 @@
     ]
     uriHandlerRegistration: "always"
   editor:
-    fontFamily: "Fira Mono Regular"
+    fontFamily: "Fira Mono"
     fontSize: 20
     invisibles: {}
     preferredLineLength: 120
     showIndentGuide: true
-    showLineNumbers: false
+    showLineNumbers: true
     softWrap: true
     tabLength: 2
     tabType: "auto"
@@ -76,6 +76,8 @@
     txt: "text.todotxt"
   "git-diff":
     showIconsInEditorGutter: true
+  "ide-php":
+    phpPath: "/usr/bin/php"
   "line-ending-selector":
     defaultLineEnding: "LF"
   "open-files":

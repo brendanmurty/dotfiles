@@ -22,8 +22,6 @@
     "gitlens.currentLine.enabled": false,
     "gitlens.hovers.currentLine.over": "line",
     "materialTheme.accent": "Bright Teal",
-    "materialTheme.accentPrevious": "",
-    "materialTheme.fixIconsRunning": false,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "window.zoomLevel": 0.5,
@@ -49,11 +47,11 @@
         "notificationLink.foreground": "#64FFDA",
         "editorWidget.resizeBorder": "#64FFDA",
         "editorWidget.border": "#64FFDA",
-        "settings.modifiedItemForeground": "#64FFDA",
         "panelTitle.activeBorder": "#64FFDA"
     },
     "workbench.editor.enablePreview": false,
     "workbench.startupEditor": "newUntitledFile",
     "workbench.statusBar.visible": true,
-    "workbench.iconTheme": "eq-material-theme-icons-darker"    
+    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "window.titleBarStyle": "custom"
 }

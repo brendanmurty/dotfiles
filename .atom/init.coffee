@@ -1,11 +1,8 @@
-# Your init script
-#
-# Atom will evaluate this file each time a new window is opened. It is run
-# after packages are loaded/activated and after the previous editor state
-# has been restored.
-#
-# An example hack to log to the console when each text editor is saved.
-#
-# atom.workspace.observeTextEditors (editor) ->
-#   editor.onDidSave ->
-#     console.log "Saved! #{editor.getPath()}"
+atom.commands.add 'atom-text-editor',
+  'custom:start-meeting-log': ->
+    # Add initial meeting log content to a new empty editor window
+    editor = atom.workspace.getActiveTextEditor()
+    date = new Date().toDateString()
+    editor.insertText('# Meeting - ' + date + '\n\n\n\n## Notes\n\n- \n')
+    editor.moveUp()
+    editor.moveRight(3)

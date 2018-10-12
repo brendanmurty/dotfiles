@@ -10,7 +10,7 @@ Then copy all the files in this folder to your computer:
 - OS X: `~/Library/Application Support/Sublime Text 3`
 - Linux: `~/.config/sublime-text-3`
 
-Now manually install all of the packages listed in [Package Control.sublime-settings](Packages/User/Package%20Control.sublime-settings) using the Package Control [Install Package command](https://packagecontrol.io/docs/usage).
+Now manually install all of the packages listed in the `installed_packages` section of [Package Control.sublime-settings](Packages/User/Package%20Control.sublime-settings) using the Package Control [Install Package command](https://packagecontrol.io/docs/usage).
 
 ## Updating user preferences
 

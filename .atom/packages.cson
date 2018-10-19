@@ -13,6 +13,7 @@
   'language-diff'
   'language-htaccess'
   'language-markdown'
+  'language-powershell'
   'language-todotxt'
   'open-files'
   'pinned-tabs'

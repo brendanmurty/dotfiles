@@ -78,7 +78,8 @@
     colorCommitAuthors: true
     columnWidth: 400
     dateFormatString: "DD/MM/YYYY"
-    showHash: false
+    showHash: true
+    showLastNames: false
   "git-diff":
     showIconsInEditorGutter: true
   "ide-php":

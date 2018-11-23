@@ -74,6 +74,11 @@
   "file-types":
     cfg: "source.shell"
     txt: "text.todotxt"
+  "git-blame":
+    colorCommitAuthors: true
+    columnWidth: 400
+    dateFormatString: "DD/MM/YYYY"
+    showHash: false
   "git-diff":
     showIconsInEditorGutter: true
   "ide-php":

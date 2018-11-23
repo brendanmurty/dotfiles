@@ -6,6 +6,7 @@
   'file-icons'
   'file-types'
   'flex-tool-bar'
+  'git-blame'
   'highlight-selected'
   'ide-php'
   'ide-typescript'

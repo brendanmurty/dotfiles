@@ -11,5 +11,5 @@ Configuration files for a local development environment
 - **[.bash_prompt](.bash_prompt)**: Customised terminal command prefix configuration
 - **[.gitconfig](.gitconfig)**: [Git](https://git-scm.com/) user and alias configuration
 - **[.gitignore](.gitignore)**: [Git](https://git-scm.com/) file ignore configuration
-- **[.hyper.js](.hyper.js)**: [Hyper](https://hyper.is/) terminal configuration
 - **[.vimrc](.vimrc)** and **[.vim](.vim/)**: [Vim](http://www.vim.org/) text editor
+

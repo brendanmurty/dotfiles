@@ -27,7 +27,7 @@ terminal:
   background: colorScheme
   font: Fira Code
   fontSize: 18
-  ligatures: true
+  ligatures: false
   copyOnSelect: true
 appearance:
   theme: Standard

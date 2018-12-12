@@ -1,4 +1,5 @@
-hotkeys: {}
+hotkeys:
+  shell: {}
 ssh: {}
 terminal:
   colorScheme:
@@ -25,7 +26,7 @@ terminal:
       - '#ffffff'
   background: colorScheme
   font: Fira Code
-  fontSize: 16
+  fontSize: 18
   ligatures: true
   copyOnSelect: true
 appearance:

@@ -26,9 +26,11 @@ terminal:
       - '#ffffff'
   background: colorScheme
   font: Fira Code
-  fontSize: 18
+  fontSize: 20
   ligatures: false
   copyOnSelect: true
+  environment: {}
+  workingDirectory: ''
 appearance:
   theme: Standard
   tabsLocation: top

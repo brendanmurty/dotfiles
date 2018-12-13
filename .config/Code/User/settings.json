@@ -28,7 +28,7 @@
     "window.menuBarVisibility": "toggle",
     "window.enableMenuBarMnemonics": true,
     "workbench.activityBar.visible": true,
-    "workbench.colorTheme": "Material Theme Darker High Contrast",
+    "workbench.colorTheme": "One Dark Pro",
     "workbench.colorCustomizations": {
         "editor.background": "#000000",
         "statusBar.background": "#1A1A1A",

@@ -9,7 +9,7 @@ Here's how to use these:
 2. Install [Visual Studio Code](https://code.visualstudio.com/)
 3. Open Visual Studio Code
 4. Click the Extensions icon in the sidebar
-5. Install [Material Theme](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme)
+5. Install [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme)
 6. Install [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 7. Install [Terminal](https://marketplace.visualstudio.com/items?itemName=formulahendry.terminal)
 8. Make a local clone of this repository

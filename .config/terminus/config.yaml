@@ -31,8 +31,10 @@ terminal:
   copyOnSelect: true
   environment: {}
   workingDirectory: ''
+  autoOpen: true
 appearance:
   theme: Standard
   tabsLocation: top
   opacity: 1
+  frame: native
 enableAnalytics: false

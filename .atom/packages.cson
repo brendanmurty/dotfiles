@@ -1,15 +1,11 @@
 'packages': [
   'atom-clock'
-  'atom-ide-ui'
   'atom-material-ui'
   'docblockr'
   'file-icons'
   'file-types'
-  'flex-tool-bar'
   'git-blame'
   'highlight-selected'
-  'ide-php'
-  'ide-typescript'
   'language-blade'
   'language-diff'
   'language-htaccess'
@@ -21,5 +17,4 @@
   'pretty-json'
   'rainglow'
   'set-syntax'
-  'tool-bar'
 ]

@@ -24,6 +24,7 @@
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 [push]
 	default = simple
+	followTags = true
 [alias]
 	br = branch
 	cam = commit -am
@@ -38,7 +39,7 @@
 	ll = !git log --stat
 	sync = "!f(){ local branch=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e \"s/* \\(.*\\)/\\1/\"`; git pull origin $branch && git push origin $branch; }; f"
 [filter "lfs"]
-        clean = git-lfs clean -- %f
-        smudge = git-lfs smudge -- %f
-        process = git-lfs filter-process
-        required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

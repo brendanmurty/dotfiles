@@ -19,7 +19,8 @@
 [color "diff"]
 	whitespace = red reverse
 [core]
-	autocrlf = true
+	autocrlf = input
+	safecrlf = false
 	editor = "vim"
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 [push]
@@ -33,9 +34,8 @@
 	co = checkout
 	cm = commit -m
 	st = status
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	rb = rebase -i
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(green)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit --date=relative
+	lg = log --pretty=format:'%Cblue%h%Creset %s %Cgreen%an, %cr %Creset' --abbrev-commit --date=relative
 	ll = !git log --stat
 	sync = "!f(){ local branch=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e \"s/* \\(.*\\)/\\1/\"`; git pull origin $branch && git push origin $branch; }; f"
 [filter "lfs"]

@@ -86,6 +86,10 @@
     phpPath: "/usr/bin/php"
   "line-ending-selector":
     defaultLineEnding: "LF"
+  "markdown-table-editor":
+    formatOnSave: true
+    formatType: "weak"
+    headerAlignment: "center"
   "open-files":
     animationDuration: 0
     collapsable: false

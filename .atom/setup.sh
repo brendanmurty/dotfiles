@@ -10,6 +10,7 @@ apm install language-htaccess
 apm install language-markdown
 apm install language-powershell
 apm install language-todotxt
+apm install markdown-table-editor
 apm install open-files
 apm install pinned-tabs
 apm install pretty-json

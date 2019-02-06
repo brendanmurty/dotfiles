@@ -1,0 +1,17 @@
+atom-clock
+atom-material-ui
+file-icons
+file-types
+highlight-selected
+language-blade
+language-diff
+language-htaccess
+language-markdown
+language-powershell
+language-todotxt
+markdown-table-editor
+open-files
+pinned-tabs
+pretty-json
+rainglow
+set-syntax

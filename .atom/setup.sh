@@ -1,21 +1,5 @@
 # Install Atom packages
-apm install atom-clock
-apm install atom-material-ui
-apm install file-icons
-apm install file-types
-apm install highlight-selected
-apm install language-blade
-apm install language-diff
-apm install language-htaccess
-apm install language-markdown
-apm install language-powershell
-apm install language-todotxt
-apm install markdown-table-editor
-apm install open-files
-apm install pinned-tabs
-apm install pretty-json
-apm install rainglow
-apm install set-syntax
+apm install --packages-file packages.txt
 
 # Copy over Atom configuration files
 cp config.cson ~/.atom

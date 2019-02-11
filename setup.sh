@@ -15,14 +15,14 @@ cat custom.gitconfig >> ~/.gitconfig
 cat custom.gitignore >> ~/.gitignore
 cat custom.vimrc >> ~/.vimrc
 
-# Apply the changes to the current terminal session
-. ~/.bash_aliases
-. ~/.bash_prompt
-
-# Ensure the customisations are retained after the system is restarted
-echo 'if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi' >> ~/.bashrc
-echo 'if [ -f ~/.bash_prompt ]; then . ~/.bash_prompt; fi' >> ~/.bashrc
-
 # Run the setup script for the Atom subfolder
 cd Atom
 sh setup.sh
+
+# Ensure the customisations are retained after the system is restarted
+echo '. ~/.bash_aliases' >> ~/.bashrc
+echo '. ~/.bash_prompt' >> ~/.bashrc
+
+# Apply the changes to the current terminal session
+. ~/.bash_aliases
+. ~/.bash_prompt

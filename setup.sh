@@ -1,5 +1,5 @@
 # Create the user configuration files if they aren't already there
-touch ~/.bash_aliases ~/.bash_prompt ~/.gitconfig ~/.gitignore
+touch ~/.bash_aliases ~/.bash_prompt ~/.gitconfig ~/.gitignore ~/.vimrc
 
 # Backup the user configuration files before updating them
 sudo cp ~/.bash_aliases ~/.bash_aliases.bak
@@ -19,7 +19,7 @@ cat custom.vimrc >> ~/.vimrc
 . ~/.bash_aliases
 . ~/.bash_prompt
 
-# Ensure the customisations are retained after reboot
+# Ensure the customisations are retained after the system is restarted
 echo 'if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi' >> ~/.bashrc
 echo 'if [ -f ~/.bash_prompt ]; then . ~/.bash_prompt; fi' >> ~/.bashrc
 

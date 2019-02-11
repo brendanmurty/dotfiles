@@ -19,10 +19,9 @@ cat custom.vimrc >> ~/.vimrc
 cd Atom
 sh setup.sh
 
-# Ensure the customisations are retained after the system is restarted
+# Apply the changes to all terminal sessions
+sudo cp ~/.bashrc ~/.bashrc.bak
 echo '. ~/.bash_aliases' >> ~/.bashrc
 echo '. ~/.bash_prompt' >> ~/.bashrc
-
-# Apply the changes to the current terminal session
 . ~/.bash_aliases
 . ~/.bash_prompt

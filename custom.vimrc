@@ -13,6 +13,7 @@ set visualbell
 
 " Syntax highlighting
 
+filetype plugin on
 syntax on
 
 " Text formatting

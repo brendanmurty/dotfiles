@@ -11,8 +11,8 @@ cp ~/.bash* $backupdir
 cp ~/.gitconfig $backupdir
 cp ~/.gitignore $backupdir
 cp ~/.viminfo $backupdir
+cp ~/.vimrc $backupdir
 
-cp -r ~/proxy/* $backupdir/proxy
 cp -r ~/.ssh/* $backupdir/.ssh
 
 chown -R USERNAME:USERNAME $backupdir/*

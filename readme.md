@@ -6,7 +6,6 @@ Configuration files for a local development environment
 
 - **[Atom](Atom/)**: [Atom](https://atom.io/) text editor configuration
 - **[VSCode](VSCode/)**: [Visual Studio Code](https://code.visualstudio.com/) text editor configuration
-- **[SublimeText](SublimeText/)**: [Sublime Text 3](https://www.sublimetext.com/3) text editor configuration
 - **[Terminus](Terminus/)**: [Terminus](https://eugeny.github.io/terminus/) terminal configuration
 - **[custom.bash_aliases](custom.bash_aliases)**: Shortcut commands to make common commands easier to use
 - **[custom.bash_prompt](custom.bash_prompt)**: Customised terminal command prefix configuration

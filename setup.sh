@@ -18,6 +18,7 @@ cat custom.vimrc >> ~/.vimrc
 # Run the setup script for the Atom subfolder
 cd Atom
 sh setup.sh
+cd ..
 
 # Apply the changes to all terminal sessions
 sudo cp ~/.bashrc ~/.bashrc.bak

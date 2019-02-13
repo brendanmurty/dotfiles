@@ -23,7 +23,7 @@ if (!file_exists(__DIR__ . DIRECTORY_SEPARATOR . 'config.php')) {
 require_once 'config.php';
 
 if (!isset($to_backup) || !is_array($to_backup)) {
-    echo 'ERROR: The backup configuration variable ("$to_backup") isn\'t set or isn\'t an array' . PHP_EOL;
+    echo 'ERROR: The backup configuration variable ("' . $to_backup . '") isn\'t set or isn\'t an array' . PHP_EOL;
     exit();
 }
 

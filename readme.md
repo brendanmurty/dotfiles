@@ -5,6 +5,7 @@ Configuration files for a local development environment
 ## Contents
 
 - **[atom](atom/)**: [Atom](https://atom.io/) text editor configuration
+- **[scripts](scripts/)**: Various scripts to assist with new system setup and automated backup processes
 - **[terminus](terminus/)**: [Terminus](https://eugeny.github.io/terminus/) terminal configuration
 - **[custom.bash_aliases](custom.bash_aliases)**: Shortcut commands to make common commands easier to use
 - **[custom.bash_prompt](custom.bash_prompt)**: Customised terminal command prefix configuration

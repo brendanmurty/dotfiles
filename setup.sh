@@ -16,7 +16,7 @@ cat custom.gitignore >> ~/.gitignore
 cat custom.vimrc >> ~/.vimrc
 
 # Run the setup script for the Atom subfolder
-cd Atom
+cd atom
 sh setup.sh
 cd ..
 

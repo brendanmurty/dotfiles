@@ -44,7 +44,7 @@ foreach ($to_backup as $backup) {
 
     echo 'INFO: Backing up ' . $source . ' to ' . $destination . '... ' . PHP_EOL;
 
-    shell_exec('robocopy "' . $source . '" "' . $destination . '" /MIR /COPY:DT /DCOPY:DT /XD "AppData" "Dropbox" "Git" "MicrosoftEdgeBackups" "iCloud Drive" "OneDrive" "Tracing" "Temp" "node_modules" ".node-gyp" ".apm" /XF "NTUSER" "NTUSER*" /LOG:"' . $log_file . '"');
+    shell_exec('robocopy "' . $source . '" "' . $destination . '" /MIR /COPY:DT /DCOPY:DT /XD "AppData" "Dropbox" "Git" "Google Drive" "MicrosoftEdgeBackups" "iCloudDrive" "OneDrive" "Tracing" "Temp" "node_modules" ".node-gyp" ".apm" /XF "NTUSER" "NTUSER*" /LOG:"' . $log_file . '"');
 
     echo 'INFO: Backup completed.' . PHP_EOL;
 }

@@ -12,12 +12,11 @@ If you'd like to use the optional Backup as ZIP file feature on a Linux machine,
 
 ## Setup
 
-1. Clone this repository: `git clone git@bitbucket.org:brendanmurty/trello-backup.git`
-2. Copy `config.example.php` file to `config.php` and make changes as needed - you can also use `config.windows.php`, `config.linux.php` and `config.mac.php` for settings specific to an Operating System
-3. Visit [trello.com/1/appKey/generate](https://trello.com/1/appKey/generate)
-4. Add the key to the `$application_key` variable in `trello-backup/config.php`
-5. Run the script: `php trello-backup/trello-backup.php`
-6. Add the token to the `$application_token` variable in `trello-backup/config.php`
+1. Copy `config.example.php` file to `config.php` and make changes as needed - you can also use `config.windows.php`, `config.linux.php` and `config.mac.php` for settings specific to an Operating System
+2. Visit [trello.com/1/appKey/generate](https://trello.com/1/appKey/generate)
+3. Add the key to the `$application_key` variable in `config.php`
+4. Run the script: `php trello-backup/trello-backup.php`
+5. Add the token to the `$application_token` variable in `config.php`
 
 ## Usage
 

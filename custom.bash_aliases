@@ -1,4 +1,6 @@
-# Custom commands and aliases
+#!/usr/bin/env bash
+
+# Custom shell commands and aliases
 
 ## SSH configuration
 

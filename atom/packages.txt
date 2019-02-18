@@ -1,7 +1,6 @@
 atom-clock
 atom-material-ui
 file-icons
-file-types
 highlight-selected
 language-blade
 language-diff

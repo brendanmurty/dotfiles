@@ -41,6 +41,14 @@
     allowPendingPaneItems: false
     audioBeep: false
     autoHideMenuBar: true
+    customFileTypes:
+      'source.shell': [
+        'cfg'
+        'config'
+      ]
+      'text.todotxt': [
+        'txt'
+      ]
     disabledPackages: [
       "bracket-matcher"
       "metrics"
@@ -71,9 +79,6 @@
     softWrap: true
     tabLength: 2
     tabType: "auto"
-  "file-types":
-    cfg: "source.shell"
-    txt: "text.todotxt"
   "git-blame":
     colorCommitAuthors: true
     columnWidth: 400

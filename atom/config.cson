@@ -42,12 +42,12 @@
     audioBeep: false
     autoHideMenuBar: true
     customFileTypes:
-      'source.shell': [
-        'cfg'
-        'config'
+      "source.shell": [
+        "cfg"
+        "config"
       ]
-      'text.todotxt': [
-        'txt'
+      "text.todotxt": [
+        "txt"
       ]
     disabledPackages: [
       "bracket-matcher"
@@ -81,10 +81,10 @@
     tabType: "auto"
   "git-blame":
     colorCommitAuthors: true
-    columnWidth: 400
-    dateFormatString: "DD/MM/YYYY"
+    columnWidth: 450
+    dateFormatString: "YYYYMMDD"
     showHash: true
-    showLastNames: false
+    showLastNames: true
   "git-diff":
     showIconsInEditorGutter: true
   "ide-php":

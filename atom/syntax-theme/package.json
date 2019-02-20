@@ -1,0 +1,14 @@
+{
+  "name": "murty-syntax-theme",
+  "theme": "syntax",
+  "author": "Brendan Murty <b@murty.io> (https://b.murty.io/)",
+  "homepage": "https://b.murty.io/",
+  "description": "Customised Atom syntax theme",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}

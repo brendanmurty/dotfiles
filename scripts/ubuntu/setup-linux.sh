@@ -3,7 +3,7 @@
 
 # Install Git, Vim, PHP and Node
 sudo apt-get update
-sudo apt-get install -y git vim php7.2 php7.2-cli php7.2-curl php7.2-mysql php7.2-mbstring php7.2-zip php7.2-xml nodejs
+sudo apt-get install -y git vim php7.3 php7.3-cli php7.3-curl php7.3-mysql php7.3-mbstring php7.3-zip php7.3-xml nodejs
 
 # Configure Git
 git config --global core.editor vim

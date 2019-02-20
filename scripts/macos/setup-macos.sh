@@ -5,9 +5,12 @@
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# Install main packages
+# Install application packages
 
 brew cask install google-chrome atom dropbox
+
+# Install development packages
+brew install php@7.3 node
 
 # Install Quick Look Plugins - https://github.com/sindresorhus/quick-look-plugins
 

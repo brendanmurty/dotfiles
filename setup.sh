@@ -1,9 +1,10 @@
 # Create the user configuration files if they aren't already there
-touch ~/.bash_aliases ~/.bash_prompt ~/.gitconfig ~/.gitignore ~/.vimrc
+touch ~/.bash_aliases ~/.bash_prompt ~/.bashrc ~/.gitconfig ~/.gitignore ~/.vimrc
 
 # Backup the user configuration files before updating them
 cp ~/.bash_aliases ~/.bash_aliases.bak
 cp ~/.bash_prompt ~/.bash_prompt.bak
+cp ~/.bashrc ~/.bashrc.bak
 cp ~/.gitconfig ~/.gitconfig.bak
 cp ~/.gitignore ~/.gitignore.bak
 cp ~/.vimrc ~/.vimrc.bak

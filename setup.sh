@@ -2,11 +2,11 @@
 touch ~/.bash_aliases ~/.bash_prompt ~/.gitconfig ~/.gitignore ~/.vimrc
 
 # Backup the user configuration files before updating them
-sudo cp ~/.bash_aliases ~/.bash_aliases.bak
-sudo cp ~/.bash_prompt ~/.bash_prompt.bak
-sudo cp ~/.gitconfig ~/.gitconfig.bak
-sudo cp ~/.gitignore ~/.gitignore.bak
-sudo cp ~/.vimrc ~/.vimrc.bak
+cp ~/.bash_aliases ~/.bash_aliases.bak
+cp ~/.bash_prompt ~/.bash_prompt.bak
+cp ~/.gitconfig ~/.gitconfig.bak
+cp ~/.gitignore ~/.gitignore.bak
+cp ~/.vimrc ~/.vimrc.bak
 
 # Append the customisations to the relevant user configuration files
 cat custom.bash_aliases >> ~/.bash_aliases
@@ -21,7 +21,7 @@ sh setup.sh
 cd ..
 
 # Apply the changes to all terminal sessions
-sudo cp ~/.bashrc ~/.bashrc.bak
+cp ~/.bashrc ~/.bashrc.bak
 echo '. ~/.bash_aliases' >> ~/.bashrc
 echo '. ~/.bash_prompt' >> ~/.bashrc
 . ~/.bash_aliases

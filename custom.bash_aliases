@@ -2,11 +2,6 @@
 
 # Custom shell commands and aliases
 
-## SSH configuration
-
-eval $(ssh-agent -s)
-ssh-add ~/.ssh/id_rsa
-
 ## System Maintenance
 
 ### Apply new package updates and remove out-of-date packages

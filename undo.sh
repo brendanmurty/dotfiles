@@ -1,5 +1,6 @@
 # Revert to the previous versions of the user configuration files
 mv ~/.bash_aliases.bak ~/.bash_aliases
+mv ~/.bash_profile.bak ~/.bash_profile
 mv ~/.bash_prompt.bak ~/.bash_prompt
 mv ~/.bashrc.bak ~/.bashrc
 mv ~/.gitconfig.bak ~/.gitconfig

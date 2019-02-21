@@ -1,5 +1,5 @@
 # Create the user configuration files if they aren't already there
-touch ~/.bash_aliases ~/.bash_prompt ~/.bashrc ~/.gitconfig ~/.gitignore ~/.vimrc
+touch ~/.bash_aliases ~/.bash_profile ~/.bash_prompt ~/.bashrc ~/.gitconfig ~/.gitignore ~/.vimrc
 
 # Backup the user configuration files before updating them
 cp ~/.bash_aliases ~/.bash_aliases.bak
@@ -11,6 +11,7 @@ cp ~/.vimrc ~/.vimrc.bak
 
 # Append the customisations to the relevant user configuration files
 cat custom.bash_aliases >> ~/.bash_aliases
+cat custom.bash_profile >> ~/.bash_profile
 cat custom.bash_prompt >> ~/.bash_prompt
 cat custom.gitconfig >> ~/.gitconfig
 cat custom.gitignore >> ~/.gitignore
@@ -25,5 +26,6 @@ cd ..
 cp ~/.bashrc ~/.bashrc.bak
 echo '. ~/.bash_aliases' >> ~/.bashrc
 echo '. ~/.bash_prompt' >> ~/.bashrc
+echo '. ~/.bashrc' >> ~/.bash_profile
 . ~/.bash_aliases
 . ~/.bash_prompt

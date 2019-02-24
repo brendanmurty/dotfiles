@@ -16,9 +16,9 @@ mkdir "$1/Work"
 
 cp ~/.bash_aliases ~/.bash_aliases.bak
 
-echo "\n# Notes shortcuts related to files in '$1'" >> ~/.bash_aliases.tmp
-echo "alias notebackup='php "$(dirname $(readlink -f $0))"/backup.php $1'" >> ~/.bash_aliases.tmp
-echo "alias notenew='php "$(dirname $(readlink -f $0))"/new.php $1'" >> ~/.bash_aliases.tmp
-echo "function notesearch() { grep --exclude=readme.md --color -rni '\$1' $1; }" >> ~/.bash_aliases.tmp
+echo "# Notes shortcuts related to files in '$1'" >> ~/.bash_aliases
+echo "alias notebackup='php "$(dirname $(readlink -f $0))"/backup.php $1'" >> ~/.bash_aliases
+echo "alias notenew='php "$(dirname $(readlink -f $0))"/new.php $1'" >> ~/.bash_aliases
+echo "function notesearch() { grep --exclude=readme.md --color -rni '\$1' $1; }" >> ~/.bash_aliases
 
 . ~/.bash_aliases

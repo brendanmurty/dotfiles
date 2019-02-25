@@ -17,3 +17,7 @@ cp init.coffee ~/.atom
 cp keymap.cson ~/.atom
 cp snippets.cson ~/.atom
 cp styles.less ~/.atom
+
+# Copy over the custom syntax theme
+mkdir ~/.atom/murty-custom-syntax
+cp -R syntax-theme/* ~/.atom/murty-custom-syntax

@@ -1,9 +1,10 @@
 {
-  "name": "murty-syntax-theme",
+  "name": "murty-custom-syntax",
   "theme": "syntax",
   "author": "Brendan Murty <b@murty.io> (https://b.murty.io/)",
   "homepage": "https://b.murty.io/",
-  "description": "Customised Atom syntax theme",
+  "description": "Customised Atom syntax theme by Brendan Murty.",
+  "private": true,
   "keywords": [
     "syntax",
     "theme"

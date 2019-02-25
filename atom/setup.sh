@@ -20,4 +20,5 @@ cp styles.less ~/.atom
 
 # Copy over the custom syntax theme
 mkdir ~/.atom/murty-custom-syntax
-cp -R syntax-theme/* ~/.atom/murty-custom-syntax
+mkdir -p ~/.atom/packages/murty-custom-syntax
+cp -r syntax-theme/* ~/.atom/packages/murty-custom-syntax

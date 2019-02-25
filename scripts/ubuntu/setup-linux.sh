@@ -1,9 +1,16 @@
 # Setup a new Ubuntu 18.10 device
 
-## Install Git, Vim, PHP and Node
+## Install common packages
+sudo apt-get update
+sudo apt-get install -y python-software-properties software-properties-common
+
+## Install Vim, PHP and Node
+sudo apt-get install -y vim php7.3 php7.3-cli php7.3-curl php7.3-mysql php7.3-mbstring php7.3-zip php7.3-xml nodejs
+
+## Install Git
 sudo add-apt-repository ppa:git-core/ppa -y
 sudo apt-get update
-sudo apt-get install -y git vim php7.3 php7.3-cli php7.3-curl php7.3-mysql php7.3-mbstring php7.3-zip php7.3-xml nodejs
+sudo apt-get install -y git
 
 ## Configure Git
 git config --global core.editor vim

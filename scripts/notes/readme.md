@@ -4,7 +4,7 @@ Private note system and related management commands.
 
 ## Initial Setup
 
-Run the setup script and provide the notes storage folder, like:
+Run the [setup script](setup.sh) and set the notes storage folder, like:
 
 ```
 sudo sh setup.sh "~/Dropbox/Notes"
@@ -39,8 +39,10 @@ A Markdown file in a subfolder should include:
 - Filename: Short, lowercase, snake case, usually starting with the date in *YYYYMMDD* format, such as "20190114_testing_item.md"
 - Filename: In the case of ongoing, general note files, using a short descriptive name is suitable, such as "career_log.md"
 - Line 1: A h1 describing the note, such as "# Meeting with xxx - 14 Jan 2019"
-- Line 3: A tags line improve future discoverability, with items in the following format: "` #career #money #research `"
-- Line 5: Markdown note content as required
+- Line 2: An empty line
+- Line 3: A tags line to improve discoverability, with items in the following format: "` #family #home `"
+- Line 4: An empty line
+- Line 5+: Markdown formatted note content
 
 #### Example
 

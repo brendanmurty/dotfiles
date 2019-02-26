@@ -45,6 +45,7 @@
       "source.shell": [
         "cfg"
         "config"
+        "env"
       ]
       "text.todotxt": [
         "txt"

@@ -9,6 +9,10 @@
     "syntax",
     "theme"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brendanmurty/dotfiles"
+  },
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   }

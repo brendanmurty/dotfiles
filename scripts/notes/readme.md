@@ -4,10 +4,21 @@ Private note system and related management commands.
 
 ## Initial Setup
 
-Run the [setup script](setup.sh) and set the notes storage folder, like:
+Create a ENV file based on [example.env](example.env):
 
 ```
-sudo sh setup.sh "~/Dropbox/Notes"
+cp example.env .env
+```
+
+Edit *.env*:
+
+1. Set your notes storage folder, which could be in a synced folder, for example
+2. Set your notes scripts folder, which is the location of this file on your file system
+
+Now run the [setup script](setup.sh):
+
+```
+sudo sh setup.sh
 ```
 
 ## Commands

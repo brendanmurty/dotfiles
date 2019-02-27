@@ -20,8 +20,8 @@ mkdir "$NOTES_STORAGE_FOLDER/Work"
 cp ~/.bash_aliases ~/.bash_aliases.bak
 
 echo "# Notes shortcuts related to files in '$NOTES_STORAGE_FOLDER'" >> ~/.bash_aliases
-echo "alias notebackup='php $NOTES_SCRIPTS_FOLDER/backup.php $NOTES_STORAGE_FOLDER'" >> ~/.bash_aliases
-echo "alias notenew='php $NOTES_SCRIPTS_FOLDER/new.php $NOTES_STORAGE_FOLDER'" >> ~/.bash_aliases
-echo "function notesearch() { grep --include=*.md --exclude=readme.md --exclude-dir=_Backups --color -rni '\$1' $NOTES_STORAGE_FOLDER; }" >> ~/.bash_aliases
+echo "alias notebackup='php \"$NOTES_SCRIPTS_FOLDER/backup.php\" \"$NOTES_STORAGE_FOLDER\"'" >> ~/.bash_aliases
+echo "alias notenew='php \"$NOTES_SCRIPTS_FOLDER/new.php\" \"$NOTES_STORAGE_FOLDER\"'" >> ~/.bash_aliases
+echo "function notesearch() { grep --include=*.md --exclude=readme.md --exclude-dir=_Backups --color -rni \$1 \"$NOTES_STORAGE_FOLDER\"; }" >> ~/.bash_aliases
 
 . ~/.bash_aliases

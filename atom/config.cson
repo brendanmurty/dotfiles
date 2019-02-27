@@ -106,9 +106,6 @@
 ".python.source":
   editor:
     tabLength: 4
-".source.vbs":
-  editor:
-    tabLength: 4
 ".text.todotxt":
   editor:
     softWrapAtPreferredLineLength: true

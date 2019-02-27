@@ -8,8 +8,6 @@ language-htaccess
 language-markdown
 language-powershell
 language-todotxt
-markdown-table-editor
-open-files
 pinned-tabs
 pretty-json
 set-syntax

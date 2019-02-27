@@ -5,9 +5,7 @@ language-blade
 language-diff
 language-htaccess
 language-markdown
-language-powershell
 language-todotxt
 pinned-tabs
-pretty-json
 set-syntax
 simple-icons

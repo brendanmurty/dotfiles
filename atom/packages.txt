@@ -12,5 +12,4 @@ markdown-table-editor
 open-files
 pinned-tabs
 pretty-json
-rainglow
 set-syntax

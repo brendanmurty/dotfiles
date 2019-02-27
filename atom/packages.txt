@@ -1,6 +1,5 @@
 atom-clock
 atom-material-ui
-file-icons
 highlight-selected
 language-blade
 language-diff
@@ -11,3 +10,4 @@ language-todotxt
 pinned-tabs
 pretty-json
 set-syntax
+simple-icons

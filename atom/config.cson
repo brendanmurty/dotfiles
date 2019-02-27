@@ -5,18 +5,6 @@
     showClockIcon: true
     showTooltip: true
     tooltipDateFormat: "ddd D MMM YYYY"
-  "atom-ide-ui":
-    "atom-ide-code-format":
-      formatOnSave: true
-      formatOnType: false
-    "atom-ide-diagnostics-ui": {}
-    hyperclick:
-      darwinTriggerKeys: "altKey,metaKey"
-      linuxTriggerKeys: "ctrlKey,altKey"
-      win32TriggerKeys: "ctrlKey,altKey"
-    use:
-      "atom-ide-diagnostics": "never"
-      "atom-ide-diagnostics-ui": "never"
   "atom-material-ui":
     colors:
       abaseColor: "#2b2f38"
@@ -88,26 +76,12 @@
     showLastNames: true
   "git-diff":
     showIconsInEditorGutter: true
-  "ide-php":
-    phpPath: "/usr/bin/php"
   "line-ending-selector":
     defaultLineEnding: "LF"
-  "markdown-table-editor":
-    formatOnSave: true
-    formatType: "weak"
-    headerAlignment: "center"
-  "open-files":
-    animationDuration: 0
-    collapsable: false
-    delay: 0
   tabs:
     displayMruTabList: false
     enableMruTabSwitching: false
     enableVcsColoring: true
-  "tool-bar":
-    iconSize: "32px"
-    position: "Left"
-    visible: false
   welcome:
     showOnStartup: false
 ".blade.html.php.text":

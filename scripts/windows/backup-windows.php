@@ -6,7 +6,7 @@ Backup a Folder
 ----
 
 Assumes that this is a Windows 10 machine with Robocopy already installed.
-Assumes that this script is being run via the Windows Command Prompt.
+Assumes that this script is being run via Windows Command Prompt as the Administrator user.
 
 More information at https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy
 
@@ -22,12 +22,12 @@ if (!file_exists(__DIR__ . DIRECTORY_SEPARATOR . 'config.php')) {
 
 require_once 'config.php';
 
-if (!isset($to_backup) || !is_array($to_backup)) {
-    echo 'ERROR: The backup configuration variable ("' . $to_backup . '") isn\'t set or isn\'t an array' . PHP_EOL;
+if (!isset($directories_to_backup) || !is_array($directories_to_backup)) {
+    echo 'ERROR: The backup configuration variable ("' . $directories_to_backup . '") isn\'t set or isn\'t an array' . PHP_EOL;
     exit();
 }
 
-foreach ($to_backup as $backup) {
+foreach ($directories_to_backup as $backup) {
     $source = $backup[0];
     $destination = $backup[1];
     $log_file = $backup[2];
@@ -44,7 +44,10 @@ foreach ($to_backup as $backup) {
 
     echo 'INFO: Backing up ' . $source . ' to ' . $destination . '... ' . PHP_EOL;
 
-    shell_exec('robocopy "' . $source . '" "' . $destination . '" /MIR /COPY:DT /DCOPY:DT /XD "AppData" "Dropbox" "Git" "Google Drive" "MicrosoftEdgeBackups" "iCloudDrive" "OneDrive" "Tracing" "Temp" "node_modules" ".node-gyp" ".apm" /XF "NTUSER" "NTUSER*" /LOG:"' . $log_file . '"');
+    $exclude_directories_list = isset($exclude_directories) ? ' /XD "' . implode('" "', $exclude_directories) . '" ' : '';
+    $exclude_files_list = isset($exclude_files) ? ' /XF "' . implode('" "', $exclude_files) . '" ' : '';
+
+    shell_exec('robocopy "' . $source . '" "' . $destination . '" /MIR /COPY:DT /DCOPY:DT ' . $exclude_directories_list . ' ' . $exclude_files_list . ' /LOG:"' . $log_file . '"');
 
     echo 'INFO: Backup completed.' . PHP_EOL;
 }

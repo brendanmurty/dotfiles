@@ -16,7 +16,7 @@ More information at https://docs.microsoft.com/en-us/windows-server/administrati
 */
 
 if (!file_exists(__DIR__ . DIRECTORY_SEPARATOR . 'config.php')) {
-    echo 'ERROR: Config file ("config.php") not found, please create this from "config.example.php"' . PHP_EOL;
+    echo 'ERROR: The configuration file ("config.php") was not found, please recreate this by copying "config.example.php"' . PHP_EOL;
     exit();
 }
 

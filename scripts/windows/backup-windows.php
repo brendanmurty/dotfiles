@@ -5,13 +5,11 @@
 Backup a Folder
 ----
 
-Assumes that this is a Windows 10 machine with Robocopy already installed.
-Assumes that this script is being run via Windows Command Prompt as the Administrator user.
+This must be run on a Windows 10 machine with Robocopy already installed.
+This must be run via Windows Command Prompt as the Administrator user.
 
-More information at https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy
-
-1. Deletes all existing files and folders in $destination
-2. Copies all files and folders in $source to $destination, with some exceptions
+More information about Robocopy can be found at:
+https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy
 
 */
 

@@ -144,11 +144,6 @@ atom-text-editor .syntax--todotxt.syntax--comment {
   color: #627288;
 }
 
-// Highlight TODO statements in code comments
-.syntax--comment .syntax--todo {
-  color: #ef746f;
-}
-
 // Improve the display of Markdown code blocks
 .syntax--md .syntax--code {
   color: #fff;
@@ -157,6 +152,11 @@ atom-text-editor .syntax--todotxt.syntax--comment {
 // Improve the display of Markdown link URLs
 .syntax--md .syntax--underline.syntax--link {
   color: #ffbe40;
+}
+
+// Highlight TODO statements in code comments
+.syntax--comment .syntax--todo {
+  color: #ef746f;
 }
 
 // Improve the display of headings in Markdown files
@@ -170,4 +170,20 @@ atom-text-editor .syntax--todotxt.syntax--comment {
 // Hide the GitHub section in the status bar
 .status-bar .github-StatusBarTile {
   display: none;
+}
+
+// Improve the contrast of items in the Tree View
+.list-group li:not(.list-nested-item).selected,
+.list-tree li:not(.list-nested-item).selected,
+.list-group li.list-nested-item.selected > .list-item,
+.list-tree li.list-nested-item.selected > .list-item {
+  color: #c7d0d9;
+}
+
+// Improve the contrast of ignored items in the Tree View
+.list-group li:not(.list-nested-item).status-ignored,
+.list-tree li:not(.list-nested-item).status-ignored,
+.list-group li.list-nested-item.status-ignored > .list-item,
+.list-tree li.list-nested-item.status-ignored > .list-item {
+  color: #888;
 }

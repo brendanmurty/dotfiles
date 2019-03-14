@@ -13,13 +13,14 @@ if ($operating_system == 'win') {
     $config_file = 'config.mac.php';
 }
 
+// Check the configuration file exists
 if (!file_exists(__DIR__ . DIRECTORY_SEPARATOR . $config_file)) {
-    die('ERROR: Config file (' . $config_file . ') not found, please re-create this from "config.example.php"');
+    msg('error', 'Config file (' . $config_file . ') not found, please re-create this from "config.example.php"');
 }
 
 require_once $config_file;
 
-// Set the timezone
+// Set the timezone, defaulting to Sydney
 date_default_timezone_set($timezone ? $timezone : 'Australia/Sydney');
 
 // Default to displaying all progress messages
@@ -27,9 +28,9 @@ if (!isset($show_msgs)) {
     $show_msgs = true;
 }
 
-// Request unlimited read-only access to Trello user data
+// Prompt the user enter a valid Application Token
 if (strlen($application_token) < 30) {
-    die('ERROR: Please allow this script to access your Trello account - https://trello.com/1/authorize?key=' . $application_key . '&name=Trello+Backup+Script&expiration=never&response_type=token');
+    msg('error', 'Please visit this link to allow access your Trello account, then save this to the "$application_key" variable in the config file - https://trello.com/1/authorize?key=' . $application_key . '&name=Trello+Backup+Script&expiration=never&response_type=token');
 }
 
 // Configure proxy if required
@@ -280,7 +281,7 @@ function msg($message_type = 'info', $message_content = '', $enable_info_message
 
     if ($message_type == 'error') {
         echo $message;
-        return;
+        exit;
     }
 
     if ($enable_info_messages) {

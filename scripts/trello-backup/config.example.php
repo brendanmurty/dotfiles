@@ -34,3 +34,6 @@ $ignore_boards = array('Welcome Board');
 
 // Timezone to use for the script - http://php.net/manual/en/timezones.php
 $timezone = 'Australia/Sydney';
+
+// Show progress messages when the script runs? Only major error messages will be shown if this is set to false
+$show_msgs = true;

@@ -30,7 +30,7 @@ if (!isset($show_msgs)) {
 
 // Prompt the user enter a valid Application Token
 if (strlen($application_token) < 30) {
-    msg('error', 'Please visit this link to allow access your Trello account, then save this to the "$application_key" variable in the config file - https://trello.com/1/authorize?key=' . $application_key . '&name=Trello+Backup+Script&expiration=never&response_type=token');
+    msg('error', 'Please visit this link to allow access to your Trello account, then save this to the "$application_key" variable in "' . $config_file . '" - https://trello.com/1/authorize?key=' . $application_key . '&name=Trello+Backup+Script&expiration=never&response_type=token');
 }
 
 // Configure proxy if required

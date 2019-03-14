@@ -14,8 +14,7 @@ if ($operating_system == 'win') {
 }
 
 if (!file_exists(__DIR__ . DIRECTORY_SEPARATOR . $config_file)) {
-    echo 'ERROR: Config file (' . $config_file . ') not found, please re-create this from "config.example.php"' . PHP_EOL;
-    exit();
+    die('ERROR: Config file (' . $config_file . ') not found, please re-create this from "config.example.php"');
 }
 
 require_once $config_file;
@@ -25,9 +24,7 @@ date_default_timezone_set($timezone ? $timezone : 'Australia/Sydney');
 
 // Request unlimited read-only access to Trello user data
 if (strlen($application_token) < 30) {
-    $url_token = 'https://trello.com/1/authorize?key=' . $application_key . '&name=Trello+Backup+Script&expiration=never&response_type=token';
-
-    die('ERROR: Please allow this script to access your Trello account -' . PHP_EOL . $url_token . PHP_EOL);
+    die('ERROR: Please allow this script to access your Trello account - https://trello.com/1/authorize?key=' . $application_key . '&name=Trello+Backup+Script&expiration=never&response_type=token');
 }
 
 // Configure proxy if required

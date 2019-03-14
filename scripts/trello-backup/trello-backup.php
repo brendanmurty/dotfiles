@@ -14,7 +14,7 @@ if ($operating_system == 'win') {
 }
 
 if (!file_exists(__DIR__ . DIRECTORY_SEPARATOR . $config_file)) {
-    echo 'ERROR: Config file (' . $config_file . ') not found, please create this from "config.example.php"' . "\n";
+    echo 'ERROR: Config file (' . $config_file . ') not found, please re-create this from "config.example.php"' . PHP_EOL;
     exit();
 }
 
@@ -27,7 +27,7 @@ date_default_timezone_set($timezone ? $timezone : 'Australia/Sydney');
 if (strlen($application_token) < 30) {
     $url_token = 'https://trello.com/1/authorize?key=' . $application_key . '&name=Trello+Backup+Script&expiration=never&response_type=token';
 
-    die('ERROR: Please visit the following URL with your web browser to authorise your Trello Backups to run:' . "\n" . $url_token . "\n");
+    die('ERROR: Please allow this script to access your Trello account -' . PHP_EOL . $url_token . PHP_EOL);
 }
 
 // Configure proxy if required
@@ -48,12 +48,12 @@ $application_token = trim($application_token);
 $url_boards = 'https://api.trello.com/1/members/me/boards?&key=' . $application_key . '&token=' . $application_token;
 $response = file_get_contents($url_boards, false, $ctx);
 if ($response === FALSE) {
-    die('Error requesting boards, please try again later and check your internet connection.' . "\n");
+    die('ERROR: Could not access the Trello API' . PHP_EOL);
 }
 
 $boardsInfo = json_decode($response);
 if (empty($boardsInfo)) {
-    die('Error requesting your boards, please check your tokens are correct.' . "\n");
+    die('ERROR: Could not access your boards, please verify your API tokens' . PHP_EOL);
 }
 
 // Fetch all organisations
@@ -72,7 +72,7 @@ if ($backup_all_organisation_boards) {
         $response = file_get_contents($url_boards, false, $ctx);
         $organisationBoardsInfo = json_decode($response);
         if (empty($organisationBoardsInfo)) {
-            die('Error requesting boards for the ' . $organisation_name . ' organisation, please check your tokens are correct.' . "\n");
+            die('ERROR: Could not acess boards for "' . $organisation_name . '", please verify your API tokens' . PHP_EOL);
         } else {
             $boardsInfo = array_merge($organisationBoardsInfo, $boardsInfo);
         }
@@ -97,7 +97,7 @@ foreach ($boardsInfo as $board) {
     );
 }
 
-echo count($boards) . " boards to backup... \n";
+echo 'INFO: Found ' . count($boards) . ' boards to backup' . PHP_EOL;
 
 // Backup the board data
 foreach ($boards as $id => $board) {
@@ -127,16 +127,16 @@ foreach ($boards as $id => $board) {
 
     $filename = $dirname . DIRECTORY_SEPARATOR . sanitiseFileName($board->name) . '.json';
 
-    echo 'Saving ' . 
-        (($board->closed) ? 'the closed ' : '') . 'board \'' . $board->name . '\'' . 
-        (empty($board->orgName) ? '' : ' (within the \'' . $board->orgName . '\' organisation)') . 
-        ' to ' . $filename . "\n";
+    echo 'INFO: Saving ' . 
+        (($board->closed) ? 'the closed ' : '') . 'board "' . $board->name . '"' . 
+        (empty($board->orgName) ? '' : ' (within the "' . $board->orgName . '" organisation)') . 
+        ' - "' . $filename . '"' . PHP_EOL;
 
     $response = file_get_contents($url_individual_board_json, false, $ctx);
 
     $decoded = json_decode($response);
     if (empty($decoded)) {
-        die('The board \'' . $board->name . '\' or organisation \'' . $board->orgName . '\' could not be downloaded: ' . $response . "\n");
+        die('ERROR: The board "' . $board->name . '" or organisation "' . $board->orgName . '" could not be downloaded' . PHP_EOL);
     }
 
     // Save the human friendly JSON to the backup location
@@ -147,7 +147,7 @@ foreach ($boards as $id => $board) {
         $trelloObject = json_decode($response);
         $attachments = array();
 
-        echo 'Saving file attachments and shortcuts...' . "\n";
+        echo 'INFO: Saving file attachments and shortcuts' . PHP_EOL;
 
         foreach ($trelloObject->actions as $member) {
             if (isset($member->data->attachment) && isset($member->data->attachment->url)) {
@@ -177,7 +177,7 @@ foreach ($boards as $id => $board) {
     }
 }
 
-echo "\nYour Trello boards have now been downloaded!\n";
+echo 'INFO: Finished!';
 
 // Construct a directory path
 function getPathToStoreBackups($path, $board)
@@ -216,7 +216,7 @@ function createZip($contents_directory, $zip_file_path) {
     $handle = $zip->open($zip_file_path, \ZipArchive::CREATE | \ZipArchive::OVERWRITE);
 
     if ($handle !== true) {
-        echo 'ERROR: Zip file couldn\'t be created at ' . $zip_file_path . "\n";
+        echo 'ERROR: Zip file could not be created - ' . $zip_file_path . PHP_EOL;
 
         return false;
     } else {
@@ -236,7 +236,7 @@ function createZip($contents_directory, $zip_file_path) {
 
         $zip->close();
 
-        echo 'Zip file created at ' . $zip_file_path . "\n";
+        echo 'INFO: Zip file created - "' . $zip_file_path . '"' . PHP_EOL;
 
         return true;
     }
@@ -264,6 +264,6 @@ function deleteTempFolder($directory_path, $backup_temp_path) {
 
         rmdir($directory_path);
 
-        echo 'Deleted temporary folder from ' . $directory_path . "\n";
+        echo 'INFO: Deleted temporary folder "' . $directory_path . '"' . PHP_EOL;
     }
 }

@@ -10,11 +10,6 @@ alias update-system='sudo apt update && sudo apt -y upgrade && sudo apt autoremo
 
 ## General
 
-### Vagrant
-
-alias vagrant-ssh='winpty vagrant ssh'
-alias vagrant-reload='vagrant reload --provision'
-
 ### Docker
 
 alias docker-up='docker-compose up -d'

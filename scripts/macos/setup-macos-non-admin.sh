@@ -49,6 +49,9 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
+### Disable dock icon bouncing effect
+defaults write com.apple.dock no-bouncing -bool FALSE
+
 ### Set the icon size of Dock items
 defaults write com.apple.dock tilesize -int 32
 

@@ -1,16 +1,4 @@
-# Setup a new macOS 10 device
-
-## Install Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-## Install application packages
-brew cask install google-chrome atom dropbox
-
-## Install development packages
-brew install git node php@7.3
-
-## Install Quick Look Plugins - https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlvideo
+# Setup a new macOS 10 device - non administrator user version
 
 ## Configure Git
 git config --global core.editor vim
@@ -20,15 +8,6 @@ git config --global core.autocrlf input
 
 ## Update system settings
 
-### Close any open System Preferences panes, to prevent them from overriding the below changes
-osascript -e 'tell application "System Preferences" to quit'
-
-### Ask for the administrator password upfront
-sudo -v
-
-### Disable sound effects on boot
-sudo nvram SystemAudioVolume=" "
-
 ### Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
@@ -37,12 +16,6 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 ### Disable the crash reporter
 defaults write com.apple.CrashReporter DialogType -string "none"
-
-### Remove duplicates in the Open With menu
-/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
-
-### Restart automatically if the computer freezes
-sudo systemsetup -setrestartfreeze on
 
 ### Disable Notification Center and remove the menu bar icon
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null

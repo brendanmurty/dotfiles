@@ -11,6 +11,9 @@ git config --global core.autocrlf input
 ### Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
+### Use strong font smoothing
+defaults -currentHost write -globalDomain AppleFontSmoothing -int 3
+
 ### Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 

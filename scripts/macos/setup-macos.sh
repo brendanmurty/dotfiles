@@ -29,6 +29,9 @@ sudo -v
 ### Disable sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
+### Use strong font smoothing
+defaults -currentHost write -globalDomain AppleFontSmoothing -int 3
+
 ### Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 

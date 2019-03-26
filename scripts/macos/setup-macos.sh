@@ -20,6 +20,10 @@ git config --global core.autocrlf input
 
 ## Update system settings
 
+### Apply customised keybindings
+mkdir -p $HOME/Library/KeyBindings
+cp key-bindings.dict $HOME/Library/KeyBindings/DefaultKeyBinding.dict
+
 ### Close any open System Preferences panes, to prevent them from overriding the below changes
 osascript -e 'tell application "System Preferences" to quit'
 

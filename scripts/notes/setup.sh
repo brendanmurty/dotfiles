@@ -2,7 +2,7 @@
 
 # Load the environment variables
 
-source ./.env
+source .env
 
 # Setup the folder structure
 
@@ -20,4 +20,4 @@ echo "alias notebackup='php \"$NOTES_SCRIPTS_FOLDER/backup.php\" \"$NOTES_STORAG
 echo "alias notenew='php \"$NOTES_SCRIPTS_FOLDER/new.php\" \"$NOTES_STORAGE_FOLDER\"'" >> ~/.bash_aliases
 echo "function notesearch() { grep --include=*.md --exclude=readme.md --exclude-dir=_Backups --color -rni \$1 \"$NOTES_STORAGE_FOLDER\"; }" >> ~/.bash_aliases
 
-. ~/.bash_aliases
+source ~/.bash_aliases

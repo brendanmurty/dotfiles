@@ -1,4 +1,6 @@
 # Setup a new macOS 10 device
+# ----
+# - Relies on the current user having administrator privileges
 
 ## Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"

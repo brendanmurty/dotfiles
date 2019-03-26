@@ -4,18 +4,31 @@ Private note system and related management commands.
 
 ## Initial Setup
 
-Create a ENV file based on [example.env](example.env):
+### 1. Create a ENV file based on [example.env](example.env)
 
 ```
 cp example.env .env
 ```
 
-Edit *.env*:
+### 2. Edit *.env*
 
 1. Set your notes storage folder, which could be in a synced folder, for example
 2. Set your notes scripts folder, which is the location of this file on your file system
 
-Now run the [setup script](setup.sh):
+### 3. Install the dependencies
+
+- PHP 7.3
+- PHP 7.3 Extension: mbstring
+- PHP 7.3 Extension: zip
+
+#### Ubuntu
+
+```
+apt-get update
+apt-get -y install php7.3 php7.3-cli php7.3-mbstring php7.3-zip
+```
+
+### 4. Run the [setup script](setup.sh)
 
 ```
 sudo sh setup.sh

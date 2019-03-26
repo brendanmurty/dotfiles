@@ -1,12 +1,8 @@
 # setup.sh - Install the required packages and add time-saving alias commands
 
-# Install the required packages
-
-apt-get update
-apt-get -y install php7.3 php7.3-cli php7.3-mbstring php7.3-zip
-
 # Load the environment variables
-. ./.env
+
+source ./.env
 
 # Setup the folder structure
 

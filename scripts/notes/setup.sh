@@ -6,10 +6,10 @@ source ./.env
 
 # Setup the folder structure
 
-mkdir "$NOTES_STORAGE_FOLDER/_Backups"
-mkdir "$NOTES_STORAGE_FOLDER/_Inbox"
-mkdir "$NOTES_STORAGE_FOLDER/Personal"
-mkdir "$NOTES_STORAGE_FOLDER/Work"
+mkdir -p "$NOTES_STORAGE_FOLDER/_Backups"
+mkdir -p "$NOTES_STORAGE_FOLDER/_Inbox"
+mkdir -p "$NOTES_STORAGE_FOLDER/Personal"
+mkdir -p "$NOTES_STORAGE_FOLDER/Work"
 
 # Setup alias commands
 

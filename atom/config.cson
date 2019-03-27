@@ -82,6 +82,8 @@
     displayMruTabList: false
     enableMruTabSwitching: false
     enableVcsColoring: true
+  "terminal-tab":
+    defaultLocation: "center"
   welcome:
     showOnStartup: false
 ".blade.html.php.text":

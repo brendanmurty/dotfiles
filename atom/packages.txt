@@ -9,3 +9,4 @@ language-todotxt
 pinned-tabs
 set-syntax
 simple-icons
+terminal-tab

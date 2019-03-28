@@ -2,19 +2,13 @@
 
 # Custom shell commands and aliases
 
-## System Maintenance
+## Docker
 
-### Apply new package updates and remove out-of-date packages
+alias dockerup='docker-compose up -d'
+alias dockerdown='docker-compose down'
+alias dockerps="docker ps --format 'table {{.Names}}\t{{.Status}}\t{{.ID}}\t{{.Image}}'"
+alias dockerst="docker stats --no-stream --format 'table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.Container}}'"
 
-alias update-system='sudo apt update && sudo apt -y upgrade && sudo apt autoremove && sudo apt autoclean'
+## List all files in a directory with human-readable file sizes
 
-## General
-
-### Docker
-
-alias docker-up='docker-compose up -d'
-alias docker-down='docker-compose down'
-
-### List all files in a directory with human-readable file sizes
-
-alias la='ll -ah'
+alias la='ls -lah'

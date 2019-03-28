@@ -1,16 +1,16 @@
 <?php
 
-// backup.php - Create a ZIP file containing all notes subfolders
+// backup.php - Create a ZIP file containing all notes subdirectories
 
-$notes_content_folder = __DIR__;
+$notes_content_directory = __DIR__;
 if (!empty($argv[1])) {
-    $notes_content_folder = $argv[1];
+    $notes_content_directory = $argv[1];
 }
 
 $date = date('Ymd');
-$backup_file_path = $notes_content_folder . DIRECTORY_SEPARATOR . '_Backups' . DIRECTORY_SEPARATOR . 'notes_' . $date . '.zip';
+$backup_file_path = $notes_content_directory . DIRECTORY_SEPARATOR . '_Backups' . DIRECTORY_SEPARATOR . 'notes_' . $date . '.zip';
 
-$zip_created = createZip($notes_content_folder, $backup_file_path);
+$zip_created = createZip($notes_content_directory, $backup_file_path);
 
 if ($zip_created) {
     echo 'DONE: Backup saved to ' . $backup_file_path . PHP_EOL;

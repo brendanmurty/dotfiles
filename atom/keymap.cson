@@ -4,3 +4,6 @@
 'body':
   'ctrl-tab': 'pane:show-next-item'
   'ctrl-shift-tab': 'pane:show-previous-item'
+'terminal-view':
+  'ctrl-c': 'terminal-copy'
+  'ctrl-v': 'terminal-paste'

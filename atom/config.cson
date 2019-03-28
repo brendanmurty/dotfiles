@@ -52,6 +52,9 @@
       "notifications"
       "spell-check"
     ]
+    packagesWithKeymapsDisabled: [
+      "terminal-tab"
+    ]
     telemetryConsent: "no"
     themes: [
       "atom-material-ui"

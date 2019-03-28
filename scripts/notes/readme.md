@@ -34,6 +34,24 @@ apt-get -y install php7.3 php7.3-cli php7.3-mbstring php7.3-zip
 sudo sh setup.sh
 ```
 
+## Notes Storage Directories
+
+A subfolder is a high-level grouping of notes. Each folder has some rules:
+
+- _Backups: Used by [backup.php](backup.php) to store ZIP backups of the notes folders
+- _Inbox: Unsorted notes, used by [new.php](new.php)
+- _Templates: Note template files, used by [new.php](new.php)
+- Personal: Personal, home or family notes
+- Work: Career or work related notes
+- Other directories can be created here as needed
+
+### Templates
+
+- Must be placed in the "_Templates" subdirectory
+- Must have a lowercase filename with the "md" file extension
+- Must contain plain-text Markdown content only
+- The current date can be dynamically inserted by adding !date! in the content of the file
+
 ## Commands
 
 ### Create a new note
@@ -42,10 +60,16 @@ sudo sh setup.sh
 notenew
 ```
 
-### Search notes for "testing"
+### Create a new note using the "meeting" template
 
 ```
-notesearch "testing"
+notenew "meeting"
+```
+
+### Search notes for "meeting"
+
+```
+notesearch "meeting"
 ```
 
 ### Backup notes
@@ -80,12 +104,3 @@ _Inbox/20190114_testing_note.md
 
 The note's content goes here in *Markdown* [format](https://daringfireball.net/projects/markdown/syntax).
 ```
-
-### Subfolders
-
-A subfolder is a high-level grouping of notes. Each folder has some rules:
-
-- _Backups: Used by `backup.php` to store ZIP backups of the notes folders
-- _Inbox: Unsorted notes, used by `new.php`
-- Personal: Personal, home or family notes
-- Work: Career or work related notes

@@ -16,10 +16,10 @@ The second optional parameter to to use a template (md file) to set the initial 
 
 Template files:
 
-- Must be placed in a "_Templates" subdirectory
+- Must be placed in the "_Templates" subdirectory
 - Must have a lowercase filename with the "md" file extension
-- Must contain plain-text markdown content only
-- The date string can be dynamically inserted by adding !date! in the content of the file
+- Must contain plain-text Markdown content only
+- The current date can be dynamically inserted by adding !date! in the content of the file
 
 */
 

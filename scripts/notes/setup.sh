@@ -8,6 +8,7 @@ source .env
 
 mkdir -p "$NOTES_STORAGE_FOLDER/_Backups"
 mkdir -p "$NOTES_STORAGE_FOLDER/_Inbox"
+mkdir -p "$NOTES_STORAGE_FOLDER/_Templates"
 mkdir -p "$NOTES_STORAGE_FOLDER/Personal"
 mkdir -p "$NOTES_STORAGE_FOLDER/Work"
 

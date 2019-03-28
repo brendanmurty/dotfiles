@@ -8,11 +8,11 @@ Creates a new Markdown file in the Inbox folder using the current date as the fi
 
 The first optional parameter is the top level notes storage folder:
 
-    php /path/to/this/file/new.php "/path/to/notes"
+    php "/path/to/this/file/new.php" "/path/to/notes"
 
 The second optional parameter to to use a template (md file) to set the initial content of the new note:
 
-    php /path/to/this/file/new.php "/path/to/notes" "meeting"
+    php "/path/to/this/file/new.php" "/path/to/notes" "meeting"
 
 Template files:
 

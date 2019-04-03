@@ -27,11 +27,13 @@ cp ~/.gitignore $1/backup.gitignore
 cp ~/.vimrc $1/backup.vimrc
 
 # Copy folders to the backup directory
+mkdir -p $1/SSH
 mkdir -p $1/Applications
 mkdir -p $1/Movies
 mkdir -p $1/Music
 mkdir -p $1/Pictures
 mkdir -p $1/Public
+sudo cp -r ~/.ssh/* $1/SSH
 sudo cp -r ~/Applications/* $1/Applications
 cp -r ~/Movies/* $1/Movies
 cp -r ~/Music/* $1/Music

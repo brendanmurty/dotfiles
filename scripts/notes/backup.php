@@ -1,19 +1,51 @@
 <?php
 
-// backup.php - Create a ZIP file containing all notes subdirectories
+// backup.php - Create a ZIP file containing all file in all notes subdirectories
 
+include('vendor/autoload.php');
+
+ini_set('memory_limit', '512M');
+
+// Load environment variables from the ".env" file in this folder
+$dotenv = Dotenv\Dotenv::create(__DIR__);
+$dotenv->load();
+
+// Get the current date
+$date = date('Ymd');
+
+// Default to using this directory as the main notes storage directory
 $notes_content_directory = __DIR__;
+
+// If it's provided in the first parameter passed to this script, use this directory as the base content directory.
+// Otherwise attempt to load it from the related environment variable
 if (!empty($argv[1])) {
     $notes_content_directory = $argv[1];
+} elseif (getenv('NOTES_STORAGE_FOLDER')) {
+    $notes_content_directory = getenv('NOTES_STORAGE_FOLDER');
 }
 
-$date = date('Ymd');
-$backup_file_path = $notes_content_directory . DIRECTORY_SEPARATOR . '_Backups' . DIRECTORY_SEPARATOR . 'notes_' . $date . '.zip';
+// Set a default Backup directory
+$notes_backup_directory = $notes_content_directory . '_Backups';
 
+// Attempt to load the Backup directory from the related environment variable
+if (getenv('NOTES_BACKUP_FOLDER')) {
+    $notes_backup_directory = getenv('NOTES_BACKUP_FOLDER');
+}
+
+// Make the Backup directory if required
+if (!file_exists($notes_backup_directory)) {
+    mkdir($notes_backup_directory, '0777', true);
+}
+
+$backup_file_path = $notes_backup_directory . DIRECTORY_SEPARATOR . 'notes_' . $date . '.zip';
+
+echo 'INFO: Saving notes from "' . $notes_content_directory . '" to "' . $backup_file_path . '"...' . PHP_EOL;
+
+// Create the backup file as a ZIP archive
 $zip_created = createZip($notes_content_directory, $backup_file_path);
 
 if ($zip_created) {
-    echo 'DONE: Backup saved to ' . $backup_file_path . PHP_EOL;
+    echo 'DONE: Backup saved.' . PHP_EOL;
 } else {
     echo 'ERROR: Backup failed!' . PHP_EOL;
 }

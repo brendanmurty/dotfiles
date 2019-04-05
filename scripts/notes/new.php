@@ -25,19 +25,20 @@ Template files:
 
 include('vendor/autoload.php');
 
+// Load environment variables from the ".env" file in this folder
+$dotenv = Dotenv\Dotenv::create(__DIR__);
+$dotenv->load();
+
 // Get the current date and store it in a few different formats
 $date = new DateTime('now', new DateTimezone('Australia/Sydney'));
 $date_full = $date->format('Ymd-Hisu');
 $date_ymd = $date->format('Ymd');
 
-// Load environment variables from the ".env" file in this folder
-$dotenv = Dotenv\Dotenv::create(__DIR__);
-$dotenv->load();
-
 // Default to using this directory as the main notes storage directory
 $notes_content_directory = __DIR__;
 
-// If it's provided in the first parameter passed to this script, use this directory as the base content directory, otherwise attempt to load it from the related environment variable
+// If it's provided in the first parameter passed to this script, use this directory as the base content directory.
+// Otherwise attempt to load it from the related environment variable.
 if (!empty($argv[1])) {
     $notes_content_directory = $argv[1];
 } elseif (getenv('NOTES_STORAGE_FOLDER')) {

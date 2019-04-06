@@ -57,7 +57,7 @@ You can create other folders here as needed, such as `Personal` or `Work`.
 
 ### Templates
 
-- Must be placed in the "_Templates" subdirectory
+- Must be placed in the `Templates` directory - configured via the `NOTES_TEMPLATE_FOLDER` variable in `.env` or defaulting to `_Templates` under the main Notes Storage Directory
 - Must have a lowercase filename with the "md" file extension
 - Must contain plain-text Markdown content only
 - The current date can be dynamically inserted by adding !date! in the content of the file
@@ -92,15 +92,15 @@ notebackup
 
 ### Files
 
-A Markdown file in a subfolder should include:
+A Markdown file in a subfolder usually has the following rules:
 
-- Filename: Short, lowercase, snake case, usually starting with the date in *YYYYMMDD* format, such as "20190114_testing_item.md"
-- Filename: In the case of ongoing, general note files, using a short descriptive name is suitable, such as "career_log.md"
-- Line 1: A h1 describing the note, such as "# Meeting with xxx - 14 Jan 2019"
+- Filename: Short, lowercase, snake case, usually starting with the date in `YYYYMMDD` format, such as `20190114_testing_item.md`
+- Filename: In the case of ongoing, general note files, using a short descriptive name is suitable, such as `career_log.md`
+- Line 1: A h1 describing the note, such as `# Meeting with xxx - 14 Jan 2019`
 - Line 2: An empty line
-- Line 3: A tags line to improve discoverability, with items in the following format: "` #family #home `"
+- Line 3: A tags line to improve discoverability, with items in the following format: `` #family #home ``
 - Line 4: An empty line
-- Line 5+: Markdown formatted note content
+- Line 5+: Note content in Markdown format
 
 #### Example
 

@@ -17,10 +17,11 @@ cp example.env .env
 
 ### 3. Install the dependencies
 
-- PHP 7.3
-- PHP 7.3 Extension: mbstring
-- PHP 7.3 Extension: zip
-- `composer install`
+1. PHP 7.3
+2. PHP 7.3 Extension: mbstring
+3. PHP 7.3 Extension: zip
+4. [Composer](https://getcomposer.org/download/)
+5. Run `composer install` in this directory
 
 #### Ubuntu
 

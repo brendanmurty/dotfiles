@@ -85,7 +85,12 @@ $note_template_content = str_ireplace('!date!', $date_ymd, $note_template_conten
 // Save the note file
 $new_file_path = $notes_inbox_directory . DIRECTORY_SEPARATOR . $date_full . '.md';
 $file = fopen($new_file_path, 'a+');
-fwrite($file, $note_template_content);
-fclose($file);
+if ($file) {
+    fwrite($file, $note_template_content);
+    fclose($file);
 
-echo 'DONE: Note created at ' . $new_file_path . PHP_EOL;
+    echo 'DONE: Note created at ' . $new_file_path . PHP_EOL;
+} else {
+    echo 'ERROR: Note file could not be created at ' . $new_file_path . PHP_EOL;
+}
+

@@ -2,6 +2,11 @@
 # ----
 # - Relies on the current user having administrator privileges
 
+## Add macOS specific aliases
+cp ~/.bash_aliases ~/.bash_aliases.before-setup-macos.bak
+cat macos.bash_aliases >> ~/.bash_aliases
+. ~/.bash_aliases
+
 ## Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 

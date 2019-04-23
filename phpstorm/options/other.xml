@@ -1,0 +1,18 @@
+<application>
+  <component name="NodeJsLocalInterpreters">
+    <local-interpreter path="$USER_HOME$/.nvm/versions/node/v11.12.0/bin/node" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ColorChooser.RecentColors" value="35-197-176-255" />
+    <property name="PhpStorm.InitialConfiguration" value="true" />
+    <property name="SettingsSearchHistory" value="language lev" />
+    <property name="TrendingPluginsSearchHistory" value="material theme" />
+    <property name="ask.about.ctrl.y.shortcut" value="true" />
+    <property name="evlsprt3.191" value="11" />
+    <property name="file.gist.reindex.count" value="3001" />
+    <property name="lastTip" value="1" />
+    <property name="mt.showStatisticsAgreement" value="true" />
+    <property name="tasks.pass.word.conversion.enforced" value="true" />
+    <property name="ts.lib.d.ts.version" value="3.4.1" />
+  </component>
+</application>

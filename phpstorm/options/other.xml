@@ -11,6 +11,7 @@
     <property name="ask.about.ctrl.y.shortcut" value="true" />
     <property name="evlsprt3.191" value="11" />
     <property name="file.gist.reindex.count" value="3001" />
+    <property name="fileTypeChangedCounter" value="2" />
     <property name="lastTip" value="1" />
     <property name="mt.showStatisticsAgreement" value="true" />
     <property name="tasks.pass.word.conversion.enforced" value="true" />

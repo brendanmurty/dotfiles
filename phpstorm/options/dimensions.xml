@@ -1,0 +1,16 @@
+<application>
+  <component name="DimensionService">
+    <location key="WELCOME_SCREEN.0.0.1920.1080" x="978" y="463" />
+    <location key="com.intellij.ide.util.TipDialog.0.0.1920.1080" x="657" y="383" />
+    <location key="search.everywhere.popup.1920.0.1920.1080" x="2562" y="292" />
+    <location key="SettingsEditor.1920.0.1920.1080" x="2257" y="176" />
+    <location key="#Inspections.1920.0.1920.1080" x="2518" y="241" />
+    <location key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1.1920.0.1920.1080" x="2628" y="415" />
+    <location key="#Updates.1920.0.1920.1080" x="2480" y="217" />
+    <location key="#Plugins.1920.0.1920.1080" x="506" y="251" />
+    <location key="ProcessPopupWindow.1920.0.1920.1080" x="3355" y="970" />
+    <location key="#Notifications.1920.0.1920.1080" x="2480" y="217" />
+    <size key="search.everywhere.popup.1920.0.1920.1080" width="670" height="676" />
+    <size key="ProcessPopupWindow.1920.0.1920.1080" width="400" height="108" />
+  </component>
+</application>

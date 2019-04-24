@@ -1,3 +1,5 @@
+# OS generated files
+
 .DS_Store
 .DS_Store?
 ._*
@@ -6,12 +8,18 @@
 ehthumbs.db
 Thumbs.db
 
+# Dependencies
+
 node_modules/
 vendor/
+
+# Sensitive configuration files
 
 .env
 *.key
 
-.idea
+# General
 
-*.log
+tmp/
+.tags
+.tags_swap

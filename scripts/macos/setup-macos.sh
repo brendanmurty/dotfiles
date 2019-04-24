@@ -3,7 +3,7 @@
 # - Relies on the current user having administrator privileges
 
 ## Add macOS specific aliases
-cp ~/.bash_aliases ~/.bash_aliases.before-setup-macos.bak
+cp ~/.bash_aliases ~/.bash_aliases.before-dotfiles-macos.bak
 cat macos.bash_aliases >> ~/.bash_aliases
 . ~/.bash_aliases
 

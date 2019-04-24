@@ -1,50 +1,44 @@
-# Atom
+# OS generated files
 
-.atom/.apm
-.atom/.node-gyp
-.atom/.npm
-.atom/blob-store
-.atom/compile-cache
-.atom/dev
-.atom/packages
-.atom/recovery
-.atom/storage
-
-# Sublime Text
-
-*.sublime-license
-*.last-run
-*.cache
-Package Control.cache/
-
-# Windows
-
-Desktop
-Favorites
-Favourites
-Thumbs.db
-ehthumbs.db
-ehthumbs_vista.db
-Desktop.ini
-$RECYCLE.BIN/
-*.cab
-*.msi
-*.msm
-*.msp
-*.lnk
-
-# Mac OS
-
-*.DS_Store
-.AppleDouble
-.LSOverride
+.DS_Store
+.DS_Store?
 ._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Dependencies
+
+node_modules/
+vendor/
+
+# Sensitive configuration files
+
+.env
+*.key
+
+# WordPress
+
+wp-config.php
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/mu-plugins/
+wp-content/wp-cache-config.php
+wp-content/plugins/hello.php
 
 # General
 
 tmp/
-.ssh/
 .tags
 .tags_swap
-node_modules/
-vendor/
+*.log
+
+# IDE configuration files
+
+.idea

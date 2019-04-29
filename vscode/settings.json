@@ -19,8 +19,11 @@
     "workbench.fontAliasing": "antialiased",
     "markdown.preview.fontFamily": "'Fira Code', monospace",
     "workbench.colorCustomizations": {
-        "sideBar.background": "#000000",
-        "editor.background": "#000000"
+        "sideBar.background": "#000",
+        "editor.background": "#000"
+    },
+    "editor.tokenColorCustomizations": {
+        "comments": "#666"
     },
     "editor.minimap.enabled": false,
     "git.enableSmartCommit": true,

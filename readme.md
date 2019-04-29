@@ -7,6 +7,7 @@ Configuration files for a local development environment.
 - **[atom](atom/)**: [Atom](https://atom.io/) text editor configuration
 - **[phpstorm](phpstorm/)**: [PhpStorm](https://www.jetbrains.com/phpstorm/) IDE configuration
 - **[scripts](scripts/)**: Various scripts to assist with new system setup and automated backup processes
+- **[vscode](vscode/)**: [Visual Studio Code](https://code.visualstudio.com/) IDE configuration
 - **[custom.bash_aliases](custom.bash_aliases)**: Shortcut commands to make common commands easier to use
 - **[custom.bash_prompt](custom.bash_prompt)**: Customised terminal command prefix configuration
 - **[custom.gitconfig](custom.gitconfig)**: [Git configuration](https://git-scm.com/docs/git-config) including alias commands

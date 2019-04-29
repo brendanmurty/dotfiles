@@ -1,0 +1,26 @@
+{
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.fontFamily": "'Fira Code', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 20,
+    "workbench.colorTheme": "Material Theme Darker High Contrast",
+    "workbench.iconTheme": "material-icon-theme",
+    "files.eol": "\n",
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.defaultFormatter": "vscode.markdown-language-features",
+    "editor.folding": false,
+    "editor.quickSuggestionsDelay": 300,
+    "debug.console.fontSize": 20,
+    "markdown.preview.fontSize": 20,
+    "terminal.integrated.fontSize": 20,
+    "workbench.fontAliasing": "antialiased",
+    "markdown.preview.fontFamily": "'Fira Code', monospace",
+    "workbench.colorCustomizations": {
+        "sideBar.background": "#000000",
+        "editor.background": "#000000"
+    },
+    "editor.minimap.enabled": false
+}

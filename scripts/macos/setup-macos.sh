@@ -90,6 +90,9 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
+### Finder: Always show hidden files and folders
+defaults write com.apple.finder AppleShowAllFiles -bool TRUE
+
 ### Disable dock icon bouncing effect
 defaults write com.apple.dock no-bouncing -bool FALSE
 

@@ -17,7 +17,7 @@ Configuration files for a local development environment.
 ## Initial Setup
 
 ```
-sudo sh setup.sh
+sudo sh bootstrap.sh
 ```
 
 ## Revert Customisations

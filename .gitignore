@@ -17,6 +17,7 @@ vendor/
 
 .env
 *.key
+repositories.list
 
 # General
 

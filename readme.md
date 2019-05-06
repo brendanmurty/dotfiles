@@ -11,7 +11,7 @@ Configuration files for a local development environment.
 - **[scripts](scripts/)**: Various scripts to assist with new system setup and automated backup processes
 - **[vim](vim/)**: [Vim](http://www.vim.org/) text editor configuration
 - **[vscode](vscode/)**: [Visual Studio Code](https://code.visualstudio.com/) IDE configuration
-- **[setup.sh](setup.sh)**: Script to deploy changes to user configuration files
+- **[bootstrap.sh](bootstrap.sh)**: Script to deploy changes to user configuration files
 - **[undo.sh](undo.sh)**: Script to undo changes to user configuration files
 
 ## Initial Setup

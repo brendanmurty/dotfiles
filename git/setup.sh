@@ -9,7 +9,7 @@ cat custom.gitignore >> ~/.gitignore
 
 # Clone repositories in "repositories.list" to folders under "~/Git"
 #  - Originally found here: https://github.com/rkalis/dotfiles/blob/master/repos/setup.sh
-GIT_REPOSITORY_FOLDER="$HOME/Git/Temp"
+GIT_REPOSITORY_FOLDER="$HOME/Repositories"
 GIT_REPOSITORY_LIST="$(pwd)/repositories.list"
 if [[ -f "repositories.list" ]]; then
   echo "INFO  Loading repositories from '$GIT_REPOSITORY_LIST' in to directories under '$GIT_REPOSITORY_FOLDER'"

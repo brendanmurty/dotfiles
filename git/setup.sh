@@ -9,32 +9,24 @@ cat custom.gitignore >> ~/.gitignore
 
 # Clone repositories in "repositories.list" to folders under "~/Git"
 #  - Originally found here: https://github.com/rkalis/dotfiles/blob/master/repos/setup.sh
+GIT_REPOSITORY_FOLDER="$HOME/Git/Temp"
+GIT_REPOSITORY_LIST="$(pwd)/repositories.list"
 if [[ -f "repositories.list" ]]; then
-  echo "INFO\tLoading repositories from 'repositories.list'"
+  echo "INFO  Loading repositories from '$GIT_REPOSITORY_LIST' in to directories under '$GIT_REPOSITORY_FOLDER'"
 
-  cd "$HOME/Git"
-  
-  find * -name "repositories.list" | while read fn; do
-    while read repo; do
-      if [[ $repo == \#* ]]; # Skip comment lines in the file
-      then continue; else
-        echo "INFO\tRunning 'git clone $repo'..."
+  mkdir -p $GIT_REPOSITORY_FOLDER
+  cd $GIT_REPOSITORY_FOLDER
+
+  while read repo; do
+    if [[ $repo == \#* ]]; then continue; else # Skip comment lines in the list file
+      if [[ $repo != "" ]]; then # Skip empty lines in the list file
+        echo "INFO  Running 'git clone $repo'..."
         git clone $repo &> /dev/null
-
-        if [[ $? -eq 128 ]]; then
-          echo "ERROR\tRepository already exists"
-        elif [[ $? -eq 0 ]]; then
-          echo "DONE\tFinished cloning repository"
-        else
-          echo "ERROR\tFailed to clone repository"
-        fi
-
-        popd &> /dev/null
       fi
-    done < "$fn"
+    fi
+  done < $GIT_REPOSITORY_LIST
 
-    echo "DONE\tFinished cloning Git repositories"
-  done
+  echo "DONE  Finished cloning Git repositories"
 else
-  echo "INFO\tNo repository list file found, this can be created by running:\n\tcp repositories.example.list repositories.list && vim repositories.list\n"
+  echo "INFO  No repository list file found, this can be recreated by copying 'repositories.example.list'"
 fi

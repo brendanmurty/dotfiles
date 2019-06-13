@@ -87,6 +87,8 @@
     enableVcsColoring: true
   "terminal-tab":
     defaultLocation: "center"
+  "tree-view":
+    hideIgnoredNames: true
   welcome:
     showOnStartup: false
 ".blade.html.php.text":

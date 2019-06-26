@@ -96,8 +96,8 @@ defaults write com.apple.finder AppleShowAllFiles -bool TRUE
 ### Disable dock icon bouncing effect
 defaults write com.apple.dock no-bouncing -bool FALSE
 
-### Set the icon size of Dock items
-defaults write com.apple.dock tilesize -int 32
+### Set the icon size of Dock icons
+defaults write com.apple.dock tilesize -int 28
 
 ### Change minimize/maximize window effect
 defaults write com.apple.dock mineffect -string "scale"

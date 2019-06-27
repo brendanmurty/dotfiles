@@ -187,3 +187,16 @@ atom-text-editor .syntax--todotxt.syntax--comment {
 .list-tree li.list-nested-item.status-ignored > .list-item {
   color: #7f8b96;
 }
+
+// Improve the display of items in Quick Launch lists
+.select-list ol.list-group.mark-active > li:not(.active)::before,
+.select-list ol.list-group.mark-active > li:not(.active)::before {
+  margin-right: 0;
+}
+.list-group li:not(.list-nested-item).selected:not(.header)::before,
+.list-tree li:not(.list-nested-item).selected:not(.header)::before,
+.list-group li.list-nested-item.selected > .list-item:not(.header)::before,
+.list-tree li.list-nested-item.selected > .list-item:not(.header)::before,
+.list-group .selected::before, .list-tree .selected::before {
+  height: auto;
+}

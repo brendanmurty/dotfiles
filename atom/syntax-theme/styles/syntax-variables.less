@@ -1,16 +1,60 @@
 @syntax-text-color: #c7d0d9;
-@syntax-cursor-color: #f8f8f0;
+@syntax-background-color: #000000;
+
+@syntax-cursor-color: #009688;
+@syntax-cursor-line: #1f2225;
+@syntax-cursor-line-text: #5c646d;
+
 @syntax-selection-color: #b3cc57;
-@syntax-background-color: #16181a;
+@syntax-selection-text-color: #ffffff;
+@syntax-selection-flash-color: @syntax-selection-color;
+
+@syntax-bracket-matcher-background: #ef746f;
+@syntax-bracket-matcher-opacity: 0.4;
+@syntax-bracket-matcher-border: 1px solid @syntax-text-color;
 
 @syntax-wrap-guide-color: #2d3136;
-@syntax-indent-guide-color: #2d3136;
-@syntax-invisible-character-color: #2d3136;
-@syntax-selection-flash-color: #c5d87e;
-@syntax-gutter-text-color: #2d3136;
-@syntax-gutter-background-color: #0f1012;
+@syntax-indent-guide-color: @syntax-wrap-guide-color;
+@syntax-invisible-character-color: @syntax-wrap-guide-color;
+@syntax-gutter-text-color: #50585f;
+@syntax-gutter-background-color: #0d0e0f;
 
 @syntax-color-added: #a7da1e;
 @syntax-color-modified: #f7b83d;
 @syntax-color-removed: #e61f44;
-@syntax-color-renamed: #9d37fc;
+@syntax-color-renamed: @syntax-color-modified;
+
+@syntax-color-variable: #c7d0d9;
+@syntax-color-entity: #ffbe40;
+@syntax-color-type: #b3cc57;
+@syntax-color-constant: #ef746f;
+@syntax-color-modifier: @syntax-color-constant;
+@syntax-color-string: #c78feb;
+@syntax-color-constant-numeric: @syntax-color-string;
+@syntax-color-constant-boolean: @syntax-color-string;
+@syntax-color-property: @syntax-color-constant;
+@syntax-color-value: @syntax-text-color;
+@syntax-color-function: #f86f50;
+@syntax-color-function-call: @syntax-color-entity;
+@syntax-color-method: @syntax-color-function;
+@syntax-color-class: #ef746f;
+@syntax-color-period: @syntax-color-class;
+@syntax-color-keyword: #3fb4c5;
+@syntax-color-operator: @syntax-color-keyword;
+@syntax-color-tag: @syntax-color-type;
+@syntax-color-attribute: @syntax-color-function;
+@syntax-color-import: @syntax-color-type;
+@syntax-color-snippet: @syntax-color-type;
+
+@syntax-color-comment: #627288;
+@syntax-color-phpdoc: @syntax-color-comment;
+
+@syntax-color-closure: #c7d0d9;
+@syntax-color-brace: @syntax-color-closure;
+@syntax-color-punctuation: @syntax-color-closure;
+
+@syntax-color-illegal: #dc322f;
+@syntax-color-syntax-escape: @syntax-color-illegal;
+@syntax-color-arbitrary-repitition: @syntax-color-illegal;
+@syntax-color-deprecated: @syntax-color-illegal;
+@syntax-text-decoration-deprecated: underline;

@@ -51,11 +51,6 @@
   margin-right: 1rem !important;
 }
 
-// Customise the colour of the cursor
-atom-text-editor .cursor {
-  border-color: #009688;
-}
-
 // Fix the broken positioning of icons on Windows
 .platform-win32 atom-workspace.theme-atom-material-ui .tab-bar .tab .title:before {
   top: auto;
@@ -64,22 +59,6 @@ atom-text-editor .cursor {
 // Add some padding to the main text area
 atom-text-editor {
   padding: 5px;
-}
-
-// Make the main text area, line number gutter, empty main areas, tree view and scrollbar background darker
-atom-text-editor:not(.mini),
-atom-pane-container atom-pane .item-views,
-.panel-contrast .tree-view,
-.panel-left ::-webkit-scrollbar-track,
-atom-text-editor .gutter {
-  background-color: #000 !important;
-}
-
-// Make the toolbar, footer, tab bar and project header background solid black
-atom-panel.footer status-bar,
-.tinted-tab-bar .active .tab-bar,
-.panel-contrast .tabBlender {
-  background-color: #000 !important;
 }
 
 // Improve the display of the status bar

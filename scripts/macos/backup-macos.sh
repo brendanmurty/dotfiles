@@ -34,5 +34,9 @@ sudo cp -r ~/.ssh/* $1/SSH
 crontab -l > $1/backup.crontab
 
 # Fix permissions in the backup directory
+# - From https://help.dropbox.com/installs-integrations/sync-uploads/stuck-syncing#permission
+sudo chflags -R nouchg $1
+sudo chown "$USER" $1
 sudo chown -R "$USER" $1
-chmod -R u+rw $1
+sudo chmod -RN $1
+sudo chmod -R u+rw $1

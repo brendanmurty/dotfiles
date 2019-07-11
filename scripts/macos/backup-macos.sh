@@ -30,8 +30,9 @@ cp ~/.vimrc $1/backup.vimrc
 mkdir -p $1/SSH
 sudo cp -r ~/.ssh/* $1/SSH
 
-# Copy the user's crontab list
-crontab -l > $1/backup.crontab
+# Copy the crontab lists
+crontab -l > $1/backup.user.crontab
+sudo crontab -l > $1/backup.root.crontab
 
 # Fix permissions in the backup directory
 # - From https://help.dropbox.com/installs-integrations/sync-uploads/stuck-syncing#permission

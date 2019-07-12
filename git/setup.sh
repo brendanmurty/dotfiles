@@ -7,19 +7,19 @@ cp ~/.gitignore ~/.gitignore.before-dotfiles-base.bak
 cat custom.gitconfig >> ~/.gitconfig
 cat custom.gitignore >> ~/.gitignore
 
-# Clone repositories in "repositories.list" to folders under "~/Git"
+# Clone repositories in "repositories.txt" to folders under "~/Git"
 #  - Originally found here: https://github.com/rkalis/dotfiles/blob/master/repos/setup.sh
 GIT_REPOSITORY_FOLDER="$HOME/Repositories"
-GIT_REPOSITORY_LIST="$(pwd)/repositories.list"
-if [[ -f "repositories.list" ]]; then
+GIT_REPOSITORY_LIST="$(pwd)/repositories.txt"
+if [[ -f "repositories.txt" ]]; then
   echo "INFO  Loading repositories from '$GIT_REPOSITORY_LIST' in to directories under '$GIT_REPOSITORY_FOLDER'"
 
   mkdir -p $GIT_REPOSITORY_FOLDER
   cd $GIT_REPOSITORY_FOLDER
 
   while read repo; do
-    if [[ $repo == \#* ]]; then continue; else # Skip comment lines in the list file
-      if [[ $repo != "" ]]; then # Skip empty lines in the list file
+    if [[ $repo == \#* ]]; then continue; else # Skip comment lines in the file
+      if [[ $repo != "" ]]; then # Skip empty lines in the file
         echo "INFO  Running 'git clone $repo'..."
         git clone $repo &> /dev/null
       fi
@@ -28,5 +28,5 @@ if [[ -f "repositories.list" ]]; then
 
   echo "DONE  Finished cloning Git repositories"
 else
-  echo "INFO  No repository list file found, this can be recreated by copying 'repositories.example.list'"
+  echo "INFO  No repository md file found, this can be recreated by copying 'repositories.example.txt'"
 fi

@@ -5,6 +5,7 @@ language-blade
 language-diff
 language-htaccess
 language-markdown
+language-terraform
 language-todotxt
 pinned-tabs
 set-syntax

@@ -12,12 +12,11 @@
 	frag = magenta
 	old = red bold
 	new = green
+	whitespace = red reverse
 [color "status"]
 	added = green
 	changed = green
 	untracked = red
-[color "diff"]
-	whitespace = red reverse
 [core]
 	autocrlf = input
 	safecrlf = false
@@ -36,7 +35,7 @@
 	st = status
 	rb = rebase -i
 	lg = log --pretty=format:'%Cblue%h%Creset %s %Cgreen%an, %cr %Creset' --abbrev-commit --date=relative
-	ll = !git log --stat
+	ll = og --stat
 	sync = "!f(){ local branch=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e \"s/* \\(.*\\)/\\1/\"`; git pull origin $branch && git push origin $branch; }; f"
 [filter "lfs"]
 	clean = git-lfs clean -- %f

@@ -35,7 +35,6 @@
 	st = status
 	rb = rebase -i
 	lg = log --pretty=format:'%Cblue%h%Creset %s %Cgreen%an, %cr %Creset' --abbrev-commit --date=relative
-	ll = og --stat
 	sync = "!f(){ local branch=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e \"s/* \\(.*\\)/\\1/\"`; git pull origin $branch && git push origin $branch; }; f"
 [filter "lfs"]
 	clean = git-lfs clean -- %f

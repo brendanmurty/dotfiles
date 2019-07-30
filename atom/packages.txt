@@ -4,6 +4,7 @@ highlight-selected
 language-blade
 language-diff
 language-htaccess
+language-ini
 language-markdown
 language-terraform
 language-todotxt

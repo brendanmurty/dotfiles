@@ -6,6 +6,7 @@ language-diff
 language-htaccess
 language-ini
 language-markdown
+language-nginx
 language-terraform
 language-todotxt
 pinned-tabs

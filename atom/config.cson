@@ -62,7 +62,7 @@
     ]
     uriHandlerRegistration: "always"
   editor:
-    fontFamily: "Fira Code"
+    fontFamily: "Cascadia Code"
     fontSize: 20
     invisibles: {}
     preferredLineLength: 120

@@ -63,7 +63,7 @@
     uriHandlerRegistration: "always"
   editor:
     fontFamily: "Cascadia Code"
-    fontSize: 20
+    fontSize: 22
     invisibles: {}
     preferredLineLength: 120
     showIndentGuide: true

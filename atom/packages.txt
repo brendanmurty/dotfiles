@@ -9,6 +9,7 @@ language-markdown
 language-nginx
 language-terraform
 language-todotxt
+language-viml
 pinned-tabs
 set-syntax
 simple-icons

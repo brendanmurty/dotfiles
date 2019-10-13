@@ -62,8 +62,8 @@
     ]
     uriHandlerRegistration: "always"
   editor:
-    fontFamily: "Cascadia Code"
-    fontSize: 22
+    fontFamily: "Fira Code"
+    fontSize: 20
     invisibles: {}
     preferredLineLength: 120
     showIndentGuide: true

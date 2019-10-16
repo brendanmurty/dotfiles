@@ -5,7 +5,7 @@
     "editor.fontFamily": "'Fira Code', monospace",
     "editor.fontLigatures": true,
     "editor.fontSize": 20,
-    "workbench.colorTheme": "Material Theme Darker High Contrast",
+    "workbench.colorTheme": "Horizon Bold",
     "workbench.iconTheme": "material-icon-theme",
     "files.eol": "\n",
     "editor.autoClosingBrackets": "never",
@@ -18,17 +18,26 @@
     "terminal.integrated.fontSize": 20,
     "workbench.fontAliasing": "antialiased",
     "markdown.preview.fontFamily": "'Fira Code', monospace",
-    "workbench.colorCustomizations": {
-        "sideBar.background": "#000",
-        "editor.background": "#000"
-    },
     "editor.tokenColorCustomizations": {
-        "comments": "#666"
+        "comments": "#666",
+        "textMateRules": [
+            {
+                "scope": [
+                   "comment"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
     },
     "editor.minimap.enabled": false,
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
     "git.autofetch": true,
     "workbench.editor.enablePreview": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.colorCustomizations": {
+        "contrastBorder": "#1A1C231A"
+    }
 }

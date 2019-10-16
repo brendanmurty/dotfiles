@@ -4,7 +4,7 @@
     "workbench.startupEditor": "newUntitledFile",
     "editor.fontFamily": "'Fira Code', monospace",
     "editor.fontLigatures": true,
-    "editor.fontSize": 20,
+    "editor.fontSize": 18,
     "workbench.colorTheme": "Horizon Bold",
     "workbench.iconTheme": "material-icon-theme",
     "files.eol": "\n",
@@ -39,5 +39,6 @@
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.colorCustomizations": {
         "contrastBorder": "#1A1C231A"
-    }
+    },
+    "window.zoomLevel": 1
 }

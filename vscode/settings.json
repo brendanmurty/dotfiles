@@ -13,9 +13,9 @@
     "editor.defaultFormatter": "vscode.markdown-language-features",
     "editor.folding": false,
     "editor.quickSuggestionsDelay": 300,
-    "debug.console.fontSize": 20,
-    "markdown.preview.fontSize": 20,
-    "terminal.integrated.fontSize": 20,
+    "debug.console.fontSize": 18,
+    "markdown.preview.fontSize": 18,
+    "terminal.integrated.fontSize": 18,
     "workbench.fontAliasing": "antialiased",
     "markdown.preview.fontFamily": "'Fira Code', monospace",
     "editor.tokenColorCustomizations": {
@@ -40,5 +40,6 @@
     "workbench.colorCustomizations": {
         "contrastBorder": "#1A1C231A"
     },
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "search.location": "panel"
 }

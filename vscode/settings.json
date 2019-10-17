@@ -38,7 +38,9 @@
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.colorCustomizations": {
-        "contrastBorder": "#1A1C231A"
+        "contrastBorder": "#1A1C23",
+        "sideBar.background": "#000",
+        "editor.background": "#000"
     },
     "window.zoomLevel": 1,
     "search.location": "panel"

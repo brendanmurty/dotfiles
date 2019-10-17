@@ -38,9 +38,15 @@
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.colorCustomizations": {
-        "contrastBorder": "#1A1C23",
+        "activityBarBadge.background": "#23c5b0",
+        "activityBarBadge.foreground": "#000",
+        "contrastBorder": "#333",
+        "editor.background": "#000",
         "sideBar.background": "#000",
-        "editor.background": "#000"
+        "sideBar.foreground": "#FFF",
+        "sideBarSectionHeader.background": "#000",
+        "sideBarSectionHeader.foreground": "#23c5b0",
+        "tab.activeBorder": "#23c5b0"
     },
     "window.zoomLevel": 1,
     "search.location": "panel"

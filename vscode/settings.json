@@ -49,5 +49,6 @@
         "tab.activeBorder": "#23c5b0"
     },
     "window.zoomLevel": 1,
-    "search.location": "panel"
+    "search.location": "panel",
+    "workbench.list.openMode": "doubleClick"
 }

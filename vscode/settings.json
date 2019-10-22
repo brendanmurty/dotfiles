@@ -50,5 +50,10 @@
     },
     "window.zoomLevel": 1,
     "search.location": "panel",
-    "workbench.list.openMode": "doubleClick"
+    "workbench.list.openMode": "doubleClick",
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.defaultDateFormat": " h:mma D MMM YY",
+    "gitlens.defaultDateShortFormat": "D MMM YY"
 }

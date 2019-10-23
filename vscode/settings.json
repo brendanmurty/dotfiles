@@ -12,6 +12,11 @@
     "editor.autoClosingQuotes": "never",
     "editor.defaultFormatter": "vscode.markdown-language-features",
     "editor.folding": false,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
     "editor.quickSuggestionsDelay": 300,
     "debug.console.fontSize": 18,
     "markdown.preview.fontSize": 18,

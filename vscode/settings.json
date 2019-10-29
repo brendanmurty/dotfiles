@@ -57,6 +57,7 @@
     "window.menuBarVisibility": "toggle",
     "search.location": "panel",
     "workbench.list.openMode": "doubleClick",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
     "gitlens.codeLens.enabled": false,
     "gitlens.currentLine.enabled": false,
     "gitlens.hovers.currentLine.over": "line",

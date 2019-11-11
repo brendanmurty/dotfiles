@@ -54,7 +54,9 @@
         "sideBar.foreground": "#FFF",
         "sideBarSectionHeader.background": "#000",
         "sideBarSectionHeader.foreground": "#23c5b0",
-        "tab.activeBorder": "#23c5b0"
+        "tab.activeBorder": "#23c5b0",
+        "window.activeBorder": "#222",
+        "window.inactiveBorder": "#000"
     },
     "window.zoomLevel": 1,
     "window.menuBarVisibility": "toggle",

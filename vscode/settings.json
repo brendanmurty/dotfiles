@@ -43,6 +43,9 @@
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.colorCustomizations": {
+        "activityBar.activeBorder": "#23c5b0",
+        "activityBar.foreground": "#23c5b0",
+        "activityBar.inactiveForeground": "#777",
         "activityBarBadge.background": "#23c5b0",
         "activityBarBadge.foreground": "#000",
         "contrastBorder": "#333",

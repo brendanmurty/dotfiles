@@ -70,5 +70,6 @@
     "gitlens.defaultDateFormat": " h:mma D MMM YY",
     "gitlens.defaultDateShortFormat": "D MMM YY",
     "javascript.validate.enable": false,
-    "php.validate.enable": false
+    "php.validate.enable": false,
+    "css.validate": false
 }

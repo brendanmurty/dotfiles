@@ -3,6 +3,7 @@ atom-material-ui
 highlight-selected
 language-blade
 language-diff
+language-docker
 language-htaccess
 language-ini
 language-markdown

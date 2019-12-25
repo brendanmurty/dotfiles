@@ -5,7 +5,6 @@ cp ~/.bash_prompt ~/.bash_prompt.before-dotfiles-base.bak
 cp ~/.bashrc ~/.bashrc.before-dotfiles-base.bak
 
 cat custom.bash_aliases >> ~/.bash_aliases
-cat custom.bash_profile >> ~/.bash_profile
 cat custom.bash_prompt >> ~/.bash_prompt
 
 echo '. ~/.bash_aliases' >> ~/.bashrc

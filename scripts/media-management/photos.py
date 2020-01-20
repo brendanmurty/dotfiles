@@ -89,12 +89,10 @@ for photo in photos:
         moDirectory = "%s" % datetime.strftime(pDate, '%m %b')
         # print("\nPhoto directory: %s" % moDirectory)
 
+        print('\nProcessing (%04d\\%s)...' % (yr, moDirectory))
         if not lastYear == yr or not lastMonth == mo:
-            sys.stdout.write('\nProcessing %04d-%02d...' % (yr, mo))
             lastMonth = mo
             lastYear = yr
-        else:
-            sys.stdout.write('.')
 
         newname = pDate.strftime(fmt)
         thisDestDir = destDir + '/%04d/%s' % (yr, moDirectory)

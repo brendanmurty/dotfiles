@@ -19,7 +19,9 @@
 #  - ExifRead: https://pypi.org/project/ExifRead/
 #
 # TODO:
-#  - Retain the original file's extension when moving the file, instead of assuming ".jpg"
+#  - Add support for all file types in "sourceDir"
+#    - Remove the filtering of the file types after the "listdir" call
+#    - Retain the original file's extension when moving the file, instead of assuming ".jpg"
 
 import sys
 import os, shutil

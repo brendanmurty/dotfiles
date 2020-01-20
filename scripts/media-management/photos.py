@@ -27,7 +27,7 @@ import os.path
 import exifread
 from datetime import datetime
 
-######################## Functions #########################
+### Functions
 
 def photoDate(f):
     "Return the date/time on which the given photo was taken."
@@ -40,13 +40,13 @@ def photoDate(f):
         # Default to using today's date if the required image properties can't be found
         return datetime.now()
 
-###################### Main program ########################
+### Main program
 
 # Get the date details
 now = datetime.now()
 yearNow = now.year
 
-# Where the photos are and where they're going.
+# Where the photos are and where they're going
 sourceDir = "%s\\Dropbox\\Camera Uploads" % os.environ['USERPROFILE']
 destDir = "%s\\Dropbox\\Photos\\Brendan" % os.environ['USERPROFILE']
 errorDir = "%s\\00 Unsorted" % destDir
@@ -57,13 +57,13 @@ if not os.path.exists(destDir):
 if not os.path.exists(errorDir):
     os.makedirs(errorDir)
 
-# The format for the new file names.
+# The format for the new file names
 fmt = "%Y-%m-%d %H-%M-%S"
 
-# The problem files.
+# The problem files
 problems = []
 
-# Get all the JPEGs in the source folder.
+# Get all the JPEGs in the source folder
 photos = os.listdir(sourceDir)
 photos = [ x for x in photos if x[-4:] == '.jpg' or x[-4:] == '.JPG' ]
 
@@ -71,13 +71,12 @@ photos = [ x for x in photos if x[-4:] == '.jpg' or x[-4:] == '.JPG' ]
 lastMonth = 0
 lastYear = 0
 
-# Copy photos into year and month subfolders. Name the copies according to
-# their timestamps. If more than one photo has the same timestamp, add
-# suffixes 'a', 'b', etc. to the names. 
+# Copy photos into year and month subfolders
+#  - Name the copies according to their timestamps, defaulting to today's date
+#  - If more than one photo has the same timestamp, add suffixes ('a', 'b', etc) to the file names
 for photo in photos:
     original = "%s\\%s" % (sourceDir, photo)
     suffix = 'a'
-
     # print("\nProcessing: %s" % original)
 
     try:
@@ -114,7 +113,7 @@ for photo in photos:
     except:
         sys.exit("Execution stopped.")
 
-# Report the problem files, if any.
+# Output a report of any problem files
 if len(problems) > 0:
     print("\nProblem files:")
     print("\n%s" % problems)

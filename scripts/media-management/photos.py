@@ -9,6 +9,10 @@
 # Organises photos in to a folder like:
 #   2020\01 Jan\
 # 
+# Setup:
+#   echo "alias photomgmt='python ~/Git/dotfiles/scripts/media-management/photos.py'" >> ~/.bash_aliases
+#   source ~/.bash_aliases
+# 
 # Requirements:
 #  - Windows machine
 #  - Python 3.8: https://www.python.org/downloads/release/python-380/

@@ -82,8 +82,6 @@ mediaFileExtensions = [
 photos = os.listdir(sourceDir)
 photos = [ x for x in photos if x[-4:] in mediaFileExtensions ]
 
-print("%s" % photos)
-
 # Prepare to output as processing occurs
 lastMonth = 0
 lastYear = 0
@@ -95,7 +93,7 @@ for photo in photos:
     original = "%s\\%s" % (sourceDir, photo)
     fileExtension = os.path.splitext(original)[1]
     suffix = 'a'
-    print("\nProcessing file: %s" % original)
+    print("Processing file: %s" % original)
 
     try:
         pDate = photoDate(original)
@@ -106,7 +104,7 @@ for photo in photos:
         moDirectory = "%s" % datetime.strftime(pDate, '%m %b')
         # print("\nPhoto directory: %s" % moDirectory)
 
-        print('\nOrganising files (%04d\\%s)...' % (yr, moDirectory))
+        print("Organising files (%04d - %s)..." % (yr, moDirectory))
         if not lastYear == yr or not lastMonth == mo:
             lastMonth = mo
             lastYear = yr
@@ -131,6 +129,6 @@ for photo in photos:
 
 # Output a report of any problem files
 if len(problems) > 0:
-    print("\nProblem files:")
-    print("\n%s" % problems)
-    print("\nThese can be found in: %s" % errorDir)
+    print("Problem files:")
+    print("%s" % problems)
+    print("These can be found in: %s" % errorDir)

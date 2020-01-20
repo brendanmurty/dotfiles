@@ -93,27 +93,21 @@ for photo in photos:
     original = "%s\\%s" % (sourceDir, photo)
     fileExtension = os.path.splitext(original)[1]
     suffix = 'a'
+
     print("Processing file: %s" % original)
 
     try:
         pDate = photoDate(original)
-        # print("Photo date: %s" % str(pDate))
-
         yr = pDate.year
         mo = pDate.month
         moDirectory = "%s" % datetime.strftime(pDate, '%m %b')
-        # print("\nPhoto directory: %s" % moDirectory)
 
         print("Organising files (%04d - %s)..." % (yr, moDirectory))
-        if not lastYear == yr or not lastMonth == mo:
-            lastMonth = mo
-            lastYear = yr
 
         newname = pDate.strftime(fmt)
         thisDestDir = destDir + '/%04d/%s' % (yr, moDirectory)
         if not os.path.exists(thisDestDir):
             os.makedirs(thisDestDir)
-        # print("\nDestination directory: %s" % thisDestDir)
 
         duplicate = thisDestDir + '/%s%s' % (newname, fileExtension)
         while os.path.exists(duplicate):
@@ -125,7 +119,7 @@ for photo in photos:
         shutil.move(original, "%s\\%s" % (errorDir, photo))
         problems.append(photo)
     except:
-        sys.exit("Execution stopped.")
+        sys.exit("Cancelled")
 
 # Output a report of any problem files
 if len(problems) > 0:

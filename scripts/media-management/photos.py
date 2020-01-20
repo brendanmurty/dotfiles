@@ -19,8 +19,7 @@
 #  - ExifRead: https://pypi.org/project/ExifRead/
 #
 # TODO:
-#  - Add support for MOV file types - including getting creation date for sorting
-#
+#  - Retain the original file's extension when moving the file, instead of assuming ".jpg"
 
 import sys
 import os, shutil

@@ -6,7 +6,7 @@
 # 
 # Originally forked from https://gist.github.com/cliss/6854904
 # 
-# Organises all files in the "sourceDir" in to a subfolder of "destDir" named like:
+# Organises all media files (defined by "mediaFileExtensions") in the "sourceDir" in to a subfolder of "destDir" named like:
 #   2020\01 Jan\
 # 
 # Setup:
@@ -47,7 +47,7 @@ def photoDate(f):
 now = datetime.now()
 yearNow = now.year
 
-# Where the photos are and where they're going
+# Where the media files are and where they're going
 sourceDir = "%s\\Dropbox\\Camera Uploads" % os.environ['USERPROFILE']
 destDir = "%s\\Dropbox\\Photos\\Brendan" % os.environ['USERPROFILE']
 errorDir = "%s\\00 Unsorted" % destDir
@@ -64,8 +64,25 @@ fmt = "%Y-%m-%d %H-%M-%S"
 # The problem files
 problems = []
 
-# Get all the JPEGs in the source folder
+# Get all the media files in the source folder
+mediaFileExtensions = [
+    '.bmp',
+    '.BMP',
+    '.gif',
+    '.GIF',
+    '.jpg',
+    '.JPG',
+    '.mov',
+    '.MOV',
+    '.mp4',
+    '.MP4',
+    '.png',
+    '.PNG'
+]
 photos = os.listdir(sourceDir)
+photos = [ x for x in photos if x[-4:] in mediaFileExtensions ]
+
+print("%s" % photos)
 
 # Prepare to output as processing occurs
 lastMonth = 0
@@ -78,7 +95,7 @@ for photo in photos:
     original = "%s\\%s" % (sourceDir, photo)
     fileExtension = os.path.splitext(original)[1]
     suffix = 'a'
-    # print("\nProcessing: %s" % original)
+    print("\nProcessing file: %s" % original)
 
     try:
         pDate = photoDate(original)
@@ -89,7 +106,7 @@ for photo in photos:
         moDirectory = "%s" % datetime.strftime(pDate, '%m %b')
         # print("\nPhoto directory: %s" % moDirectory)
 
-        print('\nProcessing (%04d\\%s)...' % (yr, moDirectory))
+        print('\nOrganising files (%04d\\%s)...' % (yr, moDirectory))
         if not lastYear == yr or not lastMonth == mo:
             lastMonth = mo
             lastYear = yr

@@ -6,10 +6,17 @@
 # 
 # Originally forked from https://gist.github.com/cliss/6854904
 # 
+# Organises photos in to a folder like:
+#   2020\01 Jan\
+# 
 # Requirements:
 #  - Windows machine
 #  - Python 3.8: https://www.python.org/downloads/release/python-380/
 #  - ExifRead: https://pypi.org/project/ExifRead/
+#
+# TODO:
+#  - Add support for MOV file types - including getting creation date for sorting
+#
 
 import sys
 import os, shutil

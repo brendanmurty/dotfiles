@@ -33,10 +33,13 @@ from datetime import datetime
 def photoDate(f):
     "Return the date/time on which the given photo was taken."
 
-    img = open(f, 'rb')
-    imgTags = exifread.process_file(img)
-
-    return datetime.strptime(str(imgTags['EXIF DateTimeOriginal']), "%Y:%m:%d %H:%M:%S")
+    try:
+        img = open(f, 'rb')
+        imgTags = exifread.process_file(img)
+        return datetime.strptime(str(imgTags['EXIF DateTimeOriginal']), "%Y:%m:%d %H:%M:%S")
+    except KeyError:
+        # Default to using today's date if the required image properties can't be found
+        return datetime.now()
 
 ###################### Main program ########################
 
@@ -107,7 +110,7 @@ for photo in photos:
             suffix = chr(ord(suffix) + 1)
         shutil.move(original, duplicate)
     except Exception:
-        shutil.move(original, errorDir + photo)
+        shutil.move(original, "%s\\%s" % (errorDir, photo))
         problems.append(photo)
     except:
         sys.exit("Execution stopped.")

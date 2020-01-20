@@ -6,7 +6,7 @@
 # 
 # Originally forked from https://gist.github.com/cliss/6854904
 # 
-# Organises photos in to a folder like:
+# Organises all files in the "sourceDir" in to a subfolder of "destDir" named like:
 #   2020\01 Jan\
 # 
 # Setup:
@@ -19,9 +19,8 @@
 #  - ExifRead: https://pypi.org/project/ExifRead/
 #
 # TODO:
-#  - Add support for all file types in "sourceDir"
-#    - Remove the filtering of the file types after the "listdir" call
-#    - Retain the original file's extension when moving the file, instead of assuming ".jpg"
+#  - 
+#  
 
 import sys
 import os, shutil
@@ -38,7 +37,7 @@ def photoDate(f):
         img = open(f, 'rb')
         imgTags = exifread.process_file(img)
         return datetime.strptime(str(imgTags['EXIF DateTimeOriginal']), "%Y:%m:%d %H:%M:%S")
-    except KeyError:
+    except:
         # Default to using today's date if the required image properties can't be found
         return datetime.now()
 
@@ -67,7 +66,6 @@ problems = []
 
 # Get all the JPEGs in the source folder
 photos = os.listdir(sourceDir)
-photos = [ x for x in photos if x[-4:] == '.jpg' or x[-4:] == '.JPG' ]
 
 # Prepare to output as processing occurs
 lastMonth = 0
@@ -78,6 +76,7 @@ lastYear = 0
 #  - If more than one photo has the same timestamp, add suffixes ('a', 'b', etc) to the file names
 for photo in photos:
     original = "%s\\%s" % (sourceDir, photo)
+    fileExtension = os.path.splitext(original)[1]
     suffix = 'a'
     # print("\nProcessing: %s" % original)
 
@@ -103,10 +102,10 @@ for photo in photos:
             os.makedirs(thisDestDir)
         # print("\nDestination directory: %s" % thisDestDir)
 
-        duplicate = thisDestDir + '/%s.jpg' % (newname)
+        duplicate = thisDestDir + '/%s%s' % (newname, fileExtension)
         while os.path.exists(duplicate):
             newname = pDate.strftime(fmt) + suffix
-            duplicate = destDir + '/%04d/%s/%s.jpg' % (yr, moDirectory, newname)
+            duplicate = destDir + '/%04d/%s/%s%s' % (yr, moDirectory, newname, fileExtension)
             suffix = chr(ord(suffix) + 1)
         shutil.move(original, duplicate)
     except Exception:

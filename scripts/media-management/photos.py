@@ -10,7 +10,7 @@
 #   2020\01 Jan\
 # 
 # Setup:
-#   echo "alias photomgmt='python ~/Git/dotfiles/scripts/media-management/photos.py'" >> ~/.bash_aliases
+#   echo "alias photomgmt='python /path/to/dotfiles/scripts/media-management/photos.py'" >> ~/.bash_aliases
 #   source ~/.bash_aliases
 # 
 # Requirements:
@@ -58,10 +58,10 @@ if not os.path.exists(destDir):
 if not os.path.exists(errorDir):
     os.makedirs(errorDir)
 
-# The format for the new file names
+# Set the filename formate for the moved files
 fmt = "%Y-%m-%d %H-%M-%S"
 
-# The problem files
+# Will store details of any problem files
 problems = []
 
 # Get all the media files in the source folder
@@ -100,22 +100,29 @@ for photo in photos:
         pDate = photoDate(original)
         yr = pDate.year
         mo = pDate.month
+
+        # Generate the name of the sub-directory, in the style of "01 Jan" based on the photo's modified date
         moDirectory = "%s" % datetime.strftime(pDate, '%m %b')
-
-        print("Organising files (%04d - %s)..." % (yr, moDirectory))
-
+        
+        # Generate the new filename for the file
         newname = pDate.strftime(fmt)
+
+        # Ensure the destination directory is created, in the style of "2020" > "01 Jan"
         thisDestDir = destDir + '/%04d/%s' % (yr, moDirectory)
         if not os.path.exists(thisDestDir):
             os.makedirs(thisDestDir)
 
+        # Manage naming of files if many exists with the same creation date
         duplicate = thisDestDir + '/%s%s' % (newname, fileExtension)
         while os.path.exists(duplicate):
             newname = pDate.strftime(fmt) + suffix
             duplicate = destDir + '/%04d/%s/%s%s' % (yr, moDirectory, newname, fileExtension)
             suffix = chr(ord(suffix) + 1)
+
+        # Move the file to the destination directory
         shutil.move(original, duplicate)
     except Exception:
+        # Something went wrong, move the file to the error directory
         shutil.move(original, "%s\\%s" % (errorDir, photo))
         problems.append(photo)
     except:

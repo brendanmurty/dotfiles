@@ -1,0 +1,8 @@
+{
+	"extensions":
+	[
+		"todo.txt",
+        "tasks.txt",
+        "done.txt"
+	]
+}

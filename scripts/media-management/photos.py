@@ -94,7 +94,7 @@ for photo in photos:
     fileExtension = os.path.splitext(original)[1]
     suffix = 'a'
 
-    print("Processing file: %s" % original)
+    # print("Processing file: %s" % original)
 
     try:
         pDate = photoDate(original)

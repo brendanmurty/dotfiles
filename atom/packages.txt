@@ -9,6 +9,7 @@ language-htaccess
 language-ini
 language-markdown
 language-nginx
+language-powershell
 language-terraform
 language-todotxt
 language-viml

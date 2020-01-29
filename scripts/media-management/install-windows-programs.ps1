@@ -6,7 +6,7 @@
 #  - Windows machine
 #  - Enable PowerShell scripts: Set-ExecutionPolicy Bypass
 #    - https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7
-#  - Run in Powershell as an administrator user
+#  - Run in Powershell as an administrator user: .\install-windows-programs.ps1
 
 # Install Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))

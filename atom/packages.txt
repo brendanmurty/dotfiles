@@ -1,5 +1,6 @@
 atom-clock
 atom-material-ui
+blame
 docblockr
 highlight-selected
 language-blade

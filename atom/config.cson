@@ -25,6 +25,9 @@
       ".text.todotxt"
       ".text.plain"
     ]
+  blame:
+    dateFormat: "YYYYMMDD"
+    gutterFormat: "{author} {hash} {date}"
   core:
     allowPendingPaneItems: false
     audioBeep: false

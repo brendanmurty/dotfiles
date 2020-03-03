@@ -1,6 +1,7 @@
 <?php
 
 // Backup a user's Trello boards, cards, checklists, comments and attachments to a local directory.
+// Requires PHP 7.4
 
 // Find the right configuration file to use for this system
 $operating_system = strtolower(substr(PHP_OS, 0, 3));
@@ -160,7 +161,7 @@ foreach ($boards as $id => $board) {
             if (isset($member->data->attachment) && isset($member->data->attachment->url)) {
                 $attachment = $member->data->attachment;
 
-                if (array_key_exists('previewUrl2x', $attachment)) {
+                if (isset($attachment->previewUrl2x)) {
                     // A preview exists, download and save this attachment
                     $filename = strtolower($attachment->name);
                     $pathForAttachment = $dirname . DIRECTORY_SEPARATOR . $filename;

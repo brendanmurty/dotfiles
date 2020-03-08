@@ -84,6 +84,9 @@
     showIconsInEditorGutter: true
   "line-ending-selector":
     defaultLineEnding: "LF"
+  "pinned-tabs":
+    visualstudio:
+      enable: true
   tabs:
     displayMruTabList: false
     enableMruTabSwitching: false

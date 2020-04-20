@@ -10,7 +10,7 @@
       abaseColor: "#2b2f38"
       accentColor: "#009688"
     fonts:
-      fontSize: 18
+      fontSize: 20
     tabs:
       compactTabs: true
     treeView:
@@ -65,7 +65,7 @@
     ]
     uriHandlerRegistration: "always"
   editor:
-    fontFamily: "Fira Code"
+    fontFamily: "MonoLisa"
     fontSize: 20
     invisibles: {}
     preferredLineLength: 120

@@ -14,6 +14,7 @@ language-powershell
 language-terraform
 language-todotxt
 language-viml
+language-vue
 pinned-tabs
 set-syntax
 simple-icons

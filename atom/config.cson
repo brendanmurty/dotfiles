@@ -85,8 +85,7 @@
   "line-ending-selector":
     defaultLineEnding: "LF"
   "pinned-tabs":
-    visualstudio:
-      enable: true
+    visualstudio: {}
   tabs:
     displayMruTabList: false
     enableMruTabSwitching: false

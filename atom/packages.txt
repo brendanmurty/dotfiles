@@ -18,3 +18,4 @@ language-vue
 pinned-tabs
 set-syntax
 simple-icons
+stylus

@@ -1,0 +1,103 @@
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "alwaysShowTabs" : true,
+    "defaultProfile" : "{00000000-0000-0000-ba54-000000000002}",
+    "initialCols" : 150,
+    "initialRows" : 40,
+    "copyOnSelect": false,
+    "copyFormatting": false,
+    "profiles":
+    {
+        "defaults":
+        {
+          
+        },
+        "list":
+        [
+          {
+            "acrylicOpacity" : 0.5,
+            "background" : "#012456",
+            "closeOnExit" : true,
+            "colorScheme" : "Campbell",
+            "commandline" : "powershell.exe",
+            "cursorColor" : "#FFFFFF",
+            "cursorShape" : "bar",
+            "fontFace" : "Consolas",
+            "fontSize" : 14,
+            "guid" : "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+            "historySize" : 9001,
+            "icon" : "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
+            "name" : "PowerShell",
+            "padding" : "0, 0, 0, 0",
+            "snapOnInput" : true,
+            "startingDirectory" : "%USERPROFILE%",
+            "useAcrylic" : false
+          },
+          {
+            "acrylicOpacity" : 0.75,
+            "closeOnExit" : true,
+            "colorScheme" : "Campbell",
+            "commandline" : "cmd.exe",
+            "cursorColor" : "#FFFFFF",
+            "cursorShape" : "bar",
+            "fontFace" : "Consolas",
+            "fontSize" : 14,
+            "guid" : "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+            "historySize" : 9001,
+            "icon" : "ms-appx:///ProfileIcons/{0caa0dad-35be-5f56-a8ff-afceeeaa6101}.png",
+            "name" : "Command",
+            "padding" : "0, 0, 0, 0",
+            "snapOnInput" : true,
+            "startingDirectory" : "%USERPROFILE%",
+            "useAcrylic" : true
+          },
+          {
+            "guid": "{00000000-0000-0000-ba54-000000000002}",
+            "acrylicOpacity" : 0.75,
+            "closeOnExit" : true,
+            "colorScheme" : "Campbell",
+            "commandline" : "\"%PROGRAMFILES%\\git\\usr\\bin\\bash.exe\" -i -l",
+            "cursorColor" : "#FFFFFF",
+            "cursorShape" : "bar",
+            "fontFace" : "MonoLisa",
+            "fontSize" : 14,
+            "historySize" : 9001,
+            "icon" : "ms-appx:///ProfileIcons/{0caa0dad-35be-5f56-a8ff-afceeeaa6101}.png",
+            "name" : "Git Bash",
+            "padding" : "0, 0, 0, 0",
+            "snapOnInput" : true,
+            "startingDirectory" : "%USERPROFILE%",
+            "useAcrylic" : true
+          },
+          {
+              "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+              "hidden": true,
+              "name": "Azure Cloud Shell",
+              "source": "Windows.Terminal.Azure"
+          }
+        ]
+    },
+    "schemes": [],
+    "keybindings":
+    [
+        { "command": {"action": "copy", "singleLine": false }, "keys": "ctrl+c" },
+        { "command": "paste", "keys": "ctrl+v" },
+        { "command": "find", "keys": "ctrl+shift+f" },
+        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" },
+        
+        {
+          "command" : "newTab",
+          "keys" : 
+          [
+            "ctrl+t"
+          ]
+        },
+        {
+          "command" : "closeTab",
+          "keys" : 
+          [
+            "ctrl+w"
+          ]
+        }
+    ]
+}

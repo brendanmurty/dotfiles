@@ -12,6 +12,7 @@ Configuration files for a local development environment.
 - **[sublime-text](sublime-text/)**: [Sublime Text 3](https://www.sublimetext.com/3) text editor configuration
 - **[vim](vim/)**: [Vim](http://www.vim.org/) text editor configuration
 - **[vscode](vscode/)**: [Visual Studio Code](https://code.visualstudio.com/) IDE configuration
+- **[windows-terminal](windows-terminal/)**: [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701) configuration
 - **[bootstrap.sh](bootstrap.sh)**: Script to deploy changes to user configuration files
 - **[undo.sh](undo.sh)**: Script to undo changes to user configuration files
 

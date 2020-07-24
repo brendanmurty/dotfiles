@@ -16,6 +16,7 @@ language-todotxt
 language-viml
 language-vue
 pinned-tabs
+pretty-json
 set-syntax
 simple-icons
 stylus

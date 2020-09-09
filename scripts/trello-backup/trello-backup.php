@@ -34,23 +34,9 @@ if (strlen($application_token) < 30) {
     msg('error', 'Please visit this link to allow access to your Trello account, then save this to the "$application_key" variable in "' . $config_file . '" - https://trello.com/1/authorize?key=' . $application_key . '&name=Trello+Backup+Script&expiration=never&response_type=token');
 }
 
-// Configure proxy if required
-$ctx = null;
-if (!empty($proxy)) {
-    $aContext = array(
-        'http' => array(
-            'proxy' => 'tcp://' . $proxy,
-            'request_fullurl' => true
-        )
-    );
-
-    $ctx = stream_context_create($aContext);
-}
-
 // Fetch all boards
-$application_token = trim($application_token);
-$url_boards = 'https://api.trello.com/1/members/me/boards?&key=' . $application_key . '&token=' . $application_token;
-$response = file_get_contents($url_boards, false, $ctx);
+$url_boards = 'https://api.trello.com/1/members/me/boards?key=' . $application_key . '&token=' . $application_token;
+$response = file_get_contents_curl($url_boards);
 if ($response === FALSE) {
     msg('error', 'Could not access the Trello API', $show_msgs);
 }
@@ -61,8 +47,8 @@ if (empty($boardsInfo)) {
 }
 
 // Fetch all organisations
-$url_organisations = 'https://api.trello.com/1/members/me/organizations?&key=' . $application_key . '&token=' . $application_token;
-$response = file_get_contents($url_organisations, false, $ctx);
+$url_organisations = 'https://api.trello.com/1/members/me/organizations?key=' . $application_key . '&token=' . $application_token;
+$response = file_get_contents_curl($url_organisations);
 $organisationsInfo = json_decode($response);
 $organisations = array();
 foreach ($organisationsInfo as $org) {
@@ -72,8 +58,8 @@ foreach ($organisationsInfo as $org) {
 // Fetch all boards from the organisations that the user has read access to
 if ($backup_all_organisation_boards) {
     foreach ($organisations as $organisation_id => $organisation_name) {
-        $url_boards = 'https://api.trello.com/1/organizations/' . $organisation_id . '/boards?&key=' . $application_key . '&token=' . $application_token;
-        $response = file_get_contents($url_boards, false, $ctx);
+        $url_boards = 'https://api.trello.com/1/organizations/' . $organisation_id . '/boards?key=' . $application_key . '&token=' . $application_token;
+        $response = file_get_contents_curl($url_boards);
         $organisationBoardsInfo = json_decode($response);
         if (empty($organisationBoardsInfo)) {
             msg('error', 'Could not acess boards for "' . $organisation_name . '", please verify your API tokens', $show_msgs);
@@ -140,7 +126,7 @@ foreach ($boards as $id => $board) {
         $show_msgs
     );
 
-    $response = file_get_contents($url_individual_board_json, false, $ctx);
+    $response = file_get_contents_curl($url_individual_board_json);
 
     $decoded = json_decode($response);
     if (empty($decoded)) {
@@ -165,7 +151,7 @@ foreach ($boards as $id => $board) {
                     // A preview exists, download and save this attachment
                     $filename = strtolower($attachment->name);
                     $pathForAttachment = $dirname . DIRECTORY_SEPARATOR . $filename;
-                    file_put_contents($pathForAttachment, file_get_contents($attachment->previewUrl2x));
+                    file_put_contents($pathForAttachment, file_get_contents_curl($attachment->previewUrl2x));
                 } else {
                     // A preview doesn't exist, so save this attachment as an Internet Shortcut instead
                     $filename = sanitiseFileName($attachment->name);
@@ -288,4 +274,20 @@ function msg($message_type = 'info', $message_content = '', $enable_info_message
     if ($enable_info_messages) {
         echo $message;
     }
+}
+
+// Get the contents of an online URL via cURL
+function file_get_contents_curl($url) {
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+
+    $data = curl_exec($ch);
+    curl_close($ch);
+
+    return $data;
 }

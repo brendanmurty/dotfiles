@@ -4,11 +4,11 @@ This is a small PHP script that will backup all of your [Trello](https://trello.
 
 ## Requirements
 
-PHP 7.1 is required to run this script, please see the [PHP Installation Documentation](http://php.net/manual/en/install.php) for instructions on how to install it on your system.
+PHP 7.4 is required to run this script, please see the [PHP Installation Documentation](http://php.net/manual/en/install.php) for instructions on how to install it on your system.
 
 If you'd like to use the optional Backup as ZIP file feature on a Linux machine, you need to also install the ZIP extension for PHP:
 
-`sudo apt-get install php7.1-zip`
+`sudo apt-get install php7.4-zip`
 
 ## Setup
 

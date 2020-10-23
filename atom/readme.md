@@ -1,6 +1,6 @@
 # Atom Configuration
 
-[![Screenshot of Atom with my configuration applied](screenshot.png)](https://raw.githubusercontent.com/brendanmurty/dotfiles/master/.atom/screenshot.png)
+[![Screenshot of Atom with my configuration applied](screenshot.png)](https://raw.githubusercontent.com/brendanmurty/dotfiles/main/.atom/screenshot.png)
 
 Here are the contents of my [Atom](https://atom.io/) configuration directory.
 

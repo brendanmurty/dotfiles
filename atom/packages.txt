@@ -1,3 +1,4 @@
+atom-beautify
 atom-clock
 atom-material-ui
 blame

@@ -1,9 +1,9 @@
-brew gcc
+brew "gcc"
 
-brew git
-brew zsh-completions
+brew "git"
+brew "zsh-completions"
 
-brew nvm
-brew composer
+brew "nvm"
+brew "composer"
 
-cask atom
+cask "atom"

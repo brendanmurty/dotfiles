@@ -1,0 +1,9 @@
+brew gcc
+
+brew git
+brew zsh-completions
+
+brew nvm
+brew composer
+
+cask atom

@@ -20,4 +20,5 @@ pinned-tabs
 pretty-json
 set-syntax
 simple-icons
+split-diff
 stylus

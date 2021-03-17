@@ -22,3 +22,4 @@ set-syntax
 simple-icons
 split-diff
 stylus
+terminal-tab

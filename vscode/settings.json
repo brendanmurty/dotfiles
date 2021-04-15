@@ -56,7 +56,7 @@
         "statusBar.background" : "#000",
         "statusBar.noFolderBackground" : "#000",
         "statusBar.debuggingBackground": "#000",
-        "tab.activeBorder": "#23c5b0",
+        "tab.activeBorderTop": "#23c5b0",
         "window.activeBorder": "#222",
         "window.inactiveBorder": "#000"
     },
@@ -66,5 +66,6 @@
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
     "javascript.validate.enable": false,
     "php.validate.enable": false,
-    "css.validate": false
+    "css.validate": false,
+    "workbench.colorTheme": "GitHub Dark Default"
 }

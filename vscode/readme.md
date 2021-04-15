@@ -6,9 +6,10 @@ Here are the contents of my [Visual Studio Code](https://code.visualstudio.com/)
 
 1. Purchase and install the [MonoLisa](https://www.monolisa.dev/) font on your computer
 2. Install and open VS Code
-3. Close VS Code
-4. Copy the files in this folder to your [VS Code Configuration Directory](https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations)
-5. Open VS Code
+3. Install the [GitHub Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme) package
+4. Close VS Code
+5. Copy the files in this folder to your [VS Code Configuration Directory](https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations)
+6. Open VS Code
 
 ## Customise
 

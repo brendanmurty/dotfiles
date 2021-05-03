@@ -18,6 +18,7 @@ language-viml
 language-vue
 pinned-tabs
 pretty-json
+project-plus
 set-syntax
 simple-icons
 split-diff

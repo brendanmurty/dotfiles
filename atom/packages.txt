@@ -16,6 +16,7 @@ language-terraform
 language-todotxt
 language-viml
 language-vue
+minimap
 pinned-tabs
 pretty-json
 project-plus

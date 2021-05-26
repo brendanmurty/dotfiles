@@ -83,6 +83,10 @@
     showIconsInEditorGutter: true
   "line-ending-selector":
     defaultLineEnding: "LF"
+  minimap:
+    absoluteMode: true
+    minimapScrollIndicator: false
+    smoothScrolling: true
   "pinned-tabs":
     visualstudio: {}
   tabs:

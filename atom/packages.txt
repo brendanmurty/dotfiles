@@ -20,6 +20,7 @@ minimap
 pinned-tabs
 pretty-json
 project-plus
+rainbow-csv
 set-syntax
 simple-icons
 split-diff

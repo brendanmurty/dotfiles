@@ -82,7 +82,7 @@
 		".hg",
 		"CVS"
 	],
-	"font_face": "Hack",
+	"font_face": "MonoLisa",
 	"font_options":
 	[
 		"directwrite",
@@ -90,7 +90,7 @@
 		"no_italic",
 		"no_round"
 	],
-	"font_size": 14,
+	"font_size": 20,
 	"gutter": true,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,

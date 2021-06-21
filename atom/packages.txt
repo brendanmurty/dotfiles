@@ -11,6 +11,7 @@ language-htaccess
 language-ini
 language-markdown
 language-nginx
+language-nunjucks
 language-powershell
 language-terraform
 language-todotxt

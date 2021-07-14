@@ -17,6 +17,12 @@
 * 
 */
 
+/* Global styles */
+
+.theme-dark .workspace {
+  font-family: "MonoLisa", var(--default-font);
+}
+
 /* Main editor view */
 
 .theme-dark .workspace-split.mod-root .view-content {

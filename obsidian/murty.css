@@ -1,0 +1,63 @@
+/**
+*
+* murty.css
+*
+* This file is an Obsidian CSS Snippet which tweaks the default Obsidian Dark theme.
+*
+* Setup:
+*
+* 1. Install and open Obsidian - https://obsidian.md/
+* 2. Setup your Obsidian Vault
+* 3. Save this file in your vault inside ".obsidian/snippets"
+* 4. Open Obsidian Settings and change some options:
+*   - Appearance > Base theme: Dark
+*   - Appearance > Theme: None
+*   - Appearance > CSS snippets: Click reload icon
+*   - Appearance > CSS snippets: Enable "murty"
+* 
+*/
+
+/* Main editor view */
+
+.theme-dark .workspace-split.mod-root .view-content {
+  background-color: #000;
+}
+
+/* Code folding and line number columns */
+
+.theme-dark .CodeMirror-gutter.CodeMirror-linenumbers,
+.theme-dark .CodeMirror-gutter.CodeMirror-foldgutter {
+  background-color: #000;
+}
+
+/* Inline code in the main editor view */
+
+.theme-dark .cm-s-obsidian span.cm-inline-code,
+.theme-dark .cm-s-obsidian .HyperMD-codeblock {
+  color: #23c5b0;
+}
+
+/* Formatting indicator characters */
+
+.theme-dark .cm-s-obsidian .cm-formatting {
+  color: #555 !important;
+  font-weight: 400;
+}
+
+/* Bolded content */
+
+.theme-dark .cm-s-obsidian .cm-strong {
+  color: #3fb4c5;
+}
+
+/* URL titles */
+
+.theme-dark .cm-s-obsidian .cm-link {
+  color: #ffbe40;
+}
+
+/* URL contents */
+
+.theme-dark .cm-s-obsidian .cm-url {
+  color: #f86f50;
+}

@@ -50,6 +50,12 @@
   font-weight: 400;
 }
 
+/* Tags in content */
+
+.theme-dark .cm-s-obsidian .cm-hashtag {
+  color: #b3cc57;
+}
+
 /* Bolded content */
 
 .theme-dark .cm-s-obsidian .cm-strong {

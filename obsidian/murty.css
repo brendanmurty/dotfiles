@@ -38,19 +38,19 @@
 
 /* Code folding indicators */
 
-.CodeMirror-foldgutter-open,
-.CodeMirror-foldgutter-folded {
+.theme-dark .CodeMirror-foldgutter-open,
+.theme-dark .CodeMirror-foldgutter-folded {
   cursor: pointer;
   line-height: 2;
 }
 
-.CodeMirror-foldgutter-folded {
+.theme-dark .CodeMirror-foldgutter-folded {
   top: -10px;
   position: absolute;
 }
 
-.CodeMirror-foldgutter-open::after,
-.CodeMirror-foldgutter-folded::after {
+.theme-dark .CodeMirror-foldgutter-open::after,
+.theme-dark .CodeMirror-foldgutter-folded::after {
   color: #555;
   font-size: 25px;
 }
@@ -67,6 +67,28 @@
 .theme-dark .cm-s-obsidian .cm-formatting {
   color: #555 !important;
   font-weight: 400;
+}
+
+/* Headings */
+
+.theme-dark .cm-header-1 {
+  font-size: 1.2em;
+}
+
+.theme-dark .cm-header-2 {
+  font-size: 1.1em;
+}
+
+.theme-dark .cm-header-3 {
+  font-size: 1.0em;
+}
+
+.theme-dark .cm-header-4 {
+  font-size: 1.0em;
+}
+
+.theme-dark .cm-header-5 {
+  font-size: 1.0em;
 }
 
 /* Tags in content */

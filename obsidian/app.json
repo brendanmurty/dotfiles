@@ -1,0 +1,9 @@
+{
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "readableLineLength": false,
+  "tabSize": 2,
+  "foldHeading": true,
+  "foldIndent": true,
+  "emacsyKeys": false
+}

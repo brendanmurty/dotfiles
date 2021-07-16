@@ -36,6 +36,25 @@
   background-color: #000;
 }
 
+/* Code folding indicators */
+
+.CodeMirror-foldgutter-open,
+.CodeMirror-foldgutter-folded {
+  cursor: pointer;
+  line-height: 2;
+}
+
+.CodeMirror-foldgutter-folded {
+  top: -10px;
+  position: absolute;
+}
+
+.CodeMirror-foldgutter-open::after,
+.CodeMirror-foldgutter-folded::after {
+  color: #555;
+  font-size: 25px;
+}
+
 /* Inline code in the main editor view */
 
 .theme-dark .cm-s-obsidian span.cm-inline-code,

@@ -3,7 +3,7 @@
 * murty.css
 *
 * This file is an Obsidian CSS Snippet which tweaks the default Obsidian Dark theme.
-* 
+*
 */
 
 /* Global styles */
@@ -33,15 +33,12 @@
   line-height: 2;
 }
 
-.theme-dark .CodeMirror-foldgutter-folded {
-  top: -10px;
-  position: absolute;
-}
-
 .theme-dark .CodeMirror-foldgutter-open::after,
 .theme-dark .CodeMirror-foldgutter-folded::after {
   color: #555;
   font-size: 25px;
+  top: -5px;
+  position: absolute;
 }
 
 /* Inline code in the main editor view */

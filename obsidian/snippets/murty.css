@@ -35,10 +35,11 @@
 
 .theme-dark .CodeMirror-foldgutter-open::after,
 .theme-dark .CodeMirror-foldgutter-folded::after {
-  color: #555;
-  font-size: 25px;
-  top: -5px;
+  color: #777;
+  font-size: 30px;
+  top: -11px;
   position: absolute;
+  left: -5px;
 }
 
 /* Inline code in the main editor view */

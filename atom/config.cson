@@ -53,9 +53,7 @@
       "exception-reporting"
       "notifications"
       "spell-check"
-    ]
-    packagesWithKeymapsDisabled: [
-      "terminal-tab"
+      "minimap"
     ]
     telemetryConsent: "no"
     themes: [
@@ -89,12 +87,22 @@
     smoothScrolling: true
   "pinned-tabs":
     visualstudio: {}
+  "platformio-ide-terminal":
+    core:
+      workingDirectory: "Active File"
+    style:
+      fontFamily: "MonoLisa"
+      fontSize: "18"
+      theme: "pro"
+  "project-plus":
+    notifications: false
+    showPath: true
+  "split-diff":
+    ignoreWhitespace: true
   tabs:
     displayMruTabList: false
     enableMruTabSwitching: false
     enableVcsColoring: true
-  "terminal-tab":
-    defaultLocation: "center"
   "tree-view":
     hideIgnoredNames: true
   welcome:

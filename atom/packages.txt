@@ -20,6 +20,7 @@ language-viml
 language-vue
 minimap
 pinned-tabs
+platformio-ide-terminal
 pretty-json
 project-plus
 rainbow-csv
@@ -27,4 +28,3 @@ set-syntax
 simple-icons
 split-diff
 stylus
-terminal-tab

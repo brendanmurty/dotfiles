@@ -93,7 +93,7 @@
     style:
       fontFamily: "MonoLisa"
       fontSize: "18"
-      theme: "pro"
+      theme: "city-lights"
   "project-plus":
     notifications: false
     showPath: true

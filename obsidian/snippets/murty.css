@@ -37,10 +37,7 @@
 .theme-dark .CodeMirror-foldgutter-folded::after {
   color: #3fb4c5;
   font-family: sans-serif;
-  font-size: 20px;
-  top: -5px;
-  position: absolute;
-  left: 0;
+  font-size: 1em;
 }
 
 /* Inline code in the main editor view */

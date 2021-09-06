@@ -1,13 +1,4 @@
 {
-  "editor:swap-line-up": [
-    {
-      "modifiers": [
-        "Ctrl",
-        "Mod"
-      ],
-      "key": "ArrowUp"
-    }
-  ],
   "editor:swap-line-down": [
     {
       "modifiers": [
@@ -15,6 +6,15 @@
         "Mod"
       ],
       "key": "ArrowDown"
+    }
+  ],
+  "editor:swap-line-up": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Mod"
+      ],
+      "key": "ArrowUp"
     }
   ],
   "app:toggle-left-sidebar": [

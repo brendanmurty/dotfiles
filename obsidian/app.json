@@ -1,5 +1,13 @@
 {
   "readableLineLength": false,
   "foldHeading": true,
-  "foldIndent": true
+  "foldIndent": true,
+  "mobilePullAction": "switcher:open",
+  "tabSize": 2,
+  "useTab": true,
+  "trashOption": "local",
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "newFileLocation": "current",
+  "promptDelete": false
 }

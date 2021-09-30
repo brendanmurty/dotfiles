@@ -6,12 +6,24 @@
         "Mod"
       ],
       "key": "ArrowDown"
+    },
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowDown"
     }
   ],
   "editor:swap-line-up": [
     {
       "modifiers": [
         "Ctrl",
+        "Mod"
+      ],
+      "key": "ArrowUp"
+    },
+    {
+      "modifiers": [
         "Mod"
       ],
       "key": "ArrowUp"

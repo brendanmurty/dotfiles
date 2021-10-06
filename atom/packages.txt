@@ -1,5 +1,6 @@
 atom-beautify
 atom-clock
+atom-csv-markdown
 atom-material-ui
 blame
 docblockr

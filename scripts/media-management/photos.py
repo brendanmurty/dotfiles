@@ -6,9 +6,11 @@
 # 
 # Originally forked from https://gist.github.com/cliss/6854904
 # 
-# Organises all media files (defined by "mediaFileExtensions") in the "sourceDir" in to a subfolder of "destDir" named like:
+# Organises all media files (defined by "mediaFileExtensions") in a source directory in to a subdirectory of the destination directory named like:
 #   2020\01 Jan\
-#   
+# 
+# Assumes that the source directory doesn't have any sub-directories.
+# 
 # The source and destination directories are defined in "photos.env" and are assumed
 # to be a subdirectory path of the current user's profile directory.
 # 

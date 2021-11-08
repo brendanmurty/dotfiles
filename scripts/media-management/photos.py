@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+#
 # Photo management script
 # 
 # ----
@@ -8,18 +8,25 @@
 # 
 # Organises all media files (defined by "mediaFileExtensions") in the "sourceDir" in to a subfolder of "destDir" named like:
 #   2020\01 Jan\
+#   
+# The source and destination directories are defined in "photos.env" and are assumed
+# to be a subdirectory path of the current user's profile directory.
 # 
 # Setup:
-#   echo "alias photomgmt='python /path/to/dotfiles/scripts/media-management/photos.py'" >> ~/.bash_aliases
-#   source ~/.bash_aliases
+#   1. Configure the alias command:
+#       echo "alias photomgmt='python /path/to/dotfiles/scripts/media-management/photos.py'" >> ~/.bash_aliases
+#       source ~/.bash_aliases
+#   2. Configure your photo directories:
+#       cp -u photos.env.example photos.env
+#       vim photos.env
+#   3. Run the script:
+#       photomgmt
 # 
 # Requirements:
 #  - Windows machine
-#  - Python 3.8: https://www.python.org/downloads/release/python-380/
+#  - Python 3.8+: https://www.python.org/downloads/release/python-380/
 #  - ExifRead: https://pypi.org/project/ExifRead/
-#
-# TODO:
-#  - 
+#  - Python-dotenv: https://pypi.org/project/python-dotenv/
 #  
 
 import sys
@@ -27,6 +34,7 @@ import os, shutil
 import os.path
 import exifread
 from datetime import datetime
+from dotenv import dotenv_values
 
 ### Functions
 
@@ -47,10 +55,14 @@ def photoDate(f):
 now = datetime.now()
 yearNow = now.year
 
+# Load the configuration values from "photos.env"
+script_file_path = os.path.dirname(__file__)
+config = dotenv_values("%s\\photos.env" % script_file_path)
+
 # Where the media files are and where they're going
-sourceDir = "%s\\Dropbox\\Camera Uploads" % os.environ['USERPROFILE']
-destDir = "%s\\Dropbox\\Photos\\Brendan" % os.environ['USERPROFILE']
-errorDir = "%s\\00 Unsorted" % destDir
+sourceDir = "%s%s" % (os.environ['USERPROFILE'], config['PHOTOMGMT_SOURCE_DIR'])
+destDir = "%s%s" % (os.environ['USERPROFILE'], config['PHOTOMGMT_DEST_DIR'])
+errorDir = "%s%s" % (os.environ['USERPROFILE'], config['PHOTOMGMT_ERROR_DIR'])
 
 # Create the required directories
 if not os.path.exists(destDir):
@@ -68,6 +80,8 @@ problems = []
 mediaFileExtensions = [
     '.bmp',
     '.BMP',
+    '.DNG',
+    '.dng',
     '.gif',
     '.GIF',
     '.jpg',

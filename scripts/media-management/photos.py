@@ -26,7 +26,7 @@
 # 
 # Requirements:
 #  - Windows machine
-#  - Python 3.8+: https://www.python.org/downloads/release/python-380/
+#  - Python 3: https://www.python.org/downloads/
 #  - ExifRead: https://pypi.org/project/ExifRead/
 #  - Python-dotenv: https://pypi.org/project/python-dotenv/
 #  

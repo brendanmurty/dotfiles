@@ -47,7 +47,6 @@
       "deprecation-cop"
       "autosave"
       "language-gfm"
-      "whitespace"
       "background-tips"
       "exception-reporting"
       "notifications"

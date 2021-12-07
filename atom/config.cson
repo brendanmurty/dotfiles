@@ -42,7 +42,6 @@
         "txt"
       ]
     disabledPackages: [
-      "bracket-matcher"
       "metrics"
       "wrap-guide"
       "deprecation-cop"

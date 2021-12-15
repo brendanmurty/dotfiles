@@ -52,6 +52,7 @@
       "notifications"
       "spell-check"
       "minimap"
+      "whitespace"
     ]
     telemetryConsent: "no"
     themes: [

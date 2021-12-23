@@ -41,11 +41,12 @@
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.colorCustomizations": {
         "activityBar.activeBorder": "#23c5b0",
+        "activityBar.background": "#000",
         "activityBar.foreground": "#23c5b0",
-        "activityBar.inactiveForeground": "#777",
+        "activityBar.inactiveForeground": "#666",
         "activityBarBadge.background": "#23c5b0",
         "activityBarBadge.foreground": "#000",
-        "contrastBorder": "#333",
+        "contrastBorder": "#222",
         "editor.background": "#000",
         "sideBar.background": "#000",
         "sideBar.foreground": "#FFF",
@@ -54,8 +55,10 @@
         "statusBar.background" : "#000",
         "statusBar.noFolderBackground" : "#000",
         "statusBar.debuggingBackground": "#000",
+        "tab.activeBackground": "#000",
         "tab.activeBorderTop": "#23c5b0",
-        "window.activeBorder": "#222",
+        "tab.inactiveBackground": "#111",
+        "window.activeBorder": "#000",
         "window.inactiveBorder": "#000"
     },
     "window.zoomLevel": 1,
@@ -69,7 +72,7 @@
     "javascript.validate.enable": false,
     "php.validate.enable": false,
     "css.validate": false,
-    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.colorTheme": "Atom One Dark",
     "workbench.editor.untitled.hint": "hidden",
     "telemetry.telemetryLevel": "off"
 }

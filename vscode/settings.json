@@ -59,9 +59,12 @@
         "window.inactiveBorder": "#000"
     },
     "window.zoomLevel": 1,
-    "window.menuBarVisibility": "toggle",
     "workbench.list.openMode": "doubleClick",
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "terminal.integrated.profiles.windows": {
+        "Git Bash": {
+            "path": "C:\\Program Files\\Git\\bin\\bash.exe"
+        }
+    },
     "javascript.validate.enable": false,
     "php.validate.enable": false,
     "css.validate": false,

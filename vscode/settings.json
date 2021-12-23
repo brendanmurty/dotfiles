@@ -1,6 +1,4 @@
 {
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
     "workbench.startupEditor": "newUntitledFile",
     "editor.fontFamily": "MonoLisa",
     "editor.fontLigatures": true,
@@ -67,5 +65,7 @@
     "javascript.validate.enable": false,
     "php.validate.enable": false,
     "css.validate": false,
-    "workbench.colorTheme": "GitHub Dark Default"
+    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.editor.untitled.hint": "hidden",
+    "telemetry.telemetryLevel": "off"
 }

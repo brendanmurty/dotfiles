@@ -65,6 +65,7 @@
             "path": "C:\\Program Files\\Git\\bin\\bash.exe"
         }
     },
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
     "javascript.validate.enable": false,
     "php.validate.enable": false,
     "css.validate": false,

@@ -5,11 +5,14 @@ Here are the contents of my [Visual Studio Code](https://code.visualstudio.com/)
 ## Usage
 
 1. Purchase and install the [MonoLisa](https://www.monolisa.dev/) font on your computer
-2. Install and open VS Code
-3. Install the [GitHub Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme) package
-4. Close VS Code
-5. Copy the files in this folder to your [VS Code Configuration Directory](https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations)
-6. Open VS Code
+2. Install, open VS Code and wait for it to load
+3. If you're using macOS, you have to press `Cmd+Shift+P` and select the `Shell Command: Install 'code' command in PATH` 
+3. Close VS Code so that the settings files are initialised
+4. Open Terminal
+5. Check that the `code` command works now: `which code`
+6. Run [setup.sh](setup.sh) from this directory: `bash setup.sh`
+7. Copy `settings.json` from this directory to your [VS Code Configuration Directory](https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations)
+8. Open VS Code
 
 ## Customise
 

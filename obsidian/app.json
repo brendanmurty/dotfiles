@@ -3,7 +3,7 @@
   "foldHeading": true,
   "foldIndent": true,
   "mobilePullAction": "switcher:open",
-  "tabSize": 7,
+  "tabSize": 4,
   "useTab": true,
   "trashOption": "local",
   "alwaysUpdateLinks": true,

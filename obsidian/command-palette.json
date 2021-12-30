@@ -1,7 +1,8 @@
 {
   "pinned": [
+    "starred:star-current-file",
     "workspace:toggle-pin",
-    "workspace:copy-url",
-    "markdown:toggle-preview"
+    "markdown:toggle-preview",
+    "workspace:copy-url"
   ]
 }

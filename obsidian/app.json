@@ -3,11 +3,15 @@
   "foldHeading": true,
   "foldIndent": true,
   "mobilePullAction": "switcher:open",
-  "tabSize": 2,
+  "tabSize": 7,
   "useTab": true,
   "trashOption": "local",
   "alwaysUpdateLinks": true,
   "showUnsupportedFiles": true,
   "newFileLocation": "current",
-  "promptDelete": false
+  "promptDelete": false,
+  "livePreview": false,
+  "legacyEditor": false,
+  "attachmentFolderPath": "./Attachments",
+  "spellcheck": false
 }

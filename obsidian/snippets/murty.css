@@ -76,10 +76,20 @@
   font-size: 1.0em;
 }
 
+/* Internal links to other notes */
+
+.theme-dark .cm-s-obsidian .cm-hmd-internal-link,
+.kanban-plugin__item-markdown .internal-link {
+  color: #ef746f;
+  text-decoration: none;
+}
+
 /* Tags in content */
 
-.theme-dark .cm-s-obsidian .cm-hashtag {
+.theme-dark .cm-s-obsidian .cm-hashtag,
+.kanban-plugin__item-tag {
   color: #b3cc57;
+  text-decoration: none;
 }
 
 /* Bolded content */

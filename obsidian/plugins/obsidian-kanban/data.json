@@ -1,0 +1,17 @@
+{
+  "new-note-folder": "Boards/Items",
+  "time-format": "h:mma",
+  "date-format": "YYYY-MM-DD",
+  "date-display-format": "DD MMM YYYY",
+  "show-relative-date": true,
+  "prepend-archive-format": "YYYYMMDD-HHmm",
+  "date-picker-week-start": 1,
+  "new-note-template": "Templates/BoardItem.md",
+  "show-view-as-markdown": false,
+  "show-archive-all": false,
+  "prepend-archive-separator": " - ",
+  "show-board-settings": false,
+  "lane-width": 350,
+  "hide-date-display": true,
+  "prepend-archive-date": true
+}

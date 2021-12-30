@@ -1,3 +1,8 @@
 [
-  "obsidian-codemirror-options"
+  "obsidian-codemirror-options",
+  "obsidian-icon-folder",
+  "simple-embeds",
+  "obsidian-kanban",
+  "obsidian-reminder-plugin",
+  "dataview"
 ]

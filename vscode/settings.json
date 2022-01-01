@@ -61,7 +61,6 @@
         "window.activeBorder": "#000",
         "window.inactiveBorder": "#000"
     },
-    "window.zoomLevel": 1,
     "workbench.list.openMode": "doubleClick",
     "terminal.integrated.profiles.windows": {
         "Git Bash": {
@@ -74,5 +73,10 @@
     "css.validate": false,
     "workbench.colorTheme": "Atom One Dark",
     "workbench.editor.untitled.hint": "hidden",
-    "telemetry.telemetryLevel": "off"
+    "telemetry.telemetryLevel": "off",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "atomKeymap.promptV3Features": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true
 }

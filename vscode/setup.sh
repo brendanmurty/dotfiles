@@ -3,3 +3,11 @@ code --install-extension GitHub.vscode-pull-request-github
 code --install-extension ms-vscode.atom-keybindings
 code --install-extension ms-vscode-remote.remote-wsl
 code --install-extension ronnidc.nunjucks
+code --install-extension HookyQR.beautify
+code --install-extension angelo-breuer.clock
+code --install-extension cjhowe7.laravel-blade
+code --install-extension rafaelmaiolla.diff
+code --install-extension dunstontc.vscode-docker-syntax
+code --install-extension IronGeek.vscode-env
+code --install-extension HashiCorp.terraform
+code --install-extension mechatroner.rainbow-csv

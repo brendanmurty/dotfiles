@@ -12,3 +12,4 @@ code --install-extension IronGeek.vscode-env
 code --install-extension HashiCorp.terraform
 code --install-extension mechatroner.rainbow-csv
 code --install-extension ms-azuretools.vscode-docker
+code --install-extension eg2.vscode-npm-script

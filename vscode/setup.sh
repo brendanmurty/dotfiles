@@ -11,3 +11,4 @@ code --install-extension dunstontc.vscode-docker-syntax
 code --install-extension IronGeek.vscode-env
 code --install-extension HashiCorp.terraform
 code --install-extension mechatroner.rainbow-csv
+code --install-extension ms-azuretools.vscode-docker

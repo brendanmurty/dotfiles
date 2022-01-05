@@ -2,7 +2,7 @@
     "workbench.startupEditor": "newUntitledFile",
     "editor.fontFamily": "MonoLisa",
     "editor.fontLigatures": true,
-    "editor.fontSize": 18,
+    "editor.fontSize": 20,
     "files.eol": "\n",
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never",
@@ -78,6 +78,7 @@
     "atomKeymap.promptV3Features": false,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.formatOnPaste": true,
-    "clock.format": "h:M",
-    "clock.alignment": "Right"
+    "clock.format": "h:MM",
+    "clock.alignment": "Right",
+    "security.workspace.trust.untrustedFiles": "open"
 }

@@ -58,7 +58,9 @@
         "tab.activeBorderTop": "#23c5b0",
         "tab.inactiveBackground": "#111",
         "window.activeBorder": "#000",
-        "window.inactiveBorder": "#000"
+        "window.inactiveBorder": "#000",
+        "editorLineNumber.foreground": "#444444",
+        "editorLineNumber.activeForeground": "#888888"
     },
     "workbench.list.openMode": "doubleClick",
     "terminal.integrated.profiles.windows": {

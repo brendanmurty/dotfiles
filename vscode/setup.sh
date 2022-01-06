@@ -15,3 +15,4 @@ code --install-extension ms-azuretools.vscode-docker
 code --install-extension eg2.vscode-npm-script
 code --install-extension bam.vscode-file-templates
 code --install-extension oderwat.indent-rainbow
+code --install-extension mhutchie.git-graph

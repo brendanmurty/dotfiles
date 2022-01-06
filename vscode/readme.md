@@ -11,7 +11,7 @@ Here are the contents of my [Visual Studio Code](https://code.visualstudio.com/)
 4. Open Terminal
 5. Check that the `code` command works now: `which code`
 6. Run [setup.sh](setup.sh) from this directory: `bash setup.sh`
-7. Copy [settings.json](settings.json) from this directory to your [VS Code Configuration Directory](https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations)
+7. Copy [settings.json](settings.json) and [keybindings.json](keybindings.json) from this directory to your [VS Code Configuration Directory](https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations)
 8. Open VS Code
 
 ## Customise

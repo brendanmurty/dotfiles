@@ -23,7 +23,7 @@
         "textMateRules": [
             {
                 "scope": [
-                   "comment"
+                    "comment"
                 ],
                 "settings": {
                     "fontStyle": ""
@@ -80,5 +80,13 @@
     "editor.formatOnPaste": true,
     "clock.format": "h:MM",
     "clock.alignment": "Right",
-    "security.workspace.trust.untrustedFiles": "open"
+    "security.workspace.trust.untrustedFiles": "open",
+    "indentRainbow.colors": [
+        "rgba(255,255,64,0.04)",
+        "rgba(127,255,127,0.04)",
+        "rgba(255,127,255,0.04)",
+        "rgba(79,236,236,0.04)"
+    ],
+    "indentRainbow.errorColor": "rgba(128,32,32,0.5)",
+    "indentRainbow.tabmixColor": "rgba(128,32,96,0.5)"
 }

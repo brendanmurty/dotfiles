@@ -80,7 +80,7 @@
 
 .theme-dark .cm-s-obsidian .cm-hmd-internal-link,
 .kanban-plugin__item-markdown .internal-link {
-  color: #ef746f;
+  color: #23c5b0;
   text-decoration: none;
 }
 
@@ -88,7 +88,7 @@
 
 .theme-dark .cm-s-obsidian .cm-hashtag,
 .kanban-plugin__item-tag {
-  color: #b3cc57;
+  color: #f86f50;
   text-decoration: none;
 }
 
@@ -101,11 +101,62 @@
 /* URL titles */
 
 .theme-dark .cm-s-obsidian .cm-link {
-  color: #ffbe40;
+  color: #23c5b0;
 }
 
 /* URL contents */
 
 .theme-dark .cm-s-obsidian .cm-url {
-  color: #f86f50;
+  color: #a7da1e;
+}
+
+/* Kanban boards */
+
+.kanban-plugin__lane-header-wrapper {
+  border-bottom: 0;
+}
+
+.kanban-plugin__lane-wrapper .kanban-plugin__lane {
+  background-color: transparent;
+  border: 2px solid var(--background-secondary);
+  border-radius: 0;
+}
+
+.kanban-plugin__lane-title {
+  color: #f7b83d;
+}
+
+.kanban-plugin__item-button-wrapper button.kanban-plugin__new-item-button {
+  color: var(--text-accent);
+}
+
+.kanban-plugin__item-button-wrapper {
+  border: 0 none;
+  padding: 0;
+}
+
+.kanban-plugin__item-button-wrapper .kanban-plugin__new-item-button {
+  padding: 12px 10px;
+}
+
+.kanban-plugin__item-button-wrapper .kanban-plugin__new-item-button:hover {
+  color: #fff;
+}
+
+.kanban-plugin__item-button-plus {
+  display: none;
+}
+
+.kanban-plugin__item {
+  border: 0 none;
+}
+
+.kanban-plugin__item-content-wrapper {
+  background: #000;
+  border: 2px solid var(--background-secondary);
+  border-radius: 0;
+}
+
+.kanban-plugin__lane-items .kanban-plugin__item-wrapper {
+  margin-top: 10px;
 }

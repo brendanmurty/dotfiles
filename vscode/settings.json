@@ -90,5 +90,6 @@
         "rgba(79,236,236,0.04)"
     ],
     "indentRainbow.errorColor": "rgba(128,32,32,0.5)",
-    "indentRainbow.tabmixColor": "rgba(128,32,96,0.5)"
+    "indentRainbow.tabmixColor": "rgba(128,32,96,0.5)",
+    "editor.wordWrap": "on"
 }

@@ -2,7 +2,7 @@
 *
 * murty.css
 *
-* This file is an Obsidian CSS Snippet which tweaks the default Obsidian Dark theme.
+* An Obsidian CSS Snippet which tweaks the default Obsidian Dark theme.
 *
 */
 
@@ -78,8 +78,12 @@
 
 /* Internal links to other notes */
 
+.theme-dark .cm-s-obsidian .internal-link,
 .theme-dark .cm-s-obsidian .cm-hmd-internal-link,
-.kanban-plugin__item-markdown .internal-link {
+.kanban-plugin__item-markdown .internal-link,
+.markdown-preview-view .internal-link,
+.markdown-preview-view .external-link,
+.theme-dark .cm-s-obsidian .cm-link {
   color: #23c5b0;
   text-decoration: none;
 }
@@ -98,16 +102,11 @@
   color: #3fb4c5;
 }
 
-/* URL titles */
-
-.theme-dark .cm-s-obsidian .cm-link {
-  color: #23c5b0;
-}
-
-/* URL contents */
+/* URL targets */
 
 .theme-dark .cm-s-obsidian .cm-url {
   color: #a7da1e;
+  text-decoration: none;
 }
 
 /* Kanban boards */
@@ -147,14 +146,23 @@
   display: none;
 }
 
-.kanban-plugin__item {
-  border: 0 none;
-}
-
-.kanban-plugin__item-content-wrapper {
-  background: #000;
+.kanban-plugin__item-wrapper .kanban-plugin__item {
   border: 2px solid var(--background-secondary);
   border-radius: 0;
+}
+
+.kanban-plugin__lane-wrapper .kanban-plugin__lane-header-wrapper {
+  border-bottom: 2px solid var(--background-secondary);
+}
+
+.kanban-plugin__lane-wrapper .kanban-plugin__item-button-wrapper {
+  border-top: 2px solid var(--background-secondary);
+}
+
+.kanban-plugin__item-wrapper .kanban-plugin__item,
+.kanban-plugin__item-wrapper .kanban-plugin__item-content-wrapper,
+.kanban-plugin__item-wrapper .kanban-plugin__item-title-wrapper {
+  background: transparent;
 }
 
 .kanban-plugin__lane-items .kanban-plugin__item-wrapper {

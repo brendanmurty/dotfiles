@@ -91,5 +91,9 @@
     ],
     "indentRainbow.errorColor": "rgba(128,32,32,0.5)",
     "indentRainbow.tabmixColor": "rgba(128,32,96,0.5)",
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "extensions.ignoreRecommendations": true,
+    "editor.tabSize": 2,
+    "go.toolsManagement.autoUpdate": true,
+    "editor.detectIndentation": false
 }

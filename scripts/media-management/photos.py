@@ -93,7 +93,11 @@ mediaFileExtensions = [
     '.mp4',
     '.MP4',
     '.png',
-    '.PNG'
+    '.PNG',
+    'heic',
+    'HEIC',
+    'hevc',
+    'HEVC'
 ]
 photos = os.listdir(sourceDir)
 photos = [ x for x in photos if x[-4:] in mediaFileExtensions ]

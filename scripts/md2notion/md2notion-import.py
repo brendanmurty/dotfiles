@@ -12,17 +12,19 @@
 #
 # 1. Copy "notion.env.example" to "notion.env"
 # 2. Set appropriate values for the variables in "notion.env"
-# 3. Install required packages: `pip install notion md2notion`
+# 3. Install required packages: `pip3 install notion md2notion python-dotenv`
 # 4. Run this script: `python3 md2notion-import.py`
 #
 
+import os
+from dotenv import dotenv_values
 from notion.client import NotionClient
 from notion.block import PageBlock
 from md2notion.upload import upload
 
 # Load the configuration values from "notion.env"
 script_file_path = os.path.dirname(__file__)
-config = dotenv_values("%s\\notion.env" % script_file_path)
+config = dotenv_values("%s/notion.env" % script_file_path)
 
 # Setup the Notion API client
 client = NotionClient(token_v2=config['NOTION_TOKEN_V2'])

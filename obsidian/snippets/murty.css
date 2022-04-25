@@ -2,14 +2,15 @@
 *
 * murty.css
 *
-* An Obsidian CSS Snippet which tweaks the default Obsidian Dark theme.
+* This file is an Obsidian CSS Snippet which tweaks the default Obsidian Dark theme.
 *
 */
 
 /* Global styles */
 
-.theme-dark .workspace {
-  font-family: "MonoLisa", var(--default-font);
+.theme-dark .workspace,
+.kanban-plugin * {
+  font-family: "MonoLisa", var(--font-default) !important;
 }
 
 /* Main editor view */

@@ -95,5 +95,6 @@
     "extensions.ignoreRecommendations": true,
     "editor.tabSize": 2,
     "go.toolsManagement.autoUpdate": true,
-    "editor.detectIndentation": false
+    "editor.detectIndentation": false,
+    "terminal.integrated.gpuAcceleration": "off"
 }

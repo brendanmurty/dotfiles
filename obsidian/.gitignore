@@ -1,2 +1,11 @@
-plugins/obsidian-icon-folder/data.json
-plugins/obsidian-reminder-plugin/data.json
+plugins/*/data.json
+!plugins/calendar/data.json
+!plugins/dataview/data.json
+!plugins/homepage/data.json
+!plugins/customizable-page-header-buttons/data.json
+!plugins/obsidian-minimal-settings/data.json
+!plugins/obsidian-show-file-path/data.json
+
+starred.json
+workspace
+workspaces.json

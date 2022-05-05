@@ -8,10 +8,12 @@
   "date-picker-week-start": 1,
   "new-note-template": "Templates/BoardItem.md",
   "show-view-as-markdown": false,
-  "show-archive-all": false,
+  "show-archive-all": true,
   "prepend-archive-separator": " - ",
-  "show-board-settings": false,
+  "show-board-settings": true,
   "lane-width": 350,
   "hide-date-display": true,
-  "prepend-archive-date": true
+  "prepend-archive-date": true,
+  "hide-tags-in-title": true,
+  "hide-date-in-title": true
 }

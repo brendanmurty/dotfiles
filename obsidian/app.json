@@ -1,17 +1,12 @@
 {
   "readableLineLength": false,
-  "foldHeading": true,
-  "foldIndent": true,
-  "mobilePullAction": "switcher:open",
-  "tabSize": 4,
-  "useTab": true,
+  "promptDelete": false,
   "trashOption": "local",
   "alwaysUpdateLinks": true,
-  "showUnsupportedFiles": true,
   "newFileLocation": "current",
-  "promptDelete": false,
-  "livePreview": false,
-  "legacyEditor": false,
   "attachmentFolderPath": "./Attachments",
-  "spellcheck": false
+  "autoPairBrackets": true,
+  "defaultViewMode": "source",
+  "mobilePullAction": "switcher:open",
+  "legacyEditor": false
 }

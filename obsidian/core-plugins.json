@@ -4,15 +4,14 @@
   "switcher",
   "graph",
   "backlink",
-  "outgoing-link",
-  "tag-pane",
   "page-preview",
-  "daily-notes",
   "templates",
   "note-composer",
   "command-palette",
+  "editor-status",
   "starred",
-  "outline",
-  "word-count",
-  "open-with-default-app"
+  "markdown-importer",
+  "open-with-default-app",
+  "file-recovery",
+  "sync"
 ]

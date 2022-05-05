@@ -1,7 +1,6 @@
 {
+  "enabledCssSnippets": [],
   "baseFontSize": 18,
-  "enabledCssSnippets": [
-    "murty"
-  ],
-  "cssTheme": ""
+  "cssTheme": "Minimal",
+  "theme": "obsidian"
 }

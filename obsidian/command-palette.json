@@ -1,8 +1,9 @@
 {
   "pinned": [
-    "starred:star-current-file",
-    "workspace:toggle-pin",
     "markdown:toggle-preview",
-    "workspace:copy-url"
+    "starred:star-current-file",
+    "workspace:copy-url",
+    "workspace:close",
+    "daily-notes"
   ]
 }

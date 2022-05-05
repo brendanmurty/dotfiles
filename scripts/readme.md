@@ -6,6 +6,5 @@ Various scripts to assist with new system setup and automated backup processes.
 
 - **[macos](macos/)**: macOS related scripts
 - **[media-management](media-management/)**: Scripts to manage media files
-- **[notes](notes/)**: Private note system and related management commands
 - **[trello-backup](trello-backup/)**: Backup your [Trello](https://trello.com/) boards and cards
 - **[windows](windows/)**: Windows 10 related scripts

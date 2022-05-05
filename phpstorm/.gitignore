@@ -1,7 +1,0 @@
-*.key
-*.lock
-tasks
-options/dimensions.xml
-options/usage.statistics.xml
-options/recentProjectDirectories.xml
-options/updates.xml

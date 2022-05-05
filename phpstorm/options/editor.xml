@@ -1,8 +1,0 @@
-<application>
-  <component name="DefaultFont">
-    <option name="FONT_SIZE" value="18" />
-    <option name="FONT_FAMILY" value="Fira Code Retina" />
-    <option name="LINE_SPACING" value="1.1" />
-    <option name="USE_LIGATURES" value="true" />
-  </component>
-</application>

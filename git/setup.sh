@@ -7,7 +7,7 @@ cp ~/.gitignore ~/.gitignore.before-dotfiles-base.bak
 cat custom.gitconfig >> ~/.gitconfig
 cat custom.gitignore >> ~/.gitignore
 
-# Clone repositories in "repositories.txt" to folders under "~/Git"
+# Clone repositories from `repositories.txt` to folders under `GIT_REPOSITORY_FOLDER`
 #  - Originally found here: https://github.com/rkalis/dotfiles/blob/master/repos/setup.sh
 GIT_REPOSITORY_FOLDER="$HOME/Repositories"
 GIT_REPOSITORY_LIST="$(pwd)/repositories.txt"

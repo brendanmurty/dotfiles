@@ -4,6 +4,7 @@ Configuration files for a local development environment.
 
 ## Contents
 
+- **[atom](atom/)**: [Atom](https://atom.io/) text editor configuration
 - **[bash](bash/)**: Bash terminal configuration
 - **[git](git/)**: [Git configuration](https://git-scm.com/docs/git-config) including alias commands
 - **[macos](macos/)**: [macOS](https://www.apple.com/au/macos/big-sur/) configuration

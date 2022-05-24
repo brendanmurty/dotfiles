@@ -17,3 +17,4 @@ code --install-extension bam.vscode-file-templates
 code --install-extension oderwat.indent-rainbow
 code --install-extension mhutchie.git-graph
 code --install-extension golang.Go
+code --install-extension denoland.vscode-deno

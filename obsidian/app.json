@@ -8,5 +8,6 @@
   "autoPairBrackets": true,
   "defaultViewMode": "source",
   "mobilePullAction": "switcher:open",
-  "legacyEditor": false
+  "legacyEditor": false,
+  "showUnsupportedFiles": true
 }

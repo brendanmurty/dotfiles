@@ -1,13 +1,14 @@
 [
   "calendar",
   "dataview",
-  "customizable-page-header-buttons",
   "homepage",
   "obsidian-kanban",
   "obsidian-reminder-plugin",
   "obsidian-show-file-path",
   "readwise-official",
-  "simple-embeds",
-  "obsidian-minimal-settings",
-  "obsidian-system-dark-mode"
+  "obsidian-system-dark-mode",
+  "obsidian-pocket",
+  "customizable-sidebar",
+  "obsidian-gallery",
+  "simple-embeds"
 ]

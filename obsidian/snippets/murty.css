@@ -1,0 +1,187 @@
+/**
+*
+* murty.css
+*
+* This file is an Obsidian CSS Snippet which tweaks the default Dark and Light themes.
+*
+* Author: Brendan Murty
+* Website: https://brendan.murty.au
+*
+*/
+
+/* Global styles */
+
+.theme-dark .workspace,
+.kanban-plugin * {
+  font-family: "MonoLisa", var(--font-default) !important;
+}
+
+/* Main editor view */
+
+.theme-dark .workspace-split.mod-root .view-content {
+  background-color: #000;
+}
+
+/* Code folding and line number columns */
+
+.theme-dark .CodeMirror-gutter.CodeMirror-linenumbers,
+.theme-dark .CodeMirror-gutter.CodeMirror-foldgutter {
+  background-color: #000;
+}
+
+/* Code folding indicators */
+
+.theme-dark .CodeMirror-foldgutter-open,
+.theme-dark .CodeMirror-foldgutter-folded {
+  cursor: pointer;
+  line-height: 2;
+}
+
+.theme-dark .CodeMirror-foldgutter-open::after,
+.theme-dark .CodeMirror-foldgutter-folded::after {
+  color: #3fb4c5;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+/* Inline code in the main editor view */
+
+.theme-dark .cm-s-obsidian span.cm-inline-code,
+.theme-dark .cm-s-obsidian .HyperMD-codeblock {
+  color: #23c5b0;
+}
+
+/* Formatting indicator characters */
+
+.theme-dark .cm-s-obsidian .cm-formatting {
+  color: #c78feb;
+  font-weight: 400;
+}
+
+/* Headings */
+
+.theme-dark .cm-header-1 {
+  font-size: 1.2em;
+}
+
+.theme-dark .cm-header-2 {
+  font-size: 1.1em;
+}
+
+.theme-dark .cm-header-3 {
+  font-size: 1.0em;
+}
+
+.theme-dark .cm-header-4 {
+  font-size: 1.0em;
+}
+
+.theme-dark .cm-header-5 {
+  font-size: 1.0em;
+}
+
+/* Internal links to other notes and external links */
+
+.theme-dark .cm-s-obsidian .internal-link,
+.theme-dark .cm-s-obsidian .cm-hmd-internal-link,
+.kanban-plugin__item-markdown .internal-link,
+.markdown-preview-view .internal-link,
+.markdown-preview-view .external-link,
+.theme-dark .cm-s-obsidian .cm-link {
+  color: #23c5b0;
+  text-decoration: none;
+}
+
+.external-link {
+  background: none;
+  padding-right: 0;
+}
+
+/* Tags in content */
+
+.theme-dark .cm-s-obsidian .cm-hashtag,
+.kanban-plugin__item-tag {
+  color: #f86f50;
+  text-decoration: none;
+}
+
+/* Bolded content */
+
+.theme-dark .cm-s-obsidian .cm-strong {
+  color: #3fb4c5;
+}
+
+/* URL targets */
+
+.theme-dark .cm-s-obsidian .cm-url {
+  color: #a7da1e;
+  text-decoration: none;
+}
+
+/* Kanban boards */
+
+.kanban-plugin__lane-header-wrapper {
+  border-bottom: 0;
+}
+
+.kanban-plugin__lane-wrapper .kanban-plugin__lane {
+  background-color: transparent;
+  border: 2px solid var(--background-secondary);
+  border-radius: 0;
+}
+
+.kanban-plugin__lane-title {
+  color: #f7b83d;
+}
+
+.kanban-plugin__item-button-wrapper button.kanban-plugin__new-item-button {
+  color: var(--text-accent);
+}
+
+.kanban-plugin__item-button-wrapper {
+  border: 0 none;
+  padding: 0;
+}
+
+.kanban-plugin__item-button-wrapper .kanban-plugin__new-item-button {
+  padding: 12px 10px;
+}
+
+.kanban-plugin__item-button-wrapper .kanban-plugin__new-item-button:hover {
+  color: #fff;
+}
+
+.kanban-plugin__item-button-plus {
+  display: none;
+}
+
+.kanban-plugin__item-wrapper .kanban-plugin__item {
+  border: 2px solid var(--background-secondary);
+  border-radius: 0;
+}
+
+.kanban-plugin__lane-wrapper .kanban-plugin__lane-header-wrapper {
+  border-bottom: 2px solid var(--background-secondary);
+}
+
+.kanban-plugin__lane-wrapper .kanban-plugin__item-button-wrapper {
+  border-top: 2px solid var(--background-secondary);
+}
+
+.kanban-plugin__item-wrapper .kanban-plugin__item,
+.kanban-plugin__item-wrapper .kanban-plugin__item-content-wrapper,
+.kanban-plugin__item-wrapper .kanban-plugin__item-title-wrapper {
+  background: transparent;
+}
+
+.kanban-plugin__lane-items .kanban-plugin__item-wrapper {
+  margin-top: 10px;
+}
+
+.theme-light .kanban-plugin__lane-wrapper {
+  background-color: var(--background-primary);
+}
+
+.theme-light .kanban-plugin {
+  background-color: var(--background-primary-alt);
+}

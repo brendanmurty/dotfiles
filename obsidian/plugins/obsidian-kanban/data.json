@@ -11,9 +11,9 @@
   "show-archive-all": true,
   "prepend-archive-separator": " - ",
   "show-board-settings": true,
-  "lane-width": 350,
   "hide-date-display": true,
   "prepend-archive-date": true,
   "hide-tags-in-title": true,
-  "hide-date-in-title": true
+  "hide-date-in-title": true,
+  "lane-width": 320
 }

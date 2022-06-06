@@ -18,3 +18,5 @@ code --install-extension oderwat.indent-rainbow
 code --install-extension mhutchie.git-graph
 code --install-extension golang.Go
 code --install-extension denoland.vscode-deno
+code --install-extension bmewburn.vscode-intelephense-client
+code --install-extension wayou.vscode-todo-highlight

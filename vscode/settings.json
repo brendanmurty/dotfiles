@@ -70,7 +70,6 @@
     },
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "javascript.validate.enable": false,
-    "php.validate.enable": false,
     "css.validate": false,
     "workbench.colorTheme": "Atom One Dark",
     "workbench.editor.untitled.hint": "hidden",
@@ -96,5 +95,6 @@
     "editor.tabSize": 2,
     "go.toolsManagement.autoUpdate": true,
     "editor.detectIndentation": false,
-    "terminal.integrated.gpuAcceleration": "off"
+    "terminal.integrated.gpuAcceleration": "off",
+    "php.validate.executablePath": "C:\\tools\\php81\\php.exe"
 }

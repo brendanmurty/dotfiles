@@ -96,5 +96,8 @@
     "go.toolsManagement.autoUpdate": true,
     "editor.detectIndentation": false,
     "terminal.integrated.gpuAcceleration": "off",
-    "php.validate.executablePath": "C:\\tools\\php81\\php.exe"
+    "php.validate.executablePath": "C:\\tools\\php81\\php.exe",
+    "[php]": {
+      "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    }
 }

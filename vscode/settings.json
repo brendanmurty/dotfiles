@@ -71,7 +71,7 @@
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "javascript.validate.enable": false,
     "css.validate": false,
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "Copilot Theme",
     "workbench.editor.untitled.hint": "hidden",
     "telemetry.telemetryLevel": "off",
     "explorer.confirmDragAndDrop": false,
@@ -99,5 +99,15 @@
     "php.validate.executablePath": "C:\\tools\\php81\\php.exe",
     "[php]": {
       "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-    }
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[css]": {
+      "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "editor.inlineSuggest.enabled": true
 }

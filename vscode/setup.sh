@@ -20,3 +20,5 @@ code --install-extension golang.Go
 code --install-extension denoland.vscode-deno
 code --install-extension bmewburn.vscode-intelephense-client
 code --install-extension wayou.vscode-todo-highlight
+code --install-extension GitHub.copilot
+code --install-extension BenjaminBenais.copilot-theme

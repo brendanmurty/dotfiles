@@ -109,5 +109,12 @@
     "[css]": {
       "editor.defaultFormatter": "vscode.css-language-features"
     },
-    "editor.inlineSuggest.enabled": true
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+      "*": true,
+      "yaml": false,
+      "plaintext": false,
+      "markdown": false
+    },
+    "window.commandCenter": true
 }

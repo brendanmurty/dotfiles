@@ -12,6 +12,9 @@
 /* Global styles */
 
 .theme-dark .workspace,
+.theme-dark .workspace .markdown-source-view,
+.theme-dark .workspace .markdown-preview-view,
+.markdown-source-view.mod-cm6 .cm-scroller,
 .kanban-plugin * {
   font-family: "MonoLisa", var(--font-default) !important;
 }
@@ -53,7 +56,7 @@
 
 /* Formatting indicator characters */
 
-.theme-dark .cm-s-obsidian .cm-formatting {
+.theme-dark .cm-s-obsidian .cm-formatting :not(.cm-hashtag) {
   color: #c78feb;
   font-weight: 400;
 }
@@ -97,12 +100,74 @@
   padding-right: 0;
 }
 
-/* Tags in content */
+/* Tags */
 
-.theme-dark .cm-s-obsidian .cm-hashtag,
-.kanban-plugin__item-tag {
-  color: #f86f50;
+.kanban-plugin__item-tags .kanban-plugin__item-tag,
+.tag,
+.cm-hashtag {
+  background-color: #0E85CA !important;
+  color: white !important;
+  text-decoration: none !important;
+  padding: 3px 8px !important;
+  margin: 0 !important;
+  border: none;
+  font-size: 11px;
+  text-align: center;
   text-decoration: none;
+  display: inline-block;
+  border-radius: 0 !important;
+}
+
+.kanban-plugin__item-tags:not(:empty) {
+  padding-top: 0;
+  margin-top: 10px;
+}
+
+.kanban-plugin__item-tags .kanban-plugin__item-tag {
+  margin: 0 10px 0 0 !important;
+}
+
+.cm-hashtag-begin {
+  padding-right: 0 !important;
+  margin-right: 0 !important;
+}
+
+.cm-hashtag-end {
+  padding-left: 0 !important;
+}
+
+.tag:hover,
+.cm-hashtag:hover {
+  background-color: var(--text-accent-hover) !important;
+  color: white !important;
+}
+
+.tag[href^="#family"],
+.cm-tag-tech {
+  background-color: #4d3ca6 !important;
+}
+
+.tag[href^="#career"],
+.cm-tag-career,
+.tag[href^="#tech"],
+.cm-tag-tech {
+  background-color: darkred !important;
+}
+
+.tag[href^="#personal"],
+.cm-tag-personal {
+  background-color: #23c5b0 !important;
+  color: #000 !important;
+}
+
+.tag[href^="#health"],
+.cm-tag-health {
+  background-color: orange !important;
+}
+
+.tag[href^="#money"],
+.cm-tag-money {
+  background-color: green !important;
 }
 
 /* Bolded content */

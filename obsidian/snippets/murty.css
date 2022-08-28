@@ -109,7 +109,7 @@
   color: white !important;
   text-decoration: none !important;
   padding: 3px 8px !important;
-  margin: 0 !important;
+  margin: 0 0 3px !important;
   border: none;
   font-size: 11px;
   text-align: center;
@@ -124,7 +124,7 @@
 }
 
 .kanban-plugin__item-tags .kanban-plugin__item-tag {
-  margin: 0 10px 0 0 !important;
+  margin: 0 10px 10px 0 !important;
 }
 
 .cm-hashtag-begin {
@@ -147,10 +147,21 @@
   background-color: #4d3ca6 !important;
 }
 
+.tag[href^="#work"],
+.cm-tag-work,
+span[class^="cm-tag-work"],
+span[class*="cm-tag-work"],
 .tag[href^="#career"],
 .cm-tag-career,
 .tag[href^="#tech"],
-.cm-tag-tech {
+.cm-tag-tech,
+.tag[href^="#management"],
+.cm-tag-management,
+.tag[href^="#leadership"],
+.cm-tag-leadership,
+.tag[href^="#trace"],
+span[class^="cm-tag-trace"],
+span[class*="cm-tag-trace"] {
   background-color: darkred !important;
 }
 

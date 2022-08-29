@@ -136,12 +136,6 @@
   padding-left: 0 !important;
 }
 
-.tag:hover,
-.cm-hashtag:hover {
-  background-color: var(--text-accent-hover) !important;
-  color: white !important;
-}
-
 .tag[href^="#family"],
 .cm-tag-tech {
   background-color: #4d3ca6 !important;

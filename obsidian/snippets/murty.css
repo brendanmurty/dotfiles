@@ -194,6 +194,10 @@ span[class*="cm-tag-trace"] {
   border-bottom: 0;
 }
 
+.kanban-plugin__grow-wrap>textarea {
+  height: auto;
+}
+
 .kanban-plugin__lane-wrapper .kanban-plugin__lane {
   background-color: transparent;
   border: 2px solid var(--background-secondary);

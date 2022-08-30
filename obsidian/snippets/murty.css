@@ -11,7 +11,6 @@
 
 /* Global styles */
 
-.theme-dark .workspace,
 .theme-dark .workspace .markdown-source-view,
 .theme-dark .workspace .markdown-preview-view,
 .markdown-source-view.mod-cm6 .cm-scroller,
@@ -21,7 +20,8 @@
 
 /* Main editor view */
 
-.theme-dark .workspace-split.mod-root .view-content {
+.theme-dark .workspace-split.mod-root .view-content,
+.kanban-plugin {
   background-color: #000;
 }
 
@@ -111,7 +111,7 @@
   padding: 3px 8px !important;
   margin: 0 0 3px !important;
   border: none;
-  font-size: 11px;
+  font-size: 14px;
   text-align: center;
   text-decoration: none;
   display: inline-block;

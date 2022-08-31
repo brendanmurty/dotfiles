@@ -8,4 +8,5 @@ plugins/*/data.json
 
 starred.json
 workspace
+workspace.json
 workspaces.json

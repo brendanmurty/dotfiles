@@ -5,5 +5,11 @@
   "baseFontSize": 18,
   "cssTheme": "",
   "theme": "obsidian",
-  "translucency": false
+  "translucency": false,
+  "interfaceFontFamily": "",
+  "textFontFamily": "MonoLisa",
+  "monospaceFontFamily": "MonoLisa",
+  "accentColor": "",
+  "showViewHeader": false,
+  "nativeMenus": false
 }

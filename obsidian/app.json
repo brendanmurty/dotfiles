@@ -9,5 +9,9 @@
   "defaultViewMode": "source",
   "mobilePullAction": "switcher:open",
   "legacyEditor": false,
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "useTab": false,
+  "tabSize": 2,
+  "livePreview": true,
+  "communityThemeSortOrder": "download"
 }

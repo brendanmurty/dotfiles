@@ -9,7 +9,7 @@
   "interfaceFontFamily": "",
   "textFontFamily": "MonoLisa",
   "monospaceFontFamily": "MonoLisa",
-  "accentColor": "",
+  "accentColor": "#23c5b0",
   "showViewHeader": false,
   "nativeMenus": false
 }

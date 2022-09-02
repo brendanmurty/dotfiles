@@ -137,7 +137,7 @@
 }
 
 .tag[href^="#family"],
-.cm-tag-tech {
+.cm-tag-family {
   background-color: #4d3ca6 !important;
 }
 
@@ -148,19 +148,16 @@ span[class*="cm-tag-work"],
 .tag[href^="#career"],
 .cm-tag-career,
 .tag[href^="#tech"],
-.cm-tag-tech,
-.tag[href^="#management"],
-.cm-tag-management,
-.tag[href^="#leadership"],
-.cm-tag-leadership,
-.tag[href^="#trace"],
-span[class^="cm-tag-trace"],
-span[class*="cm-tag-trace"] {
+.cm-tag-tech {
   background-color: darkred !important;
 }
 
 .tag[href^="#personal"],
-.cm-tag-personal {
+.tag[href^="#leisure"],
+.tag[href^="#tv"],
+.cm-tag-personal,
+.cm-tag-leisure,
+.cm-tag-tv {
   background-color: #23c5b0 !important;
   color: #000 !important;
 }
@@ -168,11 +165,13 @@ span[class*="cm-tag-trace"] {
 .tag[href^="#health"],
 .cm-tag-health {
   background-color: orange !important;
+  color: #000 !important;
 }
 
 .tag[href^="#money"],
 .cm-tag-money {
-  background-color: green !important;
+  background-color: lightgreen !important;
+  color: #000 !important;
 }
 
 /* Bolded content */

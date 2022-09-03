@@ -168,7 +168,11 @@ span[class*="cm-tag-device"],
 .tag[href^="#tv"],
 .cm-tag-personal,
 .cm-tag-leisure,
-.cm-tag-tv {
+.cm-tag-tv,
+.cm-tag-games,
+.tag[href^="#games"],
+span[class^="cm-tag-games"],
+span[class*="cm-tag-games"] {
   background-color: #23c5b0 !important;
   color: #000 !important;
 }

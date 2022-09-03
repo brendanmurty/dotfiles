@@ -145,11 +145,22 @@
 .cm-tag-work,
 span[class^="cm-tag-work"],
 span[class*="cm-tag-work"],
+.tag[href^="#code"],
+.cm-tag-code,
+span[class^="cm-tag-code"],
+span[class*="cm-tag-code"],
 .tag[href^="#career"],
 .cm-tag-career,
 .tag[href^="#tech"],
 .cm-tag-tech {
   background-color: darkred !important;
+}
+
+span[class^="cm-tag-device"],
+span[class*="cm-tag-device"],
+.tag[href^="#device"],
+.cm-tag-device {
+  background-color: purple !important;
 }
 
 .tag[href^="#personal"],
@@ -170,7 +181,13 @@ span[class*="cm-tag-work"],
 
 .tag[href^="#money"],
 .cm-tag-money {
-  background-color: lightgreen !important;
+  background-color: greenyellow !important;
+  color: #000 !important;
+}
+
+.tag[href^="#maybe"],
+.cm-tag-maybe {
+  background-color: yellow !important;
   color: #000 !important;
 }
 

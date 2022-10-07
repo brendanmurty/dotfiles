@@ -212,10 +212,16 @@ span[class*="cm-tag-games"] {
 
 .kanban-plugin__lane-header-wrapper {
   border-bottom: 0;
+  padding: 5px 7px;
 }
 
 .kanban-plugin__grow-wrap>textarea {
   height: auto;
+}
+
+.kanban-plugin__lane-wrapper {
+  /* Ensure there is enough space for the "Add a card" button on smaller screens */
+  max-height: 85%;
 }
 
 .kanban-plugin__lane-wrapper .kanban-plugin__lane {

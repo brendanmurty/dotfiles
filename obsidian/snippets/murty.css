@@ -18,6 +18,32 @@
   font-family: "MonoLisa", var(--font-default) !important;
 }
 
+/* Modals */
+
+body.is-mobile .modal {
+  top: 80px !important;
+  left: 4px !important;
+}
+
+body.is-mobile .modal-content {
+  padding: 15px !important;
+}
+
+body.is-mobile .modal-content> :first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+body.is-mobile .modal-close-button {
+  top: 10px !important;
+  right: 10px !important;
+  font-size: 32px;
+  height: 32px;
+  width: 32px;
+  line-height: 32px;
+  z-index: 1000;
+}
+
 /* Main editor view */
 
 .theme-dark .workspace-split.mod-root .view-content,

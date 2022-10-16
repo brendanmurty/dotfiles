@@ -225,17 +225,11 @@ span[class*="cm-tag-games"] {
 }
 
 .kanban-plugin__lane-wrapper .kanban-plugin__lane {
-  background-color: transparent;
-  border: 2px solid var(--background-secondary);
-  border-radius: 0;
+  border: 0 none;
 }
 
 .kanban-plugin__lane-title {
   color: #f7b83d;
-}
-
-.kanban-plugin__item-button-wrapper button.kanban-plugin__new-item-button {
-  color: var(--text-accent);
 }
 
 .kanban-plugin__item-button-wrapper {
@@ -243,8 +237,12 @@ span[class*="cm-tag-games"] {
   padding: 0;
 }
 
-.kanban-plugin__item-button-wrapper .kanban-plugin__new-item-button {
-  padding: 12px 10px;
+.kanban-plugin__item-button-wrapper button.kanban-plugin__new-item-button {
+  color: var(--text-accent);
+  padding: 20px;
+  cursor: pointer;
+  border: 0 none;
+  padding: 20px 0;
 }
 
 .kanban-plugin__item-button-wrapper .kanban-plugin__new-item-button:hover {
@@ -255,23 +253,16 @@ span[class*="cm-tag-games"] {
   display: none;
 }
 
-.kanban-plugin__item-wrapper .kanban-plugin__item {
-  border: 2px solid var(--background-secondary);
-  border-radius: 0;
-}
-
-.kanban-plugin__lane-wrapper .kanban-plugin__lane-header-wrapper {
-  border-bottom: 2px solid var(--background-secondary);
-}
-
+.kanban-plugin__item-wrapper .kanban-plugin__item,
+.kanban-plugin__lane-wrapper .kanban-plugin__lane-header-wrapper,
 .kanban-plugin__lane-wrapper .kanban-plugin__item-button-wrapper {
-  border-top: 2px solid var(--background-secondary);
+  border: 0 none;
 }
 
 .kanban-plugin__item-wrapper .kanban-plugin__item,
 .kanban-plugin__item-wrapper .kanban-plugin__item-content-wrapper,
 .kanban-plugin__item-wrapper .kanban-plugin__item-title-wrapper {
-  background: transparent;
+  background-color: #000;
 }
 
 .kanban-plugin__lane-items .kanban-plugin__item-wrapper {
@@ -284,4 +275,8 @@ span[class*="cm-tag-games"] {
 
 .theme-light .kanban-plugin {
   background-color: var(--background-primary-alt);
+}
+
+button:not(.clickable-icon) {
+  box-shadow: none;
 }

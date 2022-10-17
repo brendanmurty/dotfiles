@@ -257,7 +257,7 @@ span[class*="cm-tag-games"] {
   height: auto;
 }
 
-.kanban-plugin__lane-wrapper {
+body.is-mobile .kanban-plugin__lane-wrapper {
   /* Ensure there is enough space for the "Add a card" button on smaller screens */
   max-height: 90%;
 }

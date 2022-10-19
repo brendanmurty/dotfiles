@@ -60,14 +60,14 @@ body.is-mobile .modal.mod-settings .modal-close-button {
 
 .theme-dark .workspace-split.mod-root .view-content,
 .kanban-plugin {
-  background-color: #000;
+  background-color: var(--color-base-00);
 }
 
 /* Code folding and line number columns */
 
 .theme-dark .CodeMirror-gutter.CodeMirror-linenumbers,
 .theme-dark .CodeMirror-gutter.CodeMirror-foldgutter {
-  background-color: #000;
+  background-color: var(--color-base-00);
 }
 
 /* Code folding indicators */
@@ -300,19 +300,20 @@ body.is-mobile .kanban-plugin__lane-wrapper {
 .kanban-plugin__item-wrapper .kanban-plugin__item,
 .kanban-plugin__item-wrapper .kanban-plugin__item-content-wrapper,
 .kanban-plugin__item-wrapper .kanban-plugin__item-title-wrapper {
-  background-color: #000;
+  background-color: var(--background-primary);
 }
 
 .kanban-plugin__lane-items .kanban-plugin__item-wrapper {
   margin-top: 10px;
 }
 
-.theme-light .kanban-plugin__lane-wrapper {
-  background-color: var(--background-primary);
+.kanban-plugin__lane-wrapper,
+.kanban-plugin__lane {
+  background-color: var(--color-base-20);
 }
 
-.theme-light .kanban-plugin {
-  background-color: var(--background-primary-alt);
+.kanban-plugin {
+  background-color: var(--color-base-00);
 }
 
 button:not(.clickable-icon) {

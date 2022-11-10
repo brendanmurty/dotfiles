@@ -10,6 +10,5 @@
   "textFontFamily": "MonoLisa",
   "monospaceFontFamily": "MonoLisa",
   "accentColor": "#23c5b0",
-  "showViewHeader": false,
-  "nativeMenus": false
+  "showViewHeader": true
 }

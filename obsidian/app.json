@@ -13,5 +13,6 @@
   "useTab": false,
   "tabSize": 2,
   "livePreview": true,
-  "communityThemeSortOrder": "download"
+  "communityThemeSortOrder": "download",
+  "communityPluginSortOrder": "download"
 }

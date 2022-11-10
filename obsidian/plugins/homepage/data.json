@@ -1,6 +1,8 @@
 {
   "version": 2,
   "defaultNote": "Dashboard",
+  "useMoment": false,
+  "momentFormat": "YYYY-MM-DD",
   "workspace": "Home",
   "workspaceEnabled": false,
   "hasRibbonIcon": false,

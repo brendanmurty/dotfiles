@@ -15,5 +15,24 @@
   "prepend-archive-date": true,
   "hide-tags-in-title": true,
   "hide-date-in-title": true,
-  "lane-width": 320
+  "lane-width": 320,
+  "tag-colors": [],
+  "hide-card-count": true,
+  "date-colors": [
+    {
+      "isToday": false,
+      "distance": 30,
+      "unit": "days",
+      "direction": "before",
+      "backgroundColor": "rgba(221, 0, 0, 1)",
+      "color": "rgba(255, 255, 255, 1)"
+    },
+    {
+      "distance": 7,
+      "unit": "days",
+      "direction": "after",
+      "color": "rgba(255, 255, 255, 1)",
+      "backgroundColor": "rgba(46, 163, 44, 1)"
+    }
+  ]
 }

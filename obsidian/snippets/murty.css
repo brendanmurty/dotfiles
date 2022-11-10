@@ -37,7 +37,7 @@ body.is-mobile .modal-content {
   padding: 15px !important;
 }
 
-body.is-mobile .modal-content> :first-child {
+body.is-mobile .modal-content > :first-child {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }

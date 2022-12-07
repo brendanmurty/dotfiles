@@ -240,8 +240,8 @@ span[class*="cm-tag-games"] {
   color: #000 !important;
 }
 
-.tag[href^="#maybe"],
-.cm-tag-maybe {
+.tag[href^="#context"],
+.cm-tag-context {
   background-color: yellow !important;
   color: #000 !important;
 }

@@ -261,6 +261,14 @@ span[class*="cm-tag-games"] {
 
 /* Kanban boards */
 
+.kanban-plugin__lane-wrapper {
+  width: 420px !important;
+}
+
+body.is-mobile .kanban-plugin__lane-wrapper {
+  width: 340px !important;
+}
+
 .kanban-plugin__lane-header-wrapper {
   border-bottom: 0;
   padding: 3px 5px;

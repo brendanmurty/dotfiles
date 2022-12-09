@@ -261,12 +261,12 @@ span[class*="cm-tag-games"] {
 
 /* Kanban boards */
 
-.kanban-plugin__lane-wrapper {
-  width: 420px !important;
+body:not(.is-mobile) .kanban-plugin__lane-wrapper {
+  width: 450px !important;
 }
 
 body.is-mobile .kanban-plugin__lane-wrapper {
-  width: 340px !important;
+  width: 330px !important;
 }
 
 .kanban-plugin__lane-header-wrapper {

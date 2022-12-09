@@ -23,14 +23,14 @@
       "isToday": false,
       "distance": 30,
       "unit": "days",
-      "direction": "before",
+      "direction": "after",
       "backgroundColor": "rgba(221, 0, 0, 1)",
       "color": "rgba(255, 255, 255, 1)"
     },
     {
       "distance": 7,
       "unit": "days",
-      "direction": "after",
+      "direction": "before",
       "color": "rgba(255, 255, 255, 1)",
       "backgroundColor": "rgba(46, 163, 44, 1)"
     }

@@ -188,7 +188,9 @@ body.is-mobile .modal.mod-settings .modal-close-button {
 }
 
 .tag[href^="#family"],
-.cm-tag-family {
+.tag[href^="#home"],
+.cm-tag-family,
+.cm-tag-home {
   background-color: #4d3ca6 !important;
 }
 
@@ -229,7 +231,9 @@ span[class*="cm-tag-games"] {
 }
 
 .tag[href^="#health"],
-.cm-tag-health {
+.tag[href^="#cooking"],
+.cm-tag-health,
+.cm-tag-cooking {
   background-color: orange !important;
   color: #000 !important;
 }

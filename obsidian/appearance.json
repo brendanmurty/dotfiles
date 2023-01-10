@@ -1,6 +1,10 @@
 {
   "enabledCssSnippets": [
-    "murty"
+    "tags",
+    "murty",
+    "core",
+    "kanban",
+    "mobile"
   ],
   "baseFontSize": 18,
   "cssTheme": "",

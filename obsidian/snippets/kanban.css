@@ -1,0 +1,87 @@
+/* Kanban boards */
+
+body:not(.is-mobile) .kanban-plugin__lane-wrapper {
+  width: 450px !important;
+}
+
+body.is-mobile .kanban-plugin__lane-wrapper {
+  width: 330px !important;
+}
+
+.kanban-plugin__lane-header-wrapper {
+  border-bottom: 0;
+  padding: 3px 5px;
+}
+
+.kanban-plugin__grow-wrap>textarea {
+  height: auto;
+}
+
+.kanban-plugin__markdown-preview-view>div>* {
+  overflow-x: visible;
+}
+
+body .kanban-plugin__lane-items,
+body .kanban-plugin__item-button-wrapper {
+  background-color: transparent;
+  border: 0 none;
+}
+
+body.is-mobile .kanban-plugin__lane-wrapper {
+  /* Ensure there is enough space for the "Add a card" button on smaller screens */
+  max-height: 90%;
+}
+
+.kanban-plugin__lane-wrapper .kanban-plugin__lane {
+  border: 0 none;
+}
+
+.kanban-plugin__lane-title {
+  color: #f7b83d;
+}
+
+.kanban-plugin__item-button-wrapper {
+  border: 0 none;
+  padding: 0;
+}
+
+.kanban-plugin__item-button-wrapper button.kanban-plugin__new-item-button {
+  color: var(--text-accent);
+  padding: 20px;
+  cursor: pointer;
+  border: 0 none;
+  padding: 20px 0;
+}
+
+.kanban-plugin__item-button-wrapper .kanban-plugin__new-item-button:hover {
+  color: #fff;
+}
+
+.kanban-plugin__item-button-plus {
+  display: none;
+}
+
+.kanban-plugin__item-wrapper .kanban-plugin__item,
+.kanban-plugin__lane-wrapper .kanban-plugin__lane-header-wrapper,
+.kanban-plugin__lane-wrapper .kanban-plugin__item-button-wrapper {
+  border: 0 none;
+}
+
+.kanban-plugin__item-wrapper .kanban-plugin__item,
+.kanban-plugin__item-wrapper .kanban-plugin__item-content-wrapper,
+.kanban-plugin__item-wrapper .kanban-plugin__item-title-wrapper {
+  background-color: var(--background-primary);
+}
+
+.kanban-plugin__lane-items .kanban-plugin__item-wrapper {
+  margin-top: 10px;
+}
+
+.kanban-plugin__lane-wrapper,
+.kanban-plugin__lane {
+  background-color: var(--color-base-20);
+}
+
+.kanban-plugin {
+  background-color: var(--color-base-00);
+}

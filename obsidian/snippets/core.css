@@ -1,0 +1,120 @@
+/* Global styles */
+
+.workspace .markdown-source-view,
+.workspace .markdown-preview-view,
+.markdown-source-view.mod-cm6 .cm-scroller,
+.kanban-plugin * {
+  font-family: "MonoLisa", var(--font-default) !important;
+}
+
+body.theme-dark {
+  --color-base-00: #000;
+}
+
+body.theme-light {
+  --color-base-00: #fff;
+}
+
+/* Main editor view */
+
+.workspace-split.mod-root .view-content,
+.kanban-plugin {
+  background-color: var(--color-base-00);
+}
+
+/* Code folding and line number columns */
+
+.CodeMirror-gutter.CodeMirror-linenumbers,
+.CodeMirror-gutter.CodeMirror-foldgutter {
+  background-color: var(--color-base-00);
+}
+
+/* Code folding indicators */
+
+.CodeMirror-foldgutter-open,
+.CodeMirror-foldgutter-folded {
+  cursor: pointer;
+  line-height: 2;
+}
+
+.CodeMirror-foldgutter-open::after,
+.CodeMirror-foldgutter-folded::after {
+  color: #3fb4c5;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+/* Inline code in the main editor view */
+
+.cm-s-obsidian span.cm-inline-code,
+.cm-s-obsidian .HyperMD-codeblock {
+  color: #23c5b0;
+}
+
+/* Formatting indicator characters */
+
+.cm-s-obsidian .cm-formatting {
+  color: #c78feb;
+  font-weight: 400;
+}
+
+.cm-formatting .cm-hashtag,
+.cm-formatting .list-bullet {
+  color: transparent;
+}
+
+/* Headings */
+
+.cm-header-1 {
+  font-size: 1.2em;
+}
+
+.cm-header-2 {
+  font-size: 1.1em;
+}
+
+.cm-header-3 {
+  font-size: 1.0em;
+}
+
+.cm-header-4 {
+  font-size: 1.0em;
+}
+
+.cm-header-5 {
+  font-size: 1.0em;
+}
+
+/* Internal links to other notes and external links */
+
+.cm-s-obsidian .internal-link,
+.cm-s-obsidian .cm-hmd-internal-link,
+.kanban-plugin__item-markdown .internal-link,
+.markdown-preview-view .internal-link,
+.markdown-preview-view .external-link,
+.cm-s-obsidian .cm-link {
+  color: #23c5b0;
+  text-decoration: none;
+}
+
+.external-link {
+  background: none;
+  padding-right: 0;
+}
+
+/* Bolded content */
+
+.cm-s-obsidian .cm-strong {
+  color: #3fb4c5;
+}
+
+/* URL targets */
+
+.cm-s-obsidian .cm-url {
+  color: #a7da1e;
+  text-decoration: none;
+}
+
+button:not(.clickable-icon) {
+  box-shadow: none;
+}

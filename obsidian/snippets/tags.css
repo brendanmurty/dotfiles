@@ -1,0 +1,101 @@
+/* Tags */
+
+.kanban-plugin__item-tags .kanban-plugin__item-tag,
+.tag,
+.cm-hashtag {
+  background-color: #0E85CA !important;
+  color: white !important;
+  text-decoration: none !important;
+  padding: 3px 8px !important;
+  margin: 0 0 3px !important;
+  border: none;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 0 !important;
+}
+
+.kanban-plugin__item-tags:not(:empty) {
+  padding-top: 0;
+  margin-top: 10px;
+}
+
+.kanban-plugin__item-tags .kanban-plugin__item-tag {
+  margin: 0 10px 10px 0 !important;
+}
+
+.cm-hashtag-begin {
+  padding-right: 0 !important;
+  margin-right: 0 !important;
+}
+
+.cm-hashtag-end {
+  padding-left: 0 !important;
+}
+
+.tag[href^="#family"],
+.tag[href^="#home"],
+.cm-tag-family,
+.cm-tag-home {
+  background-color: #4d3ca6 !important;
+}
+
+.tag[href^="#work"],
+.cm-tag-work,
+span[class^="cm-tag-work"],
+span[class*="cm-tag-work"],
+.tag[href^="#code"],
+.cm-tag-code,
+span[class^="cm-tag-code"],
+span[class*="cm-tag-code"],
+.tag[href^="#career"],
+.cm-tag-career,
+.tag[href^="#tech"],
+.cm-tag-tech {
+  background-color: darkred !important;
+}
+
+span[class^="cm-tag-device"],
+span[class*="cm-tag-device"],
+.tag[href^="#device"],
+.cm-tag-device {
+  background-color: purple !important;
+}
+
+.tag[href^="#personal"],
+.tag[href^="#leisure"],
+.tag[href^="#tv"],
+.cm-tag-personal,
+.cm-tag-leisure,
+.cm-tag-tv,
+.cm-tag-games,
+.tag[href^="#games"],
+span[class^="cm-tag-games"],
+span[class*="cm-tag-games"] {
+  background-color: #23c5b0 !important;
+  color: #000 !important;
+}
+
+.tag[href^="#health"],
+.tag[href^="#cooking"],
+.cm-tag-health,
+.cm-tag-cooking,
+.tag[href^="#health"],
+span[class^="cm-tag-health"],
+span[class*="cm-tag-health"] {
+  background-color: darkorange !important;
+  color: #000 !important;
+}
+
+.tag[href^="#money"],
+.cm-tag-money {
+  background-color: greenyellow !important;
+  color: #000 !important;
+}
+
+.tag[href^="#context"],
+.cm-tag-context {
+  background-color: yellow !important;
+  color: #000 !important;
+}

@@ -34,5 +34,6 @@
       "color": "rgba(255, 255, 255, 1)",
       "backgroundColor": "rgba(46, 163, 44, 1)"
     }
-  ]
+  ],
+  "max-archive-size": 50
 }

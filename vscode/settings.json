@@ -1,120 +1,120 @@
 {
-    "workbench.startupEditor": "newUntitledFile",
-    "editor.fontFamily": "MonoLisa",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 20,
-    "files.eol": "\n",
-    "editor.autoClosingBrackets": "never",
-    "editor.autoClosingQuotes": "never",
-    "editor.defaultFormatter": "vscode.markdown-language-features",
-    "editor.folding": false,
-    "editor.quickSuggestions": {
-        "other": true,
-        "comments": false,
-        "strings": false
-    },
-    "editor.quickSuggestionsDelay": 300,
-    "debug.console.fontSize": 18,
-    "markdown.preview.fontSize": 18,
-    "terminal.integrated.fontSize": 18,
-    "markdown.preview.fontFamily": "MonoLisa",
-    "editor.tokenColorCustomizations": {
-        "comments": "#666",
-        "textMateRules": [
-            {
-                "scope": [
-                    "comment"
-                ],
-                "settings": {
-                    "fontStyle": ""
-                }
-            }
-        ]
-    },
-    "editor.minimap.enabled": false,
-    "git.enableSmartCommit": true,
-    "git.confirmSync": false,
-    "git.autofetch": true,
-    "git.untrackedChanges": "separate",
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.colorCustomizations": {
-        "activityBar.activeBorder": "#23c5b0",
-        "activityBar.background": "#000",
-        "activityBar.foreground": "#23c5b0",
-        "activityBar.inactiveForeground": "#666",
-        "activityBarBadge.background": "#23c5b0",
-        "activityBarBadge.foreground": "#000",
-        "contrastBorder": "#222",
-        "editor.background": "#000",
-        "sideBar.background": "#000",
-        "sideBar.foreground": "#FFF",
-        "sideBarSectionHeader.background": "#000",
-        "sideBarSectionHeader.foreground": "#23c5b0",
-        "statusBar.background" : "#000",
-        "statusBar.noFolderBackground" : "#000",
-        "statusBar.debuggingBackground": "#000",
-        "tab.activeBackground": "#000",
-        "tab.activeBorderTop": "#23c5b0",
-        "tab.inactiveBackground": "#111",
-        "window.activeBorder": "#000",
-        "window.inactiveBorder": "#000",
-        "editorLineNumber.foreground": "#444444",
-        "editorLineNumber.activeForeground": "#888888"
-    },
-    "workbench.list.openMode": "doubleClick",
-    "terminal.integrated.profiles.windows": {
-        "Git Bash": {
-            "path": "C:\\Program Files\\Git\\bin\\bash.exe"
+  "editor.fontFamily": "MonoLisa",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 20,
+  "files.eol": "\n",
+  "editor.autoClosingBrackets": "never",
+  "editor.autoClosingQuotes": "never",
+  "editor.defaultFormatter": "vscode.markdown-language-features",
+  "editor.folding": false,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "editor.quickSuggestionsDelay": 300,
+  "debug.console.fontSize": 18,
+  "markdown.preview.fontSize": 18,
+  "terminal.integrated.fontSize": 18,
+  "markdown.preview.fontFamily": "MonoLisa",
+  "editor.tokenColorCustomizations": {
+    "comments": "#666",
+    "textMateRules": [
+      {
+        "scope": [
+          "comment"
+        ],
+        "settings": {
+          "fontStyle": ""
         }
-    },
-    "terminal.integrated.defaultProfile.windows": "Git Bash",
-    "javascript.validate.enable": false,
-    "css.validate": false,
-    "workbench.colorTheme": "Copilot Theme",
-    "workbench.editor.untitled.hint": "hidden",
-    "telemetry.telemetryLevel": "off",
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "atomKeymap.promptV3Features": false,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.formatOnPaste": true,
-    "clock.format": "h:MM",
-    "clock.alignment": "Right",
-    "security.workspace.trust.untrustedFiles": "open",
-    "indentRainbow.colors": [
-        "rgba(255,255,64,0.04)",
-        "rgba(127,255,127,0.04)",
-        "rgba(255,127,255,0.04)",
-        "rgba(79,236,236,0.04)"
-    ],
-    "indentRainbow.errorColor": "rgba(128,32,32,0.5)",
-    "indentRainbow.tabmixColor": "rgba(128,32,96,0.5)",
-    "editor.wordWrap": "on",
-    "extensions.ignoreRecommendations": true,
-    "editor.tabSize": 2,
-    "go.toolsManagement.autoUpdate": true,
-    "editor.detectIndentation": false,
-    "terminal.integrated.gpuAcceleration": "off",
-    "php.validate.executablePath": "C:\\tools\\php81\\php.exe",
-    "[php]": {
-      "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-    },
-    "[javascript]": {
-      "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "[typescript]": {
-      "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "[css]": {
-      "editor.defaultFormatter": "vscode.css-language-features"
-    },
-    "editor.inlineSuggest.enabled": true,
-    "github.copilot.enable": {
-      "*": true,
-      "yaml": false,
-      "plaintext": false,
-      "markdown": false
-    },
-    "window.commandCenter": true
+      }
+    ]
+  },
+  "editor.minimap.enabled": false,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.untrackedChanges": "separate",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.colorCustomizations": {
+    "activityBar.activeBorder": "#23c5b0",
+    "activityBar.background": "#000",
+    "activityBar.foreground": "#23c5b0",
+    "activityBar.inactiveForeground": "#666",
+    "activityBarBadge.background": "#23c5b0",
+    "activityBarBadge.foreground": "#000",
+    "contrastBorder": "#222",
+    "editor.background": "#000",
+    "sideBar.background": "#000",
+    "sideBar.foreground": "#FFF",
+    "sideBarSectionHeader.background": "#000",
+    "sideBarSectionHeader.foreground": "#23c5b0",
+    "statusBar.background": "#000",
+    "statusBar.noFolderBackground": "#000",
+    "statusBar.debuggingBackground": "#000",
+    "tab.activeBackground": "#000",
+    "tab.activeBorderTop": "#23c5b0",
+    "tab.inactiveBackground": "#111",
+    "window.activeBorder": "#000",
+    "window.inactiveBorder": "#000",
+    "editorLineNumber.foreground": "#444444",
+    "editorLineNumber.activeForeground": "#888888"
+  },
+  "workbench.list.openMode": "doubleClick",
+  "terminal.integrated.profiles.windows": {
+    "Git Bash": {
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "javascript.validate.enable": false,
+  "css.validate": false,
+  "workbench.editor.untitled.hint": "hidden",
+  "telemetry.telemetryLevel": "off",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "atomKeymap.promptV3Features": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "clock.format": "h:MM",
+  "clock.alignment": "Right",
+  "security.workspace.trust.untrustedFiles": "open",
+  "indentRainbow.colors": [
+    "rgba(255,255,64,0.04)",
+    "rgba(127,255,127,0.04)",
+    "rgba(255,127,255,0.04)",
+    "rgba(79,236,236,0.04)"
+  ],
+  "indentRainbow.errorColor": "rgba(128,32,32,0.5)",
+  "indentRainbow.tabmixColor": "rgba(128,32,96,0.5)",
+  "editor.wordWrap": "on",
+  "extensions.ignoreRecommendations": true,
+  "editor.tabSize": 2,
+  "go.toolsManagement.autoUpdate": true,
+  "editor.detectIndentation": false,
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "editor.inlineSuggest.enabled": true,
+  "window.commandCenter": true,
+  "terminal.integrated.gpuAcceleration": "off",
+  "workbench.colorTheme": "Copilot Theme",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "workbench.startupEditor": "none",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }

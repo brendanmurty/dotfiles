@@ -1,7 +1,6 @@
 code --install-extension ms-vscode.atom-keybindings
 code --install-extension akamud.vscode-theme-onedark
 code --install-extension angelo-breuer.clock
-code --install-extension BenjaminBenais.copilot-theme
 code --install-extension denoland.vscode-deno
 code --install-extension ms-vscode-remote.remote-containers
 code --install-extension rafaelmaiolla.diff

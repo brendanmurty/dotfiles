@@ -108,7 +108,7 @@
   "editor.inlineSuggest.enabled": true,
   "window.commandCenter": true,
   "terminal.integrated.gpuAcceleration": "off",
-  "workbench.colorTheme": "Copilot Theme",
+  "workbench.colorTheme": "Atom One Dark",
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },

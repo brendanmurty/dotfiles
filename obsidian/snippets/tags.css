@@ -50,25 +50,31 @@ span[class*="cm-tag-work"],
 span[class^="cm-tag-code"],
 span[class*="cm-tag-code"],
 .tag[href^="#career"],
-.cm-tag-career,
-.tag[href^="#tech"],
-.cm-tag-tech {
+.cm-tag-career {
   background-color: darkred !important;
 }
 
 span[class^="cm-tag-device"],
 span[class*="cm-tag-device"],
 .tag[href^="#device"],
-.cm-tag-device {
+.cm-tag-device,
+.tag[href^="#tech"],
+.cm-tag-tech,
+.tag[href^="#hardware"],
+.cm-tag-hardware {
   background-color: purple !important;
 }
 
 .tag[href^="#personal"],
 .tag[href^="#leisure"],
 .tag[href^="#tv"],
+.tag[href^="#movies"],
+.tag[href^="#video"],
 .cm-tag-personal,
 .cm-tag-leisure,
 .cm-tag-tv,
+.cm-tag-movies,
+.cm-tag-video,
 .cm-tag-games,
 .tag[href^="#games"],
 span[class^="cm-tag-games"],
@@ -84,8 +90,8 @@ span[class*="cm-tag-games"] {
 .tag[href^="#health"],
 span[class^="cm-tag-health"],
 span[class*="cm-tag-health"] {
-  background-color: darkorange !important;
-  color: #000 !important;
+  background-color: #e46300 !important;
+  color: #fff !important;
 }
 
 .tag[href^="#money"],
@@ -98,4 +104,16 @@ span[class*="cm-tag-health"] {
 .cm-tag-context {
   background-color: yellow !important;
   color: #000 !important;
+}
+
+.tag[href^="#maybe"],
+.cm-tag-maybe {
+  background-color: palevioletred !important;
+  color: #000 !important;
+}
+
+.tag[href^="#obsidian"],
+.cm-tag-obsidian {
+  background-color: #8b6cef !important;
+  color: #fff !important;
 }

@@ -66,21 +66,25 @@ span[class*="cm-tag-device"],
 }
 
 .tag[href^="#personal"],
-.tag[href^="#leisure"],
-.tag[href^="#tv"],
-.tag[href^="#movies"],
-.tag[href^="#video"],
 .cm-tag-personal,
-.cm-tag-leisure,
-.cm-tag-tv,
-.cm-tag-movies,
-.cm-tag-video,
 .cm-tag-games,
 .tag[href^="#games"],
 span[class^="cm-tag-games"],
 span[class*="cm-tag-games"] {
   background-color: #23c5b0 !important;
   color: #000 !important;
+}
+
+.tag[href^="#leisure"],
+.tag[href^="#tv"],
+.tag[href^="#movies"],
+.tag[href^="#video"],
+.cm-tag-leisure,
+.cm-tag-tv,
+.cm-tag-movies,
+.cm-tag-video {
+  background-color: #e6287f !important;
+  color: #fff !important;
 }
 
 .tag[href^="#health"],
@@ -108,7 +112,7 @@ span[class*="cm-tag-health"] {
 
 .tag[href^="#maybe"],
 .cm-tag-maybe {
-  background-color: palevioletred !important;
+  background-color: #a16a70 !important;
   color: #000 !important;
 }
 

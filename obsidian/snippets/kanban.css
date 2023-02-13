@@ -73,6 +73,11 @@ body.is-mobile .kanban-plugin__lane-wrapper {
   background-color: var(--background-primary);
 }
 
+/* Increase Kanban card spacing on mobile to make it easier to move cards around */
+body.is-mobile .kanban-plugin__item-wrapper .kanban-plugin__item-title-wrapper {
+  padding: 15px;
+}
+
 .kanban-plugin__lane-items .kanban-plugin__item-wrapper {
   margin-top: 10px;
 }

@@ -21,3 +21,4 @@ code --install-extension wayou.vscode-todo-highlight
 code --install-extension dunstontc.vscode-docker-syntax
 code --install-extension ms-vscode-remote.remote-wsl
 code --install-extension EditorConfig.EditorConfig
+code --install-extension dbaeumer.vscode-eslint

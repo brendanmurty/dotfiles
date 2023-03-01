@@ -23,3 +23,4 @@ code --install-extension ms-vscode-remote.remote-wsl
 code --install-extension EditorConfig.EditorConfig
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension esbenp.prettier-vscode
+code --install-extension BenjaminBenais.copilot-theme

@@ -102,8 +102,7 @@
       "comments": "off",
       "strings": "off",
       "other": "off"
-    },
-    "editor.defaultFormatter": "vscode.markdown-language-features"
+    }
   },
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"

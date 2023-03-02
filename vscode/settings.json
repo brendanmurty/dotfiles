@@ -45,6 +45,12 @@
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.untrackedChanges": "separate",
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false
+  },
   "go.toolsManagement.autoUpdate": true,
   "indentRainbow.colors": [
     "rgba(255,255,64,0.04)",

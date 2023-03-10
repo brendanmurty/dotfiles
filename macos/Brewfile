@@ -1,9 +1,3 @@
-brew "gcc"
+brew "node"
 
-brew "git"
-brew "zsh-completions"
-
-brew "nvm"
-brew "composer"
-
-cask "atom"
+cask "visual-studio-code"

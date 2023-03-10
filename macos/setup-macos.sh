@@ -8,5 +8,6 @@ brew bundle
 nvm install node
 nvm use node
 
-# Setup custom Zsh terminal prompt
-npm install -g spaceship-prompt
+# Setup a simple customised Zsh terminal prompt
+cp ~/.zshrc ~/.zshrc.bak
+cp .zshrc ~/.zshrc

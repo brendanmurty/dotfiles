@@ -5,5 +5,5 @@
 brew bundle
 
 # Setup a simple customised Zsh terminal prompt
-cp ~/.zshrc ~/.zshrc.bak
+cp ~/.zshrc ~/.zshrc.before-dotfiles-base.bak
 cp .zshrc ~/.zshrc

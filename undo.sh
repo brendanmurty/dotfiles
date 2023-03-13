@@ -6,6 +6,7 @@ mv ~/.bashrc.before-dotfiles-base.bak ~/.bashrc
 mv ~/.gitconfig.before-dotfiles-base.bak ~/.gitconfig
 mv ~/.gitignore.before-dotfiles-base.bak ~/.gitignore
 mv ~/.vimrc.before-dotfiles-base.bak ~/.vimrc
+mv ~/.zshrc.before-dotfiles-base.bak ~/.zshrc
 
 # Apply the changes to all terminal sessions
 . ~/.bash_aliases

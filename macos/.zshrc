@@ -11,10 +11,12 @@ autoload -Uz compinit && compinit
 zstyle ':vcs_info:git:*' formats '(%b)'
 
 # Set up the prompt string
+autoload -U colors && colors
 setopt PROMPT_SUBST
-PROMPT='${PWD/#$HOME/~} ${vcs_info_msg_0_}
+PROMPT='%{$fg[cyan]%}${PWD/#$HOME/~}%{$reset_color%}%  %{$fg[yellow]%}${vcs_info_msg_0_}%{$reset_color%}%
 $ '
 
 # Sample Zsh prompt output:
-#   ~/dotfiles (branch: main)
-#   $ 
+#   ~/dotfiles (main)
+#   $
+ 

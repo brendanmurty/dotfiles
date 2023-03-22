@@ -2,6 +2,11 @@
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
+# Load Git completion
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+fpath=(~/.zsh $fpath)
+autoload -Uz compinit && compinit
+
 # Format the vcs_info_msg_0_ variable with Git branch information
 zstyle ':vcs_info:git:*' formats '(%b)'
 

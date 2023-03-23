@@ -1,6 +1,7 @@
 {
   "clock.alignment": "Right",
-  "clock.format": "h:MM",
+  "clock.format": "h:MMtt",
+  "clock.iconName": "none",
   "css.validate": false,
   "debug.console.fontSize": 18,
   "editor.autoClosingBrackets": "never",

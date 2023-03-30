@@ -1,10 +1,10 @@
-/* Global styles */
+/* Theme colours */
 
-.workspace .markdown-source-view,
-.workspace .markdown-preview-view,
-.markdown-source-view.mod-cm6 .cm-scroller,
-.kanban-plugin * {
-  font-family: "MonoLisa", var(--font-default) !important;
+body {
+  --link-external-color: #23c5b0;
+  --highlight-primary: #23c5b0;
+  --highlight-secondary: #c78feb;
+  --highlight-tertiary: #a7da1e;
 }
 
 body.theme-dark {
@@ -21,6 +21,15 @@ body.theme-light {
   --tab-container-background: #fff;
   --titlebar-background: #f0f0f0;
   --background-secondary: #f0f0f0;
+}
+
+/* Fonts */
+
+.workspace .markdown-source-view,
+.workspace .markdown-preview-view,
+.markdown-source-view.mod-cm6 .cm-scroller,
+.kanban-plugin * {
+  font-family: "MonoLisa", var(--font-default) !important;
 }
 
 /* Main editor view */
@@ -56,7 +65,7 @@ body.theme-light {
 
 .cm-s-obsidian span.cm-inline-code,
 .cm-s-obsidian .HyperMD-codeblock {
-  color: #23c5b0;
+  color: var(--highlight-primary);
 }
 
 /* Formatting indicator characters */
@@ -73,24 +82,33 @@ body.theme-light {
 
 /* Headings */
 
+.inline-title {
+  color: var(--highlight-primary);
+}
+
 .cm-header-1 {
   font-size: 1.2em;
+  color: var(--highlight-secondary);
 }
 
 .cm-header-2 {
   font-size: 1.1em;
+  color: var(--highlight-secondary);
 }
 
 .cm-header-3 {
   font-size: 1.0em;
+  color: var(--highlight-secondary);
 }
 
 .cm-header-4 {
   font-size: 1.0em;
+  color: var(--highlight-secondary);
 }
 
 .cm-header-5 {
   font-size: 1.0em;
+  color: var(--highlight-secondary);
 }
 
 /* Internal links to other notes and external links */
@@ -101,7 +119,7 @@ body.theme-light {
 .markdown-preview-view .internal-link,
 .markdown-preview-view .external-link,
 .cm-s-obsidian .cm-link {
-  color: #23c5b0;
+  color: var(--highlight-primary);
   text-decoration: none;
 }
 
@@ -113,13 +131,13 @@ body.theme-light {
 /* Bolded content */
 
 .cm-s-obsidian .cm-strong {
-  color: #3fb4c5;
+  color: var(--highlight-tertiary);
 }
 
 /* URL targets */
 
 .cm-s-obsidian .cm-url {
-  color: #a7da1e;
+  color: var(--highlight-secondary);
   text-decoration: none;
 }
 

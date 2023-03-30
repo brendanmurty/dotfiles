@@ -9,10 +9,18 @@
 
 body.theme-dark {
   --color-base-00: #000;
+  --ribbon-background: #111;
+  --tab-container-background: #000;
+  --titlebar-background: #111;
+  --background-secondary: #111;
 }
 
 body.theme-light {
   --color-base-00: #fff;
+  --ribbon-background: #f0f0f0;
+  --tab-container-background: #fff;
+  --titlebar-background: #f0f0f0;
+  --background-secondary: #f0f0f0;
 }
 
 /* Main editor view */

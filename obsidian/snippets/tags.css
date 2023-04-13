@@ -57,12 +57,17 @@ span[class*="cm-tag-code"],
 span[class^="cm-tag-device"],
 span[class*="cm-tag-device"],
 .tag[href^="#device"],
-.cm-tag-device,
+.cm-tag-device {
+  background-color: white !important;
+  color: purple !important;
+}
+
 .tag[href^="#tech"],
 .cm-tag-tech,
 .tag[href^="#hardware"],
 .cm-tag-hardware {
   background-color: purple !important;
+  color: white !important;
 }
 
 .tag[href^="#personal"],
@@ -106,14 +111,16 @@ span[class*="cm-tag-health"] {
 
 .tag[href^="#context"],
 .cm-tag-context {
-  background-color: yellow !important;
-  color: #000 !important;
+  background-color: white !important;
+  color: navy !important;
 }
 
 .tag[href^="#maybe"],
-.cm-tag-maybe {
-  background-color: #a16a70 !important;
-  color: #000 !important;
+.cm-tag-maybe,
+.tag[href^="#waiting"],
+.cm-tag-waiting {
+  background-color: #fff !important;
+  color: red !important;
 }
 
 .tag[href^="#obsidian"],

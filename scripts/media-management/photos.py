@@ -11,8 +11,7 @@
 # 
 # Assumes that the source directory doesn't have any sub-directories.
 # 
-# The source and destination directories are defined in "photos.env" and are assumed
-# to be a subdirectory path of the current user's profile directory.
+# The source and destination directories are defined in "photos.env".
 # 
 # Setup:
 #   1. Configure the alias command:
@@ -62,9 +61,9 @@ script_file_path = os.path.dirname(__file__)
 config = dotenv_values("%s\\photos.env" % script_file_path)
 
 # Where the media files are and where they're going
-sourceDir = "%s%s" % (os.environ['USERPROFILE'], config['PHOTOMGMT_SOURCE_DIR'])
-destDir = "%s%s" % (os.environ['USERPROFILE'], config['PHOTOMGMT_DEST_DIR'])
-errorDir = "%s%s" % (os.environ['USERPROFILE'], config['PHOTOMGMT_ERROR_DIR'])
+sourceDir = "%s" % (config['PHOTOMGMT_SOURCE_DIR'])
+destDir = "%s" % (config['PHOTOMGMT_DEST_DIR'])
+errorDir = "%s" % (config['PHOTOMGMT_ERROR_DIR'])
 
 # Create the required directories
 if not os.path.exists(destDir):

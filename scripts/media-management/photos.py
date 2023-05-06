@@ -71,7 +71,7 @@ if not os.path.exists(destDir):
 if not os.path.exists(errorDir):
     os.makedirs(errorDir)
 
-# Set the filename formate for the moved files
+# Set the filename format for the moved files
 fmt = "%Y-%m-%d %H-%M-%S"
 
 # Will store details of any problem files
@@ -112,8 +112,6 @@ for photo in photos:
     original = "%s\\%s" % (sourceDir, photo)
     fileExtension = os.path.splitext(original)[1]
     suffix = 'a'
-
-    # print("Processing file: %s" % original)
 
     try:
         pDate = photoDate(original)

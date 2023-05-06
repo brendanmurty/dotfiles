@@ -15,7 +15,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 #  - One per line in the text file
 #  - Packages listed at https://chocolatey.org/packages
 if (!(Test-Path .\windows-programs.txt)) {
-  Write-Warning "Package text file doesn't exist, please create 'windows-programs-example.txt' based on 'windows-programs-example.txt'"
+  Write-Warning "Package text file doesn't exist, please create 'windows-programs.txt' based on 'windows-programs-example.txt'"
 } else {
   foreach ($line in Get-Content .\windows-programs.txt) {
     if ($line -match $regex) {

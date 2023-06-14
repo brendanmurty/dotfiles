@@ -5,6 +5,7 @@ body {
   --highlight-primary: #23c5b0;
   --highlight-secondary: #c78feb;
   --highlight-tertiary: #a7da1e;
+  --highlight-quaternary: #f7b83d;
   --checkbox-color: #666;
   --checklist-done-color: #666;
   --checklist-done-decoration: none;
@@ -146,10 +147,4 @@ body.theme-light {
 
 button:not(.clickable-icon) {
   box-shadow: none;
-}
-
-/* Right sidebar toggle button */
-
-.sidebar-toggle-button.mod-right {
-  display: none;
 }

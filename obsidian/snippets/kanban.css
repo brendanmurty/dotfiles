@@ -1,7 +1,7 @@
 /* Kanban boards */
 
 body:not(.is-mobile) .kanban-plugin__lane-wrapper {
-  width: 450px !important;
+  width: 550px !important;
 }
 
 body.is-mobile .kanban-plugin__lane-wrapper {
@@ -36,8 +36,31 @@ body.is-mobile .kanban-plugin__lane-wrapper {
   border: 0 none;
 }
 
-.kanban-plugin__lane-title {
-  color: #f7b83d;
+/* Make column headers larger */
+.kanban-plugin__lane-title-text,
+.kanban-plugin__lane-title-text .kanban-plugin__markdown-preview-view {
+  font-size: 18px;
+}
+
+.kanban-plugin__lane-grip>svg {
+  height: 18px;
+}
+
+/* Set column header colours based on their horizontal order */
+.kanban-plugin__lane-wrapper:nth-child(2) .kanban-plugin__lane-title {
+  color: var(--highlight-primary);
+}
+
+.kanban-plugin__lane-wrapper:nth-child(3) .kanban-plugin__lane-title {
+  color: var(--highlight-secondary);
+}
+
+.kanban-plugin__lane-wrapper:nth-child(4) .kanban-plugin__lane-title {
+  color: var(--highlight-tertiary);
+}
+
+.kanban-plugin__lane-wrapper:nth-child(5) .kanban-plugin__lane-title {
+  color: var(--highlight-quaternary);
 }
 
 .kanban-plugin__item-button-wrapper {
@@ -84,7 +107,7 @@ body.is-mobile .kanban-plugin__item-wrapper .kanban-plugin__item-title-wrapper {
 
 .kanban-plugin__lane-wrapper,
 .kanban-plugin__lane {
-  background-color: var(--color-base-20);
+  background-color: var(--color-base-10);
 }
 
 .kanban-plugin {

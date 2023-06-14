@@ -1,4 +1,4 @@
-/* Modals */
+/* Tweaks for mobile devices */
 
 body.is-mobile .modal {
   top: 55px !important;
@@ -10,9 +10,9 @@ body.is-mobile .modal-content {
   padding: 15px !important;
 }
 
-body.is-mobile .modal-content> :first-child {
+body.is-mobile .modal-title {
   margin-top: 0 !important;
-  padding-top: 0 !important;
+  padding-top: 15px !important;
 }
 
 body.is-mobile .modal-close-button {
@@ -24,8 +24,6 @@ body.is-mobile .modal-close-button {
   line-height: 32px;
   z-index: 1000;
 }
-
-/* Settings modal */
 
 body.is-mobile .modal.mod-settings {
   top: 0 !important;

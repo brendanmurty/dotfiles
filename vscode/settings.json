@@ -3,13 +3,13 @@
   "clock.format": "h:MMtt",
   "clock.iconName": "none",
   "css.validate": false,
-  "debug.console.fontSize": 18,
+  "debug.console.fontSize": 20,
   "editor.autoClosingBrackets": "never",
   "editor.autoClosingQuotes": "never",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.detectIndentation": false,
   "editor.folding": false,
-  "editor.fontFamily": "MonoLisa",
+  "editor.fontFamily": "IntelOne Mono",
   "editor.fontLigatures": true,
   "editor.fontSize": 20,
   "editor.formatOnPaste": true,
@@ -28,9 +28,7 @@
     "comments": "#666",
     "textMateRules": [
       {
-        "scope": [
-          "comment"
-        ],
+        "scope": ["comment"],
         "settings": {
           "fontStyle": ""
         }
@@ -48,9 +46,10 @@
   "git.untrackedChanges": "separate",
   "github.copilot.enable": {
     "*": true,
-    "yaml": false,
     "plaintext": false,
-    "markdown": false
+    "markdown": false,
+    "scminput": false,
+    "yaml": false
   },
   "go.toolsManagement.autoUpdate": true,
   "indentRainbow.colors": [
@@ -63,13 +62,13 @@
   "indentRainbow.tabmixColor": "rgba(128,32,96,0.5)",
   "javascript.validate.enable": false,
   "markdown.preview.fontFamily": "MonoLisa",
-  "markdown.preview.fontSize": 18,
+  "markdown.preview.fontSize": 20,
   "prettier.requireConfig": true,
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "off",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.enableMultiLinePasteWarning": false,
-  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.fontSize": 20,
   "terminal.integrated.gpuAcceleration": "off",
   "terminal.integrated.profiles.windows": {
     "Git Bash": {
@@ -114,7 +113,7 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
     "diffEditor.ignoreTrimWhitespace": false,
@@ -129,5 +128,7 @@
   },
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-  }
+  },
+  "terminal.integrated.tabs.location": "left",
+  "git.openRepositoryInParentFolders": "never"
 }

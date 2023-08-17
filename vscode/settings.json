@@ -139,5 +139,8 @@
   "terminal.integrated.fontFamily": "SF Mono, monospace",
   "terminal.integrated.scrollback": 2500,
   "terminal.integrated.tabs.defaultColor": "terminal.ansiCyan",
-  "terminal.integrated.tabStopWidth": 4
+  "terminal.integrated.tabStopWidth": 4,
+  "git.inputValidation": "off",
+  "git.inputValidationSubjectLength": null,
+  "git.inputValidationLength": 150
 }

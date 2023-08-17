@@ -45,11 +45,13 @@
   "git.enableSmartCommit": true,
   "git.untrackedChanges": "separate",
   "github.copilot.enable": {
-    "*": true,
+    "*": false,
     "plaintext": false,
     "markdown": false,
     "scminput": false,
-    "yaml": false
+    "yaml": false,
+    "dockerfile": false,
+    "ignore": false
   },
   "go.toolsManagement.autoUpdate": true,
   "indentRainbow.colors": [
@@ -68,8 +70,7 @@
   "telemetry.telemetryLevel": "off",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.enableMultiLinePasteWarning": false,
-  "terminal.integrated.fontSize": 20,
-  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.fontSize": 18,
   "terminal.integrated.profiles.windows": {
     "Git Bash": {
       "path": "C:\\Program Files\\Git\\bin\\bash.exe"
@@ -130,5 +131,13 @@
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
   "terminal.integrated.tabs.location": "left",
-  "git.openRepositoryInParentFolders": "never"
+  "git.openRepositoryInParentFolders": "never",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "terminal.integrated.fontFamily": "SF Mono, monospace",
+  "terminal.integrated.scrollback": 2500,
+  "terminal.integrated.tabs.defaultColor": "terminal.ansiCyan",
+  "terminal.integrated.tabStopWidth": 4
 }

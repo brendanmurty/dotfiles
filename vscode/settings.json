@@ -142,5 +142,6 @@
   "terminal.integrated.tabStopWidth": 4,
   "git.inputValidation": "off",
   "git.inputValidationSubjectLength": null,
-  "git.inputValidationLength": 150
+  "git.inputValidationLength": 150,
+  "editor.stickyScroll.enabled": true
 }

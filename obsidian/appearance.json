@@ -1,18 +1,19 @@
 {
+  "accentColor": "#23c5b0",
   "enabledCssSnippets": [
-    "tags",
     "murty",
-    "core",
+    "mobile",
+    "tags",
     "kanban",
-    "mobile"
+    "core"
   ],
   "baseFontSize": 18,
   "cssTheme": "",
-  "theme": "obsidian",
+  "theme": "system",
   "translucency": false,
   "interfaceFontFamily": "",
   "textFontFamily": "MonoLisa",
   "monospaceFontFamily": "MonoLisa",
-  "accentColor": "#23c5b0",
-  "showViewHeader": true
+  "showViewHeader": true,
+  "baseFontSizeAction": false
 }

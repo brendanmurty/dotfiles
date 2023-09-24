@@ -36,6 +36,10 @@
 
 .tag[href^="#family"],
 .tag[href^="#home"],
+span[class^="cm-tag-family"],
+span[class*="cm-tag-family"],
+span[class^="cm-tag-home"],
+span[class*="cm-tag-home"],
 .cm-tag-family,
 .cm-tag-home {
   background-color: #4d3ca6 !important;
@@ -115,6 +119,8 @@ span[class*="cm-tag-health"] {
   color: navy !important;
 }
 
+.tag[href^="#blocked"],
+.cm-tag-blocked,
 .tag[href^="#maybe"],
 .cm-tag-maybe,
 .tag[href^="#waiting"],

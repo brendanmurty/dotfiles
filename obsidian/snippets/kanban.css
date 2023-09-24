@@ -47,19 +47,19 @@ body.is-mobile .kanban-plugin__lane-wrapper {
 }
 
 /* Set column header colours based on their horizontal order */
-.kanban-plugin__lane-wrapper:nth-child(2) .kanban-plugin__lane-title {
+.kanban-plugin__lane-wrapper:nth-child(1) .kanban-plugin__lane-title {
   color: var(--highlight-primary);
 }
 
-.kanban-plugin__lane-wrapper:nth-child(3) .kanban-plugin__lane-title {
+.kanban-plugin__lane-wrapper:nth-child(2) .kanban-plugin__lane-title {
   color: var(--highlight-secondary);
 }
 
-.kanban-plugin__lane-wrapper:nth-child(4) .kanban-plugin__lane-title {
+.kanban-plugin__lane-wrapper:nth-child(3) .kanban-plugin__lane-title {
   color: var(--highlight-tertiary);
 }
 
-.kanban-plugin__lane-wrapper:nth-child(5) .kanban-plugin__lane-title {
+.kanban-plugin__lane-wrapper:nth-child(4) .kanban-plugin__lane-title {
   color: var(--highlight-quaternary);
 }
 
@@ -101,13 +101,29 @@ body.is-mobile .kanban-plugin__item-wrapper .kanban-plugin__item-title-wrapper {
   padding: 15px;
 }
 
+.kanban-plugin__lane-items {
+  padding-top: 0;
+}
+
+.kanban-plugin .kanban-plugin__lane-items .kanban-plugin__item-wrapper {
+  margin-top: 15px;
+}
+
+.kanban-plugin__item-title-wrapper {
+  padding: 12px 14px 15px;
+}
+
 .kanban-plugin__lane-items .kanban-plugin__item-wrapper {
   margin-top: 10px;
 }
 
-.kanban-plugin__lane-wrapper,
+.kanban-plugin__lane-wrapper {
+  background-color: var(--background-secondary);
+  border-radius: var(--input-radius);
+}
+
 .kanban-plugin__lane {
-  background-color: var(--color-base-10);
+  background-color: var(--background-secondary);
 }
 
 .kanban-plugin {

@@ -4,6 +4,7 @@
   "switcher": true,
   "graph": true,
   "backlink": true,
+  "canvas": true,
   "outgoing-link": true,
   "tag-pane": true,
   "page-preview": false,
@@ -11,9 +12,9 @@
   "templates": true,
   "note-composer": false,
   "command-palette": true,
-  "slash-command": false,
+  "slash-command": true,
   "editor-status": true,
-  "starred": true,
+  "bookmarks": true,
   "markdown-importer": false,
   "zk-prefixer": false,
   "random-note": false,
@@ -25,5 +26,6 @@
   "file-recovery": true,
   "publish": false,
   "sync": true,
-  "canvas": true
+  "starred": false,
+  "properties": true
 }

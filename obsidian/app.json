@@ -14,5 +14,7 @@
   "tabSize": 2,
   "livePreview": true,
   "communityThemeSortOrder": "download",
-  "communityPluginSortOrder": "download"
+  "communityPluginSortOrder": "download",
+  "spellcheck": false,
+  "spellcheckLanguages": null
 }

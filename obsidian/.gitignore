@@ -6,7 +6,10 @@ plugins/*/data.json
 !plugins/obsidian-minimal-settings/data.json
 !plugins/obsidian-show-file-path/data.json
 
+bookmarks.json
 starred.json
 workspace
 workspace.json
 workspaces.json
+publish.json
+graph.json

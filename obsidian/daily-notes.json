@@ -1,5 +1,5 @@
 {
-  "folder": "Personal/Journal",
+  "folder": "Journal/Items",
   "template": "Templates/JournalItem",
   "autorun": false,
   "format": "YYYYMMDD"

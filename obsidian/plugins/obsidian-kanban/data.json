@@ -17,7 +17,7 @@
   "hide-date-in-title": true,
   "lane-width": 320,
   "tag-colors": [],
-  "hide-card-count": true,
+  "hide-card-count": false,
   "date-colors": [
     {
       "isToday": false,
@@ -35,5 +35,7 @@
       "backgroundColor": "rgba(46, 163, 44, 1)"
     }
   ],
-  "max-archive-size": 50
+  "max-archive-size": 50,
+  "archive-with-date": true,
+  "archive-date-separator": " - "
 }

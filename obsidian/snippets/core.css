@@ -9,6 +9,7 @@ body {
   --checkbox-color: #666;
   --checklist-done-color: #666;
   --checklist-done-decoration: none;
+  --metadata-label-width: 16em;
 }
 
 body.theme-dark {
@@ -147,4 +148,16 @@ body.theme-light {
 
 button:not(.clickable-icon) {
   box-shadow: none;
+}
+
+/* Tweaks for mobile devices */
+
+body.is-mobile .modal-close-button {
+  top: 50px !important;
+  right: 20px !important;
+  font-size: 32px;
+  height: 32px;
+  width: 32px;
+  line-height: 32px;
+  z-index: 1000;
 }

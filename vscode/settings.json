@@ -44,15 +44,6 @@
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.untrackedChanges": "separate",
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false,
-    "yaml": false,
-    "dockerfile": false,
-    "ignore": false
-  },
   "go.toolsManagement.autoUpdate": true,
   "indentRainbow.colors": [
     "rgba(255,255,64,0.04)",
@@ -104,7 +95,6 @@
   "workbench.colorTheme": "Copilot Theme",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.editor.untitled.hint": "hidden",
   "workbench.list.openMode": "doubleClick",
   "workbench.startupEditor": "none",
   "[css]": {
@@ -143,5 +133,6 @@
   "git.inputValidation": "off",
   "git.inputValidationSubjectLength": null,
   "git.inputValidationLength": 150,
-  "editor.stickyScroll.enabled": true
+  "editor.stickyScroll.enabled": true,
+  "eslint.ignoreUntitled": true
 }

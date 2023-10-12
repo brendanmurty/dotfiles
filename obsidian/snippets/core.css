@@ -3,9 +3,9 @@
 body {
   --link-external-color: #23c5b0;
   --highlight-primary: #23c5b0;
-  --highlight-secondary: #c78feb;
-  --highlight-tertiary: #a7da1e;
-  --highlight-quaternary: #f7b83d;
+  --highlight-secondary: #ba8ef7;
+  --highlight-tertiary: #5bec95;
+  --highlight-quaternary: #ffa763;
   --checkbox-color: #666;
   --checklist-done-color: #666;
   --checklist-done-decoration: none;
@@ -98,22 +98,22 @@ body.theme-light {
 
 .cm-header-2 {
   font-size: 1.1em;
-  color: var(--highlight-secondary);
+  color: var(--highlight-tertiary);
 }
 
 .cm-header-3 {
   font-size: 1.0em;
-  color: var(--highlight-secondary);
+  color: var(--highlight-quaternary);
 }
 
 .cm-header-4 {
   font-size: 1.0em;
-  color: var(--highlight-secondary);
+  color: var(--highlight-quaternary);
 }
 
 .cm-header-5 {
   font-size: 1.0em;
-  color: var(--highlight-secondary);
+  color: var(--highlight-quaternary);
 }
 
 /* Internal links to other notes and external links */

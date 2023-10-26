@@ -123,6 +123,23 @@ button:not(.clickable-icon) {
   box-shadow: none;
 }
 
+/* Images */
+
+/* Based on https: //www.reddit.com/r/ObsidianMD/comments/16nlwkl/integrating_images_into_notes_organically/ */
+.cm-s-obsidian img,
+.markdown-rendered img {
+  max-height: 250px;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: 50% 5%;
+  margin: 5px auto;
+}
+
+img {
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
 /* Tweaks for mobile devices */
 
 body.is-mobile .modal-close-button {

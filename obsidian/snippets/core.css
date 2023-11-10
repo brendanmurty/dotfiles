@@ -1,4 +1,4 @@
-/* Theme colours */
+/* App configuration and theme colours */
 
 body {
   --link-external-color: #23c5b0;
@@ -13,7 +13,7 @@ body {
   --checkbox-color: #666;
   --checklist-done-color: #666;
   --checklist-done-decoration: none;
-  --metadata-label-width: 16em;
+  --metadata-label-width: 250px;
 }
 
 body.theme-dark {
@@ -30,6 +30,10 @@ body.theme-light {
   --tab-container-background: #fff;
   --titlebar-background: #f0f0f0;
   --background-secondary: #f0f0f0;
+}
+
+body.is-mobile {
+  --metadata-label-width: 225px;
 }
 
 /* Fonts */
@@ -123,24 +127,7 @@ button:not(.clickable-icon) {
   box-shadow: none;
 }
 
-/* Images */
-
-/* Based on https: //www.reddit.com/r/ObsidianMD/comments/16nlwkl/integrating_images_into_notes_organically/ */
-.cm-s-obsidian img,
-.markdown-rendered img {
-  max-height: 250px;
-  width: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: 50% 5%;
-  margin: 5px auto;
-}
-
-img {
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.8);
-}
-
-/* Tweaks for mobile devices */
+/* Fix close button on mobile devices */
 
 body.is-mobile .modal-close-button {
   top: 50px !important;

@@ -9,8 +9,8 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.detectIndentation": false,
   "editor.folding": false,
-  "editor.fontFamily": "Monaspace Argon, monospace",
-  "editor.fontLigatures": true,
+  "editor.fontFamily": "'Monaspace Argon', monospace",
+  "editor.fontLigatures": "'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss06', 'ss08'",
   "editor.fontSize": 20,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
@@ -53,7 +53,7 @@
   "indentRainbow.errorColor": "rgba(128,32,32,0.5)",
   "indentRainbow.tabmixColor": "rgba(128,32,96,0.5)",
   "javascript.validate.enable": false,
-  "markdown.preview.fontFamily": "Monaspace Argon",
+  "markdown.preview.fontFamily": "'Monaspace Argon', monospace",
   "markdown.preview.fontSize": 20,
   "prettier.requireConfig": true,
   "security.workspace.trust.untrustedFiles": "open",
@@ -118,7 +118,7 @@
       "path": "C:\\Program Files\\Git\\bin\\bash.exe"
     }
   },
-  "terminal.integrated.fontFamily": "Monaspace Argon, monospace",
+  "terminal.integrated.fontFamily": "'Monaspace Argon', monospace",
   "terminal.integrated.scrollback": 2500,
   "terminal.integrated.tabs.defaultColor": "terminal.ansiCyan",
   "terminal.integrated.tabStopWidth": 4,

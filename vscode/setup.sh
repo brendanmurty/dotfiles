@@ -25,5 +25,4 @@ code --install-extension dbaeumer.vscode-eslint
 code --install-extension esbenp.prettier-vscode
 code --install-extension BenjaminBenais.copilot-theme
 code --install-extension richie5um2.vscode-sort-json
-code --install-extension GitHub.copilot
 code --install-extension JuanBlanco.solidity

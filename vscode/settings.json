@@ -9,7 +9,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.detectIndentation": false,
   "editor.folding": false,
-  "editor.fontFamily": "IntelOne Mono",
+  "editor.fontFamily": "Monaspace Argon, monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 20,
   "editor.formatOnPaste": true,
@@ -44,7 +44,6 @@
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.untrackedChanges": "separate",
-  "go.toolsManagement.autoUpdate": true,
   "indentRainbow.colors": [
     "rgba(255,255,64,0.04)",
     "rgba(127,255,127,0.04)",
@@ -54,19 +53,11 @@
   "indentRainbow.errorColor": "rgba(128,32,32,0.5)",
   "indentRainbow.tabmixColor": "rgba(128,32,96,0.5)",
   "javascript.validate.enable": false,
-  "markdown.preview.fontFamily": "MonoLisa",
+  "markdown.preview.fontFamily": "Monaspace Argon",
   "markdown.preview.fontSize": 20,
   "prettier.requireConfig": true,
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "off",
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
-  "terminal.integrated.fontSize": 18,
-  "terminal.integrated.profiles.windows": {
-    "Git Bash": {
-      "path": "C:\\Program Files\\Git\\bin\\bash.exe"
-    }
-  },
   "window.commandCenter": true,
   "workbench.colorCustomizations": {
     "activityBar.activeBorder": "#23c5b0",
@@ -117,16 +108,17 @@
     "editor.unicodeHighlight.invisibleCharacters": false,
     "editor.wordWrap": "on"
   },
-  "[php]": {
-    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-  },
-  "terminal.integrated.tabs.location": "left",
   "git.openRepositoryInParentFolders": "never",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "[dockerfile]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.profiles.windows": {
+    "Git Bash": {
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe"
+    }
   },
-  "terminal.integrated.fontFamily": "SF Mono, monospace",
+  "terminal.integrated.fontFamily": "Monaspace Argon, monospace",
   "terminal.integrated.scrollback": 2500,
   "terminal.integrated.tabs.defaultColor": "terminal.ansiCyan",
   "terminal.integrated.tabStopWidth": 4,
@@ -134,5 +126,6 @@
   "git.inputValidationSubjectLength": null,
   "git.inputValidationLength": 150,
   "editor.stickyScroll.enabled": true,
-  "eslint.ignoreUntitled": true
+  "eslint.ignoreUntitled": true,
+  "workbench.editor.empty.hint": "hidden"
 }

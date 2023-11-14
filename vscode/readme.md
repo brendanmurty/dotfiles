@@ -4,7 +4,7 @@ Here are the contents of my [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Usage
 
-1. Purchase the [MonoLisa](https://www.monolisa.dev/) font and install it
+1. Download the [Monaspace](https://monaspace.githubnext.com/) fonts and install the `Monaspace Argon Regular` OTF file
 2. Install [VS Code]((https://code.visualstudio.com/)), open it and wait for it to load
 3. If you're using macOS, you have to press `Cmd+Shift+P` and select the `Shell Command: Install 'code' command in PATH` 
 4. Close VS Code so that the settings files are initialised

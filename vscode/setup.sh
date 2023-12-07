@@ -15,7 +15,6 @@ code --install-extension ronnidc.nunjucks
 code --install-extension esbenp.prettier-vscode
 code --install-extension mohsen1.prettify-json
 code --install-extension mechatroner.rainbow-csv
-code --install-extension JuanBlanco.solidity
 code --install-extension richie5um2.vscode-sort-json
 code --install-extension wayou.vscode-todo-highlight
 code --install-extension dunstontc.vscode-docker-syntax

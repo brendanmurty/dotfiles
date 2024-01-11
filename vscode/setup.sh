@@ -19,3 +19,4 @@ code --install-extension richie5um2.vscode-sort-json
 code --install-extension wayou.vscode-todo-highlight
 code --install-extension dunstontc.vscode-docker-syntax
 code --install-extension NomicFoundation.hardhat-solidity
+code --install-extension eamodio.gitlens

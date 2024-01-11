@@ -127,5 +127,15 @@
   "git.inputValidationLength": 150,
   "editor.stickyScroll.enabled": true,
   "eslint.ignoreUntitled": true,
-  "workbench.editor.empty.hint": "hidden"
+  "workbench.editor.empty.hint": "hidden",
+  "solidity.telemetry": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.blame.heatmap.enabled": false,
+  "workbench.activityBar.location": "top",
+  "workbench.sideBar.location": "right"
 }

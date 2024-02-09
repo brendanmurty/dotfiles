@@ -4,7 +4,6 @@
   "obsidian-kanban",
   "obsidian-reminder-plugin",
   "customizable-sidebar",
-  "table-editor-obsidian",
   "home-tab",
   "obsidian-hider",
   "obsidian-image-gallery",
@@ -13,5 +12,5 @@
   "actions-uri",
   "obsidian-smart-links",
   "obsidian-importer",
-  "obsidian-toggl-integration"
+  "obsidian-charts"
 ]

@@ -32,6 +32,73 @@ body.is-mobile .kanban-plugin__lane-wrapper {
   max-height: 90%;
 }
 
+/* Cards */
+
+.kanban-plugin__item-button-wrapper {
+  border: 0 none;
+  padding: 0;
+}
+
+.kanban-plugin__item-button-wrapper button.kanban-plugin__new-item-button {
+  color: var(--text-accent);
+  cursor: pointer;
+  border: 0 none;
+  padding: 20px 0;
+}
+
+.kanban-plugin__item-button-wrapper .kanban-plugin__new-item-button:hover {
+  color: #fff;
+}
+
+.kanban-plugin__item-button-plus {
+  display: none;
+}
+
+.kanban-plugin__item-wrapper .kanban-plugin__item,
+.kanban-plugin__lane-wrapper .kanban-plugin__lane-header-wrapper,
+.kanban-plugin__lane-wrapper .kanban-plugin__item-button-wrapper {
+  border: 0 none;
+}
+
+.kanban-plugin__item-wrapper .kanban-plugin__item,
+.kanban-plugin__item-wrapper .kanban-plugin__item-content-wrapper {
+  background-color: var(--color-base-00);
+}
+
+.kanban-plugin__item-wrapper .kanban-plugin__item {
+  border: 1px solid var(--color-base-40);
+}
+
+.kanban-plugin__item-wrapper .kanban-plugin__item-title-wrapper,
+.kanban-plugin__item-title p {
+  font-size: var(--color-white) !important;
+}
+
+/* Increase Kanban card spacing on mobile to make it easier to move cards around */
+body.is-mobile .kanban-plugin__item-wrapper .kanban-plugin__item-title-wrapper {
+  padding: 15px;
+}
+
+.kanban-plugin__lane-items {
+  padding: 0 10px 10px !important;
+}
+
+.kanban-plugin__item-title-wrapper {
+  padding: 12px 14px 15px;
+}
+
+.kanban-plugin__lane-items .kanban-plugin__item-wrapper {
+  margin-top: 15px;
+}
+
+/* Columns */
+
+.kanban-plugin__lane-wrapper {
+  background-color: transparent;
+  border-radius: var(--input-radius);
+  border: 1px solid var(--color-base-40);
+}
+
 .kanban-plugin__lane-wrapper .kanban-plugin__lane {
   border: 0 none;
   background-color: var(--bg3);
@@ -64,68 +131,8 @@ body.is-mobile .kanban-plugin__lane-wrapper {
   color: var(--highlight-quaternary);
 }
 
-.kanban-plugin__item-button-wrapper {
-  border: 0 none;
-  padding: 0;
-}
-
-.kanban-plugin__item-button-wrapper button.kanban-plugin__new-item-button {
-  color: var(--text-accent);
-  cursor: pointer;
-  border: 0 none;
-  padding: 20px 0;
-}
-
-.kanban-plugin__item-button-wrapper .kanban-plugin__new-item-button:hover {
-  color: #fff;
-}
-
-.kanban-plugin__item-button-plus {
-  display: none;
-}
-
-.kanban-plugin__item-wrapper .kanban-plugin__item,
-.kanban-plugin__lane-wrapper .kanban-plugin__lane-header-wrapper,
-.kanban-plugin__lane-wrapper .kanban-plugin__item-button-wrapper {
-  border: 0 none;
-}
-
-.kanban-plugin__item-wrapper .kanban-plugin__item,
-.kanban-plugin__item-wrapper .kanban-plugin__item-content-wrapper,
-.kanban-plugin__item-wrapper .kanban-plugin__item-title-wrapper {
-  background-color: var(--background-primary);
-}
-
-.kanban-plugin__item-title p {
-  font-size: var(--font-ui-medium) !important;
-}
-
-/* Increase Kanban card spacing on mobile to make it easier to move cards around */
-body.is-mobile .kanban-plugin__item-wrapper .kanban-plugin__item-title-wrapper {
-  padding: 15px;
-}
-
-.kanban-plugin__lane-items {
-  padding: 0 10px 10px !important;
-}
-
-.kanban-plugin__item-title-wrapper {
-  padding: 12px 14px 15px;
-}
-
-.kanban-plugin__lane-items .kanban-plugin__item-wrapper {
-  margin-top: 15px;
-}
-
-.kanban-plugin__lane-wrapper {
-  background-color: var(--color-base-05);
-  border-radius: var(--input-radius);
-}
-
-.kanban-plugin__lane {
-  background-color: var(--color-base-05);
-}
+/* Board */
 
 .kanban-plugin {
-  background-color: var(--color-base-00);
+  background-color: var(--background-primary);
 }

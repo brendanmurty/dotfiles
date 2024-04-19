@@ -14,14 +14,16 @@ body {
   --checklist-done-color: #666;
   --checklist-done-decoration: none;
   --metadata-label-width: 250px;
+  --bold-color: var(--highlight-quaternary);
+  --italic-color: var(--highlight-quaternary);
 }
 
 body.theme-dark {
   --color-base-00: #000;
-  --ribbon-background: #111;
+  --ribbon-background: #222;
   --tab-container-background: #000;
-  --titlebar-background: #111;
-  --background-secondary: #111;
+  --titlebar-background: #222;
+  --background-secondary: #222;
 }
 
 body.theme-light {
@@ -30,10 +32,6 @@ body.theme-light {
   --tab-container-background: #fff;
   --titlebar-background: #f0f0f0;
   --background-secondary: #f0f0f0;
-}
-
-body.is-mobile {
-  --metadata-label-width: 225px;
 }
 
 /* Fonts */
@@ -45,18 +43,41 @@ body.is-mobile {
   font-family: "MonoLisa", var(--font-default) !important;
 }
 
+.workspace-tab-header-inner,
+.workspace-tab-header-inner-title {
+  font-size: var(--font-ui-small) !important;
+}
+
+/* Layout */
+
+/* Hide search suggestions */
+.suggestion-container.mod-search-suggestion {
+  display: none;
+}
+
+/* Hide instructions */
+.prompt-instructions {
+  display: none;
+}
+
+/* Hide vault name */
+.nav-folder.mod-root>.nav-folder-title .nav-folder-title-content {
+  display: none;
+}
+
+
 /* Main editor view */
 
 .workspace-split.mod-root .view-content,
 .kanban-plugin {
-  background-color: var(--color-base-00);
+  background-color: var(--background-primary);
 }
 
 /* Code folding and line number columns */
 
 .CodeMirror-gutter.CodeMirror-linenumbers,
 .CodeMirror-gutter.CodeMirror-foldgutter {
-  background-color: var(--color-base-00);
+  background-color: var(--background-primary);
 }
 
 /* Code folding indicators */
@@ -101,19 +122,13 @@ body.is-mobile {
 .markdown-preview-view .internal-link,
 .markdown-preview-view .external-link,
 .cm-s-obsidian .cm-link {
-  color: var(--highlight-primary);
+  color: var(--link-color);
   text-decoration: none;
 }
 
 .external-link {
   background: none;
   padding-right: 0;
-}
-
-/* Bolded content */
-
-.cm-s-obsidian .cm-strong {
-  color: var(--highlight-tertiary);
 }
 
 /* URL targets */
@@ -127,14 +142,15 @@ button:not(.clickable-icon) {
   box-shadow: none;
 }
 
-/* Fix close button on mobile devices */
+/* Property labels */
 
-body.is-mobile .modal-close-button {
-  top: 50px !important;
-  right: 20px !important;
-  font-size: 32px;
-  height: 32px;
-  width: 32px;
-  line-height: 32px;
-  z-index: 1000;
+body {
+  --metadata-label-width: 250px;
+}
+
+/* Fields */
+
+input[type=checkbox]:checked {
+  background-color: var(--highlight-primary);
+  border-color: var(--highlight-primary);
 }

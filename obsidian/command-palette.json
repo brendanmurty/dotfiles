@@ -2,6 +2,7 @@
   "pinned": [
     "daily-notes",
     "file-explorer:move-file",
+    "editor:attach-file",
     "workspace:copy-url",
     "app:reload"
   ]

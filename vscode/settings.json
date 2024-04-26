@@ -8,7 +8,6 @@
   "editor.autoClosingQuotes": "never",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.detectIndentation": false,
-  "editor.folding": false,
   "editor.fontFamily": "'Monaspace Argon', monospace",
   "editor.fontLigatures": "'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss06', 'ss08'",
   "editor.fontSize": 20,
@@ -122,7 +121,7 @@
   "terminal.integrated.scrollback": 2500,
   "terminal.integrated.tabs.defaultColor": "terminal.ansiCyan",
   "terminal.integrated.tabStopWidth": 4,
-  "git.inputValidation": "off",
+  "git.inputValidation": false,
   "git.inputValidationSubjectLength": null,
   "git.inputValidationLength": 150,
   "editor.stickyScroll.enabled": true,
@@ -137,5 +136,11 @@
   "gitlens.codeLens.enabled": false,
   "gitlens.blame.heatmap.enabled": false,
   "workbench.activityBar.location": "top",
-  "workbench.sideBar.location": "right"
+  "workbench.sideBar.location": "left",
+  "window.confirmSaveUntitledWorkspace": false,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  }
 }

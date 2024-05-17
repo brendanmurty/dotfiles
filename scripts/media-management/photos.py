@@ -87,6 +87,7 @@ mediaFileExtensions = [
     '.GIF',
     '.jpg',
     '.JPG',
+    'jpeg',
     '.mov',
     '.MOV',
     '.mp4',

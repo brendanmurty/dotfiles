@@ -15,8 +15,8 @@
 # 
 # Setup:
 #   1. Configure the alias command:
-#       echo "alias photomgmt='python /path/to/dotfiles/scripts/media-management/photos.py'" >> ~/.bash_aliases
-#       source ~/.bash_aliases
+#       echo "alias photomgmt='python /path/to/dotfiles/scripts/media-management/photos.py'" >> ~/.bashrc
+#       source ~/.bashrc
 #   2. Configure your photo directories:
 #       cp -u photos.env.example photos.env
 #       vim photos.env

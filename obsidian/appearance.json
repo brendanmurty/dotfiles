@@ -3,17 +3,17 @@
   "enabledCssSnippets": [
     "murty",
     "mobile",
-    "kanban",
     "core",
-    "tags"
+    "tags",
+    "kanban"
   ],
   "baseFontSize": 18,
   "cssTheme": "",
   "theme": "system",
   "translucency": false,
-  "interfaceFontFamily": "",
-  "textFontFamily": "MonoLisa",
-  "monospaceFontFamily": "MonoLisa",
+  "interfaceFontFamily": "MonoLisa,Ubuntu",
+  "textFontFamily": "MonoLisa,Ubuntu",
+  "monospaceFontFamily": "MonoLisa,Ubuntu Mono",
   "showViewHeader": true,
   "baseFontSizeAction": false
 }

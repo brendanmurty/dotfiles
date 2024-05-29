@@ -40,7 +40,7 @@ body.theme-light {
 .workspace .markdown-preview-view,
 .markdown-source-view.mod-cm6 .cm-scroller,
 .kanban-plugin * {
-  font-family: "MonoLisa", var(--font-default) !important;
+  font-family: "MonoLisa", "Ubuntu", var(--font-default) !important;
 }
 
 .workspace-tab-header-inner,

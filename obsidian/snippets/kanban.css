@@ -1,10 +1,10 @@
 /* Kanban boards */
 
-body:not(.is-mobile) .kanban-plugin__lane-wrapper {
+body:not(.is-mobile) .kanban-plugin__lane-wrapper:not(.collapse-horizontal) {
   width: 550px !important;
 }
 
-body.is-mobile .kanban-plugin__lane-wrapper {
+body.is-mobile .kanban-plugin__lane-wrapper:not(.collapse-horizontal) {
   width: 330px !important;
 }
 
@@ -61,12 +61,14 @@ body.is-mobile .kanban-plugin__lane-wrapper {
 }
 
 .kanban-plugin__item-wrapper .kanban-plugin__item,
-.kanban-plugin__item-wrapper .kanban-plugin__item-content-wrapper {
-  background-color: var(--color-base-00);
+.kanban-plugin__item-wrapper .kanban-plugin__item-content-wrapper,
+.kanban-plugin__item-title-wrapper {
+  background: var(--color-base-05) !important;
+  border: 0 none;
 }
 
 .kanban-plugin__item-wrapper .kanban-plugin__item {
-  border: 1px solid var(--color-base-40);
+  border: 2px solid var(--color-base-20);
 }
 
 .kanban-plugin__item-wrapper .kanban-plugin__item-title-wrapper,
@@ -89,6 +91,35 @@ body.is-mobile .kanban-plugin__item-wrapper .kanban-plugin__item-title-wrapper {
 
 .kanban-plugin__lane-items .kanban-plugin__item-wrapper {
   margin-top: 15px;
+}
+
+/* Tags in board items */
+.kanban-plugin .kanban-plugin__markdown-preview-view a.tag {
+  margin-top: 10px !important;
+  padding: 8px 6px !important;
+  display: flex;
+  clear: left;
+}
+
+.kanban-plugin .kanban-plugin__markdown-preview-view a.tag:first-child {
+  margin-top: 20px !important;
+}
+
+/* Dates in board items */
+.kanban-plugin__item-metadata-date-relative,
+.kanban-plugin__date,
+.cm-kanban-time-wrapper,
+.cm-kanban-date-wrapper {
+  color: var(--highlight-quaternary);
+  background-color: transparent !important;
+  font-weight: bold;
+  margin-top: 15px !important;
+  display: flex;
+  clear: left;
+}
+
+.kanban-plugin__item-metadata:not(:empty) {
+  font-size: 100%;
 }
 
 /* Columns */

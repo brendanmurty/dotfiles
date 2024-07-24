@@ -121,9 +121,11 @@ body.theme-light {
 .kanban-plugin__item-markdown .internal-link,
 .markdown-preview-view .internal-link,
 .markdown-preview-view .external-link,
-.cm-s-obsidian .cm-link {
+.cm-s-obsidian .cm-link,
+.cm-s-obsidian .cm-url,
+.cm-s-obsidian span.cm-link a {
   color: var(--link-color);
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .external-link {

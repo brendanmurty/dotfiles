@@ -18,24 +18,8 @@
   "lane-width": 320,
   "tag-colors": [],
   "hide-card-count": false,
-  "date-colors": [
-    {
-      "isToday": false,
-      "distance": 30,
-      "unit": "days",
-      "direction": "after",
-      "backgroundColor": "rgba(221, 0, 0, 1)",
-      "color": "rgba(255, 255, 255, 1)"
-    },
-    {
-      "distance": 7,
-      "unit": "days",
-      "direction": "before",
-      "color": "rgba(255, 255, 255, 1)",
-      "backgroundColor": "rgba(46, 163, 44, 1)"
-    }
-  ],
-  "max-archive-size": 50,
+  "date-colors": [],
   "archive-with-date": true,
-  "archive-date-separator": " - "
+  "archive-date-separator": " - ",
+  "tag-action": "kanban"
 }

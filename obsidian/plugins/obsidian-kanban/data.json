@@ -15,11 +15,11 @@
   "prepend-archive-date": true,
   "hide-tags-in-title": true,
   "hide-date-in-title": true,
-  "lane-width": 320,
   "tag-colors": [],
   "hide-card-count": false,
   "date-colors": [],
   "archive-with-date": true,
   "archive-date-separator": " - ",
-  "tag-action": "kanban"
+  "tag-action": "kanban",
+  "lane-width": 450
 }

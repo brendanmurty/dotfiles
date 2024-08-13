@@ -1,11 +1,17 @@
 /* Kanban boards */
 
+/* Desktop: Board column width */
 body:not(.is-mobile) .kanban-plugin__lane-wrapper:not(.collapse-horizontal) {
-  width: 550px !important;
+  width: 650px !important;
 }
 
+/* Mobile: Board column width */
 body.is-mobile .kanban-plugin__lane-wrapper:not(.collapse-horizontal) {
   width: 330px !important;
+}
+
+body.is-mobile .kanban-plugin__board {
+  height: 100%;
 }
 
 .kanban-plugin__lane-header-wrapper {
@@ -27,9 +33,10 @@ body .kanban-plugin__item-button-wrapper {
   border: 0 none;
 }
 
-body.is-mobile .kanban-plugin__lane-wrapper {
-  /* Ensure there is enough space for the "Add a card" button on smaller screens */
-  max-height: 90%;
+body.is-mobile .kanban-plugin__board,
+body.is-mobile .kanban-plugin__board>div {
+  /* Make mobile board columns fill the most vertical space while allowing enough space for the "Add a card" */
+  height: 78vh;
 }
 
 /* Cards */

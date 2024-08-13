@@ -9,7 +9,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.detectIndentation": false,
   "editor.fontFamily": "'Monaspace Argon', monospace",
-  "editor.fontLigatures": "'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss06', 'ss08'",
+  "editor.fontLigatures": false,
   "editor.fontSize": 20,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
@@ -127,7 +127,6 @@
   "editor.stickyScroll.enabled": true,
   "eslint.ignoreUntitled": true,
   "workbench.editor.empty.hint": "hidden",
-  "solidity.telemetry": false,
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
   },
@@ -142,5 +141,21 @@
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "window.customTitleBarVisibility": "auto",
+  "terminal.integrated.allowedLinkSchemes": [
+    "file",
+    "http",
+    "https",
+    "mailto",
+    "vscode",
+    "vscode-insiders",
+    "docker-desktop"
+  ],
+  "eslint.experimental.useFlatConfig": true,
+  "security.promptForLocalFileProtocolHandling": false,
+  "redhat.telemetry.enabled": false,
+  "workbench.editor.customLabels.patterns": {
+    "*/src/**/index.*": "/src/${dirname}"
   }
 }

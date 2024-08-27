@@ -100,18 +100,6 @@ body.is-mobile .kanban-plugin__item-wrapper .kanban-plugin__item-title-wrapper {
   margin-top: 15px;
 }
 
-/* Tags in board items */
-.kanban-plugin .kanban-plugin__markdown-preview-view a.tag {
-  margin-top: 10px !important;
-  padding: 8px 6px !important;
-  display: flex;
-  clear: left;
-}
-
-.kanban-plugin .kanban-plugin__markdown-preview-view a.tag:first-child {
-  margin-top: 20px !important;
-}
-
 /* Dates in board items */
 .kanban-plugin__item-metadata-date-relative,
 .kanban-plugin__date,

@@ -8,7 +8,7 @@
     "kanban"
   ],
   "baseFontSize": 18,
-  "cssTheme": "",
+  "cssTheme": "Minimal",
   "theme": "system",
   "translucency": false,
   "interfaceFontFamily": "MonoLisa,Ubuntu",

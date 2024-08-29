@@ -1,7 +1,0 @@
-/* Tweaks for mobile devices */
-
-/* Property labels */
-
-body.is-mobile {
-  --metadata-label-width: 225px;
-}

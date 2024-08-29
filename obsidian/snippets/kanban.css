@@ -10,10 +10,6 @@ body.is-mobile .kanban-plugin__lane-wrapper:not(.collapse-horizontal) {
   width: 330px !important;
 }
 
-body.is-mobile .kanban-plugin__board {
-  height: 100%;
-}
-
 .kanban-plugin__lane-header-wrapper {
   border-bottom: 0;
   padding: 3px 5px;
@@ -33,11 +29,6 @@ body .kanban-plugin__item-button-wrapper {
   border: 0 none;
 }
 
-body.is-mobile .kanban-plugin__board,
-body.is-mobile .kanban-plugin__board>div {
-  /* Make mobile board columns fill the most vertical space while allowing enough space for the "Add a card" */
-  height: 78vh;
-}
 
 /* Cards */
 
@@ -45,6 +36,8 @@ body.is-mobile .kanban-plugin__board>div {
   border: 0 none;
   padding: 0;
 }
+
+/* Add a card button */
 
 .kanban-plugin__item-button-wrapper button.kanban-plugin__new-item-button {
   color: var(--text-accent);
@@ -70,7 +63,7 @@ body.is-mobile .kanban-plugin__board>div {
 .kanban-plugin__item-wrapper .kanban-plugin__item,
 .kanban-plugin__item-wrapper .kanban-plugin__item-content-wrapper,
 .kanban-plugin__item-title-wrapper {
-  background: var(--color-base-05) !important;
+  background: var(--color-base-20) !important;
   border: 0 none;
 }
 
@@ -89,7 +82,7 @@ body.is-mobile .kanban-plugin__item-wrapper .kanban-plugin__item-title-wrapper {
 }
 
 .kanban-plugin__lane-items {
-  padding: 0 10px 10px !important;
+  padding: 0 10px 0 !important;
 }
 
 .kanban-plugin__item-title-wrapper {
@@ -125,11 +118,6 @@ body.is-mobile .kanban-plugin__item-wrapper .kanban-plugin__item-title-wrapper {
   border: 1px solid var(--color-base-40);
 }
 
-.kanban-plugin__lane-wrapper .kanban-plugin__lane {
-  border: 0 none;
-  background-color: var(--bg3);
-}
-
 /* Make column headers larger */
 .kanban-plugin__lane-title-text,
 .kanban-plugin__lane-title-text .kanban-plugin__markdown-preview-view {
@@ -138,27 +126,4 @@ body.is-mobile .kanban-plugin__item-wrapper .kanban-plugin__item-title-wrapper {
 
 .kanban-plugin__lane-grip>svg {
   height: 18px;
-}
-
-/* Set column header colours based on their horizontal order */
-.kanban-plugin__lane-wrapper:nth-child(1) .kanban-plugin__lane-title {
-  color: var(--highlight-primary);
-}
-
-.kanban-plugin__lane-wrapper:nth-child(2) .kanban-plugin__lane-title {
-  color: var(--highlight-secondary);
-}
-
-.kanban-plugin__lane-wrapper:nth-child(3) .kanban-plugin__lane-title {
-  color: var(--highlight-tertiary);
-}
-
-.kanban-plugin__lane-wrapper:nth-child(4) .kanban-plugin__lane-title {
-  color: var(--highlight-quaternary);
-}
-
-/* Board */
-
-.kanban-plugin {
-  background-color: var(--background-primary);
 }

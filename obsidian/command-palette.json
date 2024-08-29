@@ -1,10 +1,9 @@
 {
   "pinned": [
+    "switcher:open",
     "daily-notes",
     "editor:attach-file",
-    "obsidian-link-embed:embed-link",
     "file-explorer:move-file",
-    "workspace:copy-url",
-    "app:reload"
+    "workspace:copy-url"
   ]
 }

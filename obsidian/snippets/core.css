@@ -6,16 +6,19 @@ body {
   --highlight-secondary: #ba8ef7;
   --highlight-tertiary: #5bec95;
   --highlight-quaternary: #ffa763;
-  --h1-color: var(--highlight-primary);
-  --h2-color: var(--highlight-secondary);
-  --h3-color: var(--highlight-tertiary);
-  --h4-color: var(--highlight-quaternary);
+  --h1-color: var(--highlight-primary) !important;
+  --inline-title-color: var(--highlight-primary) !important;
+  --h2-color: var(--highlight-secondary) !important;
+  --h3-color: var(--highlight-tertiary) !important;
+  --h4-color: var(--highlight-quaternary) !important;
+  --h5-color: var(--highlight-quaternary) !important;
+  --h6-color: var(--highlight-quaternary) !important;
   --checkbox-color: #666;
   --checklist-done-color: #666;
   --checklist-done-decoration: none;
   --metadata-label-width: 250px;
-  --bold-color: var(--highlight-quaternary);
-  --italic-color: var(--highlight-quaternary);
+  --bold-color: var(--highlight-quaternary) !important;
+  --italic-color: var(--highlight-quaternary) !important;
 }
 
 body.theme-dark {
@@ -97,7 +100,7 @@ body.theme-light {
 /* Formatting indicator characters */
 
 .cm-s-obsidian .cm-formatting {
-  color: #c78feb;
+  color: var(--highlight-secondary);
   font-weight: 400;
 }
 
@@ -147,4 +150,10 @@ body {
 input[type=checkbox]:checked {
   background-color: var(--highlight-primary);
   border-color: var(--highlight-primary);
+}
+
+/* Property labels */
+
+body.is-mobile {
+  --metadata-label-width: 210px;
 }

@@ -7,7 +7,7 @@
   "attachmentFolderPath": "./Attachments",
   "autoPairBrackets": true,
   "defaultViewMode": "source",
-  "mobilePullAction": "command-palette:open",
+  "mobilePullAction": "switcher:open",
   "legacyEditor": false,
   "showUnsupportedFiles": true,
   "useTab": false,

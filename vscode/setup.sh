@@ -7,16 +7,11 @@ code --install-extension rafaelmaiolla.diff
 code --install-extension EditorConfig.EditorConfig
 code --install-extension IronGeek.vscode-env
 code --install-extension dbaeumer.vscode-eslint
-code --install-extension figma.figma-vscode-extension
-code --install-extension waderyan.gitblame
 code --install-extension oderwat.indent-rainbow
 code --install-extension cjhowe7.laravel-blade
 code --install-extension ronnidc.nunjucks
 code --install-extension esbenp.prettier-vscode
 code --install-extension mohsen1.prettify-json
 code --install-extension mechatroner.rainbow-csv
-code --install-extension richie5um2.vscode-sort-json
 code --install-extension wayou.vscode-todo-highlight
 code --install-extension dunstontc.vscode-docker-syntax
-code --install-extension NomicFoundation.hardhat-solidity
-code --install-extension eamodio.gitlens

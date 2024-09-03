@@ -8,7 +8,7 @@
   "editor.autoClosingQuotes": "never",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.detectIndentation": false,
-  "editor.fontFamily": "'Monaspace Argon', monospace",
+  "editor.fontFamily": "\"MD IO Regular\"",
   "editor.fontLigatures": false,
   "editor.fontSize": 20,
   "editor.formatOnPaste": true,
@@ -52,7 +52,7 @@
   "indentRainbow.errorColor": "rgba(128,32,32,0.5)",
   "indentRainbow.tabmixColor": "rgba(128,32,96,0.5)",
   "javascript.validate.enable": false,
-  "markdown.preview.fontFamily": "'Monaspace Argon', monospace",
+  "markdown.preview.fontFamily": "\"MD IO Regular\"",
   "markdown.preview.fontSize": 20,
   "prettier.requireConfig": true,
   "security.workspace.trust.untrustedFiles": "open",
@@ -117,7 +117,7 @@
       "path": "C:\\Program Files\\Git\\bin\\bash.exe"
     }
   },
-  "terminal.integrated.fontFamily": "'Monaspace Argon', monospace",
+  "terminal.integrated.fontFamily": "\"MD IO Regular\"",
   "terminal.integrated.scrollback": 2500,
   "terminal.integrated.tabs.defaultColor": "terminal.ansiCyan",
   "terminal.integrated.tabStopWidth": 4,
@@ -130,10 +130,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
   },
-  "gitlens.currentLine.enabled": false,
-  "gitlens.hovers.currentLine.over": "line",
-  "gitlens.codeLens.enabled": false,
-  "gitlens.blame.heatmap.enabled": false,
   "workbench.activityBar.location": "top",
   "workbench.sideBar.location": "left",
   "window.confirmSaveUntitledWorkspace": false,
@@ -152,10 +148,9 @@
     "vscode-insiders",
     "docker-desktop"
   ],
-  "eslint.experimental.useFlatConfig": true,
   "security.promptForLocalFileProtocolHandling": false,
   "redhat.telemetry.enabled": false,
   "workbench.editor.customLabels.patterns": {
-    "*/src/**/index.*": "/src/${dirname}"
+    "*/src/**/index.*": "${dirname}"
   }
 }

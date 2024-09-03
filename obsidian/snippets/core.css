@@ -1,6 +1,6 @@
 /* App configuration and theme colours */
 
-body {
+:root {
   --link-external-color: #23c5b0;
   --highlight-primary: #23c5b0;
   --highlight-secondary: #ba8ef7;
@@ -38,13 +38,6 @@ body.theme-light {
 }
 
 /* Fonts */
-
-.workspace .markdown-source-view,
-.workspace .markdown-preview-view,
-.markdown-source-view.mod-cm6 .cm-scroller,
-.kanban-plugin * {
-  font-family: "MonoLisa", "Ubuntu", var(--font-default) !important;
-}
 
 .workspace-tab-header-inner,
 .workspace-tab-header-inner-title {

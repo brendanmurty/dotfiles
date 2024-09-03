@@ -1,19 +1,17 @@
 {
   "accentColor": "#23c5b0",
   "enabledCssSnippets": [
-    "murty",
-    "mobile",
     "core",
     "tags",
     "kanban"
   ],
-  "baseFontSize": 18,
   "cssTheme": "",
   "theme": "system",
   "translucency": false,
-  "interfaceFontFamily": "MonoLisa,Ubuntu",
-  "textFontFamily": "MonoLisa,Ubuntu",
-  "monospaceFontFamily": "MonoLisa,Ubuntu Mono",
   "showViewHeader": true,
-  "baseFontSizeAction": false
+  "baseFontSizeAction": false,
+  "interfaceFontFamily": "MD IO Regular",
+  "textFontFamily": "MD IO Regular",
+  "monospaceFontFamily": "MD IO Regular",
+  "baseFontSize": 18
 }

@@ -95,7 +95,7 @@ body.theme-light {
 
 .cm-s-obsidian span.cm-inline-code,
 .cm-s-obsidian .HyperMD-codeblock {
-  color: var(--highlight-primary);
+  color: var(--highlight-tertiary);
 }
 
 /* Formatting indicator characters */
@@ -110,7 +110,7 @@ body.theme-light {
   color: transparent;
 }
 
-/* Internal links to other notes and external links */
+/* Links to other notes and external */
 
 .cm-s-obsidian .internal-link,
 .cm-s-obsidian .cm-hmd-internal-link,
@@ -119,7 +119,8 @@ body.theme-light {
 .markdown-preview-view .external-link,
 .cm-s-obsidian .cm-link,
 .cm-s-obsidian .cm-url,
-.cm-s-obsidian span.cm-link a {
+.cm-s-obsidian span.cm-link a,
+.markdown-source-view .cm-hmd-internal-link .cm-underline {
   color: var(--link-color);
   text-decoration: none !important;
 }

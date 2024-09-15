@@ -15,3 +15,4 @@ code --install-extension mohsen1.prettify-json
 code --install-extension mechatroner.rainbow-csv
 code --install-extension wayou.vscode-todo-highlight
 code --install-extension dunstontc.vscode-docker-syntax
+code --install-extension ms-vscode-remote.remote-containers

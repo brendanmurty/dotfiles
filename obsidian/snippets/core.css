@@ -1,6 +1,6 @@
 /* App configuration and theme colours */
 
-:root {
+body {
   --link-external-color: #23c5b0;
   --highlight-primary: #23c5b0;
   --highlight-secondary: #ba8ef7;
@@ -13,12 +13,16 @@
   --h4-color: var(--highlight-quaternary) !important;
   --h5-color: var(--highlight-quaternary) !important;
   --h6-color: var(--highlight-quaternary) !important;
-  --checkbox-color: #666;
-  --checklist-done-color: #666;
+  --checkbox-color: #888;
+  --checklist-done-color: #888;
   --checklist-done-decoration: none;
   --metadata-label-width: 250px;
   --bold-color: var(--highlight-quaternary) !important;
   --italic-color: var(--highlight-quaternary) !important;
+}
+
+body.is-mobile {
+  --metadata-label-width: 210px;
 }
 
 body.theme-dark {
@@ -141,21 +145,9 @@ button:not(.clickable-icon) {
   box-shadow: none;
 }
 
-/* Property labels */
-
-body {
-  --metadata-label-width: 250px;
-}
-
 /* Fields */
 
 input[type=checkbox]:checked {
   background-color: var(--highlight-primary);
   border-color: var(--highlight-primary);
-}
-
-/* Property labels */
-
-body.is-mobile {
-  --metadata-label-width: 210px;
 }

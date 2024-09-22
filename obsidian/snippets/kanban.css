@@ -1,13 +1,15 @@
 /* Kanban boards */
 
-/* Desktop: Board column width */
+/* Desktop: Board columns */
 body:not(.is-mobile) .kanban-plugin__lane-wrapper:not(.collapse-horizontal) {
   width: 650px !important;
+  max-height: 90vh;
 }
 
-/* Mobile: Board column width */
+/* Mobile: Board columns */
 body.is-mobile .kanban-plugin__lane-wrapper:not(.collapse-horizontal) {
   width: 330px !important;
+  max-height: 75vh;
 }
 
 .kanban-plugin__lane-header-wrapper {

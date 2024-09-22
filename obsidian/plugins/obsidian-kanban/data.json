@@ -22,5 +22,7 @@
   "show-view-as-markdown": false,
   "tag-action": "kanban",
   "tag-colors": [],
-  "time-format": "h:mma"
+  "time-format": "h:mma",
+  "tag-sort": [],
+  "move-dates": true
 }

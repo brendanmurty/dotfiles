@@ -19,3 +19,11 @@ Here are the contents of my [Visual Studio Code](https://code.visualstudio.com/)
 You can also tweak the layout colours by modifying the `workbench.colorCustomizations` section in `settings.json`.
 
 The available otions are detailed in the [API Documentation](https://code.visualstudio.com/api/references/theme-color).
+
+## Update VS Code extensions install script
+
+Using PowerShell on Windows 11 from this subdirectory:
+
+```
+code --list-extensions | % { "code --install-extension $_" } > setup.sh
+```

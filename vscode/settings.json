@@ -21,7 +21,7 @@
     "other": true,
     "strings": false
   },
-  "editor.quickSuggestionsDelay": 300,
+  "editor.quickSuggestionsDelay": 1000,
   "editor.tabSize": 2,
   "editor.tokenColorCustomizations": {
     "comments": "#666",
@@ -152,5 +152,8 @@
   "redhat.telemetry.enabled": false,
   "workbench.editor.customLabels.patterns": {
     "*/src/**/index.*": "${dirname}"
+  },
+  "accessibility.signals.lineHasInlineSuggestion": {
+    "sound": "off"
   }
 }

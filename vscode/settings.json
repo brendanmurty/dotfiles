@@ -110,7 +110,7 @@
   "git.openRepositoryInParentFolders": "never",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.fontSize": 18,
   "terminal.integrated.profiles.windows": {
     "Git Bash": {

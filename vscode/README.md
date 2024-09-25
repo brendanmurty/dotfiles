@@ -22,7 +22,7 @@ The available otions are detailed in the [API Documentation](https://code.visual
 
 ## Update VS Code settings
 
-Using Git Bash on Windows 11 from this subdirectory:
+Using [Git Bash](https://git-scm.com/downloads) on Windows 11 from this subdirectory:
 
 ```
 cp $HOME/AppData/Roaming/Code/User/settings.json settings.json
@@ -30,7 +30,7 @@ cp $HOME/AppData/Roaming/Code/User/settings.json settings.json
 
 ## Update VS Code extensions install script
 
-Using Git Bash on Windows 11 from this subdirectory:
+Using [Git Bash](https://git-scm.com/downloads) on Windows 11 from this subdirectory:
 
 ```
 code --list-extensions | % { "code --install-extension $_" } > setup.sh

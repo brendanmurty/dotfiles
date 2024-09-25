@@ -115,6 +115,9 @@
   "terminal.integrated.profiles.windows": {
     "Git Bash": {
       "path": "C:\\Program Files\\Git\\bin\\bash.exe"
+    },
+    "PowerShell 7": {
+      "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
     }
   },
   "terminal.integrated.fontFamily": "\"MD IO Regular\"",

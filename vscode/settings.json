@@ -82,7 +82,7 @@
     "window.activeBorder": "#000",
     "window.inactiveBorder": "#000"
   },
-  "workbench.colorTheme": "Copilot Theme",
+  "workbench.colorTheme": "Copilot Theme - Higher Contrast",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.list.openMode": "doubleClick",
@@ -97,6 +97,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
+    "editor.formatOnSave": false,
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.quickSuggestions": {
       "comments": "off",

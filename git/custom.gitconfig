@@ -1,6 +1,8 @@
 [user]
 	name = Brendan Murty
 	email = brendan@murty.au
+[init]
+	defaultBranch = main
 [color]
 	ui = true
 [color "branch"]

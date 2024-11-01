@@ -35,5 +35,16 @@ set smartcase
 " Show trailing whitespace
 
 set list listchars=trail:.,tab:>.
-highlight SpecialKey ctermfg=DarkGray ctermbg=Black
+
+" Line numbers
+
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+
+" Keybindings
+
+" Ctrl+Shift+up move line above
+nmap <C-S-Up> :m -2<CR>
+
+"Ctrl+Shift+down move line below
+nmap <C-S-Down> :m +1<CR>
 

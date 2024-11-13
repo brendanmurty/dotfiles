@@ -154,9 +154,6 @@
   ],
   "security.promptForLocalFileProtocolHandling": false,
   "redhat.telemetry.enabled": false,
-  "workbench.editor.customLabels.patterns": {
-    "*/src/**/index.*": "${dirname}"
-  },
   "accessibility.signals.lineHasInlineSuggestion": {
     "sound": "off"
   },

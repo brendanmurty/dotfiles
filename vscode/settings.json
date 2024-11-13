@@ -159,5 +159,7 @@
   },
   "accessibility.signals.lineHasInlineSuggestion": {
     "sound": "off"
-  }
+  },
+  "window.menuBarVisibility": "visible",
+  "diffEditor.ignoreTrimWhitespace": false
 }

@@ -13,6 +13,7 @@ code --install-extension irongeek.vscode-env
 code --install-extension mechatroner.rainbow-csv
 code --install-extension mohsen1.prettify-json
 code --install-extension ms-azuretools.vscode-docker
+code --install-extension ms-vsliveshare.vsliveshare
 code --install-extension ms-vscode-remote.remote-containers
 code --install-extension ms-vscode-remote.remote-wsl
 code --install-extension ms-vscode.atom-keybindings

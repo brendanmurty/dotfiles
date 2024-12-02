@@ -8,7 +8,7 @@ code --install-extension dunstontc.vscode-docker-syntax
 code --install-extension editorconfig.editorconfig
 code --install-extension esbenp.prettier-vscode
 code --install-extension fabiospampinato.vscode-diff
-code --install-extension golang.go
+code --install-extension github.vscode-github-actions
 code --install-extension irongeek.vscode-env
 code --install-extension mechatroner.rainbow-csv
 code --install-extension mohsen1.prettify-json

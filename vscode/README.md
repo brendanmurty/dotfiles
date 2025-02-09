@@ -4,8 +4,8 @@ Here are the contents of my [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Usage
 
-1. Purchase your own license for the `Regular` variant of the [IO font by Mass-Driver](https://io.mass-driver.com/) and install the OTF file on your machine
-2. Install [VS Code]((https://code.visualstudio.com/)), open it and wait for it to load
+1. Download and install the [CommitMono](https://commitmono.com/) custom font
+2. Install [VS Code](https://code.visualstudio.com/), open it and wait for it to load
 3. If you're using macOS, you have to press `Cmd+Shift+P` and select the `Shell Command: Install 'code' command in PATH` 
 4. Close VS Code so that the settings files are initialised
 5. Open Terminal

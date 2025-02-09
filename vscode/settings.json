@@ -7,10 +7,9 @@
   "editor.autoClosingBrackets": "never",
   "editor.autoClosingQuotes": "never",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.detectIndentation": false,
-  "editor.fontFamily": "MD IO Regular",
+  "editor.fontFamily": "CommitMono",
   "editor.fontLigatures": false,
-  "editor.fontSize": 20,
+  "editor.fontSize": 22,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
@@ -52,8 +51,8 @@
   "indentRainbow.errorColor": "rgba(128,32,32,0.5)",
   "indentRainbow.tabmixColor": "rgba(128,32,96,0.5)",
   "javascript.validate.enable": false,
-  "markdown.preview.fontFamily": "\"MD IO Regular\"",
-  "markdown.preview.fontSize": 20,
+  "markdown.preview.fontFamily": "CommitMono",
+  "markdown.preview.fontSize": 22,
   "prettier.requireConfig": true,
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "off",
@@ -112,7 +111,7 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
-  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.fontSize": 20,
   "terminal.integrated.profiles.windows": {
     "Git Bash": {
       "path": "C:\\Program Files\\Git\\bin\\bash.exe"
@@ -121,7 +120,7 @@
       "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
     }
   },
-  "terminal.integrated.fontFamily": "\"MD IO Regular\"",
+  "terminal.integrated.fontFamily": "CommitMono Regular",
   "terminal.integrated.scrollback": 2500,
   "terminal.integrated.tabs.defaultColor": "terminal.ansiCyan",
   "terminal.integrated.tabStopWidth": 4,

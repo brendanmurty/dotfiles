@@ -14,7 +14,7 @@ alias la='ls -lah'
 
 ## Cleaner bash command history
 
-alias historyclean='history | cut -c 8-'
+alias hist='history | cut -c 8-'
 
 ## Return the public IPv4 address for the local machine
 
@@ -24,4 +24,3 @@ alias whatismyip='dig +short myip.opendns.com @resolver1.opendns.com'
 
 alias python='python3'
 alias pip='pip3'
-

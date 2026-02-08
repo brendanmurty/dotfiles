@@ -1,8 +1,7 @@
-# Apply customised configuration files
-touch ~/.gitconfig ~/.gitignore
+# Safely apply customised configuration file
 
-cp ~/.gitconfig ~/.gitconfig.before-dotfiles-base.bak
-cp ~/.gitignore ~/.gitignore.before-dotfiles-base.bak
+touch ~/.gitconfig
+
+cp ~/.gitconfig ~/.gitconfig.before-dotfiles.bak
 
 cat custom.gitconfig >> ~/.gitconfig
-cat custom.gitignore >> ~/.gitignore

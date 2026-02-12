@@ -159,6 +159,7 @@
     "dock": "bottom",
     "default_height": 350,
     "max_scroll_history_lines": 10000,
+    "working_directory": "current_file_directory",
   },
   "project_panel": {
     "scrollbar": {

@@ -7,8 +7,8 @@
 #   - Requires a Linux system with the rclone package installed
 #   - Requires an existing Rclone remote config, more info at:
 #     https://rclone.org/commands/rclone_config
-#   - For the first run, update the rclone bisync params: add "--resync", remove "--check-access"
-#   - For subsequent runs, update the rclone bisync params: remove "--resync", add "--check-access"
+#   - For the first run: bash /path/to/this/rclone-sync.sh initial
+#   - For subsequent runs: bash /path/to/this/rclone-sync.sh standard
 #   - View a running log of the sync process: tail -n 50 -f ./rclone-sync.log
 #   - Force quit all Rclone processes: sudo killall rclone
 #
@@ -30,14 +30,23 @@ echo "Enabled by '$USER' from '$HOSTNAME'." >> "$LOCAL_SYNC_DIR/$RCLONE_CHECK_FI
 rclone touch "$LOCAL_SYNC_DIR/$RCLONE_CHECK_FILE"
 
 # Fix local sync dir ownership
+
 chown -R "$LOCAL_SYNC_DIR_OWNER_USER:$LOCAL_SYNC_DIR_OWNER_USER" "$LOCAL_SYNC_DIR"
+
+# Configure the sync mode
+
+if [ "$1" == "initial" ]; then
+  SYNC_MODE="--resync"
+else
+  SYNC_MODE="--check-access"
+fi
 
 # Run the Rclone Bisync command in the background
 
 nohup rclone bisync \
   "$LOCAL_SYNC_DIR" \
   "$RCLONE_REMOTE_NAME:/" \
-  --check-access \
+  $SYNC_MODE \
   --check-filename "$RCLONE_CHECK_FILE" \
   --workdir "$HOME/.rclone-sync" \
   --create-empty-src-dirs \

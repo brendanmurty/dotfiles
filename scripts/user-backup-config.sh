@@ -3,9 +3,9 @@
 # Backup a linux User's main config files
 #
 
-SCRIPT_PATH="$(dirname "$(readlink -f "$0")")"
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 
-LOG_FILE="$SCRIPT_PATH/user-backup-config.log"
+LOG_FILE="$SCRIPT_DIR/user-backup-config.log"
 LOG_FMT="+%Y-%m-%d %H:%M:%S"
 touch $LOG_FILE
 

@@ -7,10 +7,10 @@
 #  - First login manually and complete any two factor auth via: ./icloudpd-xxx --username xxx --auth-only
 #
 
-SCRIPT_PATH="$(dirname "$(readlink -f "$0")")"
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 
 LOG_DATE_FORMAT="+%Y%m%d-%H%M%S"
-LOG_FILE="$SCRIPT_PATH/backup-icloud-photos.log"
+LOG_FILE="$SCRIPT_DIR/backup-icloud-photos.log"
 touch "$LOG_FILE"
 
 cp -n "$SCRIPT_DIR/backup-icloud-photos.sample.env" "$SCRIPT_DIR/backup-icloud-photos.env"
@@ -18,7 +18,7 @@ source "$SCRIPT_DIR/backup-icloud-photos.env"
 
 # To update this, get the newer version with the name of 'icloudpd-xxxx-linux-amd64',
 # copy that file in to this dir, named as set below line, and 'chmod +x' that file
-ICLOUDPD_BIN="$SCRIPT_PATH/backup-icloud-photos-icloudpd"
+ICLOUDPD_BIN="$SCRIPT_DIR/backup-icloud-photos-icloudpd"
 
 # Run the command using the required parameters
 $ICLOUDPD_BIN \

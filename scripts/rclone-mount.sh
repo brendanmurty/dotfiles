@@ -5,9 +5,9 @@
 #   - Requires an existing Rclone remote config ready to use
 #
 
-SCRIPT_PATH=$(dirname "$(realpath "$0")")
+SCRIPT_DIR=$(dirname "$(realpath "$0")")
 
-LOG_FILE="$SCRIPT_PATH/rclone-mount.log"
+LOG_FILE="$SCRIPT_DIR/rclone-mount.log"
 touch "$LOG_FILE"
 
 cp -n "$SCRIPT_DIR/rclone-mount.sample.env" "$SCRIPT_DIR/rclone-mount.env"

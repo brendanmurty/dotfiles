@@ -49,9 +49,13 @@ cp -r "$SOURCE_DIR/.local/share/gnome-shell/extensions" "$BACKUP_DIR/.local/shar
 cp -r "$SOURCE_DIR/.local/share/applications" "$BACKUP_DIR/.local/share/applications"
 cp -r "$SOURCE_DIR/.local/share/fonts" "$BACKUP_DIR/.local/share/fonts"
 
+# If cron is installed, save a copy of the user's cron items
+
 if command -v crontab >/dev/null 2>&1 ; then
   echo $(sudo crontab -l -u "$SOURCE_USER_NAME") > "$BACKUP_DIR/crontab.txt"
 fi
+
+# Save a copy of the file listing, so symlink paths are logged
 
 ls -lah "$SOURCE_DIR" > "$BACKUP_DIR/list.txt"
 

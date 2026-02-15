@@ -54,7 +54,9 @@ zip \
   -x ".steam/*" \
   -x ".var/app/io.missioncenter.MissionCenter/*" \
   -x "Backups/*" \
+  -x "Drive/*" \
   -x "Dropbox/*" \
+  -x "Synced/*" \
   -x "Games/*" \
   -x "Machines/*" \
   -x "**/node_modules/*" \

@@ -1,14 +1,13 @@
 # Safely apply customised configuration files
 
-touch ~/.bash_aliases ~/.bash_profile ~/.bash_prompt
+touch "$HOME/.bash_aliases" "$HOME/.bash_profile" "$HOME/.bash_prompt"
 
-cp ~/.bash_aliases ~/.bash_aliases.before-dotfiles.bak
-cp ~/.bash_prompt ~/.bash_prompt.before-dotfiles.bak
+cp "$HOME/.bash_aliases" "$HOME/.bash_aliases.before-dotfiles.bak"
+cp "$HOME/.bash_profile" "$HOME/.bash_profile.before-dotfiles.bak"
+cp "$HOME/.bash_prompt" "$HOME/.bash_prompt.before-dotfiles.bak"
 
-cat custom.bash_aliases >> ~/.bash_aliases
-cat custom.bash_prompt >> ~/.bash_prompt
+cp "./custom.bash_aliases.sh" "$HOME/.bash_aliases"
+cp "./custom.bash_profile.sh" "$HOME/.bash_profile"
+cp "./custom.bash_prompt.sh" "$HOME/.bash_prompt"
 
-echo '. ~/.bash_aliases' >> ~/.bash_profile
-echo '. ~/.bash_prompt' >> ~/.bash_profile
-
-source ~/.bash_profile
+source "$HOME/.bash_profile"

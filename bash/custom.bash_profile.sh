@@ -1,0 +1,25 @@
+# ~/.bash_profile
+#  - User specific environment and startup programs
+#  - Add to the end of ~/.bashrc - source ~/.bash_profile
+
+# Add in customisations from other files
+
+if [ -f "$HOME/.bash_aliases" ]; then
+  source "$HOME/.bash_aliases"
+fi
+
+if [ -f "$HOME/.bash_prompt" ]; then
+  source "$HOME/.bash_prompt"
+fi
+
+# Load in user-level bin paths if they exist
+
+if [ -d "$HOME/bin" ] ; then
+  PATH="$HOME/bin:$PATH"
+fi
+
+if [ -d "$HOME/.local/bin" ] ; then
+  PATH="$HOME/.local/bin:$PATH"
+fi
+
+export HOMEBREW_NO_ENV_HINTS=1

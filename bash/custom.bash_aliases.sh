@@ -8,19 +8,28 @@ alias dockerdown='docker compose down'
 alias dockerps="docker ps --format 'table {{.Names}}\t{{.Status}}\t{{.ID}}\t{{.Image}}'"
 alias dockerst="docker stats --no-stream --format 'table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.Container}}'"
 
-## List all files in a directory with human-readable file sizes
+## Folder listing and searching
 
-alias la='ls -lah'
+alias grep='grep --color=auto'
+
+alias ls='ls --color=auto'
+alias l='ls -CF'
+alias ll='ls -alF'
+alias la='ls -A'
+alias lah='ls -lah'
 
 ## Cleaner bash command history
 
 alias hist='history | cut -c 8-'
+alias hist-search='history | cut -c 8- | grep'
 
 ## Return the public IPv4 address for the local machine
 
 alias whatismyip='dig +short myip.opendns.com @resolver1.opendns.com'
 
-## Python
+## Others
 
 alias python='python3'
 alias pip='pip3'
+
+alias zed='/usr/bin/zeditor'

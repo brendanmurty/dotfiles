@@ -81,4 +81,4 @@ zip \
 
 # Done
 
-echo $(date "$LOG_FMT") "Finished" >> $LOG_FILE
+echo $(date "$LOG_FMT") "Finished." >> $LOG_FILE

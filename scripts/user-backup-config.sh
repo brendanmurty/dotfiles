@@ -63,8 +63,4 @@ echo 'Some files in this folder are hidden by default.' > "$BACKUP_DIR/README.tx
 
 # Done
 
-if [[ $? -eq 0 ]]; then
-  echo $(date "$LOG_FMT") "Completed - Config backup saved to '$BACKUP_DIR'." >> $LOG_FILE
-else
-  echo $(date "$LOG_FMT") "Error - Config backup failed, please check output above." >> $LOG_FILE
-fi
+echo $(date "$LOG_FMT") "Finished." >> $LOG_FILE

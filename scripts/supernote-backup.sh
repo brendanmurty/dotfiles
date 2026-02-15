@@ -43,10 +43,6 @@ mkdir -p $BACKUP_DIR
 cd $SOURCE_DIR
 zip -qr $BACKUP_PATH .
 
-# Done, print the relevant message
+# Done
 
-if [[ $? -eq 0 ]]; then
-  echo $(date "$LOG_FMT") "Completed - Backup saved to '$BACKUP_PATH'." >> $LOG_FILE
-else
-  echo $(date "$LOG_FMT") "Error - Backup failed, please check output above." >> $LOG_FILE
-fi
+echo $(date "$LOG_FMT") "Finished." >> $LOG_FILE

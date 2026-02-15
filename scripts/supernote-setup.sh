@@ -53,4 +53,4 @@ nohup setsid \
   -p "Supernote Partner App" \
   >/dev/null 2>&1 &
 
-echo $(date "$LOG_FMT") "INFO done" >> "$LOG_FILE"
+echo $(date "$LOG_FMT") "INFO Finished." >> "$LOG_FILE"

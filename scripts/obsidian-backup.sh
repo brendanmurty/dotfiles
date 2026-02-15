@@ -39,8 +39,4 @@ zip -qr $BACKUP_PATH .
 
 # Done
 
-if [[ $? -eq 0 ]]; then
-  echo $(date "$LOG_FMT") "Done - Backup saved to '$BACKUP_PATH'." >> "$LOG_FILE"
-else
-  echo $(date "$LOG_FMT") "Done - Error: backup failed, please check output above." >> "$LOG_FILE"
-fi
+echo $(date "$LOG_FMT") "Finished." >> "$LOG_FILE"

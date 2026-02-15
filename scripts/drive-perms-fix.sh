@@ -33,4 +33,4 @@ sudo chown -R "$USER_NAME2":"$GROUP_NAME" "$DIR_PATH/Docker/$USER_NAME2"
 # Allow read and write access to the whole dir tree for the right users
 sudo chmod -R 777 "$DIR_PATH"
 
-echo $(date "$LOG_FMT") 'Done' >> "$LOG_FILE"
+echo $(date "$LOG_FMT") 'Finished.' >> "$LOG_FILE"

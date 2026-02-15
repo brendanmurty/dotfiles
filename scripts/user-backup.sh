@@ -31,7 +31,7 @@ fi
 
 # Start backup process
 
-echo $(date "$LOG_FMT") "Starting backup of '$SOURCE_DIR' to '$BACKUP_PATH'..." >> $LOG_FILE
+echo $(date "$LOG_FMT") "Starting backup of '$SOURCE_DIR' to '$BACKUP_PATH'" >> $LOG_FILE
 
 mkdir -p $BACKUP_DIR
 
@@ -79,8 +79,4 @@ zip \
 
 # Done
 
-if [[ $? -eq 0 ]]; then
-  echo $(date "$LOG_FMT") "Completed - Backup saved to '$BACKUP_PATH'." >> $LOG_FILE
-else
-  echo $(date "$LOG_FMT") "Error - Backup failed, please check output above." >> $LOG_FILE
-fi
+echo $(date "$LOG_FMT") "Finished" >> $LOG_FILE

@@ -21,13 +21,18 @@ touch "$LOG_FILE"
 cp -n "$SCRIPT_DIR/rclone-sync.env.sample" "$SCRIPT_DIR/rclone-sync.env"
 source "$SCRIPT_DIR/rclone-sync.env"
 
-RCLONE_CHECK_FILE=".rclone.bisync.enabled.txt"
+# Setup sync check file
 
+RCLONE_CHECK_FILE=".rclone.bisync.enabled.txt"
 touch "$LOCAL_SYNC_DIR/$RCLONE_CHECK_FILE"
 echo "WARNING - RCLONE BISYNC ENABLED" > "$LOCAL_SYNC_DIR/$RCLONE_CHECK_FILE"
 echo "Enabled by '$USER' from '$HOSTNAME'." >> "$LOCAL_SYNC_DIR/$RCLONE_CHECK_FILE"
-
 rclone touch "$LOCAL_SYNC_DIR/$RCLONE_CHECK_FILE"
+
+# Fix local sync dir ownership
+chown -R "$LOCAL_SYNC_DIR_OWNER_USER:$LOCAL_SYNC_DIR_OWNER_USER" "$LOCAL_SYNC_DIR"
+
+# Run the Rclone Bisync command in the background
 
 nohup rclone bisync \
   "$LOCAL_SYNC_DIR" \

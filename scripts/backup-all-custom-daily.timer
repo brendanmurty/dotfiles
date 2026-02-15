@@ -1,0 +1,15 @@
+;
+; Service Timer: Runs on user login
+;   - Script in ExecStart must be exec enabled - chmod a+x /home/example/path/to/script.sh
+;   - Update content here, then copy to "/etc/systemd/system/backup-all-custom-daily.service"
+;   - Then run: sudo systemctl daemon-reload && sudo systemctl enable --now backup-all-custom-daily.timer
+;
+[Unit]
+Description=Run backup-all-custom-daily.service daily at 7pm
+
+[Timer]
+OnCalendar=*-*-* 19:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -12,7 +12,10 @@ vendor/
 .env
 *.env
 *.env.*
+!*.sample.env
 *.key
+
+*.log
 
 tmp/
 .tags

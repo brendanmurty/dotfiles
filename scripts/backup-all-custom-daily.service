@@ -1,0 +1,11 @@
+;
+; Service: Runs on user login
+;   - Script in ExecStart must be exec enabled - chmod a+x /home/example/path/to/script.sh
+;   - Update content here, then copy to "/etc/systemd/system/backup-all-custom-daily.service"
+;   - Then edit "backup-all-custom-daily.timer"
+;
+[Unit]
+Description=Run backup-all.sh
+[Service]
+Type=oneshot
+ExecStart=/home/bob/scripts/backup-all.sh

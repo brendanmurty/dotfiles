@@ -15,6 +15,8 @@ touch "$LOG_FILE"
 cp -n "$SCRIPT_DIR/supernote-backup.sample.env" "$SCRIPT_DIR/supernote-backup.env"
 source "$SCRIPT_DIR/supernote-backup.env"
 
+mkdir -p "$BACKUP_DIR"
+
 BACKUP_FILE="supernote_$(date +%Y%m%d-%H%M%S).zip"
 BACKUP_PATH="$BACKUP_DIR/$BACKUP_FILE"
 

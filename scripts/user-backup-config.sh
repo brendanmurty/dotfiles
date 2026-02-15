@@ -12,6 +12,7 @@ touch $LOG_FILE
 cp -n "$SCRIPT_DIR/user-backup-config.sample.env" "$SCRIPT_DIR/user-backup-config.env"
 source "$SCRIPT_DIR/user-backup-config.env"
 
+mkdir -p "$BACKUP_DIR"
 BACKUP_FMT="+%Y%m%d"
 BACKUP_DIR="$BACKUP_DIR/"$(date "$BACKUP_FMT")
 

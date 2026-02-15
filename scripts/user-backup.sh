@@ -10,18 +10,17 @@
 
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 
+LOG_FILE="$SCRIPT_DIR/user-backup.log"
+LOG_FMT="+%Y-%m-%d %H:%M:%S"
+touch "$LOG_FILE"
+
 cp -n "$SCRIPT_DIR/user-backup.sample.env" "$SCRIPT_DIR/user-backup.env"
 source "$SCRIPT_DIR/user-backup.env"
 
+mkdir -p "$BACKUP_DIR"
+
 BACKUP_FILE="user_$(date +%Y%m%d-%H%M%S).zip"
-
 BACKUP_PATH="$BACKUP_DIR/$BACKUP_FILE"
-
-LOG_FILE="$SCRIPT_DIR/user-backup.log"
-rm -rf "$LOG_FILE"
-touch "$LOG_FILE"
-
-LOG_FMT="+%Y-%m-%d %H:%M:%S"
 
 # Exit if the source directory doesn't exist
 

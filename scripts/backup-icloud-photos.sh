@@ -16,15 +16,19 @@ touch "$LOG_FILE"
 cp -n "$SCRIPT_DIR/backup-icloud-photos.sample.env" "$SCRIPT_DIR/backup-icloud-photos.env"
 source "$SCRIPT_DIR/backup-icloud-photos.env"
 
+mkdir -p "$BACKUP_DIR"
+
 # To update this, get the newer version with the name of 'icloudpd-xxxx-linux-amd64',
 # copy that file in to this dir, named as set below line, and 'chmod +x' that file
+
 ICLOUDPD_BIN="$SCRIPT_DIR/backup-icloud-photos-icloudpd"
 
 # Run the command using the required parameters
+
 $ICLOUDPD_BIN \
   --username $ICLOUD_USERNAME \
   --password $ICLOUD_PASSWORD \
   --auto-delete \
-  --directory $BACKUP_PATH \
+  --directory $BACKUP_DIR \
   --cookie-directory $ICLOUDPD_AUTH_DIR \
   > "$LOG_FILE"

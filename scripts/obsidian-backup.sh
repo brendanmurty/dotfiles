@@ -15,6 +15,8 @@ touch "$LOG_FILE"
 cp -n "$SCRIPT_DIR/obsidian-backup.sample.env" "$SCRIPT_DIR/obsidian-backup.env"
 source "$SCRIPT_DIR/obsidian-backup.env"
 
+mkdir -p "$BACKUP_DIR"
+
 BACKUP_FILE=obsidian_$(date +%Y%m%d-%H%M%S).zip
 BACKUP_PATH=$BACKUP_DIR/$BACKUP_FILE
 

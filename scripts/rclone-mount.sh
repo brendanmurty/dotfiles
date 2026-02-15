@@ -13,6 +13,8 @@ touch "$LOG_FILE"
 cp -n "$SCRIPT_DIR/rclone-mount.sample.env" "$SCRIPT_DIR/rclone-mount.env"
 source "$SCRIPT_DIR/rclone-mount.env"
 
+mkdir -p "$LOCAL_SYNC_DIR"
+
 rclone mount \
   $RCLONE_REMOTE_NAME:/ \
   $LOCAL_SYNC_DIR \

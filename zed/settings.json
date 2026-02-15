@@ -1,4 +1,9 @@
 {
+  "languages": {
+    "Python": {
+      "format_on_save": "off",
+    },
+  },
   "outline_panel": {
     "auto_fold_dirs": false,
   },
@@ -51,7 +56,7 @@
   "message_editor": {
     "auto_replace_emoji_shortcode": false,
   },
-  "autosave": "on_focus_change",
+  "autosave": "off",
   "show_whitespaces": "trailing",
   "tab_size": 2,
   "agent_ui_font_size": 20.0,

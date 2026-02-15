@@ -50,6 +50,10 @@ fi
 
 ls -lah "$SOURCE_DIR" > ".user-dir-list.txt"
 
+# Save a copy of the installed Flatpak apps
+
+flatpak list --app > ".flatpak-app-list.txt"
+
 # Run the ZIP command with specific inclusions and exclusions
 
 zip \
@@ -59,6 +63,7 @@ zip \
   --password "$BACKUP_FILE_PASSWORD" \
   "$BACKUP_PATH" \
   .grub-config.txt \
+  .flatpak-app-list.txt \
   .user-crontab.txt \
   .user-dir-list.txt \
   .bash_* \

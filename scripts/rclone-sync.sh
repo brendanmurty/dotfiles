@@ -33,8 +33,8 @@ nohup rclone bisync \
   "$LOCAL_SYNC_DIR" \
   "$RCLONE_REMOTE_NAME:/" \
   --check-access \
-  --check-filename $RCLONE_CHECK_FILE \
-  --workdir $HOME/.rclone-sync \
+  --check-filename "$RCLONE_CHECK_FILE" \
+  --workdir "$HOME/.rclone-sync" \
   --create-empty-src-dirs \
   --max-delete 10 \
   --resilient \
@@ -49,5 +49,5 @@ nohup rclone bisync \
   --max-lock 2m \
   --drive-use-trash=true \
   --delete-after \
-  --log-file $LOG_FILE \
+  --log-file "$LOG_FILE" \
   > /dev/null 2>&1 &

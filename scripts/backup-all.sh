@@ -10,8 +10,6 @@
 
 SCRIPTS_DIR=$(dirname "$(realpath "$0")")
 
-bash "$SCRIPTS_DIR/user-backup-config.sh" || true
-
 bash "$SCRIPTS_DIR/user-backup.sh" || true
 
 bash "$SCRIPTS_DIR/obsidian-backup.sh" || true

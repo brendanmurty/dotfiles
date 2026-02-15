@@ -34,51 +34,60 @@ fi
 echo $(date "$LOG_FMT") "Starting backup of '$SOURCE_DIR' to '$BACKUP_PATH'" >> $LOG_FILE
 
 mkdir -p $BACKUP_DIR
-
 cd $SOURCE_DIR
 
+# Create a copy of the current Grub config file
+
+cp -f "/etc/default/grub" ".grub-config.txt"
+
+# If cron is installed, save a copy of the user's cron items
+
+if command -v crontab >/dev/null 2>&1 ; then
+  echo $(sudo crontab -l -u "$SOURCE_USER_NAME") > ".user-crontab.txt"
+fi
+
+# Save a copy of the file listing, so symlink paths are logged
+
+ls -lah "$SOURCE_DIR" > ".user-dir-list.txt"
+
+# Run the ZIP command with specific inclusions and exclusions
+
 zip \
-  -q \
-  -y \
-  -r \
-  -P "$BACKUP_FILE_PASSWORD" \
+  --symlinks \
+  --recurse-paths \
+  --quiet \
+  --password "$BACKUP_FILE_PASSWORD" \
   "$BACKUP_PATH" \
-  . \
-  -x ".cache/*" \
-  -x "**/cache/*" \
-  -x ".1password/*" \
-  -x ".ssh/*" \
-  -x ".gnugpg/*" \
-  -x ".password-store/*" \
-  -x ".pki/*" \
-  -x ".nv/*" \
-  -x ".steam/*" \
-  -x ".var/app/io.missioncenter.MissionCenter/*" \
-  -x "Backups/*" \
-  -x "Drive/*" \
-  -x "Dropbox/*" \
-  -x "Synced/*" \
-  -x "Games/*" \
-  -x "Machines/*" \
+  .grub-config.txt \
+  .user-crontab.txt \
+  .user-dir-list.txt \
+  .bash_* \
+  .profile \
+  .face \
+  .gitconfig \
+  .gitignore \
+  .config/autostart/* \
+  .config/dconf/* \
+  .config/nautilus/* \
+  .config/rclone/* \
+  .config/systemd/* \
+  .config/zed/* \
+  .local/bin/* \
+  .local/share/applications/* \
+  .local/share/backgrounds/* \
+  .local/share/gnome-shell/extensions/* \
+  .local/share/fonts/* \
+  .local/share/sounds/* \
+  Git/* \
+  -x ".bash_history" \
+  -x ".bash_logout" \
   -x "**/node_modules/*" \
   -x "**/.git/*" \
-  -x "Steam/*" \
-  -x ".local/share/Steam/*" \
-  -x ".local/share/zed/*" \
-  -x ".local/zed.app/*" \
-  -x ".docker/*" \
-  -x ".dropbox/*" \
-  -x ".dropbox-dist/*" \
-  -x ".steam/*" \
-  -x ".var/app/com.discordapp.Discord/*" \
-  -x ".config/google-chrome/*" \
-  -x ".steampath" \
-  -x ".steampid" \
+  -x "**/cache/*" \
   -x "*.sock" \
   -x "*.lock" \
   -x "*.pipe" \
-  --log-append \
-  --logfile-path $LOG_FILE
+  >/dev/null 2>&1
 
 # Done
 

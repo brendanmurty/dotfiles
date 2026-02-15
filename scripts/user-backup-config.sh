@@ -9,7 +9,7 @@ LOG_FILE="$SCRIPT_DIR/user-backup-config.log"
 LOG_FMT="+%Y-%m-%d %H:%M:%S"
 touch $LOG_FILE
 
-cp -n "$SCRIPT_DIR/user-backup-config.sample.env" "$SCRIPT_DIR/user-backup-config.env"
+cp -n "$SCRIPT_DIR/user-backup-config.env.sample" "$SCRIPT_DIR/user-backup-config.env"
 source "$SCRIPT_DIR/user-backup-config.env"
 
 mkdir -p "$BACKUP_DIR"

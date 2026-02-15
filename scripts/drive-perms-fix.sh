@@ -9,7 +9,7 @@ LOG_FILE="$SCRIPT_DIR/drive-perms-fix.log"
 LOG_FMT="+%Y-%m-%d %H:%M:%S"
 touch "$LOG_FILE"
 
-cp -n "$SCRIPT_DIR/drive-perms-fix.sample.env" "$SCRIPT_DIR/drive-perms-fix.env"
+cp -n "$SCRIPT_DIR/drive-perms-fix.env.sample" "$SCRIPT_DIR/drive-perms-fix.env"
 source "$SCRIPT_DIR/drive-perms-fix.env"
 
 echo $(date "$LOG_FMT") 'Start' > "$LOG_FILE"

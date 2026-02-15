@@ -18,7 +18,7 @@ SCRIPT_DIR=$(dirname "$(realpath "$0")")
 LOG_FILE="$SCRIPT_DIR/rclone-sync.log"
 touch "$LOG_FILE"
 
-cp -n "$SCRIPT_DIR/rclone-sync.sample.env" "$SCRIPT_DIR/rclone-sync.env"
+cp -n "$SCRIPT_DIR/rclone-sync.env.sample" "$SCRIPT_DIR/rclone-sync.env"
 source "$SCRIPT_DIR/rclone-sync.env"
 
 RCLONE_CHECK_FILE=".rclone.bisync.enabled.txt"

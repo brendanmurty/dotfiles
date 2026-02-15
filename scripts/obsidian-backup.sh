@@ -12,7 +12,7 @@ LOG_FILE="$SCRIPT_DIR/obsidian-backup.log"
 LOG_FMT="+%Y-%m-%d %H:%M:%S"
 touch "$LOG_FILE"
 
-cp -n "$SCRIPT_DIR/obsidian-backup.sample.env" "$SCRIPT_DIR/obsidian-backup.env"
+cp -n "$SCRIPT_DIR/obsidian-backup.env.sample" "$SCRIPT_DIR/obsidian-backup.env"
 source "$SCRIPT_DIR/obsidian-backup.env"
 
 mkdir -p "$BACKUP_DIR"

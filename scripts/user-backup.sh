@@ -14,7 +14,7 @@ LOG_FILE="$SCRIPT_DIR/user-backup.log"
 LOG_FMT="+%Y-%m-%d %H:%M:%S"
 touch "$LOG_FILE"
 
-cp -n "$SCRIPT_DIR/user-backup.sample.env" "$SCRIPT_DIR/user-backup.env"
+cp -n "$SCRIPT_DIR/user-backup.env.sample" "$SCRIPT_DIR/user-backup.env"
 source "$SCRIPT_DIR/user-backup.env"
 
 mkdir -p "$BACKUP_DIR"
@@ -41,7 +41,8 @@ zip \
   -q \
   -y \
   -r \
-  $BACKUP_PATH \
+  -P "$BACKUP_FILE_PASSWORD" \
+  "$BACKUP_PATH" \
   . \
   -x ".cache/*" \
   -x "**/cache/*" \

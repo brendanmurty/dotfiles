@@ -40,6 +40,7 @@ cp "$SOURCE_DIR/.bash"* "$BACKUP_DIR"
 cp "$SOURCE_DIR/.profile" "$BACKUP_DIR"
 cp "$SOURCE_DIR/.git"* "$BACKUP_DIR"
 cp "$SOURCE_DIR/.face"* "$BACKUP_DIR"
+cp "$SOURCE_DIR/.config/rclone.conf" "$BACKUP_DIR/.config/rclone.conf"
 
 cp -r "$SOURCE_DIR/.config/autostart" "$BACKUP_DIR/.config/autostart"
 cp -r "$SOURCE_DIR/.config/systemd" "$BACKUP_DIR/.config/systemd"

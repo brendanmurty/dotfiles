@@ -9,6 +9,7 @@
 #     https://rclone.org/commands/rclone_config
 #   - For the first run, update the rclone bisync params: add "--resync", remove "--check-access"
 #   - For subsequent runs, update the rclone bisync params: remove "--resync", add "--check-access"
+#   - View a running log of the sync process: tail -n 50 -f ./rclone-sync.log
 #   - Force quit all Rclone processes: sudo killall rclone
 #
 

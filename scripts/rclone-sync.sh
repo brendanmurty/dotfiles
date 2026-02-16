@@ -29,10 +29,6 @@ echo "WARNING - RCLONE BISYNC ENABLED" > "$LOCAL_SYNC_DIR/$RCLONE_CHECK_FILE"
 echo "Enabled by '$USER' from '$HOSTNAME'." >> "$LOCAL_SYNC_DIR/$RCLONE_CHECK_FILE"
 rclone touch "$LOCAL_SYNC_DIR/$RCLONE_CHECK_FILE"
 
-# Fix local sync dir ownership
-
-chown -R "$LOCAL_SYNC_DIR_OWNER_USER:$LOCAL_SYNC_DIR_OWNER_USER" "$LOCAL_SYNC_DIR"
-
 # Configure the sync mode
 
 if [ "$1" == "initial" ]; then

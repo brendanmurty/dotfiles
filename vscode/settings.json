@@ -199,5 +199,5 @@
   "screencastMode.fontSize": 35,
   "git.branchSortOrder": "alphabetically",
   "git.openAfterClone": "alwaysNewWindow",
-  "git.untrackedChanges": "separate",
+  "git.untrackedChanges": "separate"
 }

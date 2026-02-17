@@ -20,21 +20,6 @@ touch "$LOG_FILE"
 cp -n "$SCRIPT_DIR/rclone-gdrive-sync.env.sample" "$SCRIPT_DIR/rclone-gdrive-sync.env"
 source "$SCRIPT_DIR/rclone-gdrive-sync.env"
 
-# Customise the local directory icons
-
-SYNC_ICONS="$LOCAL_SYNC_DIR/.icons"
-rm -rf "$SYNC_ICONS"
-mkdir -p "$SYNC_ICONS"
-cp /usr/share/icons/Adwaita/scalable/places/* "$SYNC_ICONS/"
-
-gio set -t string "$LOCAL_SYNC_DIR" metadata::custom-icon "file://$SYNC_ICONS/user-bookmarks.svg"
-gio set -t string "$LOCAL_SYNC_DIR/Desktop" metadata::custom-icon "file://$SYNC_ICONS/folder-desktop.svg"
-gio set -t string "$LOCAL_SYNC_DIR/Documents" metadata::custom-icon "file://$SYNC_ICONS/folder-documents.svg"
-gio set -t string "$LOCAL_SYNC_DIR/Images" metadata::custom-icon "file://$SYNC_ICONS/folder-pictures.svg"
-gio set -t string "$LOCAL_SYNC_DIR/Documents/Templates" metadata::custom-icon "file://$SYNC_ICONS/folder-templates.svg"
-gio set -t string "$LOCAL_SYNC_DIR/Music" metadata::custom-icon "file://$SYNC_ICONS/folder-music.svg"
-gio set -t string "$LOCAL_SYNC_DIR/Shared" metadata::custom-icon "file://$SYNC_ICONS/folder-publicshare.svg"
-
 # Run the rclone bisync command in the background
 
 nohup rclone bisync \

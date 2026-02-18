@@ -8,6 +8,10 @@ if [ -f "$HOME/.bash_aliases" ]; then
   source "$HOME/.bash_aliases"
 fi
 
+if [ -f "$HOME/.git-prompt.sh" ]; then
+  source "$HOME/.git-prompt.sh"
+fi
+
 if [ -f "$HOME/.bash_prompt" ]; then
   source "$HOME/.bash_prompt"
 fi

@@ -1,4 +1,8 @@
 {
+  "ui_font_family": ".ZedSans",
+  "ui_font_weight": 500.0,
+  "agent_ui_font_size": 18.0,
+  "agent_buffer_font_size": 18.0,
   "languages": {
     "Python": {
       "format_on_save": "off",
@@ -59,9 +63,10 @@
   "autosave": "off",
   "show_whitespaces": "trailing",
   "tab_size": 2,
-  "agent_ui_font_size": 20.0,
   "edit_predictions": {
-    "disabled_globs": ["~/.**"],
+    "disabled_globs": [
+      "~/.**"
+    ],
     "mode": "subtle",
   },
   "toolbar": {
@@ -101,7 +106,11 @@
     "diagnostics": false,
     "metrics": false,
   },
-  "file_scan_exclusions": ["**/.git", "**/.DS_Store", "**/Thumbs.db"],
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.DS_Store",
+    "**/Thumbs.db"
+  ],
   "calls": {
     "mute_on_join": true,
   },
@@ -126,18 +135,24 @@
   "agent": {
     "enable_feedback": false,
     "default_model": {
-      "provider": "zed.dev",
-      "model": "gpt-5.2",
+      "enable_thinking": false,
+      "provider": "copilot_chat",
+      "model": "claude-opus-4.5",
     },
     "model_parameters": [],
   },
+  "formatter": "language_server",
   "buffer_line_height": "standard",
   "buffer_font_weight": 500.0,
   "ui_font_size": 18.0,
   "line_indicator_format": "long",
   "buffer_font_size": 20.0,
-  "diagnostics": { "button": false },
-  "collaboration_panel": { "button": false },
+  "diagnostics": {
+    "button": false
+  },
+  "collaboration_panel": {
+    "button": false
+  },
   "title_bar": {
     "show_branch_icon": true,
     "show_menus": true,
@@ -218,7 +233,15 @@
       "tab_bar.background": "#000",
       "terminal.background": "#000",
       "terminal.foreground": "#fff",
-      "accents": ["#44BBA4", "#E7BB41", "#F16567", "#F16567", "#8F6593", "#F16567", "#A6B1E1"],
+      "accents": [
+        "#44BBA4",
+        "#E7BB41",
+        "#F16567",
+        "#F16567",
+        "#8F6593",
+        "#F16567",
+        "#A6B1E1"
+      ],
     },
   },
   "auto_install_extensions": {
@@ -245,11 +268,16 @@
         "json": {
           "schemas": [
             {
-              "fileMatch": ["deno.json", "deno.jsonc"],
+              "fileMatch": [
+                "deno.json",
+                "deno.jsonc"
+              ],
               "url": "https://raw.githubusercontent.com/denoland/deno/refs/heads/main/cli/schemas/config-file.v1.json",
             },
             {
-              "fileMatch": ["package.json"],
+              "fileMatch": [
+                "package.json"
+              ],
               "url": "https://www.schemastore.org/package",
             },
           ],
@@ -261,11 +289,16 @@
         "yaml": {
           "schemas": [
             {
-              "fileMatch": [".github/*.yml", ".github/**/*.yml"],
+              "fileMatch": [
+                ".github/*.yml",
+                ".github/**/*.yml"
+              ],
               "url": "https://www.schemastore.org/github-workflow",
             },
             {
-              "fileMatch": ["docker-compose.yml"],
+              "fileMatch": [
+                "docker-compose.yml"
+              ],
               "url": "https://raw.githubusercontent.com/compose-spec/compose-go/master/schema/compose-spec.json",
             },
           ],

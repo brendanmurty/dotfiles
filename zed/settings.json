@@ -77,10 +77,22 @@
   },
   "autosave": "off",
   "show_whitespaces": "trailing",
+  "whitespace_map": {
+    "space": "•",
+    "tab": "→",
+  },
   "tab_size": 2,
   "edit_predictions": {
     "disabled_globs": [
-      "~/.**"
+      "~/.**",
+      "**/.env",
+      "**/.env.*",
+      "**/.pem",
+      "**/.key",
+      "**/.cert",
+      "**/.crt",
+      "**/secrets.*",
+      "**/secrets*",
     ],
     "mode": "subtle",
   },
@@ -222,6 +234,9 @@
     "mode": "dark",
   },
   "excerpt_context_lines": 5,
+  "edit_predictions_disabled_in": [
+    "comment"
+  ],
   "theme_overrides": {
     "One Dark": {
       "background": "#000",

@@ -1,4 +1,19 @@
 {
+  "context_servers": {},
+  "agent_servers": {
+    "junie-acp": {
+      "type": "registry"
+    },
+    "mistral-vibe": {
+      "type": "registry"
+    },
+    "github-copilot": {
+      "type": "registry"
+    },
+    "cline": {
+      "type": "registry"
+    }
+  },
   "ui_font_family": ".ZedSans",
   "ui_font_weight": 500.0,
   "agent_ui_font_size": 18.0,
@@ -142,7 +157,9 @@
     "model_parameters": [],
   },
   "formatter": "language_server",
-  "buffer_line_height": "standard",
+  "buffer_line_height": {
+    "custom": 1.38
+  },
   "buffer_font_weight": 500.0,
   "ui_font_size": 18.0,
   "line_indicator_format": "long",
@@ -165,12 +182,13 @@
     "button": false,
   },
   "terminal": {
+    "blinking": "on",
     "scrollbar": {
       "show": "auto",
     },
     "copy_on_select": false,
     "font_weight": 500.0,
-    "font_size": 19.0,
+    "font_size": 18.0,
     "shell": {
       "program": "/bin/bash",
     },

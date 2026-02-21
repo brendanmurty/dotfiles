@@ -6,7 +6,8 @@
 #     - Setup new Bottle named 'Supernote'
 #     - Run the latest Supernote Partner App for Windows installer in that Bottle
 #     - Once installed, run that app in the Bottle
-#     - In the Bottles app, rename the 'supernote_partner' app to 'Supernote Partner App'
+#     - In the Bottles app, go to the Supernote bottle, and confirm the
+#       'supernote_partner' program is shown
 #     - Flatseal app (install via Flatpak): allow Bottles to access host filesystem and home files
 #     - Confirm the 'flatpak run' command below works
 #   - Ideally run this at startup on user login, delay by 15 seconds
@@ -50,7 +51,7 @@ nohup setsid \
   flatpak run \
   --command=bottles-cli com.usebottles.bottles \
   run -b "Supernote" \
-  -p "Supernote Partner App" \
+  -p "supernote_partner" \
   >/dev/null 2>&1 &
 
 echo $(date "$LOG_FMT") "INFO Finished." >> "$LOG_FILE"

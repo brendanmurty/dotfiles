@@ -39,9 +39,9 @@ fi
 
 echo $(date "$LOG_FMT") "Starting backup of '$SOURCE_DIR' to '$BACKUP_PATH'..." >> $LOG_FILE
 
-mkdir -p $BACKUP_DIR
+mkdir -p "$BACKUP_DIR"
 cd $SOURCE_DIR
-zip -qr $BACKUP_PATH .
+zip -qr "$BACKUP_PATH" "."
 
 # Done
 

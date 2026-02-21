@@ -17,8 +17,8 @@ source "$SCRIPT_DIR/obsidian-backup.env"
 
 mkdir -p "$BACKUP_DIR"
 
-BACKUP_FILE=obsidian_$(date +%Y%m%d-%H%M%S).zip
-BACKUP_PATH=$BACKUP_DIR/$BACKUP_FILE
+BACKUP_FILE="obsidian_$(date +%Y%m%d-%H%M%S).zip"
+BACKUP_PATH="$BACKUP_DIR/$BACKUP_FILE"
 
 echo $(date "$LOG_FMT") "Started script" >> "$LOG_FILE"
 
@@ -33,9 +33,9 @@ fi
 
 echo $(date "$LOG_FMT") "Starting backup of '$SOURCE_DIR' to '$BACKUP_PATH'..." >> "$LOG_FILE"
 
-mkdir -p $BACKUP_DIR
-cd $SOURCE_DIR
-zip -qr $BACKUP_PATH .
+mkdir -p "$BACKUP_DIR"
+cd "$SOURCE_DIR"
+zip -qr "$BACKUP_PATH" "."
 
 # Done
 

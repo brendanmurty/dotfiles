@@ -12,7 +12,7 @@ LOG_FILE="$SCRIPT_DIR/supernote-backup.log"
 LOG_FMT="+%Y-%m-%d %H:%M:%S"
 touch "$LOG_FILE"
 
-cp -n "$SCRIPT_DIR/supernote-backup.env.sample" "$SCRIPT_DIR/supernote-backup.env"
+cp --update=none "$SCRIPT_DIR/supernote-backup.env.sample" "$SCRIPT_DIR/supernote-backup.env"
 source "$SCRIPT_DIR/supernote-backup.env"
 
 mkdir -p "$BACKUP_DIR"

@@ -19,7 +19,7 @@ LOG_FILE="$SCRIPT_DIR/supernote-setup.log"
 LOG_FMT="+%Y-%m-%d %H:%M:%S"
 touch "$LOG_FILE"
 
-cp -n "$SCRIPT_DIR/supernote-setup.env.sample" "$SCRIPT_DIR/supernote-setup.env"
+cp --update=none "$SCRIPT_DIR/supernote-setup.env.sample" "$SCRIPT_DIR/supernote-setup.env"
 source "$SCRIPT_DIR/supernote-setup.env"
 
 # Exit if the source or target dirs doesn't exist

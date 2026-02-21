@@ -14,7 +14,7 @@ LOG_FILE="$SCRIPT_DIR/user-backup.log"
 LOG_FMT="+%Y-%m-%d %H:%M:%S"
 touch "$LOG_FILE"
 
-cp -n "$SCRIPT_DIR/user-backup.env.sample" "$SCRIPT_DIR/user-backup.env"
+cp --update=none "$SCRIPT_DIR/user-backup.env.sample" "$SCRIPT_DIR/user-backup.env"
 source "$SCRIPT_DIR/user-backup.env"
 
 mkdir -p "$BACKUP_DIR"

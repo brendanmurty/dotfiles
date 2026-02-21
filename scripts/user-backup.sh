@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 #
 # Backup a linux User
-#  - Makes a timestamped ZIP file backup of your entire User directory
-#  - Excludes some files and folders via "x" params in the "zip" command below
-#  - Saves symlinks as links, not as directories, so it assumes those directories are safe
+#  - Makes a timestamped and password protected ZIP file of some parts of your User directory
+#  - Include and exclude rules ("x" params) are set in the "zip" command below
+#  - Saves symlinks as links, not as directories
 #  - Saves output messages to the file set in LOG_FILE
 #  - Requires zip, install with: sudo apt install zip
 #

@@ -67,9 +67,10 @@ zip \
   --password "$BACKUP_FILE_PASSWORD" \
   "$BACKUP_PATH" \
   .grub-config.txt \
-  .flatpak-app-list.txt \
-  .user-crontab.txt \
-  .user-dir-list.txt \
+  .app-list-flatpak.txt \
+  .app-list-snap.txt \
+  .crontab-user.txt \
+  .dir-list-user.txt \
   .bashrc \
   .bash_* \
   .profile \

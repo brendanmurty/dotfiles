@@ -43,16 +43,20 @@ cp -f "/etc/default/grub" ".grub-config.txt"
 # If cron is installed, save a copy of the user's cron items
 
 if command -v crontab >/dev/null 2>&1 ; then
-  echo $(sudo crontab -l -u "$SOURCE_USER_NAME") > ".user-crontab.txt"
+  echo $(sudo crontab -l -u "$SOURCE_USER_NAME") > ".crontab-user.txt"
 fi
 
 # Save a copy of the file listing, so symlink paths are logged
 
-ls -lah "$SOURCE_DIR" > ".user-dir-list.txt"
+ls -lah "$SOURCE_DIR" > ".dir-list-user.txt"
 
 # Save a copy of the installed Flatpak apps
 
-flatpak list --app > ".flatpak-app-list.txt"
+flatpak list --app > ".app-list-flatpak.txt"
+
+# Save a copy of the installed Snap apps
+
+snap list > ".app-list-snap.txt"
 
 # Run the ZIP command with specific inclusions and exclusions
 
@@ -66,6 +70,7 @@ zip \
   .flatpak-app-list.txt \
   .user-crontab.txt \
   .user-dir-list.txt \
+  .bashrc \
   .bash_* \
   .profile \
   .face \
@@ -83,9 +88,14 @@ zip \
   .local/share/gnome-shell/extensions/* \
   .local/share/fonts/* \
   .local/share/sounds/* \
+  .dconf/* \
+  .gtk-3.0/* \
+  .gtk-4.0/* \
+  .gnupg/* \
+  .password-store/* \
+  .pki/* \
+  .ssh/* \
   Git/* \
-  -x ".bash_history" \
-  -x ".bash_logout" \
   -x "**/node_modules/*" \
   -x "**/.git/*" \
   -x "**/cache/*" \

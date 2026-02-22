@@ -23,6 +23,10 @@ alias lah='ls -lah'
 alias hist='history | cut -c 8-'
 alias hist-search='history | cut -c 8- | grep'
 
+## Ubuntu based Linux system - Update all system and third-party apps
+
+alias updateall='sudo apt update && sudo apt upgrade && sudo snap refresh && flatpak update'
+
 ## Return the public IPv4 address for the local machine
 
 alias whatismyip='dig +short myip.opendns.com @resolver1.opendns.com'

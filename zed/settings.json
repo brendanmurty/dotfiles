@@ -160,11 +160,28 @@
   "disable_ai": false,
   "buffer_font_family": "CommitMono",
   "agent": {
+    "favorite_models": [
+      {
+        "provider": "zed.dev",
+        "model": "claude-sonnet-4-6",
+        "enable_thinking": false
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-sonnet-4.5",
+        "enable_thinking": false
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-opus-4.5",
+        "enable_thinking": false
+      }
+    ],
     "enable_feedback": false,
     "default_model": {
       "enable_thinking": false,
       "provider": "copilot_chat",
-      "model": "claude-opus-4.5",
+      "model": "claude-sonnet-4.5",
     },
     "model_parameters": [],
   },
@@ -280,6 +297,7 @@
   "auto_install_extensions": {
     "codeowners": true,
     "colored-zed-icons-theme": true,
+    "comment": true,
     "csv": true,
     "deno": true,
     "desktop": true,

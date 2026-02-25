@@ -21,7 +21,10 @@ echo 'alias brew="$BREW_DIR/.linuxbrew/bin/brew"' >> "$HOME/.bash_aliases"
 
 echo "BREW_DIR='$(echo $BREW_DIR)'" >> "$HOME/.bash_profile"
 echo 'export HOMEBREW_RELOCATE_BUILD_PREFIX="$BREW_DIR/.linuxbrew"' >> "$HOME/.bash_profile"
+echo 'export HOMEBREW_CELLAR="$BREW_DIR/.linuxbrew/Cellar"' >> "$HOME/.bash_profile"
+echo 'export HOMEBREW_PREFIX="$BREW_DIR/.linuxbrew"' >> "$HOME/.bash_profile"
 echo 'export HOMEBREW_NO_ENV_HINTS=1' >> "$HOME/.bash_profile"
+
 echo 'eval "$($BREW_DIR/.linuxbrew/bin/brew shellenv)"' >> "$HOME/.bash_profile"
 
 eval "$($BREW_DIR/.linuxbrew/bin/brew shellenv)"

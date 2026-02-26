@@ -2,17 +2,17 @@
   "context_servers": {},
   "agent_servers": {
     "junie-acp": {
-      "type": "registry"
+      "type": "registry",
     },
     "mistral-vibe": {
-      "type": "registry"
+      "type": "registry",
     },
     "github-copilot": {
-      "type": "registry"
+      "type": "registry",
     },
     "cline": {
-      "type": "registry"
-    }
+      "type": "registry",
+    },
   },
   "ui_font_family": ".ZedSans",
   "ui_font_weight": 500.0,
@@ -127,7 +127,7 @@
     "status_style": "label_color",
     "button": true,
   },
-  "icon_theme": "Colored Zed Icons Theme Dark",
+  "icon_theme": "Material Icon Theme",
   "auto_update": true,
   "telemetry": {
     "diagnostics": false,
@@ -164,18 +164,18 @@
       {
         "provider": "zed.dev",
         "model": "claude-sonnet-4-6",
-        "enable_thinking": false
+        "enable_thinking": false,
       },
       {
         "provider": "copilot_chat",
         "model": "claude-sonnet-4.5",
-        "enable_thinking": false
+        "enable_thinking": false,
       },
       {
         "provider": "copilot_chat",
         "model": "claude-opus-4.5",
-        "enable_thinking": false
-      }
+        "enable_thinking": false,
+      },
     ],
     "enable_feedback": false,
     "default_model": {
@@ -187,17 +187,17 @@
   },
   "formatter": "language_server",
   "buffer_line_height": {
-    "custom": 1.38
+    "custom": 1.38,
   },
   "buffer_font_weight": 500.0,
   "ui_font_size": 18.0,
   "line_indicator_format": "long",
   "buffer_font_size": 20.0,
   "diagnostics": {
-    "button": false
+    "button": false,
   },
   "collaboration_panel": {
-    "button": false
+    "button": false,
   },
   "title_bar": {
     "show_branch_icon": true,
@@ -290,13 +290,12 @@
         "#F16567",
         "#8F6593",
         "#F16567",
-        "#A6B1E1"
+        "#A6B1E1",
       ],
     },
   },
   "auto_install_extensions": {
     "codeowners": true,
-    "colored-zed-icons-theme": true,
     "comment": true,
     "csv": true,
     "deno": true,
@@ -307,6 +306,7 @@
     "ini": true,
     "log": true,
     "make": true,
+    "material-icon-theme": true,
     "python-requirements": true,
     "rainbow-csv": true,
     "sql": true,

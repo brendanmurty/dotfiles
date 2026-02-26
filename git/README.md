@@ -1,23 +1,9 @@
 # Git Configuration
 
-## Initial Setup
+Included in [setup.sh](setup.sh) are customised Git configuration and aliases.
 
+Add these to your Git configuration by running:
+
+```bash
+bash ./git-config.sh
 ```
-cp repositories.example.txt repositories.txt
-vim repositories.txt
-```
-
-Add your own repositories and custom folder names by matching the formatting here.
-
-When you're ready to apply them, run [setup.sh](setup.sh):
-
-```
-./setup.sh
-```
-
-## Customisation
-
-In [setup.sh](setup.sh), you can:
-
-- Alter the folder the repositories are cloned in to by updating the `GIT_REPOSITORY_FOLDER` variable
-- Alter the repository Markdown file location by updating the `GIT_REPOSITORY_LIST` variable

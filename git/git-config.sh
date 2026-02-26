@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+#
+# Git Config - Set global settings and Git aliases
+#
+
+git config --global init.defaultBranch "develop"
+git config --global push.default "simple"
+git config --global push.followtags "false"
+git config --global push.autosetupremote "true"
+
+git config --global core.whitespace "fix,-indent-with-non-tab,trailing-space,cr-at-eol"
+git config --global core.ignorecase "false"
+git config --global core.symlinks "true"
+
+git config --global alias.co "checkout"
+git config --global alias.br "branch"
+git config --global alias.cbr "checkout -b"
+git config --global alias.lg "log --pretty=format:'%Cblue%h%Creset %s %Cgreen%an, %cr %Creset' --abbrev-commit --date=relative"
+git config --global alias.graph "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+
+git config --global color.ui "true"
+
+git config --global color.branch.current "green"
+git config --global color.branch.local "blue"
+git config --global color.branch.remote "red"
+
+git config --global color.diff.meta "yellow"
+git config --global color.diff.frag "magenta"
+git config --global color.diff.old "red bold"
+git config --global color.diff.new "green"
+git config --global color.diff.whitespace "red reverse"
+
+git config --global color.status.added "green"
+git config --global color.status.changed "yellow"
+git config --global color.status.untracked "red"

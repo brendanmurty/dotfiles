@@ -12,7 +12,11 @@ git config --global core.whitespace "fix,-indent-with-non-tab,trailing-space,cr-
 git config --global core.ignorecase "false"
 git config --global core.symlinks "true"
 
+git config --global alias.f "fetch"
+git config --global alias.st "status"
 git config --global alias.co "checkout"
+git config --global alias.ci "commit"
+git config --global alias.cia "commit --amend"
 git config --global alias.br "branch"
 git config --global alias.cbr "checkout -b"
 git config --global alias.lg "log --pretty=format:'%Cblue%h%Creset %s %Cgreen%an, %cr %Creset' --abbrev-commit --date=relative"

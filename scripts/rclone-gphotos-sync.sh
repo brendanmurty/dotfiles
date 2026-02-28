@@ -6,6 +6,7 @@
 #     https://rclone.org/commands/rclone_config
 #   - Force quit all Rclone processes: sudo killall rclone
 #   - View the web GUI to see progress of rclone syncs: rclone rcd --rc-web-gui
+#   - More info at https://rclone.org/googlephotos/
 #
 
 SCRIPT_DIR=$(dirname "$(realpath "$0")")

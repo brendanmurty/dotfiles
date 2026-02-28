@@ -7,9 +7,9 @@
 #   - Requires a Linux system with the rclone package installed
 #   - Requires an existing Rclone remote config, more info at:
 #     https://rclone.org/commands/rclone_config
-#   - View a running log of the sync process: tail -n 50 -f ./rclone-sync.log
 #   - Force quit all Rclone processes: sudo killall rclone
 #   - View the web GUI to see progress of rclone syncs: rclone rcd --rc-web-gui
+#   - More info at https://rclone.org/drive/
 #
 
 SCRIPT_DIR=$(dirname "$(realpath "$0")")

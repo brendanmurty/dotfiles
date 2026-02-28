@@ -301,6 +301,7 @@
     "deno": true,
     "desktop": true,
     "dockerfile": true,
+    "env": true,
     "git-firefly": true,
     "html": true,
     "ini": true,

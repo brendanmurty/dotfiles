@@ -85,6 +85,9 @@ zip \
   .face \
   .gitconfig \
   .gitignore \
+  .config/mimeapps.list \
+  .config/user-dirs.dirs \
+  .config/user-dirs.locale \
   .config/autostart/* \
   .config/dconf/* \
   .config/nautilus/* \

@@ -19,8 +19,17 @@
   "agent_ui_font_size": 18.0,
   "agent_buffer_font_size": 18.0,
   "languages": {
+    "Just": {
+      "format_on_save": "off",
+      "auto_indent_on_paste": false,
+      "auto_indent": false,
+      "tab_size": 2
+    },
     "Python": {
       "format_on_save": "off",
+      "auto_indent_on_paste": false,
+      "auto_indent": false,
+      "tab_size": 2
     },
   },
   "outline_panel": {
@@ -296,7 +305,11 @@
   },
   "auto_install_extensions": {
     "codeowners": true,
+<<<<<<< Updated upstream
     "comment": true,
+=======
+    "colored-zed-icons-theme": true,
+>>>>>>> Stashed changes
     "csv": true,
     "deno": true,
     "desktop": true,

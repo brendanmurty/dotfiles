@@ -305,11 +305,8 @@
   },
   "auto_install_extensions": {
     "codeowners": true,
-<<<<<<< Updated upstream
     "comment": true,
-=======
     "colored-zed-icons-theme": true,
->>>>>>> Stashed changes
     "csv": true,
     "deno": true,
     "desktop": true,

@@ -25,7 +25,7 @@ nohup rclone copy \
   --progress \
   --exclude "*.json" \
   --contimeout 1m \
-  --timeout 1m
+  --timeout 1m \
   --log-level INFO \
   --log-file "$LOG_FILE" \
   > /dev/null 2>&1 &

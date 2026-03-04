@@ -22,10 +22,12 @@ source "$SCRIPT_DIR/rclone-gdrive-sync.env"
 
 # Run the rclone bisync command in the background
 
+mkdir -p "$HOME/.rclone-sync/gdrive"
+
 nohup rclone bisync \
   "$LOCAL_SYNC_DIR" \
   "$RCLONE_REMOTE_NAME:/" \
-  --workdir "$HOME/.rclone-sync" \
+  --workdir "$HOME/.rclone-sync/gdrive" \
   --transfers 15 \
   --ignore-listing-checksum \
   --resync-mode newer \

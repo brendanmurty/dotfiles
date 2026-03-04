@@ -19,10 +19,13 @@ source "$SCRIPT_DIR/rclone-gphotos-sync.env"
 
 # Run the rclone command in the background
 
+mkdir -p "$HOME/.rclone-sync/gphotos"
+
 nohup rclone copy \
   "$LOCAL_SYNC_DIR" \
-  "$RCLONE_REMOTE_NAME:media/upload" \
-  --workdir "$HOME/.rclone-sync" \
+  "$RCLONE_REMOTE_NAME:upload" \
+  --progress \
+  --workdir "$HOME/.rclone-sync/gphotos" \
   --log-level INFO \
   --log-file "$LOG_FILE" \
   > /dev/null 2>&1 &

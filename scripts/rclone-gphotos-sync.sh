@@ -23,7 +23,6 @@ nohup rclone copy \
   "$LOCAL_SYNC_DIR" \
   "$RCLONE_REMOTE_NAME:/upload" \
   --progress \
-  --exclude "*.json" \
   --contimeout 1m \
   --timeout 1m \
   --log-level INFO \

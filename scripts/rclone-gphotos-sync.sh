@@ -17,15 +17,15 @@ touch "$LOG_FILE"
 cp --update=none "$SCRIPT_DIR/rclone-gphotos-sync.env.sample" "$SCRIPT_DIR/rclone-gphotos-sync.env"
 source "$SCRIPT_DIR/rclone-gphotos-sync.env"
 
-# Run the rclone command in the background
-
-mkdir -p "$HOME/.rclone-sync/gphotos"
+# Run the rclone copy command in the background
 
 nohup rclone copy \
   "$LOCAL_SYNC_DIR" \
-  "$RCLONE_REMOTE_NAME:upload" \
+  "$RCLONE_REMOTE_NAME:/upload" \
   --progress \
-  --workdir "$HOME/.rclone-sync/gphotos" \
+  --exclude "*.json" \
+  --contimeout 1m \
+  --timeout 1m
   --log-level INFO \
   --log-file "$LOG_FILE" \
   > /dev/null 2>&1 &

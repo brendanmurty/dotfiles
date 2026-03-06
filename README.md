@@ -2,11 +2,12 @@
 
 Configuration files and scripts I use for personal and software development use.
 
-- **[bash](bash/)**: Bash terminal configuration
+- **[linux](linux/)**: Linux specific items
 - **[config/cursor](config/cursor/)**: [Cursor](https://cursor.com/download) IDE configuration
 - **[config/obsidian](config/obsidian/)**: [Obsidian](https://obsidian.md/) configuration
 - **[config/vim](config/vim/)**: [Vim](http://www.vim.org/) text editor configuration
 - **[config/vscode](config/vscode/)**: [Visual Studio Code](https://code.visualstudio.com/) IDE configuration
 - **[config/zed](config/zed/)**: [Zed Editor](https://zed.dev/) configuration
 - **[git](git/)**: [Git configuration](https://git-scm.com/docs/git-config) including alias commands
-- **[scripts](scripts/)**: Linux scripts to automate common tasks
+- **[macos](macos/)**: macOS specific items
+- **[scripts](scripts/)**: Bash scripts to automate common tasks

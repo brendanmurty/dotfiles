@@ -1,0 +1,10 @@
+{
+  "pinned": [
+    "switcher:open",
+    "daily-notes",
+    "editor:attach-file",
+    "file-explorer:move-file",
+    "workspace:copy-url",
+    "obsidian-kindle-plugin:kindle-sync"
+  ]
+}

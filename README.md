@@ -4,6 +4,7 @@ Configuration files and scripts I use for personal and software development use.
 
 - **[bash](bash/)**: Bash terminal configuration
 - **[config/cursor](config/cursor/)**: [Cursor](https://cursor.com/download) IDE configuration
+- **[config/obsidian](config/obsidian/)**: [Obsidian](https://obsidian.md/) configuration
 - **[config/vim](config/vim/)**: [Vim](http://www.vim.org/) text editor configuration
 - **[config/vscode](config/vscode/)**: [Visual Studio Code](https://code.visualstudio.com/) IDE configuration
 - **[config/zed](config/zed/)**: [Zed Editor](https://zed.dev/) configuration

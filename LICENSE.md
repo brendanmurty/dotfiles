@@ -2,7 +2,7 @@
 
 _Based on an older version of the [CSS-Tricks License](https://web.archive.org/web/20201218120034/https://css-tricks.com/license/) by [Chris Coyier](https://chriscoyier.net/)._
 
-I don't give two hoots what you do with any of anything you find here.
+I don't give two hoots what you do with anything you find here.
 
 Actually, I do. I hope you take it and use it, uncredited, on a super commercial website and get wicked rich off it. I hope you use it at work and your boss is impressed and you get a big promotion. I hope it helps you design a website and that website impresses somebody you think is super hot and you get married and have smart, chill babies. I hope you use the code in a blog post you write elsewhere and that website gets way more popular and awesome than this one.
 

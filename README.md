@@ -1,6 +1,6 @@
 # dotfiles
 
-Configuration files I use for my local development environment.
+Configuration files and scripts I use for personal and software development use.
 
 - **[bash](bash/)**: Bash terminal configuration
 - **[config/cursor](config/cursor/)**: [Cursor](https://cursor.com/download) IDE configuration

@@ -3,10 +3,10 @@
 ## Docker
 
 alias docker-compose='docker compose'
-alias dockerup='docker compose up -d'
-alias dockerdown='docker compose down'
-alias dockerps="docker ps --format 'table {{.Names}}\t{{.Status}}\t{{.ID}}\t{{.Image}}'"
-alias dockerst="docker stats --no-stream --format 'table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.Container}}'"
+alias docker-up='docker compose up -d'
+alias docker-down='docker compose down'
+alias docker-ps="docker ps --format 'table {{.Names}}\t{{.Status}}\t{{.ID}}\t{{.Image}}'"
+alias docker-st="docker stats --no-stream --format 'table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.Container}}'"
 
 ## Folder listing and searching
 
@@ -25,15 +25,13 @@ alias hist-search='history | cut -c 8- | grep'
 
 ## Ubuntu based Linux system - Update all system and third-party apps
 
-alias updateall='sudo apt update && sudo apt upgrade && sudo snap refresh && flatpak update'
+alias update-all='sudo apt update && sudo apt upgrade -y && sudo snap refresh && flatpak update -y'
 
 ## Return the public IPv4 address for the local machine
 
-alias whatismyip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias what-is-my-ip='dig +short myip.opendns.com @resolver1.opendns.com'
 
 ## Others
 
 alias python='python3'
 alias pip='pip3'
-
-alias zed='/usr/bin/zeditor'

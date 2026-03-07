@@ -24,9 +24,3 @@ Here's some previews of Obsidian running with these settings using the vault in 
 
 5. Run the [config restore script](config-restore.sh) (use [Git Bash](https://git-scm.com/downloads) on Windows): `./config-restore.sh`
 6. Open Obsidian
-
-## Backup Config
-
-To update the config files here from the config files in your Obsidian vault configuration directory, run the [config backup script](config-backup.sh):
-
-`./config-backup.sh`

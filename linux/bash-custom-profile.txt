@@ -1,6 +1,10 @@
+#
+#
 # ~/.bash_profile
 #  - User specific environment and startup programs
 #  - Add to the end of ~/.bashrc - source ~/.bash_profile
+#
+#
 
 # Add in customisations from other files
 

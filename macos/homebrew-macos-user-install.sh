@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 #
-# Homebrew macOS - Install to user dir
+# Homebrew macOS: Install to user dir
 #  - Assumes use of default ZSH shell
 #  - Based on docs from https://docs.brew.sh/Installation
 #

@@ -1,4 +1,10 @@
-# Safely apply customised configuration files
+#
+#
+# Bash Shell: Apply customisations
+#   - Makes a copy of the changed files first
+#   - Then copies over the relevant files from this dir to $HOME with the right names
+#
+#
 
 touch "$HOME/.bash_aliases" "$HOME/.bash_profile" "$HOME/.bash_prompt"
 
@@ -15,9 +21,9 @@ source "$HOME/.git-prompt.sh"
 
 # Copy over the customised Bash config files
 
-cp "./custom.bash_aliases.sh" "$HOME/.bash_aliases"
-cp "./custom.bash_profile.sh" "$HOME/.bash_profile"
-cp "./custom.bash_prompt.sh" "$HOME/.bash_prompt"
+cp "./bash-custom-aliases.txt" "$HOME/.bash_aliases"
+cp "./bash-custom-profile.txt" "$HOME/.bash_profile"
+cp "./bash-custom-prompt.txt" "$HOME/.bash_prompt"
 
 # Load them in to the current terminal session
 

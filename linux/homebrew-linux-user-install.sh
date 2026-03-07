@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 #
-# Homebrew Linux - Install to user home dir
+# Homebrew Linux: Install to user home dir
 #   - Assumes use of the Bash Shell
 #   - Based on docs from https://docs.brew.sh/Homebrew-on-Linux
 #

@@ -1,4 +1,9 @@
-# Custom command aliases
+#
+#
+# ~/.bash_aliases
+#   - Custom command aliases
+#
+#
 
 ## Docker
 

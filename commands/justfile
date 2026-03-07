@@ -18,12 +18,11 @@ set quiet := true
 
 alias what := list
 
-# Default to the 'list' command, run via 'just'
+# Default to the 'list' command, run via 'ujust'
 default: list
 
-# Show a list of the available options
+# Show a list of the available commands from this file
 list:
-  # cd "{{ justfile_directory() }}"
   @just --list --list-heading '' --list-prefix 'ujust '
 
 # Return your machine's public IP address

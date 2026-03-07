@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 #
-# Git Config - Set global settings and Git aliases
+#
+# Git Config: Set global settings and add Git aliases
+#
 #
 
 git config --global init.defaultBranch "develop"

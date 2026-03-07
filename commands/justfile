@@ -24,7 +24,7 @@ default: list
 # Show a list of the available options
 list:
   # cd "{{ justfile_directory() }}"
-  @just --list --list-heading '' --list-prefix 'just '
+  @just --list --list-heading '' --list-prefix 'ujust '
 
 # Return your machine's public IP address
 ip:

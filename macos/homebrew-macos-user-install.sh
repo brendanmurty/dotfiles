@@ -24,6 +24,8 @@ echo 'export HOMEBREW_RELOCATE_BUILD_PREFIX="$BREW_DIR"' >> "$HOME/.zshrc"
 echo 'export HOMEBREW_CELLAR="$BREW_DIR/Cellar"' >> "$HOME/.zshrc"
 echo 'export HOMEBREW_PREFIX="$BREW_DIR"' >> "$HOME/.zshrc"
 echo 'export HOMEBREW_NO_ENV_HINTS=1' >> "$HOME/.zshrc"
+echo 'export HOMEBREW_NO_UPDATE_REPORT_FORMULAE=1' >> "$HOME/.zshrc"
+echo 'export HOMEBREW_NO_UPDATE_REPORT_CASKS=1' >> "$HOME/.zshrc"
 echo 'eval "$($BREW_DIR/bin/brew shellenv)"' >> "$HOME/.zshrc"
 echo 'alias brew="$BREW_DIR/bin/brew"' >> "$HOME/.zshrc"
 

@@ -25,6 +25,8 @@ echo 'export HOMEBREW_RELOCATE_BUILD_PREFIX="$BREW_DIR/.linuxbrew"' >> "$HOME/.b
 echo 'export HOMEBREW_CELLAR="$BREW_DIR/.linuxbrew/Cellar"' >> "$HOME/.bashrc"
 echo 'export HOMEBREW_PREFIX="$BREW_DIR/.linuxbrew"' >> "$HOME/.bashrc"
 echo 'export HOMEBREW_NO_ENV_HINTS=1' >> "$HOME/.bash_profile"
+echo 'export HOMEBREW_NO_UPDATE_REPORT_FORMULAE=1' >> "$HOME/.bash_profile"
+echo 'export HOMEBREW_NO_UPDATE_REPORT_CASKS=1' >> "$HOME/.bash_profile"
 echo 'eval "$($BREW_DIR/.linuxbrew/bin/brew shellenv)"' >> "$HOME/.bashrc"
 echo 'alias brew="$BREW_DIR/.linuxbrew/bin/brew"' >> "$HOME/.bashrc"
 echo 'export PATH="$PATH:$BREW_DIR/.linuxbrew/bin"' >> "$HOME/.bashrc"

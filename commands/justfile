@@ -17,13 +17,37 @@ set quiet := true
 # Add alias commands
 
 alias what := list
+alias df := dotfiles
+alias h := home
+alias up := ubuntu-update
+alias upbr := brew-update
 
-# Default to the 'list' command, run via 'ujust'
+# Save common dirs to variables
+
+dotfiles-dir := '$(cd "$(dirname "{{ justfile_directory() }}")" && cd .. && pwd)'
+
+# Default to the 'list' command, run via 'run'
 default: list
 
-# Show a list of the available commands from this file
+# Show a list of the available 'run' commands
 list:
-  @just --list --list-heading '' --list-prefix 'ujust '
+  @echo "Listing commands from {{ justfile() }}"
+  @just --list --justfile {{ justfile() }} --list-heading '' --list-prefix 'run '
+
+# Change to the dotfiles directory
+dotfiles:
+  cd {{ dotfiles-dir }}
+
+# Change to the user home directory
+home:
+  cd "$HOME"
+
+# Update Ubuntu system packages and apps
+ubuntu-update:
+  sudo apt update
+  sudo apt upgrade -y
+  sudo snap refresh
+  flatpak update -y
 
 # Return your machine's public IP address
 ip:

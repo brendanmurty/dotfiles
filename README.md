@@ -3,7 +3,6 @@
 Configuration files and scripts I use for personal and software development use.
 
 - **[linux](linux/)**: Linux specific items
-- **[config/cursor](config/cursor/)**: [Cursor](https://cursor.com/download) IDE configuration
 - **[config/obsidian](config/obsidian/)**: [Obsidian](https://obsidian.md/) configuration
 - **[config/vim](config/vim/)**: [Vim](http://www.vim.org/) text editor configuration
 - **[config/vscode](config/vscode/)**: [Visual Studio Code](https://code.visualstudio.com/) IDE configuration

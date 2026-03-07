@@ -1,0 +1,45 @@
+#!/usr/bin/env just --justfile
+#
+#
+# Just command runner configuration
+#   - Initial setup: bash ./setup-just-commands-user.sh
+#   - Then you can run from any directory (lists all options): ujust
+#   - More info at https://github.com/casey/just
+#
+#
+
+# Set sensible default config
+
+set shell := ["bash", "-uc"]
+set ignore-comments := true
+set quiet := true
+
+# Add alias commands
+
+alias what := list
+
+# Default to the 'list' command, run via 'just'
+default: list
+
+# Show a list of the available options
+list:
+  # cd "{{ justfile_directory() }}"
+  @just --list --list-heading '' --list-prefix 'just '
+
+# Return your machine's public IP address
+ip:
+  dig +short myip.opendns.com @resolver1.opendns.com
+
+# Update local Homebrew packages
+brew-update:
+  brew update
+  brew upgrade
+  brew cleanup
+
+# Output details about Just
+info:
+  echo "$( just --version )"
+  echo "process id: {{ just_pid() }}"
+  echo "just bin: {{ just_executable() }}"
+  echo "justfile dir: {{ justfile_directory() }}"
+  echo "invocation dir: {{ invocation_directory() }}"

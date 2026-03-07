@@ -2,6 +2,7 @@
 
 Configuration files and scripts I use for personal and software development use.
 
+- **[commands](commands/)**: Setup and config for [Just](https://github.com/casey/just), including a `ujust` alias
 - **[linux](linux/)**: Linux specific items
 - **[config/obsidian](config/obsidian/)**: [Obsidian](https://obsidian.md/) configuration
 - **[config/vim](config/vim/)**: [Vim](http://www.vim.org/) text editor configuration

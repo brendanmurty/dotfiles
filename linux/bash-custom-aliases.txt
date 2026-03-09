@@ -35,8 +35,3 @@ alias update-all='sudo apt update && sudo apt upgrade -y && sudo snap refresh &&
 ## Return the public IPv4 address for the local machine
 
 alias what-is-my-ip='dig +short myip.opendns.com @resolver1.opendns.com'
-
-## Others
-
-alias python='python3'
-alias pip='pip3'

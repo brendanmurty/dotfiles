@@ -31,6 +31,8 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 bash "./gnome-customise.sh"
 
+bash "./bash-custom-set.sh"
+
 bash "./homebrew-linux-user-install.sh"
 
 echo 'Ubuntu setup script completed.'

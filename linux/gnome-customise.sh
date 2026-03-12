@@ -9,6 +9,7 @@
 gsettings set org.gnome.desktop.background picture-uri ''
 gsettings set org.gnome.desktop.background picture-uri-dark ''
 gsettings set org.gnome.desktop.background primary-color '#374a49'
+gsettings set org.gnome.shell.ubuntu color-scheme 'prefer-dark'
 
 gsettings set org.gnome.nautilus.icon-view captions "['type', 'size', 'date_modified']"
 gsettings set org.gnome.nautilus.icon-view default-zoom-level 'medium'
@@ -30,4 +31,9 @@ gsettings set org.gnome.shell development-tools true
 
 gsettings set org.gnome.shell last-selected-power-profile 'performance'
 
-gsettings set org.gnome.shell.ubuntu color-scheme 'prefer-dark'
+gsettings set org.gnome.software allow-updates true
+gsettings set org.gnome.software download-updates true
+gsettings set org.gnome.software download-updates-notify true
+gsettings set org.gnome.software enable-repos-dialog true
+gsettings set org.gnome.software install-bundles-system-wide true
+gsettings set org.gnome.software show-nonfree-ui true

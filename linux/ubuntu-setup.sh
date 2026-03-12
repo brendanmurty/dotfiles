@@ -9,17 +9,29 @@
 sudo apt update
 sudo apt upgrade
 
-sudo apt -y install curl zip git vim
+sudo apt -y install \
+    curl \
+    zip \
+    git \
+    vim \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common \
+    gnome-shell \
+    gnome-shell-extensions \
+    gnome-tweaks \
+    flatpak \
+    gnome-software-plugin-flatpak
 
 sudo select-editor
 sudo update-alternatives --config editor
 
-sudo apt -y install gnome-shell gnome-shell-extensions gnome-tweaks
-
-sudo apt -y install flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 bash "./gnome-customise.sh"
+
+bash "./homebrew-linux-user-install.sh"
 
 echo 'Ubuntu setup script completed.'
 echo 'A system reboot is required to apply some of these updates.'

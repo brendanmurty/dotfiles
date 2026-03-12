@@ -10,7 +10,7 @@ gsettings set org.gnome.desktop.background picture-uri ''
 gsettings set org.gnome.desktop.background picture-uri-dark ''
 gsettings set org.gnome.desktop.background primary-color '#374a49'
 
-gsettings set org.gnome.nautilus.icon-view captions ['type', 'size', 'date_modified']
+gsettings set org.gnome.nautilus.icon-view captions "['type', 'size', 'date_modified']"
 gsettings set org.gnome.nautilus.icon-view default-zoom-level 'medium'
 gsettings set org.gnome.nautilus.preferences default-folder-viewer 'icon-view'
 gsettings set org.gnome.nautilus.preferences default-sort-order 'name'

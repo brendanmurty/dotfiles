@@ -7,16 +7,18 @@
 #
 
 sudo apt update
-sudo apt upgrade
+sudo apt -y upgrade
 
 sudo apt -y install \
     curl \
     zip \
+    upzip \
     git \
     vim \
     apt-transport-https \
     ca-certificates \
     curl \
+    libappindicator3-1 \
     software-properties-common \
     gnome-shell \
     gnome-shell-extensions \
@@ -33,7 +35,11 @@ bash "./gnome-customise.sh"
 
 bash "./bash-custom-set.sh"
 
+bash "./docker-setup.sh"
+
 bash "./homebrew-linux-user-install.sh"
+
+sudo apt autoremove
 
 echo 'Ubuntu setup script completed.'
 echo 'A system reboot is required to apply some of these updates.'

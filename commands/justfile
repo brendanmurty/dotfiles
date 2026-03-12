@@ -32,7 +32,7 @@ default: list
 # Show a list of the available 'run' commands
 list:
   @echo "Listing commands from {{ justfile() }}"
-  @just --list --justfile {{ justfile() }} --list-heading '' --list-prefix 'run '
+  @just --list --justfile "{{ justfile() }}" --list-heading '' --list-prefix 'run '
 
 # Change to the dotfiles directory
 dotfiles:

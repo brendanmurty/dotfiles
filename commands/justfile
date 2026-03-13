@@ -28,10 +28,6 @@ alias up := ubuntu-update
 alias clean := ubuntu-clean
 alias del := ubuntu-clean
 
-# Save common dirs to variables
-
-dotfiles-dir := '$(cd "$(dirname "{{ justfile_directory() }}")" && cd .. && pwd)'
-
 # Default to the 'list' command, run via 'run'
 default: list
 
@@ -39,14 +35,6 @@ default: list
 list:
   echo "Listing commands from {{ justfile() }}"
   just --justfile "{{ justfile() }}" --list --alias-style 'separate' --list-heading '' --list-prefix 'run '
-
-# Change to the dotfiles directory
-dotfiles:
-  cd {{ dotfiles-dir }}
-
-# Change to the user home directory
-home:
-  cd "$HOME"
 
 # Return your machine's public IP address
 ip:

@@ -9,4 +9,4 @@
 
 PROMPT_COMMAND='PS1_CMD1=$(__git_ps1 " %s")';
 
-PS1='\[$(tput setaf 236)\]\T \[$(tput setaf 222)\]\u \[$(tput setaf 157)\]\w\[$(tput setaf 123)\]${PS1_CMD1}\[$(tput sgr0)\]\n\[$(tput setaf 236)\]> \[$(tput sgr0)\]';
+PS1='\[$(tput setaf 246)\]\D{%I:%M:%S} \[$(tput setaf 222)\]\u \[$(tput setaf 157)\]\w\[$(tput setaf 123)\]${PS1_CMD1}\[$(tput sgr0)\]\n\[$(tput setaf 246)\]> \[$(tput sgr0)\]';

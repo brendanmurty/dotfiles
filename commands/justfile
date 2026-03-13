@@ -8,7 +8,7 @@
 #
 #
 
-# Set sensible default config
+# Set default config
 
 set shell := ["bash", "-uc"]
 set ignore-comments := true
@@ -18,9 +18,6 @@ set quiet := true
 
 alias what := list
 
-alias df := dotfiles
-alias h := home
-
 alias update := ubuntu-update
 alias update-all := ubuntu-update
 alias up := ubuntu-update
@@ -28,13 +25,18 @@ alias up := ubuntu-update
 alias clean := ubuntu-clean
 alias del := ubuntu-clean
 
+# The command used for 'just', set this to the alias if you made it
+
+just-cmd := 'j'
+
 # Default to the 'list' command, run via 'run'
+
 default: list
 
 # Show a list of the available 'run' commands
 list:
   echo "Listing commands from {{ justfile() }}"
-  just --justfile "{{ justfile() }}" --list --alias-style 'separate' --list-heading '' --list-prefix 'run '
+  just --justfile "{{ justfile() }}" --list --alias-style 'separate' --list-heading '' --list-prefix "{{ just-cmd }} "
 
 # Return your machine's public IP address
 ip:

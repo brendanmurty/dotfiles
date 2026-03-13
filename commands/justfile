@@ -17,10 +17,13 @@ set quiet := true
 # Add alias commands
 
 alias what := list
+
 alias df := dotfiles
 alias h := home
+
+alias update := ubuntu-update
+alias update-all := ubuntu-update
 alias up := ubuntu-update
-alias upbr := brew-update
 
 # Save common dirs to variables
 
@@ -31,8 +34,8 @@ default: list
 
 # Show a list of the available 'run' commands
 list:
-  @echo "Listing commands from {{ justfile() }}"
-  @just --list --justfile "{{ justfile() }}" --list-heading '' --list-prefix 'run '
+  echo "Listing commands from {{ justfile() }}"
+  just --justfile "{{ justfile() }}" --list --alias-style 'separate' --list-heading '' --list-prefix 'run '
 
 # Change to the dotfiles directory
 dotfiles:
@@ -42,19 +45,17 @@ dotfiles:
 home:
   cd "$HOME"
 
-# Update Ubuntu system packages and apps
-ubuntu-update:
-  sudo apt update
-  sudo apt upgrade -y
-  sudo snap refresh
-  flatpak update -y
-
 # Return your machine's public IP address
 ip:
   dig +short myip.opendns.com @resolver1.opendns.com
 
-# Update local Homebrew packages
-brew-update:
+# Update Ubuntu system packages and apps
+ubuntu-update:
+  sudo apt update
+  sudo apt upgrade -y
+  sudo apt autoclean
+  sudo snap refresh
+  flatpak update -y
   brew update
   brew upgrade
   brew cleanup

@@ -11,8 +11,6 @@
 
 THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-REPO_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
-
 echo 'Installing "just" via Homebrew'
 
 brew install just

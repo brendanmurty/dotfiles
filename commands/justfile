@@ -25,6 +25,9 @@ alias update := ubuntu-update
 alias update-all := ubuntu-update
 alias up := ubuntu-update
 
+alias clean := ubuntu-clean
+alias del := ubuntu-clean
+
 # Save common dirs to variables
 
 dotfiles-dir := '$(cd "$(dirname "{{ justfile_directory() }}")" && cd .. && pwd)'
@@ -51,13 +54,20 @@ ip:
 
 # Update Ubuntu system packages and apps
 ubuntu-update:
-  sudo apt update
-  sudo apt upgrade -y
-  sudo apt autoclean
+  sudo apt-get update
+  sudo apt-get upgrade -y
   sudo snap refresh
   flatpak update -y
   brew update
   brew upgrade
+
+# Clean Ubuntu packages and temp files
+ubuntu-clean:
+  sudo apt-get autoremove
+  sudo apt-get autoclean
+  sudo rm -rf /tmp/*
+  rm -rf ~/.cache/*
+  rm -rf ~/.local/share/Trash/*
   brew cleanup
 
 # Output details about Just

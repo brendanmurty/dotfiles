@@ -118,7 +118,7 @@
   },
   "minimap": {
     "thumb": "always",
-    // "show": "never",
+    "show": "never",
   },
   "scrollbar": {
     "show": "always",
@@ -232,6 +232,11 @@
     "button": false,
   },
   "terminal": {
+    "cursor_shape": "block",
+    "toolbar": {
+      "breadcrumbs": true
+    },
+    "minimum_contrast": 5.0,
     "blinking": "on",
     "scrollbar": {
       "show": "auto",

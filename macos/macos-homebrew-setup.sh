@@ -2,8 +2,10 @@
 #
 #
 # Homebrew macOS: Install to user dir
-#  - Assumes use of default ZSH shell
-#  - Based on docs from https://docs.brew.sh/Installation
+#   - Installs Homebrew for macOS, based on docs from https://docs.brew.sh/Installation
+#   - Assumes use of default ZSH shell
+#   - Then moves this install '~/.brew' instead
+#   - Installs the 'gcc' Homebrew package
 #
 #
 

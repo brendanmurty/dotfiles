@@ -28,7 +28,6 @@ gsettings set org.gnome.mutter center-new-windows false
 gsettings set org.gnome.mutter dynamic-workspaces true
 gsettings set org.gnome.mutter edge-tiling false
 
-
 # Extensions
 
 gsettings set org.gnome.shell allow-extension-installation true
@@ -36,21 +35,19 @@ gsettings set org.gnome.shell disable-user-extensions false
 gsettings set org.gnome.shell always-show-log-out true
 gsettings set org.gnome.shell development-tools true
 
-# Extension: Tiling Shell
+# Extension: Ubuntu Tiling Assistant
 
-dconf write /org/gnome/shell/extensions/tilingshell/edge-tiling-mode "'default'"
-dconf write /org/gnome/shell/extensions/tilingshell/inner-gaps "0"
-dconf write /org/gnome/shell/extensions/tilingshell/outer-gaps "0"
-dconf write /org/gnome/shell/extensions/tilingshell/show-indicator true
-dconf write /org/gnome/shell/extensions/tilingshell/snap-assistant-animation-time "75"
-dconf write /org/gnome/shell/extensions/tilingshell/tile-preview-animation-time "75"
-dconf write /org/gnome/shell/extensions/tilingshell/tiling-system-activation-key '["-1"]'
-dconf write /org/gnome/shell/extensions/tilingshell/top-edge-maximize true
-dconf write /org/gnome/shell/extensions/tilingshell/window-border-color "'rgb(143,240,164)'"
-dconf write /org/gnome/shell/extensions/tilingshell/window-use-custom-border-color true
-# dconf write /org/gnome/shell/extensions/tilingshell/layouts-json '[{"id":"2952734","tiles":[{"x":"0","y":"0","width":"0.5","height":"1","groups":["1"]},{"x":"0.5","y":"0","width":"0.5000000000000022","height":"1","groups":["1"]}]},{"id":"Layout 4","tiles":[{"x":"0","y":"0","width":"0.7","height":"1","groups":["1"]},{"x":"0.7","y":"0","width":"0.3","height":"1","groups":["1"]}]},{"id":"Layout 3","tiles":[{"x":"0","y":"0","width":"0.3","height":"1","groups":["1"]},{"x":"0.3","y":"0","width":"0.7","height":"1","groups":["1"]}]},{"id":"Layout 2","tiles":[{"x":"0","y":"0","width":"0.2","height":"1","groups":["1"]},{"x":"0.2","y":"0","width":"0.6","height":"1","groups":["1","2"]},{"x":"0.8","y":"0","width":"0.2","height":"1","groups":["2"]}]}]'
-dconf write /org/gnome/shell/extensions/tilingshell/selected-layouts '[["2952734"], ["2952734"]]'
-dconf write /org/gnome/shell/extensions/tilingshell/overridden-settings '{"org.gnome.mutter.keybindings":{"toggle-tiled-right":"@as []","toggle-tiled-left":"@as []"},"org.gnome.desktop.wm.keybindings":{"maximize":"@as []","unmaximize":"@as []"},"org.gnome.mutter":{"edge-tiling":"false"}}'
+gsettings set org.gnome.shell.extensions.tiling-assistant enable-raise-tile-group false
+gsettings set org.gnome.shell.extensions.tiling-assistant enable-tiling-popup false
+gsettings set org.gnome.shell.extensions.tiling-assistant tiling-popup-all-workspace false
+gsettings set org.gnome.shell.extensions.tiling-assistant enable-tile-animations true
+gsettings set org.gnome.shell.extensions.tiling-assistant enable-untile-animations true
+gsettings set org.gnome.shell.extensions.tiling-assistant toggle-tiling-popup "[]"
+gsettings set org.gnome.shell.extensions.tiling-assistant overridden-settings "{'org.gnome.mutter.edge-tiling': <false>}"
+gsettings set org.gnome.shell.extensions.tiling-assistant restore-window "['<Super>Down']"
+gsettings set org.gnome.shell.extensions.tiling-assistant tile-left-half "['<Super>Left', '<Super>KP_4']"
+gsettings set org.gnome.shell.extensions.tiling-assistant tile-right-half "['<Super>Right', '<Super>KP_6']"
+
 
 # App: Nautilus
 

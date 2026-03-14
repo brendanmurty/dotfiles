@@ -7,6 +7,8 @@
 #
 #
 
+DOTFILES_LINUX_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
+
 touch "$HOME/.bash_aliases" "$HOME/.bash_profile" "$HOME/.bash_prompt"
 
 # Create backups of current Bash config files for this user
@@ -24,9 +26,9 @@ source "$HOME/.git_prompt.sh"
 
 # Copy over the customised Bash config files
 
-cp "../config/bash_aliases.txt" "$HOME/.bash_aliases"
-cp "../config/bash_profile.txt" "$HOME/.bash_profile"
-cp "../config/bash_prompt.txt" "$HOME/.bash_prompt"
+cp "$DOTFILES_LINUX_DIR/config/bash_aliases.txt" "$HOME/.bash_aliases"
+cp "$DOTFILES_LINUX_DIR/config/bash_profile.txt" "$HOME/.bash_profile"
+cp "$DOTFILES_LINUX_DIR/config/bash_prompt.txt" "$HOME/.bash_prompt"
 
 # Load them in to the current terminal session
 
@@ -36,4 +38,4 @@ source "$HOME/.bash_profile"
 
 touch "$HOME/.bashrc"
 echo '' >> "$HOME/.bashrc"
-echo 'source "/home/murty/.bash_profile"' >> "$HOME/.bashrc"
+echo "source \"$HOME/.bash_profile\"" >> "$HOME/.bashrc"

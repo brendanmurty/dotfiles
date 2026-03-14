@@ -10,7 +10,7 @@
 PROMPT_COMMAND='PS1_CMD1=$(__git_ps1 " %s")';
 
 # Blue shades
-# PS1='\[$(tput setaf 241)\]\D{%I:%M:%S} \[$(tput setaf 195)\]\u \[$(tput setaf 45)\]\w\[$(tput setaf 39)\]${PS1_CMD1}\[$(tput sgr0)\]\n\[$(tput setaf 241)\]> \[$(tput sgr0)\]';
+# PS1=$'\[$(tput setaf 241)\]\u2D32 \D{%I:%M:%S} \[$(tput setaf 246)\]\u2302 \u \[$(tput setaf 159)\]\u29c8 \w\[$(tput setaf 45)\]${PS1_CMD1}\[$(tput sgr0)\]\n\[$(tput setaf 241)\]> \[$(tput sgr0)\]';
 
 # Orange shades
-PS1='\[$(tput setaf 241)\]\D{%I:%M:%S} \[$(tput setaf 246)\]\u \[$(tput setaf 222)\]\w\[$(tput setaf 173)\]${PS1_CMD1}\[$(tput sgr0)\]\n\[$(tput setaf 241)\]> \[$(tput sgr0)\]';
+PS1=$'\[$(tput setaf 243)\]\u2D32 \D{%I:%M:%S}  \[$(tput setaf 214)\]\u29c8 \w \[$(tput setaf 173)\]${PS1_CMD1}\[$(tput sgr0)\]\n\[$(tput setaf 243)\]> \[$(tput sgr0)\]';

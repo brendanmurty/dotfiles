@@ -7,7 +7,7 @@
 #
 
 THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
-JUST_DIR="$(cd "$(dirname "$0")" && cd ../just && pwd)"
+REPO_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
 
 info() { echo -e "\033[36m$1\033[0m"; }
 
@@ -32,7 +32,10 @@ info 'homebrew: setup'
 bash "$THIS_DIR/setup/homebrew.sh" >/dev/null 2>&1
 
 info 'just: setup'
-bash "$JUST_DIR/setup.sh" >/dev/null 2>&1
+bash "$REPO_DIR/just/setup.sh" >/dev/null 2>&1
+
+info 'ghostty: setup'
+bash "$REPO_DIR/ghostty/setup.sh" >/dev/null 2>&1
 
 info 'vim: setup'
 bash "$THIS_DIR/setup/vim.sh" >/dev/null 2>&1

@@ -40,6 +40,6 @@ echo '{"log-driver":"json-file","log-opts":{"max-size":"10m","max-file":"5"}}' |
 DOCKER_DEB="$HOME/Downloads/temp-docker-desktop-amd64.deb"
 rm -rf "$DOCKER_DEB"
 curl --output "$DOCKER_DEB" "https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb"
-sudo apt-get update
+sudo apt update
 sudo apt install "$DOCKER_DEB"
 rm -rf "$DOCKER_DEB"

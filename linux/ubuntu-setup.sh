@@ -15,9 +15,9 @@ sudo apt -y install \
     upzip \
     git \
     vim \
+    tmux \
     apt-transport-https \
     ca-certificates \
-    curl \
     libappindicator3-1 \
     software-properties-common \
     gnome-shell \

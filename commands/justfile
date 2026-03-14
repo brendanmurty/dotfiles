@@ -44,8 +44,8 @@ ip:
 
 # Update Ubuntu system packages and apps
 ubuntu-update:
-  sudo apt-get update
-  sudo apt-get upgrade -y
+  sudo apt update
+  sudo apt upgrade -y
   sudo snap refresh
   flatpak update -y
   brew update
@@ -53,8 +53,8 @@ ubuntu-update:
 
 # Clean Ubuntu packages and temp files
 ubuntu-clean:
-  sudo apt-get autoremove
-  sudo apt-get autoclean
+  sudo apt autoremove
+  sudo apt autoclean
   flatpak uninstall -y --unused --delete-data
   brew cleanup
   sudo snap set system refresh.retain=2

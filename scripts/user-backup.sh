@@ -63,6 +63,10 @@ flatpak list --app > "$SOURCE_DIR/.app-list-flatpak.txt"
 
 snap list > "$SOURCE_DIR/.app-list-snap.txt"
 
+# Save a copy of all Dconf settings
+
+dconf dump / > "$SOURCE_DIR/.dconf-user-export.conf"
+
 # Run the ZIP command with specific inclusions and exclusions
 
 cd $SOURCE_DIR
@@ -79,6 +83,7 @@ zip \
   .app-list-snap.txt \
   .crontab-user.txt \
   .dir-list-user.txt \
+  .dconf-user-export.conf \
   .bashrc \
   .bash_* \
   .profile \

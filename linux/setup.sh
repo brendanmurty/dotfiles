@@ -32,7 +32,7 @@ info 'homebrew: setup'
 bash "$THIS_DIR/setup/homebrew.sh" >/dev/null 2>&1
 
 info 'just: setup'
-bash "$JUST_DIR/setup.sh"
+bash "$JUST_DIR/setup.sh" >/dev/null 2>&1
 
 info 'vim: setup'
 bash "$THIS_DIR/setup/vim.sh" >/dev/null 2>&1

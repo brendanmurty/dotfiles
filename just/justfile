@@ -68,6 +68,10 @@ ubuntu-clean:
   flatpak uninstall -y --unused --delete-data
   brew cleanup
 
+# List Grub boot menu options
+grub-list:
+  sudo awk -F\' '/menuentry / {print $2}' /boot/grub/grub.cfg
+
 # Output details about Just
 info:
   echo "$( just --version )"

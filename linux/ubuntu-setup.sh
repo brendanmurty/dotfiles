@@ -14,7 +14,8 @@ sudo apt -y install \
     zip \
     upzip \
     git \
-    vim \
+    python3 \
+    pipx \
     tmux \
     apt-transport-https \
     ca-certificates \
@@ -26,19 +27,20 @@ sudo apt -y install \
     flatpak \
     gnome-software-plugin-flatpak
 
-sudo select-editor
-sudo update-alternatives --config editor
+
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-bash "./gnome-customise.sh"
-
-bash "./bash-custom-set.sh"
-
+bash "./gnome-setup.sh"
+bash "./bash-setup.sh"
+bash "./homebrew-setup.sh"
+bash "./vim-setup.sh"
+bash "./tmux-setup.sh"
 bash "./docker-setup.sh"
 
-bash "./homebrew-linux-user-install.sh"
+# Cleanup
 
+sudo snap set system refresh.retain=2
 sudo apt autoremove
 
 echo 'Ubuntu setup script completed.'

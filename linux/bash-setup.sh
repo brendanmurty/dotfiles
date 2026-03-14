@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #
 #
 # Bash Shell: Apply customisations
@@ -21,9 +22,9 @@ source "$HOME/.git-prompt.sh"
 
 # Copy over the customised Bash config files
 
-cp "./bash-custom-aliases.txt" "$HOME/.bash_aliases"
-cp "./bash-custom-profile.txt" "$HOME/.bash_profile"
-cp "./bash-custom-prompt.txt" "$HOME/.bash_prompt"
+cp "./config/bash_aliases.txt" "$HOME/.bash_aliases"
+cp "./config/bash_profile.txt" "$HOME/.bash_profile"
+cp "./config/bash_prompt.txt" "$HOME/.bash_prompt"
 
 # Load them in to the current terminal session
 

@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#
+#
+# Vim setup
+#   - Tested on Ubuntu 24
+#
+#
+
+sudo apt -y install vim
+
+sudo select-editor
+sudo update-alternatives --config editor
+
+mkdir -p "$HOME/.vim"
+cp -r "$HOME/.vim" "$HOME/.vim.before-dotfiles.bak"
+git clone https://github.com/flazz/vim-colorschemes.git ~/.vim
+
+touch "$HOME/.vimrc"
+cp "$HOME/.vimrc" "$HOME/.vimrc.before-dotfiles.bak"
+cp "./config/vimrc.txt" "$HOME/.vimrc"

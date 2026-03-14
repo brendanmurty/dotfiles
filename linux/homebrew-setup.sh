@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 #
 #
-# Homebrew Linux: Install to user home dir
+# Homebrew setup
+#   - Installs Homebrew for Linux, based on docs from https://docs.brew.sh/Homebrew-on-Linux
 #   - Assumes use of the Bash Shell
-#   - Based on docs from https://docs.brew.sh/Homebrew-on-Linux
+#   - Then moves this install '~/.brew' instead
+#   - Installs the 'gcc' Homebrew package
 #
 #
 

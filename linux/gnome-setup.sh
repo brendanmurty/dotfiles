@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 #
 #
-# Customise Gnome settings
+# Setup Gnome
 #   - Tested on Ubuntu 24
+#   - Customises Gnome settings for the current user
 #
 #
 

@@ -50,6 +50,7 @@ dconf write /org/gnome/shell/extensions/tilingshell/window-border-color "'rgb(14
 dconf write /org/gnome/shell/extensions/tilingshell/window-use-custom-border-color true
 # dconf write /org/gnome/shell/extensions/tilingshell/layouts-json '[{"id":"2952734","tiles":[{"x":0,"y":0,"width":0.5,"height":1,"groups":[1]},{"x":0.5,"y":0,"width":0.5000000000000022,"height":1,"groups":[1]}]},{"id":"Layout 4","tiles":[{"x":0,"y":0,"width":0.67,"height":1,"groups":[1]},{"x":0.67,"y":0,"width":0.33,"height":1,"groups":[1]}]},{"id":"Layout 3","tiles":[{"x":0,"y":0,"width":0.33,"height":1,"groups":[1]},{"x":0.33,"y":0,"width":0.67,"height":1,"groups":[1]}]},{"id":"Layout 2","tiles":[{"x":0,"y":0,"width":0.22,"height":1,"groups":[1]},{"x":0.22,"y":0,"width":0.56,"height":1,"groups":[1,2]},{"x":0.78,"y":0,"width":0.22,"height":1,"groups":[2]}]}]'
 dconf write /org/gnome/shell/extensions/tilingshell/selected-layouts '[["2952734"], ["2952734"]]'
+dconf write /org/gnome/shell/extensions/tilingshell/overridden-settings '{"org.gnome.mutter.keybindings":{"toggle-tiled-right":"@as []","toggle-tiled-left":"@as []"},"org.gnome.desktop.wm.keybindings":{"maximize":"@as []","unmaximize":"@as []"},"org.gnome.mutter":{"edge-tiling":"false"}}'
 
 # App: Nautilus
 

@@ -37,10 +37,6 @@ echo $(date "$LOG_FMT") "Starting backup of '$SOURCE_DIR' to '$BACKUP_PATH'" >> 
 
 mkdir -p "$BACKUP_DIR"
 
-# Save an export of the user's system and app dconf settings
-
-dconf dump / > "$SOURCE_DIR/.dconf-config-user.txt"
-
 # Create a copy of the current Grub config file
 
 cp -f "/etc/default/grub" "$SOURCE_DIR/.grub-config.txt"
@@ -77,7 +73,6 @@ zip \
   --quiet \
   --password "$BACKUP_FILE_PASSWORD" \
   "$BACKUP_PATH" \
-  .dconf-config-user.txt \
   .grub-config.txt \
   .app-list-flatpak.txt \
   .app-list-snap.txt \

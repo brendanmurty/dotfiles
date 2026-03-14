@@ -17,4 +17,4 @@ git clone https://github.com/flazz/vim-colorschemes.git ~/.vim
 
 touch "$HOME/.vimrc"
 cp "$HOME/.vimrc" "$HOME/.vimrc.before-dotfiles.bak"
-cp "./config/vimrc.txt" "$HOME/.vimrc"
+cp "../config/vimrc.txt" "$HOME/.vimrc"

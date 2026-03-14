@@ -12,4 +12,4 @@ brew install tpm
 
 touch "$HOME/.tmux.conf"
 cp "$HOME/.tmux.conf" "$HOME/.tmux.conf.before-dotfiles.bak"
-cp "./config/tmux.txt" "$HOME/.tmux.conf"
+cp "../config/tmux.txt" "$HOME/.tmux.conf"

@@ -25,10 +25,6 @@ alias up := ubuntu-update
 alias clean := ubuntu-clean
 alias del := ubuntu-clean
 
-# The command used for 'just', set this to the alias if you made it
-
-just-cmd := 'j'
-
 # Default to the 'list' command, run via 'run'
 
 default: list
@@ -36,7 +32,7 @@ default: list
 # Show a list of the available 'run' commands
 list:
   echo "Listing commands from {{ justfile() }}"
-  just --justfile "{{ justfile() }}" --list --alias-style 'separate' --list-heading '' --list-prefix "{{ just-cmd }} "
+  just --justfile "{{ justfile() }}" --list --alias-style 'separate' --list-heading '' --list-prefix "just "
 
 # Return your machine's public IP address
 ip:

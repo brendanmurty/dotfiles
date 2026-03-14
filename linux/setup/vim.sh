@@ -6,6 +6,8 @@
 #
 #
 
+DOTFILES_LINUX_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
+
 sudo apt -y install vim
 
 sudo select-editor
@@ -17,4 +19,4 @@ git clone https://github.com/flazz/vim-colorschemes.git ~/.vim
 
 touch "$HOME/.vimrc"
 cp "$HOME/.vimrc" "$HOME/.vimrc.before-dotfiles.bak"
-cp "../config/vimrc.txt" "$HOME/.vimrc"
+cp "$DOTFILES_LINUX_DIR/config/vimrc.txt" "$HOME/.vimrc"

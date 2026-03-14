@@ -6,7 +6,7 @@
 #
 #
 
-sudo apt -y install tmux
+sudo apt -y install tmux python3 pipx
 
 brew install tpm
 

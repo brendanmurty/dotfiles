@@ -8,6 +8,8 @@
 
 info() { echo -e "\033[36m$1\033[0m"; }
 
+chmod +x ./setup/*.sh
+
 info 'apt: update, upgrade and install'
 bash './setup/apt.sh' >/dev/null 2>&1
 

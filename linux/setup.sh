@@ -2,7 +2,6 @@
 #
 #
 # Linux: Setup packages and config
-#   - Tested on Ubuntu 24
 #
 #
 

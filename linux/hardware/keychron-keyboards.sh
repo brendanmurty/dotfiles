@@ -2,7 +2,6 @@
 #
 #
 # Linux: Config to support Keychron keyboard harware
-#   - Tested on Ubuntu 24
 #
 #
 

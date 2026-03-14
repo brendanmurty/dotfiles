@@ -2,7 +2,6 @@
 #
 #
 # Flatpak setup
-#   - Tested on Ubuntu 24
 #
 #
 

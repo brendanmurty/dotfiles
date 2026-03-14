@@ -2,7 +2,6 @@
 #
 #
 # Apt setup
-#   - Tested on Ubuntu 24
 #
 #
 

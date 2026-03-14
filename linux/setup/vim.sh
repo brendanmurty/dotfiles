@@ -2,7 +2,6 @@
 #
 #
 # Vim setup
-#   - Tested on Ubuntu 24
 #
 #
 

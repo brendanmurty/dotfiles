@@ -2,7 +2,6 @@
 #
 #
 # Snap setup
-#   - Tested on Ubuntu 24
 #
 #
 

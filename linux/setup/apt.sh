@@ -9,6 +9,10 @@ sudo apt -qq update
 sudo apt -qq --assume-yes upgrade
 
 sudo apt -qq --assume-yes install \
+  curl \
+  zip \
+  unzip \
+  git \
   update-manager \
   apt-transport-https \
   ca-certificates \
@@ -17,10 +21,6 @@ sudo apt -qq --assume-yes install \
   gnome-shell \
   gnome-shell-extensions \
   gnome-tweaks \
-  curl \
-  zip \
-  unzip \
-  git \
   >/dev/null 2>&1
 
 sudo apt -qq --assume-yes autoremove

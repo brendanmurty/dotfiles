@@ -23,14 +23,9 @@ sudo apt -y install \
     software-properties-common \
     gnome-shell \
     gnome-shell-extensions \
-    gnome-tweaks \
-    flatpak \
-    gnome-software-plugin-flatpak
+    gnome-tweaks
 
-
-
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
+bash "./flatpak-setup.sh"
 bash "./gnome-setup.sh"
 bash "./bash-setup.sh"
 bash "./homebrew-setup.sh"

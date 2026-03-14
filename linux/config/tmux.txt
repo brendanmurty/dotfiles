@@ -1,3 +1,5 @@
+set -g base-index 1
+
 set -g default-terminal "screen-256color"
 set -g history-limit 50000
 set -g display-time 4000
@@ -10,4 +12,4 @@ set -g @plugin 'tmux-plugins/tmux-sidebar'
 set -g @plugin 'rickstaa/tmux-notify'
 set -g @plugin 'tmux-plugins/tmux-open'
 
-run "$HOME/.brew/.linuxbrew/opt/tpm/share/tpm/tpm"
+run "$HOME/.brew/opt/tpm/share/tpm/tpm"

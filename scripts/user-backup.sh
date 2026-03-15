@@ -82,6 +82,7 @@ zip \
   .bashrc \
   .bash_* \
   .profile \
+  justfile \
   .face \
   .gitconfig \
   .gitignore \

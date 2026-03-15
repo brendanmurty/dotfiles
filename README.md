@@ -11,3 +11,4 @@ Configuration files and scripts I use for personal and software development use.
 - **[zed](zed/)**: [Zed Editor](https://zed.dev/) config
 - **[macos](macos/)**: macOS specific items
 - **[scripts](scripts/)**: Bash scripts to automate common tasks
+- **[windows](windows/)**: Windows specific items

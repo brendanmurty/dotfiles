@@ -1,16 +1,10 @@
 {
   "context_servers": {},
   "agent_servers": {
-    "junie-acp": {
-      "type": "registry"
-    },
-    "mistral-vibe": {
+    "claude-acp": {
       "type": "registry"
     },
     "github-copilot": {
-      "type": "registry"
-    },
-    "cline": {
       "type": "registry"
     }
   },

@@ -37,31 +37,45 @@ echo $(date "$LOG_FMT") "Starting backup of '$SOURCE_DIR' to '$BACKUP_PATH'" >> 
 
 mkdir -p "$BACKUP_DIR"
 
+if [ -d "$SOURCE_DIR/.backups" ]; then
+  gio trash "$SOURCE_DIR/.backups"
+fi
+
+mkdir -p "$SOURCE_DIR/.backups"
+
 # Create a copy of the current Grub config file
 
-cp -f "/etc/default/grub" "$SOURCE_DIR/.grub-config.txt"
+if [ -f "/etc/default/grub" ]; then
+  cp -f "/etc/default/grub" "$SOURCE_DIR/.backups/grub-config.txt"
+fi
 
-# If cron is installed, save a copy of the user's cron items
+# Save a copy of the user cron items
 
 if command -v crontab >/dev/null 2>&1 ; then
-  crontab -l > "$SOURCE_DIR/.crontab-user.txt"
+  crontab -l > "$SOURCE_DIR/.backups/crontab-user.txt"
 fi
 
 # Save a copy of the file listing, so symlink paths are logged
 
-ls -lah "$SOURCE_DIR" > "$SOURCE_DIR/.dir-list-user.txt"
+ls -lah "$SOURCE_DIR" > "$SOURCE_DIR/.backups/dir-list-user.txt"
 
 # Save a copy of the installed Flatpak apps
 
-flatpak list --app > "$SOURCE_DIR/.app-list-flatpak.txt"
+if command -v flatpak >/dev/null 2>&1 ; then
+  flatpak list --app > "$SOURCE_DIR/.backups/app-list-flatpak.txt"
+fi
 
 # Save a copy of the installed Snap apps
 
-snap list > "$SOURCE_DIR/.app-list-snap.txt"
+if command -v snap >/dev/null 2>&1 ; then
+  snap list > "$SOURCE_DIR/.backups/app-list-snap.txt"
+fi
 
 # Save a copy of all Dconf settings
 
-dconf dump / > "$SOURCE_DIR/.dconf-user-export.conf"
+if command -v dconf >/dev/null 2>&1 ; then
+  dconf dump / > "$SOURCE_DIR/.backups/dconf-user-export.conf"
+fi
 
 # Run the ZIP command with specific inclusions and exclusions
 
@@ -73,12 +87,7 @@ zip \
   --quiet \
   --password "$BACKUP_FILE_PASSWORD" \
   "$BACKUP_PATH" \
-  .grub-config.txt \
-  .app-list-flatpak.txt \
-  .app-list-snap.txt \
-  .crontab-user.txt \
-  .dir-list-user.txt \
-  .dconf-user-export.conf \
+  .backups/* \
   .bashrc \
   .bash_* \
   .profile \

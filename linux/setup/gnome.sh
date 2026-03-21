@@ -135,19 +135,22 @@ gsettings set org.gnome.shell always-show-log-out true
 
 # Power and performance
 
-gsettings set org.gnome.settings-daemon.plugins.power power-profile-mode 'performance'
+if powerprofilesctl >/dev/null 2>&1; then
+  powerprofilesctl set performance
+fi
+
 gsettings set org.gnome.shell last-selected-power-profile 'performance'
 gsettings set org.gnome.desktop.interface show-battery-percentage true
 
 # App: Console
 
-if gsettings list-schemas | grep "org.gnome.Console"; then
+if gsettings list-schemas | grep "org.gnome.Console" >/dev/null 2>&1; then
   gsettings set org.gnome.Console audible-bell false
   gsettings set org.gnome.Console visual-bell false
   gsettings set org.gnome.Console custom-font 'Monospace 14'
   gsettings set org.gnome.Console use-system-font false
   gsettings set org.gnome.Console theme 'night'
-  gsettings set org.gnome.Console shell ['/bin/bash']
+  gsettings set org.gnome.Console shell "['/bin/bash']"
   gsettings set org.gnome.Console scrollback-lines '10000'
   gsettings set org.gnome.Console transparency false
 fi
@@ -177,14 +180,14 @@ gsettings set org.gnome.Settings window-state "(1250, 960, false)"
 
 # Ubuntu specific
 
-if grep -q "Ubuntu" /etc/os-release; then
+if grep -q "Ubuntu" /etc/os-release >/dev/null 2>&1; then
   gsettings set org.gnome.shell.ubuntu color-scheme 'prefer-dark'
   gsettings set org.gnome.desktop.interface cursor-theme 'Yaru'
   gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-prussiangreen-dark'
   gsettings set org.gnome.desktop.interface icon-theme 'Yaru-prussiangreen'
   gsettings set org.gnome.desktop.screensaver ubuntu-lock-on-suspend true
 
-  if gsettings list-schemas | grep "org.gnome.shell.extensions.tiling-assistant"; then
+  if gsettings list-schemas | grep "org.gnome.shell.extensions.tiling-assistant" >/dev/null 2>&1; then
     gsettings set org.gnome.shell.extensions.tiling-assistant enable-raise-tile-group false
     gsettings set org.gnome.shell.extensions.tiling-assistant enable-tiling-popup false
     gsettings set org.gnome.shell.extensions.tiling-assistant tiling-popup-all-workspace false

@@ -54,8 +54,65 @@ gsettings set org.gnome.shell disable-user-extensions false
 gsettings set org.gnome.shell always-show-log-out true
 gsettings set org.gnome.shell development-tools true
 
-# Extension: Dash to Panel
+# Extension: Arc Menu
 
+if gsettings list-schemas | grep "org.gnome.shell.extensions.arcmenu" >/dev/null 2>&1; then
+  gsettings set org.gnome.shell.extensions.arcmenu application-shortcuts [{'id': 'io.missioncenter.MissionCenter.desktop'}, {'id': 'org.gnome.Settings.desktop'}]
+  gsettings set org.gnome.shell.extensions.arcmenu apps-show-extra-details false
+  gsettings set org.gnome.shell.extensions.arcmenu arcmenu-hotkey ['Super_L']
+  gsettings set org.gnome.shell.extensions.arcmenu arcmenu-hotkey-overlay-key-enabled true
+  gsettings set org.gnome.shell.extensions.arcmenu avatar-style 'Round'
+  gsettings set org.gnome.shell.extensions.arcmenu az-layout-merge-panels true
+  gsettings set org.gnome.shell.extensions.arcmenu button-item-icon-size 'Medium'
+  gsettings set org.gnome.shell.extensions.arcmenu context-menu-items [{'id': 'org.gnome.Nautilus.desktop'}, {'id': 'org.gnome.Console.desktop'}, {'name': 'Separator', 'icon': 'list-remove-symbolic', 'id': 'ArcMenu_Separator'}, {'id': 'eos-update.desktop', 'name': 'Update'}, {'id': 'io.missioncenter.MissionCenter.desktop'}, {'id': 'ArcMenu_Settings', 'name': 'Menu Settings', 'icon': 'ArcMenu_ArcMenuIcon'}, {'id': 'ArcMenu_PanelExtensionSettings', 'name': 'Panel Extension Settings', 'icon': 'application-x-addon-symbolic'}, {'id': 'ArcMenu_PowerOptions', 'name': 'Power Options', 'icon': 'system-shutdown-symbolic'}, {'id': 'org.gnome.Settings.desktop'}]
+  gsettings set org.gnome.shell.extensions.arcmenu default-menu-view-runner 'Pinned_Apps'
+  gsettings set org.gnome.shell.extensions.arcmenu directory-shortcuts [{'id': 'ArcMenu_Home', 'name': 'Home', 'icon': 'ArcMenu_Home'}, {'id': 'ArcMenu_Downloads', 'name': 'Downloads', 'icon': 'ArcMenu_Downloads'}, {'name': 'Drive', 'icon': 'inode-directory-symbolic', 'id': '/home/murty/Drive'}, {'name': 'Git', 'icon': 'inode-directory-symbolic', 'id': '/home/murty/Git'}, {'name': 'Games', 'icon': 'inode-directory-symbolic', 'id': '/home/murty/Games'}]
+  gsettings set org.gnome.shell.extensions.arcmenu enable-horizontal-flip true
+  gsettings set org.gnome.shell.extensions.arcmenu force-menu-location 'MonitorCentered'
+  gsettings set org.gnome.shell.extensions.arcmenu group-apps-alphabetically-grid-layouts false
+  gsettings set org.gnome.shell.extensions.arcmenu group-apps-alphabetically-list-layouts false
+  gsettings set org.gnome.shell.extensions.arcmenu hide-overview-on-arcmenu-open true
+  gsettings set org.gnome.shell.extensions.arcmenu hide-overview-on-startup true
+  gsettings set org.gnome.shell.extensions.arcmenu hotkey-open-primary-monitor false
+  gsettings set org.gnome.shell.extensions.arcmenu left-panel-width '600'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-background-color 'rgb(0,0,0)'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-border-color 'rgb(51,51,51)'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-border-radius '0'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-border-width '1'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-button-icon 'resource:///org/gnome/shell/extensions/arcmenu/icons/scalable/actions/distro-endeavouros.svg'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-button-icon-size '36'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-foreground-color 'rgb(223,223,223)'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-height '550'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-item-active-bg-color 'rgb(143,240,164)'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-item-active-fg-color 'rgb(0,0,0)'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-item-category-icon-size 'Small'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-item-hover-bg-color 'rgb(143,240,164)'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-item-hover-fg-color 'rgb(0,0,0)'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-item-icon-size 'Medium'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-layout 'Default'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-separator-color 'rgb(51,51,51)'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-themes [['Black and Teal', 'rgb(0,0,0)', 'rgb(223,223,223)', 'rgb(51,51,51)', '1', '0', '11', 'rgb(51,51,51)', 'rgb(143,240,164)', 'rgb(0,0,0)', 'rgb(143,240,164)', 'rgb(0,0,0)'], ['ArcMenu Style', 'rgba(48,48,49,0.98)', 'rgb(223,223,223)', 'rgb(60,60,60)', '1', '14', '11', 'rgba(255,255,255,0.1)', 'rgb(21,83,158)', 'rgb(255,255,255)', 'rgb(25,98,163)', 'rgb(255,255,255)'], ['Simply Dark', 'rgba(28,28,28,0.98)', 'rgb(211,218,227)', 'rgb(63,62,64)', '1', '14', '11', 'rgb(63,62,64)', 'rgba(238,238,236,0.08)', 'rgb(255,255,255)', 'rgba(228,228,226,0.15)', 'rgb(255,255,255)'], ['Dark Blue', 'rgb(30,37,41)', 'rgb(189,230,251)', 'rgb(41,50,55)', '1', '14', '11', 'rgba(99,99,98,0.56)', 'rgba(189,230,251,0.08)', 'rgb(189,230,251)', 'rgba(189,230,251,0.15)', 'rgb(189,230,251)'], ['Light Blue', 'rgb(245,247,250)', 'rgb(18,51,84)', 'rgba(18,51,84,0.2)', '1', '14', '11', 'rgba(18,51,84,0.15)', 'rgba(18,51,84,0.08)', 'rgb(18,51,84)', 'rgba(18,51,84,0.15)', 'rgb(18,51,84)']]
+  gsettings set org.gnome.shell.extensions.arcmenu misc-item-icon-size 'Medium'
+  gsettings set org.gnome.shell.extensions.arcmenu multi-monitor true
+  gsettings set org.gnome.shell.extensions.arcmenu override-menu-theme true
+  gsettings set org.gnome.shell.extensions.arcmenu pinned-apps "[{'id': 'org.gnome.Nautilus.desktop'}, {'id': 'google-chrome.desktop'}, {'id': 'zen.desktop'}, {'id': 'org.gnome.Terminal.desktop'}, {'id': 'dev.zed.Zed.desktop'}, {'id': 'io.podman_desktop.PodmanDesktop.desktop'}, {'id': 'insync.desktop'}, {'id': 'discord.desktop'}, {'id': 'steam.desktop'}, {'id': 'io.github.kolunmi.Bazaar.desktop'}, {'id': 'org.gnome.DejaDup.desktop'}, {'id': 'io.missioncenter.MissionCenter.desktop'}, {'id': 'gnome-extensions prefs arcmenu@arcmenu.com', 'name': 'ArcMenu Settings', 'icon': 'ArcMenu_ArcMenuIcon'}, {'id': 'org.gnome.Settings.desktop'}, {'id': 'com.mitchellh.ghostty.desktop'}]"
+  gsettings set org.gnome.shell.extensions.arcmenu power-display-style 'In_Line'
+  gsettings set org.gnome.shell.extensions.arcmenu power-options '[(0, false), (1, true), (2, true), (3, true), (4, false), (5, false), (6, false), (7, false)]'
+  gsettings set org.gnome.shell.extensions.arcmenu prefs-visible-page '0'
+  gsettings set org.gnome.shell.extensions.arcmenu right-panel-width '200'
+  gsettings set org.gnome.shell.extensions.arcmenu runner-menu-height '550'
+  gsettings set org.gnome.shell.extensions.arcmenu runner-menu-height-static true
+  gsettings set org.gnome.shell.extensions.arcmenu runner-menu-width '650'
+  gsettings set org.gnome.shell.extensions.arcmenu runner-position 'Centered'
+  gsettings set org.gnome.shell.extensions.arcmenu runner-search-display-style 'Grid'
+  gsettings set org.gnome.shell.extensions.arcmenu runner-show-settings-button false
+  gsettings set org.gnome.shell.extensions.arcmenu search-entry-border-radius '(true, 25)'
+  gsettings set org.gnome.shell.extensions.arcmenu show-recently-installed-apps false
+  gsettings set org.gnome.shell.extensions.arcmenu update-notifier-project-version '71'
+  gsettings set org.gnome.shell.extensions.arcmenu vert-separator true
+fi
+
+# Extension: Dash to Panel
 
 if gsettings list-schemas | grep "org.gnome.shell.extensions.dash-to-panel" >/dev/null 2>&1; then
   gsettings set org.gnome.shell.extensions.dash-to-panel animate-appicon-hover-animation-extent '{"RIPPLE": 4, "PLANK": 4, "SIMPLE": 1}'

@@ -148,7 +148,6 @@ fi
 
 # App: Nautilus
 
-gsettings set org.gnome.nautilus.window-state initial-size "(1350, 1200)"
 gsettings set org.gnome.nautilus.window-state maximized false
 gsettings set org.gnome.nautilus.icon-view captions '["type", "size", "date_modified"]'
 gsettings set org.gnome.nautilus.icon-view default-zoom-level 'medium'
@@ -269,7 +268,6 @@ gsettings set org.gnome.tweaks show-extensions-notice false
 
 gsettings set org.gnome.Settings show-development-warning false
 gsettings set org.gnome.Settings last-panel 'system'
-gsettings set org.gnome.Settings window-state "(1250, 960, false)"
 
 # Ubuntu specific
 

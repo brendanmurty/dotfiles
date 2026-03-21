@@ -10,15 +10,21 @@
 gsettings set org.gnome.desktop.background picture-uri ''
 gsettings set org.gnome.desktop.background picture-uri-dark ''
 gsettings set org.gnome.desktop.background primary-color '#374a49'
-gsettings set org.gnome.shell.ubuntu color-scheme 'prefer-dark'
-gsettings set org.gnome.desktop.interface cursor-theme 'Yaru'
+gsettings set org.gnome.desktop.interface accent-color 'teal'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.desktop.interface gtk-enable-primary-paste false
-gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-prussiangreen-dark'
-gsettings set org.gnome.desktop.interface icon-theme 'Yaru-prussiangreen'
 gsettings set org.gnome.desktop.interface toolbar-icons-size 'large'
+gsettings set org.gnome.desktop.interface toolbar-style 'text'
+gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
+gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
+gsettings set org.gnome.desktop.interface cursor-size '24'
+gsettings set org.gnome.desktop.interface monospace-font-name 'Hack  14'
+gsettings set org.gnome.desktop.interface document-font-name 'Noto Sans  14'
+gsettings set org.gnome.desktop.interface font-name 'Noto Sans  10'
 gsettings set org.gnome.desktop.wm.preferences audible-bell false
 gsettings set org.gnome.desktop.wm.preferences visual-bell false
 gsettings set org.gnome.desktop.wm.preferences visual-bell-type 'frame-flash'
+gsettings set org.gnome.desktop.interface gtk-enable-primary-paste false
 
 
 # Window management
@@ -30,6 +36,7 @@ gsettings set org.gnome.mutter auto-maximize false
 gsettings set org.gnome.mutter center-new-windows false
 gsettings set org.gnome.mutter dynamic-workspaces true
 gsettings set org.gnome.mutter edge-tiling false
+gsettings set org.gnome.desktop.interface enable-hot-corners false
 gsettings set org.gnome.desktop.wm.preferences theme 'Adwaita'
 gsettings set org.gnome.desktop.wm.preferences button-layout 'icon:minimize,maximize,close'
 gsettings set org.gnome.desktop.wm.preferences num-workspaces '3'
@@ -130,6 +137,20 @@ gsettings set org.gnome.shell always-show-log-out true
 
 gsettings set org.gnome.settings-daemon.plugins.power power-profile-mode 'performance'
 gsettings set org.gnome.shell last-selected-power-profile 'performance'
+gsettings set org.gnome.desktop.interface show-battery-percentage true
+
+# App: Console
+
+if gsettings list-schemas | grep "org.gnome.Console"; then
+  gsettings set org.gnome.Console audible-bell false
+  gsettings set org.gnome.Console visual-bell false
+  gsettings set org.gnome.Console custom-font 'Monospace 14'
+  gsettings set org.gnome.Console use-system-font false
+  gsettings set org.gnome.Console theme 'night'
+  gsettings set org.gnome.Console shell ['/bin/bash']
+  gsettings set org.gnome.Console scrollback-lines '10000'
+  gsettings set org.gnome.Console transparency false
+fi
 
 # App: TextEditor
 
@@ -157,6 +178,10 @@ gsettings set org.gnome.Settings window-state "(1250, 960, false)"
 # Ubuntu specific
 
 if grep -q "Ubuntu" /etc/os-release; then
+  gsettings set org.gnome.shell.ubuntu color-scheme 'prefer-dark'
+  gsettings set org.gnome.desktop.interface cursor-theme 'Yaru'
+  gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-prussiangreen-dark'
+  gsettings set org.gnome.desktop.interface icon-theme 'Yaru-prussiangreen'
   gsettings set org.gnome.desktop.screensaver ubuntu-lock-on-suspend true
 
   if gsettings list-schemas | grep "org.gnome.shell.extensions.tiling-assistant"; then

@@ -15,10 +15,14 @@ if [[ $(uname) == "Darwin" ]]; then
   mkdir -p "$CONFIG_DIR"
   brew install --cask ghostty
 else
-  # Otherwise, assume this is a Linux machine using APT
-  sudo add-apt-repository ppa:mkasberg/ghostty-ubuntu
-  sudo apt -qq update
-  sudo apt install -qq --assume-yes ghostty
+  if grep -q "Ubuntu" /etc/os-release >/dev/null 2>&1; then
+    # This is an Ubuntu machine
+    sudo add-apt-repository ppa:mkasberg/ghostty-ubuntu
+    sudo apt -qq update
+    sudo apt install -qq --assume-yes ghostty
+  fi
+
+  # Otherwise, assume this is a Linux machine that already has Ghostty installed
 fi
 
 echo "Making a backup of '$CONFIG_DIR/config.ghostty'"

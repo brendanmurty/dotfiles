@@ -40,7 +40,7 @@ gsettings set org.gnome.desktop.interface enable-hot-corners false
 gsettings set org.gnome.desktop.wm.preferences theme 'Adwaita'
 gsettings set org.gnome.desktop.wm.preferences button-layout 'icon:minimize,maximize,close'
 gsettings set org.gnome.desktop.wm.preferences num-workspaces '3'
-gsettings set org.gnome.desktop.wm.preferences workspace-names "['Personal', 'Work', 'Games']"
+gsettings set org.gnome.desktop.wm.preferences workspace-names '["Personal", "Work", "Games"]'
 gsettings set org.gnome.desktop.wm.preferences action-double-click-titlebar 'toggle-maximize'
 gsettings set org.gnome.desktop.wm.preferences action-middle-click-titlebar 'none'
 gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'
@@ -57,16 +57,16 @@ gsettings set org.gnome.shell development-tools true
 # Extension: Arc Menu
 
 if gsettings list-schemas | grep "org.gnome.shell.extensions.arcmenu" >/dev/null 2>&1; then
-  gsettings set org.gnome.shell.extensions.arcmenu application-shortcuts "[{'id': 'io.missioncenter.MissionCenter.desktop'}, {'id': 'org.gnome.Settings.desktop'}]"
+  gsettings set org.gnome.shell.extensions.arcmenu application-shortcuts '[{"id": "io.missioncenter.MissionCenter.desktop"}, {"id": "org.gnome.Settings.desktop"}]'
   gsettings set org.gnome.shell.extensions.arcmenu apps-show-extra-details false
   gsettings set org.gnome.shell.extensions.arcmenu arcmenu-hotkey '["Super_L"]'
   gsettings set org.gnome.shell.extensions.arcmenu arcmenu-hotkey-overlay-key-enabled true
   gsettings set org.gnome.shell.extensions.arcmenu avatar-style 'Round'
   gsettings set org.gnome.shell.extensions.arcmenu az-layout-merge-panels true
   gsettings set org.gnome.shell.extensions.arcmenu button-item-icon-size 'Medium'
-  gsettings set org.gnome.shell.extensions.arcmenu context-menu-items "[{'id': 'org.gnome.Nautilus.desktop'}, {'id': 'org.gnome.Console.desktop'}, {'name': 'Separator', 'icon': 'list-remove-symbolic', 'id': 'ArcMenu_Separator'}, {'id': 'eos-update.desktop', 'name': 'Update'}, {'id': 'io.missioncenter.MissionCenter.desktop'}, {'id': 'ArcMenu_Settings', 'name': 'Menu Settings', 'icon': 'ArcMenu_ArcMenuIcon'}, {'id': 'ArcMenu_PanelExtensionSettings', 'name': 'Panel Extension Settings', 'icon': 'application-x-addon-symbolic'}, {'id': 'ArcMenu_PowerOptions', 'name': 'Power Options', 'icon': 'system-shutdown-symbolic'}, {'id': 'org.gnome.Settings.desktop'}]"
+  gsettings set org.gnome.shell.extensions.arcmenu context-menu-items '[{"id": "org.gnome.Nautilus.desktop"}, {"id": "org.gnome.Console.desktop"}, {"name": "Separator", "icon": "list-remove-symbolic", "id": "ArcMenu_Separator"}, {"id": "eos-update.desktop", "name": "Update"}, {"id": "io.missioncenter.MissionCenter.desktop"}, {"id": "ArcMenu_Settings", "name": "Menu Settings", "icon": "ArcMenu_ArcMenuIcon"}, {"id": "ArcMenu_PanelExtensionSettings", "name": "Panel Extension Settings", "icon": "application-x-addon-symbolic"}, {"id": "ArcMenu_PowerOptions", "name": "Power Options", "icon": "system-shutdown-symbolic"}, {"id": "org.gnome.Settings.desktop"}]'
   gsettings set org.gnome.shell.extensions.arcmenu default-menu-view-runner 'Pinned_Apps'
-  gsettings set org.gnome.shell.extensions.arcmenu directory-shortcuts "[{'id': 'ArcMenu_Home', 'name': 'Home', 'icon': 'ArcMenu_Home'}, {'id': 'ArcMenu_Downloads', 'name': 'Downloads', 'icon': 'ArcMenu_Downloads'}, {'name': 'Drive', 'icon': 'inode-directory-symbolic', 'id': '/home/murty/Drive'}, {'name': 'Git', 'icon': 'inode-directory-symbolic', 'id': '/home/murty/Git'}, {'name': 'Games', 'icon': 'inode-directory-symbolic', 'id': '/home/murty/Games'}]"
+  gsettings set org.gnome.shell.extensions.arcmenu directory-shortcuts '[{"id": "ArcMenu_Home", "name": "Home", "icon": "ArcMenu_Home"}, {"id": "ArcMenu_Downloads", "name": "Downloads", "icon": "ArcMenu_Downloads"}, {"name": "Drive", "icon": "inode-directory-symbolic", "id": "/home/murty/Drive"}, {"name": "Git", "icon": "inode-directory-symbolic", "id": "/home/murty/Git"}, {"name": "Games", "icon": "inode-directory-symbolic", "id": "/home/murty/Games"}]'
   gsettings set org.gnome.shell.extensions.arcmenu enable-horizontal-flip true
   gsettings set org.gnome.shell.extensions.arcmenu force-menu-location 'MonitorCentered'
   gsettings set org.gnome.shell.extensions.arcmenu group-apps-alphabetically-grid-layouts false
@@ -91,11 +91,11 @@ if gsettings list-schemas | grep "org.gnome.shell.extensions.arcmenu" >/dev/null
   gsettings set org.gnome.shell.extensions.arcmenu menu-item-icon-size 'Medium'
   gsettings set org.gnome.shell.extensions.arcmenu menu-layout 'Default'
   gsettings set org.gnome.shell.extensions.arcmenu menu-separator-color 'rgb(51,51,51)'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-themes "[['Black and Teal', 'rgb(0,0,0)', 'rgb(223,223,223)', 'rgb(51,51,51)', '1', '0', '11', 'rgb(51,51,51)', 'rgb(143,240,164)', 'rgb(0,0,0)', 'rgb(143,240,164)', 'rgb(0,0,0)'], ['ArcMenu Style', 'rgba(48,48,49,0.98)', 'rgb(223,223,223)', 'rgb(60,60,60)', '1', '14', '11', 'rgba(255,255,255,0.1)', 'rgb(21,83,158)', 'rgb(255,255,255)', 'rgb(25,98,163)', 'rgb(255,255,255)'], ['Simply Dark', 'rgba(28,28,28,0.98)', 'rgb(211,218,227)', 'rgb(63,62,64)', '1', '14', '11', 'rgb(63,62,64)', 'rgba(238,238,236,0.08)', 'rgb(255,255,255)', 'rgba(228,228,226,0.15)', 'rgb(255,255,255)'], ['Dark Blue', 'rgb(30,37,41)', 'rgb(189,230,251)', 'rgb(41,50,55)', '1', '14', '11', 'rgba(99,99,98,0.56)', 'rgba(189,230,251,0.08)', 'rgb(189,230,251)', 'rgba(189,230,251,0.15)', 'rgb(189,230,251)'], ['Light Blue', 'rgb(245,247,250)', 'rgb(18,51,84)', 'rgba(18,51,84,0.2)', '1', '14', '11', 'rgba(18,51,84,0.15)', 'rgba(18,51,84,0.08)', 'rgb(18,51,84)', 'rgba(18,51,84,0.15)', 'rgb(18,51,84)']]"
+  gsettings set org.gnome.shell.extensions.arcmenu menu-themes '[["Black and Teal", "rgb(0,0,0)", "rgb(223,223,223)", "rgb(51,51,51)", "1", "0", "11", "rgb(51,51,51)", "rgb(143,240,164)", "rgb(0,0,0)", "rgb(143,240,164)", "rgb(0,0,0)"], ["ArcMenu Style", "rgba(48,48,49,0.98)", "rgb(223,223,223)", "rgb(60,60,60)", "1", "14", "11", "rgba(255,255,255,0.1)", "rgb(21,83,158)", "rgb(255,255,255)", "rgb(25,98,163)", "rgb(255,255,255)"], ["Simply Dark", "rgba(28,28,28,0.98)", "rgb(211,218,227)", "rgb(63,62,64)", "1", "14", "11", "rgb(63,62,64)", "rgba(238,238,236,0.08)", "rgb(255,255,255)", "rgba(228,228,226,0.15)", "rgb(255,255,255)"], ["Dark Blue", "rgb(30,37,41)", "rgb(189,230,251)", "rgb(41,50,55)", "1", "14", "11", "rgba(99,99,98,0.56)", "rgba(189,230,251,0.08)", "rgb(189,230,251)", "rgba(189,230,251,0.15)", "rgb(189,230,251)"], ["Light Blue", "rgb(245,247,250)", "rgb(18,51,84)", "rgba(18,51,84,0.2)", "1", "14", "11", "rgba(18,51,84,0.15)", "rgba(18,51,84,0.08)", "rgb(18,51,84)", "rgba(18,51,84,0.15)", "rgb(18,51,84)"]]'
   gsettings set org.gnome.shell.extensions.arcmenu misc-item-icon-size 'Medium'
   gsettings set org.gnome.shell.extensions.arcmenu multi-monitor true
   gsettings set org.gnome.shell.extensions.arcmenu override-menu-theme true
-  gsettings set org.gnome.shell.extensions.arcmenu pinned-apps "[{'id': 'org.gnome.Nautilus.desktop'}, {'id': 'google-chrome.desktop'}, {'id': 'zen.desktop'}, {'id': 'org.gnome.Terminal.desktop'}, {'id': 'dev.zed.Zed.desktop'}, {'id': 'io.podman_desktop.PodmanDesktop.desktop'}, {'id': 'insync.desktop'}, {'id': 'discord.desktop'}, {'id': 'steam.desktop'}, {'id': 'io.github.kolunmi.Bazaar.desktop'}, {'id': 'org.gnome.DejaDup.desktop'}, {'id': 'io.missioncenter.MissionCenter.desktop'}, {'id': 'gnome-extensions prefs arcmenu@arcmenu.com', 'name': 'ArcMenu Settings', 'icon': 'ArcMenu_ArcMenuIcon'}, {'id': 'org.gnome.Settings.desktop'}, {'id': 'com.mitchellh.ghostty.desktop'}]"
+  gsettings set org.gnome.shell.extensions.arcmenu pinned-apps '[{"id": "org.gnome.Nautilus.desktop"}, {"id": "google-chrome.desktop"}, {"id": "zen.desktop"}, {"id": "org.gnome.Terminal.desktop"}, {"id": "dev.zed.Zed.desktop"}, {"id": "io.podman_desktop.PodmanDesktop.desktop"}, {"id": "insync.desktop"}, {"id": "discord.desktop"}, {"id": "steam.desktop"}, {"id": "io.github.kolunmi.Bazaar.desktop"}, {"id": "org.gnome.DejaDup.desktop"}, {"id": "io.missioncenter.MissionCenter.desktop"}, {"id": "gnome-extensions prefs arcmenu@arcmenu.com", "name": "ArcMenu Settings", "icon": "ArcMenu_ArcMenuIcon"}, {"id": "org.gnome.Settings.desktop"}, {"id": "com.mitchellh.ghostty.desktop"}]'
   gsettings set org.gnome.shell.extensions.arcmenu power-display-style 'In_Line'
   gsettings set org.gnome.shell.extensions.arcmenu power-options '[(0, false), (1, true), (2, true), (3, true), (4, false), (5, false), (6, false), (7, false)]'
   gsettings set org.gnome.shell.extensions.arcmenu prefs-visible-page '0'
@@ -150,7 +150,7 @@ fi
 
 gsettings set org.gnome.nautilus.window-state initial-size "(1350, 1200)"
 gsettings set org.gnome.nautilus.window-state maximized false
-gsettings set org.gnome.nautilus.icon-view captions "['type', 'size', 'date_modified']"
+gsettings set org.gnome.nautilus.icon-view captions '["type", "size", "date_modified"]'
 gsettings set org.gnome.nautilus.icon-view default-zoom-level 'medium'
 gsettings set org.gnome.nautilus.preferences default-folder-viewer 'icon-view'
 gsettings set org.gnome.nautilus.preferences default-sort-order 'name'
@@ -180,12 +180,12 @@ gsettings set org.gtk.gtk4.Settings.FileChooser show-type-column true
 
 # Keyboard shortcuts
 
-gsettings set org.gnome.shell.keybindings toggle-overview "['<Control><Super>Up']"
-gsettings set org.gnome.shell.keybindings screenshot "[]"
-gsettings set org.gnome.shell.keybindings screenshot-window "[]"
-gsettings set org.gnome.shell.keybindings show-screen-recording-ui "[]"
-gsettings set org.gnome.shell.keybindings show-screenshot-ui "['Print']"
-gsettings set org.gnome.shell.keybindings toggle-quick-settings "['<Super>s']"
+gsettings set org.gnome.shell.keybindings toggle-overview '["<Control><Super>Up"]'
+gsettings set org.gnome.shell.keybindings screenshot '[]'
+gsettings set org.gnome.shell.keybindings screenshot-window '[]'
+gsettings set org.gnome.shell.keybindings show-screen-recording-ui '[]'
+gsettings set org.gnome.shell.keybindings show-screenshot-ui '["Print"]'
+gsettings set org.gnome.shell.keybindings toggle-quick-settings '["<Super>s"]'
 
 # Date and Time
 
@@ -233,7 +233,7 @@ fi
 
 gsettings set org.gnome.shell last-selected-power-profile 'performance'
 gsettings set org.gnome.desktop.interface show-battery-percentage true
-gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer', 'variable-refresh-rate', 'xwayland-native-scaling']"
+gsettings set org.gnome.mutter experimental-features '["scale-monitor-framebuffer", "variable-refresh-rate", "xwayland-native-scaling"]'
 
 # App: Console
 
@@ -243,7 +243,7 @@ if gsettings list-schemas | grep "org.gnome.Console" >/dev/null 2>&1; then
   gsettings set org.gnome.Console custom-font 'Monospace 14'
   gsettings set org.gnome.Console use-system-font false
   gsettings set org.gnome.Console theme 'night'
-  gsettings set org.gnome.Console shell "['/bin/bash']"
+  gsettings set org.gnome.Console shell '["/bin/bash"]'
   gsettings set org.gnome.Console scrollback-lines '10000'
   gsettings set org.gnome.Console transparency false
 fi
@@ -287,10 +287,10 @@ if grep -q "Ubuntu" /etc/os-release >/dev/null 2>&1; then
     gsettings set org.gnome.shell.extensions.tiling-assistant tiling-popup-all-workspace false
     gsettings set org.gnome.shell.extensions.tiling-assistant enable-tile-animations true
     gsettings set org.gnome.shell.extensions.tiling-assistant enable-untile-animations true
-    gsettings set org.gnome.shell.extensions.tiling-assistant toggle-tiling-popup "[]"
-    gsettings set org.gnome.shell.extensions.tiling-assistant overridden-settings "{'org.gnome.mutter.edge-tiling': <false>}"
-    gsettings set org.gnome.shell.extensions.tiling-assistant restore-window "['<Super>Down']"
-    gsettings set org.gnome.shell.extensions.tiling-assistant tile-left-half "['<Super>Left', '<Super>KP_4']"
-    gsettings set org.gnome.shell.extensions.tiling-assistant tile-right-half "['<Super>Right', '<Super>KP_6']"
+    gsettings set org.gnome.shell.extensions.tiling-assistant toggle-tiling-popup '[]'
+    gsettings set org.gnome.shell.extensions.tiling-assistant overridden-settings '{"org.gnome.mutter.edge-tiling": <false>}'
+    gsettings set org.gnome.shell.extensions.tiling-assistant restore-window '["<Super>Down"]'
+    gsettings set org.gnome.shell.extensions.tiling-assistant tile-left-half '["<Super>Left", "<Super>KP_4"]'
+    gsettings set org.gnome.shell.extensions.tiling-assistant tile-right-half '["<Super>Right", "<Super>KP_6"]'
   fi
 fi

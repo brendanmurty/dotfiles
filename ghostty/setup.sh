@@ -23,6 +23,9 @@ else
   fi
 
   # Otherwise, assume this is a Linux machine that already has Ghostty installed
+
+  # Figure out the config file directory - from https://ghostty.org/docs/config
+  CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/ghostty"
 fi
 
 echo "Making a backup of '$CONFIG_DIR/config.ghostty'"

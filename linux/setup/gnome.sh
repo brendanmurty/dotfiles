@@ -54,6 +54,41 @@ gsettings set org.gnome.shell disable-user-extensions false
 gsettings set org.gnome.shell always-show-log-out true
 gsettings set org.gnome.shell development-tools true
 
+# Extension: Dash to Panel
+
+
+if gsettings list-schemas | grep "org.gnome.shell.extensions.dash-to-panel" >/dev/null 2>&1; then
+  gsettings set org.gnome.shell.extensions.dash-to-panel animate-appicon-hover-animation-extent '{"RIPPLE": 4, "PLANK": 4, "SIMPLE": 1}'
+  gsettings set org.gnome.shell.extensions.dash-to-panel appicon-margin '6'
+  gsettings set org.gnome.shell.extensions.dash-to-panel appicon-padding '6'
+  gsettings set org.gnome.shell.extensions.dash-to-panel appicon-style 'NORMAL'
+  gsettings set org.gnome.shell.extensions.dash-to-panel dot-color-dominant true
+  gsettings set org.gnome.shell.extensions.dash-to-panel dot-color-override false
+  gsettings set org.gnome.shell.extensions.dash-to-panel dot-position 'BOTTOM'
+  gsettings set org.gnome.shell.extensions.dash-to-panel dot-size '0'
+  gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-focused 'DOTS'
+  gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-unfocused 'DOTS'
+  gsettings set org.gnome.shell.extensions.dash-to-panel extension-version '73'
+  gsettings set org.gnome.shell.extensions.dash-to-panel focus-highlight true
+  gsettings set org.gnome.shell.extensions.dash-to-panel focus-highlight-dominant true
+  gsettings set org.gnome.shell.extensions.dash-to-panel hide-overview-on-startup true
+  gsettings set org.gnome.shell.extensions.dash-to-panel hotkeys-overlay-combo 'TEMPORARILY'
+  gsettings set org.gnome.shell.extensions.dash-to-panel panel-anchors '{"LHC-0000000000000":"MIDDLE"}'
+  gsettings set org.gnome.shell.extensions.dash-to-panel panel-element-positions '{"LHC-0000000000000":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedTL"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}]}'
+  gsettings set org.gnome.shell.extensions.dash-to-panel panel-lengths '{}'
+  gsettings set org.gnome.shell.extensions.dash-to-panel panel-positions '{}'
+  gsettings set org.gnome.shell.extensions.dash-to-panel panel-sizes '{"LHC-0000000000000":48}'
+  gsettings set org.gnome.shell.extensions.dash-to-panel panel-top-bottom-margins '0'
+  gsettings set org.gnome.shell.extensions.dash-to-panel panel-top-bottom-padding '0'
+  gsettings set org.gnome.shell.extensions.dash-to-panel prefs-opened true
+  gsettings set org.gnome.shell.extensions.dash-to-panel trans-bg-color '#000000'
+  gsettings set org.gnome.shell.extensions.dash-to-panel trans-border-custom-color 'rgb(51,51,51)'
+  gsettings set org.gnome.shell.extensions.dash-to-panel trans-border-use-custom-color true
+  gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-border true
+  gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-custom-bg true
+  gsettings set org.gnome.shell.extensions.dash-to-panel window-preview-title-position 'TOP'
+fi
+
 # App: Nautilus
 
 gsettings set org.gnome.nautilus.window-state initial-size "(1350, 1200)"

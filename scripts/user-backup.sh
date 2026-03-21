@@ -59,19 +59,31 @@ fi
 
 ls -lah "$SOURCE_DIR" > "$SOURCE_DIR/.backups/dir-list-user.txt"
 
-# Save a copy of the installed Flatpak apps
+# Save a list of all installed Pacman packages
+
+if command -v pacman >/dev/null 2>&1 ; then
+  pacman -Qe > "$SOURCE_DIR/.backups/package-list-pacman.txt"
+fi
+
+# Save a list of all installed Flatpak packages
 
 if command -v flatpak >/dev/null 2>&1 ; then
-  flatpak list --app > "$SOURCE_DIR/.backups/app-list-flatpak.txt"
+  flatpak list --app > "$SOURCE_DIR/.backups/package-list-flatpak.txt"
 fi
 
-# Save a copy of the installed Snap apps
+# Save a list of all installed Snap packages
 
 if command -v snap >/dev/null 2>&1 ; then
-  snap list > "$SOURCE_DIR/.backups/app-list-snap.txt"
+  snap list > "$SOURCE_DIR/.backups/package-list-snap.txt"
 fi
 
-# Save a copy of all Dconf settings
+# Save a list of all installed Homebrew packages
+
+if command -v brew >/dev/null 2>&1 ; then
+  brew list > "$SOURCE_DIR/.backups/package-list-homebrew.txt"
+fi
+
+# Save a list of all Dconf settings
 
 if command -v dconf >/dev/null 2>&1 ; then
   dconf dump / > "$SOURCE_DIR/.backups/dconf-user-export.conf"

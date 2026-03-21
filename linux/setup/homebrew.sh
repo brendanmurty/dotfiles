@@ -9,16 +9,24 @@
 #
 #
 
-BREW_DIR_DEFAULT='/home/linuxbrew/.linuxbrew'
+BREW_DIR_DEFAULT='/home/linuxbrew'
 BREW_DIR="$HOME/.brew"
 
-sudo rm -rf "$BREW_DIR_DEFAULT"
+echo "Homebrew setup script requires 'sudo', prompting for password"
+sudo -v
+if [ $? -ne 0 ]; then
+  echo "Request for sudo privileges failed, exiting"
+  exit 1
+fi
+
+sudo rm -rf "$BREW_DIR_DEFAULT/.linuxbrew"
 sudo rm -rf "$BREW_DIR"
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-sudo mv "$BREW_DIR_DEFAULT" "$BREW_DIR"
+sudo mv "$BREW_DIR_DEFAULT/.linuxbrew" "$BREW_DIR"
 sudo chown -R "$USER:$USER" "$BREW_DIR"
+sudo rm -rf "$BREW_DIR_DEFAULT"
 
 touch "$HOME/.bash_profile"
 
@@ -34,7 +42,11 @@ echo 'export HOMEBREW_NO_UPDATE_REPORT_CASKS=1' >> "$HOME/.bash_profile"
 
 echo 'eval "$($BREW_DIR/bin/brew shellenv)"' >> "$HOME/.bash_profile"
 echo 'alias brew="$BREW_DIR/bin/brew"' >> "$HOME/.bash_profile"
-echo 'export PATH="$PATH:$BREW_DIR/bin"' >> "$HOME/.bash_profile"
+
+# Add Homebrew Bin Dir to PATH variable if it's not already there
+if [ -d "$BREW_DIR/bin" ] && [[ ":$PATH:" != *":$BREW_DIR/bin:"* ]]; then
+  export PATH="${PATH}:$BREW_DIR/bin:"
+fi
 
 source "$HOME/.bash_profile"
 

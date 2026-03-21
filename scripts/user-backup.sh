@@ -5,7 +5,6 @@
 #  - Include and exclude rules ("x" params) are set in the "zip" command below
 #  - Saves symlinks as links, not as directories
 #  - Saves output messages to the file set in LOG_FILE
-#  - Requires zip, install with: sudo apt install zip
 #
 
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"

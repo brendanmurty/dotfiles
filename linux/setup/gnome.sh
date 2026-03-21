@@ -2,7 +2,7 @@
 #
 #
 # Setup Gnome
-#   - Customises Gnome settings for the current user
+#   - Customise Gnome settings for the current user
 #
 #
 
@@ -17,6 +17,10 @@ gsettings set org.gnome.desktop.interface gtk-enable-primary-paste false
 gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-prussiangreen-dark'
 gsettings set org.gnome.desktop.interface icon-theme 'Yaru-prussiangreen'
 gsettings set org.gnome.desktop.interface toolbar-icons-size 'large'
+gsettings set org.gnome.desktop.wm.preferences audible-bell false
+gsettings set org.gnome.desktop.wm.preferences visual-bell false
+gsettings set org.gnome.desktop.wm.preferences visual-bell-type 'frame-flash'
+
 
 # Window management
 
@@ -27,6 +31,15 @@ gsettings set org.gnome.mutter auto-maximize false
 gsettings set org.gnome.mutter center-new-windows false
 gsettings set org.gnome.mutter dynamic-workspaces true
 gsettings set org.gnome.mutter edge-tiling false
+gsettings set org.gnome.desktop.wm.preferences theme 'Adwaita'
+gsettings set org.gnome.desktop.wm.preferences button-layout 'icon:minimize,maximize,close'
+gsettings set org.gnome.desktop.wm.preferences num-workspaces 3
+gsettings set org.gnome.desktop.wm.preferences workspace-names ['Personal', 'Work', 'Games']
+gsettings set org.gnome.desktop.wm.preferences action-double-click-titlebar 'toggle-maximize'
+gsettings set org.gnome.desktop.wm.preferences action-middle-click-titlebar 'none'
+gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'
+gsettings set org.gnome.desktop.wm.preferences resize-with-right-button false
+gsettings set org.gnome.desktop.wm.preferences focus-mode 'click'
 
 # Extensions
 

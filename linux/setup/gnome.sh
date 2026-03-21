@@ -59,7 +59,7 @@ gsettings set org.gnome.shell development-tools true
 if gsettings list-schemas | grep "org.gnome.shell.extensions.arcmenu" >/dev/null 2>&1; then
   gsettings set org.gnome.shell.extensions.arcmenu application-shortcuts "[{'id': 'io.missioncenter.MissionCenter.desktop'}, {'id': 'org.gnome.Settings.desktop'}]"
   gsettings set org.gnome.shell.extensions.arcmenu apps-show-extra-details false
-  gsettings set org.gnome.shell.extensions.arcmenu arcmenu-hotkey "['Super_L']"
+  gsettings set org.gnome.shell.extensions.arcmenu arcmenu-hotkey '["Super_L"]'
   gsettings set org.gnome.shell.extensions.arcmenu arcmenu-hotkey-overlay-key-enabled true
   gsettings set org.gnome.shell.extensions.arcmenu avatar-style 'Round'
   gsettings set org.gnome.shell.extensions.arcmenu az-layout-merge-panels true

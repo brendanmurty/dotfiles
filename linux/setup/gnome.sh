@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 #
 #
-# Setup Gnome
-#   - Customise Gnome settings for the current user
+# Setup Gnome - Customise user level Gnome settings
 #
 #
 
@@ -33,7 +32,7 @@ gsettings set org.gnome.mutter dynamic-workspaces true
 gsettings set org.gnome.mutter edge-tiling false
 gsettings set org.gnome.desktop.wm.preferences theme 'Adwaita'
 gsettings set org.gnome.desktop.wm.preferences button-layout 'icon:minimize,maximize,close'
-gsettings set org.gnome.desktop.wm.preferences num-workspaces 3
+gsettings set org.gnome.desktop.wm.preferences num-workspaces '3'
 gsettings set org.gnome.desktop.wm.preferences workspace-names ['Personal', 'Work', 'Games']
 gsettings set org.gnome.desktop.wm.preferences action-double-click-titlebar 'toggle-maximize'
 gsettings set org.gnome.desktop.wm.preferences action-middle-click-titlebar 'none'
@@ -47,20 +46,6 @@ gsettings set org.gnome.shell allow-extension-installation true
 gsettings set org.gnome.shell disable-user-extensions false
 gsettings set org.gnome.shell always-show-log-out true
 gsettings set org.gnome.shell development-tools true
-
-# Extension: Ubuntu Tiling Assistant
-
-gsettings set org.gnome.shell.extensions.tiling-assistant enable-raise-tile-group false
-gsettings set org.gnome.shell.extensions.tiling-assistant enable-tiling-popup false
-gsettings set org.gnome.shell.extensions.tiling-assistant tiling-popup-all-workspace false
-gsettings set org.gnome.shell.extensions.tiling-assistant enable-tile-animations true
-gsettings set org.gnome.shell.extensions.tiling-assistant enable-untile-animations true
-gsettings set org.gnome.shell.extensions.tiling-assistant toggle-tiling-popup "[]"
-gsettings set org.gnome.shell.extensions.tiling-assistant overridden-settings "{'org.gnome.mutter.edge-tiling': <false>}"
-gsettings set org.gnome.shell.extensions.tiling-assistant restore-window "['<Super>Down']"
-gsettings set org.gnome.shell.extensions.tiling-assistant tile-left-half "['<Super>Left', '<Super>KP_4']"
-gsettings set org.gnome.shell.extensions.tiling-assistant tile-right-half "['<Super>Right', '<Super>KP_6']"
-
 
 # App: Nautilus
 
@@ -78,6 +63,21 @@ gsettings set org.gnome.nautilus.preferences search-filter-time-type 'last_modif
 gsettings set org.gnome.nautilus.preferences install-mime-activation true
 gsettings set org.gnome.nautilus.preferences open-folder-on-dnd-hover false
 gsettings set org.gnome.nautilus.preferences click-policy 'double'
+gsettings set org.gnome.nautilus.preferences show-hidden-files true
+gsettings set org.gnome.nautilus.compression default-compression-format 'encrypted_zip'
+
+# File lists
+
+gsettings set org.gtk.gtk4.Settings.FileChooser sort-column 'name'
+gsettings set org.gtk.gtk4.Settings.FileChooser sort-order 'ascending'
+gsettings set org.gtk.gtk4.Settings.FileChooser sort-directories-first true
+gsettings set org.gtk.gtk4.Settings.FileChooser startup-mode 'cwd'
+gsettings set org.gtk.gtk4.Settings.FileChooser show-hidden true
+gsettings set org.gtk.gtk4.Settings.FileChooser type-format 'category'
+gsettings set org.gtk.gtk4.Settings.FileChooser view-type 'grid'
+gsettings set org.gtk.gtk4.Settings.FileChooser clock-format '12h'
+gsettings set org.gtk.gtk4.Settings.FileChooser show-size-column true
+gsettings set org.gtk.gtk4.Settings.FileChooser show-type-column true
 
 # Keyboard shortcuts
 
@@ -123,12 +123,12 @@ gsettings set org.gnome.clocks geolocation false
 gsettings set org.gnome.desktop.screensaver lock-enabled true
 gsettings set org.gnome.desktop.screensaver lock-delay '0'
 gsettings set org.gnome.desktop.screensaver show-full-name-in-top-bar false
-gsettings set org.gnome.desktop.screensaver ubuntu-lock-on-suspend true
 gsettings set org.gnome.desktop.screensaver user-switch-enabled true
 gsettings set org.gnome.shell always-show-log-out true
 
 # Power and performance
 
+gsettings set org.gnome.settings-daemon.plugins.power power-profile-mode 'performance'
 gsettings set org.gnome.shell last-selected-power-profile 'performance'
 
 # App: TextEditor
@@ -153,3 +153,22 @@ gsettings set org.gnome.tweaks show-extensions-notice false
 gsettings set org.gnome.Settings show-development-warning false
 gsettings set org.gnome.Settings last-panel 'system'
 gsettings set org.gnome.Settings window-state "(1250, 960, false)"
+
+# Ubuntu specific
+
+if grep -q "Ubuntu" /etc/os-release; then
+  gsettings set org.gnome.desktop.screensaver ubuntu-lock-on-suspend true
+
+  if gsettings list-schemas | grep "org.gnome.shell.extensions.tiling-assistant"; then
+    gsettings set org.gnome.shell.extensions.tiling-assistant enable-raise-tile-group false
+    gsettings set org.gnome.shell.extensions.tiling-assistant enable-tiling-popup false
+    gsettings set org.gnome.shell.extensions.tiling-assistant tiling-popup-all-workspace false
+    gsettings set org.gnome.shell.extensions.tiling-assistant enable-tile-animations true
+    gsettings set org.gnome.shell.extensions.tiling-assistant enable-untile-animations true
+    gsettings set org.gnome.shell.extensions.tiling-assistant toggle-tiling-popup "[]"
+    gsettings set org.gnome.shell.extensions.tiling-assistant overridden-settings "{'org.gnome.mutter.edge-tiling': <false>}"
+    gsettings set org.gnome.shell.extensions.tiling-assistant restore-window "['<Super>Down']"
+    gsettings set org.gnome.shell.extensions.tiling-assistant tile-left-half "['<Super>Left', '<Super>KP_4']"
+    gsettings set org.gnome.shell.extensions.tiling-assistant tile-right-half "['<Super>Right', '<Super>KP_6']"
+  fi
+fi

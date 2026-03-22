@@ -12,7 +12,7 @@ OS_NAME="$(bash $THIS_DIR/lib/get-os-name.sh)"
 
 if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
   echo "These scripts require Linux."
-  exit 1
+  exit 0
 fi
 
 info() { echo -e "\033[36m$1\033[0m"; }

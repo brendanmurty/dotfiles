@@ -14,7 +14,7 @@ OS_NAME="$(bash $LIB/get-os-name.sh)"
 
 if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
   echo "This script requires Linux."
-  exit 1
+  exit 0
 fi
 
 BREW_DIR_DEFAULT='/home/linuxbrew'
@@ -24,7 +24,7 @@ echo "Homebrew setup script requires 'sudo', prompting for password"
 sudo -v
 if [ $? -ne 0 ]; then
   echo "Request for sudo privileges failed, exiting"
-  exit 1
+  exit 0
 fi
 
 sudo rm -rf "$BREW_DIR_DEFAULT/.linuxbrew"

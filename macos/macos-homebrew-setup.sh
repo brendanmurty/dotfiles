@@ -14,7 +14,7 @@ OS_NAME="$(bash $LIB/get-os-name.sh)"
 
 if [[ "$OS_NAME" != "macOS" ]]; then
   echo "This script requires macOS."
-  exit 1
+  exit 0
 fi
 
 BREW_DIR="$HOME/.brew"

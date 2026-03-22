@@ -25,7 +25,7 @@ BACKUP_DIR=$HOME"/.obsidian-config_"$(date +%Y%m%d%H%M)
 read -p "$(echo -e $blue"This script will first backup, then apply Obsidian configuration files to your vault configuration directory at "$CONFIG_DIR". Please close Obsidian first. Continue this process? (y/n) "$end)" ANSWER
 if [ "$ANSWER" != "y" ]; then
   echo -e "${red}User cancelled, restore aborted.${end}"
-  exit 1
+  exit 0
 fi
 
 # Backup current config files

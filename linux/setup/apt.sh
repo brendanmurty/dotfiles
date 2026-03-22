@@ -10,7 +10,7 @@ OS_NAME="$(bash $PARENT_DIR/lib/get-os-name.sh)"
 
 if [[ "$OS_NAME" != "Ubuntu" ]]; then
   echo "This script requires Ubuntu."
-  exit 1
+  exit 0
 fi
 
 sudo apt -qq update

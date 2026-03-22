@@ -24,7 +24,7 @@ UPDATE_DIR="./config"
 read -p "$(echo -e $blue"This script will update your config files here from your Obsidian configuration directory at "$CONFIG_DIR". Continue this process? (y/n) "$end)" ANSWER
 if [ "$ANSWER" != "y" ]; then
   echo -e "${red}User cancelled, restore aborted.${end}"
-  exit 1
+  exit 0
 fi
 
 # Backup current config files

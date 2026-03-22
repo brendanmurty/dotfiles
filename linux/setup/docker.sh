@@ -10,7 +10,7 @@ OS_NAME="$(bash $LIB/get-os-name.sh)"
 
 if [[ "$OS_NAME" != "Ubuntu" ]]; then
   echo "This script requires Ubuntu."
-  exit 1
+  exit 0
 fi
 
 # Add the Docker packages list to system software repository

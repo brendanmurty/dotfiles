@@ -17,5 +17,5 @@ elif [[ "$OS_NAME" == "EndeavourOS" ]]; then
   flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 else
   echo 'Please setup Flatpak manually for your OS: https://flathub.org/en/setup'
-  exit 1
+  exit 0
 fi

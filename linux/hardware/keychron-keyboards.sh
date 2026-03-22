@@ -11,7 +11,7 @@ OS_NAME="$(bash $PARENT_DIR/lib/get-os-name.sh)"
 
 if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
   echo "This script requires Linux."
-  exit 1
+  exit 0
 fi
 
 # Allow customisation of keys, lighting and firmware via https://launcher.keychron.com/

@@ -25,14 +25,14 @@ BACKUP_PATH="$BACKUP_DIR/$BACKUP_FILE"
 # echo
 # if [ "$REPLY" != "y" ]; then
 #   echo $(date "$LOG_FMT") "Backup cancelled"
-#   exit 1
+#   exit 0
 # fi
 
 # Exit if the source directory doesn't exist
 
 if [ ! -d $SOURCE_DIR ]; then
   echo $(date "$LOG_FMT") "Error - Source directory ($SOURCE_DIR) not found, please check the path in the script" >> $LOG_FILE
-  exit 1
+  exit 0
 fi
 
 # Start backup process

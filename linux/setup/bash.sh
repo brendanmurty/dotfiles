@@ -7,7 +7,13 @@
 #
 #
 
-DOTFILES_LINUX_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
+PARENT_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
+OS_NAME="$(bash $PARENT_DIR/lib/get-os-name.sh)"
+
+if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
+  echo "This script requires Linux."
+  exit 1
+fi
 
 touch "$HOME/.bash_aliases" "$HOME/.bash_profile" "$HOME/.bash_prompt"
 
@@ -26,9 +32,9 @@ source "$HOME/.git_prompt.sh"
 
 # Copy over the customised Bash config files
 
-cp "$DOTFILES_LINUX_DIR/config/bash_aliases.txt" "$HOME/.bash_aliases"
-cp "$DOTFILES_LINUX_DIR/config/bash_profile.txt" "$HOME/.bash_profile"
-cp "$DOTFILES_LINUX_DIR/config/bash_prompt.txt" "$HOME/.bash_prompt"
+cp "$PARENT_DIR/config/bash_aliases.txt" "$HOME/.bash_aliases"
+cp "$PARENT_DIR/config/bash_profile.txt" "$HOME/.bash_profile"
+cp "$PARENT_DIR/config/bash_prompt.txt" "$HOME/.bash_prompt"
 
 # Load them in to the current terminal session
 

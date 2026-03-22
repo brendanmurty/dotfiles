@@ -8,6 +8,13 @@
 THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
 
+OS_NAME="$(bash $THIS_DIR/lib/get-os-name.sh)"
+
+if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
+  echo "These scripts require Linux."
+  exit 1
+fi
+
 info() { echo -e "\033[36m$1\033[0m"; }
 
 chmod +x "$THIS_DIR/setup/"*.sh

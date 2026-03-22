@@ -5,12 +5,20 @@
 #
 #
 
-DOTFILES_LINUX_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
+PARENT_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
+OS_NAME="$(bash $PARENT_DIR/lib/get-os-name.sh)"
 
-sudo apt -y install tmux python3 pipx
+if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
+  echo "This script requires Linux."
+  exit 1
+fi
+
+if [[ "$OS_NAME" == "Ubuntu" ]]; then
+  sudo apt -y install tmux python3 pipx
+fi
 
 brew install tpm
 
 touch "$HOME/.tmux.conf"
 cp "$HOME/.tmux.conf" "$HOME/.tmux.conf.before-dotfiles.bak"
-cp "$DOTFILES_LINUX_DIR/config/tmux.txt" "$HOME/.tmux.conf"
+cp "$PARENT_DIR/config/tmux.txt" "$HOME/.tmux.conf"

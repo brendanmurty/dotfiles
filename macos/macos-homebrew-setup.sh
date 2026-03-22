@@ -9,7 +9,15 @@
 #
 #
 
-BREW_DIR="$HOME/.homebrew"
+LIB="$(cd "$(dirname "$0")" && cd ../linux/lib && pwd)"
+OS_NAME="$(bash $LIB/get-os-name.sh)"
+
+if [[ "$OS_NAME" != "macOS" ]]; then
+  echo "This script requires macOS."
+  exit 1
+fi
+
+BREW_DIR="$HOME/.brew"
 
 mkdir -p "$BREW_DIR"
 

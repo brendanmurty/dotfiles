@@ -5,6 +5,9 @@
 #
 #
 
+LIB="$(cd "$(dirname "$0")" && cd ../lib && pwd)"
+OS_NAME="$(bash $LIB/get-os-name.sh)"
+
 # Theme
 
 gsettings set org.gnome.desktop.background picture-uri 'none'
@@ -271,7 +274,7 @@ gsettings set org.gnome.Settings last-panel 'system'
 
 # Ubuntu specific
 
-if grep -q "Ubuntu" /etc/os-release >/dev/null 2>&1; then
+if [[ "$OS_NAME" == "Ubuntu" ]]; then
   gsettings set org.gnome.shell.ubuntu color-scheme 'prefer-dark'
   gsettings set org.gnome.desktop.interface cursor-theme 'Yaru'
   gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-prussiangreen-dark'

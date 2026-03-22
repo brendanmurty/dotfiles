@@ -5,8 +5,17 @@
 #
 #
 
-sudo apt -qq --assume-yes install flatpak gnome-software-plugin-flatpak
+LIB="$(cd "$(dirname "$0")" && cd ../lib && pwd)"
+OS_NAME="$(bash $LIB/get-os-name.sh)"
 
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
-flatpak install flathub io.github.kolunmi.Bazaar
+if [[ "$OS_NAME" == "Ubuntu" ]]; then
+  sudo apt -qq --assume-yes install flatpak gnome-software-plugin-flatpak
+  flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+elif [[ "$OS_NAME" == "EndeavourOS" ]]; then
+  sudo pacman -Syu
+  sudo pacman -S flatpak
+  flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+else
+  echo 'Please setup Flatpak manually for your OS: https://flathub.org/en/setup'
+  exit 1
+fi

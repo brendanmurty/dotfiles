@@ -5,6 +5,14 @@
 #
 #
 
+LIB="$(cd "$(dirname "$0")" && cd ../linux/lib && pwd)"
+OS_NAME="$(bash $LIB/get-os-name.sh)"
+
+if [[ "$OS_NAME" != "macOS" ]]; then
+  echo "This script requires macOS."
+  exit 1
+fi
+
 sudo chflags -R nouchg ~/Dropbox ~/.dropbox ~/.dropbox-master
 sudo chown "$USER" "$HOME"
 sudo chown -R "$USER" ~/Dropbox ~/.dropbox

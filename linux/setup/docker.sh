@@ -5,6 +5,14 @@
 #
 #
 
+LIB="$(cd "$(dirname "$0")" && cd ../lib && pwd)"
+OS_NAME="$(bash $LIB/get-os-name.sh)"
+
+if [[ "$OS_NAME" != "Ubuntu" ]]; then
+  echo "This script requires Ubuntu."
+  exit 1
+fi
+
 # Add the Docker packages list to system software repository
 
 if [ ! -f /etc/apt/sources.list.d/docker.list ]; then

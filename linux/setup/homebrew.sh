@@ -9,6 +9,14 @@
 #
 #
 
+LIB="$(cd "$(dirname "$0")" && cd ../lib && pwd)"
+OS_NAME="$(bash $LIB/get-os-name.sh)"
+
+if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
+  echo "This script requires Linux."
+  exit 1
+fi
+
 BREW_DIR_DEFAULT='/home/linuxbrew'
 BREW_DIR="$HOME/.brew"
 

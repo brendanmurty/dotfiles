@@ -5,17 +5,30 @@
 #
 #
 
-DOTFILES_LINUX_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
+PARENT_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
+OS_NAME="$(bash $PARENT_DIR/lib/get-os-name.sh)"
 
-sudo apt -y install vim
+if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
+  echo "This script requires Linux."
+  exit 1
+fi
 
-sudo select-editor
-sudo update-alternatives --config editor
+if [[ "$OS_NAME" == "Ubuntu" ]]; then
+  sudo apt -y install vim
+  sudo select-editor
+  sudo update-alternatives --config editor
+elif [[ "$OS_NAME" == "EndeavourOS" ]]; then
+  sudo pacman -Syu
+  sudo pacman -S vim
+  echo 'export EDITOR=vim' >> "$HOME/.bashrc"
+fi
 
 mkdir -p "$HOME/.vim"
-cp -r "$HOME/.vim" "$HOME/.vim.before-dotfiles.bak"
+rm -rf "$HOME/.vim.before-dotfiles.bak"
+mv "$HOME/.vim" "$HOME/.vim.before-dotfiles.bak"
+mkdir -p "$HOME/.vim"
 git clone https://github.com/flazz/vim-colorschemes.git ~/.vim
 
 touch "$HOME/.vimrc"
 cp "$HOME/.vimrc" "$HOME/.vimrc.before-dotfiles.bak"
-cp "$DOTFILES_LINUX_DIR/config/vimrc.txt" "$HOME/.vimrc"
+cp "$PARENT_DIR/config/vimrc.txt" "$HOME/.vimrc"

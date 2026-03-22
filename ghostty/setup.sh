@@ -6,17 +6,26 @@
 #
 
 THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
+LIB="$(cd "$(dirname "$0")" && cd ../lib && pwd)"
+OS_NAME="$(bash $LIB/get-os-name.sh)"
 
 CONFIG_DIR="$HOME"
+CONFIG_FILE="linux-ghostty.txt"
 
-if [[ $(uname) == "Darwin" ]]; then
-  # This is a macOS machine
+if [[ "$OS_NAME" == "Windows" ]]; then
+  echo "This script requires Linux or macOS."
+  exit 0
+fi
+
+if [[ "$OS_NAME" == "macOS" ]]; then
   CONFIG_DIR="$HOME/Library/Application Support/com.mitchellh.ghostty"
+
   mkdir -p "$CONFIG_DIR"
+  CONFIG_FILE="macos-ghostty.txt"
+
   brew install --cask ghostty
 else
-  if grep -q "Ubuntu" /etc/os-release >/dev/null 2>&1; then
-    # This is an Ubuntu machine
+  if [[ "$OS_NAME" == "Ubuntu" ]]; then
     sudo add-apt-repository ppa:mkasberg/ghostty-ubuntu
     sudo apt -qq update
     sudo apt install -qq --assume-yes ghostty
@@ -33,6 +42,6 @@ echo "Making a backup of '$CONFIG_DIR/config.ghostty'"
 touch "$CONFIG_DIR/config.ghostty"
 cp "$CONFIG_DIR/config.ghostty" "$CONFIG_DIR/config.ghostty.before-dotfiles.bak"
 
-echo "Copying 'ghostty.txt' to '$CONFIG_DIR/config.ghostty'"
+echo "Copying '$CONFIG_FILE' to '$CONFIG_DIR/config.ghostty'"
 
-cp "$THIS_DIR/ghostty.txt" "$CONFIG_DIR/config.ghostty"
+cp "$THIS_DIR/$CONFIG_FILE" "$CONFIG_DIR/config.ghostty"

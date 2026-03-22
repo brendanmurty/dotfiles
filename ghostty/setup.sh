@@ -6,7 +6,7 @@
 #
 
 THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
-LIB="$(cd "$(dirname "$0")" && cd ../lib && pwd)"
+LIB="$(cd "$(dirname "$0")" && cd ../linux/lib && pwd)"
 OS_NAME="$(bash $LIB/get-os-name.sh)"
 
 CONFIG_DIR="$HOME"

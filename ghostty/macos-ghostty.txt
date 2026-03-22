@@ -7,6 +7,7 @@ font-feature = "-liga,-calt"
 theme = "Builtin Pastel Dark"
 command = bash
 macos-titlebar-proxy-icon = hidden
+title = " "
 cursor-style = block
 window-theme = "ghostty"
 window-height = 30

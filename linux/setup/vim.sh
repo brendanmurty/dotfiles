@@ -11,9 +11,7 @@ OS_NAME="$(bash $PARENT_DIR/lib/get-os-name.sh)"
 if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
   echo "This script requires Linux."
   exit 0
-fi
-
-if [[ "$OS_NAME" == "Ubuntu" ]]; then
+elif [[ "$OS_NAME" == "Ubuntu" ]]; then
   sudo apt -y install vim
   sudo select-editor
   sudo update-alternatives --config editor

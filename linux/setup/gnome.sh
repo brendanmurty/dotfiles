@@ -8,6 +8,11 @@
 LIB="$(cd "$(dirname "$0")" && cd ../lib && pwd)"
 OS_NAME="$(bash $LIB/get-os-name.sh)"
 
+if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
+  echo "This script requires Linux."
+  exit 0
+fi
+
 # Theme
 
 gsettings set org.gnome.desktop.background picture-uri 'none'

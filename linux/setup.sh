@@ -19,6 +19,9 @@ info() { echo -e "\033[36m$1\033[0m"; }
 
 chmod +x "$THIS_DIR/setup/"*.sh
 
+info 'endeavouros: setup'
+bash "$THIS_DIR/setup/endeavouros.sh" >/dev/null 2>&1
+
 info 'apt: update, upgrade and install'
 bash "$THIS_DIR/setup/apt.sh" >/dev/null 2>&1
 

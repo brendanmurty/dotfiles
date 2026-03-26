@@ -23,19 +23,24 @@ cp "$HOME/.bashrc" "$HOME/.bashrc.before-dotfiles.bak"
 cp "$HOME/.bash_aliases" "$HOME/.bash_aliases.before-dotfiles.bak"
 cp "$HOME/.bash_prompt" "$HOME/.bash_prompt.before-dotfiles.bak"
 
-# Download the '__git_ps1' script from the official Git repo
+# Download the '__git_ps1' script from the official Git repo to ~/.git_prompt.sh
 
 touch "$HOME/.git_prompt.sh"
 cp "$HOME/.git_prompt.sh" "$HOME/.git_prompt.sh.before-dotfiles.bak"
 curl --output "$HOME/.git_prompt.sh" "https://raw.githubusercontent.com/git/git/refs/heads/master/contrib/completion/git-prompt.sh"
-source "$HOME/.git_prompt.sh"
 
 # Copy over the customised Bash config files
 
-cp "$PARENT_DIR/config/bash_aliases.txt" "$HOME/.bash_aliases"
 cp "$PARENT_DIR/config/bashrc.txt" "$HOME/.bashrc"
+cp "$PARENT_DIR/config/bash_aliases.txt" "$HOME/.bash_aliases"
 cp "$PARENT_DIR/config/bash_prompt.txt" "$HOME/.bash_prompt"
 
-# Load them in to the current terminal session
+# Load the customisations in to the current terminal session.
+# Future terminal sessions will automatically load ~/.bashrc
 
 source "$HOME/.bashrc"
+
+# Set Bash as the default shell on user login
+
+touch "$HOME/.profile"
+echo 'exec /usr/bin/env bash --login' >> "$HOME/.profile"

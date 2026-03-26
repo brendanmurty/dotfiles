@@ -51,9 +51,11 @@ gsettings set org.gnome.desktop.wm.preferences num-workspaces '3'
 gsettings set org.gnome.desktop.wm.preferences workspace-names '["Personal", "Work", "Games"]'
 gsettings set org.gnome.desktop.wm.preferences action-double-click-titlebar 'toggle-maximize'
 gsettings set org.gnome.desktop.wm.preferences action-middle-click-titlebar 'none'
-gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button false
 gsettings set org.gnome.desktop.wm.preferences focus-mode 'click'
+gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'smart'
+gsettings set org.gnome.desktop.wm.preferences auto-raise true
+gsettings set org.gnome.desktop.wm.preferences auto-raise-delay 0
 
 # Extensions
 

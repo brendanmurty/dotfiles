@@ -15,12 +15,12 @@ if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
   exit 0
 fi
 
-touch "$HOME/.bash_aliases" "$HOME/.bash_profile" "$HOME/.bash_prompt"
+touch "$HOME/.bashrc" "$HOME/.bash_aliases" "$HOME/.bash_prompt"
 
 # Create backups of current Bash config files for this user
 
+cp "$HOME/.bashrc" "$HOME/.bashrc.before-dotfiles.bak"
 cp "$HOME/.bash_aliases" "$HOME/.bash_aliases.before-dotfiles.bak"
-cp "$HOME/.bash_profile" "$HOME/.bash_profile.before-dotfiles.bak"
 cp "$HOME/.bash_prompt" "$HOME/.bash_prompt.before-dotfiles.bak"
 
 # Download the '__git_ps1' script from the official Git repo
@@ -33,15 +33,9 @@ source "$HOME/.git_prompt.sh"
 # Copy over the customised Bash config files
 
 cp "$PARENT_DIR/config/bash_aliases.txt" "$HOME/.bash_aliases"
-cp "$PARENT_DIR/config/bash_profile.txt" "$HOME/.bash_profile"
+cp "$PARENT_DIR/config/bashrc.txt" "$HOME/.bashrc"
 cp "$PARENT_DIR/config/bash_prompt.txt" "$HOME/.bash_prompt"
 
 # Load them in to the current terminal session
 
-source "$HOME/.bash_profile"
-
-# Persist these changes for each new terminal session by appending to "~/.bashrc"
-
-touch "$HOME/.bashrc"
-echo '' >> "$HOME/.bashrc"
-echo "source \"$HOME/.bash_profile\"" >> "$HOME/.bashrc"
+source "$HOME/.bashrc"

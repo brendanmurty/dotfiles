@@ -1,11 +1,16 @@
 #
-#
-# ~/.bash_profile
-#  - User specific environment and startup programs
-#
+# ~/.bashrc
 #
 
+# If not running interactively, don't do anything
+
+[[ $- != *i* ]] && return
+
 # Load other Bash config files if they exist
+
+if [ -f "$HOME/.bash_profile" ]; then
+  source "$HOME/.bash_profile"
+fi
 
 if [ -f "$HOME/.bash_aliases" ]; then
   source "$HOME/.bash_aliases"
@@ -17,8 +22,4 @@ fi
 
 if [ -f "$HOME/.bash_prompt" ]; then
   source "$HOME/.bash_prompt"
-fi
-
-if [ -f "$HOME/.bashrc" ]; then
-  source "$HOME/.bashrc"
 fi

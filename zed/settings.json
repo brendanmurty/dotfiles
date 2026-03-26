@@ -2,11 +2,11 @@
   "context_servers": {},
   "agent_servers": {
     "claude-acp": {
-      "type": "registry"
+      "type": "registry",
     },
     "github-copilot": {
-      "type": "registry"
-    }
+      "type": "registry",
+    },
   },
   "hover_popover_enabled": false,
   "close_on_file_delete": false,
@@ -23,13 +23,13 @@
       "format_on_save": "off",
       "auto_indent_on_paste": false,
       "auto_indent": "none",
-      "tab_size": 2
+      "tab_size": 2,
     },
     "Python": {
       "format_on_save": "off",
       "auto_indent_on_paste": false,
       "auto_indent": "none",
-      "tab_size": 2
+      "tab_size": 2,
     },
   },
   "outline_panel": {
@@ -137,6 +137,7 @@
   "git_panel": {
     "status_style": "label_color",
     "button": true,
+    "file_icons": true
   },
   "icon_theme": "Symbols Icon Theme",
   "auto_update": true,
@@ -175,18 +176,18 @@
       {
         "provider": "zed.dev",
         "model": "claude-sonnet-4-6",
-        "enable_thinking": false
+        "enable_thinking": false,
       },
       {
         "provider": "copilot_chat",
         "model": "claude-sonnet-4.5",
-        "enable_thinking": false
+        "enable_thinking": false,
       },
       {
         "provider": "copilot_chat",
         "model": "claude-opus-4.5",
-        "enable_thinking": false
-      }
+        "enable_thinking": false,
+      },
     ],
     "enable_feedback": false,
     "default_model": {
@@ -198,17 +199,17 @@
   },
   "formatter": "language_server",
   "buffer_line_height": {
-    "custom": 1.38
+    "custom": 1.38,
   },
   "buffer_font_weight": 500.0,
   "ui_font_size": 18.0,
   "line_indicator_format": "long",
   "buffer_font_size": 20.0,
   "diagnostics": {
-    "button": false
+    "button": false,
   },
   "collaboration_panel": {
-    "button": false
+    "button": false,
   },
   "title_bar": {
     "show_branch_name": true,
@@ -228,7 +229,7 @@
   "terminal": {
     "cursor_shape": "block",
     "toolbar": {
-      "breadcrumbs": true
+      "breadcrumbs": true,
     },
     "minimum_contrast": 5.0,
     "blinking": "off",
@@ -265,7 +266,7 @@
     "indent_size": 15.0,
     "starts_open": true,
     "sort_mode": "directories_first",
-    "entry_spacing": "standard"
+    "entry_spacing": "standard",
   },
   "theme": {
     "dark": "Ayu Dark",
@@ -277,7 +278,7 @@
     "comment"
   ],
   "active_pane_modifiers": {
-    "inactive_opacity": 0.0
+    "inactive_opacity": 0.0,
   },
   "theme_overrides": {
     "Ayu Dark": {
@@ -314,8 +315,8 @@
       "terminal.background": "#000000FF",
       "link_text.hover": "#23C5B0FF",
       "panel.overlay_background": "#000000FF",
-      "panel.overlay_hover": "#000000FF"
-    }
+      "panel.overlay_hover": "#000000FF",
+    },
   },
   "auto_install_extensions": {
     "codeowners": true,

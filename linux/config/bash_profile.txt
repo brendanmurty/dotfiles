@@ -5,7 +5,7 @@
 #
 #
 
-# Add in customisations from other files
+# Load other Bash config files if they exist
 
 if [ -f "$HOME/.bash_aliases" ]; then
   source "$HOME/.bash_aliases"
@@ -17,4 +17,8 @@ fi
 
 if [ -f "$HOME/.bash_prompt" ]; then
   source "$HOME/.bash_prompt"
+fi
+
+if [ -f "$HOME/.bashrc" ]; then
+  source "$HOME/.bashrc"
 fi

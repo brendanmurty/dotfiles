@@ -17,42 +17,43 @@ fi
 
 info() { echo -e "\033[36m$1\033[0m"; }
 
+info '==> dotfiles: start'
 chmod +x "$THIS_DIR/setup/"*.sh
 
-info 'endeavouros: setup'
-bash "$THIS_DIR/setup/endeavouros.sh"
-
-info 'apt: update, upgrade and install'
-bash "$THIS_DIR/setup/apt.sh"
-
-info 'snap: setup'
-bash "$THIS_DIR/setup/snap.sh"
-
-info 'flatpak: setup'
-bash "$THIS_DIR/setup/flatpak.sh"
-
-info 'gnome: setup'
-bash "$THIS_DIR/setup/gnome.sh"
-
-info 'bash: setup'
+info '==> dotfiles: linux/setup/bash.sh'
 bash "$THIS_DIR/setup/bash.sh"
 
-info 'homebrew: setup'
+info '==> dotfiles: linux/setup/endeavouros.sh'
+bash "$THIS_DIR/setup/endeavouros.sh"
+
+info '==> dotfiles: linux/setup/apt.sh'
+bash "$THIS_DIR/setup/apt.sh"
+
+info '==> dotfiles: linux/setup/snap.sh'
+bash "$THIS_DIR/setup/snap.sh"
+
+info '==> dotfiles: linux/setup/flatpak.sh'
+bash "$THIS_DIR/setup/flatpak.sh"
+
+info '==> dotfiles: linux/setup/gnome.sh'
+bash "$THIS_DIR/setup/gnome.sh"
+
+info '==> dotfiles: linux/setup/homebrew.sh'
 bash "$THIS_DIR/setup/homebrew.sh"
 
-info 'just: setup'
+info '==> dotfiles: just/setup.sh'
 bash "$REPO_DIR/just/setup.sh"
 
-info 'ghostty: setup'
+info '==> dotfiles: ghostty/setup.sh'
 bash "$REPO_DIR/ghostty/setup.sh"
 
-info 'vim: setup'
+info '==> dotfiles: linux/setup/vim.sh'
 bash "$THIS_DIR/setup/vim.sh"
 
-info 'tmux: setup'
+info '==> dotfiles: linux/setup/tmux.sh'
 bash "$THIS_DIR/setup/tmux.sh"
 
-info 'docker: setup'
+info '==> dotfiles: linux/setup/docker.sh'
 bash "$THIS_DIR/setup/docker.sh"
 
-info 'done: a system reboot is required'
+info '==> dotfiles: finished, a system reboot is required'

@@ -42,7 +42,11 @@ flatpak install com.github.tchx84.Flatseal
 flatpak install org.gimp.GIMP
 flatpak install org.libreoffice.LibreOffice
 
+flatpak install com.discordapp.Discord
+
 flatpak install dev.zed.Zed
 flatpak install com.visualstudio.code
 
-flatpak install com.discordapp.Discord
+touch "$HOME/.bash_aliases"
+echo "alias zed='flatpak run dev.zed.Zed'" >> "$HOME/.bash_aliases"
+echo "alias code='flatpak run com.visualstudio.code'" >> "$HOME/.bash_aliases"

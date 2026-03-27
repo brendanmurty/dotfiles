@@ -20,39 +20,39 @@ info() { echo -e "\033[36m$1\033[0m"; }
 chmod +x "$THIS_DIR/setup/"*.sh
 
 info 'endeavouros: setup'
-bash "$THIS_DIR/setup/endeavouros.sh" >/dev/null 2>&1
+bash "$THIS_DIR/setup/endeavouros.sh"
 
 info 'apt: update, upgrade and install'
-bash "$THIS_DIR/setup/apt.sh" >/dev/null 2>&1
+bash "$THIS_DIR/setup/apt.sh"
 
 info 'snap: setup'
-bash "$THIS_DIR/setup/snap.sh" >/dev/null 2>&1
+bash "$THIS_DIR/setup/snap.sh"
 
 info 'flatpak: setup'
-bash "$THIS_DIR/setup/flatpak.sh" >/dev/null 2>&1
+bash "$THIS_DIR/setup/flatpak.sh"
 
 info 'gnome: setup'
-bash "$THIS_DIR/setup/gnome.sh" >/dev/null 2>&1
+bash "$THIS_DIR/setup/gnome.sh"
 
 info 'bash: setup'
-bash "$THIS_DIR/setup/bash.sh" >/dev/null 2>&1
+bash "$THIS_DIR/setup/bash.sh"
 
 info 'homebrew: setup'
-bash "$THIS_DIR/setup/homebrew.sh" >/dev/null 2>&1
+bash "$THIS_DIR/setup/homebrew.sh"
 
 info 'just: setup'
-bash "$REPO_DIR/just/setup.sh" >/dev/null 2>&1
+bash "$REPO_DIR/just/setup.sh"
 
 info 'ghostty: setup'
-bash "$REPO_DIR/ghostty/setup.sh" >/dev/null 2>&1
+bash "$REPO_DIR/ghostty/setup.sh"
 
 info 'vim: setup'
-bash "$THIS_DIR/setup/vim.sh" >/dev/null 2>&1
+bash "$THIS_DIR/setup/vim.sh"
 
 info 'tmux: setup'
-bash "$THIS_DIR/setup/tmux.sh" >/dev/null 2>&1
+bash "$THIS_DIR/setup/tmux.sh"
 
 info 'docker: setup'
-bash "$THIS_DIR/setup/docker.sh" >/dev/null 2>&1
+bash "$THIS_DIR/setup/docker.sh"
 
 info 'done: a system reboot is required'

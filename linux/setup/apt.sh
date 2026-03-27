@@ -28,6 +28,9 @@ sudo apt -qq --assume-yes install \
   software-properties-common \
   gnome-shell \
   gnome-shell-extensions \
+  gnome-browser-connector \
+  chrome-gnome-shell \
+  gnome-shell-extension-prefs \
   gnome-tweaks \
   >/dev/null 2>&1
 

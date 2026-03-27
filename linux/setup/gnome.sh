@@ -26,9 +26,6 @@ gsettings set org.gnome.desktop.interface toolbar-style 'text'
 gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
 gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
 gsettings set org.gnome.desktop.interface cursor-size '24'
-gsettings set org.gnome.desktop.interface monospace-font-name 'Hack  14'
-gsettings set org.gnome.desktop.interface document-font-name 'Noto Sans  14'
-gsettings set org.gnome.desktop.interface font-name 'Noto Sans  10'
 gsettings set org.gnome.desktop.wm.preferences audible-bell false
 gsettings set org.gnome.desktop.wm.preferences visual-bell false
 gsettings set org.gnome.desktop.wm.preferences visual-bell-type 'frame-flash'

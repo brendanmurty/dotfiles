@@ -32,6 +32,9 @@ sudo apt -qq --assume-yes install \
   chrome-gnome-shell \
   gnome-shell-extension-prefs \
   gnome-tweaks \
+  python3 \
+  pipx \
+  python-is-python3 \
   >/dev/null 2>&1
 
 sudo apt -qq --assume-yes autoremove

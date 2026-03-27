@@ -137,7 +137,7 @@
   "git_panel": {
     "status_style": "label_color",
     "button": true,
-    "file_icons": true
+    "file_icons": true,
   },
   "icon_theme": "Symbols Icon Theme",
   "auto_update": true,
@@ -145,11 +145,7 @@
     "diagnostics": false,
     "metrics": false,
   },
-  "file_scan_exclusions": [
-    "**/.git",
-    "**/.DS_Store",
-    "**/Thumbs.db"
-  ],
+  "file_scan_exclusions": ["**/.git", "**/.DS_Store", "**/Thumbs.db"],
   "calls": {
     "mute_on_join": true,
   },
@@ -274,9 +270,7 @@
     "mode": "dark",
   },
   "excerpt_context_lines": 5,
-  "edit_predictions_disabled_in": [
-    "comment"
-  ],
+  "edit_predictions_disabled_in": ["comment"],
   "active_pane_modifiers": {
     "inactive_opacity": 0.0,
   },
@@ -336,6 +330,9 @@
     "sql": true,
     "toml": true,
     "just": true,
+    "basher": true,
+    "opencode": true,
+    "base16": true,
   },
   "lsp": {
     "json-language-server": {
@@ -343,16 +340,11 @@
         "json": {
           "schemas": [
             {
-              "fileMatch": [
-                "deno.json",
-                "deno.jsonc"
-              ],
+              "fileMatch": ["deno.json", "deno.jsonc"],
               "url": "https://raw.githubusercontent.com/denoland/deno/refs/heads/main/cli/schemas/config-file.v1.json",
             },
             {
-              "fileMatch": [
-                "package.json"
-              ],
+              "fileMatch": ["package.json"],
               "url": "https://www.schemastore.org/package",
             },
           ],
@@ -364,16 +356,11 @@
         "yaml": {
           "schemas": [
             {
-              "fileMatch": [
-                ".github/*.yml",
-                ".github/**/*.yml"
-              ],
+              "fileMatch": [".github/*.yml", ".github/**/*.yml"],
               "url": "https://www.schemastore.org/github-workflow",
             },
             {
-              "fileMatch": [
-                "docker-compose.yml"
-              ],
+              "fileMatch": ["docker-compose.yml"],
               "url": "https://raw.githubusercontent.com/compose-spec/compose-go/master/schema/compose-spec.json",
             },
           ],

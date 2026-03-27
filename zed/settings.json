@@ -290,13 +290,25 @@
     "inactive_opacity": 0.0,
   },
   "theme": {
-    "dark": "Vercel Dark",
-    "light": "Vercel Dark",
+    "dark": "Ayu Dark",
+    "light": "Ayu Dark",
     "mode": "dark",
   },
   "lsp_document_colors": "inlay",
   "theme_overrides": {
-    "Vercel Dark": {
+    "Ayu Dark": {
+      "syntax": {
+        "property": {
+          "color": "#E6E6E6FF",
+          "font_style": null,
+          "font_weight": null
+        },
+        "string": {
+          "color": "#23C5B0FF",
+          "font_style": null,
+          "font_weight": null
+        },
+      },
       "border": "#363636FF",
       "border.selected": "#23C5B0FF",
       "elevated_surface.background": "#000000FF",
@@ -332,11 +344,11 @@
       "link_text.hover": "#23C5B0FF",
       "panel.overlay_background": "#000000FF",
       "panel.overlay_hover": "#000000FF",
-      "version_control.added": "#27a657ff",
-      "created": "#27a657ff",
-      "version_control.modified": "#d3b020ff",
-      "modified": "#d3b020ff",
-      "renamed": "#d3b020ff",
+      "version_control.added": "#27A657FF",
+      "created": "#27A657FF",
+      "version_control.modified": "#D3B020FF",
+      "modified": "#D3B020FF",
+      "renamed": "#D3B020FF",
       "version_control.word_added": "#2EA04859",
       "version_control.word_deleted": "#78081BCC",
       "version_control.deleted": "#78081BCC",

@@ -136,6 +136,7 @@
   "gutter": {
     "folds": true,
     "breakpoints": false,
+    "runnables": false,
   },
   "autoscroll_on_clicks": false,
   "scroll_beyond_last_line": "vertical_scroll_margin",
@@ -145,7 +146,11 @@
     "button": true,
     "file_icons": true,
   },
-  "icon_theme": "Symbols Icon Theme",
+  "icon_theme": {
+    "mode": "light",
+    "light": "Symbols Icon Theme",
+    "dark": "Symbols Icon Theme"
+  },
   "auto_update": true,
   "telemetry": {
     "diagnostics": false,
@@ -276,11 +281,6 @@
     "auto_reveal_entries": true,
     "git_status": true
   },
-  "theme": {
-    "dark": "Tomorrow at Midnight",
-    "light": "Tomorrow at Midnight",
-    "mode": "dark",
-  },
   "excerpt_context_lines": 5,
   "edit_predictions_disabled_in": [
     "comment",
@@ -289,8 +289,14 @@
   "active_pane_modifiers": {
     "inactive_opacity": 0.0,
   },
+  "theme": {
+    "dark": "Vercel Dark",
+    "light": "Vercel Dark",
+    "mode": "dark",
+  },
+  "lsp_document_colors": "inlay",
   "theme_overrides": {
-    "Tomorrow at Midnight": {
+    "Vercel Dark": {
       "border": "#363636FF",
       "border.selected": "#23C5B0FF",
       "elevated_surface.background": "#000000FF",
@@ -301,8 +307,8 @@
       "element.selected": "#212121FF",
       "ghost_element.active": "#1A1A1AFF",
       "ghost_element.selected": "#212121FF",
-      "text": "#D6D6D6FF",
-      "text.muted": "#8A8986FF",
+      "text": "#E6E6E6FF",
+      "text.muted": "#808080FF",
       "text.accent": "#23C5B0FF",
       "icon.muted": "#8A8986FF",
       "icon.accent": "#23C5B0FF",
@@ -317,14 +323,25 @@
       "editor.background": "#000000FF",
       "editor.gutter.background": "#000000FF",
       "editor.subheader.background": "#000000FF",
-      "editor.active_line.background": "#111111FF",
-      "editor.highlighted_line.background": "#111111FF",
-      "editor.active_line_number": "#FFFFFFFF",
-      "editor.hover_line_number": "#FFFFFFFF",
+      "editor.active_line.background": "#1A1A1AFF",
+      "editor.highlighted_line.background": "#1A1A1AFF",
+      "editor.active_line_number": "#E6E6E6FF",
+      "editor.hover_line_number": "#E6E6E6FF",
+      "editor.line_number": "#333333FF",
       "terminal.background": "#000000FF",
       "link_text.hover": "#23C5B0FF",
       "panel.overlay_background": "#000000FF",
       "panel.overlay_hover": "#000000FF",
+      "version_control.added": "#27a657ff",
+      "created": "#27a657ff",
+      "version_control.modified": "#d3b020ff",
+      "modified": "#d3b020ff",
+      "renamed": "#d3b020ff",
+      "version_control.word_added": "#2EA04859",
+      "version_control.word_deleted": "#78081BCC",
+      "version_control.deleted": "#78081BCC",
+      "conflict": "#78081BCC",
+      "deleted": "#78081BCC",
     },
   },
   "auto_install_extensions": {
@@ -351,6 +368,7 @@
     "env": true,
     "vercel-theme": true,
     "tomorrow-theme": true,
+    "color-highlight": true
   },
   "lsp": {
     "json-language-server": {

@@ -44,7 +44,3 @@ cp "$PARENT_DIR/config/bash_prompt.txt" "$HOME/.bash_prompt"
 
 source "$HOME/.bashrc"
 
-# Set Bash as the default shell on user login
-
-touch "$HOME/.profile"
-echo 'exec /usr/bin/env bash --login' >> "$HOME/.profile"

@@ -33,6 +33,7 @@ flatpak install org.gnome.Logs
 flatpak install org.gnome.seahorse.Application
 flatpak install org.gnome.Weather
 flatpak install org.gnome.baobab
+flatpak install org.gnome.DejaDup
 
 flatpak install com.usebottles.bottles
 flatpak install ca.desrt.dconf-editor
@@ -41,6 +42,7 @@ flatpak install com.github.tchx84.Flatseal
 
 flatpak install org.gimp.GIMP
 flatpak install org.libreoffice.LibreOffice
+flatpak install io.github.sitraorg.sitra
 
 flatpak install com.discordapp.Discord
 

@@ -22,3 +22,27 @@ else
   echo "Please setup Flatpak manually for your OS: https://flathub.org/en/setup"
   exit 0
 fi
+
+flatpak install io.github.kolunmi.Bazaar
+
+flatpak install org.gnome.Calendar
+flatpak install org.gnome.Extensions
+flatpak install org.gnome.Boxes
+flatpak install org.gnome.Loupe
+flatpak install org.gnome.Logs
+flatpak install org.gnome.seahorse.Application
+flatpak install org.gnome.Weather
+flatpak install org.gnome.baobab
+
+flatpak install com.usebottles.bottles
+flatpak install ca.desrt.dconf-editor
+flatpak install io.missioncenter.MissionCenter
+flatpak install com.github.tchx84.Flatseal
+
+flatpak install org.gimp.GIMP
+flatpak install org.libreoffice.LibreOffice
+
+flatpak install dev.zed.Zed
+flatpak install com.visualstudio.code
+
+flatpak install com.discordapp.Discord

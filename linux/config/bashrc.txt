@@ -2,9 +2,25 @@
 # ~/.bashrc
 #
 
-# If not running interactively, don't do anything
+# Skip if not running interactively
 
 [[ $- != *i* ]] && return
+
+# Update PATH to include user level bin directories if they exist
+
+pathadd() {
+  if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+    PATH="${PATH:+"$PATH:"}$1"
+  fi
+}
+
+if [ -d "$HOME/bin" ]; then
+  pathadd "$HOME/bin:$PATH"
+fi
+
+if [ -d "$HOME/.local/bin" ]; then
+  pathadd "$HOME/.local/bin:$PATH"
+fi
 
 # Load other Bash config files if they exist
 
@@ -22,4 +38,10 @@ fi
 
 if [ -f "$HOME/.bash_prompt" ]; then
   source "$HOME/.bash_prompt"
+fi
+
+# Configure Deno if it's installed
+
+if [ -d "$HOME/.deno" ]; then
+  source "$HOME/.deno/env"
 fi

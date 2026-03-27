@@ -36,26 +36,23 @@ sudo mv "$BREW_DIR_DEFAULT/.linuxbrew" "$BREW_DIR"
 sudo chown -R "$USER:$USER" "$BREW_DIR"
 sudo rm -rf "$BREW_DIR_DEFAULT"
 
-touch "$HOME/.bash_profile"
+touch "$HOME/.bashrc"
 
-echo "" >> "$HOME/.bash_profile"
-echo "BREW_DIR='$(echo $BREW_DIR)'" >> "$HOME/.bash_profile"
+echo "" >> "$HOME/.bashrc"
+echo "# Setup user-level Homebrew if it's installed there" >> "$HOME/.bashrc"
+echo "" >> "$HOME/.bashrc"
+echo "BREW_DIR='$(echo $BREW_DIR)'" >> "$HOME/.bashrc"
+echo 'if [ -d "$BREW_DIR" ]; then' >> "$HOME/.bashrc"
+echo '  export HOMEBREW_RELOCATE_BUILD_PREFIX="$BREW_DIR"' >> "$HOME/.bashrc"
+echo '  export HOMEBREW_CELLAR="$BREW_DIR/Cellar"' >> "$HOME/.bashrc"
+echo '  export HOMEBREW_PREFIX="$BREW_DIR"' >> "$HOME/.bashrc"
+echo '  export HOMEBREW_NO_ENV_HINTS=1' >> "$HOME/.bashrc"
+echo '  export HOMEBREW_NO_UPDATE_REPORT_FORMULAE=1' >> "$HOME/.bashrc"
+echo '  export HOMEBREW_NO_UPDATE_REPORT_CASKS=1' >> "$HOME/.bashrc"
+echo '  eval "$($BREW_DIR/bin/brew shellenv)"' >> "$HOME/.bashrc"
+echo '  alias brew="$BREW_DIR/bin/brew"' >> "$HOME/.bashrc"
+echo 'fi' >> "$HOME/.bashrc"
 
-echo 'export HOMEBREW_RELOCATE_BUILD_PREFIX="$BREW_DIR"' >> "$HOME/.bash_profile"
-echo 'export HOMEBREW_CELLAR="$BREW_DIR/Cellar"' >> "$HOME/.bash_profile"
-echo 'export HOMEBREW_PREFIX="$BREW_DIR"' >> "$HOME/.bash_profile"
-echo 'export HOMEBREW_NO_ENV_HINTS=1' >> "$HOME/.bash_profile"
-echo 'export HOMEBREW_NO_UPDATE_REPORT_FORMULAE=1' >> "$HOME/.bash_profile"
-echo 'export HOMEBREW_NO_UPDATE_REPORT_CASKS=1' >> "$HOME/.bash_profile"
-
-echo 'eval "$($BREW_DIR/bin/brew shellenv)"' >> "$HOME/.bash_profile"
-echo 'alias brew="$BREW_DIR/bin/brew"' >> "$HOME/.bash_profile"
-
-# Add Homebrew Bin Dir to PATH variable if it's not already there
-if [ -d "$BREW_DIR/bin" ] && [[ ":$PATH:" != *":$BREW_DIR/bin:"* ]]; then
-  export PATH="${PATH}:$BREW_DIR/bin:"
-fi
-
-source "$HOME/.bash_profile"
+source "$HOME/.bashrc"
 
 brew install gcc

@@ -9,7 +9,7 @@ Here are the contents of my [Visual Studio Code](https://code.visualstudio.com/)
 3. Close VS Code
 4. Open a Terminal app
 5. Confirm that the `code` command shows a suitable CLI path: `which code`
-6. Run [setup.sh](setup.sh) from this directory: `bash setup.sh`
+6. Run [vscode.sh](vscode.sh) from this directory: `bash ./vscode.sh`
 7. Open VS Code
 
 ## Customise

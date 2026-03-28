@@ -5,7 +5,8 @@
 #
 #
 
-SCRIPTS="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
+DIR="$(cd "$(dirname "$0")" && pwd)"
+SCRIPTS="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
 OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
 if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
@@ -21,14 +22,15 @@ elif [[ "$OS_NAME" == "EndeavourOS" ]]; then
   echo 'export EDITOR=vim' >> "$HOME/.bashrc"
 fi
 
-mkdir -p "$HOME/.vim"
 rm -rf "$HOME/.vim.before-dotfiles.bak"
-mv "$HOME/.vim" "$HOME/.vim.before-dotfiles.bak"
 
 mkdir -p "$HOME/.vim"
-git clone "https://github.com/flazz/vim-colorschemes.git" "~/.vim"
+cp -r "$HOME/.vim" "$HOME/.vim.before-dotfiles.bak"
+rm -rf "$HOME/.vim"
+
+git clone "https://github.com/flazz/vim-colorschemes.git" "$HOME/.vim"
 
 touch "$HOME/.vimrc"
 
 cp "$HOME/.vimrc" "$HOME/.vimrc.before-dotfiles.bak"
-cp "./.vimrc" "$HOME/.vimrc"
+cp "$DIR/.vimrc" "$HOME/.vimrc"

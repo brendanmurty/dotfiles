@@ -7,8 +7,9 @@
 #
 #
 
-PARENT_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
-OS_NAME="$(bash $PARENT_DIR/scripts/os-name.sh)"
+DIR="$(cd "$(dirname "$0")" && pwd)"
+SCRIPTS="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
+OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
 if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
   echo "This script requires Linux."
@@ -35,9 +36,9 @@ curl \
 
 # Copy over the customised Bash config files
 
-cp "./.bashrc" "$HOME/.bashrc"
-cp "./.bash_aliases" "$HOME/.bash_aliases"
-cp "./.bash_prompt" "$HOME/.bash_prompt"
+cp "$DIR/.bashrc" "$HOME/.bashrc"
+cp "$DIR/.bash_aliases" "$HOME/.bash_aliases"
+cp "$DIR/.bash_prompt" "$HOME/.bash_prompt"
 
 # Load the customisations in to the current terminal session.
 # Future terminal sessions will automatically load ~/.bashrc

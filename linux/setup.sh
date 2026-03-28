@@ -32,6 +32,9 @@ bash "$THIS_DIR/packages/apt.sh"
 info '==> dotfiles: linux/packages/snap.sh'
 bash "$THIS_DIR/packages/snap.sh"
 
+info '==> dotfiles: git/git.sh'
+bash "$REPO_DIR/git/git.sh"
+
 info '==> dotfiles: scripts/flatpak-setup.linux.sh'
 bash "$REPO_DIR/scripts/flatpak-setup.linux.sh"
 

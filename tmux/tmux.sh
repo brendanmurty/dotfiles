@@ -5,7 +5,8 @@
 #
 #
 
-SCRIPTS="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
+DIR="$(cd "$(dirname "$0")" && pwd)"
+SCRIPTS="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
 OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
 if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
@@ -21,4 +22,4 @@ brew install tpm
 
 touch "$HOME/.tmux.conf"
 cp "$HOME/.tmux.conf" "$HOME/.tmux.conf.before-dotfiles.bak"
-cp "./.tmux.conf" "$HOME/.tmux.conf"
+cp "$DIR/.tmux.conf" "$HOME/.tmux.conf"

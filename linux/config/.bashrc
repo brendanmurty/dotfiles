@@ -45,3 +45,8 @@ fi
 if [ -d "$HOME/.deno" ]; then
   source "$HOME/.deno/env"
 fi
+
+# Set suitable user level shell variables
+
+export SHELL=$(which bash)
+export TERM=xterm-256color

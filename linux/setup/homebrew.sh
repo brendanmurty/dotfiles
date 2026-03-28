@@ -49,10 +49,14 @@ echo '  export HOMEBREW_PREFIX="$BREW_DIR"' >> "$HOME/.bashrc"
 echo '  export HOMEBREW_NO_ENV_HINTS=1' >> "$HOME/.bashrc"
 echo '  export HOMEBREW_NO_UPDATE_REPORT_FORMULAE=1' >> "$HOME/.bashrc"
 echo '  export HOMEBREW_NO_UPDATE_REPORT_CASKS=1' >> "$HOME/.bashrc"
-echo '  eval "$($BREW_DIR/bin/brew shellenv)"' >> "$HOME/.bashrc"
+echo '  eval "$($BREW_DIR/bin/brew shellenv bash)"' >> "$HOME/.bashrc"
 echo '  alias brew="$BREW_DIR/bin/brew"' >> "$HOME/.bashrc"
 echo 'fi' >> "$HOME/.bashrc"
 
-source "$HOME/.bashrc"
+eval "$($BREW_DIR/bin/brew shellenv bash)"
+
+if [[ "$OS_NAME" == "Ubuntu" ]]; then
+  sudo apt-get install build-essential
+fi
 
 brew install gcc

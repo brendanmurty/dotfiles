@@ -55,9 +55,10 @@ if [ -d "$BREW_DIR" ]; then
   export HOMEBREW_RELOCATE_BUILD_PREFIX="$BREW_DIR"
   export HOMEBREW_CELLAR="$BREW_DIR/Cellar"
   export HOMEBREW_PREFIX="$BREW_DIR"
-  export HOMEBREW_NO_ENV_HINTS=1
   export HOMEBREW_NO_UPDATE_REPORT_FORMULAE=1
   export HOMEBREW_NO_UPDATE_REPORT_CASKS=1
+  export HOMEBREW_NO_ENV_HINTS=1
+  export HOMEBREW_NO_ANALYTICS=1
   eval "$($BREW_DIR/bin/brew shellenv bash)"
   alias brew="$BREW_DIR/bin/brew"
 fi

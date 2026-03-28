@@ -19,3 +19,4 @@ io.github.sitraorg.sitra
 com.discordapp.Discord
 dev.zed.Zed
 com.visualstudio.code
+com.dropbox.Client

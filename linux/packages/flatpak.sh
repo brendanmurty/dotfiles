@@ -2,6 +2,7 @@
 #
 #
 # Flatpak packages
+#   - The package list can be updated with: flatpak list --app --columns=application > "./flatpak.packages.txt"
 #
 #
 

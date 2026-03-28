@@ -64,25 +64,25 @@ ls -lah "$SOURCE_DIR" > "$SOURCE_DIR/.backups/dir-list-user.txt"
 # Save a list of all installed Pacman packages
 
 if command -v pacman >/dev/null 2>&1 ; then
-  pacman -Qe > "$SOURCE_DIR/.backups/package-list-pacman.txt"
+  pacman -Qqen > "$SOURCE_DIR/.backups/package-list-pacman.txt"
 fi
 
 # Save a list of all installed Flatpak packages
 
 if command -v flatpak >/dev/null 2>&1 ; then
-  flatpak list --app > "$SOURCE_DIR/.backups/package-list-flatpak.txt"
+  flatpak list --app --columns=application > "$SOURCE_DIR/.backups/package-list-flatpak.txt"
 fi
 
 # Save a list of all installed Snap packages
 
 if command -v snap >/dev/null 2>&1 ; then
-  snap list | grep -v 'core\|gnome-\|snapd\|snap-store' > "$SOURCE_DIR/.backups/package-list-snap.txt"
+  snap list --unicode=never | tail -n +2 | grep -v 'core\|gnome-\|snapd\|snap-store\|bare\|canonical-livepatch' | awk '{print $1}' > "$SOURCE_DIR/.backups/package-list-snap.txt"
 fi
 
 # Save a list of all installed Homebrew packages
 
 if command -v brew >/dev/null 2>&1 ; then
-  brew list > "$SOURCE_DIR/.backups/package-list-homebrew.txt"
+  brew leaves > "$SOURCE_DIR/.backups/package-list-homebrew.txt"
 fi
 
 # Save a list of all Dconf settings

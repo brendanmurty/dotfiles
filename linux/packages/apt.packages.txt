@@ -19,3 +19,4 @@ pipx
 python-is-python3
 build-essential
 p7zip-full
+btrfs-progs

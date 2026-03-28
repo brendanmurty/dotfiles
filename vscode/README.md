@@ -6,13 +6,11 @@ Here are the contents of my [Visual Studio Code](https://code.visualstudio.com/)
 
 1. Download and install the [CommitMono](https://commitmono.com/) custom font
 2. Install [VS Code](https://code.visualstudio.com/), open it and wait for it to load
-3. If you're using macOS, you have to press `Cmd+Shift+P` and select the `Shell Command: Install 'code' command in PATH` 
-4. Close VS Code so that the settings files are initialised
-5. Open Terminal
-6. Check that the `code` command works now: `which code`
-7. Run [setup.sh](setup.sh) from this directory: `bash setup.sh`
-8. Copy [settings.json](settings.json) to your [VS Code Configuration Directory](https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations)
-9. Open VS Code
+3. Close VS Code
+4. Open a Terminal app
+5. Confirm that the `code` command shows a suitable CLI path: `which code`
+6. Run [setup.sh](setup.sh) from this directory: `bash setup.sh`
+7. Open VS Code
 
 ## Customise
 

@@ -20,3 +20,4 @@ com.discordapp.Discord
 dev.zed.Zed
 com.visualstudio.code
 com.dropbox.Client
+io.github.fabrialberio.pinapp

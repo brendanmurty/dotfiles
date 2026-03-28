@@ -20,4 +20,6 @@ sudo apt -qq --assume-yes upgrade
 
 xargs sudo apt -qq --assume-yes install < "./apt.packages.txt"
 
+# Cleanup
+
 sudo apt -qq --assume-yes autoremove

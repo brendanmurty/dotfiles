@@ -73,7 +73,7 @@ fi
 # Save a list of all installed Snap packages
 
 if command -v snap >/dev/null 2>&1 ; then
-  snap list > "$SOURCE_DIR/.backups/package-list-snap.txt"
+  snap list | grep -v 'core\|gnome-\|snapd\|snap-store' > "$SOURCE_DIR/.backups/package-list-snap.txt"
 fi
 
 # Save a list of all installed Homebrew packages

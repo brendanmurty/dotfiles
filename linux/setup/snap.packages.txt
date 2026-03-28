@@ -1,0 +1,5 @@
+firefox
+firmware-updater
+ghostty
+gtk-common-themes
+mesa-2404

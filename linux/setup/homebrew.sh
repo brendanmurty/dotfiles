@@ -5,7 +5,8 @@
 #   - Installs Homebrew for Linux, based on docs from https://docs.brew.sh/Homebrew-on-Linux
 #   - Assumes use of the Bash Shell
 #   - Then moves this install '~/.brew' instead
-#   - Installs the 'gcc' Homebrew package
+#   - Installs the Homebrew packages listed in 'homebrew.packages.txt'
+#   - To update the package list file: brew leaves > "./homebrew.packages.txt"
 #
 #
 
@@ -59,4 +60,6 @@ if [[ "$OS_NAME" == "Ubuntu" ]]; then
   sudo apt -qq --assume-yes install build-essential
 fi
 
-brew install gcc
+# Install all packages from the package list file in this dir
+
+xargs -a "./homebrew.packages.txt" brew install

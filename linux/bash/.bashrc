@@ -46,6 +46,14 @@ if [ -d "$HOME/.deno" ]; then
   source "$HOME/.deno/env"
 fi
 
+# Configure NVM if it's installed via User Level Homebrew
+
+if [ -d "$HOME/.nvm" ] && [ -d "$HOME/.brew/opt/nvm" ]; then
+  export NVM_DIR="$HOME/.nvm"
+  source "$HOME/.brew/opt/nvm/nvm.sh"
+  source "$HOME/.brew/opt/nvm/etc/bash_completion.d/nvm"
+fi
+
 # Set suitable user level shell variables
 
 export SHELL=$(which bash)

@@ -20,11 +20,11 @@ info() { echo -e "\033[36m$1\033[0m"; }
 info '==> dotfiles: start'
 chmod +x "$THIS_DIR/setup/"*.sh
 
-info '==> dotfiles: linux/setup/bash.sh'
-bash "$THIS_DIR/setup/bash.sh"
+info '==> dotfiles: linux/bash/bash.sh'
+bash "$THIS_DIR/bash/bash.sh"
 
-info '==> dotfiles: linux/setup/endeavouros.sh'
-bash "$THIS_DIR/setup/endeavouros.sh"
+info '==> dotfiles: linux/setup/pacman.sh'
+bash "$THIS_DIR/setup/pacman.sh"
 
 info '==> dotfiles: linux/setup/apt.sh'
 bash "$THIS_DIR/setup/apt.sh"
@@ -47,11 +47,11 @@ bash "$REPO_DIR/just/setup.sh"
 info '==> dotfiles: ghostty/setup.sh'
 bash "$REPO_DIR/ghostty/setup.sh"
 
-info '==> dotfiles: linux/setup/vim.sh'
-bash "$THIS_DIR/setup/vim.sh"
+info '==> dotfiles: linux/vim/vim.sh'
+bash "$THIS_DIR/vim/vim.sh"
 
-info '==> dotfiles: linux/setup/tmux.sh'
-bash "$THIS_DIR/setup/tmux.sh"
+info '==> dotfiles: linux/tmux/tmux.sh'
+bash "$THIS_DIR/tmux/tmux.sh"
 
 info '==> dotfiles: linux/setup/docker.sh'
 bash "$THIS_DIR/setup/docker.sh"

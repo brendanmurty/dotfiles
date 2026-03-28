@@ -23,32 +23,13 @@ else
   exit 0
 fi
 
-flatpak install io.github.kolunmi.Bazaar
+# Install all packages from the package list file in this dir
 
-flatpak install org.gnome.Calendar
-flatpak install org.gnome.Extensions
-flatpak install org.gnome.Boxes
-flatpak install org.gnome.Loupe
-flatpak install org.gnome.Logs
-flatpak install org.gnome.seahorse.Application
-flatpak install org.gnome.Weather
-flatpak install org.gnome.baobab
-flatpak install org.gnome.DejaDup
+xargs -a flatpak.packages.txt flatpak install -y flathub
 
-flatpak install com.usebottles.bottles
-flatpak install ca.desrt.dconf-editor
-flatpak install io.missioncenter.MissionCenter
-flatpak install com.github.tchx84.Flatseal
-
-flatpak install org.gimp.GIMP
-flatpak install org.libreoffice.LibreOffice
-flatpak install io.github.sitraorg.sitra
-
-flatpak install com.discordapp.Discord
-
-flatpak install dev.zed.Zed
-flatpak install com.visualstudio.code
+# Add main aliases for dev editors
 
 touch "$HOME/.bash_aliases"
+
 echo "alias zed='flatpak run dev.zed.Zed'" >> "$HOME/.bash_aliases"
 echo "alias code='flatpak run com.visualstudio.code'" >> "$HOME/.bash_aliases"

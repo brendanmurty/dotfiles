@@ -24,9 +24,11 @@ fi
 mkdir -p "$HOME/.vim"
 rm -rf "$HOME/.vim.before-dotfiles.bak"
 mv "$HOME/.vim" "$HOME/.vim.before-dotfiles.bak"
+
 mkdir -p "$HOME/.vim"
 git clone https://github.com/flazz/vim-colorschemes.git ~/.vim
 
 touch "$HOME/.vimrc"
+
 cp "$HOME/.vimrc" "$HOME/.vimrc.before-dotfiles.bak"
-cp "$PARENT_DIR/config/.vimrc" "$HOME/.vimrc"
+cp "./.vimrc" "$HOME/.vimrc"

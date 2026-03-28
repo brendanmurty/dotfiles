@@ -56,7 +56,7 @@ echo 'fi' >> "$HOME/.bashrc"
 eval "$($BREW_DIR/bin/brew shellenv bash)"
 
 if [[ "$OS_NAME" == "Ubuntu" ]]; then
-  sudo apt-get install build-essential
+  sudo apt -qq --assume-yes install build-essential
 fi
 
 brew install gcc

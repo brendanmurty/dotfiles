@@ -16,25 +16,8 @@ fi
 sudo apt -qq update
 sudo apt -qq --assume-yes upgrade
 
-sudo apt -qq --assume-yes install \
-  curl \
-  zip \
-  unzip \
-  git \
-  update-manager \
-  apt-transport-https \
-  ca-certificates \
-  libappindicator3-1 \
-  software-properties-common \
-  gnome-shell \
-  gnome-shell-extensions \
-  gnome-browser-connector \
-  chrome-gnome-shell \
-  gnome-shell-extension-prefs \
-  gnome-tweaks \
-  python3 \
-  pipx \
-  python-is-python3 \
-  >/dev/null 2>&1
+# Install all packages from the package list file in this dir
+
+xargs sudo apt -qq --assume-yes install < "./apt.packages.txt"
 
 sudo apt -qq --assume-yes autoremove

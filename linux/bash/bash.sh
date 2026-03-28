@@ -35,9 +35,9 @@ curl \
 
 # Copy over the customised Bash config files
 
-cp "$PARENT_DIR/config/.bashrc" "$HOME/.bashrc"
-cp "$PARENT_DIR/config/.bash_aliases" "$HOME/.bash_aliases"
-cp "$PARENT_DIR/config/.bash_prompt" "$HOME/.bash_prompt"
+cp "./.bashrc" "$HOME/.bashrc"
+cp "./.bash_aliases" "$HOME/.bash_aliases"
+cp "./.bash_prompt" "$HOME/.bash_prompt"
 
 # Load the customisations in to the current terminal session.
 # Future terminal sessions will automatically load ~/.bashrc

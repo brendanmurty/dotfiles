@@ -7,6 +7,7 @@
 #
 #
 
+DIR="$(cd "$(dirname "$0")" && pwd)"
 SCRIPTS="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
 OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
@@ -17,4 +18,4 @@ fi
 
 # Install all packages from the package list file in this dir
 
-yay -S --needed - < "./pacman.packages.txt"
+yay -S --needed - < "$DIR/pacman.packages.txt"

@@ -10,7 +10,7 @@ SCRIPTS="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
 OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
 CONFIG_DIR="$HOME"
-CONFIG_FILE="./config.linux.ghostty"
+CONFIG_FILE="$THIS_DIR/config.linux.ghostty"
 
 if [[ "$OS_NAME" == "Windows" ]]; then
   echo "This script requires Linux or macOS."
@@ -21,7 +21,7 @@ if [[ "$OS_NAME" == "macOS" ]]; then
   CONFIG_DIR="$HOME/Library/Application Support/com.mitchellh.ghostty"
 
   mkdir -p "$CONFIG_DIR"
-  CONFIG_FILE="./config.macos.ghostty"
+  CONFIG_FILE="$THIS_DIR/config.macos.ghostty"
 
   brew install --cask ghostty
 else

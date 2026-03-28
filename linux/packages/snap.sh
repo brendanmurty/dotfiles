@@ -7,6 +7,7 @@
 #
 #
 
+DIR="$(cd "$(dirname "$0")" && pwd)"
 SCRIPTS="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
 OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
@@ -21,4 +22,4 @@ sudo snap set system refresh.retain=2
 
 # Install all packages from the package list file in this dir
 
-cat "./snap.packages.txt" | xargs -n 1 sudo snap install
+cat "$DIR/snap.packages.txt" | xargs -n 1 sudo snap install

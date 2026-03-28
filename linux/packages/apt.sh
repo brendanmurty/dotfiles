@@ -5,6 +5,7 @@
 #
 #
 
+DIR="$(cd "$(dirname "$0")" && pwd)"
 PARENT_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
 OS_NAME="$(bash $PARENT_DIR/scripts/os-name.sh)"
 
@@ -18,7 +19,7 @@ sudo apt -qq --assume-yes upgrade
 
 # Install all packages from the package list file in this dir
 
-xargs sudo apt -qq --assume-yes install < "./apt.packages.txt"
+xargs sudo apt -qq --assume-yes install < "$DIR/apt.packages.txt"
 
 # Cleanup
 

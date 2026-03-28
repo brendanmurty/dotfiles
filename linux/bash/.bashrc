@@ -6,13 +6,15 @@
 
 [[ $- != *i* ]] && return
 
-# Update PATH to include user level bin directories if they exist
+# Helper function to add a dir to the PATH env var if it's not already there
 
 pathadd() {
   if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
     PATH="${PATH:+"$PATH:"}$1"
   fi
 }
+
+# Update PATH to include user level bin directories if they exist
 
 if [ -d "$HOME/bin" ]; then
   pathadd "$HOME/bin:$PATH"
@@ -40,16 +42,31 @@ if [ -f "$HOME/.bash_prompt" ]; then
   source "$HOME/.bash_prompt"
 fi
 
-# Configure Deno if it's installed
+# Configure Deno if it's installed in the default location
 
 if [ -d "$HOME/.deno" ]; then
   source "$HOME/.deno/env"
 fi
 
-# Configure NVM if it's installed via User Level Homebrew
+# Configure user-level Homebrew if it's installed there
 
-if [ -d "$HOME/.nvm" ] && [ -d "$HOME/.brew/opt/nvm" ]; then
+BREW_DIR="$HOME/.brew"
+if [ -d "$BREW_DIR" ]; then
+  export HOMEBREW_RELOCATE_BUILD_PREFIX="$BREW_DIR"
+  export HOMEBREW_CELLAR="$BREW_DIR/Cellar"
+  export HOMEBREW_PREFIX="$BREW_DIR"
+  export HOMEBREW_NO_ENV_HINTS=1
+  export HOMEBREW_NO_UPDATE_REPORT_FORMULAE=1
+  export HOMEBREW_NO_UPDATE_REPORT_CASKS=1
+  eval "$($BREW_DIR/bin/brew shellenv bash)"
+  alias brew="$BREW_DIR/bin/brew"
+fi
+
+# Configure NVM if it's installed via user-level Homebrew
+
+if [ -d "$HOME/.brew/opt/nvm" ]; then
   export NVM_DIR="$HOME/.nvm"
+  mkdir -p "$NVM_DIR"
   source "$HOME/.brew/opt/nvm/nvm.sh"
   source "$HOME/.brew/opt/nvm/etc/bash_completion.d/nvm"
 fi

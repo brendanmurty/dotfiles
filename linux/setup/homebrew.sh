@@ -37,28 +37,7 @@ sudo mv "$BREW_DIR_DEFAULT/.linuxbrew" "$BREW_DIR"
 sudo chown -R "$USER:$USER" "$BREW_DIR"
 sudo rm -rf "$BREW_DIR_DEFAULT"
 
-touch "$HOME/.bashrc"
-
-echo "" >> "$HOME/.bashrc"
-echo "# Setup user-level Homebrew if it's installed there" >> "$HOME/.bashrc"
-echo "" >> "$HOME/.bashrc"
-echo 'BREW_DIR="$HOME/.brew"' >> "$HOME/.bashrc"
-echo 'if [ -d "$BREW_DIR" ]; then' >> "$HOME/.bashrc"
-echo '  export HOMEBREW_RELOCATE_BUILD_PREFIX="$BREW_DIR"' >> "$HOME/.bashrc"
-echo '  export HOMEBREW_CELLAR="$BREW_DIR/Cellar"' >> "$HOME/.bashrc"
-echo '  export HOMEBREW_PREFIX="$BREW_DIR"' >> "$HOME/.bashrc"
-echo '  export HOMEBREW_NO_ENV_HINTS=1' >> "$HOME/.bashrc"
-echo '  export HOMEBREW_NO_UPDATE_REPORT_FORMULAE=1' >> "$HOME/.bashrc"
-echo '  export HOMEBREW_NO_UPDATE_REPORT_CASKS=1' >> "$HOME/.bashrc"
-echo '  eval "$($BREW_DIR/bin/brew shellenv bash)"' >> "$HOME/.bashrc"
-echo '  alias brew="$BREW_DIR/bin/brew"' >> "$HOME/.bashrc"
-echo 'fi' >> "$HOME/.bashrc"
-
 eval "$($BREW_DIR/bin/brew shellenv bash)"
-
-if [[ "$OS_NAME" == "Ubuntu" ]]; then
-  sudo apt -qq --assume-yes install build-essential
-fi
 
 # Install all packages from the package list file in this dir
 

@@ -32,6 +32,9 @@ bash "$THIS_DIR/packages/apt.sh"
 info '==> dotfiles: linux/packages/snap.sh'
 bash "$THIS_DIR/packages/snap.sh"
 
+info '==> dotfiles: scripts/flatpak-setup.linux.sh'
+bash "$REPO_DIR/scripts/flatpak-setup.linux.sh"
+
 info '==> dotfiles: linux/packages/flatpak.sh'
 bash "$THIS_DIR/packages/flatpak.sh"
 
@@ -40,6 +43,9 @@ bash "$THIS_DIR/tweaks/gnome.sh"
 
 info '==> dotfiles: linux/tweaks/keychron-keyboards.sh'
 bash "$THIS_DIR/tweaks/keychron-keyboards.sh"
+
+info '==> dotfiles: scripts/homebrew-setup-user.linux.sh'
+bash "$REPO_DIR/scripts/homebrew-setup-user.linux.sh"
 
 info '==> dotfiles: linux/packages/homebrew.sh'
 bash "$THIS_DIR/packages/homebrew.sh"

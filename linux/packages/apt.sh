@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 #
-# Apt setup
+# Apt packages
 #
 #
 

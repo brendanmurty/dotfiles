@@ -5,6 +5,9 @@
 #  - Include and exclude rules ("x" params) are set in the "zip" command below
 #  - Saves symlinks as links, not as directories
 #  - Saves output messages to the file set in LOG_FILE
+#  - If your system's scheduler is cron, setup by running 'crontab -e', then adding a line:
+#    0 19 * * * bash /home/username/scripts/user-backup.sh
+#  - If your system's scheduler is systemd, refer to 'user-backup.service'
 #
 
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"

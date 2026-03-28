@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 #
-# Snap setup
+# Snap packages
 #   - Command to generate the user installed packages:
 #     snap list --unicode=never | tail -n +2 | grep -v 'core\|gnome-\|snapd\|snap-store\|bare\|canonical-livepatch' | awk '{print $1}' > "./snap.packages.txt"
 #

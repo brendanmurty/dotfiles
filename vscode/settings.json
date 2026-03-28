@@ -157,13 +157,11 @@
     "window.activeBorder": "#000",
     "window.inactiveBorder": "#000"
   },
-  "workbench.colorTheme": "Copilot Theme - Higher Contrast",
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.list.openMode": "doubleClick",
   "workbench.sideBar.location": "left",
-  "workbench.startupEditor": "none",
   "yaml.schemas": {
     "https://raw.githubusercontent.com/compose-spec/compose-go/master/schema/compose-spec.json": [
       "docker-compose.yml"
@@ -194,10 +192,12 @@
   "scm.inputFontSize": 0,
   "chat.editor.fontSize": 18,
   "chat.fontSize": 18,
-  "window.zoomLevel": 0.25,
   "terminal.integrated.initialHint": false,
   "screencastMode.fontSize": 35,
   "git.branchSortOrder": "alphabetically",
   "git.openAfterClone": "alwaysNewWindow",
-  "git.untrackedChanges": "separate"
+  "git.untrackedChanges": "separate",
+  "workbench.startupEditor": "none",
+  "claudeCode.preferredLocation": "sidebar",
+  "chat.editor.wordWrap": "on"
 }

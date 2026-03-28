@@ -5,8 +5,8 @@
 #
 #
 
-LIB="$(cd "$(dirname "$0")" && cd ../linux/lib && pwd)"
-OS_NAME="$(bash $LIB/get-os-name.sh)"
+SCRIPTS="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
+OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
 if [[ "$OS_NAME" != "macOS" ]]; then
   echo "This script requires macOS."

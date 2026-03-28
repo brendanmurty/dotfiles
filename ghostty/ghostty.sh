@@ -6,11 +6,11 @@
 #
 
 THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
-LIB="$(cd "$(dirname "$0")" && cd ../linux/lib && pwd)"
-OS_NAME="$(bash $LIB/get-os-name.sh)"
+SCRIPTS="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
+OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
 CONFIG_DIR="$HOME"
-CONFIG_FILE="linux-ghostty.txt"
+CONFIG_FILE="./config.linux.ghostty"
 
 if [[ "$OS_NAME" == "Windows" ]]; then
   echo "This script requires Linux or macOS."
@@ -21,14 +21,12 @@ if [[ "$OS_NAME" == "macOS" ]]; then
   CONFIG_DIR="$HOME/Library/Application Support/com.mitchellh.ghostty"
 
   mkdir -p "$CONFIG_DIR"
-  CONFIG_FILE="macos-ghostty.txt"
+  CONFIG_FILE="./config.macos.ghostty"
 
   brew install --cask ghostty
 else
   if [[ "$OS_NAME" == "Ubuntu" ]]; then
-    sudo add-apt-repository ppa:mkasberg/ghostty-ubuntu
-    sudo apt -qq update
-    sudo apt install -qq --assume-yes ghostty
+    sudo snap install ghostty
   fi
 
   # Otherwise, assume this is a Linux machine that already has Ghostty installed

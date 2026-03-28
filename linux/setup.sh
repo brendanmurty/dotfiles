@@ -8,7 +8,7 @@
 THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
 
-OS_NAME="$(bash $THIS_DIR/lib/get-os-name.sh)"
+OS_NAME="$(bash $THIS_DIR/scripts/os-name.sh)"
 
 if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
   echo "These scripts require Linux."
@@ -18,42 +18,45 @@ fi
 info() { echo -e "\033[36m$1\033[0m"; }
 
 info '==> dotfiles: start'
-chmod +x "$THIS_DIR/setup/"*.sh
+chmod +x "$THIS_DIR/packages/"*.sh
 
-info '==> dotfiles: linux/bash/bash.sh'
-bash "$THIS_DIR/bash/bash.sh"
+info '==> dotfiles: bash/bash.sh'
+bash "$REPO_DIR/bash/bash.sh"
 
-info '==> dotfiles: linux/setup/pacman.sh'
-bash "$THIS_DIR/setup/pacman.sh"
+info '==> dotfiles: linux/packages/pacman.sh'
+bash "$THIS_DIR/packages/pacman.sh"
 
-info '==> dotfiles: linux/setup/apt.sh'
-bash "$THIS_DIR/setup/apt.sh"
+info '==> dotfiles: linux/packages/apt.sh'
+bash "$THIS_DIR/packages/apt.sh"
 
-info '==> dotfiles: linux/setup/snap.sh'
-bash "$THIS_DIR/setup/snap.sh"
+info '==> dotfiles: linux/packages/snap.sh'
+bash "$THIS_DIR/packages/snap.sh"
 
-info '==> dotfiles: linux/setup/flatpak.sh'
-bash "$THIS_DIR/setup/flatpak.sh"
+info '==> dotfiles: linux/packages/flatpak.sh'
+bash "$THIS_DIR/packages/flatpak.sh"
 
-info '==> dotfiles: linux/setup/gnome.sh'
-bash "$THIS_DIR/setup/gnome.sh"
+info '==> dotfiles: linux/tweaks/gnome.sh'
+bash "$THIS_DIR/tweaks/gnome.sh"
 
-info '==> dotfiles: linux/setup/homebrew.sh'
-bash "$THIS_DIR/setup/homebrew.sh"
+info '==> dotfiles: linux/tweaks/keychron-keyboards.sh'
+bash "$THIS_DIR/tweaks/keychron-keyboards.sh"
 
-info '==> dotfiles: just/setup.sh'
-bash "$REPO_DIR/just/setup.sh"
+info '==> dotfiles: linux/packages/homebrew.sh'
+bash "$THIS_DIR/packages/homebrew.sh"
 
-info '==> dotfiles: ghostty/setup.sh'
-bash "$REPO_DIR/ghostty/setup.sh"
+info '==> dotfiles: just/just.sh'
+bash "$REPO_DIR/just/just.sh"
 
-info '==> dotfiles: linux/vim/vim.sh'
-bash "$THIS_DIR/vim/vim.sh"
+info '==> dotfiles: ghostty/ghostty.sh'
+bash "$REPO_DIR/ghostty/ghostty.sh"
 
-info '==> dotfiles: linux/tmux/tmux.sh'
-bash "$THIS_DIR/tmux/tmux.sh"
+info '==> dotfiles: vim/vim.sh'
+bash "$REPO_DIR/vim/vim.sh"
 
-info '==> dotfiles: linux/setup/docker.sh'
-bash "$THIS_DIR/setup/docker.sh"
+info '==> dotfiles: tmux/tmux.sh'
+bash "$REPO_DIR/tmux/tmux.sh"
+
+info '==> dotfiles: docker/docker.sh'
+bash "$REPO_DIR/docker/docker.sh"
 
 info '==> dotfiles: finished, a system reboot is required'

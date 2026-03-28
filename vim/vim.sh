@@ -5,8 +5,8 @@
 #
 #
 
-PARENT_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
-OS_NAME="$(bash $PARENT_DIR/lib/get-os-name.sh)"
+SCRIPTS="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
+OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
 if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
   echo "This script requires Linux."
@@ -26,7 +26,7 @@ rm -rf "$HOME/.vim.before-dotfiles.bak"
 mv "$HOME/.vim" "$HOME/.vim.before-dotfiles.bak"
 
 mkdir -p "$HOME/.vim"
-git clone https://github.com/flazz/vim-colorschemes.git ~/.vim
+git clone "https://github.com/flazz/vim-colorschemes.git" "~/.vim"
 
 touch "$HOME/.vimrc"
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 #
-# Linux Lib: Get formatted OS name
+# Get formatted OS name
 #
 #
 

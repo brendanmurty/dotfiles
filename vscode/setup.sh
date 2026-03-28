@@ -1,18 +1,13 @@
-code --install-extension akamud.vscode-theme-onedark
-code --install-extension angelo-breuer.clock
-code --install-extension benjaminbenais.copilot-theme
-code --install-extension cjhowe7.laravel-blade
-code --install-extension denoland.vscode-deno
-code --install-extension docker.docker
-code --install-extension dunstontc.vscode-docker-syntax
-code --install-extension frenco.vscode-vercel
-code --install-extension github.copilot
-code --install-extension github.copilot-chat
-code --install-extension github.vscode-github-actions
-code --install-extension github.vscode-pull-request-github
-code --install-extension google.geminicodeassist
-code --install-extension irongeek.vscode-env
-code --install-extension ms-vscode.atom-keybindings
-code --install-extension oderwat.indent-rainbow
-code --install-extension rafaelmaiolla.diff
-code --install-extension ronnidc.nunjucks
+#!/usr/bin/env bash
+#
+#
+# VS Code setup and install packages
+#   - The package list can be updated with: code --list-extensions > "./vscode.extensions.txt"
+#
+#
+
+DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# Install all packages from the package list file in this dir
+
+xargs -a "$DIR/vscode.extensions.txt" code --install-extension

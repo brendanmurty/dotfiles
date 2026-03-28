@@ -1,0 +1,15 @@
+angelo-breuer.clock
+anthropic.claude-code
+benjaminbenais.copilot-theme
+denoland.vscode-deno
+docker.docker
+dunstontc.vscode-docker-syntax
+github.copilot-chat
+github.vscode-github-actions
+irongeek.vscode-env
+ms-azuretools.vscode-containers
+ms-vscode-remote.remote-containers
+ms-vscode.atom-keybindings
+oderwat.indent-rainbow
+rafaelmaiolla.diff
+ronnidc.nunjucks

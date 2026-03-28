@@ -39,7 +39,7 @@ fi
 echo "Making a backup of '$CONFIG_DIR/config.ghostty'"
 
 touch "$CONFIG_DIR/config.ghostty"
-cp "$CONFIG_DIR/config.ghostty" "$CONFIG_DIR/config.ghostty.before-dotfiles.bak"
+cp "$CONFIG_DIR/config.ghostty" "$CONFIG_DIR/config.ghostty.old"
 
 echo "Copying '$CONFIG_FILE' to '$CONFIG_DIR/config.ghostty'"
 

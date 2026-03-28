@@ -20,15 +20,15 @@ touch "$HOME/.bashrc" "$HOME/.bash_aliases" "$HOME/.bash_prompt"
 
 # Create backups of current Bash config files for this user
 
-cp "$HOME/.bashrc" "$HOME/.bashrc.before-dotfiles.bak"
-cp "$HOME/.bash_aliases" "$HOME/.bash_aliases.before-dotfiles.bak"
-cp "$HOME/.bash_prompt" "$HOME/.bash_prompt.before-dotfiles.bak"
+cp "$HOME/.bashrc" "$HOME/.bashrc.old"
+cp "$HOME/.bash_aliases" "$HOME/.bash_aliases.old"
+cp "$HOME/.bash_prompt" "$HOME/.bash_prompt.old"
 
 # Download the '__git_ps1' script from the official Git repo to ~/.git_prompt.sh
 
 touch "$HOME/.git_prompt.sh"
 
-cp "$HOME/.git_prompt.sh" "$HOME/.git_prompt.sh.before-dotfiles.bak"
+cp "$HOME/.git_prompt.sh" "$HOME/.git_prompt.sh.old"
 
 curl \
   --output "$HOME/.git_prompt.sh" \

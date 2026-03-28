@@ -20,6 +20,6 @@ brew install just
 echo "Copying 'justfile' to '$HOME/justfile'"
 
 touch "$HOME/justfile"
-cp "$HOME/justfile" "$HOME/justfile.before-dotfiles.bak"
+cp "$HOME/justfile" "$HOME/justfile.old"
 
 cp "$THIS_DIR/justfile" "$HOME/justfile"

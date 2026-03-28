@@ -21,4 +21,4 @@ brew install tpm
 
 touch "$HOME/.tmux.conf"
 cp "$HOME/.tmux.conf" "$HOME/.tmux.conf.before-dotfiles.bak"
-cp "$PARENT_DIR/config/tmux.txt" "$HOME/.tmux.conf"
+cp "$PARENT_DIR/config/.tmux.conf" "$HOME/.tmux.conf"

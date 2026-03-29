@@ -9,7 +9,7 @@ Configuration files, programs, packages and scripts I use for personal, gaming a
 - **[git](git/)**: [Git](https://git-scm.com/docs/git-config) config including alias commands
 - **[just](just/)**: [Just](https://github.com/casey/just) command runner setup
 - **[linux](linux/)**: Linux setup, package installers and tweaks
-- **[linux/gaming](linux/gaming/)**: Ubuntu - Packages and config updates to improve gaming performance
+- **[linux/gaming](linux/gaming/)**: Ubuntu packages and config that improves gaming performance
 - **[obsidian](obsidian/)**: [Obsidian](https://obsidian.md/) config
 - **[scripts](scripts/)**: Various Bash scripts
 - **[tmux](tmux/)**: Tmux setup and config

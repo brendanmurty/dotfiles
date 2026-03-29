@@ -4,12 +4,14 @@ com.dropbox.Client
 com.github.ADBeveridge.Raider
 com.github.finefindus.eyedropper
 com.github.marhkb.Pods
+com.github.neithern.g4music
 com.github.tchx84.Flatseal
 com.konstantintutsch.Lock
 com.pojtinger.felicitas.Sessions
 com.ranfdev.DistroShelf
 com.usebottles.bottles
 com.visualstudio.code
+dev.dergs.Tonearm
 dev.geopjr.Calligraphy
 dev.zed.Zed
 im.bernard.Nostalgia
@@ -29,6 +31,7 @@ io.missioncenter.MissionCenter
 io.scottlabs.reManager
 it.mijorus.gearlever
 net.daase.journable
+net.ffkkinos.Wildcard
 net.zdechov.app.vCardStudio
 one.naiara.Kuychi
 org.gimp.GIMP
@@ -39,6 +42,7 @@ org.gnome.DejaDup
 org.gnome.Extensions
 org.gnome.Logs
 org.gnome.Loupe
+org.gnome.Manuals
 org.gnome.TextEditor
 org.gnome.Weather
 org.gnome.baobab

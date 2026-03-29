@@ -1,3 +1,2 @@
-gcc
 just
-nvm
+tpm

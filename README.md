@@ -11,7 +11,7 @@ Configuration files, programs, packages and scripts I use for personal, gaming a
 - **[linux](linux/)**: Linux setup, package installers and tweaks
 - **[linux/gaming](linux/gaming/)**: Ubuntu packages and config that improves gaming performance
 - **[obsidian](obsidian/)**: [Obsidian](https://obsidian.md/) config
-- **[scripts](scripts/)**: Various Bash scripts
+- **[scripts](scripts/)**: Bash utility scripts
 - **[tmux](tmux/)**: Tmux setup and config
 - **[vim](vim/)**: Vim setup and config
 - **[vscode](vscode/)**: [Visual Studio Code](https://code.visualstudio.com/) IDE config

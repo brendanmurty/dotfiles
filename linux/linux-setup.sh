@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 #
-# Linux: Setup packages and config
+# Linux: Setup system
 #
 #
 
@@ -17,29 +17,16 @@ fi
 
 info() { echo -e "\033[36m$1\033[0m"; }
 
-info '==> dotfiles: start'
-chmod +x "$THIS_DIR/packages/"*.sh
+info '==> dotfiles: start linux setup'
 
 info '==> dotfiles: bash/bash.sh'
 bash "$REPO_DIR/bash/bash.sh"
-
-info '==> dotfiles: linux/packages/pacman.sh'
-bash "$THIS_DIR/packages/pacman.sh"
-
-info '==> dotfiles: linux/packages/apt.sh'
-bash "$THIS_DIR/packages/apt.sh"
-
-info '==> dotfiles: linux/packages/snap.sh'
-bash "$THIS_DIR/packages/snap.sh"
 
 info '==> dotfiles: git/git.sh'
 bash "$REPO_DIR/git/git.sh"
 
 info '==> dotfiles: scripts/flatpak-setup.linux.sh'
 bash "$REPO_DIR/scripts/flatpak-setup.linux.sh"
-
-info '==> dotfiles: linux/packages/flatpak.sh'
-bash "$THIS_DIR/packages/flatpak.sh"
 
 info '==> dotfiles: scripts/gnome-setup.linux.sh'
 bash "$REPO_DIR/scripts/gnome-setup.linux.sh"
@@ -49,9 +36,6 @@ bash "$REPO_DIR/scripts/keychron-keyboards.linux.sh"
 
 info '==> dotfiles: scripts/homebrew-setup-user.linux.sh'
 bash "$REPO_DIR/scripts/homebrew-setup-user.linux.sh"
-
-info '==> dotfiles: linux/packages/homebrew.sh'
-bash "$THIS_DIR/packages/homebrew.sh"
 
 info '==> dotfiles: just/just.sh'
 bash "$REPO_DIR/just/just.sh"
@@ -68,4 +52,4 @@ bash "$REPO_DIR/tmux/tmux.sh"
 info '==> dotfiles: docker/docker.sh'
 bash "$REPO_DIR/docker/docker.sh"
 
-info '==> dotfiles: finished, a system reboot is required'
+info '==> dotfiles: finished linux setup, a system reboot is recommended'

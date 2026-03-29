@@ -13,12 +13,21 @@ if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
   exit 0
 fi
 
+# Install extensions
+
+pipx install gnome-extensions-cli --system-site-packages
+
+cat "$SCRIPTS/gnome-shell.extensions.txt" | while read extension
+do
+  gext install $extension
+  gext enable $extension
+done
+
 # Theme
 
 gsettings set org.gnome.desktop.background picture-uri 'none'
 gsettings set org.gnome.desktop.background picture-uri-dark 'none'
 gsettings set org.gnome.desktop.background primary-color '#374A49'
-gsettings set org.gnome.desktop.interface accent-color '#308280'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.desktop.interface gtk-enable-primary-paste false
 gsettings set org.gnome.desktop.interface toolbar-icons-size 'large'
@@ -45,7 +54,6 @@ gsettings set org.gnome.desktop.interface enable-hot-corners false
 gsettings set org.gnome.desktop.wm.preferences theme 'Adwaita'
 gsettings set org.gnome.desktop.wm.preferences button-layout 'icon:minimize,maximize,close'
 gsettings set org.gnome.desktop.wm.preferences num-workspaces '3'
-gsettings set org.gnome.desktop.wm.preferences workspace-names '["Personal", "Work", "Games"]'
 gsettings set org.gnome.desktop.wm.preferences action-double-click-titlebar 'toggle-maximize'
 gsettings set org.gnome.desktop.wm.preferences action-middle-click-titlebar 'none'
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button false
@@ -132,8 +140,6 @@ if gsettings list-schemas | grep "org.gnome.shell.extensions.dash-to-panel" >/de
   gsettings set org.gnome.shell.extensions.dash-to-panel focus-highlight-dominant true
   gsettings set org.gnome.shell.extensions.dash-to-panel hide-overview-on-startup true
   gsettings set org.gnome.shell.extensions.dash-to-panel hotkeys-overlay-combo 'TEMPORARILY'
-  gsettings set org.gnome.shell.extensions.dash-to-panel panel-anchors '{"LHC-0000000000000":"MIDDLE"}'
-  gsettings set org.gnome.shell.extensions.dash-to-panel panel-element-positions '{"LHC-0000000000000":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedTL"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}]}'
   gsettings set org.gnome.shell.extensions.dash-to-panel panel-lengths '{}'
   gsettings set org.gnome.shell.extensions.dash-to-panel panel-positions '{}'
   gsettings set org.gnome.shell.extensions.dash-to-panel panel-sizes '{"LHC-0000000000000":48}'
@@ -203,6 +209,8 @@ gsettings set org.gnome.desktop.media-handling autorun-never true
 gsettings set org.gnome.desktop.peripherals.touchpad accel-profile 'flat'
 gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll false
 gsettings set org.gnome.desktop.peripherals.mouse natural-scroll false
+gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
+gsettings set org.gnome.desktop.peripherals.mouse speed 0.2243346007604563
 
 # Privacy
 

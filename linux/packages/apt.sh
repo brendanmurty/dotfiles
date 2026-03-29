@@ -22,6 +22,10 @@ sudo apt -qq --assume-yes upgrade
 
 xargs sudo apt -qq --assume-yes install < "$DIR/apt.packages.txt"
 
+# Configure packages
+
+pipx ensurepath
+
 # Cleanup
 
 sudo apt -qq --assume-yes autoremove

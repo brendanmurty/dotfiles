@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "readableLineLength": false,
-  "trashOption": "system",
+  "trashOption": "local",
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",
   "attachmentFolderPath": "./Attachments",
@@ -10,7 +10,7 @@
   "mobilePullAction": "switcher:open",
   "legacyEditor": false,
   "showUnsupportedFiles": true,
-  "useTab": false,
+  "useTab": true,
   "tabSize": 2,
   "livePreview": true,
   "communityThemeSortOrder": "download",
@@ -22,15 +22,15 @@
     "editor:insert-wikilink",
     "editor:attach-file",
     "editor:paste",
-    "editor:toggle-bold",
-    "editor:toggle-italics",
     "editor:swap-line-up",
     "editor:swap-line-down",
+    "editor:toggle-bullet-list",
+    "editor:toggle-checklist-status",
+    "editor:toggle-bold",
+    "editor:toggle-italics",
     "editor:indent-list",
     "editor:unindent-list",
     "editor:insert-link",
-    "editor:toggle-bullet-list",
-    "editor:toggle-checklist-status",
     "editor:toggle-numbered-list",
     "editor:toggle-code",
     "editor:toggle-blockquote",
@@ -40,6 +40,5 @@
     "editor:insert-embed",
     "editor:cut",
     "editor:copy"
-  ],
-  "showRibbon": false
+  ]
 }

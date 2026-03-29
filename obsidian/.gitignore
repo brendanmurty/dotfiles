@@ -3,6 +3,7 @@ config/bookmarks.json
 config/starred.json
 config/workspace
 config/workspace.json
+config/workspace-mobile.json
 config/workspaces.json
 config/publish.json
 config/graph.json

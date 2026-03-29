@@ -5,7 +5,7 @@
 #
 #
 
-SCRIPTS="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
+SCRIPTS="$(cd "$(dirname "$0")" && pwd)"
 OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
 if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then

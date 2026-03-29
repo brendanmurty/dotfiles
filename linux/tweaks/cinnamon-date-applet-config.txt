@@ -1,4 +1,0 @@
-# Cinnamon Date applet configuration
-
-Main: %a %-e %b %l:%M %p
-Tooltip: %A, %-e %B %Y, %I:%M %p

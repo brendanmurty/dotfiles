@@ -4,6 +4,7 @@ Configuration files and scripts I use for personal and software development use.
 
 - **[bash](bash/)**: Bash setup and config
 - **[docker](docker/)**: Docker setup and config
+- **[dropbox](dropbox/)**: Dropbox setup and helper scripts
 - **[ghostty](ghostty/)**: [Ghostty](https://github.com/ghostty-org/ghostty) terminal emulator config
 - **[git](git/)**: [Git](https://git-scm.com/docs/git-config) config including alias commands
 - **[just](just/)**: [Just](https://github.com/casey/just) command runner setup

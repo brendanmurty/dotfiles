@@ -41,11 +41,11 @@ bash "$REPO_DIR/scripts/flatpak-setup.linux.sh"
 info '==> dotfiles: linux/packages/flatpak.sh'
 bash "$THIS_DIR/packages/flatpak.sh"
 
-info '==> dotfiles: linux/tweaks/gnome.sh'
-bash "$THIS_DIR/tweaks/gnome.sh"
+info '==> dotfiles: scripts/gnome-setup.linux.sh'
+bash "$REPO_DIR/scripts/gnome-setup.linux.sh"
 
-info '==> dotfiles: linux/tweaks/keychron-keyboards.sh'
-bash "$THIS_DIR/tweaks/keychron-keyboards.sh"
+info '==> dotfiles: scripts/keychron-keyboards.linux.sh'
+bash "$REPO_DIR/scripts/keychron-keyboards.linux.sh"
 
 info '==> dotfiles: scripts/homebrew-setup-user.linux.sh'
 bash "$REPO_DIR/scripts/homebrew-setup-user.linux.sh"

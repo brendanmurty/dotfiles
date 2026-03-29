@@ -6,6 +6,14 @@
 #
 #
 
+SCRIPTS="$(cd "$(dirname "$0")" && pwd)"
+OS_NAME="$(bash $SCRIPTS/os-name.sh)"
+
+if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
+  echo "This script requires Linux."
+  exit 0
+fi
+
 DIR_PATH="$HOME/example"
 DIR_ICON="/usr/share/icons/Yaru-prussiangreen/256x256@2x/places"
 

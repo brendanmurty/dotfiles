@@ -6,7 +6,7 @@
 #
 
 THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
-SCRIPTS="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
+SCRIPTS="$(cd "$(dirname "$0")" && pwd)"
 OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
 if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
@@ -20,4 +20,5 @@ sudo cp "$THIS_DIR/keychron-keyboards.rules"  "/etc/udev/rules.d/92-keychron-key
 
 sudo udevadm control --reload-rules
 sudo udevadm trigger
+
 ibus restart

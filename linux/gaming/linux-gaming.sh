@@ -33,6 +33,8 @@ sudo apt -qq --assume-yes install \
   build-essential \
   cpufrequtils
 
+flatpak install com.vysp3r.ProtonPlus
+
 info '==> dotfiles: setup gamemode'
 
 rm -rf "$HOME/.gamemode"

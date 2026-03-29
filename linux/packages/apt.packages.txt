@@ -5,9 +5,11 @@ btrfs-progs
 build-essential
 ca-certificates
 containerd.io
+cpufrequtils
 cryptsetup
 curl
 dash
+dbus-user-session
 dconf-editor
 diffutils
 docker-buildx-plugin
@@ -58,6 +60,7 @@ libc6:i386
 libchewing3
 libchewing3-data
 libcrypt1
+libdbus-1-dev
 libegl1
 libegl1:i386
 libexpat1
@@ -70,6 +73,7 @@ libgl1-mesa-dri
 libgl1-mesa-dri:i386
 libgl1:i386
 libgpg-error0
+libinih-dev
 libm17n-0
 libmarisa0
 libnm0
@@ -81,6 +85,7 @@ libpinyin-data
 libpinyin15
 libsdl2-2.0-0
 libstdc++6
+libsystemd-dev
 libudev1
 libusb-1.0-0
 libva-drm2
@@ -113,11 +118,14 @@ lvm2
 m17n-db
 mesa-va-drivers
 mesa-vulkan-drivers
+meson
 ncurses-base
 ncurses-bin
+ninja-build
 nvidia-driver-580-open
 p7zip-full
 pipx
+pkg-config
 python-is-python3
 python3
 python3-netifaces

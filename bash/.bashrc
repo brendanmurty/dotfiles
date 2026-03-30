@@ -24,6 +24,14 @@ if [ -d "$HOME/.local/bin" ]; then
   pathadd "$HOME/.local/bin:$PATH"
 fi
 
+if [ -f "$HOME/.local/bin/env" ]; then
+  source "$HOME/.local/bin/env"
+fi
+
+if [ -f "/opt/homebrew/opt/python@3.12/libexec/bin" ]; then
+  pathadd "/opt/homebrew/opt/python@3.12/libexec/bin"
+fi
+
 # Load other Bash config files if they exist
 
 if [ -f "$HOME/.bash_profile" ]; then
@@ -74,5 +82,6 @@ fi
 
 # Set suitable user level shell variables
 
+export BASH_SILENCE_DEPRECATION_WARNING=1
 export SHELL=$(which bash)
 export TERM=xterm-256color

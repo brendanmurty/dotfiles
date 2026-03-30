@@ -14,6 +14,13 @@ pathadd() {
   fi
 }
 
+# macOS - Set bash as the default shell
+
+if [[ $OSTYPE == 'darwin'* ]]; then
+  chsh -s /bin/bash
+  export BASH_SILENCE_DEPRECATION_WARNING=1
+fi
+
 # Update PATH to include user level bin directories if they exist
 
 if [ -d "$HOME/bin" ]; then
@@ -82,6 +89,5 @@ fi
 
 # Set suitable user level shell variables
 
-export BASH_SILENCE_DEPRECATION_WARNING=1
 export SHELL=$(which bash)
 export TERM=xterm-256color

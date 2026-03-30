@@ -14,13 +14,6 @@ pathadd() {
   fi
 }
 
-# macOS - Set bash as the default shell
-
-if [[ $OSTYPE == 'darwin'* ]]; then
-  chsh -s /bin/bash
-  export BASH_SILENCE_DEPRECATION_WARNING=1
-fi
-
 # Update PATH to include user level bin directories if they exist
 
 if [ -d "$HOME/bin" ]; then
@@ -85,9 +78,13 @@ if [ -d "$HOME/.brew/opt/nvm" ]; then
   mkdir -p "$NVM_DIR"
   source "$HOME/.brew/opt/nvm/nvm.sh"
   source "$HOME/.brew/opt/nvm/etc/bash_completion.d/nvm"
+  export NVM_SYMLINK_CURRENT=true
 fi
 
 # Set suitable user level shell variables
 
 export SHELL=$(which bash)
+
 export TERM=xterm-256color
+
+export BASH_SILENCE_DEPRECATION_WARNING=1

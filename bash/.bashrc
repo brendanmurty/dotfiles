@@ -76,8 +76,8 @@ fi
 if [ -d "$HOME/.brew/opt/nvm" ]; then
   export NVM_DIR="$HOME/.nvm"
   mkdir -p "$NVM_DIR"
-  source "$HOME/.brew/opt/nvm/nvm.sh"
-  source "$HOME/.brew/opt/nvm/etc/bash_completion.d/nvm"
+  source "$HOME/.brew/opt/nvm/nvm.sh" > /dev/null 2>&1
+  source "$HOME/.brew/opt/nvm/etc/bash_completion.d/nvm" > /dev/null 2>&1
   export NVM_SYMLINK_CURRENT=true
 fi
 

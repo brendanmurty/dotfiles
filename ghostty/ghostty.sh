@@ -43,4 +43,4 @@ cp "$CONFIG_DIR/config.ghostty" "$CONFIG_DIR/config.ghostty.old"
 
 echo "Copying '$CONFIG_FILE' to '$CONFIG_DIR/config.ghostty'"
 
-cp "$THIS_DIR/$CONFIG_FILE" "$CONFIG_DIR/config.ghostty"
+cp "$CONFIG_FILE" "$CONFIG_DIR/config.ghostty"

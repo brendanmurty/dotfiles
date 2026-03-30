@@ -1,9 +1,9 @@
 #
 #
 # ~/.bash_prompt
-#  - Customised shell prompt
-#  - Relies on the '__git_ps1' script from the official Git repo:
-#    https://raw.githubusercontent.com/git/git/refs/heads/master/contrib/completion/git-prompt.sh
+#   - Customised shell prompt
+#   - Relies on the '__git_ps1' script from the official Git repo:
+#     https://raw.githubusercontent.com/git/git/refs/heads/master/contrib/completion/git-prompt.sh
 #
 #
 

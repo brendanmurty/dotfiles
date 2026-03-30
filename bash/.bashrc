@@ -1,5 +1,10 @@
 #
+#
 # ~/.bashrc
+#   - Loads other Bash config files if they exist
+#   - Updates the system PATH variable as needed
+#   - Configures common tools
+#
 #
 
 # Skip if not running interactively

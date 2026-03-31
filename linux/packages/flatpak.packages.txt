@@ -9,6 +9,7 @@ com.konstantintutsch.Lock
 com.mongodb.Compass
 com.pojtinger.felicitas.Sessions
 com.usebottles.bottles
+com.usebruno.Bruno
 com.visualstudio.code
 com.vysp3r.ProtonPlus
 dev.dergs.Tonearm

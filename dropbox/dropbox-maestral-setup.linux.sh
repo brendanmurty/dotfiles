@@ -38,6 +38,10 @@ maestral notify level SYNCISSUE
 
 maestral auth link
 
+echo '==> Copying over ignore config file'
+
+cp "$DIR/maestral.ignore.txt" "$(maestral config get path)/.mignore"
+
 echo '==> Maestral configuration completed.'
 
 echo '==> Copying over app icon and applications menu item.'
@@ -45,6 +49,7 @@ echo '==> Copying over app icon and applications menu item.'
 mkdir -p "$HOME/.local/share/icons/hicolor/512x512/apps"
 cp "$DIR/Maestral.png" "$HOME/.local/share/icons/hicolor/512x512/apps/Maestral.png"
 cp "$DIR/Maestral.desktop" "$HOME/.local/share/applications/Maestral.desktop"
+chmod a+x "$HOME/.local/share/applications/Maestral.desktop"
 xdg-desktop-menu forceupdate
 
 echo '==> Done, to open Maestral now run: maestral gui &'

@@ -12,6 +12,7 @@ dash
 dbus-user-session
 dconf-editor
 diffutils
+dkms
 docker-buildx-plugin
 docker-ce
 docker-ce-cli
@@ -112,7 +113,7 @@ libxinerama1
 libxss1
 libxxf86vm1
 linux-generic-hwe-24.04
-linux-modules-nvidia-580-open-generic-hwe-24.04
+linux-modules-nvidia-590-open-generic-hwe-24.04
 login
 lvm2
 m17n-db
@@ -122,13 +123,14 @@ meson
 ncurses-base
 ncurses-bin
 ninja-build
-nvidia-driver-580-open
+nvidia-driver-590-open
 p7zip-full
 pipx
 pkg-config
 python-is-python3
 python3
 python3-netifaces
+python3-pip
 shim-signed
 steam-launcher
 steam-libs
@@ -141,6 +143,7 @@ ubuntu-restricted-addons
 ubuntu-standard
 ubuntu-wallpapers
 unzip
+uuu
 va-driver-all
 vim
 wbritish

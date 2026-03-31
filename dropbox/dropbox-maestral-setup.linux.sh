@@ -7,6 +7,7 @@
 #
 #
 
+DIR="$(cd "$(dirname "$0")" && pwd)"
 SCRIPTS="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
 OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
@@ -15,17 +16,20 @@ if [[ "$OS_NAME" != "Ubuntu" ]]; then
   exit 0
 fi
 
+echo '==> Installing dependencies'
+
 sudo apt -qq --assume-yes install \
   python3 \
   python-is-python3 \
   pipx
 
+echo '==> Installing "maestral[gui]" with "pipx"'
+
 pipx install maestral[gui]
 
-mkdir -p "$HOME/Dropbox"
+echo '==> Maestral configuration starting.'
 
 maestral start
-maestral move-dir "$HOME/Dropbox"
 
 maestral autostart -Y
 maestral bandwidth-limit up 0
@@ -34,7 +38,13 @@ maestral notify level SYNCISSUE
 
 maestral auth link
 
-echo ''
-echo '----'
-echo ''
-echo 'Maestral installed and configured, to open the app run: maestral gui &'
+echo '==> Maestral configuration completed.'
+
+echo '==> Copying over app icon and applications menu item.'
+
+mkdir -p "$HOME/.local/share/icons/hicolor/512x512/apps"
+cp "$DIR/Maestral.png" "$HOME/.local/share/icons/hicolor/512x512/apps/Maestral.png"
+cp "$DIR/Maestral.desktop" "$HOME/.local/share/applications/Maestral.desktop"
+xdg-desktop-menu forceupdate
+
+echo '==> Done, to open Maestral now run: maestral gui &'

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Maestral
+Comment=Dropbox sync app.
+Icon=~/.local/share/icons/hicolor/512x512/apps/Maestral.png
+Type=Application
+Terminal=false
+Exec=maestral gui &

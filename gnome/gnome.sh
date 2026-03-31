@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 #
 #
-# Setup Gnome - Customise user level Gnome settings
+# Setup Gnome
+#   - Customise user level Gnome settings
+#   - Install Gnome Shell extensions
+#   - To update the Gnome Shell Extensions list: gnome-extensions list --enabled > "./gnome-shell.extensions.txt"
 #
 #
 
-SCRIPTS="$(cd "$(dirname "$0")" && pwd)"
+SCRIPTS="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
 OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
 if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then

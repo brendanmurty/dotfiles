@@ -6,7 +6,9 @@ Configuration files, programs, packages and scripts I use for personal, gaming a
 - **[docker](docker/)**: Docker setup and config
 - **[dropbox](dropbox/)**: Dropbox setup and helper scripts
 - **[ghostty](ghostty/)**: [Ghostty](https://github.com/ghostty-org/ghostty) terminal emulator config
+- **[gnome](gnome/)**: Gnome desktop environment for Linux setup and utility scripts
 - **[git](git/)**: [Git](https://git-scm.com/docs/git-config) config including alias commands
+- **[hardware](hardware/)**: Hardware related utility scripts
 - **[just](just/)**: [Just](https://github.com/casey/just) command runner setup
 - **[linux](linux/)**: Linux setup, package installers and tweaks
 - **[linux/gaming](linux/gaming/)**: Ubuntu packages and config that improves gaming performance

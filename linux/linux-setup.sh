@@ -28,11 +28,11 @@ bash "$REPO_DIR/git/git.sh"
 info '==> dotfiles: scripts/flatpak-setup.linux.sh'
 bash "$REPO_DIR/scripts/flatpak-setup.linux.sh"
 
-info '==> dotfiles: scripts/gnome-setup.linux.sh'
-bash "$REPO_DIR/scripts/gnome-setup.linux.sh"
+info '==> dotfiles: gnome/gnome.sh'
+bash "$REPO_DIR/gnome/gnome.sh"
 
-info '==> dotfiles: scripts/keychron-keyboards.linux.sh'
-bash "$REPO_DIR/scripts/keychron-keyboards.linux.sh"
+info '==> dotfiles: hardware/keychron-keyboards.linux.sh'
+bash "$REPO_DIR/hardware/keychron-keyboards.linux.sh"
 
 info '==> dotfiles: scripts/homebrew-setup-user.linux.sh'
 bash "$REPO_DIR/scripts/homebrew-setup-user.linux.sh"

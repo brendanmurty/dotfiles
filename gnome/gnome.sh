@@ -3,8 +3,6 @@
 #
 # Setup Gnome
 #   - Customise user level Gnome settings
-#   - Install Gnome Shell extensions
-#   - To update the Gnome Shell Extensions list: gnome-extensions list --enabled > "./gnome-shell.extensions.txt"
 #
 #
 
@@ -16,15 +14,9 @@ if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
   exit 0
 fi
 
-# Install extensions
+# Install Gnome Shell Extensions
 
-pipx install gnome-extensions-cli --system-site-packages
-
-cat "$SCRIPTS/gnome-shell.extensions.txt" | while read extension
-do
-  gext install $extension
-  gext enable $extension
-done
+bash "./gnome-shell-extensions.sh"
 
 # Theme
 

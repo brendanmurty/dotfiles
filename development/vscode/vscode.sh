@@ -7,7 +7,7 @@
 #
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
-REPO_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
+REPO_DIR="$(cd "$(dirname "$0")" && cd ../.. && pwd)"
 OS_NAME="$(bash $REPO_DIR/scripts/os-name.sh)"
 
 # Default to a standard install on a Linux system

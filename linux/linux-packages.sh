@@ -35,4 +35,7 @@ bash "$THIS_DIR/packages/flatpak.sh"
 info '==> dotfiles: linux/packages/homebrew.sh'
 bash "$THIS_DIR/packages/homebrew.sh"
 
+info '==> dotfiles: linux/packages/gnome-shell-extensions.sh'
+bash "$THIS_DIR/packages/gnome-shell-extensions.sh"
+
 info '==> dotfiles: finished linux packages install, a system reboot is recommended'

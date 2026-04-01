@@ -19,20 +19,20 @@ info() { echo -e "\033[36m$1\033[0m"; }
 
 info '==> dotfiles: start linux setup'
 
-info '==> dotfiles: bash/bash.sh'
-bash "$REPO_DIR/bash/bash.sh"
+info '==> dotfiles: linux/bash/bash.sh'
+bash "$REPO_DIR/linux/bash/bash.sh"
 
-info '==> dotfiles: git/git.sh'
-bash "$REPO_DIR/git/git.sh"
+info '==> dotfiles: development/git/git.sh'
+bash "$REPO_DIR/development/git/git.sh"
 
-info '==> dotfiles: scripts/flatpak-setup.linux.sh'
-bash "$REPO_DIR/scripts/flatpak-setup.linux.sh"
+info '==> dotfiles: linux/linux-flatpak-setup.sh'
+bash "$REPO_DIR/linux/linux-flatpak-setup.sh"
 
-info '==> dotfiles: gnome/gnome.sh'
-bash "$REPO_DIR/gnome/gnome.sh"
+info '==> dotfiles: linux/gnome/gnome.sh'
+bash "$REPO_DIR/linux/gnome/gnome.sh"
 
-info '==> dotfiles: hardware/keychron-keyboards.linux.sh'
-bash "$REPO_DIR/hardware/keychron-keyboards.linux.sh"
+info '==> dotfiles: linux/hardware/keychron-keyboards.sh'
+bash "$REPO_DIR/linux/hardware/keychron-keyboards.sh"
 
 info '==> dotfiles: scripts/homebrew-setup-user.linux.sh'
 bash "$REPO_DIR/scripts/homebrew-setup-user.linux.sh"
@@ -40,14 +40,14 @@ bash "$REPO_DIR/scripts/homebrew-setup-user.linux.sh"
 info '==> dotfiles: just/just.sh'
 bash "$REPO_DIR/just/just.sh"
 
-info '==> dotfiles: ghostty/ghostty.sh'
-bash "$REPO_DIR/ghostty/ghostty.sh"
+info '==> dotfiles: development/ghostty/ghostty.sh'
+bash "$REPO_DIR/development/ghostty/ghostty.sh"
 
-info '==> dotfiles: vim/vim.sh'
-bash "$REPO_DIR/vim/vim.sh"
+info '==> dotfiles: linux/vim/vim.sh'
+bash "$REPO_DIR/linux/vim/vim.sh"
 
-info '==> dotfiles: tmux/tmux.sh'
-bash "$REPO_DIR/tmux/tmux.sh"
+info '==> dotfiles: linux/tmux/tmux.sh'
+bash "$REPO_DIR/linux/tmux/tmux.sh"
 
 info '==> dotfiles: dropbox/maestral/maestral.sh'
 bash "$REPO_DIR/dropbox/maestral/maestral.sh"

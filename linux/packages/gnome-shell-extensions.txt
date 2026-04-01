@@ -1,6 +1,6 @@
 arcmenu@arcmenu.com
 dash-to-panel@jderose9.github.com
 windowIsReady_Remover@nunofarruca@gmail.com
-tiling-assistant@ubuntu.com
 appindicatorsupport@rgcjonas.gmail.com
 username-in-topbar@neroteam.com
+tiling-assistant@ubuntu.com

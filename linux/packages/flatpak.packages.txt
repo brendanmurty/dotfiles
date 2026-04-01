@@ -32,6 +32,7 @@ io.missioncenter.MissionCenter
 io.scottlabs.reManager
 it.mijorus.gearlever
 net.daase.journable
+net.nokyan.Resources
 one.naiara.Kuychi
 org.filezillaproject.Filezilla
 org.gimp.GIMP

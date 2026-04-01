@@ -8,7 +8,7 @@
 #
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
-SCRIPTS="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
+SCRIPTS="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
 OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
 if [[ "$OS_NAME" != "Ubuntu" ]]; then
@@ -27,29 +27,32 @@ echo '==> Installing "maestral[gui]" with "pipx"'
 
 pipx install maestral[gui]
 
-echo '==> Maestral configuration starting.'
+echo '==> Configure Maestral'
 
 maestral start
-
-maestral autostart -Y
 maestral bandwidth-limit up 0
 maestral bandwidth-limit down 0
 maestral notify level SYNCISSUE
-
 maestral auth link
 
-echo '==> Copying over ignore config file'
+echo '==> Copying over Maestral ignore list'
 
 cp "$DIR/maestral.ignore.txt" "$(maestral config get path)/.mignore"
 
-echo '==> Maestral configuration completed.'
-
-echo '==> Copying over app icon and applications menu item.'
+echo '==> Copying over app icon and applications menu item'
 
 mkdir -p "$HOME/.local/share/icons/hicolor/512x512/apps"
-cp "$DIR/Maestral.png" "$HOME/.local/share/icons/hicolor/512x512/apps/Maestral.png"
-cp "$DIR/Maestral.desktop" "$HOME/.local/share/applications/Maestral.desktop"
-chmod a+x "$HOME/.local/share/applications/Maestral.desktop"
+cp "$DIR/maestral.png" "$HOME/.local/share/icons/hicolor/512x512/apps/Maestral.png"
+
+chmod a+x "$DIR/maestral.desktop"
+rm -rf "$HOME/.local/share/applications/Maestral.desktop"
+rm -rf "$HOME/.config/autostart/Maestral.desktop"
+cp "$DIR/maestral.desktop" "$HOME/.local/share/applications/Maestral.desktop"
+cp "$DIR/maestral.desktop" "$HOME/.config/autostart/Maestral.desktop"
+
+echo '==> Updating launcher application list'
+
+update-desktop-database ~/.local/share/applications
 xdg-desktop-menu forceupdate
 
 echo '==> Done, to open Maestral now run: maestral gui &'

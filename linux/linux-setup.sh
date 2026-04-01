@@ -49,8 +49,8 @@ bash "$REPO_DIR/vim/vim.sh"
 info '==> dotfiles: tmux/tmux.sh'
 bash "$REPO_DIR/tmux/tmux.sh"
 
-info '==> dotfiles: dropbox/dropbox-maestral-setup.linux.sh'
-bash "$REPO_DIR/dropbox/dropbox-maestral-setup.linux.sh"
+info '==> dotfiles: dropbox/maestral/maestral.sh'
+bash "$REPO_DIR/dropbox/maestral/maestral.sh"
 
 info '==> dotfiles: docker/docker.sh'
 bash "$REPO_DIR/docker/docker.sh"

@@ -23,5 +23,5 @@ if $(flatpak info com.dropbox.Client >/dev/null 2>&1); then
   flatpak run com.dropbox.Client autostart y
 
   mkdir -p "$HOME/.config/autostart"
-  cp "$DIR/dropbox.desktop" "$HOME/.config/autostart/dropbox.desktop"
+  cp "$DIR/dropbox.desktop" "$HOME/.config/autostart/Dropbox.desktop"
 fi

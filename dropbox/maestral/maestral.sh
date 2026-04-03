@@ -24,12 +24,12 @@ sudo apt -qq --assume-yes install \
   python3-pyqt5 \
   pipx
 
-echo '==> Installing "maestral[gui]" with "pipx"'
+echo '==> Installing Maestral'
 
 pipx install maestral[gui]
 pipx install maestral-qt
 
-echo '==> Configure Maestral'
+echo '==> Configuring Maestral'
 
 maestral start
 maestral bandwidth-limit up 0

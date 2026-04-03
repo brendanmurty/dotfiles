@@ -1,4 +1,4 @@
-# Linux: Fix Dropbox tray icon showing as "..." instead of icon
+# Gnome: Fix a tray icon showing as "..." instead of icon
 
 First follow this process to get the Tray Icon Id
 https://github.com/ubuntu/gnome-shell-extension-appindicator/issues/355#issuecomment-1214409509
@@ -9,7 +9,9 @@ https://extensions.gnome.org/extension/615/appindicator-support/
 In that extension's settings, use the Tray Icon Id from above setup a custom icon for that.
 Use the Tray Icon Id as the value for both Indicator ID and Attention Icon Name.
 
-Set the Icon Name field to the full path to an image file.
+Set the Icon Name field to the full path to an image file to show for the tray icon instead.
 
-For reference, if you installed Dropbox via Flatpak, the icon path will be similar to:
-/var/lib/flatpak/exports/share/icons/hicolor/256x256/apps/com.dropbox.Client.png
+Directories that contain icons:
+
+- ~/.local/share/icons
+- /var/lib/flatpak/exports/share/icons

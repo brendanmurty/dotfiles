@@ -21,11 +21,13 @@ echo '==> Installing dependencies'
 sudo apt -qq --assume-yes install \
   python3 \
   python-is-python3 \
+  python3-pyqt5 \
   pipx
 
 echo '==> Installing "maestral[gui]" with "pipx"'
 
 pipx install maestral[gui]
+pipx install maestral-qt
 
 echo '==> Configure Maestral'
 
@@ -33,6 +35,7 @@ maestral start
 maestral bandwidth-limit up 0
 maestral bandwidth-limit down 0
 maestral notify level SYNCISSUE
+maestral autostart --yes
 maestral auth link
 
 echo '==> Copying over Maestral ignore list'

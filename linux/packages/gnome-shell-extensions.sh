@@ -2,7 +2,7 @@
 #
 #
 # Install Gnome Shell Extensions
-#   - To update the Gnome Shell Extensions list: gnome-extensions list --enabled > "./gnome-shell-extensions.txt"
+#   - To update the Gnome Shell Extensions list: gnome-extensions list --user --enabled > "./gnome-shell-extensions.txt"
 #
 #
 

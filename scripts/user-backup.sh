@@ -19,8 +19,6 @@ touch "$LOG_FILE"
 cp --update=none "$SCRIPT_DIR/user-backup.env.sample" "$SCRIPT_DIR/user-backup.env"
 source "$SCRIPT_DIR/user-backup.env"
 
-SOURCE_DIR="/home/$USER"
-
 mkdir -p "$BACKUP_DIR"
 
 BACKUP_FILE="user-$(echo $USER)_$(date +%Y%m%d-%H%M%S).zip"

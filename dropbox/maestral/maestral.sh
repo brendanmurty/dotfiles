@@ -47,11 +47,15 @@ echo '==> Copying over app icon and applications menu item'
 mkdir -p "$HOME/.local/share/icons/hicolor/512x512/apps"
 cp "$DIR/maestral.png" "$HOME/.local/share/icons/hicolor/512x512/apps/Maestral.png"
 
-chmod a+x "$DIR/maestral.desktop"
 rm -rf "$HOME/.local/share/applications/Maestral.desktop"
-rm -rf "$HOME/.config/autostart/Maestral.desktop"
 cp "$DIR/maestral.desktop" "$HOME/.local/share/applications/Maestral.desktop"
+echo "Icon=$HOME/.local/share/icons/hicolor/512x512/apps/Maestral.png" >> "$HOME/.local/share/applications/Maestral.desktop"
+chmod a+x "$HOME/.local/share/applications/Maestral.desktop"
+
+rm -rf "$HOME/.config/autostart/Maestral.desktop"
 cp "$DIR/maestral.desktop" "$HOME/.config/autostart/Maestral.desktop"
+echo "Icon=$HOME/.local/share/icons/hicolor/512x512/apps/Maestral.png" >> "$HOME/.config/autostart/Maestral.desktop"
+chmod a+x "$HOME/.config/autostart/Maestral.desktop"
 
 echo '==> Updating launcher application list'
 

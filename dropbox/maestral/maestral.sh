@@ -11,8 +11,6 @@ DIR="$(cd "$(dirname "$0")" && pwd)"
 SCRIPTS="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
 OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
-echo "$OS_NAME"
-
 if [[ "$OS_NAME" != "Ubuntu" ]]; then
   echo "This script requires Ubuntu."
   exit 0

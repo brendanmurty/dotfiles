@@ -1,19 +1,24 @@
 #!/usr/bin/env bash
 #
 #
-# Get formatted OS name
+# Helper script that returns the name of the OS
 #
 #
 
 OS_NAME="$(uname -s)"
 
-case "${OS_NAME}" in
-    Linux*)     OS="$(source /etc/os-release && echo $NAME)";;
-    Darwin*)    OS="macOS";;
-    CYGWIN*)    OS="Windows";;
-    MINGW*)     OS="Windows";;
-    MSYS_NT*)   OS="Windows";;
-    *)          OS="${OS_NAME}"
-esac
-
-echo "${OS}"
+if [[ "${OS_NAME}" == 'Linux' ]]; then
+  echo "$(source /etc/os-release && echo $NAME)"
+elif [[ "${OS_NAME}" == 'Freedesktop SDK' ]]; then
+  echo "$(lsb_release -si 2>/dev/null)"
+elif [[ "${OS_NAME}" == 'Darwin' ]]; then
+  echo 'macOS'
+elif [[ "${OS_NAME}" == 'CYGWIN' ]]; then
+  echo 'Windows'
+elif [[ "${OS_NAME}" == 'MINGW' ]]; then
+  echo 'Windows'
+elif [[ "${OS_NAME}" == 'MSYS_NT' ]]; then
+  echo 'Windows'
+else
+  echo "${OS_NAME}"
+fi

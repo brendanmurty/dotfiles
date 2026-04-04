@@ -11,6 +11,8 @@ DIR="$(cd "$(dirname "$0")" && pwd)"
 SCRIPTS="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
 OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
+echo "$OS_NAME"
+
 if [[ "$OS_NAME" != "Ubuntu" ]]; then
   echo "This script requires Ubuntu."
   exit 0
@@ -58,4 +60,4 @@ echo '==> Updating launcher application list'
 update-desktop-database ~/.local/share/applications
 xdg-desktop-menu forceupdate
 
-echo '==> Done, to open Maestral now run: maestral gui &'
+echo '==> Done, to open Maestral now run: nohup maestral gui &'

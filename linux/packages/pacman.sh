@@ -3,7 +3,6 @@
 #
 # Install packages on EndeavourOS systems
 #   - Assumes Gnome desktop environment is used
-#   - The package list can be updated with: pacman -Qqen > "./pacman.packages.txt"
 #
 #
 

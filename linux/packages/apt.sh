@@ -2,7 +2,6 @@
 #
 #
 # Apt packages
-#   - To update the package list file: apt-mark showmanual > "./apt.packages.txt"
 #
 #
 

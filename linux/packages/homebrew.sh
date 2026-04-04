@@ -3,7 +3,6 @@
 #
 # Homebrew packages
 #   - Installs the Homebrew packages listed in 'homebrew.packages.txt'
-#   - To update the package list file: brew leaves > "./homebrew.packages.txt"
 #
 #
 

@@ -21,6 +21,13 @@
   "agent_ui_font_size": 18.0,
   "agent_buffer_font_size": 18.0,
   "languages": {
+    "Desktop Entry": {
+      "format_on_save": "off",
+      "auto_indent_on_paste": false,
+      "auto_indent": "none",
+      "tab_size": 2,
+      "ensure_final_newline_on_save": false
+    },
     "Just": {
       "format_on_save": "off",
       "auto_indent_on_paste": false,
@@ -202,9 +209,10 @@
     ],
     "enable_feedback": false,
     "default_model": {
-      "enable_thinking": false,
-      "provider": "copilot_chat",
-      "model": "claude-sonnet-4.5",
+      "effort": "high",
+      "enable_thinking": true,
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-6",
     },
     "model_parameters": [],
   },

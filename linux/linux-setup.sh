@@ -34,6 +34,9 @@ bash "$REPO_DIR/linux/gnome/gnome.sh"
 info '==> dotfiles: linux/hardware/keychron-keyboards.sh'
 bash "$REPO_DIR/linux/hardware/keychron-keyboards.sh"
 
+info '==> dotfiles: linux/hardware/bluetooth-fixes.sh'
+bash "$REPO_DIR/linux/hardware/bluetooth-fixes.sh"
+
 info '==> dotfiles: scripts/homebrew-setup-user.linux.sh'
 bash "$REPO_DIR/scripts/homebrew-setup-user.linux.sh"
 

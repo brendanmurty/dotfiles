@@ -18,6 +18,7 @@ dev.bragefuglseth.Keypunch
 dev.dergs.Tonearm
 dev.geopjr.Calligraphy
 dev.zed.Zed
+io.github.cleomenezesjr.Serigy
 io.github.diegopvlk.Tomatillo
 io.github.fabrialberio.pinapp
 io.github.flattool.Ignition
@@ -26,6 +27,7 @@ io.github.giantpinkrobots.varia
 io.github.kolunmi.Bazaar
 io.github.lainsce.Emulsion
 io.github.noobping.keycord
+io.github.ppvan.tarug
 io.github.pwr_solaar.solaar
 io.github.redddfoxxyy.samaya
 io.github.sitraorg.sitra
@@ -39,6 +41,7 @@ net.daase.journable
 net.davidotek.pupgui2
 net.lutris.Lutris
 net.nokyan.Resources
+net.zdechov.app.vCardStudio
 one.naiara.Kuychi
 org.filezillaproject.Filezilla
 org.gimp.GIMP
@@ -56,3 +59,5 @@ org.gnome.seahorse.Application
 org.inkscape.Inkscape
 org.kde.audiotube
 org.libreoffice.LibreOffice
+org.videolan.VLC
+studio.planetpeanut.Bobby

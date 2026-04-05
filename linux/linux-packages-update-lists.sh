@@ -25,8 +25,6 @@ flatpak list --app --columns=application > "./flatpak.packages.txt"
 
 gnome-extensions list --user --enabled > "./gnome-shell-extensions.txt"
 
-brew leaves > "./homebrew.packages.txt"
-
 if [[ "$OS_NAME" == "EndeavourOS" ]]; then
   pacman -Qqen > "./pacman.packages.txt"
 fi

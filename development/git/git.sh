@@ -1,16 +1,11 @@
 #!/usr/bin/env bash
 #
 #
-# Git Config: Set global settings and add Git aliases
+# Git: Install addons, set global Git config and add Git aliases
 #
 #
 
-if [[ "$OS_NAME" == "Ubuntu" ]]; then
-  # Setup Git LFS
-  curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
-  sudo apt -y install git-lfs
-  git lfs install
-fi
+# Set global Git Config
 
 git config --global init.defaultBranch "develop"
 git config --global push.default "simple"
@@ -20,16 +15,6 @@ git config --global push.autosetupremote "true"
 git config --global core.whitespace "fix,-indent-with-non-tab,trailing-space,cr-at-eol"
 git config --global core.ignorecase "false"
 git config --global core.symlinks "true"
-
-git config --global alias.f "fetch"
-git config --global alias.st "status --untracked-files=all --short --branch"
-git config --global alias.co "checkout"
-git config --global alias.ci "commit"
-git config --global alias.cia "commit --amend"
-git config --global alias.br "branch --show-current"
-git config --global alias.cbr "checkout -b"
-git config --global alias.lg "log --pretty=format:'%Cblue%h%Creset %s %Cgreen%an, %cr %Creset' --abbrev-commit --date=relative"
-git config --global alias.graph "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 
 git config --global color.ui "true"
 
@@ -46,3 +31,27 @@ git config --global color.diff.whitespace "red reverse"
 git config --global color.status.added "green"
 git config --global color.status.changed "yellow"
 git config --global color.status.untracked "red"
+
+# Add Git aliases
+
+git config --global alias.f "fetch"
+git config --global alias.st "status --untracked-files=all --short --branch"
+git config --global alias.co "checkout"
+git config --global alias.ci "commit"
+git config --global alias.cia "commit --amend"
+git config --global alias.br "branch --show-current"
+git config --global alias.cbr "checkout -b"
+git config --global alias.lg "log --pretty=format:'%Cblue%h%Creset %s %Cgreen%an, %cr %Creset' --abbrev-commit --date=relative"
+git config --global alias.graph "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+
+if [[ "$OS_NAME" == "Ubuntu" ]]; then
+  # Setup Git LFS
+  curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+  sudo apt -y install git-lfs
+  git lfs install
+fi
+
+# Setup GitHub CLI
+
+brew install gh
+gh auth login --git-protocol ssh --skip-ssh-key --web

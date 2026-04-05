@@ -32,9 +32,6 @@ bash "$THIS_DIR/packages/snap.sh"
 info '==> dotfiles: linux/packages/flatpak.sh'
 bash "$THIS_DIR/packages/flatpak.sh"
 
-info '==> dotfiles: linux/packages/homebrew.sh'
-bash "$THIS_DIR/packages/homebrew.sh"
-
 info '==> dotfiles: linux/packages/gnome-shell-extensions.sh'
 bash "$THIS_DIR/packages/gnome-shell-extensions.sh"
 

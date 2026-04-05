@@ -6,6 +6,7 @@
 #
 #
 
+THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
 SCRIPTS="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
 OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
@@ -14,23 +15,54 @@ if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
   exit 0
 fi
 
+# Helper function to check for a Dconf schema
+
+has_schema () {
+  return gsettings list-schemas | grep "$1"
+}
+
 # Theme
+
+if [[ "$OS_NAME" == "Ubuntu" ]]; then
+  # Ubuntu: Use a customised version of Adwaita with a blue accent colour
+
+  mkdir -p "$HOME/.local/share/themes"
+
+  rm -rf "$HOME/.local/share/themes/morewaita"
+  git clone https://github.com/somepaulo/MoreWaita.git "$HOME/.local/share/themes/morewaita" >/dev/null 2>&1
+  cd "$HOME/.local/share/themes/morewaita"
+  bash ./install.sh >/dev/null 2>&1
+
+  rm -rf "$HOME/.local/share/themes/adwaita-colours"
+  git clone https://github.com/dpejoh/Adwaita-colors "$HOME/.local/share/themes/adwaita-colours" >/dev/null 2>&1
+  cd "$HOME/.local/share/themes/adwaita-colours"
+  bash ./setup -i -P ~/.local >/dev/null 2>&1
+  bash ./morewaita.sh >/dev/null 2>&1
+
+  cd "$THIS_DIR"
+
+  gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+  gsettings set org.gnome.desktop.interface icon-theme 'Adwaita-blue'
+  gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
+  gsettings set org.gnome.desktop.interface cursor-theme 'Yaru'
+  gsettings set org.gnome.desktop.interface cursor-size '20'
+fi
+
+# Desktop and screensaver
 
 gsettings set org.gnome.desktop.background picture-uri 'none'
 gsettings set org.gnome.desktop.background picture-uri-dark 'none'
 gsettings set org.gnome.desktop.background primary-color '#374A49'
-gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+gsettings set org.gnome.desktop.screensaver primary-color '#000000'
+
+# Interface customisations
+
 gsettings set org.gnome.desktop.interface gtk-enable-primary-paste false
 gsettings set org.gnome.desktop.interface toolbar-icons-size 'large'
 gsettings set org.gnome.desktop.interface toolbar-style 'text'
-gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
-gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
-gsettings set org.gnome.desktop.interface cursor-size '24'
 gsettings set org.gnome.desktop.wm.preferences audible-bell false
 gsettings set org.gnome.desktop.wm.preferences visual-bell false
 gsettings set org.gnome.desktop.wm.preferences visual-bell-type 'frame-flash'
-gsettings set org.gnome.desktop.interface gtk-enable-primary-paste false
-
 
 # Window management
 
@@ -51,7 +83,7 @@ gsettings set org.gnome.desktop.wm.preferences resize-with-right-button false
 gsettings set org.gnome.desktop.wm.preferences focus-mode 'click'
 gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'smart'
 gsettings set org.gnome.desktop.wm.preferences auto-raise true
-gsettings set org.gnome.desktop.wm.preferences auto-raise-delay 0
+gsettings set org.gnome.desktop.wm.preferences auto-raise-delay '0'
 
 # Extensions
 
@@ -62,87 +94,71 @@ gsettings set org.gnome.shell development-tools true
 
 # Extension: Arc Menu
 
-if gsettings list-schemas | grep "org.gnome.shell.extensions.arcmenu" >/dev/null 2>&1; then
-  gsettings set org.gnome.shell.extensions.arcmenu apps-show-extra-details false
-  gsettings set org.gnome.shell.extensions.arcmenu arcmenu-hotkey '["Super_L"]'
-  gsettings set org.gnome.shell.extensions.arcmenu arcmenu-hotkey-overlay-key-enabled true
-  gsettings set org.gnome.shell.extensions.arcmenu avatar-style 'Round'
-  gsettings set org.gnome.shell.extensions.arcmenu az-layout-merge-panels true
-  gsettings set org.gnome.shell.extensions.arcmenu button-item-icon-size 'Medium'
-  gsettings set org.gnome.shell.extensions.arcmenu default-menu-view-runner 'Pinned_Apps'
-  gsettings set org.gnome.shell.extensions.arcmenu enable-horizontal-flip true
-  gsettings set org.gnome.shell.extensions.arcmenu force-menu-location 'MonitorCentered'
-  gsettings set org.gnome.shell.extensions.arcmenu group-apps-alphabetically-grid-layouts false
-  gsettings set org.gnome.shell.extensions.arcmenu group-apps-alphabetically-list-layouts false
-  gsettings set org.gnome.shell.extensions.arcmenu hide-overview-on-arcmenu-open true
-  gsettings set org.gnome.shell.extensions.arcmenu hide-overview-on-startup true
-  gsettings set org.gnome.shell.extensions.arcmenu hotkey-open-primary-monitor false
-  gsettings set org.gnome.shell.extensions.arcmenu left-panel-width '600'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-background-color 'rgb(0,0,0)'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-border-color 'rgb(51,51,51)'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-border-radius '0'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-border-width '1'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-button-icon 'resource:///org/gnome/shell/extensions/arcmenu/icons/scalable/actions/icon-app-launcher-symbolic.svg'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-button-icon-size '36'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-foreground-color 'rgb(223,223,223)'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-height '550'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-item-active-bg-color 'rgb(143,240,164)'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-item-active-fg-color 'rgb(0,0,0)'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-item-category-icon-size 'Small'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-item-hover-bg-color 'rgb(143,240,164)'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-item-hover-fg-color 'rgb(0,0,0)'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-item-icon-size 'Medium'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-layout 'Default'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-separator-color 'rgb(51,51,51)'
-  gsettings set org.gnome.shell.extensions.arcmenu misc-item-icon-size 'Medium'
-  gsettings set org.gnome.shell.extensions.arcmenu multi-monitor true
-  gsettings set org.gnome.shell.extensions.arcmenu override-menu-theme true
-  gsettings set org.gnome.shell.extensions.arcmenu power-display-style 'In_Line'
-  gsettings set org.gnome.shell.extensions.arcmenu power-options '[(0, false), (1, true), (2, true), (3, true), (4, false), (5, false), (6, false), (7, false)]'
-  gsettings set org.gnome.shell.extensions.arcmenu prefs-visible-page '0'
-  gsettings set org.gnome.shell.extensions.arcmenu right-panel-width '200'
-  gsettings set org.gnome.shell.extensions.arcmenu runner-menu-height '550'
-  gsettings set org.gnome.shell.extensions.arcmenu runner-menu-height-static true
-  gsettings set org.gnome.shell.extensions.arcmenu runner-menu-width '650'
-  gsettings set org.gnome.shell.extensions.arcmenu runner-position 'Centered'
-  gsettings set org.gnome.shell.extensions.arcmenu runner-search-display-style 'Grid'
-  gsettings set org.gnome.shell.extensions.arcmenu runner-show-settings-button false
-  gsettings set org.gnome.shell.extensions.arcmenu search-entry-border-radius '(true, 25)'
-  gsettings set org.gnome.shell.extensions.arcmenu show-recently-installed-apps false
-  gsettings set org.gnome.shell.extensions.arcmenu update-notifier-project-version '71'
-  gsettings set org.gnome.shell.extensions.arcmenu vert-separator true
+if has_schema "org.gnome.shell.extensions.arcmenu"; then
+  gsettings set org.gnome.shell.extensions.arcmenu az-layout-merge-panels=false
+  gsettings set org.gnome.shell.extensions.arcmenu category-icon-type='Full_Color'
+  gsettings set org.gnome.shell.extensions.arcmenu eleven-show-frequent-apps=false
+  gsettings set org.gnome.shell.extensions.arcmenu force-menu-location='MonitorCentered'
+  gsettings set org.gnome.shell.extensions.arcmenu hide-overview-on-arcmenu-open=true
+  gsettings set org.gnome.shell.extensions.arcmenu hide-overview-on-startup=true
+  gsettings set org.gnome.shell.extensions.arcmenu left-panel-width='300'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-button-appearance='Icon'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-button-icon='resource:///org/gnome/shell/extensions/arcmenu/icons/scalable/actions/distro-gnome-symbolic.svg'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-button-icon-size='23'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-button-padding='6'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-button-position-offset='0'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-height='650'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-item-grid-icon-size='Large'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-item-icon-size='Large'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-layout='AZ'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-width-adjustment='250'
+  gsettings set org.gnome.shell.extensions.arcmenu misc-item-icon-size='Default'
+  gsettings set org.gnome.shell.extensions.arcmenu power-display-style='In_Line'
+  gsettings set org.gnome.shell.extensions.arcmenu power-options='[(1, true), (7, true), (0, true), (2, true), (3, true), (4, false), (5, false), (6, false)]'
+  gsettings set org.gnome.shell.extensions.arcmenu prefs-visible-page='0'
+  gsettings set org.gnome.shell.extensions.arcmenu right-panel-width='300'
+  gsettings set org.gnome.shell.extensions.arcmenu runner-position='Centered'
+  gsettings set org.gnome.shell.extensions.arcmenu search-entry-border-radius='(true, 8)'
+  gsettings set org.gnome.shell.extensions.arcmenu searchbar-default-top-location='Top'
+  gsettings set org.gnome.shell.extensions.arcmenu shortcut-icon-type='Full_Color'
+  gsettings set org.gnome.shell.extensions.arcmenu show-recently-installed-apps=false
 fi
 
 # Extension: Dash to Panel
 
-if gsettings list-schemas | grep "org.gnome.shell.extensions.dash-to-panel" >/dev/null 2>&1; then
-  gsettings set org.gnome.shell.extensions.dash-to-panel animate-appicon-hover-animation-extent '{"RIPPLE": 4, "PLANK": 4, "SIMPLE": 1}'
-  gsettings set org.gnome.shell.extensions.dash-to-panel appicon-margin '6'
-  gsettings set org.gnome.shell.extensions.dash-to-panel appicon-padding '6'
-  gsettings set org.gnome.shell.extensions.dash-to-panel appicon-style 'NORMAL'
-  gsettings set org.gnome.shell.extensions.dash-to-panel dot-color-dominant true
-  gsettings set org.gnome.shell.extensions.dash-to-panel dot-color-override false
-  gsettings set org.gnome.shell.extensions.dash-to-panel dot-position 'BOTTOM'
-  gsettings set org.gnome.shell.extensions.dash-to-panel dot-size '0'
-  gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-focused 'DOTS'
-  gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-unfocused 'DOTS'
-  gsettings set org.gnome.shell.extensions.dash-to-panel extension-version '73'
-  gsettings set org.gnome.shell.extensions.dash-to-panel focus-highlight true
-  gsettings set org.gnome.shell.extensions.dash-to-panel focus-highlight-dominant true
-  gsettings set org.gnome.shell.extensions.dash-to-panel hide-overview-on-startup true
-  gsettings set org.gnome.shell.extensions.dash-to-panel hotkeys-overlay-combo 'TEMPORARILY'
-  gsettings set org.gnome.shell.extensions.dash-to-panel panel-lengths '{}'
-  gsettings set org.gnome.shell.extensions.dash-to-panel panel-positions '{}'
-  gsettings set org.gnome.shell.extensions.dash-to-panel panel-sizes '{"LHC-0000000000000":48}'
-  gsettings set org.gnome.shell.extensions.dash-to-panel panel-top-bottom-margins '0'
-  gsettings set org.gnome.shell.extensions.dash-to-panel panel-top-bottom-padding '0'
-  gsettings set org.gnome.shell.extensions.dash-to-panel prefs-opened true
-  gsettings set org.gnome.shell.extensions.dash-to-panel trans-bg-color '#000000'
-  gsettings set org.gnome.shell.extensions.dash-to-panel trans-border-custom-color 'rgb(51,51,51)'
-  gsettings set org.gnome.shell.extensions.dash-to-panel trans-border-use-custom-color true
-  gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-border true
-  gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-custom-bg true
-  gsettings set org.gnome.shell.extensions.dash-to-panel window-preview-title-position 'TOP'
+if has_schema "org.gnome.shell.extensions.dash-to-panel"; then
+  gsettings set org.gnome.shell.extensions.dash-to-panel animate-app-switch=false
+  gsettings set org.gnome.shell.extensions.dash-to-panel animate-appicon-hover-animation-extent='{"RIPPLE": "4", "PLANK": "4", "SIMPLE": "1"}'
+  gsettings set org.gnome.shell.extensions.dash-to-panel animate-window-launch=false
+  gsettings set org.gnome.shell.extensions.dash-to-panel dot-color-dominant=true
+  gsettings set org.gnome.shell.extensions.dash-to-panel dot-color-override=false
+  gsettings set org.gnome.shell.extensions.dash-to-panel dot-position='TOP'
+  gsettings set org.gnome.shell.extensions.dash-to-panel dot-size='1'
+  gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-focused='SOLID'
+  gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-unfocused='SOLID'
+  gsettings set org.gnome.shell.extensions.dash-to-panel focus-highlight=true
+  gsettings set org.gnome.shell.extensions.dash-to-panel focus-highlight-dominant=true
+  gsettings set org.gnome.shell.extensions.dash-to-panel focus-highlight-opacity='20'
+  gsettings set org.gnome.shell.extensions.dash-to-panel hotkeys-overlay-combo='TEMPORARILY'
+  gsettings set org.gnome.shell.extensions.dash-to-panel leftbox-size='0'
+  gsettings set org.gnome.shell.extensions.dash-to-panel panel-anchors='{"LHC-0000000000000":"MIDDLE"}'
+  gsettings set org.gnome.shell.extensions.dash-to-panel panel-lengths='{}'
+  gsettings set org.gnome.shell.extensions.dash-to-panel panel-positions='{}'
+  gsettings set org.gnome.shell.extensions.dash-to-panel panel-sizes='{"LHC-0000000000000":42}'
+  gsettings set org.gnome.shell.extensions.dash-to-panel prefs-opened=true
+  gsettings set org.gnome.shell.extensions.dash-to-panel scroll-icon-action='NOTHING'
+  gsettings set org.gnome.shell.extensions.dash-to-panel scroll-panel-action='NOTHING'
+  gsettings set org.gnome.shell.extensions.dash-to-panel secondarymenu-contains-showdetails=true
+  gsettings set org.gnome.shell.extensions.dash-to-panel trans-border-custom-color='rgb(54,54,54)'
+  gsettings set org.gnome.shell.extensions.dash-to-panel trans-border-use-custom-color=true
+  gsettings set org.gnome.shell.extensions.dash-to-panel trans-border-width='1'
+  gsettings set org.gnome.shell.extensions.dash-to-panel trans-panel-opacity='0.0'
+  gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-border=true
+  gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-custom-bg=true
+  gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-custom-opacity=false
+  gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-dynamic-opacity=false
+  gsettings set org.gnome.shell.extensions.dash-to-panel tray-size='0'
+  gsettings set org.gnome.shell.extensions.dash-to-panel window-preview-title-position='TOP'
 fi
 
 # App: Nautilus
@@ -225,6 +241,10 @@ gsettings set org.gnome.desktop.screensaver show-full-name-in-top-bar false
 gsettings set org.gnome.desktop.screensaver user-switch-enabled true
 gsettings set org.gnome.shell always-show-log-out true
 
+if [[ "$OS_NAME" == "Ubuntu" ]]; then
+  gsettings set org.gnome.desktop.screensaver ubuntu-lock-on-suspend true
+fi
+
 # Power and performance
 
 if powerprofilesctl >/dev/null 2>&1; then
@@ -237,7 +257,7 @@ gsettings set org.gnome.mutter experimental-features '["scale-monitor-framebuffe
 
 # App: Console
 
-if gsettings list-schemas | grep "org.gnome.Console" >/dev/null 2>&1; then
+if has_schema "org.gnome.Console"; then
   gsettings set org.gnome.Console audible-bell false
   gsettings set org.gnome.Console visual-bell false
   gsettings set org.gnome.Console custom-font 'Monospace 14'
@@ -270,26 +290,18 @@ gsettings set org.gnome.tweaks show-extensions-notice false
 gsettings set org.gnome.Settings show-development-warning false
 gsettings set org.gnome.Settings last-panel 'system'
 
-# Ubuntu specific
+# Ubuntu Tiling Assistant
 
-if [[ "$OS_NAME" == "Ubuntu" ]]; then
-  gsettings set org.gnome.shell.ubuntu color-scheme 'prefer-dark'
-  gsettings set org.gnome.desktop.interface cursor-theme 'Yaru'
-  gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-prussiangreen-dark'
-  gsettings set org.gnome.desktop.interface icon-theme 'Yaru-prussiangreen'
-  gsettings set org.gnome.desktop.screensaver ubuntu-lock-on-suspend true
-
-  if gsettings list-schemas | grep "org.gnome.shell.extensions.tiling-assistant" >/dev/null 2>&1; then
-    gsettings set org.gnome.mutter edge-tiling false
-    gsettings set org.gnome.shell.extensions.tiling-assistant enable-raise-tile-group false
-    gsettings set org.gnome.shell.extensions.tiling-assistant enable-tiling-popup false
-    gsettings set org.gnome.shell.extensions.tiling-assistant tiling-popup-all-workspace false
-    gsettings set org.gnome.shell.extensions.tiling-assistant enable-tile-animations true
-    gsettings set org.gnome.shell.extensions.tiling-assistant enable-untile-animations true
-    gsettings set org.gnome.shell.extensions.tiling-assistant toggle-tiling-popup '[]'
-    gsettings set org.gnome.shell.extensions.tiling-assistant overridden-settings '{"org.gnome.mutter.edge-tiling": <false>}'
-    gsettings set org.gnome.shell.extensions.tiling-assistant restore-window '["<Super>Down"]'
-    gsettings set org.gnome.shell.extensions.tiling-assistant tile-left-half '["<Super>Left", "<Super>KP_4"]'
-    gsettings set org.gnome.shell.extensions.tiling-assistant tile-right-half '["<Super>Right", "<Super>KP_6"]'
-  fi
+if has_schema "org.gnome.shell.extensions.tiling-assistant"; then
+  gsettings set org.gnome.mutter edge-tiling false
+  gsettings set org.gnome.shell.extensions.tiling-assistant enable-raise-tile-group false
+  gsettings set org.gnome.shell.extensions.tiling-assistant enable-tiling-popup false
+  gsettings set org.gnome.shell.extensions.tiling-assistant tiling-popup-all-workspace false
+  gsettings set org.gnome.shell.extensions.tiling-assistant enable-tile-animations true
+  gsettings set org.gnome.shell.extensions.tiling-assistant enable-untile-animations true
+  gsettings set org.gnome.shell.extensions.tiling-assistant toggle-tiling-popup '[]'
+  gsettings set org.gnome.shell.extensions.tiling-assistant overridden-settings '{"org.gnome.mutter.edge-tiling": <false>}'
+  gsettings set org.gnome.shell.extensions.tiling-assistant restore-window '["<Super>Down"]'
+  gsettings set org.gnome.shell.extensions.tiling-assistant tile-left-half '["<Super>Left", "<Super>KP_4"]'
+  gsettings set org.gnome.shell.extensions.tiling-assistant tile-right-half '["<Super>Right", "<Super>KP_6"]'
 fi

@@ -45,15 +45,18 @@ git config --global alias.lg "log --pretty=format:'%Cblue%h%Creset %s %Cgreen%an
 git config --global alias.graph "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 
 if [[ "$OS_NAME" == "Ubuntu" ]]; then
-  # Setup Git LFS
+  # Install and configure Git LFS
   curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
   sudo apt -y install git-lfs
   git lfs install
 fi
 
-# Setup GitHub CLI
+# Install and configure GitHub CLI
 
 brew install gh
 
 gh auth login --git-protocol ssh --skip-ssh-key --web
-gh config set -h github.com git_protocol ssh
+
+gh config set git_protocol ssh
+gh config set editor vi
+gh config set color_labels enabled

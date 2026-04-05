@@ -57,6 +57,8 @@ brew install gh
 
 gh auth login --git-protocol ssh --skip-ssh-key --web
 
+gh auth setup-git --hostname github.com
+
 gh config set git_protocol ssh
 gh config set editor vi
 gh config set color_labels enabled

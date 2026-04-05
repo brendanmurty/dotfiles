@@ -60,5 +60,5 @@ gh auth login --git-protocol ssh --skip-ssh-key --web
 gh auth setup-git --hostname github.com
 
 gh config set git_protocol ssh
-gh config set editor vi
+gh config set editor vim
 gh config set color_labels enabled

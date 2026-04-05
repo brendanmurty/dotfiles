@@ -18,7 +18,7 @@ fi
 # Helper function to check for a Dconf schema
 
 has_schema () {
-  return gsettings list-schemas | grep "$1"
+  return gsettings list-schemas | grep "$1" >/dev/null 2>&1
 }
 
 # Theme
@@ -45,7 +45,7 @@ if [[ "$OS_NAME" == "Ubuntu" ]]; then
   gsettings set org.gnome.desktop.interface icon-theme 'Adwaita-blue'
   gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
   gsettings set org.gnome.desktop.interface cursor-theme 'Yaru'
-  gsettings set org.gnome.desktop.interface cursor-size '20'
+  gsettings set org.gnome.desktop.interface cursor-size 20
 fi
 
 # Desktop and screensaver
@@ -76,14 +76,14 @@ gsettings set org.gnome.mutter edge-tiling true
 gsettings set org.gnome.desktop.interface enable-hot-corners false
 gsettings set org.gnome.desktop.wm.preferences theme 'Adwaita'
 gsettings set org.gnome.desktop.wm.preferences button-layout 'icon:minimize,maximize,close'
-gsettings set org.gnome.desktop.wm.preferences num-workspaces '3'
+gsettings set org.gnome.desktop.wm.preferences num-workspaces 3
 gsettings set org.gnome.desktop.wm.preferences action-double-click-titlebar 'toggle-maximize'
 gsettings set org.gnome.desktop.wm.preferences action-middle-click-titlebar 'none'
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button false
 gsettings set org.gnome.desktop.wm.preferences focus-mode 'click'
 gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'smart'
 gsettings set org.gnome.desktop.wm.preferences auto-raise true
-gsettings set org.gnome.desktop.wm.preferences auto-raise-delay '0'
+gsettings set org.gnome.desktop.wm.preferences auto-raise-delay 0
 
 # Extensions
 
@@ -101,22 +101,22 @@ if has_schema "org.gnome.shell.extensions.arcmenu"; then
   gsettings set org.gnome.shell.extensions.arcmenu force-menu-location='MonitorCentered'
   gsettings set org.gnome.shell.extensions.arcmenu hide-overview-on-arcmenu-open=true
   gsettings set org.gnome.shell.extensions.arcmenu hide-overview-on-startup=true
-  gsettings set org.gnome.shell.extensions.arcmenu left-panel-width='300'
+  gsettings set org.gnome.shell.extensions.arcmenu left-panel-width=300
   gsettings set org.gnome.shell.extensions.arcmenu menu-button-appearance='Icon'
   gsettings set org.gnome.shell.extensions.arcmenu menu-button-icon='resource:///org/gnome/shell/extensions/arcmenu/icons/scalable/actions/distro-gnome-symbolic.svg'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-button-icon-size='23'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-button-padding='6'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-button-position-offset='0'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-height='650'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-button-icon-size=23
+  gsettings set org.gnome.shell.extensions.arcmenu menu-button-padding=6
+  gsettings set org.gnome.shell.extensions.arcmenu menu-button-position-offset=0
+  gsettings set org.gnome.shell.extensions.arcmenu menu-height=650
   gsettings set org.gnome.shell.extensions.arcmenu menu-item-grid-icon-size='Large'
   gsettings set org.gnome.shell.extensions.arcmenu menu-item-icon-size='Large'
   gsettings set org.gnome.shell.extensions.arcmenu menu-layout='AZ'
-  gsettings set org.gnome.shell.extensions.arcmenu menu-width-adjustment='250'
+  gsettings set org.gnome.shell.extensions.arcmenu menu-width-adjustment=250
   gsettings set org.gnome.shell.extensions.arcmenu misc-item-icon-size='Default'
   gsettings set org.gnome.shell.extensions.arcmenu power-display-style='In_Line'
   gsettings set org.gnome.shell.extensions.arcmenu power-options='[(1, true), (7, true), (0, true), (2, true), (3, true), (4, false), (5, false), (6, false)]'
-  gsettings set org.gnome.shell.extensions.arcmenu prefs-visible-page='0'
-  gsettings set org.gnome.shell.extensions.arcmenu right-panel-width='300'
+  gsettings set org.gnome.shell.extensions.arcmenu prefs-visible-page=0
+  gsettings set org.gnome.shell.extensions.arcmenu right-panel-width=300
   gsettings set org.gnome.shell.extensions.arcmenu runner-position='Centered'
   gsettings set org.gnome.shell.extensions.arcmenu search-entry-border-radius='(true, 8)'
   gsettings set org.gnome.shell.extensions.arcmenu searchbar-default-top-location='Top'
@@ -133,14 +133,14 @@ if has_schema "org.gnome.shell.extensions.dash-to-panel"; then
   gsettings set org.gnome.shell.extensions.dash-to-panel dot-color-dominant=true
   gsettings set org.gnome.shell.extensions.dash-to-panel dot-color-override=false
   gsettings set org.gnome.shell.extensions.dash-to-panel dot-position='TOP'
-  gsettings set org.gnome.shell.extensions.dash-to-panel dot-size='1'
+  gsettings set org.gnome.shell.extensions.dash-to-panel dot-size=1
   gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-focused='SOLID'
   gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-unfocused='SOLID'
   gsettings set org.gnome.shell.extensions.dash-to-panel focus-highlight=true
   gsettings set org.gnome.shell.extensions.dash-to-panel focus-highlight-dominant=true
-  gsettings set org.gnome.shell.extensions.dash-to-panel focus-highlight-opacity='20'
+  gsettings set org.gnome.shell.extensions.dash-to-panel focus-highlight-opacity=20
   gsettings set org.gnome.shell.extensions.dash-to-panel hotkeys-overlay-combo='TEMPORARILY'
-  gsettings set org.gnome.shell.extensions.dash-to-panel leftbox-size='0'
+  gsettings set org.gnome.shell.extensions.dash-to-panel leftbox-size=0
   gsettings set org.gnome.shell.extensions.dash-to-panel panel-anchors='{"LHC-0000000000000":"MIDDLE"}'
   gsettings set org.gnome.shell.extensions.dash-to-panel panel-lengths='{}'
   gsettings set org.gnome.shell.extensions.dash-to-panel panel-positions='{}'
@@ -151,13 +151,13 @@ if has_schema "org.gnome.shell.extensions.dash-to-panel"; then
   gsettings set org.gnome.shell.extensions.dash-to-panel secondarymenu-contains-showdetails=true
   gsettings set org.gnome.shell.extensions.dash-to-panel trans-border-custom-color='rgb(54,54,54)'
   gsettings set org.gnome.shell.extensions.dash-to-panel trans-border-use-custom-color=true
-  gsettings set org.gnome.shell.extensions.dash-to-panel trans-border-width='1'
+  gsettings set org.gnome.shell.extensions.dash-to-panel trans-border-width=1
   gsettings set org.gnome.shell.extensions.dash-to-panel trans-panel-opacity='0.0'
   gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-border=true
   gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-custom-bg=true
   gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-custom-opacity=false
   gsettings set org.gnome.shell.extensions.dash-to-panel trans-use-dynamic-opacity=false
-  gsettings set org.gnome.shell.extensions.dash-to-panel tray-size='0'
+  gsettings set org.gnome.shell.extensions.dash-to-panel tray-size=0
   gsettings set org.gnome.shell.extensions.dash-to-panel window-preview-title-position='TOP'
 fi
 
@@ -229,14 +229,14 @@ gsettings set org.gnome.desktop.privacy send-software-usage-stats false
 gsettings set org.gnome.desktop.privacy report-technical-problems false
 gsettings set org.gnome.desktop.privacy remove-old-temp-files true
 gsettings set org.gnome.desktop.privacy remove-old-trash-files true
-gsettings set org.gnome.desktop.privacy old-files-age '7'
+gsettings set org.gnome.desktop.privacy old-files-age 7
 gsettings set org.gnome.desktop.privacy remember-recent-files false
 gsettings set org.gnome.desktop.privacy recent-files-max-age '-1'
 gsettings set org.gnome.system.location enabled false
 gsettings set org.gnome.system.location max-accuracy-level 'neighborhood'
 gsettings set org.gnome.clocks geolocation false
 gsettings set org.gnome.desktop.screensaver lock-enabled true
-gsettings set org.gnome.desktop.screensaver lock-delay '0'
+gsettings set org.gnome.desktop.screensaver lock-delay 0
 gsettings set org.gnome.desktop.screensaver show-full-name-in-top-bar false
 gsettings set org.gnome.desktop.screensaver user-switch-enabled true
 gsettings set org.gnome.shell always-show-log-out true
@@ -274,8 +274,8 @@ gsettings set org.gnome.TextEditor auto-indent true
 gsettings set org.gnome.TextEditor highlight-current-line true
 gsettings set org.gnome.TextEditor highlight-matching-brackets true
 gsettings set org.gnome.TextEditor indent-style 'space'
-gsettings set org.gnome.TextEditor indent-width '2'
-gsettings set org.gnome.TextEditor tab-width '2'
+gsettings set org.gnome.TextEditor indent-width 2
+gsettings set org.gnome.TextEditor tab-width 2
 gsettings set org.gnome.TextEditor spellcheck false
 gsettings set org.gnome.TextEditor use-system-font true
 gsettings set org.gnome.TextEditor custom-font 'Monospace 11'

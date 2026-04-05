@@ -3,3 +3,4 @@ dash-to-panel@jderose9.github.com
 windowIsReady_Remover@nunofarruca@gmail.com
 appindicatorsupport@rgcjonas.gmail.com
 username-in-topbar@neroteam.com
+user-theme@gnome-shell-extensions.gcampax.github.com

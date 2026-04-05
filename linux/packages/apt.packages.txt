@@ -1,6 +1,8 @@
 1password
 appcenter
 apt-rdepends
+apt-transport-https
+bc
 bsdutils
 btrfs-progs
 build-essential
@@ -28,6 +30,7 @@ flatpak
 fontconfig
 fonts-liberation
 git
+git-lfs
 gnome-browser-connector
 gnome-shell-extension-appindicator
 gnome-software-plugin-flatpak
@@ -49,7 +52,6 @@ ibus-table-cangjie-big
 ibus-table-cangjie3
 ibus-table-cangjie5
 init
-insync
 intel-media-va-driver
 jcagent
 language-pack-en
@@ -140,6 +142,8 @@ python3-netifaces
 python3-pip
 python3-pyqt5
 shim-signed
+spice-vdagent
+spice-webdavd
 steam-launcher
 steam-libs
 steam-libs-amd64

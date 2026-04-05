@@ -1,12 +1,10 @@
 app.drey.Biblioteca
 ca.desrt.dconf-editor
-com.axosoft.GitKraken
 com.discordapp.Discord
 com.fastmail.Fastmail
 com.github.finefindus.eyedropper
 com.github.neithern.g4music
 com.github.tchx84.Flatseal
-com.konstantintutsch.Lock
 com.mongodb.Compass
 com.pojtinger.felicitas.Sessions
 com.rafaelmardojai.Blanket
@@ -14,7 +12,6 @@ com.usebottles.bottles
 com.usebruno.Bruno
 com.visualstudio.code
 com.vysp3r.ProtonPlus
-dev.bragefuglseth.Keypunch
 dev.dergs.Tonearm
 dev.geopjr.Calligraphy
 dev.zed.Zed
@@ -27,7 +24,6 @@ io.github.giantpinkrobots.varia
 io.github.kolunmi.Bazaar
 io.github.lainsce.Emulsion
 io.github.noobping.keycord
-io.github.ppvan.tarug
 io.github.pwr_solaar.solaar
 io.github.redddfoxxyy.samaya
 io.github.sitraorg.sitra
@@ -37,7 +33,6 @@ io.podman_desktop.PodmanDesktop
 io.scottlabs.reManager
 it.mijorus.gearlever
 md.obsidian.Obsidian
-net.daase.journable
 net.davidotek.pupgui2
 net.lutris.Lutris
 net.nokyan.Resources
@@ -57,7 +52,6 @@ org.gnome.TextEditor
 org.gnome.baobab
 org.gnome.seahorse.Application
 org.inkscape.Inkscape
-org.kde.audiotube
 org.libreoffice.LibreOffice
 org.videolan.VLC
 studio.planetpeanut.Bobby

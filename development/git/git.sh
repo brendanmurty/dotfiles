@@ -54,4 +54,6 @@ fi
 # Setup GitHub CLI
 
 brew install gh
+
 gh auth login --git-protocol ssh --skip-ssh-key --web
+gh config set -h github.com git_protocol ssh

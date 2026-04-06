@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+#
+#
+# Setup Zed editor - https://zed.dev/
+#
+#
+
+THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
+SCRIPTS="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
+OS_NAME="$(bash $SCRIPTS/os-name.sh)"
+
+CONFIG_DIR="$HOME/.config/zed"
+CONFIG_FILE="$THIS_DIR/settings.json"
+
+if [[ "$OS_NAME" == "Windows" ]]; then
+  echo "This script requires Linux or macOS."
+  exit 0
+fi
+
+echo 'Requesting sudo'
+
+sudo -v
+
+if [[ "$OS_NAME" == "macOS" ]]; then
+  brew reinstall --cask zed
+
+  CONFIG_DIR="$HOME/.zed"
+else
+  flatpak install --reinstall -y flathub dev.zed.Zed
+  flatpak override --user --filesystem=home dev.zed.Zed
+fi
+
+mkdir -p "$CONFIG_DIR"
+
+echo "Making a backup of '$CONFIG_DIR/settings.json'"
+
+touch "$CONFIG_DIR/settings.json"
+cp "$CONFIG_DIR/settings.json" "$CONFIG_DIR/settings.json.old"
+
+echo "Copying '$CONFIG_FILE' to '$CONFIG_DIR/settings.json'"
+
+cp "$CONFIG_FILE" "$CONFIG_DIR/settings.json"

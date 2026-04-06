@@ -266,7 +266,15 @@
     "font_weight": 500.0,
     "font_size": 18.0,
     "shell": {
-      "program": "/bin/bash",
+      "with_arguments": {
+        "program": "/app/bin/host-spawn",
+        "args": [
+          "/usr/bin/bash",
+          "-c",
+          "exec $(getent passwd $USER | cut -d: -f7)"
+        ],
+        "title_override": "bash"
+      }
     },
     "keep_selection_on_copy": false,
     "option_as_meta": false,
@@ -274,6 +282,15 @@
     "default_height": 350,
     "max_scroll_history_lines": 10000,
     "working_directory": "current_file_directory",
+    "detect_venv": {
+      "on": {
+        "directories": [
+          ".venv",
+          "venv"
+        ],
+        "activate_script": "default"
+      }
+    },
   },
   "project_panel": {
     "scrollbar": {

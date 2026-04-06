@@ -16,4 +16,4 @@ fi
 
 # Install all packages from the package list file in this dir
 
-xargs -a "$DIR/flatpak.packages.txt" flatpak install -y flathub
+xargs -a "$DIR/flatpak.packages.txt" flatpak install --reinstall -y flathub

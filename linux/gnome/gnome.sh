@@ -24,28 +24,11 @@ has_schema () {
 # Theme
 
 if [[ "$OS_NAME" == "Ubuntu" ]]; then
-  # Ubuntu: Use a customised version of Adwaita with a blue accent colour
-
-  mkdir -p "$HOME/.local/share/themes"
-
-  rm -rf "$HOME/.local/share/themes/morewaita"
-  git clone https://github.com/somepaulo/MoreWaita.git "$HOME/.local/share/themes/morewaita" >/dev/null 2>&1
-  cd "$HOME/.local/share/themes/morewaita"
-  bash ./install.sh >/dev/null 2>&1
-
-  rm -rf "$HOME/.local/share/themes/adwaita-colours"
-  git clone https://github.com/dpejoh/Adwaita-colors "$HOME/.local/share/themes/adwaita-colours" >/dev/null 2>&1
-  cd "$HOME/.local/share/themes/adwaita-colours"
-  bash ./setup -i -P ~/.local >/dev/null 2>&1
-  bash ./morewaita.sh >/dev/null 2>&1
-
-  cd "$THIS_DIR"
-
   gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-  gsettings set org.gnome.desktop.interface icon-theme 'Adwaita-blue'
-  gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
+  gsettings set org.gnome.desktop.interface icon-theme 'Yaru-prussiangreen-dark'
+  gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-prussiangreen-dark'
   gsettings set org.gnome.desktop.interface cursor-theme 'Yaru'
-  gsettings set org.gnome.desktop.interface cursor-size 20
+  gsettings set org.gnome.desktop.interface cursor-size 24
 fi
 
 # Desktop and screensaver

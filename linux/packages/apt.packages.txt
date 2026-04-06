@@ -7,6 +7,7 @@ bsdutils
 btrfs-progs
 build-essential
 ca-certificates
+cmake
 containerd.io
 cpufrequtils
 cryptsetup
@@ -32,7 +33,6 @@ fonts-liberation
 git
 git-lfs
 gnome-browser-connector
-gnome-shell-extension-appindicator
 gnome-software-plugin-flatpak
 gnome-terminal
 gnome-tweaks
@@ -79,7 +79,6 @@ libgl1:i386
 libgpg-error0
 libinih-dev
 libm17n-0
-libmarisa0
 libnm0
 libnss3-tools
 libopencc-data
@@ -115,6 +114,7 @@ libxi6
 libxinerama1
 libxss1
 libxxf86vm1
+linux-generic
 linux-generic-hwe-24.04
 linux-modules-nvidia-590-open-generic-hwe-24.04
 login
@@ -122,7 +122,6 @@ lsb-base
 lsb-release
 lvm2
 m17n-db
-mesa-va-drivers
 mesa-vulkan-drivers
 meson
 ncurses-base
@@ -130,7 +129,6 @@ ncurses-bin
 neovim
 ninja-build
 nvidia-driver-590-open
-p7zip-full
 pavucontrol
 pipx
 pkg-config
@@ -151,6 +149,8 @@ steam-launcher
 steam-libs
 steam-libs-amd64
 steam-libs-i386:i386
+systemd
+systemd-dev
 tmux
 ubuntu-desktop-minimal
 ubuntu-minimal

@@ -3,7 +3,6 @@ ca.desrt.dconf-editor
 com.discordapp.Discord
 com.fastmail.Fastmail
 com.github.finefindus.eyedropper
-com.github.neithern.g4music
 com.github.tchx84.Flatseal
 com.mongodb.Compass
 com.pojtinger.felicitas.Sessions
@@ -16,8 +15,6 @@ dev.dergs.Tonearm
 dev.geopjr.Calligraphy
 dev.zed.Zed
 fr.arnaudmichel.launcherstudio
-io.github.cleomenezesjr.Serigy
-io.github.diegopvlk.Tomatillo
 io.github.fabrialberio.pinapp
 io.github.flattool.Ignition
 io.github.flattool.Warehouse
@@ -61,4 +58,3 @@ org.torproject.torbrowser-launcher
 org.videolan.VLC
 page.codeberg.libre_menu_editor.LibreMenuEditor
 page.kramo.Cartridges
-studio.planetpeanut.Bobby

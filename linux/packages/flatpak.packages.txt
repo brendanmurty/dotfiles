@@ -14,7 +14,6 @@ com.vysp3r.ProtonPlus
 dev.dergs.Tonearm
 dev.geopjr.Calligraphy
 dev.zed.Zed
-fr.arnaudmichel.launcherstudio
 io.github.fabrialberio.pinapp
 io.github.flattool.Ignition
 io.github.flattool.Warehouse
@@ -56,5 +55,4 @@ org.inkscape.Inkscape
 org.libreoffice.LibreOffice
 org.torproject.torbrowser-launcher
 org.videolan.VLC
-page.codeberg.libre_menu_editor.LibreMenuEditor
 page.kramo.Cartridges

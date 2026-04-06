@@ -29,6 +29,7 @@ if [[ "$OS_NAME" == "Ubuntu" ]]; then
   gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-prussiangreen-dark'
   gsettings set org.gnome.desktop.interface cursor-theme 'Yaru'
   gsettings set org.gnome.desktop.interface cursor-size 24
+  gsettings set org.gnome.desktop.interface accent-color 'teal'
 fi
 
 # Desktop and screensaver

@@ -2,5 +2,20 @@
 Name=Maestral
 Comment=Dropbox sync app.
 Type=Application
-Terminal=false
-Exec=nohup maestral gui &
+Exec=nohup export QT_QPA_PLATFORMTHEME=gtk3 && /home/bcm/.local/bin/maestral gui &
+Hidden=false
+NoDisplay=false
+StartupNotify=false
+Categories=AudioVideo
+Keywords=dropbox;sync
+X-GNOME-Autostart-enabled=true
+PrefersNonDefaultGPU=false
+Name[en]=Maestral
+Name[en_AU]=Maestral
+Name[en_AU.UTF-8]=Maestral
+Comment[en]=Dropbox sync app.
+Comment[en_AU]=Dropbox sync app.
+Comment[en_AU.UTF-8]=Dropbox sync app.
+Keywords[en]=dropbox;sync
+Keywords[en_AU]=dropbox;sync
+Keywords[en_AU.UTF-8]=dropbox;sync

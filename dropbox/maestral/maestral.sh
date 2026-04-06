@@ -24,10 +24,12 @@ sudo apt -qq --assume-yes install \
   python3-pyqt5 \
   pipx
 
+pipx install --force pyqt5
+
 echo '==> Installing Maestral'
 
-pipx install maestral[gui]
-pipx install maestral-qt
+pipx install --force maestral[gui]
+pipx install --force maestral-qt
 
 echo '==> Configuring Maestral'
 
@@ -49,11 +51,13 @@ cp "$DIR/maestral.png" "$HOME/.local/share/icons/hicolor/512x512/apps/Maestral.p
 
 rm -rf "$HOME/.local/share/applications/Maestral.desktop"
 cp "$DIR/maestral.desktop" "$HOME/.local/share/applications/Maestral.desktop"
+echo "" >> "$HOME/.local/share/applications/Maestral.desktop"
 echo "Icon=$HOME/.local/share/icons/hicolor/512x512/apps/Maestral.png" >> "$HOME/.local/share/applications/Maestral.desktop"
 chmod a+x "$HOME/.local/share/applications/Maestral.desktop"
 
 rm -rf "$HOME/.config/autostart/Maestral.desktop"
 cp "$DIR/maestral.desktop" "$HOME/.config/autostart/Maestral.desktop"
+echo "" >> "$HOME/.config/autostart/Maestral.desktop"
 echo "Icon=$HOME/.local/share/icons/hicolor/512x512/apps/Maestral.png" >> "$HOME/.config/autostart/Maestral.desktop"
 chmod a+x "$HOME/.config/autostart/Maestral.desktop"
 

@@ -15,6 +15,7 @@ com.vysp3r.ProtonPlus
 dev.dergs.Tonearm
 dev.geopjr.Calligraphy
 dev.zed.Zed
+fr.arnaudmichel.launcherstudio
 io.github.cleomenezesjr.Serigy
 io.github.diegopvlk.Tomatillo
 io.github.fabrialberio.pinapp
@@ -28,12 +29,14 @@ io.github.pwr_solaar.solaar
 io.github.redddfoxxyy.samaya
 io.github.sitraorg.sitra
 io.github.zaedus.spider
+io.gitlab.news_flash.NewsFlash
 io.missioncenter.MissionCenter
 io.podman_desktop.PodmanDesktop
 io.scottlabs.reManager
 it.mijorus.gearlever
 md.obsidian.Obsidian
 net.davidotek.pupgui2
+net.ffkkinos.Wildcard
 net.lutris.Lutris
 net.nokyan.Resources
 net.zdechov.app.vCardStudio
@@ -49,9 +52,13 @@ org.gnome.Logs
 org.gnome.Loupe
 org.gnome.Manuals
 org.gnome.TextEditor
+org.gnome.World.PikaBackup
 org.gnome.baobab
 org.gnome.seahorse.Application
 org.inkscape.Inkscape
 org.libreoffice.LibreOffice
+org.torproject.torbrowser-launcher
 org.videolan.VLC
+page.codeberg.libre_menu_editor.LibreMenuEditor
+page.kramo.Cartridges
 studio.planetpeanut.Bobby

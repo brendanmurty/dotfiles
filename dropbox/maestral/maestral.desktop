@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Maestral
-Comment=Dropbox sync app.
+Comment=Dropbox sync client
 Type=Application
 Exec=/usr/bin/maestral gui
 Hidden=false
@@ -10,12 +10,3 @@ Categories=AudioVideo
 Keywords=dropbox;sync
 X-GNOME-Autostart-enabled=true
 PrefersNonDefaultGPU=false
-Name[en]=Maestral
-Name[en_AU]=Maestral
-Name[en_AU.UTF-8]=Maestral
-Comment[en]=Dropbox sync app.
-Comment[en_AU]=Dropbox sync app.
-Comment[en_AU.UTF-8]=Dropbox sync app.
-Keywords[en]=dropbox;sync
-Keywords[en_AU]=dropbox;sync
-Keywords[en_AU.UTF-8]=dropbox;sync

@@ -50,8 +50,9 @@ cp "$DIR/maestral.ignore.txt" "$(maestral config get path)/.mignore"
 
 echo '==> Adding symlink at /usr/bin/maestral'
 
-sudo ln -s "$(which maestral)" /usr/bin/maestral
-sudo chmod a+x /usr/bin/maestral
+sudo rm -rf '/usr/bin/maestral'
+sudo ln -s "$(which maestral)" '/usr/bin/maestral'
+sudo chmod a+x '/usr/bin/maestral'
 
 echo '==> Copying over app icon and applications menu item'
 

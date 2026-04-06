@@ -2,7 +2,7 @@
 Name=Maestral
 Comment=Dropbox sync app.
 Type=Application
-Exec=nohup export QT_QPA_PLATFORMTHEME=gtk3 && /home/bcm/.local/bin/maestral gui &
+Exec=/usr/bin/maestral gui
 Hidden=false
 NoDisplay=false
 StartupNotify=false

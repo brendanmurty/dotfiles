@@ -16,6 +16,10 @@ if [[ "$OS_NAME" == "macOS" ]] || [[ "$OS_NAME" == "Windows" ]]; then
   exit 0
 fi
 
+echo '==> Requesting sudo'
+
+sudo -v
+
 echo '==> Installing dependencies'
 
 sudo apt -qq --assume-yes install \
@@ -44,6 +48,11 @@ echo '==> Copying over Maestral ignore list'
 
 cp "$DIR/maestral.ignore.txt" "$(maestral config get path)/.mignore"
 
+echo '==> Adding symlink at /usr/bin/maestral'
+
+sudo ln -s "$(which maestral)" /usr/bin/maestral
+sudo chmod a+x /usr/bin/maestral
+
 echo '==> Copying over app icon and applications menu item'
 
 mkdir -p "$HOME/.local/share/icons/hicolor/512x512/apps"
@@ -66,4 +75,4 @@ echo '==> Updating launcher application list'
 update-desktop-database ~/.local/share/applications
 xdg-desktop-menu forceupdate
 
-echo '==> Done, to open Maestral now run: nohup maestral gui &'
+echo '==> Done, you can now open Maestral via the applications menu'

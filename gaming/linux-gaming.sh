@@ -6,9 +6,9 @@
 #
 
 THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
-REPO_DIR="$(cd "$(dirname "$0")" && cd ../.. && pwd)"
+SCRIPTS="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
 
-OS_NAME="$(bash $REPO_DIR/scripts/os-name.sh)"
+OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
 if [[ "$OS_NAME" != "Ubuntu" ]]; then
   echo "This script requires Ubuntu."
@@ -17,11 +17,22 @@ fi
 
 info() { echo -e "\033[36m$1\033[0m"; }
 
+echo '==> Requesting sudo'
+
+sudo -v
+
 info '==> dotfiles: start linux gaming setup'
 
 info '==> dotfiles: install packages'
 
+sudo apt update
+
 sudo apt -qq --assume-yes install \
+  cmake \
+  systemd \
+  libsystemd-dev \
+  systemd-dev \
+  pkg-config \
   meson \
   libsystemd-dev \
   pkg-config \

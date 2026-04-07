@@ -1,4 +1,3 @@
-app.drey.Biblioteca
 ca.desrt.dconf-editor
 com.discordapp.Discord
 com.fastmail.Fastmail
@@ -20,9 +19,7 @@ io.github.flattool.Warehouse
 io.github.giantpinkrobots.varia
 io.github.kolunmi.Bazaar
 io.github.lainsce.Emulsion
-io.github.noobping.keycord
 io.github.pwr_solaar.solaar
-io.github.redddfoxxyy.samaya
 io.github.sitraorg.sitra
 io.github.zaedus.spider
 io.gitlab.news_flash.NewsFlash

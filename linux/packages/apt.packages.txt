@@ -145,9 +145,6 @@ shim-signed
 software-properties-common
 spice-vdagent
 spice-webdavd
-steam-launcher
-steam-libs
-steam-libs-amd64
 steam-libs-i386:i386
 systemd
 systemd-dev

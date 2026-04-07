@@ -5,3 +5,4 @@ ghostty
 gtk-common-themes
 mesa-2404
 prompting-client
+steam

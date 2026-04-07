@@ -21,7 +21,7 @@ source "$SCRIPT_DIR/user-backup.env"
 
 mkdir -p "$BACKUP_DIR"
 
-BACKUP_FILE="user-$(echo $USER)_$(date +%Y%m%d-%H%M%S).zip"
+BACKUP_FILE="user-${BACKUP_USER_NAME}_$(date +%Y%m%d-%H%M%S).zip"
 BACKUP_PATH="$BACKUP_DIR/$BACKUP_FILE"
 
 # Exit if the source directory doesn't exist

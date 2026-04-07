@@ -279,17 +279,6 @@
     "copy_on_select": false,
     "font_weight": 500.0,
     "font_size": 18.0,
-    "shell": {
-      "with_arguments": {
-        "program": "/app/bin/host-spawn",
-        "args": [
-          "/usr/bin/bash",
-          "-c",
-          "exec $(getent passwd $USER | cut -d: -f7)"
-        ],
-        "title_override": "bash"
-      }
-    },
     "keep_selection_on_copy": false,
     "option_as_meta": false,
     "dock": "bottom",

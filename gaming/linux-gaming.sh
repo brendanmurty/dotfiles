@@ -42,6 +42,9 @@ sudo apt -qq --assume-yes install \
   libdbus-1-dev \
   libinih-dev \
   build-essential \
+  dkms \
+  curl \
+  cabextract \
   cpufrequtils >/dev/null 2>&1
 
 info '==> dotfiles: setup gamemode'
@@ -73,6 +76,13 @@ sudo systemctl restart cpufrequtils >/dev/null 2>&1
 
 # Increase shader size for Nvidia GPUs
 export __GL_SHADER_DISK_CACHE_SIZE=10000000000
+
+info '==> dotfiles: installing firmware for Xbox controllers'
+
+git clone --quiet https://github.com/medusalix/xone ~/.xone
+cd ~/.xone
+sudo ./install.sh --release
+sudo xone-get-firmware.sh
 
 info '==> dotfiles: installing Lutris'
 

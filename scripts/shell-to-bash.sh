@@ -28,7 +28,11 @@ if [[ "$OS_NAME" == 'Linux' ]]; then
 elif [[ "$OS_NAME" == 'macOS' ]]; then
   # Skip changing user shell if it's already Bash
   if [[ "$SHELL" != "$BASH_PATH" ]]; then
+    # Change the user's shell to Bash
     chsh -s "$BASH_PATH"
+
+    # Add this script to ~/.zshrc so future sessions will use Bash
+    echo "$SCRIPTS/shell-to-bash.sh" >> ~/.zshrc
   fi
 
   # Run Bash to prompt the loading of Bash config files

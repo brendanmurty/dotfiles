@@ -135,6 +135,11 @@ zip \
   -x "**/node_modules/*" \
   -x "**/.git/*" \
   -x "**/cache/*" \
+  -x "**/.cache/*" \
+  -x ".cache/*" \
+  -x ".docker/*" \
+  -x "**/.venv/*" \
+  -x "**/uv/*" \
   -x "*.sock" \
   -x "*.lock" \
   -x "*.pipe" \

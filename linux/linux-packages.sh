@@ -32,6 +32,9 @@ bash "$THIS_DIR/packages/snap.sh"
 info '==> dotfiles: linux/packages/flatpak.sh'
 bash "$THIS_DIR/packages/flatpak.sh"
 
+info '==> dotfiles: linux/packages/google-chrome.sh'
+bash "$THIS_DIR/packages/google-chrome.sh"
+
 info '==> dotfiles: linux/packages/gnome-shell-extensions.sh'
 bash "$THIS_DIR/packages/gnome-shell-extensions.sh"
 

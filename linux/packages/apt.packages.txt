@@ -13,6 +13,7 @@ containerd.io
 cpufrequtils
 cryptsetup
 curl
+cursor
 dash
 dbus-user-session
 dconf-editor
@@ -124,6 +125,7 @@ lvm2
 m17n-db
 mesa-vulkan-drivers
 meson
+mongodb-database-tools
 ncurses-base
 ncurses-bin
 neovim

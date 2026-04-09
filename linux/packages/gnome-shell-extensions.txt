@@ -1,3 +1,3 @@
-dash-to-panel@jderose9.github.com
 arcmenu@arcmenu.com
+dash-to-panel@jderose9.github.com
 appindicatorsupport@rgcjonas.gmail.com

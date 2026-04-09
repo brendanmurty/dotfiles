@@ -17,6 +17,10 @@ if [[ "$OS_NAME" == "Windows" ]]; then
   exit 0
 fi
 
+echo 'Requesting sudo'
+
+sudo -v
+
 if [[ "$OS_NAME" == "macOS" ]]; then
   CONFIG_DIR="$HOME/Library/Application Support/com.mitchellh.ghostty"
 

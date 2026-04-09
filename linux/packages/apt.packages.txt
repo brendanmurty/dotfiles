@@ -13,7 +13,6 @@ containerd.io
 cpufrequtils
 cryptsetup
 curl
-cursor
 dash
 dbus-user-session
 dconf-editor

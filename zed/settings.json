@@ -1,7 +1,11 @@
 {
+  "zoomed_padding": false,
+  "window_decorations": "client",
+  "bottom_dock_layout": "contained",
   "current_line_highlight": "gutter",
   "status_bar": {
-    "show_active_file": true,
+    "active_language_button": true,
+    "show_active_file": false,
     "active_encoding_button": "disabled"
   },
   "show_wrap_guides": true,
@@ -87,14 +91,14 @@
   },
   "tab_bar": {
     "show_nav_history_buttons": true,
-    "show_tab_bar_buttons": true,
+    "show_tab_bar_buttons": false,
   },
   "tabs": {
     "show_close_button": "hidden",
     "show_diagnostics": "errors",
     "activate_on_close": "left_neighbour",
     "close_position": "right",
-    "file_icons": true,
+    "file_icons": false,
     "git_status": true
   },
   "inlay_hints": {
@@ -120,6 +124,7 @@
   },
   "seed_search_query_from_cursor": "selection",
   "search": {
+    "button": false,
     "center_on_match": true,
   },
   "indent_guides": {
@@ -265,9 +270,11 @@
     "button": false,
   },
   "title_bar": {
+    "button_layout": "platform_default",
+    "show_project_items": true,
     "show_branch_name": true,
     "show_branch_icon": true,
-    "show_menus": true,
+    "show_menus": false,
     "show_onboarding_banner": false,
     "show_user_picture": true,
     "show_user_menu": true,

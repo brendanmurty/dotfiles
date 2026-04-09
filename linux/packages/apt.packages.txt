@@ -144,6 +144,7 @@ python3-pynvim
 python3-pyqt5
 shim-signed
 software-properties-common
+software-properties-gtk
 spice-vdagent
 spice-webdavd
 steam-libs-i386:i386

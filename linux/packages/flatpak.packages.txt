@@ -13,7 +13,6 @@ com.visualstudio.code
 com.vysp3r.ProtonPlus
 dev.dergs.Tonearm
 dev.geopjr.Calligraphy
-dev.zed.Zed
 io.github.fabrialberio.pinapp
 io.github.flattool.Ignition
 io.github.flattool.Warehouse

@@ -1,6 +1,19 @@
 {
+  "current_line_highlight": "gutter",
+  "status_bar": {
+    "show_active_file": true,
+    "active_encoding_button": "disabled"
+  },
+  "show_wrap_guides": true,
+  "restore_on_startup": "launchpad",
+  "session": {
+    "trust_all_worktrees": true
+  },
   "context_servers": {},
   "agent_servers": {
+    "opencode": {
+      "type": "registry"
+    },
     "claude-acp": {
       "type": "registry",
     },
@@ -67,9 +80,8 @@
   },
   "use_auto_surround": false,
   "use_autoclose": false,
-  "preferred_line_length": 100,
+  "preferred_line_length": 125,
   "soft_wrap": "preferred_line_length",
-  "allow_rewrap": "anywhere",
   "drag_and_drop_selection": {
     "enabled": false
   },
@@ -111,7 +123,9 @@
     "center_on_match": true,
   },
   "indent_guides": {
-    "coloring": "indent_aware",
+    "background_coloring": "disabled",
+    "enabled": true,
+    "coloring": "disabled",
   },
   "message_editor": {
     "auto_replace_emoji_shortcode": false,
@@ -145,7 +159,9 @@
     "agent_review": true,
   },
   "minimap": {
-    "thumb": "always",
+    "thumb_border": "none",
+    "current_line_highlight": "none",
+    "thumb": "hover",
     "show": "never",
   },
   "scrollbar": {
@@ -162,9 +178,10 @@
   },
   "inline_code_actions": true,
   "gutter": {
-    "folds": true,
-    "breakpoints": false,
+    "min_line_number_digits": 3,
     "runnables": false,
+    "folds": false,
+    "breakpoints": false,
   },
   "autoscroll_on_clicks": false,
   "scroll_beyond_last_line": "vertical_scroll_margin",
@@ -174,11 +191,7 @@
     "button": true,
     "file_icons": true,
   },
-  "icon_theme": {
-    "mode": "light",
-    "light": "Symbols Icon Theme",
-    "dark": "Symbols Icon Theme"
-  },
+  "icon_theme": "Symbols Icon Theme",
   "auto_update": true,
   "telemetry": {
     "diagnostics": false,
@@ -202,7 +215,7 @@
     "hunk_style": "staged_hollow",
     "inline_blame": {
       "min_column": 5,
-      "enabled": true,
+      "enabled": false,
       "show_commit_summary": false,
       "delay_ms": 5000,
     },
@@ -324,11 +337,7 @@
   "active_pane_modifiers": {
     "inactive_opacity": 0.0,
   },
-  "theme": {
-    "dark": "Ayu Dark",
-    "light": "Ayu Dark",
-    "mode": "dark",
-  },
+  "theme": "Ayu Dark",
   "lsp_document_colors": "inlay",
   "theme_overrides": {
     "Ayu Dark": {
@@ -405,17 +414,11 @@
     "make": true,
     "nunjucks": true,
     "python-requirements": true,
-    "rainbow-csv": true,
     "symbols": true,
     "sql": true,
     "toml": true,
     "just": true,
-    "basher": true,
-    "opencode": true,
-    "base16": true,
     "env": true,
-    "vercel-theme": true,
-    "tomorrow-theme": true,
     "color-highlight": true
   },
   "lsp": {

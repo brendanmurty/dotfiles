@@ -22,8 +22,8 @@ info '==> dotfiles: start linux setup'
 info '==> dotfiles: linux/bash/bash.sh'
 bash "$REPO_DIR/linux/bash/bash.sh"
 
-info '==> dotfiles: development/git/git.sh'
-bash "$REPO_DIR/development/git/git.sh"
+info '==> dotfiles: git/git.sh'
+bash "$REPO_DIR/git/git.sh"
 
 info '==> dotfiles: linux/linux-flatpak-setup.sh'
 bash "$REPO_DIR/linux/linux-flatpak-setup.sh"
@@ -43,8 +43,8 @@ bash "$REPO_DIR/scripts/homebrew-setup-user.linux.sh"
 info '==> dotfiles: just/just.sh'
 bash "$REPO_DIR/just/just.sh"
 
-info '==> dotfiles: development/ghostty/ghostty.sh'
-bash "$REPO_DIR/development/ghostty/ghostty.sh"
+info '==> dotfiles: ghostty/ghostty.sh'
+bash "$REPO_DIR/ghostty/ghostty.sh"
 
 info '==> dotfiles: linux/vim/vim.sh'
 bash "$REPO_DIR/linux/vim/vim.sh"

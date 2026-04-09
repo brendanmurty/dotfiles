@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 #
 #
-# VS Code setup and install packages
+# Setup VS Code - https://code.visualstudio.com/
 #   - The package list can be updated with: code --list-extensions > "./vscode.extensions.txt"
 #
 #
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
-REPO_DIR="$(cd "$(dirname "$0")" && cd ../.. && pwd)"
-OS_NAME="$(bash $REPO_DIR/scripts/os-name.sh)"
+SCRIPTS="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
+OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
 # Default to a standard install on a Linux system
 CONFIG_DIR="$HOME/.config/Code/User"

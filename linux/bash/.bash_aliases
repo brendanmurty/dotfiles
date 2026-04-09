@@ -35,8 +35,3 @@ alias clean-all='just ubuntu-clean'
 ## Return the public IPv4 address for the local machine
 
 alias ip-my='just ip'
-
-## Code editor shortcuts
-
-alias zed='flatpak run dev.zed.Zed'
-alias code='flatpak run com.visualstudio.code'

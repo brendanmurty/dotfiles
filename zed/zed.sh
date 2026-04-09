@@ -26,7 +26,7 @@ if [[ "$OS_NAME" == "macOS" ]]; then
 
   CONFIG_DIR="$HOME/.zed"
 else
-  flatpak remove dev.zed.Zed || true
+  flatpak uninstall dev.zed.Zed
   curl -f https://zed.dev/install.sh | sh
 fi
 

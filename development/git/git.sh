@@ -11,6 +11,7 @@ git config --global init.defaultBranch "develop"
 git config --global push.default "simple"
 git config --global push.followtags "false"
 git config --global push.autosetupremote "true"
+git config --global merge.ff "only"
 
 git config --global core.whitespace "fix,-indent-with-non-tab,trailing-space,cr-at-eol"
 git config --global core.ignorecase "false"

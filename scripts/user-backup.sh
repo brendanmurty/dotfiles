@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 #
+#
 # Backup some of the current Linux User's config files
 #  - Makes a timestamped and password protected ZIP file of some parts of your User directory
-#  - Include and exclude rules ("x" params) are set in the "zip" command below
+#  - Include and exclude rules (starting with "-x") are set in the "zip" command below
 #  - Saves symlinks as links, not as directories
 #  - Saves output messages to the file set in LOG_FILE
 #  - If your system's scheduler is cron, setup by running 'crontab -e', then adding a line:
 #    0 19 * * * bash /home/username/scripts/user-backup.sh
 #  - If your system's scheduler is systemd, refer to 'user-backup.service'
+#
 #
 
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"

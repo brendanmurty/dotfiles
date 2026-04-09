@@ -1,4 +1,3 @@
-arcmenu@arcmenu.com
 dash-to-panel@jderose9.github.com
+arcmenu@arcmenu.com
 appindicatorsupport@rgcjonas.gmail.com
-user-theme@gnome-shell-extensions.gcampax.github.com

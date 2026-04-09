@@ -7,6 +7,7 @@ bsdutils
 btrfs-progs
 build-essential
 ca-certificates
+cabextract
 cmake
 containerd.io
 cpufrequtils
@@ -36,7 +37,6 @@ gnome-browser-connector
 gnome-software-plugin-flatpak
 gnome-terminal
 gnome-tweaks
-google-chrome-stable
 gparted
 grep
 grub-efi-amd64

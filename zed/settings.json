@@ -1,4 +1,5 @@
 {
+  "ensure_final_newline_on_save": false,
   "zoomed_padding": false,
   "window_decorations": "client",
   "bottom_dock_layout": "contained",
@@ -171,7 +172,7 @@
     "show": "never",
   },
   "scrollbar": {
-    "show": "always",
+    "show": "auto",
     "git_diff": true,
     "search_results": true,
     "selected_text": true,

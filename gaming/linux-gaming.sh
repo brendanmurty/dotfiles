@@ -94,6 +94,10 @@ flatpak install --reinstall -y com.vysp3r.ProtonPlus
 
 info '==> dotfiles: installing Steam'
 
+sudo dpkg --add-architecture i386 >/dev/null 2>&1
+sudo apt update >/dev/null 2>&1
+sudo apt -qq --assume-yes install libnvidia-gl-595:i386 >/dev/null 2>&1
+
 sudo snap install steam
 
 info '==> dotfiles: finished linux gaming setup, a system reboot is required'

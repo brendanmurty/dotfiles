@@ -14,10 +14,14 @@ if [[ "$OS_NAME" != "Ubuntu" ]]; then
   exit 0
 fi
 
+# Install all packages from the package list file in this dir
+
+cat "$DIR/snap.packages.txt" | xargs -n 1 sudo snap install
+
 # Only keep the latest two versions of each Snap Package
 
 sudo snap set system refresh.retain=2
 
-# Install all packages from the package list file in this dir
+# Update all current Snap packages
 
-cat "$DIR/snap.packages.txt" | xargs -n 1 sudo snap install
+sudo snap refresh

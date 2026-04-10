@@ -11,7 +11,6 @@ cpufrequtils
 cryptsetup
 curl
 dash
-dbus-user-session
 dconf-editor
 diffutils
 dkms
@@ -32,10 +31,6 @@ hostname
 hunspell-en-au
 hunspell-en-ca
 hunspell-en-gb
-language-pack-en
-language-pack-en-base
-language-pack-gnome-en
-language-pack-gnome-en-base
 libasound2-plugins
 libchewing3
 libchewing3-data
@@ -69,7 +64,6 @@ software-properties-common
 software-properties-gtk
 spice-vdagent
 spice-webdavd
-systemd-dev
 tmux
 unzip
 uuu

@@ -84,14 +84,13 @@ if [ -d "$BREW_DIR" ]; then
   alias brew="$BREW_DIR/bin/brew"
 fi
 
-# Configure NVM if it's installed via user-level Homebrew
+# Configure NVM if it's installed to the default location
 
-if [ -d "$HOME/.brew/opt/nvm" ]; then
+if [ -d "$HOME/.nvm" ]; then
   export NVM_DIR="$HOME/.nvm"
-  mkdir -p "$NVM_DIR"
-  source "$HOME/.brew/opt/nvm/nvm.sh" > /dev/null 2>&1
-  source "$HOME/.brew/opt/nvm/etc/bash_completion.d/nvm" > /dev/null 2>&1
-  export NVM_SYMLINK_CURRENT=true
+  source "$HOME/.nvm/nvm.sh" > /dev/null 2>&1
+  nvm install --lts > /dev/null 2>&1
+  nvm alias default "lts/*" > /dev/null 2>&1
 fi
 
 # Set suitable user level shell variables

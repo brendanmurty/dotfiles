@@ -41,8 +41,8 @@ if [ -f "$HOME/.local/bin/env" ]; then
   source "$HOME/.local/bin/env"
 fi
 
-if [ -f "/opt/homebrew/opt/python@3.12/libexec/bin" ]; then
-  pathadd "/opt/homebrew/opt/python@3.12/libexec/bin"
+if [ -d "$HOME/.deno/bin" ]; then
+  pathadd "$HOME/.deno/bin:$PATH"
 fi
 
 # Load other Bash config files if they exist

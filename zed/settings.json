@@ -305,6 +305,13 @@
     "default_height": 350,
     "max_scroll_history_lines": 10000,
     "working_directory": "current_file_directory",
+    "detect_venv": "off",
+    "env": {
+      "EDITOR": "zed --wait"
+    },
+    "shell": {
+      "program": "/bin/bash"
+    }
   },
   "project_panel": {
     "scrollbar": {

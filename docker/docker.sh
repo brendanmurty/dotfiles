@@ -26,7 +26,7 @@ fi
 # Install Docker and standard plugins
 
 sudo apt update
-sudo apt -y install \
+sudo apt -qq --assume-yes install \
   docker-ce \
   docker-ce-cli \
   containerd.io \

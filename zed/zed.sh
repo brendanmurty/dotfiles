@@ -42,3 +42,9 @@ cp "$CONFIG_DIR/settings.json" "$CONFIG_DIR/settings.json.old"
 echo "Copying '$CONFIG_FILE' to '$CONFIG_DIR/settings.json'"
 
 cp "$CONFIG_FILE" "$CONFIG_DIR/settings.json"
+
+echo "Finished Zed setup"
+
+if [[ "$OS_NAME" == "macOS" ]]; then
+  echo "On macOS, you need to manually install the Zed CLI tool: https://zed.dev/docs/macos#installing-the-cli"
+fi

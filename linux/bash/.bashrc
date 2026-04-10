@@ -29,6 +29,10 @@ if [ -d "$HOME/.local/bin" ]; then
   pathadd "$HOME/.local/bin:$PATH"
 fi
 
+if [ -d "$HOME/.brew/bin" ]; then
+  pathadd "$HOME/.brew/bin:$PATH"
+fi
+
 if [ -d "/usr/local/bin" ]; then
   pathadd "/usr/local/bin:$PATH"
 fi

@@ -39,13 +39,11 @@ org.gimp.GIMP
 org.gnome.Boxes
 org.gnome.Calculator
 org.gnome.Calendar
-org.gnome.DejaDup
 org.gnome.Extensions
 org.gnome.Logs
 org.gnome.Loupe
 org.gnome.Manuals
 org.gnome.TextEditor
-org.gnome.World.PikaBackup
 org.gnome.baobab
 org.gnome.seahorse.Application
 org.inkscape.Inkscape

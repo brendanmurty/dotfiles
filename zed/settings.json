@@ -90,6 +90,7 @@
     "enabled": false
   },
   "tab_bar": {
+    "show": true,
     "show_nav_history_buttons": true,
     "show_tab_bar_buttons": false,
   },
@@ -192,6 +193,7 @@
   "scroll_beyond_last_line": "vertical_scroll_margin",
   "vertical_scroll_margin": 5,
   "git_panel": {
+    "sort_by_path": true,
     "status_style": "label_color",
     "button": true,
     "file_icons": true,

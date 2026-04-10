@@ -17,10 +17,6 @@ fi
 
 cd "$THIS_DIR/packages"
 
-if [[ "$OS_NAME" == "Ubuntu" ]]; then
-  apt-mark showmanual > "./apt.packages.txt"
-fi
-
 flatpak list --app --columns=application > "./flatpak.packages.txt"
 
 gnome-extensions list --user --enabled > "./gnome-shell-extensions.txt"

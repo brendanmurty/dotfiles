@@ -6,13 +6,16 @@
 #
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
-PARENT_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
-OS_NAME="$(bash $PARENT_DIR/scripts/os-name.sh)"
+SCRIPTS="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
+OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
 if [[ "$OS_NAME" != "Ubuntu" ]]; then
   echo "This script requires Ubuntu."
   exit 0
 fi
+
+sudo add-apt-repository universe
+sudo add-apt-repository multiverse
 
 sudo apt -qq update
 sudo apt -qq --assume-yes upgrade

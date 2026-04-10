@@ -29,6 +29,10 @@ if [ -d "$HOME/.local/bin" ]; then
   pathadd "$HOME/.local/bin:$PATH"
 fi
 
+if [ -d "/usr/local/bin" ]; then
+  pathadd "/usr/local/bin:$PATH"
+fi
+
 if [ -f "$HOME/.local/bin/env" ]; then
   source "$HOME/.local/bin/env"
 fi

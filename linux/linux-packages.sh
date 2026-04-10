@@ -20,6 +20,9 @@ info() { echo -e "\033[36m$1\033[0m"; }
 info '==> dotfiles: start linux packages install'
 chmod +x "$THIS_DIR/packages/"*.sh
 
+info '==> dotfiles: linux/linux-flatpak-setup.sh'
+bash "$THIS_DIR/linux-flatpak-setup.sh"
+
 info '==> dotfiles: linux/packages/pacman.sh'
 bash "$THIS_DIR/packages/pacman.sh"
 

@@ -19,6 +19,9 @@ info() { echo -e "\033[36m$1\033[0m"; }
 
 info '==> dotfiles: start linux setup'
 
+info '==> dotfiles: linux-packages.sh'
+bash "$REPO_DIR/linux-packages.sh"
+
 info '==> dotfiles: linux/bash/bash.sh'
 bash "$REPO_DIR/linux/bash/bash.sh"
 

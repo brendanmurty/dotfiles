@@ -141,7 +141,6 @@ zip \
   -x "**/.venv/*" \
   -x "**/uv/*" \
   -x "*.sock" \
-  -x "*.lock" \
   -x "*.pipe" \
   >/dev/null 2>&1
 

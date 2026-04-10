@@ -2,6 +2,7 @@
 
 Configuration files, programs, packages and scripts I use for personal, gaming and software development use.
 
+- **[dev](dev/)**: Development tools and framework helper scripts
 - **[docker](docker/)**: Docker setup and config
 - **[dropbox](dropbox/)**: Dropbox setup and helper scripts
 - **[gaming](gaming/)**: Gaming performance tweaks

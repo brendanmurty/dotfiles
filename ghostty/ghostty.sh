@@ -29,7 +29,7 @@ if [[ "$OS_NAME" == "macOS" ]]; then
 
   brew install --cask ghostty
 else
-  if [[ "$OS_NAME" == "Ubuntu" ]]; then
+  if [[ "$OS_NAME" == "Ubuntu" ]] || [[ "$OS_NAME" == "Fedora Linux" ]]; then
     sudo snap install ghostty --classic
   fi
 

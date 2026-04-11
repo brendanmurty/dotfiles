@@ -24,7 +24,7 @@ info 'Requesting Sudo'
 sudo -v
 
 if [[ "$OS_NAME" == "Ubuntu" ]]; then
-  info 'Ubuntu - Install supporting APT packages'
+  info 'Ubuntu - Install supporting packages'
 
   sudo apt update >/dev/null 2>&1
   sudo apt -qq --assume-yes install \
@@ -72,6 +72,10 @@ if [[ "$OS_NAME" == "Ubuntu" ]]; then
   sudo apt -qq --assume-yes install libnvidia-gl-595:i386 >/dev/null 2>&1
   sudo snap install steam
 elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
+  info 'Fedora - Install supporting packages'
+
+  sudo dnf install -y dkms kernel-devel kernel-headers
+
   info 'Fedora - Disable mouse pointer accelleration'
 
   gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
@@ -136,9 +140,11 @@ flatpak update -y
 
 info 'Installing for Xbox Controllers firmware'
 
-git clone --quiet https://github.com/medusalix/xone ~/.xone
-cd ~/.xone
-sudo ./install.sh --release
-sudo xone-get-firmware.sh
+rm -rf "$HOME/.xone"
+mkdir -p "$HOME/.xone"
+git clone --quiet "https://github.com/medusalix/xone" "$HOME/.xone"
+cd "$HOME/.xone"
+sudo "./install.sh" --release
+sudo "xone-get-firmware.sh"
 
 info 'Done, a system reboot is recommended'

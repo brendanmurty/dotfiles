@@ -74,7 +74,7 @@ if [[ "$OS_NAME" == "Ubuntu" ]]; then
 elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
   info 'Fedora - Install supporting packages'
 
-  sudo dnf install -y dkms kernel-devel kernel-headers
+  sudo dnf install -y dkms kernel-devel kernel-headers cabextract
 
   info 'Fedora - Disable mouse pointer accelleration'
 
@@ -141,7 +141,6 @@ flatpak update -y
 info 'Installing for Xbox Controllers firmware'
 
 rm -rf "$HOME/.xone"
-mkdir -p "$HOME/.xone"
 git clone --quiet "https://github.com/medusalix/xone" "$HOME/.xone"
 cd "$HOME/.xone"
 sudo "./install.sh" --release

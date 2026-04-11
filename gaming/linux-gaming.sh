@@ -15,15 +15,15 @@ if [[ "$OS_NAME" != "Ubuntu" ]]; then
   exit 0
 fi
 
-info() { echo -e "\033[36m$1\033[0m"; }
+info() { echo -e "\033[36m==> Linux Gaming Setup: $1\033[0m"; }
 
-echo '==> Requesting sudo'
+info 'Starting script'
+
+info 'Requesting Sudo'
 
 sudo -v
 
-info '==> dotfiles: start linux gaming setup'
-
-info '==> dotfiles: install packages'
+info 'Install supporting APT packages'
 
 sudo apt update >/dev/null 2>&1
 
@@ -47,7 +47,7 @@ sudo apt -qq --assume-yes install \
   cabextract \
   cpufrequtils >/dev/null 2>&1
 
-info '==> dotfiles: setup gamemode'
+info 'Setup Gamemode'
 
 rm -rf "$HOME/.gamemode"
 git clone --quiet "https://github.com/FeralInteractive/gamemode.git" "$HOME/.gamemode"
@@ -61,38 +61,48 @@ touch "$HOME/.config/gamemode.ini"
 cp "$HOME/.config/gamemode.ini" "$HOME/.config/gamemode.ini.old"
 cp "$THIS_DIR/gamemode.ini" "$HOME/.config/gamemode.ini"
 
-info '==> dotfiles: update system settings'
+info 'Disable mouse pointer accelleration'
 
-# Disable mouse pointer accelleration
 xset m 0 0
 
-# Disable Gnome UI animations
+info 'Disable Gnome UI animations'
+
 gsettings set org.gnome.desktop.interface enable-animations false
 
-# Set CPU to performance mode
+info 'Set CPU cores to performance mode'
+
 sudo cpupower frequency-set -g performance >/dev/null 2>&1
 echo 'GOVERNOR="performance"' | sudo tee /etc/default/cpufrequtils >/dev/null 2>&1
 sudo systemctl restart cpufrequtils >/dev/null 2>&1
 
-# Increase shader size for Nvidia GPUs
+info 'Increase shader size for Nvidia GPUs'
+
 export __GL_SHADER_DISK_CACHE_SIZE=10000000000
 
-info '==> dotfiles: installing firmware for Xbox controllers'
+info 'Installing Discord via Flatpak'
 
-git clone --quiet https://github.com/medusalix/xone ~/.xone
-cd ~/.xone
-sudo ./install.sh --release
-sudo xone-get-firmware.sh
+flatpak install --reinstall -y com.discordapp.Discord
 
-info '==> dotfiles: installing Lutris'
+info 'Installing Lutris via Flatpak'
 
 flatpak install --reinstall -y net.lutris.Lutris
 
-info '==> dotfiles: installing ProtonPlus'
+info 'Installing ProtonPlus via Flatpak'
 
 flatpak install --reinstall -y com.vysp3r.ProtonPlus
 
-info '==> dotfiles: installing Steam'
+info 'Installing Solaar via Flatpak'
+
+flatpak install --reinstall -y io.github.pwr_solaar.solaar
+
+info 'Clearing Flatpak cache and updating Flatpak apps'
+
+rm -rf "$HOME/.cache/flatpak"
+mkdir -p "$HOME/.cache/flatpak"
+
+flatpak update -y
+
+info 'Installing Steam'
 
 sudo dpkg --add-architecture i386 >/dev/null 2>&1
 sudo apt update >/dev/null 2>&1
@@ -100,4 +110,11 @@ sudo apt -qq --assume-yes install libnvidia-gl-595:i386 >/dev/null 2>&1
 
 sudo snap install steam
 
-info '==> dotfiles: finished linux gaming setup, a system reboot is required'
+info 'Installing for Xbox Controllers firmware'
+
+git clone --quiet https://github.com/medusalix/xone ~/.xone
+cd ~/.xone
+sudo ./install.sh --release
+sudo xone-get-firmware.sh
+
+info 'Done, a system reboot is recommended'

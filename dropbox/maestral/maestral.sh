@@ -22,11 +22,11 @@ sudo -v
 
 echo '==> Installing dependencies'
 
-sudo apt -qq --assume-yes install \
-  python3 \
-  python-is-python3 \
-  python3-pyqt5 \
-  pipx
+if [[ "$OS_NAME" == "Ubuntu" ]]; then
+  sudo apt -qq --assume-yes install python3 python-is-python3 python3-pyqt5 pipx
+elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
+  sudo dnf install -y python3 python3-qt5 pipx
+fi
 
 pipx install --force pyqt5
 

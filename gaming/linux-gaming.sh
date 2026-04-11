@@ -74,7 +74,7 @@ if [[ "$OS_NAME" == "Ubuntu" ]]; then
 elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
   info 'Fedora - Install supporting packages'
 
-  sudo dnf install -y dkms kernel-devel kernel-headers cabextract steam-devices
+  sudo dnf install -y dkms kernel-devel kernel-headers cabextract steam-devices screenfetch
 
   info 'Fedora - Disable mouse pointer accelleration'
 

@@ -61,6 +61,12 @@ fi
 
 ls -lah "$SOURCE_DIR" > "$SOURCE_DIR/.backups/dir-list-user.txt"
 
+# Save Pytxis Terminal config
+
+if command -v /usr/bin/ptyxis >/dev/null 2>&1 ; then
+  dconf dump /org/gnome/Ptyxis/ > "$SOURCE_DIR/.backups/ptyxis-terminal-config.txt"
+fi
+
 # Save a list of all installed Pacman packages
 
 if command -v pacman >/dev/null 2>&1 ; then

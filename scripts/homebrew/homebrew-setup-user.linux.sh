@@ -36,3 +36,9 @@ sudo chown -R "$USER:$USER" "$BREW_DIR"
 sudo rm -rf "$BREW_DIR_DEFAULT"
 
 eval "$($BREW_DIR/bin/brew shellenv bash)"
+
+brew install gcc
+
+if [[ "$OS_NAME" == "Fedora Linux" ]]; then
+  sudo dnf group install -y development-tools
+fi

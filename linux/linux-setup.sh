@@ -37,8 +37,8 @@ bash "$REPO_DIR/linux/hardware/keychron-keyboards.sh"
 info '==> dotfiles: linux/hardware/bluetooth-fixes.sh'
 bash "$REPO_DIR/linux/hardware/bluetooth-fixes.sh"
 
-info '==> dotfiles: scripts/homebrew-setup-user.linux.sh'
-bash "$REPO_DIR/scripts/homebrew-setup-user.linux.sh"
+info '==> dotfiles: scripts/homebrew/homebrew-setup-user.linux.sh'
+bash "$REPO_DIR/scripts/homebrew/homebrew-setup-user.linux.sh"
 
 info '==> dotfiles: just/just.sh'
 bash "$REPO_DIR/just/just.sh"

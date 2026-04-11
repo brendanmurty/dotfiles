@@ -46,9 +46,13 @@ git config --global alias.lg "log --pretty=format:'%Cblue%h%Creset %s %Cgreen%an
 git config --global alias.graph "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 
 if [[ "$OS_NAME" == "Ubuntu" ]]; then
-  # Install and configure Git LFS
+  # Ubuntu - Git LFS
   curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
   sudo apt -y install git-lfs
+  git lfs install
+elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
+  # Fedora - Git LFS
+  sudo dnf install -y git-lfs
   git lfs install
 fi
 

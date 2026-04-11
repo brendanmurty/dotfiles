@@ -16,14 +16,7 @@ set quiet := true
 
 # Add alias commands
 
-alias what := list
-
-alias update := ubuntu-update
-alias update-all := ubuntu-update
-alias up := ubuntu-update
-
-alias clean := ubuntu-clean
-alias del := ubuntu-clean
+alias help := list
 
 # Default to the 'list' command, run via 'run'
 
@@ -31,8 +24,11 @@ default: list
 
 # Show a list of the available 'run' commands
 list:
-  echo "Listing commands from {{ justfile() }}"
+  @echo "----"
+  @echo "List of commands from {{ justfile() }}"
+  @echo "----"
   just --justfile "{{ justfile() }}" --list --alias-style 'separate' --list-heading '' --list-prefix "just "
+  @echo "----"
 
 # List local users
 users:
@@ -47,8 +43,8 @@ port port_number:
 ip:
   dig +short myip.opendns.com @resolver1.opendns.com
 
-# Update Ubuntu system packages and apps
-ubuntu-update:
+# Update system packages and apps
+update:
   sudo apt update
   sudo apt upgrade -y
   sudo snap refresh
@@ -56,8 +52,8 @@ ubuntu-update:
   brew update
   brew upgrade
 
-# Clean Ubuntu packages and temp files
-ubuntu-clean:
+# Clean packages and temp files
+clean:
   sudo apt autoremove
   sudo apt autoclean
   sudo snap set system refresh.retain=2
@@ -68,14 +64,13 @@ ubuntu-clean:
   sudo rm -rf /tmp/*
   sudo rm -rf ~/.cache/* || true
 
-# List Grub boot menu options
-grub-list:
-  sudo awk -F\' '/menuentry / {print $2}' /boot/grub/grub.cfg
-
-# Output details about Just
+# Info about Just and the system
 info:
-  echo "$( just --version )"
-  echo "process id: {{ just_pid() }}"
-  echo "just bin: {{ just_executable() }}"
-  echo "justfile dir: {{ justfile_directory() }}"
-  echo "invocation dir: {{ invocation_directory() }}"
+  @echo "$( just --version )"
+  @echo "OS: {{os()}}"
+  @echo "Family: {{os_family()}}"
+  @echo "Architecture: {{arch()}}"
+  @echo "Process: {{ just_pid() }}"
+  @echo "Binary: {{ just_executable() }}"
+  @echo "Config: {{ justfile() }}"
+  @echo "Current Dir: {{ invocation_directory() }}"

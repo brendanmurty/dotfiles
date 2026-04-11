@@ -7,17 +7,17 @@
   "status_bar": {
     "active_language_button": true,
     "show_active_file": false,
-    "active_encoding_button": "disabled"
+    "active_encoding_button": "disabled",
   },
   "show_wrap_guides": true,
   "restore_on_startup": "launchpad",
   "session": {
-    "trust_all_worktrees": true
+    "trust_all_worktrees": true,
   },
   "context_servers": {},
   "agent_servers": {
     "opencode": {
-      "type": "registry"
+      "type": "registry",
     },
     "claude-acp": {
       "type": "registry",
@@ -44,28 +44,28 @@
       "auto_indent_on_paste": false,
       "auto_indent": "none",
       "tab_size": 2,
-      "ensure_final_newline_on_save": false
+      "ensure_final_newline_on_save": false,
     },
     "ini": {
       "format_on_save": "off",
       "auto_indent_on_paste": false,
       "auto_indent": "none",
       "tab_size": 2,
-      "ensure_final_newline_on_save": false
+      "ensure_final_newline_on_save": false,
     },
     "JSON": {
       "format_on_save": "on",
       "auto_indent_on_paste": true,
       "auto_indent": "syntax_aware",
       "tab_size": 2,
-      "ensure_final_newline_on_save": false
+      "ensure_final_newline_on_save": false,
     },
     "JSONC": {
       "format_on_save": "on",
       "auto_indent_on_paste": true,
       "auto_indent": "syntax_aware",
       "tab_size": 2,
-      "ensure_final_newline_on_save": false
+      "ensure_final_newline_on_save": false,
     },
     "Just": {
       "format_on_save": "on",
@@ -88,7 +88,7 @@
   "preferred_line_length": 125,
   "soft_wrap": "preferred_line_length",
   "drag_and_drop_selection": {
-    "enabled": false
+    "enabled": false,
   },
   "tab_bar": {
     "show": true,
@@ -101,7 +101,7 @@
     "activate_on_close": "left_neighbour",
     "close_position": "right",
     "file_icons": false,
-    "git_status": true
+    "git_status": true,
   },
   "inlay_hints": {
     "enabled": true,
@@ -277,7 +277,7 @@
     "show_project_items": true,
     "show_branch_name": true,
     "show_branch_icon": true,
-    "show_menus": false,
+    "show_menus": true,
     "show_onboarding_banner": false,
     "show_user_picture": true,
     "show_user_menu": true,
@@ -310,11 +310,11 @@
     "working_directory": "current_file_directory",
     "detect_venv": "off",
     "env": {
-      "EDITOR": "zed --wait"
+      "EDITOR": "zed --wait",
     },
     "shell": {
-      "program": "/bin/bash"
-    }
+      "program": "/bin/bash",
+    },
   },
   "project_panel": {
     "scrollbar": {
@@ -335,7 +335,7 @@
     "sort_mode": "directories_first",
     "entry_spacing": "comfortable",
     "auto_reveal_entries": true,
-    "git_status": true
+    "git_status": true,
   },
   "excerpt_context_lines": 5,
   "edit_predictions_disabled_in": [
@@ -353,12 +353,12 @@
         "property": {
           "color": "#E6E6E6FF",
           "font_style": null,
-          "font_weight": null
+          "font_weight": null,
         },
         "string": {
           "color": "#23C5B0FF",
           "font_style": null,
-          "font_weight": null
+          "font_weight": null,
         },
       },
       "border": "#363636FF",
@@ -427,7 +427,7 @@
     "toml": true,
     "just": true,
     "env": true,
-    "color-highlight": true
+    "postgres-language-server": true
   },
   "lsp": {
     "json-language-server": {

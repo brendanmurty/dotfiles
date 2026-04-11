@@ -1,8 +1,0 @@
-desktop-security-center
-firefox
-firmware-updater
-ghostty
-gtk-common-themes
-mesa-2404
-prompting-client
-steam

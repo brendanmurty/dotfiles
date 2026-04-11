@@ -19,17 +19,14 @@ info() { echo -e "\033[36m$1\033[0m"; }
 
 info '==> dotfiles: start linux setup'
 
-info '==> dotfiles: linux/linux-packages.sh'
-bash "$REPO_DIR/linux/linux-packages.sh"
-
 info '==> dotfiles: linux/bash/bash.sh'
 bash "$REPO_DIR/linux/bash/bash.sh"
 
 info '==> dotfiles: git/git.sh'
 bash "$REPO_DIR/git/git.sh"
 
-info '==> dotfiles: linux/linux-flatpak-setup.sh'
-bash "$REPO_DIR/linux/linux-flatpak-setup.sh"
+info '==> dotfiles: linux/linux-flatpak.sh'
+bash "$REPO_DIR/linux/linux-flatpak.sh"
 
 info '==> dotfiles: linux/gnome/gnome.sh'
 bash "$REPO_DIR/linux/gnome/gnome.sh"
@@ -54,6 +51,9 @@ bash "$REPO_DIR/linux/vim/vim.sh"
 
 info '==> dotfiles: linux/tmux/tmux.sh'
 bash "$REPO_DIR/linux/tmux/tmux.sh"
+
+info '==> dotfiles: linux/linux-google-chrome.sh'
+bash "$REPO_DIR/linux/linux-google-chrome.sh"
 
 info '==> dotfiles: dropbox/maestral/maestral.sh'
 bash "$REPO_DIR/dropbox/maestral/maestral.sh"

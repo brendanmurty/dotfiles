@@ -59,12 +59,14 @@ echo '==> Copying over app icon and applications menu item'
 mkdir -p "$HOME/.local/share/icons/hicolor/512x512/apps"
 cp "$DIR/maestral.png" "$HOME/.local/share/icons/hicolor/512x512/apps/Maestral.png"
 
+mkdir -p "$HOME/.local/share/applications"
 rm -rf "$HOME/.local/share/applications/Maestral.desktop"
 cp "$DIR/maestral.desktop" "$HOME/.local/share/applications/Maestral.desktop"
 echo "" >> "$HOME/.local/share/applications/Maestral.desktop"
 echo "Icon=$HOME/.local/share/icons/hicolor/512x512/apps/Maestral.png" >> "$HOME/.local/share/applications/Maestral.desktop"
 chmod a+x "$HOME/.local/share/applications/Maestral.desktop"
 
+mkdir -p "$HOME/.config/autostart"
 rm -rf "$HOME/.config/autostart/Maestral.desktop"
 cp "$DIR/maestral.desktop" "$HOME/.config/autostart/Maestral.desktop"
 echo "" >> "$HOME/.config/autostart/Maestral.desktop"

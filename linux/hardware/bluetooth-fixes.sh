@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 #
-# Linux: Fix Bluetooth config to support high fidelity playback devices
+# Ubuntu: Fix Bluetooth config to support high fidelity playback devices
 #
 #
 
@@ -9,8 +9,8 @@ THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
 SCRIPTS="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
 OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
-if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
-  echo "This script requires Linux."
+if [[ "$OS_NAME" != "Ubuntu" ]]; then
+  echo "This script requires Ubuntu."
   exit 0
 fi
 

@@ -99,7 +99,10 @@ elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
     sudo dnf install -y "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm"
     sudo dnf install -y "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
 
-    sudo dnf install -y nvidia-smi akmod-nvidia
+    sudo dnf install -y nvidia-smi akmod-nvidia xorg-x11-drv-nvidia-cuda kernel-devel-matched kernel-headers
+
+    sudo akmods --force
+    sudo dracut --force
   fi
 
   info 'Fedora - Installing Steam'
@@ -158,4 +161,4 @@ cd "$HOME/.xone"
 sudo "./install.sh" --release
 sudo "xone-get-firmware.sh"
 
-info 'Done, a system reboot is recommended'
+info 'Done, a system reboot is required'

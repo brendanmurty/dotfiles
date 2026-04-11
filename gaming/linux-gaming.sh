@@ -74,7 +74,7 @@ if [[ "$OS_NAME" == "Ubuntu" ]]; then
 elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
   info 'Fedora - Install supporting packages'
 
-  sudo dnf install -y dkms kernel-devel kernel-headers cabextract
+  sudo dnf install -y dkms kernel-devel kernel-headers cabextract steam-devices
 
   info 'Fedora - Disable mouse pointer accelleration'
 
@@ -93,11 +93,23 @@ elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
 
   gsettings set org.gnome.desktop.interface enable-animations false
 
+  if [ -n "$(lspci | grep -i nvidia)" ]; then
+    info 'Fedora - Setup for Nvidia graphics card'
+
+    sudo dnf install -y "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm"
+    sudo dnf install -y "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
+
+    sudo dnf install -y nvidia-smi akmod-nvidia
+  fi
+
   info 'Fedora - Installing Steam'
 
-  sudo dnf upgrade --refresh
-  sudo dnf install -y fedora-workstation-repositories
-  sudo dnf install -y steam --enablerepo=rpmfusion-nonfree-steam
+  flatpak install --reinstall -y com.valvesoftware.Steam
+  flatpak override --user --env=__GL_CONSTANT_FRAME_RATE_HINT=3 com.valvesoftware.Steam
+
+  info 'Fedora - Running Steam in the background to run dependency installs'
+
+  nohup flatpak run com.valvesoftware.Steam &
 fi
 
 info 'Setup Gamemode'

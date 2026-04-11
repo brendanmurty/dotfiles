@@ -1,4 +1,4 @@
-# Photo management script
+# Media organisation helper
 #
 # ----
 #
@@ -12,14 +12,14 @@
 # The source and destination directories are defined in "photos.env".
 #
 # Setup:
-#   1. Configure the alias command:
+#   1. Configure your photo directories:
+#       cp --update=none .media-organise.sample.env .media-organise.env
+#       vim .media-organise.env
+#   2. Run the script:
+#       photomgmt
+#   3. Optional - Configure an alias command:
 #       echo "alias photomgmt='python /path/to/this-file.py'" >> ~/.bash_aliases
 #       source ~/.bash_aliases
-#   2. Configure your photo directories:
-#       cp -u photos.env.example photos.env
-#       vim photos.env
-#   3. Run the script:
-#       photomgmt
 #
 # Requirements:
 #  - For Windows 11
@@ -40,7 +40,6 @@ from dotenv import dotenv_values
 
 ### Functions
 
-
 def photoDate(f):
     "Return the date/time on which the given photo was taken."
 
@@ -54,16 +53,15 @@ def photoDate(f):
         # Default to using today's date if the required image properties can't be found
         return datetime.now()
 
-
 ### Main program
 
 # Get the date details
 now = datetime.now()
 yearNow = now.year
 
-# Load the configuration values from "photos.env"
+# Load the configuration values from the ENV file
 script_file_path = os.path.dirname(__file__)
-config = dotenv_values("%s/photos-organise.env" % script_file_path)
+config = dotenv_values("%s/.media-organise.env" % script_file_path)
 
 # Where the media files are and where they're going
 sourceDir = "%s" % (config["PHOTOMGMT_SOURCE_DIR"])
@@ -162,3 +160,4 @@ if len(problems) > 0:
     print("Problem files:")
     print("%s" % problems)
     print("These can be found in: %s" % errorDir)
+

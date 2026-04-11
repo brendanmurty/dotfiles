@@ -13,8 +13,8 @@ LOG_DATE_FORMAT="+%Y%m%d-%H%M%S"
 LOG_FILE="$SCRIPT_DIR/backup-icloud-photos.log"
 touch "$LOG_FILE"
 
-cp --update=none "$SCRIPT_DIR/backup-icloud-photos.env.sample" "$SCRIPT_DIR/backup-icloud-photos.env"
-source "$SCRIPT_DIR/backup-icloud-photos.env"
+cp --update=none "$SCRIPT_DIR/.backup-icloud-photos.sample.env" "$SCRIPT_DIR/.backup-icloud-photos.env"
+source "$SCRIPT_DIR/.backup-icloud-photos.env"
 
 mkdir -p "$BACKUP_DIR"
 

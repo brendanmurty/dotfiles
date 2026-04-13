@@ -83,7 +83,7 @@ elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
 
   info 'Fedora - Update mouse pointer speed'
 
-  gsettings set org.gnome.desktop.peripherals.mouse speed '0.16049382716049387'
+  gsettings set org.gnome.desktop.peripherals.mouse speed '0.4897119341563787'
 
   info 'Fedora - Disabling natural scrolling'
 

@@ -67,17 +67,26 @@
       "tab_size": 2,
       "ensure_final_newline_on_save": false,
     },
+    "Shell Script": {
+      "format_on_save": "on",
+      "auto_indent_on_paste": true,
+      "auto_indent": "syntax_aware",
+      "tab_size": 2
+    },
     "Just": {
       "format_on_save": "on",
       "auto_indent_on_paste": true,
       "auto_indent": "syntax_aware",
       "tab_size": 2,
+      "language_servers": [
+        "!just-lsp"
+      ]
     },
     "Python": {
       "format_on_save": "on",
       "auto_indent_on_paste": true,
       "auto_indent": "syntax_aware",
-      "tab_size": 2,
+      "tab_size": 2
     },
   },
   "outline_panel": {

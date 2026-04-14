@@ -241,6 +241,10 @@
   "disable_ai": false,
   "buffer_font_family": "CommitMono",
   "agent": {
+    "show_turn_stats": true,
+    "expand_terminal_card": false,
+    "expand_edit_card": false,
+    "thinking_display": "always_collapsed",
     "favorite_models": [
       {
         "provider": "zed.dev",
@@ -299,6 +303,7 @@
     "button": false,
   },
   "terminal": {
+    "show_count_badge": false,
     "cursor_shape": "block",
     "toolbar": {
       "breadcrumbs": true,

@@ -264,7 +264,7 @@
     ],
     "enable_feedback": false,
     "default_model": {
-      "effort": "high",
+      "effort": "medium",
       "enable_thinking": true,
       "provider": "zed.dev",
       "model": "claude-sonnet-4-6",

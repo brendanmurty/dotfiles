@@ -65,7 +65,7 @@ fi
 
 # Configure Deno if it's installed in the default location
 
-if [ -d "$HOME/.deno" ]; then
+if [ -f "$HOME/.deno/env" ]; then
   source "$HOME/.deno/env"
 fi
 

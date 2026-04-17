@@ -23,15 +23,3 @@ alias lah='ls -lah'
 
 alias hist='history | cut -c 8-'
 alias hist-search='history | cut -c 8- | grep'
-
-## Ubuntu - Update all system and third-party apps
-
-alias update-all='just ubuntu-update'
-
-## Ubuntu - Cleanup obsolete packages and cache dirs
-
-alias clean-all='just ubuntu-clean'
-
-## Return the public IPv4 address for the local machine
-
-alias ip-my='just ip'

@@ -19,11 +19,11 @@ info() { echo -e "\033[36m$1\033[0m"; }
 
 info '==> dotfiles: start linux setup'
 
-info '==> dotfiles: linux/bash/bash.sh'
-bash "$REPO_DIR/linux/bash/bash.sh"
+info '==> dotfiles: linux/bash/bash-setup.sh'
+bash "$REPO_DIR/linux/bash/bash-setup.sh"
 
-info '==> dotfiles: git/git.sh'
-bash "$REPO_DIR/git/git.sh"
+info '==> dotfiles: git/git-setup.sh'
+bash "$REPO_DIR/git/git-setup.sh"
 
 info '==> dotfiles: linux/linux-flatpak.sh'
 bash "$REPO_DIR/linux/linux-flatpak.sh"

@@ -16,14 +16,14 @@ if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
   exit 0
 fi
 
-touch "$HOME/.bashrc" "$HOME/.bash_aliases" "$HOME/.bash_prompt" "$HOME/.profile"
+touch "$HOME/.bashrc" "$HOME/.bash_aliases" "$HOME/.bash_prompt" "$HOME/.bash_profile"
 
 # Create backups of current Bash config files for this user
 
 cp "$HOME/.bashrc" "$HOME/.bashrc.old"
 cp "$HOME/.bash_aliases" "$HOME/.bash_aliases.old"
 cp "$HOME/.bash_prompt" "$HOME/.bash_prompt.old"
-cp "$HOME/.profile" "$HOME/.profile.old"
+cp "$HOME/.bash_profile" "$HOME/.bash_profile.old"
 
 # Download the '__git_ps1' script from the official Git repo to ~/.git_prompt.sh
 
@@ -38,9 +38,9 @@ curl \
 cp "$DIR/.bashrc" "$HOME/.bashrc"
 cp "$DIR/.bash_aliases" "$HOME/.bash_aliases"
 cp "$DIR/.bash_prompt" "$HOME/.bash_prompt"
-cp "$DIR/.profile" "$HOME/.profile"
+cp "$DIR/.bash_profile" "$HOME/.bash_profile"
 
 # Load the customisations in to the current terminal session.
-# Future terminal sessions will automatically load ~/.bashrc
+# Future terminal sessions will automatically load ~/.bash_profile
 
-source "$HOME/.bashrc"
+source "$HOME/.bash_profile"

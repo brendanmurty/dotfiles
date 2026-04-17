@@ -16,26 +16,24 @@ if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
   exit 0
 fi
 
-touch "$HOME/.bashrc" "$HOME/.bash_aliases" "$HOME/.bash_prompt" "$HOME/.bash_profile"
+touch "$HOME/.bash_aliases" "$HOME/.bash_prompt" "$HOME/.bash_profile"
 
 # Create backups of current Bash config files for this user
 
-cp "$HOME/.bashrc" "$HOME/.bashrc.old"
 cp "$HOME/.bash_aliases" "$HOME/.bash_aliases.old"
 cp "$HOME/.bash_prompt" "$HOME/.bash_prompt.old"
 cp "$HOME/.bash_profile" "$HOME/.bash_profile.old"
 
-# Download the '__git_ps1' script from the official Git repo to ~/.git_prompt.sh
+# Download the '__git_ps1' script from the official Git repo to ~/.bash_prompt_git.sh
 
-touch "$HOME/.git_prompt.sh"
-cp "$HOME/.git_prompt.sh" "$HOME/.git_prompt.sh.old"
+touch "$HOME/.bash_prompt_git.sh"
+cp "$HOME/.bash_prompt_git.sh" "$HOME/.bash_prompt_git.sh.old"
 curl \
-  --output "$HOME/.git_prompt.sh" \
+  --output "$HOME/.bash_prompt_git.sh" \
   "https://raw.githubusercontent.com/git/git/refs/heads/master/contrib/completion/git-prompt.sh"
 
 # Copy over the customised Bash config files
 
-cp "$DIR/.bashrc" "$HOME/.bashrc"
 cp "$DIR/.bash_aliases" "$HOME/.bash_aliases"
 cp "$DIR/.bash_prompt" "$HOME/.bash_prompt"
 cp "$DIR/.bash_profile" "$HOME/.bash_profile"

@@ -21,31 +21,23 @@ pathadd() {
 
 # Update PATH to include user level bin directories if they exist
 
-if [ -d "$HOME/bin" ]; then
-  pathadd "$HOME/bin:$PATH"
-fi
+pathadd "$HOME/bin"
 
-if [ -d "$HOME/.local/bin" ]; then
-  pathadd "$HOME/.local/bin:$PATH"
-fi
+pathadd "$HOME/.local/bin"
 
-if [ -d "$HOME/.brew/bin" ]; then
-  pathadd "$HOME/.brew/bin:$PATH"
-fi
+pathadd "$HOME/.brew/bin"
 
-if [ -d "/usr/local/bin" ]; then
-  pathadd "/usr/local/bin:$PATH"
-fi
+pathadd "/home/linuxbrew/.linuxbrew/bin"
+
+pathadd "/usr/local/bin"
+
+pathadd "$HOME/.deno/bin"
+
+# Load other Bash config files if they exist
 
 if [ -f "$HOME/.local/bin/env" ]; then
   source "$HOME/.local/bin/env"
 fi
-
-if [ -d "$HOME/.deno/bin" ]; then
-  pathadd "$HOME/.deno/bin:$PATH"
-fi
-
-# Load other Bash config files if they exist
 
 if [ -f "$HOME/.bash_profile" ]; then
   source "$HOME/.bash_profile"
@@ -71,16 +63,14 @@ fi
 
 # Configure user-level Homebrew if it's installed there
 
-BREW_DIR="$HOME/.brew"
-if [ -d "$BREW_DIR" ]; then
+if [ -d "$HOME/.brew" ]; then
+  export BREW_DIR="$HOME/.brew"
   export HOMEBREW_RELOCATE_BUILD_PREFIX="$BREW_DIR"
   export HOMEBREW_CELLAR="$BREW_DIR/Cellar"
   export HOMEBREW_PREFIX="$BREW_DIR"
-  export HOMEBREW_NO_UPDATE_REPORT_FORMULAE=1
-  export HOMEBREW_NO_UPDATE_REPORT_CASKS=1
-  export HOMEBREW_NO_ENV_HINTS=1
-  export HOMEBREW_NO_ANALYTICS=1
+
   eval "$($BREW_DIR/bin/brew shellenv bash)"
+
   alias brew="$BREW_DIR/bin/brew"
 fi
 
@@ -100,3 +90,8 @@ export SHELL=$(which bash)
 export TERM=xterm-256color
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
+
+export HOMEBREW_NO_UPDATE_REPORT_FORMULAE=1
+export HOMEBREW_NO_UPDATE_REPORT_CASKS=1
+export HOMEBREW_NO_ENV_HINTS=1
+export HOMEBREW_NO_ANALYTICS=1

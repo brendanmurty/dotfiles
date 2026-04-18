@@ -15,6 +15,18 @@ if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
   exit 0
 fi
 
+# Request sudo access
+
+sudo -v
+
+# Install supporting packages for Gnome Shell Extensions
+
+if [[ "$OS_NAME" == "Ubuntu" ]]; then
+  sudo apt install -y gnome-browser-connector
+elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
+  sudo dnf install -y gnome-browser-connector
+fi
+
 # Helper function to check for a Dconf schema
 
 has_schema () {

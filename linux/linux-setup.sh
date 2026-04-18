@@ -15,50 +15,54 @@ if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
   exit 0
 fi
 
-info() { echo -e "\033[36m$1\033[0m"; }
+info() { echo -e "\033[36m==> Linux Setup: $1\033[0m"; }
 
-info '==> dotfiles: start linux setup'
+info 'start linux setup'
 
-info '==> dotfiles: linux/bash/bash-setup.sh'
+info 'requesting sudo access'
+
+sudo -v
+
+info 'linux/bash/bash-setup.sh'
 bash "$REPO_DIR/linux/bash/bash-setup.sh"
 
-info '==> dotfiles: fonts/fonts-setup.sh'
+info 'fonts/fonts-setup.sh'
 bash "$REPO_DIR/fonts/fonts-setup.sh"
 
-info '==> dotfiles: git/git-setup.sh'
+info 'git/git-setup.sh'
 bash "$REPO_DIR/git/git-setup.sh"
 
-info '==> dotfiles: linux/linux-flatpak.sh'
+info 'linux/linux-flatpak.sh'
 bash "$REPO_DIR/linux/linux-flatpak.sh"
 
-info '==> dotfiles: linux/gnome/gnome.sh'
+info 'linux/gnome/gnome.sh'
 bash "$REPO_DIR/linux/gnome/gnome.sh"
 
-info '==> dotfiles: linux/hardware/keychron-keyboards.sh'
+info 'linux/hardware/keychron-keyboards.sh'
 bash "$REPO_DIR/linux/hardware/keychron-keyboards.sh"
 
-info '==> dotfiles: linux/hardware/bluetooth-fixes.sh'
+info 'linux/hardware/bluetooth-fixes.sh'
 bash "$REPO_DIR/linux/hardware/bluetooth-fixes.sh"
 
-info '==> dotfiles: scripts/homebrew/homebrew-setup-user.linux.sh'
+info 'scripts/homebrew/homebrew-setup-user.linux.sh'
 bash "$REPO_DIR/scripts/homebrew/homebrew-setup-user.linux.sh"
 
-info '==> dotfiles: just/just.sh'
+info 'just/just.sh'
 bash "$REPO_DIR/just/just.sh"
 
-info '==> dotfiles: ghostty/ghostty.sh'
+info 'ghostty/ghostty.sh'
 bash "$REPO_DIR/ghostty/ghostty.sh"
 
-info '==> dotfiles: linux/vim/vim.sh'
+info 'linux/vim/vim.sh'
 bash "$REPO_DIR/linux/vim/vim.sh"
 
-info '==> dotfiles: linux/tmux/tmux.sh'
+info 'linux/tmux/tmux.sh'
 bash "$REPO_DIR/linux/tmux/tmux.sh"
 
-info '==> dotfiles: linux/linux-google-chrome.sh'
+info 'linux/linux-google-chrome.sh'
 bash "$REPO_DIR/linux/linux-google-chrome.sh"
 
-info '==> dotfiles: docker/docker.sh'
+info 'docker/docker.sh'
 bash "$REPO_DIR/docker/docker.sh"
 
-info '==> dotfiles: finished linux setup, a system reboot is recommended'
+info 'finished linux setup, a system reboot is recommended'

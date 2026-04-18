@@ -11,7 +11,19 @@
 #
 #
 
-THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
+DIR="$(cd "$(dirname "$0")" && pwd)"
+
+SCRIPTS="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
+OS_NAME="$(bash $SCRIPTS/os-name.sh)"
+
+if [[ "$OS_NAME" == "Ubuntu" ]]; then
+  echo 'Requesting sudo access'
+  sudo -v
+
+  echo 'Installing supporting packages'
+  sudo apt update -qq
+  sudo apt -qq --assume-yes
+fi
 
 echo "Installing 'just' via Homebrew"
 
@@ -22,4 +34,4 @@ echo "Copying 'justfile' to '$HOME/justfile'"
 touch "$HOME/justfile"
 cp "$HOME/justfile" "$HOME/justfile.old"
 
-cp "$THIS_DIR/justfile" "$HOME/justfile"
+cp "$DIR/justfile" "$HOME/justfile"

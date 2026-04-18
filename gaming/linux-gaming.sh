@@ -26,7 +26,7 @@ sudo -v
 if [[ "$OS_NAME" == "Ubuntu" ]]; then
   info 'Ubuntu - Install supporting packages'
 
-  sudo apt update >/dev/null 2>&1
+  sudo apt update -qq
   sudo apt -qq --assume-yes install \
     cmake \
     systemd \
@@ -68,7 +68,7 @@ if [[ "$OS_NAME" == "Ubuntu" ]]; then
   info 'Ubuntu - Installing Steam'
 
   sudo dpkg --add-architecture i386 >/dev/null 2>&1
-  sudo apt update >/dev/null 2>&1
+  sudo apt update -qq
   sudo apt -qq --assume-yes install libnvidia-gl-595:i386 >/dev/null 2>&1
   sudo snap install steam
 elif [[ "$OS_NAME" == "Fedora Linux" ]]; then

@@ -45,8 +45,8 @@ ip:
 
 # Update system packages and apps
 update:
-  sudo apt update
-  sudo apt upgrade -y
+  sudo apt update -qq
+  sudo apt upgrade -y -qq
   sudo snap refresh
   flatpak update -y
   brew update

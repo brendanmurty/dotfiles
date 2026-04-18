@@ -5,10 +5,15 @@
 #
 #
 
+DIR="$(cd "$(dirname "$0")" && pwd)"
+
+SCRIPTS="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
+OS_NAME="$(bash $SCRIPTS/os-name.sh)"
+
 # Install Git and Git LFS
 
 if [[ "$OS_NAME" == "Ubuntu" ]]; then
-  sudo apt update
+  sudo apt update -qq
   sudo apt -qq --assume-yes install curl git
 
   curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash

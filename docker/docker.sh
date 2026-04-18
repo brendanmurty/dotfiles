@@ -25,7 +25,7 @@ fi
 
 # Install Docker and standard plugins
 
-sudo apt update
+sudo apt update -qq
 sudo apt -qq --assume-yes install \
   docker-ce \
   docker-ce-cli \
@@ -49,7 +49,7 @@ DOCKER_DEB="$HOME/Downloads/temp-docker-desktop-amd64.deb"
 rm -rf "$DOCKER_DEB"
 curl --output "$DOCKER_DEB" "https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb"
 
-sudo apt update
+sudo apt update -qq
 sudo apt -qq --assume-yes install "$DOCKER_DEB"
 
 rm -rf "$DOCKER_DEB"

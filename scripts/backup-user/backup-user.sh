@@ -39,62 +39,61 @@ echo $(date "$LOG_FMT") "Starting backup of '$SOURCE_DIR' to '$BACKUP_PATH'" >> 
 
 mkdir -p "$BACKUP_DIR"
 
-if [ -d "$SOURCE_DIR/.backups" ]; then
-  gio trash "$SOURCE_DIR/.backups"
-fi
-
-mkdir -p "$SOURCE_DIR/.backups"
+CONFIG_BACKUP_DIR_NAME=".backup-user-config"
+CONFIG_BACKUP_DIR="$SOURCE_DIR/$CONFIG_BACKUP_DIR_NAME"
+rm -rf "$CONFIG_BACKUP_DIR"
+mkdir -p "$CONFIG_BACKUP_DIR"
 
 # Create a copy of the current Grub config file
 
 if [ -f "/etc/default/grub" ]; then
-  cp -f "/etc/default/grub" "$SOURCE_DIR/.backups/grub-config.txt"
+  cp -f "/etc/default/grub" "$CONFIG_BACKUP_DIR/grub-config.txt"
 fi
 
 # Save a copy of the user cron items
 
 if command -v crontab >/dev/null 2>&1 ; then
-  crontab -l > "$SOURCE_DIR/.backups/crontab-user.txt"
+  crontab -l > "$CONFIG_BACKUP_DIR/crontab-user.txt"
 fi
 
 # Save a copy of the file listing, so symlink paths are logged
 
-ls -lah "$SOURCE_DIR" > "$SOURCE_DIR/.backups/dir-list-user.txt"
+ls -lah "$SOURCE_DIR" > "$CONFIG_BACKUP_DIR/dir-list-user.txt"
 
 # Save Pytxis Terminal config
 
 if command -v /usr/bin/ptyxis >/dev/null 2>&1 ; then
-  dconf dump /org/gnome/Ptyxis/ > "$SOURCE_DIR/.backups/ptyxis-terminal-config.txt"
+  dconf dump /org/gnome/Ptyxis/ > "$CONFIG_BACKUP_DIR/ptyxis-terminal-config.txt"
 fi
 
 # Save a list of all installed Pacman packages
 
 if command -v pacman >/dev/null 2>&1 ; then
-  pacman -Qqen > "$SOURCE_DIR/.backups/package-list-pacman.txt"
+  pacman -Qqen > "$CONFIG_BACKUP_DIR/package-list-pacman.txt"
 fi
 
 # Save a list of all installed Flatpak packages
 
 if command -v flatpak >/dev/null 2>&1 ; then
-  flatpak list --app --columns=application > "$SOURCE_DIR/.backups/package-list-flatpak.txt"
+  flatpak list --app --columns=application > "$CONFIG_BACKUP_DIR/package-list-flatpak.txt"
 fi
 
 # Save a list of all installed Snap packages
 
 if command -v snap >/dev/null 2>&1 ; then
-  snap list --unicode=never | tail -n +2 | grep -v 'core\|gnome-\|snapd\|snap-store\|bare\|canonical-livepatch' | awk '{print $1}' > "$SOURCE_DIR/.backups/package-list-snap.txt"
+  snap list --unicode=never | tail -n +2 | grep -v 'core\|gnome-\|snapd\|snap-store\|bare\|canonical-livepatch' | awk '{print $1}' > "$CONFIG_BACKUP_DIR/package-list-snap.txt"
 fi
 
 # Save a list of all installed Homebrew packages
 
 if command -v brew >/dev/null 2>&1 ; then
-  brew leaves > "$SOURCE_DIR/.backups/package-list-homebrew.txt"
+  brew leaves > "$CONFIG_BACKUP_DIR/package-list-homebrew.txt"
 fi
 
 # Save a list of all Dconf settings
 
 if command -v dconf >/dev/null 2>&1 ; then
-  dconf dump / > "$SOURCE_DIR/.backups/dconf-user-export.conf"
+  dconf dump / > "$CONFIG_BACKUP_DIR/dconf-user-export.conf"
 fi
 
 # Run the ZIP command with specific inclusions and exclusions
@@ -107,7 +106,7 @@ zip \
   --quiet \
   --password "$BACKUP_FILE_PASSWORD" \
   "$BACKUP_PATH" \
-  .backups/* \
+  "$CONFIG_BACKUP_DIR_NAME"/* \
   .bashrc \
   .bash_* \
   .profile \

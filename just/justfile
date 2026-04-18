@@ -39,9 +39,9 @@ users:
 port port_number:
   sudo lsof -i ":{{ port_number }}" || echo "Port doesn't seem to be in use"
 
-# Return your machine's public IP address
-ip:
-  dig +short myip.opendns.com @resolver1.opendns.com
+# Run 'backup-user' script
+backup:
+  bash "$HOME/Dotfiles/scripts/backup-user/backup-user.sh"
 
 # Update system packages and apps
 update:
@@ -63,6 +63,10 @@ clean:
   gio trash --empty
   sudo rm -rf /tmp/*
   sudo rm -rf ~/.cache/* || true
+
+# Return your machine's public IP address
+ip:
+  dig +short myip.opendns.com @resolver1.opendns.com
 
 # Info about Just and the system
 info:

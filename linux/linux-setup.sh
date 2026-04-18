@@ -50,8 +50,8 @@ bash "$REPO_DIR/linux/hardware/bluetooth-fixes.sh"
 info 'scripts/homebrew/homebrew-setup-user.linux.sh'
 bash "$REPO_DIR/scripts/homebrew/homebrew-setup-user.linux.sh"
 
-info 'just/just.sh'
-bash "$REPO_DIR/just/just.sh"
+info 'just/just-setup.sh'
+bash "$REPO_DIR/just/just-setup.sh"
 
 info 'ghostty/ghostty.sh'
 bash "$REPO_DIR/ghostty/ghostty.sh"

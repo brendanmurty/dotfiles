@@ -56,11 +56,11 @@ update:
 clean:
   sudo apt autoremove
   sudo apt autoclean
-  sudo snap set system refresh.retain=2
   flatpak uninstall -y --unused --delete-data
   brew cleanup
-  gio trash --empty
+  sudo snap set system refresh.retain=2
   sudo rm -rf /var/lib/snapd/cache/*
+  gio trash --empty
   sudo rm -rf /tmp/*
   sudo rm -rf ~/.cache/* || true
 

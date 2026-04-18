@@ -29,7 +29,7 @@ else
     if command -v flatpak >/dev/null 2>&1 ; then
       echo 'Installing Dropbox via Flatpak'
 
-      flatpak install --reinstall -y com.dropbox.Client
+      flatpak install -y com.dropbox.Client
 
       echo 'Configuring Dropbox'
 

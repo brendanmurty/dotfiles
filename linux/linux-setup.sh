@@ -22,6 +22,9 @@ info '==> dotfiles: start linux setup'
 info '==> dotfiles: linux/bash/bash-setup.sh'
 bash "$REPO_DIR/linux/bash/bash-setup.sh"
 
+info '==> dotfiles: fonts/fonts-setup.sh'
+bash "$REPO_DIR/fonts/fonts-setup.sh"
+
 info '==> dotfiles: git/git-setup.sh'
 bash "$REPO_DIR/git/git-setup.sh"
 

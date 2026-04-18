@@ -26,6 +26,9 @@ sudo -v
 info 'linux/bash/bash-setup.sh'
 bash "$REPO_DIR/linux/bash/bash-setup.sh"
 
+info 'linux/linux-symlinks.sh'
+bash "$REPO_DIR/linux/linux-symlinks.sh"
+
 info 'fonts/fonts-setup.sh'
 bash "$REPO_DIR/fonts/fonts-setup.sh"
 

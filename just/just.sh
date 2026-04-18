@@ -22,7 +22,7 @@ if [[ "$OS_NAME" == "Ubuntu" ]]; then
 
   echo 'Installing supporting packages'
   sudo apt update -qq
-  sudo apt -qq --assume-yes
+  sudo apt install -qq --assume-yes fzf
 fi
 
 echo "Installing 'just' via Homebrew"

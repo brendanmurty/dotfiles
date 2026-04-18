@@ -46,14 +46,14 @@ fi
 
 # Search for a Homebrew installation and load it if found
 
-if [ -d "/home/linuxbrew/.linuxbrew" ]; then
+if [ -d "$HOME/.brew" ]; then
+  export BREW_DIR="$HOME/.brew"
+elif [ -d "/home/linuxbrew/.linuxbrew" ]; then
   export BREW_DIR="/home/linuxbrew/.linuxbrew"
 elif [ -d "/opt/homebrew" ]; then
   export BREW_DIR="/opt/homebrew"
 elif [ -d "/usr/local" ]; then
   export BREW_DIR="/usr/local"
-elif [ -d "$HOME/.brew" ]; then
-  export BREW_DIR="$HOME/.brew"
 fi
 
 if [[ -v BREW_DIR ]]; then

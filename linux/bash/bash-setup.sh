@@ -41,4 +41,7 @@ cp "$DIR/.bash_profile" "$HOME/.bash_profile"
 # Load the customisations in to the current terminal session.
 # Future terminal sessions will automatically load ~/.bash_profile
 
-source "$HOME/.bash_profile"
+echo '' >> "$HOME/.bashrc"
+echo 'source "$HOME/.bash_profile"' >> "$HOME/.bashrc"
+
+source "$HOME/.bashrc"

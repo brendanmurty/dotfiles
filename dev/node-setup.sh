@@ -22,7 +22,6 @@ mkdir -p "$NVM_DIR"
 # Install NVM, command from https://github.com/nvm-sh/nvm?tab=readme-ov-file#git-install
 
 git clone --quiet "https://github.com/nvm-sh/nvm.git" "$NVM_DIR"
-git checkout --quiet v0.40.4
 
 # Load NVM
 

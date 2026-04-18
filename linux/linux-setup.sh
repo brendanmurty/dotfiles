@@ -55,9 +55,6 @@ bash "$REPO_DIR/linux/tmux/tmux.sh"
 info '==> dotfiles: linux/linux-google-chrome.sh'
 bash "$REPO_DIR/linux/linux-google-chrome.sh"
 
-info '==> dotfiles: dropbox/maestral/maestral.sh'
-bash "$REPO_DIR/dropbox/maestral/maestral.sh"
-
 info '==> dotfiles: docker/docker.sh'
 bash "$REPO_DIR/docker/docker.sh"
 

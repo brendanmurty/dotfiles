@@ -5,6 +5,22 @@
 #
 #
 
+# Install Git and Git LFS
+
+if [[ "$OS_NAME" == "Ubuntu" ]]; then
+  sudo apt update
+  sudo apt -qq --assume-yes install curl git
+
+  curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+
+  sudo apt -qq --assume-yes install git-lfs
+
+  git lfs install
+elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
+  sudo dnf install -y git-lfs
+  git lfs install
+fi
+
 # Set global Git Config
 
 git config --global init.defaultBranch "develop"
@@ -45,16 +61,7 @@ git config --global alias.cbr "checkout -b"
 git config --global alias.lg "log --pretty=format:'%Cblue%h%Creset %s %Cgreen%an, %cr %Creset' --abbrev-commit --date=relative"
 git config --global alias.graph "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 
-if [[ "$OS_NAME" == "Ubuntu" ]]; then
-  # Ubuntu - Git LFS
-  curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
-  sudo apt -y install git-lfs
-  git lfs install
-elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
-  # Fedora - Git LFS
-  sudo dnf install -y git-lfs
-  git lfs install
-fi
+
 
 # Install and configure GitHub CLI
 

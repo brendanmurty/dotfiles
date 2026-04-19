@@ -56,7 +56,7 @@ elif [ -d "/usr/local" ]; then
   export BREW_DIR="/usr/local"
 fi
 
-if [[ -v BREW_DIR ]]; then
+if [[ "$BREW_DIR" != "" ]]; then
   export HOMEBREW_RELOCATE_BUILD_PREFIX="$BREW_DIR"
   export HOMEBREW_CELLAR="$BREW_DIR/Cellar"
   export HOMEBREW_PREFIX="$BREW_DIR"

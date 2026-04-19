@@ -11,9 +11,9 @@ DIR="$(cd "$(dirname "$0")" && pwd)"
 SCRIPTS="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
 OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
-if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
-  echo "This script requires Linux."
-  exit 0
+if [[ "$OS_NAME" == "Windows" ]]; then
+  echo "This script requires Linux or macOS."
+  exit 1
 fi
 
 touch "$HOME/.bash_aliases" "$HOME/.bash_prompt" "$HOME/.bash_profile"

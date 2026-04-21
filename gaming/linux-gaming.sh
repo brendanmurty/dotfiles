@@ -28,6 +28,7 @@ if [[ "$OS_NAME" == "Ubuntu" ]]; then
   info 'Ubuntu - Install supporting packages'
 
   sudo apt update -qq
+
   sudo apt -qq --assume-yes install \
     cmake \
     systemd \

@@ -18,9 +18,12 @@ set quiet := true
 
 alias help := list
 
-# Default to the 'list' command, run via 'run'
+# Default to the 'choose' command, if command is 'just'
+default: choose
 
-default: list
+# Show a graphical selector listing the available options and their script content
+choose:
+  @just --choose --justfile "{{ justfile() }}"
 
 # Show a list of the available 'run' commands
 list:

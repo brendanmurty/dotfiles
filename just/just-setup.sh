@@ -16,18 +16,15 @@ DIR="$(cd "$(dirname "$0")" && pwd)"
 SCRIPTS="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
 OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
-if [[ "$OS_NAME" == "Ubuntu" ]]; then
-  echo 'Requesting sudo access'
-  sudo -v
-
-  echo 'Installing supporting packages'
-  sudo apt update -qq
-  sudo apt install -qq --assume-yes fzf
+if [[ "$OS_NAME" == "Windows" ]]; then
+  echo 'Linux or macOS is required'
+  exit 1
 fi
 
-echo "Installing 'just' via Homebrew"
+echo "Installing 'fzf' and 'just' via Homebrew"
 
-brew install just
+brew reinstall fzf --force > /dev/null 2>&1
+brew reinstall just --force > /dev/null 2>&1
 
 echo "Copying 'justfile' to '$HOME/justfile'"
 

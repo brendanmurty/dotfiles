@@ -88,6 +88,13 @@
       "auto_indent": "syntax_aware",
       "tab_size": 2
     },
+    "YAML": {
+      "format_on_save": "off",
+      "auto_indent_on_paste": false,
+      "auto_indent": "none",
+      "tab_size": 2,
+      "ensure_final_newline_on_save": false,
+    }
   },
   "outline_panel": {
     "auto_fold_dirs": false,
@@ -297,9 +304,6 @@
     "show_sign_in": true,
   },
   "debugger": {
-    "button": false,
-  },
-  "notification_panel": {
     "button": false,
   },
   "terminal": {

@@ -89,9 +89,9 @@
       "tab_size": 2
     },
     "YAML": {
-      "format_on_save": "on",
+      "format_on_save": "off",
       "auto_indent_on_paste": true,
-      "auto_indent": "syntax_aware",
+      "auto_indent": "none",
       "tab_size": 2,
       "ensure_final_newline_on_save": false
     }

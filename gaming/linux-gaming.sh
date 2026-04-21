@@ -24,6 +24,7 @@ info 'Requesting Sudo'
 sudo -v
 
 if [[ "$OS_NAME" == "Ubuntu" ]]; then
+
   info 'Ubuntu - Install supporting packages'
 
   sudo apt update -qq
@@ -67,11 +68,18 @@ if [[ "$OS_NAME" == "Ubuntu" ]]; then
 
   info 'Ubuntu - Installing Steam'
 
-  sudo dpkg --add-architecture i386 >/dev/null 2>&1
+  sudo dpkg --add-architecture i386 > /dev/null 2>&1
   sudo apt update -qq
-  sudo apt -qq --assume-yes install libnvidia-gl-595:i386 >/dev/null 2>&1
-  sudo snap install steam
+  sudo apt -qq --assume-yes install libnvidia-gl-595:i386 > /dev/null 2>&1
+
+  STEAM_DEB="$HOME/Downloads/temp-steam_latest.deb"
+  rm -rf "$STEAM_DEB"
+  curl --output "$STEAM_DEB" "https://repo.steampowered.com/steam/archive/precise/steam_latest.deb" > /dev/null 2>&1
+  sudo apt -qq --assume-yes install "$STEAM_DEB"
+  rm -rf "$STEAM_DEB"
+
 elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
+
   info 'Fedora - Install supporting packages'
 
   sudo dnf install -y dkms kernel-devel kernel-headers cabextract steam-devices screenfetch
@@ -94,6 +102,7 @@ elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
   gsettings set org.gnome.desktop.interface enable-animations false
 
   if [ -n "$(lspci | grep -i nvidia)" ]; then
+
     info 'Fedora - Setup for Nvidia graphics card'
 
     sudo dnf install -y "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm"
@@ -103,6 +112,7 @@ elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
 
     sudo akmods --force
     sudo dracut --force
+
   fi
 
   info 'Fedora - Installing Steam'
@@ -113,6 +123,7 @@ elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
   info 'Fedora - Running Steam in the background to run dependency installs'
 
   nohup flatpak run com.valvesoftware.Steam &
+
 fi
 
 info 'Setup Gamemode'

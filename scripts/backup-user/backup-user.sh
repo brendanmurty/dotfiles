@@ -7,14 +7,14 @@
 #  - Saves symlinks as links, not as directories
 #  - Saves output messages to the file set in LOG_FILE
 #  - If your system's scheduler is cron, setup by running 'crontab -e', then adding a line:
-#    0 19 * * * bash /home/username/scripts/user-backup.sh
-#  - If your system's scheduler is systemd, refer to 'user-backup.service'
+#    0 19 * * * bash /home/username/scripts/backup-user.sh
+#  - If your system's scheduler is systemd, refer to 'backup-user.service'
 #
 #
 
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 
-LOG_FILE="$SCRIPT_DIR/user-backup.log"
+LOG_FILE="$SCRIPT_DIR/backup-user.log"
 LOG_FMT="+%Y-%m-%d %H:%M:%S"
 touch "$LOG_FILE"
 

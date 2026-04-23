@@ -6,7 +6,7 @@
   "current_line_highlight": "gutter",
   "status_bar": {
     "active_language_button": true,
-    "show_active_file": false,
+    "show_active_file": true,
     "active_encoding_button": "disabled",
   },
   "show_wrap_guides": true,
@@ -97,6 +97,7 @@
     }
   },
   "outline_panel": {
+    "dock": "left",
     "auto_fold_dirs": false,
   },
   "use_auto_surround": false,
@@ -142,7 +143,7 @@
   },
   "seed_search_query_from_cursor": "selection",
   "search": {
-    "button": false,
+    "button": true,
     "center_on_match": true,
   },
   "indent_guides": {
@@ -210,6 +211,8 @@
   "scroll_beyond_last_line": "vertical_scroll_margin",
   "vertical_scroll_margin": 5,
   "git_panel": {
+    "fallback_branch_name": "develop",
+    "dock": "left",
     "sort_by_path": true,
     "status_style": "label_color",
     "button": true,
@@ -248,6 +251,9 @@
   "disable_ai": false,
   "buffer_font_family": "CommitMono",
   "agent": {
+    "max_content_width": 500.0,
+    "default_width": 360.0,
+    "dock": "right",
     "show_turn_stats": true,
     "expand_terminal_card": false,
     "expand_edit_card": false,
@@ -290,13 +296,14 @@
     "button": false,
   },
   "collaboration_panel": {
+    "dock": "left",
     "button": false,
   },
   "title_bar": {
+    "show_branch_status_icon": true,
     "button_layout": "platform_default",
     "show_project_items": true,
     "show_branch_name": true,
-    "show_branch_icon": true,
     "show_menus": true,
     "show_onboarding_banner": false,
     "show_user_picture": true,
@@ -335,6 +342,7 @@
     },
   },
   "project_panel": {
+    "dock": "left",
     "scrollbar": {
       "show": "auto",
     },

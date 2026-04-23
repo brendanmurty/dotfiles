@@ -246,6 +246,7 @@
       "show_commit_summary": false,
       "delay_ms": 5000,
     },
+    "worktree_directory": ".git/zed-worktrees"
   },
   "base_keymap": "Atom",
   "disable_ai": false,

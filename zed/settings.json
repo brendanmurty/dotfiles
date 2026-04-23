@@ -251,6 +251,7 @@
   "disable_ai": false,
   "buffer_font_family": "CommitMono",
   "agent": {
+    "sidebar_side": "right",
     "max_content_width": 500.0,
     "default_width": 360.0,
     "dock": "right",
@@ -293,7 +294,7 @@
   "line_indicator_format": "long",
   "buffer_font_size": 20.0,
   "diagnostics": {
-    "button": false,
+    "button": true,
   },
   "collaboration_panel": {
     "dock": "left",
@@ -311,7 +312,7 @@
     "show_sign_in": true,
   },
   "debugger": {
-    "button": false,
+    "button": true,
   },
   "terminal": {
     "show_count_badge": false,

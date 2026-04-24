@@ -1,4 +1,5 @@
 {
+  "cli_default_open_behavior": "new_window",
   "ensure_final_newline_on_save": false,
   "zoomed_padding": false,
   "window_decorations": "client",
@@ -213,7 +214,7 @@
   "git_panel": {
     "fallback_branch_name": "develop",
     "dock": "left",
-    "sort_by_path": true,
+    "sort_by_path": false,
     "status_style": "label_color",
     "button": true,
     "file_icons": true,
@@ -253,8 +254,8 @@
   "buffer_font_family": "CommitMono",
   "agent": {
     "sidebar_side": "right",
-    "max_content_width": 500.0,
-    "default_width": 360.0,
+    "max_content_width": 750.0,
+    "default_width": 550.0,
     "dock": "right",
     "show_turn_stats": true,
     "expand_terminal_card": false,

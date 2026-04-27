@@ -48,7 +48,7 @@ fi
 
 gsettings set org.gnome.desktop.background picture-uri 'none'
 gsettings set org.gnome.desktop.background picture-uri-dark 'none'
-gsettings set org.gnome.desktop.background primary-color '#374A49'
+gsettings set org.gnome.desktop.background primary-color '#324342'
 gsettings set org.gnome.desktop.screensaver primary-color '#000000'
 
 # Interface customisations

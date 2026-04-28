@@ -109,16 +109,17 @@
     "enabled": false,
   },
   "tab_bar": {
+    "show_pinned_tabs_in_separate_row": true,
     "show": true,
     "show_nav_history_buttons": true,
-    "show_tab_bar_buttons": false,
+    "show_tab_bar_buttons": true,
   },
   "tabs": {
     "show_close_button": "hidden",
     "show_diagnostics": "errors",
     "activate_on_close": "left_neighbour",
     "close_position": "right",
-    "file_icons": false,
+    "file_icons": true,
     "git_status": true,
   },
   "inlay_hints": {
@@ -372,7 +373,7 @@
     "string"
   ],
   "active_pane_modifiers": {
-    "inactive_opacity": 0.0,
+    "inactive_opacity": 0.85,
   },
   "theme": "Ayu Dark",
   "lsp_document_colors": "inlay",

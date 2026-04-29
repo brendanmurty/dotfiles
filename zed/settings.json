@@ -109,7 +109,7 @@
     "enabled": false,
   },
   "tab_bar": {
-    "show_pinned_tabs_in_separate_row": true,
+    "show_pinned_tabs_in_separate_row": false,
     "show": true,
     "show_nav_history_buttons": true,
     "show_tab_bar_buttons": true,

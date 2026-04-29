@@ -12,8 +12,12 @@ if [ -f "$HOME/.bash_aliases" ]; then
   source "$HOME/.bash_aliases"
 fi
 
-if [ -f "$HOME/.bash_prompt_git.sh" ]; then
-  source "$HOME/.bash_prompt_git.sh"
+if [ -f "$HOME/.git_bash_prompt.sh" ]; then
+  source "$HOME/.git_bash_prompt.sh"
+fi
+
+if [ -f "$HOME/.git_bash_autocomplete.sh" ]; then
+  source "$HOME/.git_bash_autocomplete.sh"
 fi
 
 if [ -f "$HOME/.bash_prompt" ]; then

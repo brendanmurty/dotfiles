@@ -7,18 +7,22 @@
 #
 #
 
-# Blue shades - text only
+### Text only
+# (date current_dir git_branch new_line > space)
 PROMPT_COMMAND='PS1_CMD1=$(__git_ps1 " %s")';
+
+#### Colours - Blues
 PS1=$'\[$(tput setaf 241)\]\D{%I:%M:%S} \[$(tput setaf 159)\]\w\[$(tput setaf 45)\]${PS1_CMD1}\[$(tput sgr0)\]\n\[$(tput setaf 241)\]> \[$(tput sgr0)\]';
 
-# Blue shades - with unicode characters as icons
-# PROMPT_COMMAND='PS1_CMD1=$(__git_ps1 " \u22A9 %s")';
-# PS1=$'\[$(tput setaf 241)\]\u2D32 \D{%I:%M:%S} \[$(tput setaf 246)\]\u2302 \w \[$(tput setaf 159)\]${PS1_CMD1}\w\[$(tput setaf 45)\]${PS1_CMD1}\[$(tput sgr0)\]\n\[$(tput setaf 241)\]> \[$(tput sgr0)\]';
-
-# Orange shades - text only
-# PROMPT_COMMAND='PS1_CMD1=$(__git_ps1 " %s")';
+#### Colours - Oranges
 # PS1='\[$(tput setaf 243)\]\D{%I:%M:%S} \[$(tput setaf 214)\]\w\[$(tput setaf 173)\]${PS1_CMD1}\[$(tput sgr0)\]\n\[$(tput setaf 243)\]> \[$(tput sgr0)\]';
 
-# Orange shades - with unicode characters as icons
+### Text with unicode characters as icons
+# (icon date icon current_dir icon git_branch new_line > space)
 # PROMPT_COMMAND='PS1_CMD1=$(__git_ps1 " \u22A9 %s")';
+
+##### Colours - Blues
+# PS1=$'\[$(tput setaf 241)\]\u2D32 \D{%I:%M:%S} \[$(tput setaf 246)\]\u2302 \w \[$(tput setaf 159)\]${PS1_CMD1}\w\[$(tput setaf 45)\]${PS1_CMD1}\[$(tput sgr0)\]\n\[$(tput setaf 241)\]> \[$(tput sgr0)\]';
+
+##### Colours - Oranges
 # PS1=$'\[$(tput setaf 243)\]\u2D32 \D{%I:%M:%S}  \[$(tput setaf 214)\]\u29c8 \w \[$(tput setaf 173)\]${PS1_CMD1}\[$(tput sgr0)\]\n\[$(tput setaf 243)\]> \[$(tput sgr0)\]';

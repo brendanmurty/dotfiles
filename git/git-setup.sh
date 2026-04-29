@@ -5,17 +5,12 @@
 #
 #
 
-DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
+OS_NAME="$(bash $REPO_DIR/scripts/os-name.sh)"
 
-SCRIPTS="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
-OS_NAME="$(bash $SCRIPTS/os-name.sh)"
+# Setup Git Bash features
 
-# Install Git and Curl
-
-if [[ "$OS_NAME" == "Ubuntu" ]]; then
-  sudo apt update -qq
-  sudo apt -qq --assume-yes install curl git
-fi
+bash "$REPO_DIR/git/git-bash-setup.sh"
 
 # Set global Git Config
 
@@ -56,15 +51,3 @@ git config --global alias.br "branch --show-current"
 git config --global alias.cbr "checkout -b"
 git config --global alias.lg "log --pretty=format:'%Cblue%h%Creset %s %Cgreen%an, %cr %Creset' --abbrev-commit --date=relative"
 git config --global alias.graph "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
-
-# Install and configure GitHub CLI
-
-brew install gh
-
-gh auth login --git-protocol ssh --skip-ssh-key --web
-
-gh auth setup-git --hostname github.com
-
-gh config set git_protocol ssh
-gh config set editor vim
-gh config set color_labels enabled

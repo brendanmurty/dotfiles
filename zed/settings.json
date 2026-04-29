@@ -104,7 +104,7 @@
   "use_auto_surround": false,
   "use_autoclose": false,
   "preferred_line_length": 125,
-  "soft_wrap": "preferred_line_length",
+  "soft_wrap": "prefer_line",
   "drag_and_drop_selection": {
     "enabled": false,
   },

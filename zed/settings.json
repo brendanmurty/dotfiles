@@ -1,5 +1,5 @@
 {
-  "cli_default_open_behavior": "new_window",
+  "cli_default_open_behavior": "existing_window",
   "ensure_final_newline_on_save": false,
   "zoomed_padding": false,
   "window_decorations": "client",
@@ -109,7 +109,7 @@
     "enabled": false,
   },
   "tab_bar": {
-    "show_pinned_tabs_in_separate_row": false,
+    "show_pinned_tabs_in_separate_row": true,
     "show": true,
     "show_nav_history_buttons": true,
     "show_tab_bar_buttons": true,
@@ -361,7 +361,7 @@
     "hide_gitignore": false,
     "auto_fold_dirs": false,
     "indent_size": 13.0,
-    "starts_open": true,
+    "starts_open": false,
     "sort_mode": "directories_first",
     "entry_spacing": "comfortable",
     "auto_reveal_entries": true,

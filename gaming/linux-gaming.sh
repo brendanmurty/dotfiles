@@ -17,9 +17,7 @@ fi
 
 info() { echo -e "\033[36m==> Linux Gaming Setup: $1\033[0m"; }
 
-info 'Starting script'
-
-info 'Requesting Sudo'
+info 'Requesting sudo access'
 
 sudo -v
 
@@ -165,7 +163,7 @@ mkdir -p "$HOME/.cache/flatpak"
 
 flatpak update -y
 
-info 'Installing for Xbox Controllers firmware'
+info 'Installing Xbox Controllers firmware'
 
 rm -rf "$HOME/.xone"
 git clone --quiet "https://github.com/medusalix/xone" "$HOME/.xone"
@@ -173,4 +171,4 @@ cd "$HOME/.xone"
 sudo "./install.sh" --release
 sudo "xone-get-firmware.sh"
 
-info 'Done, a system reboot is required'
+info 'Finished, a system reboot is recommended'

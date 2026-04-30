@@ -334,11 +334,10 @@
     "font_size": 18.0,
     "keep_selection_on_copy": false,
     "option_as_meta": false,
-    "dock": "left",
+    "dock": "bottom",
     "default_height": 350,
     "max_scroll_history_lines": 10000,
     "working_directory": "current_file_directory",
-    "detect_venv": "off",
     "env": {
       "EDITOR": "zed --wait",
     },

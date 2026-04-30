@@ -345,13 +345,22 @@
       "program": "/bin/bash",
     },
   },
+  "hidden_files": [
+    ".Spotlight-V100",
+    ".Trashes",
+    "ehthumbs.db",
+    "Thumbs.db"
+  ],
   "project_panel": {
+    "sticky_scroll": true,
+    "git_status_indicator": true,
+    "diagnostic_badges": true,
     "dock": "left",
     "scrollbar": {
       "show": "auto",
     },
     "bold_folder_labels": false,
-    "hide_hidden": false,
+    "hide_hidden": true,
     "hide_root": true,
     "indent_guides": {
       "show": "never",
@@ -361,7 +370,7 @@
     "hide_gitignore": false,
     "auto_fold_dirs": false,
     "indent_size": 13.0,
-    "starts_open": false,
+    "starts_open": true,
     "sort_mode": "directories_first",
     "entry_spacing": "comfortable",
     "auto_reveal_entries": true,

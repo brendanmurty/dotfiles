@@ -5,8 +5,9 @@
 #
 #
 
-SCRIPTS="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
-OS_NAME="$(bash $SCRIPTS/os-name.sh)"
+REPO_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
+
+OS_NAME="$(bash $REPO_DIR/scripts/os-name.sh)"
 
 if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
   echo "This script requires Linux."

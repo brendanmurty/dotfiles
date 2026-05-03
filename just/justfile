@@ -45,8 +45,9 @@ backup:
 
 # Update system packages and apps
 update:
-  sudo apt update -qq
+  sudo apt update -y -qq
   sudo apt upgrade -y -qq
+  sudo apt full-upgrade -y -qq
   sudo snap refresh
   flatpak update -y
   brew update
@@ -54,8 +55,9 @@ update:
 
 # Clean packages and temp files
 clean:
-  sudo apt autoremove
-  sudo apt autoclean
+  sudo apt autoremove -y
+  sudo apt clean -y
+  sudo apt autoclean -y
   flatpak uninstall -y --unused --delete-data
   brew cleanup
   sudo snap set system refresh.retain=2

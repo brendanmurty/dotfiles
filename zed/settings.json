@@ -461,6 +461,7 @@
     "make": true,
     "nunjucks": true,
     "python-requirements": true,
+    "prisma": true,
     "symbols": true,
     "sql": true,
     "toml": true,

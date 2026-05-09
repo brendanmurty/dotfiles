@@ -32,6 +32,29 @@ list:
   @echo '{{ style("warning") }}Listing "just" command options from {{ justfile() }}{{ NORMAL }}'
   just --justfile "{{ justfile() }}" --list --alias-style 'right' --list-heading '' --list-prefix ''
 
+# Get the OS name
+[group('system')]
+os:
+  #!/usr/bin/env bash
+
+  OS_NAME="$(uname -s)"
+
+  if [[ "$OS_NAME" == 'Freedesktop SDK' ]]; then
+    echo "Linux"
+  elif [[ "$OS_NAME" == 'Linux' ]]; then
+    echo "$(source /etc/os-release && echo $NAME)"
+  elif [[ "$OS_NAME" == 'Darwin' ]]; then
+    echo 'macOS'
+  elif [[ "$OS_NAME" == 'CYGWIN' ]]; then
+    echo 'Windows'
+  elif [[ "$OS_NAME" == 'MINGW' ]]; then
+    echo 'Windows'
+  elif [[ "$OS_NAME" == 'MSYS_NT' ]]; then
+    echo 'Windows'
+  else
+    echo "${OS_NAME}"
+  fi
+
 # List local users
 [group('system')]
 users:

@@ -36,21 +36,21 @@ list:
 [group('system')]
 os:
   #!/usr/bin/env bash
-  OS_NAME="$(uname -s)"
+  OS_NAME="$(uname -s)";
   if [[ "$OS_NAME" == 'Freedesktop SDK' ]]; then
-    echo "Linux"
+    echo "Linux";
   elif [[ "$OS_NAME" == 'Linux' ]]; then
-    echo "$(source /etc/os-release && echo $NAME)"
+    echo "$(source /etc/os-release && echo $NAME)";
   elif [[ "$OS_NAME" == 'Darwin' ]]; then
-    echo 'macOS'
+    echo 'macOS';
   elif [[ "$OS_NAME" == 'CYGWIN' ]]; then
-    echo 'Windows'
+    echo 'Windows';
   elif [[ "$OS_NAME" == 'MINGW' ]]; then
-    echo 'Windows'
+    echo 'Windows';
   elif [[ "$OS_NAME" == 'MSYS_NT' ]]; then
-    echo 'Windows'
+    echo 'Windows';
   else
-    echo "${OS_NAME}"
+    echo "${OS_NAME}";
   fi
 
 # List local users

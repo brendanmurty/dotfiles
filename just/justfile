@@ -17,9 +17,11 @@ set quiet := true
 # Add alias commands
 
 alias help := list
+alias ls := list
+alias menu := choose
 
-# Default to the 'choose' command, if command is 'just'
-default: choose
+# Default to the 'list' command, when 'just' is run without any parameters
+default: list
 
 # Show a graphical selector listing the available options and their script content
 choose:

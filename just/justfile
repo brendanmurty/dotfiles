@@ -36,9 +36,7 @@ list:
 [group('system')]
 os:
   #!/usr/bin/env bash
-
   OS_NAME="$(uname -s)"
-
   if [[ "$OS_NAME" == 'Freedesktop SDK' ]]; then
     echo "Linux"
   elif [[ "$OS_NAME" == 'Linux' ]]; then
@@ -102,12 +100,11 @@ clean:
   sudo rm -rf ~/.cache/* || true
 
 # Info about Just and the system
-[group('status')]
+[group('info')]
 info:
   @echo "$( just --version )"
-  @echo "OS: {{os()}}"
-  @echo "Family: {{os_family()}}"
-  @echo "Architecture: {{arch()}}"
+  @echo "OS: $( just os )"
+  @echo "Architecture: {{ arch() }}"
   @echo "Process: {{ just_pid() }}"
   @echo "Binary: {{ just_executable() }}"
   @echo "Config: {{ justfile() }}"

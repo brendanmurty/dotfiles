@@ -29,8 +29,8 @@ choose:
 
 # Show a list of the available 'run' commands
 list:
-  @echo '{{ style("warning") }}Listing commands from {{ justfile() }}{{ NORMAL }}'
-  just --justfile "{{ justfile() }}" --list --alias-style 'separate' --list-heading '' --list-prefix "just "
+  @echo '{{ style("warning") }}Listing "just" command options from {{ justfile() }}{{ NORMAL }}'
+  just --justfile "{{ justfile() }}" --list --alias-style 'right' --list-heading '' --list-prefix ''
 
 # List local users
 [group('system')]

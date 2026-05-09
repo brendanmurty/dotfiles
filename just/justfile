@@ -77,27 +77,55 @@ ip:
 # Update system packages and apps
 [group('system')]
 update:
-  sudo apt update -y -qq
-  sudo apt upgrade -y -qq
-  sudo apt full-upgrade -y -qq
-  sudo snap refresh
-  flatpak update -y
-  brew update
-  brew upgrade
+  #!/usr/bin/env bash
+  OS=$(just os)
+  if [[ "$OS" == 'Ubuntu' ]]; then
+    echo '=> Ubuntu: Updating APT packages'
+    sudo apt update -y -qq
+    sudo apt upgrade -y -qq
+    sudo apt full-upgrade -y -qq
+  elif [[ "$OS" == 'EndeavourOS' ]]; then
+    echo '=> EndeavourOS: Running "eos-update"'
+    eos-update --aur
+  fi
+  if command -v snap >/dev/null 2>&1 ; then
+    echo '=> Snap: Updating packages'
+    sudo snap refresh
+  fi
+  if command -v flatpak >/dev/null 2>&1 ; then
+    echo '=> Flatpak: Updating packages'
+    flatpak update -y
+  fi
+  if command -v brew >/dev/null 2>&1 ; then
+    echo '=> Homebrew: Updating packages'
+    brew update
+    brew upgrade
+  fi
 
 # Clean packages and temp files
 [group('system')]
 clean:
-  sudo apt autoremove -y
-  sudo apt clean -y
-  sudo apt autoclean -y
-  flatpak uninstall -y --unused --delete-data
-  brew cleanup
-  sudo snap set system refresh.retain=2
-  sudo rm -rf /var/lib/snapd/cache/*
-  gio trash --empty
-  sudo rm -rf /tmp/*
-  sudo rm -rf ~/.cache/* || true
+  #!/usr/bin/env bash
+  OS=$(just os)
+  if [[ "$OS" == 'Ubuntu' ]]; then
+    echo '=> Ubuntu: Cleanup APT packages'
+    sudo apt autoremove -y
+    sudo apt clean -y
+    sudo apt autoclean -y
+  fi
+  if command -v flatpak >/dev/null 2>&1 ; then
+    echo '=> Flatpack: Cleanup packages'
+    flatpak uninstall -y --unused --delete-data
+  fi
+  if command -v brew >/dev/null 2>&1 ; then
+    echo '=> Homebrew: Cleanup packages'
+    brew cleanup
+  fi
+  if command -v snap >/dev/null 2>&1 ; then
+    echo '=> Snap: Cleanup packages'
+    sudo snap set system refresh.retain=2
+    sudo rm -rf /var/lib/snapd/cache/*
+  fi
 
 # Info about Just and the system
 [group('info')]

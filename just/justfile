@@ -33,19 +33,28 @@ list:
   just --justfile "{{ justfile() }}" --list --alias-style 'separate' --list-heading '' --list-prefix "just "
 
 # List local users
+[group('system')]
 users:
   awk -F: '$3 >= 1000 && $1 != "nobody" && $0="user: " $1 "   id: " $3 "   home: " $6' /etc/passwd
 
 # Find which processes are using a certain port number
+[group('system')]
 [positional-arguments]
 port port_number:
   sudo lsof -i ":{{ port_number }}" || echo "Port doesn't seem to be in use"
 
 # Run 'backup-user' script
+[group('tools')]
 backup:
   bash "$HOME/Dotfiles/scripts/backup-user/backup-user.sh"
 
+# Return your machine's public IP address
+[group('tools')]
+ip:
+  dig +short myip.opendns.com @resolver1.opendns.com
+
 # Update system packages and apps
+[group('system')]
 update:
   sudo apt update -y -qq
   sudo apt upgrade -y -qq
@@ -56,6 +65,7 @@ update:
   brew upgrade
 
 # Clean packages and temp files
+[group('system')]
 clean:
   sudo apt autoremove -y
   sudo apt clean -y
@@ -68,11 +78,8 @@ clean:
   sudo rm -rf /tmp/*
   sudo rm -rf ~/.cache/* || true
 
-# Return your machine's public IP address
-ip:
-  dig +short myip.opendns.com @resolver1.opendns.com
-
 # Info about Just and the system
+[group('status')]
 info:
   @echo "$( just --version )"
   @echo "OS: {{os()}}"

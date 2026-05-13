@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 #
-# Ubuntu or Fedora: Config to support Keychron keyboard harware
+# Linux: Config to support Keychron keyboard harware
 #
 #
 
@@ -9,8 +9,8 @@ THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
 SCRIPTS="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
 OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
-if [[ "$OS_NAME" != "Ubuntu" ]] && [[ "$OS_NAME" != "Fedora Linux" ]]; then
-  echo "This script requires Ubuntu or Fedora."
+if [[ "$OS_NAME" == "macOS" ]] || [[ "$OS_NAME" == "Windows" ]]; then
+  echo "This script requires Linux."
   exit 0
 fi
 

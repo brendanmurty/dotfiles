@@ -214,6 +214,7 @@
   "scroll_beyond_last_line": "vertical_scroll_margin",
   "vertical_scroll_margin": 5,
   "git_panel": {
+    "commit_title_max_length": 0,
     "fallback_branch_name": "develop",
     "dock": "left",
     "sort_by_path": false,

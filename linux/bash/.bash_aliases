@@ -28,7 +28,7 @@ alias hist-search='history | cut -c 8- | grep'
 
 ## Zed Editor
 
-if [ -f "/usr/lib/zed/zed-editor" ]; then
-  alias zed='/usr/lib/zed/zed-editor'
+if command -v zeditor >/dev/null 2>&1 ; then
+  alias zed='zeditor'
 fi
 

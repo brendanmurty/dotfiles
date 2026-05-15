@@ -70,8 +70,6 @@ if [[ "$BREW_DIR" != "" ]]; then
   export HOMEBREW_NO_ENV_HINTS=1
   export HOMEBREW_NO_ANALYTICS=1
 
-  # eval "$($BREW_DIR/bin/brew shellenv bash)"
-
   pathadd "$BREW_DIR/bin"
 
   alias brew="$BREW_DIR/bin/brew"
@@ -81,11 +79,7 @@ fi
 
 if [ -d "$HOME/.nvm" ]; then
   export NVM_DIR="$HOME/.nvm"
-
   source "$HOME/.nvm/nvm.sh" > /dev/null 2>&1
-
-  nvm install --lts > /dev/null 2>&1
-  nvm alias default "lts/*" > /dev/null 2>&1
 fi
 
 # Set suitable user level shell variables

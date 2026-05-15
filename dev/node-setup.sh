@@ -29,5 +29,5 @@ source "${HOME}/.nvm/nvm.sh"
 
 # Set a default Node version and install that to start
 
-nvm install --lts
-nvm alias default "lts/*"
+nvm install --lts > /dev/null 2>&1
+nvm alias default "lts/*" > /dev/null 2>&1

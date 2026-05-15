@@ -17,27 +17,28 @@ fi
 
 touch "$HOME/.bash_aliases" "$HOME/.bash_prompt" "$HOME/.bash_profile"
 
-# Create backups of current Bash config files for this user
+echo 'Create backups of current Bash config files for this user'
 
 cp "$HOME/.bash_aliases" "$HOME/.bash_aliases.old"
 cp "$HOME/.bash_prompt" "$HOME/.bash_prompt.old"
 cp "$HOME/.bash_profile" "$HOME/.bash_profile.old"
 cp "$HOME/.bashrc" "$HOME/.bashrc.old"
 
-# Setup Git Bash features
+echo 'Setup Git Bash features'
 
 bash "$REPO_DIR/git/git-bash-setup.sh"
 
-# Copy over the customised Bash config files
+echo 'Copy over the customised Bash config files'
 
 cp "$REPO_DIR/linux/bash/.bash_aliases" "$HOME/.bash_aliases"
 cp "$REPO_DIR/linux/bash/.bash_prompt" "$HOME/.bash_prompt"
 cp "$REPO_DIR/linux/bash/.bash_profile" "$HOME/.bash_profile"
 
-# Load the customisations in to the current terminal session.
-# Future terminal sessions will automatically load ~/.bash_profile
+echo 'Load the customisations in to the current terminal session.'
 
 echo '' >> "$HOME/.bashrc"
 echo 'source "$HOME/.bash_profile"' >> "$HOME/.bashrc"
 
 source "$HOME/.bashrc"
+
+echo 'Future terminal sessions will automatically load via ~/.bash_profile'

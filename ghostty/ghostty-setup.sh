@@ -27,10 +27,16 @@ if [[ "$OS_NAME" == "macOS" ]]; then
   mkdir -p "$CONFIG_DIR"
   CONFIG_FILE="$THIS_DIR/config.macos.ghostty"
 
+  # From https://ghostty.org/docs/install/binary#macos
   brew install --cask ghostty
 else
-  if [[ "$OS_NAME" == "Ubuntu" ]] || [[ "$OS_NAME" == "Fedora Linux" ]]; then
-    sudo snap install ghostty --classic
+  if [[ "$OS_NAME" == "Ubuntu" ]]; then
+    # From https://ghostty.org/docs/install/binary#ubuntu
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"
+  elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
+    # From https://ghostty.org/docs/install/binary#fedora
+    dnf copr enable scottames/ghostty
+    dnf install ghostty
   fi
 
   # Otherwise, assume this is a Linux machine that already has Ghostty installed

@@ -38,8 +38,8 @@ bash "$REPO_DIR/git/git-setup.sh"
 info 'Run linux/linux-flatpak.sh'
 bash "$REPO_DIR/linux/linux-flatpak.sh"
 
-info 'Run linux/gnome/gnome.sh'
-bash "$REPO_DIR/linux/gnome/gnome.sh"
+info 'Run linux/gnome/gnome-setup.sh'
+bash "$REPO_DIR/linux/gnome/gnome-setup.sh"
 
 info 'Run linux/hardware/keychron-keyboards.sh'
 bash "$REPO_DIR/linux/hardware/keychron-keyboards.sh"
@@ -53,8 +53,8 @@ bash "$REPO_DIR/scripts/homebrew/homebrew-setup-user.linux.sh"
 info 'Run just/just-setup.sh'
 bash "$REPO_DIR/just/just-setup.sh"
 
-info 'Run ghostty/ghostty.sh'
-bash "$REPO_DIR/ghostty/ghostty.sh"
+info 'Run ghostty/ghostty-setup.sh'
+bash "$REPO_DIR/ghostty/ghostty-setup.sh"
 
 info 'Run linux/vim/vim.sh'
 bash "$REPO_DIR/linux/vim/vim.sh"
@@ -65,7 +65,7 @@ bash "$REPO_DIR/linux/tmux/tmux.sh"
 info 'Run linux/linux-google-chrome.sh'
 bash "$REPO_DIR/linux/linux-google-chrome.sh"
 
-info 'Run docker/docker.sh'
-bash "$REPO_DIR/docker/docker.sh"
+info 'Run docker/docker-setup.sh'
+bash "$REPO_DIR/docker/docker-setup.sh"
 
 info 'Finished, a system reboot is recommended'

@@ -56,4 +56,5 @@ if command -v flatpak >/dev/null 2>&1 ; then
   flatpak install --reinstall -y io.missioncenter.MissionCenter
   flatpak install --reinstall -y page.tesk.Refine
   flatpak install --reinstall -y ca.desrt.dconf-editor
+  flatpak install --reinstall -y best.ellie.StartupConfiguration
 fi

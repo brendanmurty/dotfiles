@@ -23,8 +23,8 @@ sudo -v
 info "Add symlink: '$HOME/Dotfiles' > '$REPO_DIR'"
 ln -s "$REPO_DIR" "$HOME/Dotfiles"
 
-info 'Run linux/linux-ubuntu-26-fixes.sh'
-bash "$REPO_DIR/linux/linux-ubuntu-26-fixes.sh"
+info 'Run linux/linux-ubuntu.sh'
+bash "$REPO_DIR/linux/linux-ubuntu.sh"
 
 info 'Run linux/bash/bash-setup.sh'
 bash "$REPO_DIR/linux/bash/bash-setup.sh"

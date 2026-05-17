@@ -10,9 +10,11 @@ Configuration files, programs, packages and scripts I use for personal, gaming a
 - **[dev/zed](dev/zed/)**: [Zed](https://zed.dev/) setup and config
 - **[fonts](fonts/)**: Font setup scripts
 - **[gaming](gaming/)**: Gaming performance tweaks
+- **[gaming/linux-gaming.sh](gaming/linux-gaming.sh)**: Gaming on Linux setup script
 - **[homebrew](homebrew/)**: [Homebrew](https://brew.sh/) package manager setup
 - **[just](just/)**: [Just](https://github.com/casey/just) command runner setup
 - **[linux](linux/)**: Linux setup, package installers and tweaks
+- **[linux/linux-setup.sh](linux/linux-setup.sh)**: Linux setup script
 - **[obsidian](obsidian/)**: [Obsidian](https://obsidian.md/) config
 - **[scripts](scripts/)**: Bash utility scripts
 - **[storage](storage/)**: File sync systems setup, backup and organisation scripts

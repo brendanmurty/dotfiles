@@ -67,7 +67,7 @@ port port_number:
 # Run 'backup-user' script
 [group('tools')]
 backup:
-  bash "$HOME/Dotfiles/scripts/backup-user/backup-user.sh"
+  bash "$HOME/Dotfiles/storage/backup-user/backup-user.sh"
 
 # Return your machine's public IP address
 [group('tools')]

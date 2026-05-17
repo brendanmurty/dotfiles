@@ -14,20 +14,20 @@
 
 SCRIPT_DIR=$(dirname "$(realpath "$0")")
 
-LOG_FILE="$SCRIPT_DIR/rclone-gdrive-sync.log"
+LOG_FILE="$SCRIPT_DIR/google-drive-rclone.log"
 touch "$LOG_FILE"
 
-cp --update=none "$SCRIPT_DIR/gdrive-sync.env.sample" "$SCRIPT_DIR/gdrive-sync.env"
-source "$SCRIPT_DIR/gdrive-sync.env"
+cp --update=none "$SCRIPT_DIR/google-drive-rclone.env.sample" "$SCRIPT_DIR/google-drive-rclone.env"
+source "$SCRIPT_DIR/google-drive-rclone.env"
 
 # Run the rclone bisync command in the background
 
-mkdir -p "$HOME/.rclone-sync/gdrive"
+mkdir -p "$HOME/.google-drive-rclone"
 
 nohup rclone bisync \
   "$LOCAL_SYNC_DIR" \
   "$RCLONE_REMOTE_NAME:/" \
-  --workdir "$HOME/.rclone-sync/gdrive" \
+  --workdir "$HOME/.google-drive-rclone" \
   --transfers 15 \
   --ignore-listing-checksum \
   --resync-mode newer \

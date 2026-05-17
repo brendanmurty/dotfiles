@@ -4,11 +4,10 @@ Configuration files, programs, packages and scripts I use for personal, gaming a
 
 - **[dev](dev/)**: Development tools and framework helper scripts
 - **[docker](docker/)**: Docker setup and config
-- **[dropbox](dropbox/)**: Dropbox setup and helper scripts
+- **[storage](storage/)**: File sync systems setup and helper scripts
 - **[gaming](gaming/)**: Gaming performance tweaks
 - **[ghostty](ghostty/)**: [Ghostty](https://github.com/ghostty-org/ghostty) setup and config
 - **[git](git/)**: [Git](https://git-scm.com/) setup and config
-- **[google-drive](google-drive/)**: Google Drive and Google Photos helper scripts
 - **[just](just/)**: [Just](https://github.com/casey/just) command runner setup
 - **[linux](linux/)**: Linux setup, package installers and tweaks
 - **[obsidian](obsidian/)**: [Obsidian](https://obsidian.md/) config

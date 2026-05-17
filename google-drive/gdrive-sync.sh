@@ -17,8 +17,8 @@ SCRIPT_DIR=$(dirname "$(realpath "$0")")
 LOG_FILE="$SCRIPT_DIR/rclone-gdrive-sync.log"
 touch "$LOG_FILE"
 
-cp --update=none "$SCRIPT_DIR/rclone-gdrive-sync.env.sample" "$SCRIPT_DIR/rclone-gdrive-sync.env"
-source "$SCRIPT_DIR/rclone-gdrive-sync.env"
+cp --update=none "$SCRIPT_DIR/gdrive-sync.env.sample" "$SCRIPT_DIR/gdrive-sync.env"
+source "$SCRIPT_DIR/gdrive-sync.env"
 
 # Run the rclone bisync command in the background
 

@@ -111,8 +111,8 @@
   },
   "use_auto_surround": false,
   "use_autoclose": false,
-  "preferred_line_length": 125,
-  "soft_wrap": "prefer_line",
+  "preferred_line_length": 100,
+  "soft_wrap": "editor_width",
   "drag_and_drop_selection": {
     "enabled": false,
   },
@@ -206,7 +206,7 @@
     "selected_symbol": true,
     "diagnostics": "error",
     "axes": {
-      "horizontal": true,
+      "horizontal": false,
       "vertical": true,
     },
   },

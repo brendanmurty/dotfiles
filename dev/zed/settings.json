@@ -84,6 +84,13 @@
         "!just-lsp"
       ]
     },
+    "Markdown": {
+      "format_on_save": "off",
+      "auto_indent_on_paste": false,
+      "auto_indent": "none",
+      "tab_size": 2,
+      "ensure_final_newline_on_save": false,
+    },
     "Python": {
       "format_on_save": "on",
       "auto_indent_on_paste": true,
@@ -92,7 +99,7 @@
     },
     "YAML": {
       "format_on_save": "off",
-      "auto_indent_on_paste": true,
+      "auto_indent_on_paste": false,
       "auto_indent": "none",
       "tab_size": 2,
       "ensure_final_newline_on_save": false
@@ -383,22 +390,44 @@
     "string"
   ],
   "active_pane_modifiers": {
-    "inactive_opacity": 0.85,
+    "inactive_opacity": 1.0,
   },
-  "theme": "Ayu Dark",
   "lsp_document_colors": "inlay",
+  "theme": "Ayu Dark",
   "theme_overrides": {
     "Ayu Dark": {
       "syntax": {
-        "property": {
-          "color": "#E6E6E6FF",
-          "font_style": null,
-          "font_weight": null,
-        },
         "string": {
           "color": "#23C5B0FF",
-          "font_style": null,
-          "font_weight": null,
+          "font_style": "normal"
+        },
+        "text": {
+          "font_style": "normal"
+        },
+        "link_text": {
+          "font_style": "normal"
+        },
+        "number": {
+          "font_style": "normal"
+        },
+        "boolean": {
+          "font_style": "normal"
+        },
+        "constant": {
+          "font_style": "normal"
+        },
+        "keyword": {
+          "font_style": "normal"
+        },
+        "operator": {
+          "font_style": "normal"
+        },
+        "preproc": {
+          "font_style": "normal"
+        },
+        "property": {
+          "color": "#E6E6E6FF",
+          "font_style": "normal"
         },
       },
       "border": "#363636FF",

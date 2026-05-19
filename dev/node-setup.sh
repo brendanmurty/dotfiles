@@ -9,25 +9,26 @@ SCRIPTS="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
 OS_NAME="$(bash $SCRIPTS/os-name.sh)"
 
 if [[ "$OS_NAME" == "Windows" ]]; then
-  echo "This script requires Linux or macOS."
-  exit 0
+  echo 'Please install Node manually - https://nodejs.org/'
+  exit 1
 fi
 
-# Setup the NVM directory
+echo 'Setup the NVM directory'
 
 export NVM_DIR="${HOME}/.nvm"
 rm -rf "$NVM_DIR"
 mkdir -p "$NVM_DIR"
 
-# Install NVM, command from https://github.com/nvm-sh/nvm?tab=readme-ov-file#git-install
+echo 'Install NVM'
 
+# Command from https://github.com/nvm-sh/nvm?tab=readme-ov-file#git-install
 git clone --quiet "https://github.com/nvm-sh/nvm.git" "$NVM_DIR"
 
-# Load NVM
+echo 'Load NVM'
 
 source "${HOME}/.nvm/nvm.sh"
 
-# Set a default Node version and install that to start
+echo 'Default to Node LTS version and install that'
 
 nvm install --lts > /dev/null 2>&1
 nvm alias default "lts/*" > /dev/null 2>&1

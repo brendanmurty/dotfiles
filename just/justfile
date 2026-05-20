@@ -84,7 +84,7 @@ update:
     echo '=> Fedora: Requesting sudo';
     sudo -v;
     echo '=> Fedora: Updating packages';
-    dnf upgrade --refresh -y >/dev/null 2>&1;
+    sudo dnf upgrade --refresh -y >/dev/null 2>&1;
     echo '=> Fedora: Updating firmware';
     sudo fwupdmgr get-updates >/dev/null 2>&1;
     sudo fwupdmgr update -y >/dev/null 2>&1;

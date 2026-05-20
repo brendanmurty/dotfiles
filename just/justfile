@@ -80,7 +80,17 @@ ip:
 update:
   #!/usr/bin/env bash
   OS=$(just os);
-  if [[ "$OS" == 'Ubuntu' ]]; then
+  if [[ "$OS" == 'Fedora' ]]; then
+    echo '=> Fedora: Requesting sudo';
+    sudo -v;
+    echo '=> Fedora: Updating packages';
+    dnf upgrade --refresh -y >/dev/null 2>&1;
+    echo '=> Fedora: Updating firmware';
+    sudo fwupdmgr get-updates >/dev/null 2>&1;
+    sudo fwupdmgr update -y >/dev/null 2>&1;
+  elif [[ "$OS" == 'Ubuntu' ]]; then
+    echo '=> Ubuntu: Requesting sudo';
+    sudo -v;
     echo '=> Ubuntu: Updating APT packages';
     sudo apt update -y -qq;
     sudo apt upgrade -y -qq;
@@ -91,16 +101,16 @@ update:
   fi
   if command -v snap >/dev/null 2>&1 ; then
     echo '=> Snap: Updating packages';
-    sudo snap refresh;
+    sudo snap refresh >/dev/null 2>&1;
   fi
   if command -v flatpak >/dev/null 2>&1 ; then
     echo '=> Flatpak: Updating packages';
-    flatpak update -y;
+    flatpak update -y >/dev/null 2>&1;
   fi
   if command -v brew >/dev/null 2>&1 ; then
     echo '=> Homebrew: Updating packages';
-    brew update;
-    brew upgrade;
+    brew update >/dev/null 2>&1;
+    brew upgrade >/dev/null 2>&1;
   fi
 
 # Clean packages and temp files
@@ -108,24 +118,30 @@ update:
 clean:
   #!/usr/bin/env bash
   OS=$(just os);
-  if [[ "$OS" == 'Ubuntu' ]]; then
+  if [[ "$OS" == 'Fedora' ]]; then
+    echo '=> Fedora: Requesting sudo';
+    sudo -v;
+    echo '=> Fedora: Cleanup packages';
+    sudo dnf autoremove -y >/dev/null 2>&1;
+    sudo dnf clean all >/dev/null 2>&1;
+  elif [[ "$OS" == 'Ubuntu' ]]; then
     echo '=> Ubuntu: Cleanup APT packages';
-    sudo apt autoremove -y;
-    sudo apt clean -y;
-    sudo apt autoclean -y;
+    sudo apt autoremove -y >/dev/null 2>&1;
+    sudo apt clean -y >/dev/null 2>&1;
+    sudo apt autoclean -y >/dev/null 2>&1;
   fi
   if command -v flatpak >/dev/null 2>&1 ; then
-    echo '=> Flatpack: Cleanup packages';
-    flatpak uninstall -y --unused --delete-data;
+    echo '=> Flatpak: Cleanup packages';
+    flatpak uninstall -y --unused --delete-data >/dev/null 2>&1;
   fi
   if command -v brew >/dev/null 2>&1 ; then
     echo '=> Homebrew: Cleanup packages';
-    brew cleanup;
+    brew cleanup >/dev/null 2>&1;
   fi
   if command -v snap >/dev/null 2>&1 ; then
     echo '=> Snap: Cleanup packages';
-    sudo snap set system refresh.retain=2;
-    sudo rm -rf /var/lib/snapd/cache/*;
+    sudo snap set system refresh.retain=2 >/dev/null 2>&1;
+    sudo rm -rf '/var/lib/snapd/cache/*' >/dev/null 2>&1;
   fi
 
 # Info about Just and the system

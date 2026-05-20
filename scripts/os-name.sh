@@ -10,7 +10,7 @@ if [[ "$OS_NAME" == 'Freedesktop SDK' ]]; then
   echo 'Linux';
 elif [[ "$OS_NAME" == 'Linux' ]]; then
   DISTRO_NAME="$(source /etc/os-release && echo $NAME)";
-  if [[ "$DISTRO_NAME" == 'Fedora' ]]; then
+  if [[ "$DISTRO_NAME" == 'Fedora Linux' ]]; then
     echo 'Fedora';
   else
     echo "${DISTRO_NAME}";

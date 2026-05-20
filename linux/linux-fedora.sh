@@ -16,7 +16,7 @@ fi
 
 echo 'Fedora: Install required packages'
 
-sudo dnf install -y git vim curl
+sudo dnf install -y git vim curl >/dev/null 2>&1
 
 if command -v flatpak >/dev/null 2>&1 ; then
   echo 'Fedora: Installing Flatpak apps'

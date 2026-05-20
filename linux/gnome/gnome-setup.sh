@@ -29,13 +29,21 @@ echo 'Installing supporting packages for Gnome Shell Extensions'
 if [[ "$OS_NAME" == "Ubuntu" ]]; then
   sudo apt install -y gnome-browser-connector >/dev/null 2>&1
 elif [[ "$OS_NAME" == "Fedora" ]]; then
-  sudo dnf install -y gnome-browser-connector >/dev/null 2>&1
+  sudo dnf install -y gnome-browser-connector python3 pipx >/dev/null 2>&1
+  pipx install --force gnome-extensions-cli --system-site-packages >/dev/null 2>&1
 fi
 
-# Helper function to check for a Dconf schema
+# Helper function to check if a Dconf Settings Schema exists
 
 has_schema () {
-  return gsettings list-schemas | grep -qw "$1"
+  DCONF_SCHEMA_FOUND=$(gsettings list-schemas | grep -qw "$1");
+  if [[ -n "$DCONF_SCHEMA_FOUND" ]]; then
+    # Schema found, return 0 for "no error"
+    return 0
+  else
+    # Schema not found, return 1 for "error"
+    return 1
+  fi
 }
 
 # Theme

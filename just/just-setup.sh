@@ -21,15 +21,16 @@ if [[ "$OS_NAME" == "Windows" ]]; then
   exit 1
 fi
 
-echo "Installing 'fzf' and 'just' via Homebrew"
+echo "Just: Installing 'fzf' and 'just' via Homebrew"
 
 brew reinstall fzf --force >/dev/null 2>&1
 brew reinstall just --force >/dev/null 2>&1
 
-echo "Adding symlink: '$HOME/justfile' > '$DIR/justfile'"
-
 if [ -f "$HOME/justfile" ]; then
-  cp "$HOME/justfile" "$HOME/justfile.old"
+  echo "Just: Moving '$HOME/justfile' to '$HOME/justfile.old'"
+  mv "$HOME/justfile" "$HOME/justfile.old"
 fi
+
+echo "Just: Adding symlink - '$HOME/justfile' > '$DIR/justfile'"
 
 ln -s "$DIR/justfile" "$HOME/justfile"

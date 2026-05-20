@@ -42,6 +42,10 @@ gnome-extensions-cli install "arcmenu@arcmenu.com" >/dev/null 2>&1
 gnome-extensions-cli install "dash-to-panel@jderose9.github.com" >/dev/null 2>&1
 gnome-extensions-cli install "just-perfection-desktop@just-perfection" >/dev/null 2>&1
 
+if [[ "$OS_NAME" == "Fedora" ]]; then
+  gnome-extensions-cli install "accent-directories@taiwbi.com" >/dev/null 2>&1
+fi
+
 # Helper function to check if a Dconf Settings Schema exists
 has_schema () {
   DCONF_SCHEMA_FOUND=$(gsettings list-schemas | grep -qw "$1");

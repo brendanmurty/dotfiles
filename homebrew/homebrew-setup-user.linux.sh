@@ -39,6 +39,6 @@ eval "$($BREW_DIR/bin/brew shellenv bash)"
 
 brew install gcc
 
-if [[ "$OS_NAME" == "Fedora Linux" ]]; then
+if [[ "$OS_NAME" == "Fedora" ]]; then
   sudo dnf group install -y development-tools
 fi

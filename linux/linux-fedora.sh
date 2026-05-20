@@ -9,7 +9,7 @@ REPO_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
 
 OS_NAME="$(bash $REPO_DIR/scripts/os-name.sh)"
 
-if [[ "$OS_NAME" != "Fedora Linux" ]]; then
+if [[ "$OS_NAME" != "Fedora" ]]; then
   echo "This script requires Fedora."
   exit 0
 fi

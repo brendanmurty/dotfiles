@@ -24,7 +24,7 @@ echo '==> Installing dependencies'
 
 if [[ "$OS_NAME" == "Ubuntu" ]]; then
   sudo apt -qq --assume-yes install python3 python-is-python3 python3-pyqt5 pipx
-elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
+elif [[ "$OS_NAME" == "Fedora" ]]; then
   sudo dnf install -y python3 python3-qt5 pipx
 fi
 

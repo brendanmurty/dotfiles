@@ -23,7 +23,7 @@ sudo -v
 
 if [[ "$OS_NAME" == "Ubuntu" ]]; then
   sudo apt install -y gnome-browser-connector
-elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
+elif [[ "$OS_NAME" == "Fedora" ]]; then
   sudo dnf install -y gnome-browser-connector
 fi
 

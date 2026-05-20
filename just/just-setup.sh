@@ -23,12 +23,13 @@ fi
 
 echo "Installing 'fzf' and 'just' via Homebrew"
 
-brew reinstall fzf --force > /dev/null 2>&1
-brew reinstall just --force > /dev/null 2>&1
+brew reinstall fzf --force >/dev/null 2>&1
+brew reinstall just --force >/dev/null 2>&1
 
-echo "Copying 'justfile' to '$HOME/justfile'"
+echo "Adding symlink: '$HOME/justfile' > '$DIR/justfile'"
 
-touch "$HOME/justfile"
-cp "$HOME/justfile" "$HOME/justfile.old"
+if [ -f "$HOME/justfile" ]; then
+  cp "$HOME/justfile" "$HOME/justfile.old"
+fi
 
-cp "$DIR/justfile" "$HOME/justfile"
+ln -s "$DIR/justfile" "$HOME/justfile"

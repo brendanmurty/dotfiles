@@ -33,7 +33,7 @@ else
   if [[ "$OS_NAME" == "Ubuntu" ]]; then
     # From https://ghostty.org/docs/install/binary#ubuntu
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"
-  elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
+  elif [[ "$OS_NAME" == "Fedora" ]]; then
     # From https://ghostty.org/docs/install/binary#fedora
     sudo dnf copr enable scottames/ghostty
     sudo dnf install ghostty -y

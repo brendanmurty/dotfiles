@@ -77,7 +77,7 @@ if [[ "$OS_NAME" == "Ubuntu" ]]; then
   sudo apt -qq --assume-yes install "$STEAM_DEB"
   rm -rf "$STEAM_DEB"
 
-elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
+elif [[ "$OS_NAME" == "Fedora" ]]; then
 
   info 'Fedora - Install supporting packages'
 

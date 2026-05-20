@@ -14,43 +14,43 @@ if [[ "$OS_NAME" != "Ubuntu" ]]; then
   exit 0
 fi
 
-echo 'Requesting sudo'
+echo 'Ubuntu: Requesting sudo'
 
 sudo -v
 
-echo 'Fix broken system package dependencies'
+echo 'Ubuntu: Fix broken system package dependencies'
 
 sudo dpkg --configure -a
 
-echo 'Continue interupted package installs'
+echo 'Ubuntu: Continue interupted package installs'
 
 sudo apt-get install -f
 
-echo 'Update package lists'
+echo 'Ubuntu: Update package lists'
 
 sudo apt update -qq
 
-echo 'Cleanup packages'
+echo 'Ubuntu: Cleanup packages'
 
 sudo apt autoremove -y
 sudo apt autoclean
 sudo apt clean
 
-echo 'Install the Software & Updates app'
+echo 'Ubuntu: Install the Software & Updates app'
 
 sudo apt -qq --assume-yes install \
   software-properties-gtk
 
-echo 'Prompt Ubuntu Pro setup process'
+echo 'Ubuntu: Prompt Ubuntu Pro setup process'
 
 sudo pro attach
 
-echo 'Fix Security Center display of Ubuntu Pro status'
+echo 'Ubuntu: Fix Security Center display of Ubuntu Pro status'
 
 sudo snap connect desktop-security-center:system-observe
 
 if command -v flatpak >/dev/null 2>&1 ; then
-  echo 'Installing Flatpak apps'
+  echo 'Ubuntu: Installing Flatpak apps'
 
   flatpak install --reinstall -y com.mattjakeman.ExtensionManager
   flatpak install --reinstall -y io.missioncenter.MissionCenter

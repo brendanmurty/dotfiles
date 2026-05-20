@@ -23,6 +23,9 @@ sudo -v
 info "Add symlink: '$HOME/Dotfiles' > '$REPO_DIR'"
 ln -s "$REPO_DIR" "$HOME/Dotfiles"
 
+info 'Run linux/linux-fedora.sh'
+bash "$REPO_DIR/linux/linux-fedora.sh"
+
 info 'Run linux/linux-ubuntu.sh'
 bash "$REPO_DIR/linux/linux-ubuntu.sh"
 

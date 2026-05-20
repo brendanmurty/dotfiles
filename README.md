@@ -19,3 +19,4 @@ Configuration files, programs, packages and scripts I use for personal, gaming a
 - **[scripts](scripts/)**: Bash utility scripts
 - **[storage](storage/)**: File sync systems setup, backup and organisation scripts
 - **[storage/backup-user](storage/backup-user/)**: Backup Linux user data
+- **[setup.sh](setup.sh)**: Interactive setup script

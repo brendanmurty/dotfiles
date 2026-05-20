@@ -14,9 +14,9 @@ if [[ "$OS_NAME" == "macOS" ]] || [[ "$OS_NAME" == "Windows" ]]; then
   exit 0
 fi
 
-# Allow customisation of keys, lighting and firmware via https://launcher.keychron.com/
+echo 'Keychron Keyboards: Allow customisation of keys, lighting and firmware via https://launcher.keychron.com/'
 
-sudo cp "$THIS_DIR/keychron-keyboards.rules"  "/etc/udev/rules.d/92-keychron-keyboards.rules"
+sudo cp "$THIS_DIR/keychron-keyboards.rules" "/etc/udev/rules.d/92-keychron-keyboards.rules"
 
 sudo udevadm control --reload-rules
 sudo udevadm trigger

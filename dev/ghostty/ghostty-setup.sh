@@ -35,8 +35,8 @@ else
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"
   elif [[ "$OS_NAME" == "Fedora Linux" ]]; then
     # From https://ghostty.org/docs/install/binary#fedora
-    dnf copr enable scottames/ghostty
-    dnf install ghostty
+    sudo dnf copr enable scottames/ghostty
+    sudo dnf install ghostty -y
   fi
 
   # Otherwise, assume this is a Linux machine that already has Ghostty installed

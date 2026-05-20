@@ -10,7 +10,7 @@ OS_NAME="$(bash $REPO_DIR/scripts/os-name.sh)"
 
 # Setup Git Bash features
 
-bash "$REPO_DIR/git/git-bash-setup.sh"
+bash "$REPO_DIR/dev/git/git-bash-setup.sh"
 
 # Set global Git Config
 

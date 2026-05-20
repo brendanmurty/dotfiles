@@ -10,7 +10,7 @@ DIR="$(cd "$(dirname "$0")" && pwd)"
 OS_NAME="$(bash $DIR/scripts/os-name.sh)"
 
 info() { echo -e "\033[36mSetup $OS_NAME: $1\033[0m"; }
-warning() { echo -e "\033[33mSetup $OS_NAME: $1\033[0m"; }
+warn() { echo -e "\033[33mSetup $OS_NAME: $1\033[0m"; }
 error() { echo -e "\033[31mSetup $OS_NAME: $1\033[0m"; }
 
 if [[ "$OS_NAME" == "Windows" ]]; then
@@ -18,26 +18,40 @@ if [[ "$OS_NAME" == "Windows" ]]; then
   exit 1
 fi
 
-info 'Homebrew package manager'
-
-read -n 1 -rp "Install Homebrew to the default location? (y/n) " brew
-echo ''
-
-if [[ "$brew" == "y" ]]; then
-  bash "$DIR/homebrew/homebrew-setup.sh"
+if [ ! -d "$HOME/Dotfiles" ]; then
+  info "Setup symlink: '$HOME/Dotfiles' > '$REPO_DIR'"
+  ln -s "$REPO_DIR" "$HOME/Dotfiles"
 else
-  read -n 1 -rp "Install Homebrew to '$HOME/.brew'? (y/n) " brew_user
+  warn "Skipped symlink setup as '$HOME/Dotfiles' already exists"
+fi
+
+if command -v brew >/dev/null 2>&1 ; then
+  warn 'Homebrew package manager already installed'
+else
+  info 'Homebrew package manager setup'
+
+  read -n 1 -rp "Install Homebrew to the default location? (y/n) " brew
   echo ''
 
-  if [[ "$brew_user" == "y" ]]; then
-    if [[ "$OS_NAME" == "macOS" ]]; then
-      bash "$DIR/homebrew/homebrew-setup-user.macos.sh"
-    else
-      bash "$DIR/homebrew/homebrew-setup-user.linux.sh"
-    fi
+  if [[ "$brew" == "y" ]]; then
+    bash "$DIR/homebrew/homebrew-setup.sh"
   else
-    error 'Homebrew is required for various scripts'
-    exit 1
+    read -n 1 -rp "Install Homebrew to '$HOME/.brew'? (y/n) " brew_user
+    echo ''
+
+    if [[ "$brew_user" == "y" ]]; then
+      if [[ "$OS_NAME" == "macOS" ]]; then
+        bash "$DIR/homebrew/homebrew-setup-user.macos.sh"
+      else
+        bash "$DIR/homebrew/homebrew-setup-user.linux.sh"
+      fi
+    else
+      error 'Homebrew is required for various scripts'
+      exit 1
+    fi
   fi
 fi
 
+info 'Just command runner setup'
+
+bash "$DIR/just/just-setup.sh"

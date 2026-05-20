@@ -21,10 +21,15 @@ if [[ "$OS_NAME" == "Windows" ]]; then
   exit 1
 fi
 
-echo "Just: Installing 'fzf' and 'just' via Homebrew"
+if command -v brew >/dev/null 2>&1 ; then
+  echo 'Just: Installing via Homebrew'
 
-brew reinstall fzf --force >/dev/null 2>&1
-brew reinstall just --force >/dev/null 2>&1
+  brew reinstall fzf --force >/dev/null 2>&1
+  brew reinstall just --force >/dev/null 2>&1
+else
+  echo 'Just: Please install Just manually - https://github.com/casey/just#installation'
+  exit 1
+fi
 
 if [ -f "$HOME/justfile" ]; then
   echo "Just: Moving '$HOME/justfile' to '$HOME/justfile.old'"

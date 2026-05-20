@@ -15,22 +15,27 @@ if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
   exit 0
 fi
 
-# Request sudo access
+if [[ -z $(pgrep -x "gnome-shell") ]]; then
+  echo "Cancelled, Gnome Shell isn't running."
+  exit 0
+fi
+
+echo 'Requesting sudo access'
 
 sudo -v
 
-# Install supporting packages for Gnome Shell Extensions
+echo 'Installing supporting packages for Gnome Shell Extensions'
 
 if [[ "$OS_NAME" == "Ubuntu" ]]; then
-  sudo apt install -y gnome-browser-connector
+  sudo apt install -y gnome-browser-connector >/dev/null 2>&1
 elif [[ "$OS_NAME" == "Fedora" ]]; then
-  sudo dnf install -y gnome-browser-connector
+  sudo dnf install -y gnome-browser-connector >/dev/null 2>&1
 fi
 
 # Helper function to check for a Dconf schema
 
 has_schema () {
-  return gsettings list-schemas | grep "$1" >/dev/null 2>&1
+  return gsettings list-schemas | grep -qw "$1"
 }
 
 # Theme
@@ -169,7 +174,6 @@ gsettings set org.gnome.nautilus.preferences show-directory-item-counts 'local-o
 gsettings set org.gnome.nautilus.preferences date-time-format 'simple'
 gsettings set org.gnome.nautilus.compression default-compression-format 'zip'
 gsettings set org.gnome.nautilus.preferences search-filter-time-type 'last_modified'
-gsettings set org.gnome.nautilus.preferences install-mime-activation true
 gsettings set org.gnome.nautilus.preferences open-folder-on-dnd-hover false
 gsettings set org.gnome.nautilus.preferences click-policy 'double'
 gsettings set org.gnome.nautilus.preferences show-hidden-files true
@@ -279,7 +283,9 @@ gsettings set org.gnome.TextEditor wrap-text true
 
 # App: Tweaks
 
-gsettings set org.gnome.tweaks show-extensions-notice false
+if has_schema "org.gnome.tweaks"; then
+  gsettings set org.gnome.tweaks show-extensions-notice false
+fi
 
 # App: Settings
 

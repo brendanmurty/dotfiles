@@ -21,9 +21,9 @@ sudo dnf install -y git vim curl
 if command -v flatpak >/dev/null 2>&1 ; then
   echo 'Fedora: Installing Flatpak apps'
 
-  flatpak install --reinstall -y flathub com.mattjakeman.ExtensionManager
-  flatpak install --reinstall -y flathub io.missioncenter.MissionCenter
-  flatpak install --reinstall -y flathub page.tesk.Refine
-  flatpak install --reinstall -y flathub ca.desrt.dconf-editor
-  flatpak install --reinstall -y flathub best.ellie.StartupConfiguration
+  flatpak install --reinstall -y flathub com.mattjakeman.ExtensionManager >/dev/null 2>&1
+  flatpak install --reinstall -y flathub io.missioncenter.MissionCenter >/dev/null 2>&1
+  flatpak install --reinstall -y flathub page.tesk.Refine >/dev/null 2>&1
+  flatpak install --reinstall -y flathub ca.desrt.dconf-editor >/dev/null 2>&1
+  flatpak install --reinstall -y flathub best.ellie.StartupConfiguration >/dev/null 2>&1
 fi

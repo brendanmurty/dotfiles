@@ -9,13 +9,24 @@ DIR="$(cd "$(dirname "$0")" && pwd)"
 
 OS_NAME="$(bash $DIR/scripts/os-name.sh)"
 
-info() { echo -e "\033[36mSetup $OS_NAME: $1\033[0m"; }
-warn() { echo -e "\033[33mSetup $OS_NAME: $1\033[0m"; }
-error() { echo -e "\033[31mSetup $OS_NAME: $1\033[0m"; }
+info() { echo -e "\033[36m$1\033[0m"; }
+warn() { echo -e "\033[33m$1\033[0m"; }
+error() { echo -e "\033[31m$1\033[0m"; }
 
 if [[ "$OS_NAME" == "Windows" ]]; then
   error 'These scripts require either Linux or macOS.'
   exit 1
+fi
+
+warn "The scripts used here will make changes to your system."
+warn "Please review the content of the scripts before running them."
+
+read -n 1 -rp "Continue? (y/n) " continue_setup
+echo ''
+
+if [[ "$continue_setup" != "y" ]]; then
+  info 'Cancelled'
+  exit 0
 fi
 
 if [ ! -d "$HOME/Dotfiles" ]; then

@@ -65,6 +65,10 @@ if [[ "$OS_NAME" == "Ubuntu" ]]; then
 
   gsettings set org.gnome.desktop.interface enable-animations false
 
+  info 'Ubuntu - Set non-responding app warning timeout to 1 min'
+
+  gsettings set org.gnome.mutter check-alive-timeout 60000
+
   info 'Ubuntu - Installing Steam'
 
   sudo dpkg --add-architecture i386 > /dev/null 2>&1
@@ -99,6 +103,10 @@ elif [[ "$OS_NAME" == "Fedora" ]]; then
   info 'Fedora - Disable Gnome UI animations'
 
   gsettings set org.gnome.desktop.interface enable-animations false
+
+  info 'Fedora - Set non-responding app warning timeout to 1 min'
+
+  gsettings set org.gnome.mutter check-alive-timeout 60000
 
   if [ -n "$(lspci | grep -i nvidia)" ]; then
 

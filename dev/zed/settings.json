@@ -191,7 +191,7 @@
   "toolbar": {
     "breadcrumbs": true,
     "code_actions": true,
-    "quick_actions": false,
+    "quick_actions": true,
     "selections_menu": true,
     "agent_review": true,
   },

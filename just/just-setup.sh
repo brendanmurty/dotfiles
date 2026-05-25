@@ -39,3 +39,13 @@ fi
 echo "Just: Adding symlink - '$HOME/justfile' > '$DIR/justfile'"
 
 ln -s "$DIR/justfile" "$HOME/justfile"
+
+echo "Just: Adding 'ujust' alias to Bash"
+
+if [ -f "$HOME/.bash_aliases" ]; then
+  echo "alias ujust='just --justfile $HOME/justfile'" >> "$HOME/.bash_aliases"
+  source "$HOME/.bash_aliases"
+else
+  echo "alias ujust='just --justfile $HOME/justfile'" >> "$HOME/.bashrc"
+  source "$HOME/.bashrc"
+fi

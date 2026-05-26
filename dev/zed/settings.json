@@ -1,6 +1,6 @@
 {
   "restore_on_file_reopen": false,
-  "cli_default_open_behavior": "existing_window",
+  "cli_default_open_behavior": "new_window",
   "ensure_final_newline_on_save": false,
   "zoomed_padding": false,
   "window_decorations": "client",

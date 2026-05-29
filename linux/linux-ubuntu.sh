@@ -22,7 +22,7 @@ echo 'Ubuntu: Fix broken system package dependencies'
 
 sudo dpkg --configure -a
 
-echo 'Ubuntu: Continue interupted package installs'
+echo 'Ubuntu: Continue interrupted package installs'
 
 sudo apt-get install -f
 
@@ -36,9 +36,10 @@ sudo apt autoremove -y
 sudo apt autoclean
 sudo apt clean
 
-echo 'Ubuntu: Install the Software & Updates app'
+echo 'Ubuntu: Install system software management apps'
 
 sudo apt -qq --assume-yes install \
+  gnome-software \
   software-properties-gtk
 
 echo 'Ubuntu: Prompt Ubuntu Pro setup process'

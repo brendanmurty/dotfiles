@@ -18,5 +18,7 @@ elif [[ "$OS_NAME" == "Linux" ]]; then
 fi
 
 echo 'Homebrew: Installing to default location'
-
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+echo 'Installing Bold Brew (bbrew)'
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Valkyrie00/bold-brew/main/install.sh)"

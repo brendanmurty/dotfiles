@@ -37,8 +37,14 @@ sudo rm -rf "$BREW_DIR_DEFAULT"
 
 eval "$($BREW_DIR/bin/brew shellenv bash)"
 
+echo 'Installing GCC via Homebrew'
+
 brew install gcc
 
 if [[ "$OS_NAME" == "Fedora" ]]; then
+  echo 'Fedora: Installing development-tools package'
   sudo dnf group install -y development-tools
 fi
+
+echo 'Installing Bold Brew (bbrew)'
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Valkyrie00/bold-brew/main/install.sh)"

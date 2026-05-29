@@ -65,18 +65,18 @@ echo 'Applying customised Gnome Settings'
 
 if [[ "$OS_NAME" == "Ubuntu" ]]; then
   gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-  gsettings set org.gnome.desktop.interface icon-theme 'Yaru-prussiangreen-dark'
-  gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-prussiangreen-dark'
+  gsettings set org.gnome.desktop.interface icon-theme 'Yaru-sage-dark'
+  gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-sage-dark'
   gsettings set org.gnome.desktop.interface cursor-theme 'Yaru'
   gsettings set org.gnome.desktop.interface cursor-size 24
-  gsettings set org.gnome.desktop.interface accent-color 'teal'
+  gsettings set org.gnome.desktop.interface accent-color 'slate'
 fi
 
 # Desktop and screensaver
 
 gsettings set org.gnome.desktop.background picture-uri 'none'
 gsettings set org.gnome.desktop.background picture-uri-dark 'none'
-gsettings set org.gnome.desktop.background primary-color '#192929'
+gsettings set org.gnome.desktop.background primary-color '#333E35'
 gsettings set org.gnome.desktop.screensaver primary-color '#000000'
 
 # Interface customisations

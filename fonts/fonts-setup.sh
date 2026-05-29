@@ -34,10 +34,18 @@ elif [[ "$OS_NAME" == "Ubuntu" ]]; then
 
   echo 'Ubuntu: Installing Google Noto Emoji fonts'
   sudo apt -qq --assume-yes install fonts-noto-color-emoji >/dev/null 2>&1
+
+  FONT_CONF_DIR="$HOME/.config/fontconfig/conf.d"
+  mkdir -p "$FONT_CONF_DIR"
+
+  if [[ ! -f "$FONT_CONF_DIR/01-emoji.conf" ]]; then
+    echo 'Ubuntu: Creating font config file for Noto Emoji'
+    cp "$DIR/emoji-fonts.conf" "$FONT_CONF_DIR/01-emoji.conf"
+  fi
 fi
 
 echo 'Rebuilding the font cache to make fonts available'
 
-fc-cache -fv > /dev/null 2>&1
+fc-cache -f -v > /dev/null 2>&1
 
 echo 'Fonts are ready to use.'

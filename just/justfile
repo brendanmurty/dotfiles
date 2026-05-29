@@ -92,9 +92,9 @@ update:
     echo '=> Ubuntu: Requesting sudo';
     sudo -v;
     echo '=> Ubuntu: Updating APT packages';
-    sudo apt update -y -qq;
-    sudo apt upgrade -y -qq;
-    sudo apt full-upgrade -y -qq;
+    sudo apt update -y -qq >/dev/null 2>&1;
+    sudo apt upgrade -y -qq >/dev/null 2>&1;
+    sudo apt full-upgrade -y -qq >/dev/null 2>&1;
   elif [[ "$OS" == 'EndeavourOS' ]]; then
     echo '=> EndeavourOS: Running "eos-update"';
     eos-update --aur;

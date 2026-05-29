@@ -44,8 +44,8 @@ elif [[ "$OS_NAME" == "Ubuntu" ]]; then
   fi
 fi
 
-echo 'Rebuilding the font cache to make fonts available'
+echo 'Rebuilding the font cache'
 
 fc-cache -f -v > /dev/null 2>&1
 
-echo 'Fonts are ready to use.'
+echo 'Fonts are now ready to use'

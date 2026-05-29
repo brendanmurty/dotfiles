@@ -28,6 +28,12 @@ if [[ "$OS_NAME" == "Fedora" ]]; then
 
   echo 'Fedora: Installing Google Noto Emoji fonts'
   sudo dnf install -y google-noto-color-emoji-fonts >/dev/null 2>&1
+elif [[ "$OS_NAME" == "Ubuntu" ]]; then
+  echo 'Ubuntu: Requesting sudo'
+  sudo -v
+
+  echo 'Ubuntu: Installing Google Noto Emoji fonts'
+  sudo apt -qq --assume-yes install fonts-noto-color-emoji >/dev/null 2>&1
 fi
 
 echo 'Rebuilding the font cache to make fonts available'

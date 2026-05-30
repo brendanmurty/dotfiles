@@ -18,7 +18,7 @@ fi
 FONT_DIR="$HOME/.local/share/fonts"
 mkdir -p "$FONT_DIR"
 
-echo "Copying Commit Mono fonts to '$FONT_DIR'"
+echo "Copying over Commit Mono Nerd Fonts from https://www.nerdfonts.com/font-downloads"
 
 cp "$DIR/CommitMono/"*.otf "$FONT_DIR/"
 

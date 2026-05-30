@@ -1,6 +1,6 @@
 background = 000000
 foreground = ffffff
-font-family = "CommitMono"
+font-family = "CommitMono Nerd Font Mono"
 font-size = 14
 adjust-cell-height = 2
 font-feature = "-liga,-calt"

@@ -264,7 +264,7 @@
   },
   "base_keymap": "Atom",
   "disable_ai": false,
-  "buffer_font_family": "CommitMono",
+  "buffer_font_family": "CommitMono Nerd Font Mono",
   "agent": {
     "sidebar_side": "right",
     "max_content_width": 750.0,

@@ -35,7 +35,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
   },
-  "editor.fontFamily": "CommitMono",
+  "editor.fontFamily": "Commit Mono Nerd Fonts",
   "editor.fontLigatures": true,
   "editor.fontSize": 18,
   "editor.formatOnPaste": true,
@@ -104,7 +104,7 @@
       "url": "https://www.schemastore.org/package"
     }
   ],
-  "markdown.preview.fontFamily": "CommitMono",
+  "markdown.preview.fontFamily": "Commit Mono Nerd Fonts",
   "markdown.preview.fontSize": 18,
   "redhat.telemetry.enabled": false,
   "security.promptForLocalFileProtocolHandling": false,
@@ -121,7 +121,7 @@
     "docker-desktop"
   ],
   "terminal.integrated.enableMultiLinePasteWarning": "never",
-  "terminal.integrated.fontFamily": "CommitMono",
+  "terminal.integrated.fontFamily": "Commit Mono Nerd Fonts",
   "terminal.integrated.fontSize": 18,
   "terminal.integrated.scrollback": 2500,
   "terminal.integrated.tabs.defaultColor": "terminal.ansiCyan",

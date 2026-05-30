@@ -487,6 +487,7 @@
     "deno": true,
     "desktop": true,
     "dockerfile": true,
+    "editorconfig": true,
     "git-firefly": true,
     "html": true,
     "ini": true,

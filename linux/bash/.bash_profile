@@ -42,6 +42,8 @@ pathadd "/usr/local/bin"
 
 pathadd "$HOME/.deno/bin"
 
+pathadd "$HOME/.cargo/bin"
+
 # Configure Deno if it's installed in the default location
 
 if [ -f "$HOME/.deno/env" ]; then

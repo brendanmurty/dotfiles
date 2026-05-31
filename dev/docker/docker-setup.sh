@@ -6,12 +6,12 @@
 #
 
 BIN="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
-OS_NAME="$(bash $BIN/os-name.sh)"
+OS="$(bash $BIN/os.sh)"
 
-if [[ "$OS_NAME" != "Fedora" && "$OS_NAME" != "Ubuntu" ]]; then
+if [[ "$OS" != "Fedora" && "$OS" != "Ubuntu" ]]; then
   echo "This script requires Fedora or Ubuntu."
   exit 0
-elif [[ "$OS_NAME" == "Fedora" ]]; then
+elif [[ "$OS" == "Fedora" ]]; then
   # Request Sudo
   sudo -v
 
@@ -30,7 +30,7 @@ elif [[ "$OS_NAME" == "Fedora" ]]; then
   curl --output "$DOCKER_RPM" "https://desktop.docker.com/linux/main/amd64/docker-desktop-x86_64.rpm"
   sudo dnf -y install "$DOCKER_RPM"
   rm -rf "$DOCKER_RPM"
-elif [[ "$OS_NAME" == "Ubuntu" ]]; then
+elif [[ "$OS" == "Ubuntu" ]]; then
   # Request Sudo
   sudo -v
 

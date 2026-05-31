@@ -7,13 +7,13 @@
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 
-OS_NAME="$(bash $DIR/bin/os-name.sh)"
+OS="$(bash $DIR/bin/os.sh)"
 
 info() { echo -e "\033[36m$1\033[0m"; }
 warn() { echo -e "\033[33m$1\033[0m"; }
 error() { echo -e "\033[31m$1\033[0m"; }
 
-if [[ "$OS_NAME" == "Windows" ]]; then
+if [[ "$OS" == "Windows" ]]; then
   error 'These scripts require either Linux or macOS.'
   exit 1
 fi
@@ -51,7 +51,7 @@ else
     echo ''
 
     if [[ "$brew_user" == "y" ]]; then
-      if [[ "$OS_NAME" == "macOS" ]]; then
+      if [[ "$OS" == "macOS" ]]; then
         bash "$DIR/homebrew/homebrew-setup-user.macos.sh"
       else
         bash "$DIR/homebrew/homebrew-setup-user.linux.sh"

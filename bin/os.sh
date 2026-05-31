@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 #
 #
-# Helper script that returns the name of the OS
+# Helper script that returns the name of the Operating System
 #
 #
 
-OS_NAME="$(uname -s)";
-if [[ "$OS_NAME" == 'Freedesktop SDK' ]]; then
+OS="$(uname -s)";
+if [[ "$OS" == 'Freedesktop SDK' ]]; then
   echo 'Linux';
-elif [[ "$OS_NAME" == 'Linux' ]]; then
+elif [[ "$OS" == 'Linux' ]]; then
   DISTRO_NAME="$(source /etc/os-release && echo $NAME)";
   if [[ "$DISTRO_NAME" == 'Fedora Linux' ]]; then
     echo 'Fedora';
@@ -17,10 +17,10 @@ elif [[ "$OS_NAME" == 'Linux' ]]; then
   else
     echo "${DISTRO_NAME}";
   fi
-elif [[ "$OS_NAME" == 'Darwin' ]]; then
+elif [[ "$OS" == 'Darwin' ]]; then
   echo 'macOS';
-elif [[ "$OS_NAME" == 'CYGWIN' || "$OS_NAME" == 'MINGW' || "$OS_NAME" == 'MSYS_NT' ]]; then
+elif [[ "$OS" == 'CYGWIN' || "$OS" == 'MINGW' || "$OS" == 'MSYS_NT' ]]; then
   echo 'Windows';
 else
-  echo "${OS_NAME}";
+  echo "${OS}";
 fi

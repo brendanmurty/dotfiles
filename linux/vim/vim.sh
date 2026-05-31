@@ -7,16 +7,16 @@
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 BIN="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
-OS_NAME="$(bash $BIN/os-name.sh)"
+OS="$(bash $BIN/os.sh)"
 
-if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
+if [[ "$OS" == "macOS" || "$OS" == "Windows" ]]; then
   echo "This script requires Linux."
   exit 0
-elif [[ "$OS_NAME" == "Ubuntu" ]]; then
+elif [[ "$OS" == "Ubuntu" ]]; then
   sudo apt -y install vim
   sudo select-editor
   sudo update-alternatives --config editor
-elif [[ "$OS_NAME" == "EndeavourOS" ]]; then
+elif [[ "$OS" == "EndeavourOS" ]]; then
   sudo pacman -Syu
   sudo pacman -S vim
   echo 'export EDITOR=vim' >> "$HOME/.bashrc"

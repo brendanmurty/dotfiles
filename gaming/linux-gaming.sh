@@ -8,9 +8,9 @@
 THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
 BIN="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
 
-OS_NAME="$(bash $BIN/os-name.sh)"
+OS="$(bash $BIN/os.sh)"
 
-if [[ "$OS_NAME" == "macOS" ]] || [[ "$OS_NAME" == "Windows" ]]; then
+if [[ "$OS" == "macOS" ]] || [[ "$OS" == "Windows" ]]; then
   echo "This script requires Linux."
   exit 0
 fi
@@ -21,7 +21,7 @@ info 'Requesting sudo access'
 
 sudo -v
 
-if [[ "$OS_NAME" == "Ubuntu" ]]; then
+if [[ "$OS" == "Ubuntu" ]]; then
 
   info 'Ubuntu - Install supporting packages'
 
@@ -81,7 +81,7 @@ if [[ "$OS_NAME" == "Ubuntu" ]]; then
   sudo apt -qq --assume-yes install "$STEAM_DEB"
   rm -rf "$STEAM_DEB"
 
-elif [[ "$OS_NAME" == "Fedora" ]]; then
+elif [[ "$OS" == "Fedora" ]]; then
 
   info 'Fedora - Install supporting packages'
 

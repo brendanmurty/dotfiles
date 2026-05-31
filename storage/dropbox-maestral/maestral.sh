@@ -9,9 +9,9 @@
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 BIN="$(cd "$(dirname "$0")" && cd ../../bin && pwd)"
-OS_NAME="$(bash $BIN/os-name.sh)"
+OS="$(bash $BIN/os.sh)"
 
-if [[ "$OS_NAME" == "macOS" ]] || [[ "$OS_NAME" == "Windows" ]]; then
+if [[ "$OS" == "macOS" ]] || [[ "$OS" == "Windows" ]]; then
   echo "This script requires Linux."
   exit 0
 fi
@@ -22,9 +22,9 @@ sudo -v
 
 echo '==> Installing dependencies'
 
-if [[ "$OS_NAME" == "Ubuntu" ]]; then
+if [[ "$OS" == "Ubuntu" ]]; then
   sudo apt -qq --assume-yes install python3 python-is-python3 python3-pyqt5 pipx
-elif [[ "$OS_NAME" == "Fedora" ]]; then
+elif [[ "$OS" == "Fedora" ]]; then
   sudo dnf install -y python3 python3-qt5 pipx
 fi
 

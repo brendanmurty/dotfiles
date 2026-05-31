@@ -9,9 +9,9 @@
 #
 
 BIN="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
-OS_NAME="$(bash $BIN/os-name.sh)"
+OS="$(bash $BIN/os.sh)"
 
-if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
+if [[ "$OS" == "macOS" || "$OS" == "Windows" ]]; then
   echo "This script requires Linux."
   exit 0
 fi
@@ -41,7 +41,7 @@ echo 'Installing GCC via Homebrew'
 
 brew install gcc
 
-if [[ "$OS_NAME" == "Fedora" ]]; then
+if [[ "$OS" == "Fedora" ]]; then
   echo 'Fedora: Installing development-tools package'
   sudo dnf group install -y development-tools
 fi

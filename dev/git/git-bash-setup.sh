@@ -6,9 +6,9 @@
 #
 
 REPO_DIR="$(cd "$(dirname "$0")" && cd ../.. && pwd)"
-OS_NAME="$(bash $REPO_DIR/bin/os-name.sh)"
+OS="$(bash $REPO_DIR/bin/os.sh)"
 
-if [[ "$OS_NAME" == "Ubuntu" ]]; then
+if [[ "$OS" == "Ubuntu" ]]; then
   echo 'Ubuntu: Install Git and Curl'
   sudo apt update -qq
   sudo apt -qq --assume-yes install git curl

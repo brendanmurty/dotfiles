@@ -6,9 +6,9 @@
 #
 
 BIN="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
-OS_NAME="$(bash $BIN/os-name.sh)"
+OS="$(bash $BIN/os.sh)"
 
-if [[ "$OS_NAME" == "Windows" ]]; then
+if [[ "$OS" == "Windows" ]]; then
   echo 'Please install Node manually - https://nodejs.org/'
   exit 1
 fi

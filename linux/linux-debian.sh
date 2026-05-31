@@ -6,9 +6,9 @@
 #
 
 REPO_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
-OS_NAME="$(bash $REPO_DIR/bin/os-name.sh)"
+OS="$(bash $REPO_DIR/bin/os.sh)"
 
-if [[ "$OS_NAME" != "Debian" ]]; then
+if [[ "$OS" != "Debian" ]]; then
   echo "This script requires Debian."
   exit 0
 fi

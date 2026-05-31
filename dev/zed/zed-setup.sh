@@ -7,12 +7,12 @@
 
 THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
 BIN="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
-OS_NAME="$(bash $BIN/os-name.sh)"
+OS="$(bash $BIN/os.sh)"
 
 CONFIG_DIR="$HOME/.config/zed"
 CONFIG_FILE="$THIS_DIR/settings.json"
 
-if [[ "$OS_NAME" == "Windows" ]]; then
+if [[ "$OS" == "Windows" ]]; then
   echo "This script requires Linux or macOS."
   exit 0
 fi
@@ -21,7 +21,7 @@ echo 'Requesting sudo'
 
 sudo -v
 
-if [[ "$OS_NAME" == "macOS" ]]; then
+if [[ "$OS" == "macOS" ]]; then
   brew reinstall --cask zed
   brew reinstall shellcheck
 
@@ -43,6 +43,6 @@ cp "$CONFIG_FILE" "$CONFIG_DIR/settings.json"
 
 echo "Finished Zed setup"
 
-if [[ "$OS_NAME" == "macOS" ]]; then
+if [[ "$OS" == "macOS" ]]; then
   echo "On macOS, you need to manually install the Zed CLI tool: https://zed.dev/docs/macos#installing-the-cli"
 fi

@@ -6,7 +6,7 @@
 #
 
 REPO_DIR="$(cd "$(dirname "$0")" && cd ../.. && pwd)"
-OS_NAME="$(bash $REPO_DIR/bin/os-name.sh)"
+OS="$(bash $REPO_DIR/bin/os.sh)"
 
 # Setup Git Bash features
 

@@ -7,9 +7,9 @@
 
 THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
 BIN="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
-OS_NAME="$(bash $BIN/os-name.sh)"
+OS="$(bash $BIN/os.sh)"
 
-if [[ "$OS_NAME" != "Ubuntu" ]]; then
+if [[ "$OS" != "Ubuntu" ]]; then
   echo "This script requires Ubuntu."
   exit 0
 fi

@@ -7,14 +7,14 @@
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 BIN="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
-OS_NAME="$(bash $BIN/os-name.sh)"
+OS="$(bash $BIN/os.sh)"
 
-if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
+if [[ "$OS" == "macOS" || "$OS" == "Windows" ]]; then
   echo "This script requires Linux."
   exit 0
 fi
 
-if [[ "$OS_NAME" == "Ubuntu" ]]; then
+if [[ "$OS" == "Ubuntu" ]]; then
   sudo apt -y install tmux python3 pipx
 fi
 

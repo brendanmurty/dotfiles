@@ -8,17 +8,17 @@
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 BIN="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
-OS_NAME="$(bash $BIN/os-name.sh)"
+OS="$(bash $BIN/os.sh)"
 
 # Default to a standard install on a Linux system
 CONFIG_DIR="$HOME/.config/Code/User"
 INSTALL_CMD="code --install-extension"
 
 # Update thes
-if [[ "$OS_NAME" == "macOS" ]]; then
+if [[ "$OS" == "macOS" ]]; then
   # macOS system
   CONFIG_DIR="$HOME/.config/Code/User"
-elif [[ "$OS_NAME" == "Windows" ]]; then
+elif [[ "$OS" == "Windows" ]]; then
   # Windows system
   CONFIG_DIR="$APPDATA\Code\User"
 elif [ -d "$HOME/.var/app/com.visualstudio.code" ]; then

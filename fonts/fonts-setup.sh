@@ -8,9 +8,9 @@
 DIR="$(cd "$(dirname "$0")" && pwd)"
 
 BIN="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
-OS_NAME="$(bash $BIN/os-name.sh)"
+OS="$(bash $BIN/os.sh)"
 
-if [[ "$OS_NAME" == "Windows" ]] || [[ "$OS_NAME" == "macOS" ]]; then
+if [[ "$OS" == "Windows" ]] || [[ "$OS" == "macOS" ]]; then
   echo "This script requires Linux."
   exit 1
 fi
@@ -22,13 +22,13 @@ echo "Copying over Commit Mono Nerd Fonts from https://www.nerdfonts.com/font-do
 
 cp "$DIR/CommitMono/"*.otf "$FONT_DIR/"
 
-if [[ "$OS_NAME" == "Fedora" ]]; then
+if [[ "$OS" == "Fedora" ]]; then
   echo 'Fedora: Requesting sudo'
   sudo -v
 
   echo 'Fedora: Installing Google Noto Emoji fonts'
   sudo dnf install -y google-noto-color-emoji-fonts >/dev/null 2>&1
-elif [[ "$OS_NAME" == "Ubuntu" ]]; then
+elif [[ "$OS" == "Ubuntu" ]]; then
   echo 'Ubuntu: Requesting sudo'
   sudo -v
 

@@ -6,7 +6,7 @@
 #
 
 BIN="$(cd "$(dirname "$0")" && cd ../bin && pwd)"
-OS="$(bash $BIN/os-name.sh)"
+OS="$(bash $BIN/os.sh)"
 
 if [[ "$OS" == "Windows" ]]; then
   echo 'Please install Deno for Windows manually - https://deno.com/'

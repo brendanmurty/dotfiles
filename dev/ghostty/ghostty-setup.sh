@@ -7,12 +7,12 @@
 
 THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
 BIN="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
-OS_NAME="$(bash $BIN/os-name.sh)"
+OS="$(bash $BIN/os.sh)"
 
 CONFIG_DIR="$HOME"
 CONFIG_FILE="$THIS_DIR/config.linux.ghostty"
 
-if [[ "$OS_NAME" == "Windows" ]]; then
+if [[ "$OS" == "Windows" ]]; then
   echo "This script requires Linux or macOS."
   exit 0
 fi
@@ -21,7 +21,7 @@ echo 'Requesting sudo'
 
 sudo -v
 
-if [[ "$OS_NAME" == "macOS" ]]; then
+if [[ "$OS" == "macOS" ]]; then
   CONFIG_DIR="$HOME/Library/Application Support/com.mitchellh.ghostty"
 
   mkdir -p "$CONFIG_DIR"
@@ -30,10 +30,10 @@ if [[ "$OS_NAME" == "macOS" ]]; then
   # From https://ghostty.org/docs/install/binary#macos
   brew install --cask ghostty
 else
-  if [[ "$OS_NAME" == "Ubuntu" ]]; then
+  if [[ "$OS" == "Ubuntu" ]]; then
     # From https://ghostty.org/docs/install/binary#ubuntu
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"
-  elif [[ "$OS_NAME" == "Fedora" ]]; then
+  elif [[ "$OS" == "Fedora" ]]; then
     # From https://ghostty.org/docs/install/binary#fedora
     sudo dnf copr enable scottames/ghostty
     sudo dnf install ghostty -y

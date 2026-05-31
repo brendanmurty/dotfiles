@@ -7,12 +7,12 @@
 #
 
 BIN="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
-OS_NAME="$(bash $BIN/os-name.sh)"
+OS="$(bash $BIN/os.sh)"
 
-if [[ "$OS_NAME" == "Windows" ]]; then
+if [[ "$OS" == "Windows" ]]; then
   echo 'This script requires Linux or macOS.'
   exit 1
-elif [[ "$OS_NAME" == "Linux" ]]; then
+elif [[ "$OS" == "Linux" ]]; then
   echo 'Homebrew: Requesting sudo'
   sudo -v
 fi

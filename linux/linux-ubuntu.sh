@@ -7,9 +7,9 @@
 
 REPO_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
 
-OS_NAME="$(bash $REPO_DIR/bin/os-name.sh)"
+OS="$(bash $REPO_DIR/bin/os.sh)"
 
-if [[ "$OS_NAME" != "Ubuntu" ]]; then
+if [[ "$OS" != "Ubuntu" ]]; then
   echo "This script requires Ubuntu."
   exit 0
 fi

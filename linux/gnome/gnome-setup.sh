@@ -8,9 +8,9 @@
 
 THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
 BIN="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
-OS_NAME="$(bash $BIN/os-name.sh)"
+OS="$(bash $BIN/os.sh)"
 
-if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
+if [[ "$OS" == "macOS" || "$OS" == "Windows" ]]; then
   echo "This script requires Linux."
   exit 0
 fi
@@ -26,9 +26,9 @@ sudo -v
 
 echo 'Installing supporting packages for Gnome Shell Extensions'
 
-if [[ "$OS_NAME" == "Ubuntu" ]]; then
+if [[ "$OS" == "Ubuntu" ]]; then
   sudo apt install -y gnome-browser-connector python3 pipx >/dev/null 2>&1
-elif [[ "$OS_NAME" == "Fedora" ]]; then
+elif [[ "$OS" == "Fedora" ]]; then
   sudo dnf install -y gnome-browser-connector python3 pipx >/dev/null 2>&1
 fi
 
@@ -43,7 +43,7 @@ gnome-extensions-cli install "dash-to-panel@jderose9.github.com" >/dev/null 2>&1
 gnome-extensions-cli install "just-perfection-desktop@just-perfection" >/dev/null 2>&1
 gnome-extensions-cli install "smarttiling@samuelnovaes" >/dev/null 2>&1
 
-if [[ "$OS_NAME" == "Fedora" ]]; then
+if [[ "$OS" == "Fedora" ]]; then
   gnome-extensions-cli install "accent-directories@taiwbi.com" >/dev/null 2>&1
 fi
 
@@ -63,7 +63,7 @@ echo 'Applying customised Gnome Settings'
 
 # Theme
 
-if [[ "$OS_NAME" == "Ubuntu" ]]; then
+if [[ "$OS" == "Ubuntu" ]]; then
   gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
   gsettings set org.gnome.desktop.interface icon-theme 'Yaru-sage-dark'
   gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-sage-dark'
@@ -264,7 +264,7 @@ gsettings set org.gnome.desktop.screensaver show-full-name-in-top-bar false
 gsettings set org.gnome.desktop.screensaver user-switch-enabled true
 gsettings set org.gnome.shell always-show-log-out true
 
-if [[ "$OS_NAME" == "Ubuntu" ]]; then
+if [[ "$OS" == "Ubuntu" ]]; then
   gsettings set org.gnome.desktop.screensaver ubuntu-lock-on-suspend true
 fi
 

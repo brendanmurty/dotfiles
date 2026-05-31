@@ -8,14 +8,14 @@
 DIR="$(cd "$(dirname "$0")" && pwd)"
 
 BIN="$(cd "$(dirname "$0")" && cd ../bin && pwd)"
-OS_NAME="$(bash $BIN/os-name.sh)"
+OS="$(bash $BIN/os.sh)"
 
 INSTALL_MESSAGE='Please install Dropbox manually from https://www.dropbox.com/install'
 
-if [[ "$OS_NAME" == "Windows" ]]; then
+if [[ "$OS" == "Windows" ]]; then
   echo "This script requires Linux or macOS."
   exit 1
-elif [[ "$OS_NAME" == "macOS" ]]; then
+elif [[ "$OS" == "macOS" ]]; then
   if [ -d "/Applications/Dropbox.app/Contents" ]; then
     echo 'Dropbox is already installed.'
   else

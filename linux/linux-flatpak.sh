@@ -7,15 +7,15 @@
 
 REPO_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
 
-OS_NAME="$(bash $REPO_DIR/bin/os-name.sh)"
+OS="$(bash $REPO_DIR/bin/os.sh)"
 
-if [[ "$OS_NAME" == "macOS" || "$OS_NAME" == "Windows" ]]; then
+if [[ "$OS" == "macOS" || "$OS" == "Windows" ]]; then
   echo "This script requires Linux."
   exit 0
-elif [[ "$OS_NAME" == "Ubuntu" || "$OS_NAME" == "Debian" ]]; then
+elif [[ "$OS" == "Ubuntu" || "$OS" == "Debian" ]]; then
   sudo apt -qq --assume-yes install flatpak gnome-software-plugin-flatpak
   flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-elif [[ "$OS_NAME" == "EndeavourOS" ]]; then
+elif [[ "$OS" == "EndeavourOS" ]]; then
   sudo pacman -Syu
   sudo pacman -S flatpak
   flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo

@@ -33,6 +33,10 @@ echo 'Debian: Install Nvidia drivers'
 
 sudo apt -qq --assume-yes install nvidia-driver firmware-linux >/dev/null 2>&1
 
+echo 'Debian: Improve audio hardware support'
+
+sudo apt -qq --assume-yes install pipewire-audio-client-libraries pipewire-pulse easyeffects >/dev/null 2>&1
+
 echo 'Debian: Setup Flatpak'
 
 bash "$REPO_DIR/linux/linux-flatpak.sh"

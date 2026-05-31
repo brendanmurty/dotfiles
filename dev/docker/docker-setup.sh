@@ -5,8 +5,8 @@
 #
 #
 
-SCRIPTS="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
-OS_NAME="$(bash $SCRIPTS/os-name.sh)"
+BIN="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
+OS_NAME="$(bash $BIN/os-name.sh)"
 
 if [[ "$OS_NAME" != "Fedora" && "$OS_NAME" != "Ubuntu" ]]; then
   echo "This script requires Fedora or Ubuntu."

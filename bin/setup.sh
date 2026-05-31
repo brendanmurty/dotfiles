@@ -7,7 +7,7 @@
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 
-OS_NAME="$(bash $DIR/scripts/os-name.sh)"
+OS_NAME="$(bash $DIR/bin/os-name.sh)"
 
 info() { echo -e "\033[36m$1\033[0m"; }
 warn() { echo -e "\033[33m$1\033[0m"; }

@@ -2,6 +2,8 @@
 
 Configuration files, programs, packages and scripts I use for personal, gaming and software development use.
 
+- **[bin](bin/)**: Bash utility scripts
+- **[bin/setup.sh](bin/setup.sh)**: Interactive setup script
 - **[dev](dev/)**: Development tools and framework helper scripts
 - **[dev/ai](dev/ai/)**: AI Code Generation tool setup scripts
 - **[dev/docker](dev/docker/)**: Docker setup and config
@@ -17,7 +19,5 @@ Configuration files, programs, packages and scripts I use for personal, gaming a
 - **[linux](linux/)**: Linux setup, package installers and tweaks
 - **[linux/linux-setup.sh](linux/linux-setup.sh)**: Linux setup script
 - **[obsidian](obsidian/)**: [Obsidian](https://obsidian.md/) config
-- **[scripts](scripts/)**: Bash utility scripts
 - **[storage](storage/)**: File sync systems setup, backup and organisation scripts
 - **[storage/backup-user](storage/backup-user/)**: Backup Linux user data
-- **[setup.sh](setup.sh)**: Interactive setup script

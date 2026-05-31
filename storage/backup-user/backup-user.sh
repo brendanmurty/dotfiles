@@ -7,7 +7,7 @@
 #  - Saves symlinks as links, not as directories
 #  - Saves output messages to the file set in LOG_FILE
 #  - If your system's scheduler is cron, setup by running 'crontab -e', then adding a line:
-#    0 19 * * * bash /home/username/scripts/backup-user.sh
+#    0 19 * * * bash /home/username/dotfiles/storage/backup-user/backup-user.sh
 #  - If your system's scheduler is systemd, refer to 'backup-user.service'
 #
 #

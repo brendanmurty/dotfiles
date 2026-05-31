@@ -5,13 +5,13 @@
 #
 #
 
-SCRIPTS="$(cd "$(dirname "$0")" && cd ../scripts && pwd)"
-OS_NAME="$(bash $SCRIPTS/os-name.sh)"
+BIN="$(cd "$(dirname "$0")" && cd ../bin && pwd)"
+OS="$(bash $BIN/os-name.sh)"
 
-if [[ "$OS_NAME" == "Windows" ]]; then
+if [[ "$OS" == "Windows" ]]; then
   echo 'Please install Deno for Windows manually - https://deno.com/'
   exit 1
-elif [[ "$OS_NAME" == "macOS" ]]; then
+elif [[ "$OS" == "macOS" ]]; then
   # Install Deno for macOS, command from https://docs.deno.com/runtime/getting_started/installation/
   curl -fsSL https://deno.land/install.sh | sh
 else

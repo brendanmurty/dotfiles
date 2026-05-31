@@ -17,13 +17,21 @@ echo 'Debian: Requesting sudo'
 
 sudo -v
 
+echo 'Debian: Enable 32-bit architecture'
+
+sudo dpkg --add-architecture i386 >/dev/null 2>&1
+
 echo 'Debian: Add contrib and non-free APT repositories'
 
 sudo sed -i 's/main non-free-firmware/main contrib non-free non-free-firmware/g' /etc/apt/sources.list
 
 echo 'Debian: Update package lists'
 
-sudo apt update -qq
+sudo apt update -qq >/dev/null 2>&1
+
+echo 'Debian: Install Nvidia drivers'
+
+sudo apt -qq --assume-yes install nvidia-driver firmware-linux >/dev/null 2>&1
 
 echo 'Debian: Setup Flatpak'
 

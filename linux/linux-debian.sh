@@ -41,6 +41,10 @@ echo 'Debian: Improve audio hardware support'
 
 sudo apt -qq --assume-yes install pipewire-audio-client-libraries pipewire-pulse easyeffects >/dev/null 2>&1
 
+echo 'Debian - Set non-responding app warning timeout to 1 min'
+
+gsettings set org.gnome.mutter check-alive-timeout 60000
+
 echo 'Debian: Setup Flatpak'
 
 bash "$REPO_DIR/linux/linux-flatpak.sh"

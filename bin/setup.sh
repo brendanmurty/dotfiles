@@ -66,3 +66,5 @@ fi
 info 'Just command runner setup'
 
 bash "$DIR/just/just-setup.sh"
+
+info 'Base tools install completed, now manually run the setup scripts that suit your needs.'

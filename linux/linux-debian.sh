@@ -31,7 +31,11 @@ sudo apt update -qq >/dev/null 2>&1
 
 echo 'Debian: Install Nvidia drivers'
 
-sudo apt -qq --assume-yes install nvidia-driver firmware-linux >/dev/null 2>&1
+sudo apt install -qq --assume-yes --reinstall \
+	firmware-linux \
+	nvidia-driver \
+	nvidia-kernel-dkms \
+	linux-headers-$(uname -r) >/dev/null 2>&1
 
 echo 'Debian: Improve audio hardware support'
 

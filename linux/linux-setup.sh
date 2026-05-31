@@ -20,11 +20,14 @@ info 'Requesting sudo access'
 
 sudo -v
 
-info 'Run linux/linux-fedora.sh'
-bash "$REPO_DIR/linux/linux-fedora.sh"
+info 'Run linux/linux-debian.sh'
+bash "$REPO_DIR/linux/linux-debian.sh"
 
 info 'Run linux/linux-ubuntu.sh'
 bash "$REPO_DIR/linux/linux-ubuntu.sh"
+
+info 'Run linux/linux-fedora.sh'
+bash "$REPO_DIR/linux/linux-fedora.sh"
 
 info 'Run linux/bash/bash-setup.sh'
 bash "$REPO_DIR/linux/bash/bash-setup.sh"

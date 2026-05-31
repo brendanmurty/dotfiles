@@ -12,6 +12,8 @@ elif [[ "$OS_NAME" == 'Linux' ]]; then
   DISTRO_NAME="$(source /etc/os-release && echo $NAME)";
   if [[ "$DISTRO_NAME" == 'Fedora Linux' ]]; then
     echo 'Fedora';
+  elif [[ "$DISTRO_NAME" == 'Debian GNU/Linux' ]]; then
+    echo 'Debian';
   else
     echo "${DISTRO_NAME}";
   fi

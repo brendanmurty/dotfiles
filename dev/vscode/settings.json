@@ -1,28 +1,8 @@
 {
-  "[css]": {
-    "editor.defaultFormatter": "vscode.css-language-features"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[markdown]": {
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.formatOnSave": false,
-    "editor.quickSuggestions": {
-      "comments": "off",
-      "other": "off",
-      "strings": "off"
-    },
-    "editor.unicodeHighlight.ambiguousCharacters": false,
-    "editor.unicodeHighlight.invisibleCharacters": false,
-    "editor.wordWrap": "on"
-  },
-  "accessibility.signals.lineHasInlineSuggestion": {
-    "sound": "off"
-  },
+  "workbench.colorTheme": "Dark 2026",
+  "editor.fontFamily": "CommitMono Nerd Font Mono",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 18,
   "clock.alignment": "Right",
   "clock.format": "h:MMtt",
   "clock.iconName": "none",
@@ -35,11 +15,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
   },
-  "editor.fontFamily": "CommitMono Nerd Font Mono",
-  "editor.fontLigatures": true,
-  "editor.fontSize": 18,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
   "editor.inlineSuggest.enabled": false,
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
@@ -169,6 +146,30 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[markdown]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.formatOnSave": false,
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "other": "off",
+      "strings": "off"
+    },
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.wordWrap": "on"
+  },
+  "accessibility.signals.lineHasInlineSuggestion": {
+    "sound": "off"
   },
   "docker.extension.dockerEngineAvailabilityPrompt": false,
   "terminal.integrated.shellIntegration.history": 1000,

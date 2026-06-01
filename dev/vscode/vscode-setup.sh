@@ -7,22 +7,24 @@
 #
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
-BIN="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
+BIN="$(cd "$(dirname "$0")" && cd ../../bin && pwd)"
 OS="$(bash $BIN/os.sh)"
 
-# Default to a standard install on a Linux system
+if command -v code &> /dev/null; then
+  echo 'Please install VS Code manually - https://code.visualstudio.com/'
+  exit 1
+fi
+
+# Default to a standard confing for a Linux system
 CONFIG_DIR="$HOME/.config/Code/User"
 INSTALL_CMD="code --install-extension"
 
-# Update thes
 if [[ "$OS" == "macOS" ]]; then
-  # macOS system
   CONFIG_DIR="$HOME/.config/Code/User"
 elif [[ "$OS" == "Windows" ]]; then
-  # Windows system
   CONFIG_DIR="$APPDATA\Code\User"
 elif [ -d "$HOME/.var/app/com.visualstudio.code" ]; then
-  # Linux system with VS Code installed via Flatpak
+  # Linux system with a Flatpak install
   CONFIG_DIR="$HOME/.var/app/com.visualstudio.code/config/Code/User"
   INSTALL_CMD="flatpak run com.visualstudio.code --install-extension"
 fi

@@ -10,7 +10,7 @@ DIR="$(cd "$(dirname "$0")" && pwd)"
 BIN="$(cd "$(dirname "$0")" && cd ../../bin && pwd)"
 OS="$(bash $BIN/os.sh)"
 
-if command -v code &> /dev/null; then
+if ! command -v code &> /dev/null; then
   echo 'Please install VS Code manually - https://code.visualstudio.com/'
   exit 1
 fi
@@ -31,14 +31,18 @@ fi
 
 mkdir -p "$CONFIG_DIR"
 
-# Backup current config, copy over custom config
+echo 'VS Code - Backing up current config'
 
 mv "$CONFIG_DIR/settings.json" "$CONFIG_DIR/settings.json.bak"
+
+echo 'VS Code - Copying over custom config'
+
 cp "$DIR/settings.json" "$CONFIG_DIR/settings.json"
 
 # Install all packages from the package list file in this dir
 
 cat "$DIR/vscode.extensions.txt" | while read extension
 do
-  $INSTALL_CMD $extension
+  echo "VS Code - Installing extension '$extension'"
+  $INSTALL_CMD $extension > /dev/null 2>&1
 done

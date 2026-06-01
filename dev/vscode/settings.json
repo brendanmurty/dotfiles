@@ -35,7 +35,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
   },
-  "editor.fontFamily": "Commit Mono Nerd Fonts",
+  "editor.fontFamily": "CommitMono Nerd Font Mono",
   "editor.fontLigatures": true,
   "editor.fontSize": 18,
   "editor.formatOnPaste": true,
@@ -78,8 +78,6 @@
   "git.inputValidationLength": 150,
   "git.inputValidationSubjectLength": null,
   "git.openRepositoryInParentFolders": "never",
-  "github.copilot.nextEditSuggestions.enabled": true,
-  "githubPullRequests.createOnPublishBranch": "never",
   "indentRainbow.colors": [
     "rgba(255,255,64,0.04)",
     "rgba(127,255,127,0.04)",
@@ -88,7 +86,6 @@
   ],
   "indentRainbow.errorColor": "rgba(128,32,32,0.5)",
   "indentRainbow.tabmixColor": "rgba(128,32,96,0.5)",
-  "javascript.validate.enable": false,
   "json.schemas": [
     {
       "fileMatch": [
@@ -104,9 +101,8 @@
       "url": "https://www.schemastore.org/package"
     }
   ],
-  "markdown.preview.fontFamily": "Commit Mono Nerd Fonts",
+  "markdown.preview.fontFamily": "CommitMono Nerd Font Mono",
   "markdown.preview.fontSize": 18,
-  "redhat.telemetry.enabled": false,
   "security.promptForLocalFileProtocolHandling": false,
   "security.workspace.trust.enabled": true,
   "security.workspace.trust.untrustedFiles": "open",
@@ -121,12 +117,11 @@
     "docker-desktop"
   ],
   "terminal.integrated.enableMultiLinePasteWarning": "never",
-  "terminal.integrated.fontFamily": "Commit Mono Nerd Fonts",
+  "terminal.integrated.fontFamily": "CommitMono Nerd Font Mono",
   "terminal.integrated.fontSize": 18,
   "terminal.integrated.scrollback": 2500,
   "terminal.integrated.tabs.defaultColor": "terminal.ansiCyan",
   "terminal.integrated.tabStopWidth": 4,
-  "typescript.updateImportsOnFileMove.enabled": "always",
   "update.mode": "manual",
   "window.commandCenter": true,
   "window.confirmSaveUntitledWorkspace": false,
@@ -162,15 +157,6 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.list.openMode": "doubleClick",
   "workbench.sideBar.location": "left",
-  "yaml.schemas": {
-    "https://raw.githubusercontent.com/compose-spec/compose-go/master/schema/compose-spec.json": [
-      "docker-compose.yml"
-    ],
-    "https://www.schemastore.org/github-workflow": [
-      ".github/*.yml",
-      ".github/**/*.yml"
-    ]
-  },
   "files.exclude": {
     "**/.zed/**": true
   },
@@ -178,7 +164,6 @@
     "**/.zed/**": true
   },
   "git.blame.statusBarItem.enabled": false,
-  "github.copilot.chat.languageContext.typescript.enabled": true,
   "[typescriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
@@ -199,5 +184,6 @@
   "git.untrackedChanges": "separate",
   "workbench.startupEditor": "none",
   "claudeCode.preferredLocation": "sidebar",
-  "chat.editor.wordWrap": "on"
+  "chat.editor.wordWrap": "on",
+  "chat.disableAIFeatures": true
 }

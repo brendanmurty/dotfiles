@@ -58,6 +58,10 @@ if command -v flatpak >/dev/null 2>&1 ; then
   flatpak install --reinstall -y flathub ca.desrt.dconf-editor >/dev/null 2>&1
 fi
 
+echo 'Ubuntu: Installing Gnome Sushi document preview app'
+
+sudo apt -qq --assume-yes install gnome-sushi
+
 echo 'Ubuntu: Run Gnome Setup'
 
 bash "$REPO_DIR/gnome/gnome-setup.sh"

@@ -30,6 +30,10 @@ if command -v flatpak >/dev/null 2>&1 ; then
   flatpak install --reinstall -y flathub ca.desrt.dconf-editor >/dev/null 2>&1
 fi
 
+echo 'Fedora: Installing Gnome Sushi document preview app'
+
+sudo dnf install -y sushi >/dev/null 2>&1
+
 echo 'Fedora: Run Gnome Setup'
 
 bash "$REPO_DIR/gnome/gnome-setup.sh"

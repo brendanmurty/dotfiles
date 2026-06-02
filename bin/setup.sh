@@ -5,35 +5,33 @@
 #
 #
 
-DIR="$(cd "$(dirname "$0")" && pwd)"
-
-OS="$(bash $DIR/bin/os.sh)"
-
-info() { echo -e "\033[36m$1\033[0m"; }
-warn() { echo -e "\033[33m$1\033[0m"; }
-error() { echo -e "\033[31m$1\033[0m"; }
+REPO="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$REPO"
+source "$REPO/bin/.helper.sh"
+OS="$(os)"
 
 if [[ "$OS" == "Windows" ]]; then
   error 'These scripts require either Linux or macOS.'
   exit 1
 fi
 
-warn "The scripts used here will make changes to your system."
-warn "Please review the content of the scripts before running them."
+warn 'The scripts used here will make changes to your system.'
+warn 'Please review the content of the scripts before running them.'
+warn 'Continue?'
 
-read -n 1 -rp "Continue? (y/n) " continue_setup
-echo ''
-
-if [[ "$continue_setup" != "y" ]]; then
+read -n 1 -rp '  [y/N] > ' CONTINUE_SETUP
+if [[ "$CONTINUE_SETUP" != "y" ]]; then
   info 'Cancelled'
   exit 0
 fi
 
+echo ''
+
 if [ ! -d "$HOME/Dotfiles" ]; then
-  info "Setup symlink: '$HOME/Dotfiles' > '$REPO_DIR'"
-  ln -s "$REPO_DIR" "$HOME/Dotfiles"
+  info "Setup symlink: '$HOME/Dotfiles' > '$REPO_REPO'"
+  ln -s "$REPO_REPO" "$HOME/Dotfiles"
 else
-  warn "Skipped symlink setup as '$HOME/Dotfiles' already exists"
+  warn "Skipped symlink, '$HOME/Dotfiles' already exists"
 fi
 
 if command -v brew >/dev/null 2>&1 ; then
@@ -41,22 +39,23 @@ if command -v brew >/dev/null 2>&1 ; then
 else
   info 'Homebrew package manager setup'
 
-  read -n 1 -rp "Install Homebrew to the default location? (y/n) " brew
-  echo ''
-
-  if [[ "$brew" == "y" ]]; then
-    bash "$DIR/homebrew/homebrew-setup.sh"
+  warn 'Install Homebrew to the default location?'
+  read -n 1 -rp '  [y/N] > ' BREW_DEFAULT
+  if [[ "$BREW_DEFAULT" == "y" ]]; then
+    bash "$REPO/homebrew/homebrew-setup.sh"
   else
-    read -n 1 -rp "Install Homebrew to '$HOME/.brew'? (y/n) " brew_user
     echo ''
-
-    if [[ "$brew_user" == "y" ]]; then
+    warn 'Install Homebrew to the default location?'
+    read -n 1 -rp '  [y/N] > ' BREW_USER
+    if [[ "$BREW_USER" == "y" ]]; then
+      echo ''
       if [[ "$OS" == "macOS" ]]; then
-        bash "$DIR/homebrew/homebrew-setup-user.macos.sh"
+        bash "$REPO/homebrew/homebrew-setup-user.macos.sh"
       else
-        bash "$DIR/homebrew/homebrew-setup-user.linux.sh"
+        bash "$REPO/homebrew/homebrew-setup-user.linux.sh"
       fi
     else
+      echo ''
       error 'Homebrew is required for various scripts'
       exit 1
     fi
@@ -65,6 +64,7 @@ fi
 
 info 'Just command runner setup'
 
-bash "$DIR/just/just-setup.sh"
+bash "$REPO/just/just-setup.sh"
 
-info 'Base tools install completed, now manually run the setup scripts that suit your needs.'
+info 'Base tools install completed.'
+info 'Now you can run the setup scripts that suit your needs.'

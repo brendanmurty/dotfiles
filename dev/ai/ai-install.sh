@@ -1,24 +1,58 @@
 #!/usr/bin/env bash
 #
 #
-# Install AI Code Generation tools
-#  - Run via: bash ./bin/ai-install.sh
-#  - Or run via: just ai-install
-#  - Uses the first-party suggested installation method for Linux/macOS
+# Install and update AI Code Generation tools
+#  - To run this script:
+#    - Clone this repo
+#    - Open that dir in Terminal
+#    - Run: bash ./dev/ai/ai-install.sh
+#  - Uses the first-party suggested installation and update commands for Linux/macOS
 #
 #
 
-REPO_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
-cd "$REPO_DIR"
+REPO="$(cd "$(dirname "$0")/../.." && pwd)"
+cd "$REPO"
+source "$REPO/bin/.helper.sh"
 
-echo '⏳ Installing Google Antigravity CLI'
-curl -fsSL https://antigravity.google/cli/install.sh | bash
+# Google Antigravity CLI - https://antigravity.google/product/antigravity-cli
 
-echo '⏳ Installing OpenAI Codex CLI'
-brew install codex
+if ! command -v agy > /dev/null 2>&1 ; then
+  info 'Install: Google Antigravity CLI'
+  curl -fsSL https://antigravity.google/cli/install.sh | bash > /dev/null 2>&1
+fi
 
-echo '⏳ Installing Claude Code CLI'
-curl -fsSL https://claude.ai/install.sh | bash
+info 'Update: Google Antigravity CLI'
+agy update > /dev/null 2>&1
 
-echo '⏳ Installing GitHub Copilot CLI'
-curl -fsSL https://gh.io/copilot-install | bash
+# OpenAI Codex CLI - https://developers.openai.com/codex/cli
+
+if ! command -v codex > /dev/null 2>&1 ; then
+  info 'Install: OpenAI Codex CLI'
+  brew install codex > /dev/null 2>&1
+
+  info 'Update: OpenAI Codex CLI'
+  brew upgrade codex > /dev/null 2>&1
+else
+  info 'Update: OpenAI Codex CLI'
+  codex update > /dev/null 2>&1
+fi
+
+# Claude Code CLI - https://code.claude.com/docs/en/quickstart
+
+if ! command -v claude > /dev/null 2>&1 ; then
+  info 'Install: Claude Code CLI'
+  curl -fsSL https://claude.ai/install.sh | bash > /dev/null 2>&1
+fi
+
+info 'Update: Claude Code CLI'
+claude update > /dev/null 2>&1
+
+# GitHub Copilot CLI - https://github.com/features/copilot/cli
+
+if ! command -v copilot > /dev/null 2>&1 ; then
+  info 'Install: GitHub Copilot CLI'
+  curl -fsSL https://gh.io/copilot-install | bash > /dev/null 2>&1
+fi
+
+info 'Update: GitHub Copilot CLI'
+copilot update > /dev/null 2>&1

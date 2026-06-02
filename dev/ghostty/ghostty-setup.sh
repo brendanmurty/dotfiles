@@ -6,7 +6,7 @@
 #
 
 THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
-BIN="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
+BIN="$(cd "$(dirname "$0")" && cd ../../bin && pwd)"
 OS="$(bash $BIN/os.sh)"
 
 CONFIG_DIR="$HOME"
@@ -40,17 +40,16 @@ else
   fi
 
   # Otherwise, assume this is a Linux machine that already has Ghostty installed
-
-  # Figure out the config file directory - from https://ghostty.org/docs/config
+  # From https://ghostty.org/docs/config
   CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/ghostty"
   mkdir -p "$CONFIG_DIR"
 fi
 
-echo "Making a backup of '$CONFIG_DIR/config.ghostty'"
+if [ -f "$CONFIG_DIR/config.ghostty" ]; then
+  echo "Moving '$CONFIG_DIR/config.ghostty' to "$CONFIG_DIR/config.ghostty.old""
+  mv "$CONFIG_DIR/config.ghostty" "$CONFIG_DIR/config.ghostty.old"
+fi
 
-touch "$CONFIG_DIR/config.ghostty"
-cp "$CONFIG_DIR/config.ghostty" "$CONFIG_DIR/config.ghostty.old"
+echo "Adding symlink - '$CONFIG_FILE' > '$CONFIG_DIR/config.ghostty'"
 
-echo "Copying '$CONFIG_FILE' to '$CONFIG_DIR/config.ghostty'"
-
-cp "$CONFIG_FILE" "$CONFIG_DIR/config.ghostty"
+ln -s "$CONFIG_FILE" "$CONFIG_DIR/config.ghostty"

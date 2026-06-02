@@ -37,4 +37,4 @@ sudo dnf install -y sushi >/dev/null 2>&1
 
 echo 'Fedora: Run Gnome Setup'
 
-bash "$REPO/gnome/gnome-setup.sh"
+bash "$REPO/linux/gnome/gnome-setup.sh"

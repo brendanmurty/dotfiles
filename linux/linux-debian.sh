@@ -65,4 +65,4 @@ sudo apt -qq --assume-yes install gnome-sushi
 
 echo 'Debian: Run Gnome Setup'
 
-bash "$REPO/gnome/gnome-setup.sh"
+bash "$REPO/linux/gnome/gnome-setup.sh"

@@ -65,4 +65,4 @@ sudo apt -qq --assume-yes install gnome-sushi
 
 echo 'Ubuntu: Run Gnome Setup'
 
-bash "$REPO/gnome/gnome-setup.sh"
+bash "$REPO/linux/gnome/gnome-setup.sh"

@@ -7,8 +7,8 @@
 #
 #
 
-REPO_DIR="$(cd "$(dirname "$0")" && cd ../.. && pwd)"
-OS="$(bash $REPO_DIR/bin/os.sh)"
+REPO="$(cd "$(dirname "$0")" && cd ../.. && pwd)"
+OS="$(bash $REPO/bin/os.sh)"
 
 if [[ "$OS" == "Windows" ]]; then
   echo "This script requires Linux or macOS."
@@ -26,13 +26,13 @@ cp "$HOME/.bashrc" "$HOME/.bashrc.old"
 
 echo 'Setup Git Bash features'
 
-bash "$REPO_DIR/git/git-bash-setup.sh"
+bash "$REPO/git/git-bash-setup.sh"
 
 echo 'Copy over the customised Bash config files'
 
-cp "$REPO_DIR/linux/bash/.bash_aliases" "$HOME/.bash_aliases"
-cp "$REPO_DIR/linux/bash/.bash_prompt" "$HOME/.bash_prompt"
-cp "$REPO_DIR/linux/bash/.bash_profile" "$HOME/.bash_profile"
+cp "$REPO/linux/bash/.bash_aliases" "$HOME/.bash_aliases"
+cp "$REPO/linux/bash/.bash_prompt" "$HOME/.bash_prompt"
+cp "$REPO/linux/bash/.bash_profile" "$HOME/.bash_profile"
 
 echo 'Load the customisations in to the current terminal session.'
 

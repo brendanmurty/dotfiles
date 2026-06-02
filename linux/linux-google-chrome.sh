@@ -5,9 +5,9 @@
 #
 #
 
-REPO_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
+REPO="$(cd "$(dirname "$0")" && cd .. && pwd)"
 
-OS="$(bash $REPO_DIR/bin/os.sh)"
+OS="$(bash $REPO/bin/os.sh)"
 
 if [[ "$OS" == "macOS" || "$OS" == "Windows" ]]; then
   echo "This script requires Linux."

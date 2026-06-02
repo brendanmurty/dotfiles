@@ -5,12 +5,12 @@
 #
 #
 
-REPO_DIR="$(cd "$(dirname "$0")" && cd ../.. && pwd)"
-OS="$(bash $REPO_DIR/bin/os.sh)"
+REPO="$(cd "$(dirname "$0")" && cd ../.. && pwd)"
+OS="$(bash $REPO/bin/os.sh)"
 
 # Setup Git Bash features
 
-bash "$REPO_DIR/dev/git/git-bash-setup.sh"
+bash "$REPO/dev/git/git-bash-setup.sh"
 
 # Set global Git Config
 

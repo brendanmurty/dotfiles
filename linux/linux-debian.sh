@@ -5,8 +5,8 @@
 #
 #
 
-REPO_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
-OS="$(bash $REPO_DIR/bin/os.sh)"
+REPO="$(cd "$(dirname "$0")" && cd .. && pwd)"
+OS="$(bash $REPO/bin/os.sh)"
 
 if [[ "$OS" != "Debian" ]]; then
   echo "This script requires Debian."
@@ -47,7 +47,7 @@ gsettings set org.gnome.mutter check-alive-timeout 60000
 
 echo 'Debian: Setup Flatpak'
 
-bash "$REPO_DIR/linux/linux-flatpak.sh"
+bash "$REPO/linux/linux-flatpak.sh"
 
 if command -v flatpak >/dev/null 2>&1 ; then
   echo 'Debian: Installing Flatpak apps'
@@ -63,4 +63,4 @@ sudo apt -qq --assume-yes install gnome-sushi
 
 echo 'Debian: Run Gnome Setup'
 
-bash "$REPO_DIR/gnome/gnome-setup.sh"
+bash "$REPO/gnome/gnome-setup.sh"

@@ -5,9 +5,9 @@
 #
 #
 
-REPO_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
+REPO="$(cd "$(dirname "$0")" && cd .. && pwd)"
 
-OS="$(bash $REPO_DIR/bin/os.sh)"
+OS="$(bash $REPO/bin/os.sh)"
 
 if [[ "$OS" != "Fedora" ]]; then
   echo "This script requires Fedora."
@@ -36,4 +36,4 @@ sudo dnf install -y sushi >/dev/null 2>&1
 
 echo 'Fedora: Run Gnome Setup'
 
-bash "$REPO_DIR/gnome/gnome-setup.sh"
+bash "$REPO/gnome/gnome-setup.sh"

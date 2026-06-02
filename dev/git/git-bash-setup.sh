@@ -5,8 +5,8 @@
 #
 #
 
-REPO_DIR="$(cd "$(dirname "$0")" && cd ../.. && pwd)"
-OS="$(bash $REPO_DIR/bin/os.sh)"
+REPO="$(cd "$(dirname "$0")" && cd ../.. && pwd)"
+OS="$(bash $REPO/bin/os.sh)"
 
 if [[ "$OS" == "Ubuntu" ]]; then
   echo 'Ubuntu: Install Git and Curl'

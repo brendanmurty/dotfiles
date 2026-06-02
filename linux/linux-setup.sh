@@ -10,7 +10,7 @@ cd "$REPO"
 source "$REPO/bin/.helper.sh"
 OS="$(os)"
 
-if [[ "$OS" == "macOS" || "$OS" == "Windows" ]]; then
+if [[ "$OS" == "macOS" ]] || [[ "$OS" == "Windows" ]]; then
   echo "This script requires Linux."
   exit 0
 fi

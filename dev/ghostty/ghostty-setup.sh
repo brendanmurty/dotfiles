@@ -6,8 +6,11 @@
 #
 
 THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
-BIN="$(cd "$(dirname "$0")" && cd ../../bin && pwd)"
-OS="$(bash $BIN/os.sh)"
+REPO="$(cd "$(dirname "$0")/../.." && pwd)"
+cd "$REPO"
+source "$REPO/bin/.helper.sh"
+OS="$(os)"
+BIN="$REPO/bin"
 
 CONFIG_DIR="$HOME"
 CONFIG_FILE="$THIS_DIR/config.linux.ghostty"

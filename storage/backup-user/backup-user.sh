@@ -12,14 +12,14 @@
 #
 #
 
-SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
+DIR="$(dirname "$(readlink -f "$0")")"
 
-LOG_FILE="$SCRIPT_DIR/backup-user.log"
+LOG_FILE="$DIR/backup-user.log"
 LOG_FMT="+%Y-%m-%d %H:%M:%S"
 touch "$LOG_FILE"
 
-cp --update=none "$SCRIPT_DIR/.backup-user.sample.env" "$SCRIPT_DIR/.backup-user.env"
-source "$SCRIPT_DIR/.backup-user.env"
+cp --update=none "$DIR/.backup-user.sample.env" "$DIR/.backup-user.env"
+source "$DIR/.backup-user.env"
 
 mkdir -p "$BACKUP_DIR"
 

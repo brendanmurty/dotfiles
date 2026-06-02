@@ -12,13 +12,13 @@
 #   - More info at https://rclone.org/drive/
 #
 
-SCRIPT_DIR=$(dirname "$(realpath "$0")")
+DIR=$(dirname "$(realpath "$0")")
 
-LOG_FILE="$SCRIPT_DIR/google-drive-rclone.log"
+LOG_FILE="$DIR/google-drive-rclone.log"
 touch "$LOG_FILE"
 
-cp --update=none "$SCRIPT_DIR/google-drive-rclone.env.sample" "$SCRIPT_DIR/google-drive-rclone.env"
-source "$SCRIPT_DIR/google-drive-rclone.env"
+cp --update=none "$DIR/google-drive-rclone.env.sample" "$DIR/google-drive-rclone.env"
+source "$DIR/google-drive-rclone.env"
 
 # Run the rclone bisync command in the background
 

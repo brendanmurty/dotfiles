@@ -5,8 +5,10 @@
 #
 #
 
-REPO="$(cd "$(dirname "$0")" && cd ../.. && pwd)"
-OS="$(bash $REPO/bin/os.sh)"
+REPO="$(cd "$(dirname "$0")/../.." && pwd)"
+cd "$REPO"
+source "$REPO/bin/.helper.sh"
+OS="$(os)"
 
 # Setup Git Bash features
 

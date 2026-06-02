@@ -12,16 +12,17 @@
 #
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
-
-BIN="$(cd "$(dirname "$0")" && cd ../bin && pwd)"
-OS="$(bash $BIN/os.sh)"
+REPO="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$REPO"
+source "$REPO/bin/.helper.sh"
+OS="$(os)"
 
 if [[ "$OS" == "Windows" ]]; then
   echo 'Linux or macOS is required'
   exit 1
 fi
 
-if command -v brew >/dev/null 2>&1 ; then
+if command -v brew > /dev/null 2>&1 ; then
   echo 'Just: Installing via Homebrew'
 
   brew reinstall fzf --force >/dev/null 2>&1

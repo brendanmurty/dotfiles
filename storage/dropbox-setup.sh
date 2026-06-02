@@ -6,9 +6,10 @@
 #
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
-
-BIN="$(cd "$(dirname "$0")" && cd ../bin && pwd)"
-OS="$(bash $BIN/os.sh)"
+REPO="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$REPO"
+source "$REPO/bin/.helper.sh"
+OS="$(os)"
 
 INSTALL_MESSAGE='Please install Dropbox manually from https://www.dropbox.com/install'
 

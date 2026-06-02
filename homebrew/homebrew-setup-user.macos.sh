@@ -9,8 +9,10 @@
 #
 #
 
-BIN="$(cd "$(dirname "$0")" && cd ../bin && pwd)"
-OS="$(bash $BIN/os.sh)"
+REPO="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$REPO"
+source "$REPO/bin/.helper.sh"
+OS="$(os)"
 
 if [[ "$OS" != "macOS" ]]; then
   echo "This script requires macOS."

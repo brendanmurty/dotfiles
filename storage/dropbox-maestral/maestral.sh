@@ -8,8 +8,11 @@
 #
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
-BIN="$(cd "$(dirname "$0")" && cd ../../bin && pwd)"
-OS="$(bash $BIN/os.sh)"
+REPO="$(cd "$(dirname "$0")/../.." && pwd)"
+cd "$REPO"
+source "$REPO/bin/.helper.sh"
+OS="$(os)"
+BIN="$REPO/bin"
 
 if [[ "$OS" == "macOS" ]] || [[ "$OS" == "Windows" ]]; then
   echo "This script requires Linux."

@@ -5,10 +5,11 @@
 #
 #
 
-THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
-BIN="$(cd "$(dirname "$0")" && cd ../bin && pwd)"
-
-OS="$(bash $BIN/os.sh)"
+DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$REPO"
+source "$REPO/bin/.helper.sh"
+OS="$(os)"
 
 if [[ "$OS" == "macOS" ]] || [[ "$OS" == "Windows" ]]; then
   echo "This script requires Linux."
@@ -146,7 +147,7 @@ sudo usermod -aG gamemode $(whoami)
 
 touch "$HOME/.config/gamemode.ini"
 cp "$HOME/.config/gamemode.ini" "$HOME/.config/gamemode.ini.old"
-cp "$THIS_DIR/gamemode.ini" "$HOME/.config/gamemode.ini"
+cp "$DIR/gamemode.ini" "$HOME/.config/gamemode.ini"
 
 info 'Installing Discord via Flatpak'
 

@@ -1,9 +1,9 @@
 background = 000000
 foreground = ffffff
-font-family = "CommitMono Nerd Font Mono"
+font-family = "CommitMono Nerd Font, Noto Emoji"
+font-feature = "-liga,-calt"
 font-size = 14
 adjust-cell-height = 2
-font-feature = "-liga,-calt"
 theme = "GitHub Dark High Contrast"
 command = bash
 cursor-style = block

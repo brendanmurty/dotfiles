@@ -1,9 +1,9 @@
 background = 000000
 foreground = ffffff
-font-family = "CommitMono Nerd Font Mono"
+font-family = "CommitMono Nerd Font, Apple Color Emoji"
+font-feature = "-liga,-calt"
 font-size = 18
 adjust-cell-height = 1
-font-feature = "-liga,-calt"
 theme = "GitHub Dark High Contrast"
 command = bash
 macos-titlebar-proxy-icon = hidden

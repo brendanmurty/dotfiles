@@ -7,7 +7,7 @@
 #
 
 THIS_DIR="$(cd "$(dirname "$0")" && pwd)"
-BIN="$(cd "$(dirname "$0")" && cd ../../scripts && pwd)"
+BIN="$(cd "$(dirname "$0")" && cd ../../bin && pwd)"
 OS="$(bash $BIN/os.sh)"
 
 if [[ "$OS" == "macOS" || "$OS" == "Windows" ]]; then

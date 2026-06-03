@@ -16,10 +16,7 @@ if [[ "$OS" == "Windows" ]] | [[ "$OS" == "macOS" ]]; then
 fi
 
 warn 'Requesting sudo'
-
 sudo -v
 
-info "Adding 'site.local' as an alias for 'localhost'"
-
-echo "127.0.0.1 site.local" | sudo tee -a /etc/hosts > /dev/null
-sudo systemctl restart systemd-resolved
+info 'Run: dev/caddy/caddy-setup.sh'
+bash "$REPO/dev/caddy/caddy-setup.sh"

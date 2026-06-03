@@ -16,7 +16,17 @@ if [[ "$OS" == "Windows" ]] | [[ "$OS" == "macOS" ]]; then
 fi
 
 warn 'Requesting sudo'
+
 sudo -v
+
+if grep -q "127.0.0.1 site.local" /etc/hosts; then
+	success "Found current setup for 'site.local' as an alias for 'localhost'"
+else
+	info "Adding 'site.local' as an alias for 'localhost'"
+
+	echo "127.0.0.1 site.local" | sudo tee -a /etc/hosts > /dev/null
+	sudo systemctl restart systemd-resolved
+fi
 
 info 'Run: dev/caddy/caddy-setup.sh'
 bash "$REPO/dev/caddy/caddy-setup.sh"

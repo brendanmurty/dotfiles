@@ -5,12 +5,12 @@
 #  - To run this script:
 #    - Clone this repo
 #    - Open that dir in Terminal
-#    - Run: bash ./dev/ai/ai-install.sh
+#    - Run: bash ./ai/ai-install.sh
 #  - Uses the first-party suggested installation and update commands for Linux/macOS
 #
 #
 
-REPO="$(cd "$(dirname "$0")/../.." && pwd)"
+REPO="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO"
 source "$REPO/bin/.helper.sh"
 

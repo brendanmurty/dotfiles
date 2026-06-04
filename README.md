@@ -2,10 +2,10 @@
 
 Configuration files, programs, packages and scripts I use for personal, gaming and software development use.
 
+- **[ai](ai/)**: AI Code Generation tool setup scripts
 - **[bin](bin/)**: Bash utility scripts
 - **[bin/setup.sh](bin/setup.sh)**: Interactive setup script
 - **[dev](dev/)**: Development tools and framework helper scripts
-- **[dev/ai](dev/ai/)**: AI Code Generation tool setup scripts
 - **[dev/docker](dev/docker/)**: Docker setup and config
 - **[dev/ghostty](dev/ghostty/)**: [Ghostty](https://github.com/ghostty-org/ghostty) setup and config
 - **[dev/git](dev/git/)**: [Git](https://git-scm.com/) setup and config

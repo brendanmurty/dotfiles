@@ -12,7 +12,7 @@
 PROMPT_COMMAND='PS1_CMD1=$(__git_ps1 " %s")';
 
 #### Colours - Blues
-PS1=$'\[$(tput setaf 241)\]\D{%I:%M:%S} \[$(tput setaf 159)\]\w\[$(tput setaf 45)\]${PS1_CMD1}\[$(tput sgr0)\]\n\[$(tput setaf 241)\]> \[$(tput sgr0)\]';
+PS1=$'\[$(tput setaf 243)\]\D{%I:%M:%S} \[$(tput setaf 255)\]\u \h\[$(tput sgr0)\] \[$(tput setaf 159)\]\w\[$(tput setaf 45)\]${PS1_CMD1}\[$(tput sgr0)\]\n\[$(tput setaf 243)\]> \[$(tput sgr0)\]';
 
 #### Colours - Oranges
 # PS1='\[$(tput setaf 243)\]\D{%I:%M:%S} \[$(tput setaf 214)\]\w\[$(tput setaf 173)\]${PS1_CMD1}\[$(tput sgr0)\]\n\[$(tput setaf 243)\]> \[$(tput sgr0)\]';

@@ -2,6 +2,9 @@
 #
 # ~/.bash_prompt
 #   - Customised shell prompt
+#		- Helpful tools:
+#			 - https://robotmoon.com/bash-prompt-generator/
+#      - https://bash-prompt-generator.org/
 #   - Relies on the '__git_ps1' script from the official Git repo:
 #     https://raw.githubusercontent.com/git/git/refs/heads/master/contrib/completion/git-prompt.sh
 #
@@ -12,7 +15,7 @@
 PROMPT_COMMAND='PS1_CMD1=$(__git_ps1 " %s")';
 
 #### Colours - Blues
-PS1=$'\[$(tput setaf 243)\]\D{%I:%M:%S} \[$(tput setaf 255)\]\u \h\[$(tput sgr0)\] \[$(tput setaf 159)\]\w\[$(tput setaf 45)\]${PS1_CMD1}\[$(tput sgr0)\]\n\[$(tput setaf 243)\]> \[$(tput sgr0)\]';
+PS1=$'\[$(tput setaf 242)\]\D{%I:%M:%S} \[$(tput setaf 247)\]\u \h\[$(tput sgr0)\] \[$(tput setaf 159)\]\w\[$(tput setaf 45)\]${PS1_CMD1}\[$(tput sgr0)\]\n\[$(tput setaf 242)\]> \[$(tput sgr0)\]';
 
 #### Colours - Oranges
 # PS1='\[$(tput setaf 243)\]\D{%I:%M:%S} \[$(tput setaf 214)\]\w\[$(tput setaf 173)\]${PS1_CMD1}\[$(tput sgr0)\]\n\[$(tput setaf 243)\]> \[$(tput sgr0)\]';

@@ -109,6 +109,10 @@ update:
   fi
   if command -v brew >/dev/null 2>&1 ; then
     echo '=> Homebrew: Updating packages';
+    export HOMEBREW_NO_UPDATE_REPORT_FORMULAE=1
+    export HOMEBREW_NO_UPDATE_REPORT_CASKS=1
+    export HOMEBREW_NO_ENV_HINTS=1
+    export HOMEBREW_NO_ANALYTICS=1
     brew update >/dev/null 2>&1;
     brew upgrade >/dev/null 2>&1;
   fi

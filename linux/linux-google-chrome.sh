@@ -16,7 +16,7 @@ if [[ "$OS" == "macOS" || "$OS" == "Windows" ]]; then
 fi
 
 # Install Google Chrome via Flatpak
-flatpak install --reinstall -y flathub com.google.Chrome
+flatpak install --reinstall -y --user flathub com.google.Chrome
 
 # Allow Chrome to access files in the user home dir
 flatpak override --user --filesystem=home com.google.Chrome

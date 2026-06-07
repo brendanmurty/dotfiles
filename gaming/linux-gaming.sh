@@ -125,7 +125,7 @@ elif [[ "$OS" == "Fedora" ]]; then
 
   info 'Fedora - Installing Steam'
 
-  flatpak install --reinstall -y com.valvesoftware.Steam
+  flatpak install --reinstall -y --user com.valvesoftware.Steam
   flatpak override --user --env=__GL_CONSTANT_FRAME_RATE_HINT=3 com.valvesoftware.Steam
 
   info 'Fedora - Running Steam in the background to run dependency installs'
@@ -151,19 +151,19 @@ cp "$DIR/gamemode.ini" "$HOME/.config/gamemode.ini"
 
 info 'Installing Discord via Flatpak'
 
-flatpak install --reinstall -y com.discordapp.Discord
+flatpak install --reinstall -y --user com.discordapp.Discord
 
 info 'Installing Lutris via Flatpak'
 
-flatpak install --reinstall -y net.lutris.Lutris
+flatpak install --reinstall -y --user net.lutris.Lutris
 
 info 'Installing ProtonPlus via Flatpak'
 
-flatpak install --reinstall -y com.vysp3r.ProtonPlus
+flatpak install --reinstall -y --user com.vysp3r.ProtonPlus
 
 info 'Installing Solaar via Flatpak'
 
-flatpak install --reinstall -y io.github.pwr_solaar.solaar
+flatpak install --reinstall -y --user io.github.pwr_solaar.solaar
 
 info 'Clearing Flatpak cache and updating Flatpak apps'
 

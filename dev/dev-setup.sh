@@ -19,6 +19,12 @@ warn 'Requesting sudo'
 
 sudo -v
 
+info 'Run: dev/node-setup.sh'
+bash "$REPO/dev/node-setup.sh"
+
+info 'Run: dev/deno-setup.sh'
+bash "$REPO/dev/deno-setup.sh"
+
 if grep -q "127.0.0.1 site.local" "/etc/hosts"; then
 	success "Found current setup for 'site.local' as an alias for 'localhost'"
 else

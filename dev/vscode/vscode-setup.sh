@@ -14,8 +14,13 @@ OS="$(os)"
 BIN="$REPO/bin"
 
 if ! command -v code &> /dev/null; then
-  echo 'Please install VS Code manually - https://code.visualstudio.com/'
-  exit 1
+    if command -v flatpak &> /dev/null; then
+        info 'Installing VS Code via Flatpak'
+        flatpak install --reinstall -y --user com.visualstudio.code
+	else
+        error 'Please install VS Code manually - https://code.visualstudio.com/'
+        exit 1
+    fi
 fi
 
 # Default to a standard confing for a Linux system
@@ -34,11 +39,11 @@ fi
 
 mkdir -p "$CONFIG_DIR"
 
-echo 'VS Code - Backing up current config'
+info 'VS Code - Backing up current config'
 
 mv "$CONFIG_DIR/settings.json" "$CONFIG_DIR/settings.json.bak"
 
-echo 'VS Code - Copying over custom config'
+info 'VS Code - Copying over custom config'
 
 cp "$DIR/settings.json" "$CONFIG_DIR/settings.json"
 
@@ -46,6 +51,8 @@ cp "$DIR/settings.json" "$CONFIG_DIR/settings.json"
 
 cat "$DIR/vscode.extensions.txt" | while read extension
 do
-  echo "VS Code - Installing extension '$extension'"
+  info "VS Code - Installing extension '$extension'"
   $INSTALL_CMD $extension > /dev/null 2>&1
 done
+
+success 'VS Code setup completed'

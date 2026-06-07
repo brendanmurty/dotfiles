@@ -14,13 +14,13 @@ OS="$(os)"
 BIN="$REPO/bin"
 
 if ! command -v code &> /dev/null; then
-    if command -v flatpak &> /dev/null; then
-        info 'Installing VS Code via Flatpak'
-        flatpak install --reinstall -y --user com.visualstudio.code
+	if command -v flatpak &> /dev/null; then
+		info 'Installing VS Code via Flatpak'
+		flatpak install --reinstall -y --user com.visualstudio.code
 	else
-        error 'Please install VS Code manually - https://code.visualstudio.com/'
-        exit 1
-    fi
+		error 'Please install VS Code manually - https://code.visualstudio.com/'
+		exit 1
+	fi
 fi
 
 # Default to a standard confing for a Linux system

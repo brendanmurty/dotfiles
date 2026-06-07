@@ -11,16 +11,23 @@ source "$REPO/bin/.helper.sh"
 OS="$(os)"
 
 if [[ "$OS" == "macOS" || "$OS" == "Windows" ]]; then
-  echo "This script requires Linux."
-  exit 0
+	error "This script requires Linux."
+	exit 0
 elif [[ "$OS" == "Ubuntu" || "$OS" == "Debian" ]]; then
-  sudo apt -qq --assume-yes install flatpak gnome-software-plugin-flatpak
-  flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+	info 'Installing packages'
+	sudo apt -qq --assume-yes install flatpak gnome-software-plugin-flatpak
 elif [[ "$OS" == "EndeavourOS" ]]; then
-  sudo pacman -Syu
-  sudo pacman -S flatpak
-  flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+	info 'Installing packages'
+	sudo pacman -Syu
+	sudo pacman -S flatpak
 else
-  echo "Please setup Flatpak manually for your OS: https://flathub.org/en/setup"
-  exit 0
+	warn "Please setup Flatpak manually for your OS: https://flathub.org/setup/"
+	exit 0
 fi
+
+info 'Adding Flathub remote'
+
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+success 'Flatpak setup completed, a system reboot is recommended.'

@@ -18,6 +18,9 @@ fi
 info 'Linux Setup: Requesting sudo access'
 sudo -v
 
+info 'Linux Setup: Run linux/linux-endeavouros.sh'
+bash "$REPO/linux/linux-endeavouros.sh"
+
 info 'Linux Setup: Run linux/bash/bash-setup.sh'
 bash "$REPO/linux/bash/bash-setup.sh"
 

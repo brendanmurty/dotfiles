@@ -20,9 +20,6 @@ elif [[ "$OS" == "EndeavourOS" ]]; then
 	info 'Installing packages'
 	sudo pacman -Syu
 	sudo pacman -S flatpak
-else
-	warn "Please setup Flatpak manually for your OS: https://flathub.org/setup/"
-	exit 0
 fi
 
 info 'Adding Flathub remote'

@@ -28,7 +28,7 @@ cp "$HOME/.bashrc" "$HOME/.bashrc.old"
 
 echo 'Setup Git Bash features'
 
-bash "$REPO/git/git-bash-setup.sh"
+bash "$REPO/dev/git/git-bash-setup.sh"
 
 echo 'Copy over the customised Bash config files'
 

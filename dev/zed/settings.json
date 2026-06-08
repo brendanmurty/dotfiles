@@ -481,7 +481,6 @@
 		},
 	},
 	"auto_install_extensions": {
-		"caddyfile": true,
 		"codeowners": true,
 		"comment": true,
 		"csv": true,

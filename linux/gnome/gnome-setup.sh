@@ -30,9 +30,20 @@ sudo -v
 echo 'Installing supporting packages for Gnome Shell Extensions'
 
 if [[ "$OS" == "Ubuntu" ]]; then
-  sudo apt install -y gnome-browser-connector python3 pipx >/dev/null 2>&1
+  sudo apt install -y \
+    gnome-browser-connector \
+    python3 \
+    pipx >/dev/null 2>&1
+elif [[ "$OS" == "EndeavourOS" ]]; then
+  sudo pacman -Syu --noconfirm \
+    gnome-browser-connector \
+    python \
+    python-pipx >/dev/null 2>&1
 elif [[ "$OS" == "Fedora" ]]; then
-  sudo dnf install -y gnome-browser-connector python3 pipx >/dev/null 2>&1
+  sudo dnf install -y \
+    gnome-browser-connector \
+    python3 \
+    pipx >/dev/null 2>&1
 fi
 
 pipx ensurepath >/dev/null 2>&1

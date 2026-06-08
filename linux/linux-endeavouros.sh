@@ -20,7 +20,14 @@ sudo -v
 
 info 'EndeavourOS: Setup initial packages and Flatpak'
 
-sudo pacman -Syu gnome-software gnome-tweaks git zip flatpak
+sudo pacman -Syu --noconfirm \
+  gnome-software \
+  gnome-tweaks \
+  gnome-browser-connector \
+  git \
+  zip \
+  flatpak
+
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 

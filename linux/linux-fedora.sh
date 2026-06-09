@@ -23,14 +23,6 @@ echo 'Fedora: Configure Vim as the default editor'
 
 sudo dnf install -y vim-default-editor --allowerasing >/dev/null 2>&1
 
-if command -v flatpak >/dev/null 2>&1 ; then
-  echo 'Fedora: Installing Flatpak apps'
-
-  flatpak install --reinstall -y flathub com.mattjakeman.ExtensionManager >/dev/null 2>&1
-  flatpak install --reinstall -y flathub io.missioncenter.MissionCenter >/dev/null 2>&1
-  flatpak install --reinstall -y flathub ca.desrt.dconf-editor >/dev/null 2>&1
-fi
-
 echo 'Fedora: Installing Gnome Sushi document preview app'
 
 sudo dnf install -y sushi >/dev/null 2>&1
@@ -48,3 +40,12 @@ sudo dnf install -y sushi >/dev/null 2>&1
 echo 'Fedora: Run Gnome Setup'
 
 bash "$REPO/linux/gnome/gnome-setup.sh"
+
+if command -v flatpak >/dev/null 2>&1 ; then
+  echo 'Fedora: Installing Flatpak apps'
+
+  flatpak install --user --reinstall -y flathub net.nokyan.Resources >/dev/null 2>&1
+  flatpak install --user --reinstall -y flathub com.github.tchx84.Flatseal >/dev/null 2>&1
+  flatpak install --user --reinstall -y flathub com.mattjakeman.ExtensionManager >/dev/null 2>&1
+  flatpak install --user --reinstall -y flathub ca.desrt.dconf-editor >/dev/null 2>&1
+fi

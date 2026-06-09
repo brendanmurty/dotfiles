@@ -232,7 +232,7 @@
 		"button": true,
 		"file_icons": true,
 	},
-	"icon_theme": "Symbols Icon Theme",
+	"icon_theme": "Light Charmed Icons",
 	"auto_update": true,
 	"telemetry": {
 		"diagnostics": false,
@@ -481,6 +481,7 @@
 		},
 	},
 	"auto_install_extensions": {
+		"charmed-icons": true,
 		"codeowners": true,
 		"comment": true,
 		"csv": true,
@@ -495,14 +496,11 @@
 		"make": true,
 		"nunjucks": true,
 		"python-requirements": true,
-		"prisma": true,
 		"symbols": true,
 		"sql": true,
-		"terraform": true,
 		"toml": true,
 		"just": true,
-		"env": true,
-		"postgres-language-server": true
+		"env": true
 	},
 	"lsp": {
 		"json-language-server": {

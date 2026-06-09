@@ -27,6 +27,7 @@ sudo pacman -Syu --noconfirm \
   gnome-menus \
   git \
   zip \
+  wl-clipboard \
   flatpak > /dev/null 2>&1
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo

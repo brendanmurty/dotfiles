@@ -9,7 +9,7 @@ REPO="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$REPO"
 source "$REPO/bin/.helper.sh"
 OS="$(os)"
-BIN="$REPO/bin"
+DIR="$REPO/dev/docker"
 
 if [[ "$OS" != "EndeavourOS" && "$OS" != "Fedora" && "$OS" != "Ubuntu" ]]; then
   error "This script requires EndeavourOS, Fedora or Ubuntu."
@@ -24,6 +24,9 @@ elif [[ "$OS" == "EndeavourOS" ]]; then
     podman-compose \
     podman-docker \
     podman-desktop
+
+  info "Configuring Docker registry defaults"
+  cp -n "$DIR/registries.conf" "$HOME/.config/containers/registries.conf"
 elif [[ "$OS" == "Fedora" ]]; then
   # Request Sudo
   sudo -v

@@ -18,11 +18,12 @@ elif [[ "$OS" == "EndeavourOS" ]]; then
   info "Requesting sudo"
   sudo -v
 
-	info "Installing Docker packages"
+	info "Installing Podman and Docker packages"
   yay -Syu --noconfirm \
-    docker \
-    docker-rootless-extras \
-    docker-desktop
+    podman \
+    podman-compose \
+    podman-docker \
+    podman-desktop
 elif [[ "$OS" == "Fedora" ]]; then
   # Request Sudo
   sudo -v

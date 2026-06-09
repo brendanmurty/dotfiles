@@ -24,6 +24,7 @@ sudo pacman -Syu --noconfirm \
   gnome-software \
   gnome-tweaks \
   gnome-browser-connector \
+  gnome-menus \
   git \
   zip \
   flatpak

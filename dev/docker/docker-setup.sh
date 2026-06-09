@@ -11,9 +11,18 @@ source "$REPO/bin/.helper.sh"
 OS="$(os)"
 BIN="$REPO/bin"
 
-if [[ "$OS" != "Fedora" && "$OS" != "Ubuntu" ]]; then
-  echo "This script requires Fedora or Ubuntu."
+if [[ "$OS" != "EndeavourOS" && "$OS" != "Fedora" && "$OS" != "Ubuntu" ]]; then
+  error "This script requires EndeavourOS, Fedora or Ubuntu."
   exit 0
+elif [[ "$OS" == "EndeavourOS" ]]; then
+  info "Requesting sudo"
+  sudo -v
+
+	info "Installing Docker packages"
+  yay -Syu --noconfirm \
+    docker \
+    docker-rootless-extras \
+    docker-desktop
 elif [[ "$OS" == "Fedora" ]]; then
   # Request Sudo
   sudo -v

@@ -10,7 +10,6 @@ REPO="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$REPO"
 source "$REPO/bin/.helper.sh"
 OS="$(os)"
-BIN="$REPO/bin"
 
 CONFIG_DIR="$HOME"
 CONFIG_FILE="$THIS_DIR/config.linux.ghostty"
@@ -33,7 +32,10 @@ if [[ "$OS" == "macOS" ]]; then
   # From https://ghostty.org/docs/install/binary#macos
   brew install --cask ghostty
 else
-  if [[ "$OS" == "Ubuntu" ]]; then
+  if [[ "$OS" == "EndeavourOS" ]]; then
+  	# From https://ghostty.org/docs/install/binary#arch-linux
+   	sudo pacman -Syu --noconfirm ghostty
+  elif [[ "$OS" == "Ubuntu" ]]; then
     # From https://ghostty.org/docs/install/binary#ubuntu
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"
   elif [[ "$OS" == "Fedora" ]]; then

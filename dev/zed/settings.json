@@ -216,9 +216,9 @@
 	"inline_code_actions": true,
 	"gutter": {
 		"min_line_number_digits": 3,
-		"runnables": true,
-		"folds": true,
-		"breakpoints": true,
+		"runnables": false,
+		"folds": false,
+		"breakpoints": false,
 	},
 	"autoscroll_on_clicks": false,
 	"scroll_beyond_last_line": "vertical_scroll_margin",

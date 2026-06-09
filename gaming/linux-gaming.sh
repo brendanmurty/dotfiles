@@ -22,7 +22,18 @@ info 'Requesting sudo access'
 
 sudo -v
 
-if [[ "$OS" == "Ubuntu" ]]; then
+if [[ "$OS" == "EndeavourOS" ]]; then
+  info 'EndeavourOS - Install supporting packages'
+
+  sudo pacman -Syu --noconfirm \
+  	steam \
+   	dkms \
+    linux-headers \
+    cabextract > /dev/null 2>&1
+
+  yay -Syu --noconfirm game-devices-udev > /dev/null 2>&1
+
+elif [[ "$OS" == "Ubuntu" ]]; then
 
   info 'Ubuntu - Install supporting packages'
 
@@ -62,14 +73,6 @@ if [[ "$OS" == "Ubuntu" ]]; then
 
   xset m 0 0
 
-  info 'Ubuntu - Disable Gnome UI animations'
-
-  gsettings set org.gnome.desktop.interface enable-animations false
-
-  info 'Ubuntu - Set non-responding app warning timeout to 1 min'
-
-  gsettings set org.gnome.mutter check-alive-timeout 60000
-
   info 'Ubuntu - Installing Steam'
 
   sudo dpkg --add-architecture i386 > /dev/null 2>&1
@@ -88,29 +91,7 @@ elif [[ "$OS" == "Fedora" ]]; then
 
   sudo dnf install -y dkms kernel-devel kernel-headers cabextract steam-devices screenfetch
 
-  info 'Fedora - Disable mouse pointer accelleration'
-
-  gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
-  gsettings set org.gnome.desktop.peripherals.touchpad accel-profile 'flat'
-
-  info 'Fedora - Update mouse pointer speed'
-
-  gsettings set org.gnome.desktop.peripherals.mouse speed '0.4897119341563787'
-
-  info 'Fedora - Disabling natural scrolling'
-
-  gsettings set org.gnome.desktop.peripherals.mouse natural-scroll false
-
-  info 'Fedora - Disable Gnome UI animations'
-
-  gsettings set org.gnome.desktop.interface enable-animations false
-
-  info 'Fedora - Set non-responding app warning timeout to 1 min'
-
-  gsettings set org.gnome.mutter check-alive-timeout 60000
-
   if [ -n "$(lspci | grep -i nvidia)" ]; then
-
     info 'Fedora - Setup for Nvidia graphics card'
 
     sudo dnf install -y "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm"
@@ -120,7 +101,6 @@ elif [[ "$OS" == "Fedora" ]]; then
 
     sudo akmods --force
     sudo dracut --force
-
   fi
 
   info 'Fedora - Installing Steam'
@@ -131,7 +111,24 @@ elif [[ "$OS" == "Fedora" ]]; then
   info 'Fedora - Running Steam in the background to run dependency installs'
 
   nohup flatpak run com.valvesoftware.Steam &
+fi
 
+if command -v gsettings >/dev/null 2>&1 ; then
+	info 'Gnome - Disable mouse pointer accelleration'
+  gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
+  gsettings set org.gnome.desktop.peripherals.touchpad accel-profile 'flat'
+
+  info 'Gnome - Update mouse pointer speed'
+  gsettings set org.gnome.desktop.peripherals.mouse speed '0.4897119341563787'
+
+  info 'Gnome - Disabling natural scrolling'
+  gsettings set org.gnome.desktop.peripherals.mouse natural-scroll false
+
+  info 'Gnome - Disable Gnome UI animations'
+  gsettings set org.gnome.desktop.interface enable-animations false
+
+  info 'Gnome - Set non-responding app warning timeout to 1 min'
+  gsettings set org.gnome.mutter check-alive-timeout 60000
 fi
 
 info 'Setup Gamemode'

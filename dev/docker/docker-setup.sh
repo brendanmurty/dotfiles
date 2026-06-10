@@ -31,6 +31,9 @@ elif [[ "$OS" == "EndeavourOS" ]]; then
 
 	info "Suppressing notices about running Docker features via Podman"
   sudo touch /etc/containers/nodocker
+
+	info "Add user subids to improve rootless Docker support in Podman"
+  sudo usermod --add-subuids 100000-165535 --add-subgids 100000-165535 $USER
 elif [[ "$OS" == "Fedora" ]]; then
   # Request Sudo
   sudo -v

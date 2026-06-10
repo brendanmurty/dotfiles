@@ -25,8 +25,12 @@ elif [[ "$OS" == "EndeavourOS" ]]; then
     podman-docker \
     podman-desktop
 
-  info "Configuring Docker registry defaults"
+  info "Configuring Docker registry and container config defaults"
   cp -n "$DIR/registries.conf" "$HOME/.config/containers/registries.conf"
+  cp -n "$DIR/containers.conf" "$HOME/.config/containers/containers.conf"
+
+	info "Suppressing notices about running Docker features via Podman"
+  sudo touch /etc/containers/nodocker
 elif [[ "$OS" == "Fedora" ]]; then
   # Request Sudo
   sudo -v

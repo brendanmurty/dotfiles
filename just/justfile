@@ -84,37 +84,39 @@ update:
     echo '=> Fedora: Requesting sudo';
     sudo -v;
     echo '=> Fedora: Updating packages';
-    sudo dnf upgrade --refresh -y >/dev/null 2>&1;
+    sudo dnf upgrade --refresh -y > /dev/null 2>&1;
     echo '=> Fedora: Updating firmware';
-    sudo fwupdmgr get-updates >/dev/null 2>&1;
-    sudo fwupdmgr update -y >/dev/null 2>&1;
+    sudo fwupdmgr get-updates > /dev/null 2>&1;
+    sudo fwupdmgr update -y > /dev/null 2>&1;
   elif [[ "$OS" == 'Ubuntu' ]]; then
     echo '=> Ubuntu: Requesting sudo';
     sudo -v;
     echo '=> Ubuntu: Updating APT packages';
-    sudo apt update -y -qq >/dev/null 2>&1;
-    sudo apt upgrade -y -qq >/dev/null 2>&1;
-    sudo apt full-upgrade -y -qq >/dev/null 2>&1;
+    sudo apt update -y -qq > /dev/null 2>&1;
+    sudo apt upgrade -y -qq > /dev/null 2>&1;
+    sudo apt full-upgrade -y -qq > /dev/null 2>&1;
   elif [[ "$OS" == 'EndeavourOS' ]]; then
-    echo '=> EndeavourOS: Running "eos-update"';
-    eos-update --aur;
+    echo '=> EndeavourOS: System updates';
+    sudo pacman -Syu --noconfirm > /dev/null 2>&1;
+    echo '=> EndeavourOS: Package updates';
+    yay -Sua --noconfirm > /dev/null 2>&1;
   fi
   if command -v snap >/dev/null 2>&1 ; then
     echo '=> Snap: Updating packages';
     sudo snap refresh >/dev/null 2>&1;
   fi
-  if command -v flatpak >/dev/null 2>&1 ; then
+  if command -v flatpak > /dev/null 2>&1 ; then
     echo '=> Flatpak: Updating packages';
-    flatpak update -y >/dev/null 2>&1;
+    flatpak update -y > /dev/null 2>&1;
   fi
-  if command -v brew >/dev/null 2>&1 ; then
+  if command -v brew > /dev/null 2>&1 ; then
     echo '=> Homebrew: Updating packages';
     export HOMEBREW_NO_UPDATE_REPORT_FORMULAE=1
     export HOMEBREW_NO_UPDATE_REPORT_CASKS=1
     export HOMEBREW_NO_ENV_HINTS=1
     export HOMEBREW_NO_ANALYTICS=1
-    brew update >/dev/null 2>&1;
-    brew upgrade >/dev/null 2>&1;
+    brew update > /dev/null 2>&1;
+    brew upgrade > /dev/null 2>&1;
   fi
 
 # Clean packages and temp files
@@ -122,30 +124,39 @@ update:
 clean:
   #!/usr/bin/env bash
   OS=$(just os);
-  if [[ "$OS" == 'Fedora' ]]; then
+  if [[ "$OS" == 'EndeavourOS' ]]; then
+    echo '=> EndeavourOS: Requesting sudo';
+    sudo -v;
+    echo '=> EndeavourOS: Cleanup packages';
+    paccache -rvk2 > /dev/null 2>&1;
+    paccache -ruk0 > /dev/null 2>&1;
+    sudo pacman -Rns $(pacman -Qtdq) --noconfirm > /dev/null 2>&1;
+    echo '=> EndeavourOS: Empty cache';
+    rm -rf "$HOME/.cache/"*;
+  elif [[ "$OS" == 'Fedora' ]]; then
     echo '=> Fedora: Requesting sudo';
     sudo -v;
     echo '=> Fedora: Cleanup packages';
-    sudo dnf autoremove -y >/dev/null 2>&1;
-    sudo dnf clean all >/dev/null 2>&1;
+    sudo dnf autoremove -y > /dev/null 2>&1;
+    sudo dnf clean all > /dev/null 2>&1;
   elif [[ "$OS" == 'Ubuntu' ]]; then
     echo '=> Ubuntu: Cleanup APT packages';
-    sudo apt autoremove -y >/dev/null 2>&1;
-    sudo apt clean -y >/dev/null 2>&1;
-    sudo apt autoclean -y >/dev/null 2>&1;
+    sudo apt autoremove -y > /dev/null 2>&1;
+    sudo apt clean -y > /dev/null 2>&1;
+    sudo apt autoclean -y > /dev/null 2>&1;
   fi
-  if command -v flatpak >/dev/null 2>&1 ; then
+  if command -v flatpak > /dev/null 2>&1 ; then
     echo '=> Flatpak: Cleanup packages';
-    flatpak uninstall -y --unused --delete-data >/dev/null 2>&1;
+    flatpak uninstall -y --unused --delete-data > /dev/null 2>&1;
   fi
-  if command -v brew >/dev/null 2>&1 ; then
+  if command -v brew > /dev/null 2>&1 ; then
     echo '=> Homebrew: Cleanup packages';
-    brew cleanup >/dev/null 2>&1;
+    brew cleanup > /dev/null 2>&1;
   fi
-  if command -v snap >/dev/null 2>&1 ; then
+  if command -v snap > /dev/null 2>&1 ; then
     echo '=> Snap: Cleanup packages';
-    sudo snap set system refresh.retain=2 >/dev/null 2>&1;
-    sudo rm -rf '/var/lib/snapd/cache/*' >/dev/null 2>&1;
+    sudo snap set system refresh.retain=2 > /dev/null 2>&1;
+    sudo rm -rf '/var/lib/snapd/cache/*' > /dev/null 2>&1;
   fi
 
 # Info about Just and the system

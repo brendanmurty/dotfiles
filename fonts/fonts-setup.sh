@@ -23,7 +23,20 @@ echo "Copying over Commit Mono Nerd Fonts from https://www.nerdfonts.com/font-do
 
 cp "$DIR/CommitMono/"*.otf "$FONT_DIR/"
 
-if [[ "$OS" == "Fedora" ]]; then
+if [[ "$OS" == "EndeavourOS" ]]; then
+	echo 'EndeavourOS: Requesting sudo'
+  sudo -v
+
+  echo 'EndeavourOS: Install Ubuntu fonts'
+	sudo pacman -Syu --noconfirm ttf-ubuntu-font-family
+
+	echo 'EndeavourOS: Apply font settings to Gnome Shell'
+	gsettings set org.gnome.desktop.interface font-name 'Ubuntu 12'
+	gsettings set org.gnome.desktop.interface document-font-name 'Ubuntu 12'
+	gsettings set org.gnome.desktop.interface monospace-font-name 'Ubuntu Mono 13'
+	gsettings set org.gnome.desktop.interface font-antialiasing 'rgba'
+	gsettings set org.gnome.desktop.interface font-rendering 'automatic'
+elif [[ "$OS" == "Fedora" ]]; then
   echo 'Fedora: Requesting sudo'
   sudo -v
 

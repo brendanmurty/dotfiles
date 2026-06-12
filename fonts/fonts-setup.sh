@@ -31,7 +31,7 @@ if [[ "$OS" == "EndeavourOS" ]]; then
 	sudo pacman -Syu --noconfirm ttf-ubuntu-font-family
 
 	echo 'EndeavourOS: Apply font settings to Gnome Shell'
-	gsettings set org.gnome.desktop.interface font-name 'Ubuntu 12'
+	gsettings set org.gnome.desktop.interface font-name 'Ubuntu 11'
 	gsettings set org.gnome.desktop.interface document-font-name 'Ubuntu 12'
 	gsettings set org.gnome.desktop.interface monospace-font-name 'Ubuntu Mono 13'
 	gsettings set org.gnome.desktop.interface font-antialiasing 'rgba'

@@ -20,3 +20,6 @@ else
   # Install Deno for Linux, command from https://docs.deno.com/runtime/getting_started/installation/
   curl -fsSL https://deno.land/install.sh | sh
 fi
+
+# Install the 'dx' alias for 'deno x' - https://docs.deno.com/runtime/reference/cli/x/
+deno x --install-alias

@@ -80,16 +80,17 @@ echo 'Applying customised Gnome Settings'
 if [[ "$OS" == "EndeavourOS" ]]; then
   gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
   gsettings set org.gnome.desktop.interface accent-color 'teal'
+  gsettings set org.gnome.desktop.interface icon-theme 'Adwaita-dark'
+  gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
   gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
   gsettings set org.gnome.desktop.interface cursor-size 24
-  gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 elif [[ "$OS" == "Ubuntu" ]]; then
   gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-  gsettings set org.gnome.desktop.interface icon-theme 'Yaru-sage-dark'
-  gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-sage-dark'
+  gsettings set org.gnome.desktop.interface accent-color 'teal'
+  gsettings set org.gnome.desktop.interface icon-theme 'Yaru-prussiangreen-dark'
+  gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-prussiangreen-dark'
   gsettings set org.gnome.desktop.interface cursor-theme 'Yaru'
   gsettings set org.gnome.desktop.interface cursor-size 24
-  gsettings set org.gnome.desktop.interface accent-color 'slate'
 fi
 
 # Desktop and screensaver

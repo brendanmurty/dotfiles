@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#
+# Grub Bootloader - Custom colour settings
+#
+
+
+echo 'Updating Grub colours from /etc/grub.d/06_local_colours'
+
+set color_normal=white/black
+set menu_color_normal=white/black
+set menu_color_highlight=cyan/black

@@ -57,13 +57,13 @@ elif [[ "$OS" == "Ubuntu" ]]; then
     dkms \
     curl \
     cabextract \
-    cpufrequtils >/dev/null 2>&1
+    cpufrequtils > /dev/null 2>&1
 
   info 'Ubuntu - Set CPU cores to performance mode'
 
-  sudo cpupower frequency-set -g performance >/dev/null 2>&1
-  echo 'GOVERNOR="performance"' | sudo tee /etc/default/cpufrequtils >/dev/null 2>&1
-  sudo systemctl restart cpufrequtils >/dev/null 2>&1
+  sudo cpupower frequency-set -g performance > /dev/null 2>&1
+  echo 'GOVERNOR="performance"' | sudo tee /etc/default/cpufrequtils > /dev/null 2>&1
+  sudo systemctl restart cpufrequtils > /dev/null 2>&1
 
   info 'Ubuntu - Increase shader size for Nvidia GPUs'
 
@@ -89,7 +89,13 @@ elif [[ "$OS" == "Fedora" ]]; then
 
   info 'Fedora - Install supporting packages'
 
-  sudo dnf install -y dkms kernel-devel kernel-headers cabextract steam-devices screenfetch
+  sudo dnf install -y \
+  	dkms \
+   	kernel-devel \
+    kernel-headers \
+    cabextract \
+    steam-devices \
+    screenfetch > /dev/null 2>&1
 
   if [ -n "$(lspci | grep -i nvidia)" ]; then
     info 'Fedora - Setup for Nvidia graphics card'
@@ -97,7 +103,12 @@ elif [[ "$OS" == "Fedora" ]]; then
     sudo dnf install -y "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm"
     sudo dnf install -y "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
 
-    sudo dnf install -y nvidia-smi akmod-nvidia xorg-x11-drv-nvidia-cuda kernel-devel-matched kernel-headers
+    sudo dnf install -y \
+    	nvidia-smi \
+    	akmod-nvidia \
+    	xorg-x11-drv-nvidia-cuda \
+    	kernel-devel-matched \
+    	kernel-headers > /dev/null 2>&1
 
     sudo akmods --force
     sudo dracut --force
@@ -107,13 +118,9 @@ elif [[ "$OS" == "Fedora" ]]; then
 
   sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
   sudo dnf install -y steam
-
-  info 'Fedora - Running Steam in the background to run dependency installs'
-
-  nohup flatpak run com.valvesoftware.Steam &
 fi
 
-if command -v gsettings >/dev/null 2>&1 ; then
+if command -v gsettings > /dev/null 2>&1 ; then
 	info 'Gnome - Disable mouse pointer accelleration'
   gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
   gsettings set org.gnome.desktop.peripherals.touchpad accel-profile 'flat'
@@ -138,7 +145,7 @@ git clone --quiet "https://github.com/FeralInteractive/gamemode.git" "$HOME/.gam
 cd "$HOME/.gamemode"
 git checkout --quiet 1.8.2
 
-yes | bash "./bootstrap.sh" >/dev/null 2>&1
+yes | bash "./bootstrap.sh" > /dev/null 2>&1
 
 sudo usermod -aG gamemode $(whoami)
 
@@ -146,28 +153,26 @@ touch "$HOME/.config/gamemode.ini"
 cp "$HOME/.config/gamemode.ini" "$HOME/.config/gamemode.ini.old"
 cp "$DIR/gamemode.ini" "$HOME/.config/gamemode.ini"
 
-info 'Installing Discord via Flatpak'
+if ! command -v flatpak > /dev/null 2>&1 ; then
+  warn 'Skipping Flatpak installs, please setup Flatpak first - bash linux/linux-flatpak.sh'
+else
+  info 'Installing Discord via Flatpak'
+  flatpak install --reinstall -y --user com.discordapp.Discord
 
-flatpak install --reinstall -y --user com.discordapp.Discord
+  info 'Installing Lutris via Flatpak'
+  flatpak install --reinstall -y --user net.lutris.Lutris
 
-info 'Installing Lutris via Flatpak'
+  info 'Installing ProtonPlus via Flatpak'
+  flatpak install --reinstall -y --user com.vysp3r.ProtonPlus
 
-flatpak install --reinstall -y --user net.lutris.Lutris
+  info 'Installing Solaar via Flatpak'
+  flatpak install --reinstall -y --user io.github.pwr_solaar.solaar
 
-info 'Installing ProtonPlus via Flatpak'
-
-flatpak install --reinstall -y --user com.vysp3r.ProtonPlus
-
-info 'Installing Solaar via Flatpak'
-
-flatpak install --reinstall -y --user io.github.pwr_solaar.solaar
-
-info 'Clearing Flatpak cache and updating Flatpak apps'
-
-rm -rf "$HOME/.cache/flatpak"
-mkdir -p "$HOME/.cache/flatpak"
-
-flatpak update -y
+  info 'Clearing Flatpak cache and updating Flatpak apps'
+  rm -rf "$HOME/.cache/flatpak"
+  mkdir -p "$HOME/.cache/flatpak"
+  flatpak update -y
+fi
 
 info 'Installing Xbox Controllers firmware'
 
@@ -177,4 +182,4 @@ cd "$HOME/.xone"
 sudo "./install.sh" --release
 sudo "xone-get-firmware.sh"
 
-info 'Finished, a system reboot is recommended'
+success 'Finished, a system reboot is recommended'

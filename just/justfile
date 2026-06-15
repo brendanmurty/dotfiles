@@ -101,9 +101,9 @@ update:
     echo '=> EndeavourOS: Package updates';
     yay -Sua --noconfirm > /dev/null 2>&1;
   fi
-  if command -v snap >/dev/null 2>&1 ; then
+  if command -v snap > /dev/null 2>&1 ; then
     echo '=> Snap: Updating packages';
-    sudo snap refresh >/dev/null 2>&1;
+    sudo snap refresh > /dev/null 2>&1;
   fi
   if command -v flatpak > /dev/null 2>&1 ; then
     echo '=> Flatpak: Updating packages';
@@ -146,6 +146,9 @@ clean:
     sudo apt autoclean -y > /dev/null 2>&1;
   fi
   if command -v flatpak > /dev/null 2>&1 ; then
+    echo '=> Flatpak: Cleanup cache';
+    rm -rf "$HOME/.cache/flatpak"
+    mkdir -p "$HOME/.cache/flatpak"
     echo '=> Flatpak: Cleanup packages';
     flatpak uninstall -y --unused --delete-data > /dev/null 2>&1;
   fi

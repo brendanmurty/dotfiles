@@ -105,8 +105,8 @@ elif [[ "$OS" == "Fedora" ]]; then
 
   info 'Fedora - Installing Steam'
 
-  flatpak install --reinstall -y --user com.valvesoftware.Steam
-  flatpak override --user --env=__GL_CONSTANT_FRAME_RATE_HINT=3 com.valvesoftware.Steam
+  sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
+  sudo dnf install -y steam
 
   info 'Fedora - Running Steam in the background to run dependency installs'
 

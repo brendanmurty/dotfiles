@@ -115,7 +115,7 @@ elif [[ "$OS" == "Fedora" ]]; then
   fi
 
   info 'Fedora - Installing Steam'
-
+  # From https://docs.fedoraproject.org/en-US/gaming/proton/
   sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
   sudo dnf install -y steam
 fi

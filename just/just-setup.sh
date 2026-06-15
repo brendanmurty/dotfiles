@@ -25,8 +25,8 @@ fi
 if command -v brew > /dev/null 2>&1 ; then
   echo 'Just: Installing via Homebrew'
 
-  brew reinstall fzf --force >/dev/null 2>&1
-  brew reinstall just --force >/dev/null 2>&1
+  brew reinstall fzf --force > /dev/null 2>&1
+  brew reinstall just --force > /dev/null 2>&1
 else
   echo 'Just: Please install Just manually - https://github.com/casey/just#installation'
   exit 1

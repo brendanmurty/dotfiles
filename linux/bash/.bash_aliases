@@ -7,7 +7,7 @@
 
 ## Docker
 
-if command -v docker >/dev/null 2>&1 ; then
+if command -v docker > /dev/null 2>&1 ; then
   alias docker-compose='docker compose'
   alias docker-up='docker compose up -d'
   alias docker-down='docker compose down'
@@ -28,7 +28,6 @@ alias hist-search='history | cut -c 8- | grep'
 
 ## Zed Editor
 
-if command -v zeditor >/dev/null 2>&1 ; then
+if command -v zeditor > /dev/null 2>&1 ; then
   alias zed='zeditor'
 fi
-

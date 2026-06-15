@@ -21,7 +21,7 @@ sudo -v
 
 echo 'Debian: Enable 32-bit architecture'
 
-sudo dpkg --add-architecture i386 >/dev/null 2>&1
+sudo dpkg --add-architecture i386 > /dev/null 2>&1
 
 echo 'Debian: Add contrib and non-free APT repositories'
 
@@ -29,7 +29,7 @@ sudo sed -i 's/main non-free-firmware/main contrib non-free non-free-firmware/g'
 
 echo 'Debian: Update package lists'
 
-sudo apt update -qq >/dev/null 2>&1
+sudo apt update -qq > /dev/null 2>&1
 
 echo 'Debian: Install Nvidia drivers'
 
@@ -37,11 +37,11 @@ sudo apt install -qq --assume-yes --reinstall \
 	firmware-linux \
 	nvidia-driver \
 	nvidia-kernel-dkms \
-	linux-headers-$(uname -r) >/dev/null 2>&1
+	linux-headers-$(uname -r) > /dev/null 2>&1
 
 echo 'Debian: Improve audio hardware support'
 
-sudo apt -qq --assume-yes install pipewire-audio-client-libraries pipewire-pulse easyeffects >/dev/null 2>&1
+sudo apt -qq --assume-yes install pipewire-audio-client-libraries pipewire-pulse easyeffects > /dev/null 2>&1
 
 echo 'Debian - Set non-responding app warning timeout to 1 min'
 
@@ -51,12 +51,12 @@ echo 'Debian: Setup Flatpak'
 
 bash "$REPO/linux/linux-flatpak.sh"
 
-if command -v flatpak >/dev/null 2>&1 ; then
+if command -v flatpak > /dev/null 2>&1 ; then
   echo 'Debian: Installing Flatpak apps'
 
-  flatpak install --reinstall -y flathub com.mattjakeman.ExtensionManager >/dev/null 2>&1
-  flatpak install --reinstall -y flathub io.missioncenter.MissionCenter >/dev/null 2>&1
-  flatpak install --reinstall -y flathub ca.desrt.dconf-editor >/dev/null 2>&1
+  flatpak install --reinstall -y flathub com.mattjakeman.ExtensionManager > /dev/null 2>&1
+  flatpak install --reinstall -y flathub io.missioncenter.MissionCenter > /dev/null 2>&1
+  flatpak install --reinstall -y flathub ca.desrt.dconf-editor > /dev/null 2>&1
 fi
 
 echo 'Debian: Installing Gnome Sushi document preview app'

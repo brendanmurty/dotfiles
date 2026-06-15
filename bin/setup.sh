@@ -34,7 +34,7 @@ else
   warn "Skipped symlink, '$HOME/Dotfiles' already exists"
 fi
 
-if command -v brew >/dev/null 2>&1 ; then
+if command -v brew > /dev/null 2>&1 ; then
   warn 'Homebrew package manager already installed'
 else
   info 'Homebrew package manager setup'

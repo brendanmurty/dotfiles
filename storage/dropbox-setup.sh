@@ -24,10 +24,10 @@ elif [[ "$OS" == "macOS" ]]; then
     exit 1
   fi
 else
-  if command -v dropbox >/dev/null 2>&1 ; then
+  if command -v dropbox > /dev/null 2>&1 ; then
     echo 'Dropbox is already installed.'
   else
-    if command -v flatpak >/dev/null 2>&1 ; then
+    if command -v flatpak > /dev/null 2>&1 ; then
       echo 'Installing Dropbox via Flatpak'
 
       flatpak install -y com.dropbox.Client

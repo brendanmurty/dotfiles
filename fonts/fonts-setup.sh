@@ -41,13 +41,13 @@ elif [[ "$OS" == "Fedora" ]]; then
   sudo -v
 
   echo 'Fedora: Installing Google Noto Emoji fonts'
-  sudo dnf install -y google-noto-color-emoji-fonts >/dev/null 2>&1
+  sudo dnf install -y google-noto-color-emoji-fonts > /dev/null 2>&1
 elif [[ "$OS" == "Ubuntu" ]]; then
   echo 'Ubuntu: Requesting sudo'
   sudo -v
 
   echo 'Ubuntu: Installing Google Noto Emoji fonts'
-  sudo apt -qq --assume-yes install fonts-noto-color-emoji >/dev/null 2>&1
+  sudo apt -qq --assume-yes install fonts-noto-color-emoji > /dev/null 2>&1
 
   FONT_CONF_DIR="$HOME/.config/fontconfig/conf.d"
   mkdir -p "$FONT_CONF_DIR"

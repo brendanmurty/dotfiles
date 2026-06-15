@@ -33,32 +33,32 @@ if [[ "$OS" == "Ubuntu" ]]; then
   sudo apt install -y \
     gnome-browser-connector \
     python3 \
-    pipx >/dev/null 2>&1
+    pipx > /dev/null 2>&1
 elif [[ "$OS" == "EndeavourOS" ]]; then
   sudo pacman -Syu --noconfirm \
     gnome-browser-connector \
     python \
-    python-pipx >/dev/null 2>&1
+    python-pipx > /dev/null 2>&1
 elif [[ "$OS" == "Fedora" ]]; then
   sudo dnf install -y \
     gnome-browser-connector \
     python3 \
-    pipx >/dev/null 2>&1
+    pipx > /dev/null 2>&1
 fi
 
-pipx ensurepath >/dev/null 2>&1
-pipx install --force gnome-extensions-cli --system-site-packages >/dev/null 2>&1
+pipx ensurepath > /dev/null 2>&1
+pipx install --force gnome-extensions-cli --system-site-packages > /dev/null 2>&1
 
 echo 'Installing some Gnome Shell Extensions'
 
-gnome-extensions-cli install "appindicatorsupport@rgcjonas.gmail.com" >/dev/null 2>&1
-gnome-extensions-cli install "arcmenu@arcmenu.com" >/dev/null 2>&1
-gnome-extensions-cli install "dash-to-panel@jderose9.github.com" >/dev/null 2>&1
-gnome-extensions-cli install "just-perfection-desktop@just-perfection" >/dev/null 2>&1
-gnome-extensions-cli install "smarttiling@samuelnovaes" >/dev/null 2>&1
+gnome-extensions-cli install "appindicatorsupport@rgcjonas.gmail.com" > /dev/null 2>&1
+gnome-extensions-cli install "arcmenu@arcmenu.com" > /dev/null 2>&1
+gnome-extensions-cli install "dash-to-panel@jderose9.github.com" > /dev/null 2>&1
+gnome-extensions-cli install "just-perfection-desktop@just-perfection" > /dev/null 2>&1
+gnome-extensions-cli install "smarttiling@samuelnovaes" > /dev/null 2>&1
 
 if [[ "$OS" == "Fedora" ]]; then
-  gnome-extensions-cli install "accent-directories@taiwbi.com" >/dev/null 2>&1
+  gnome-extensions-cli install "accent-directories@taiwbi.com" > /dev/null 2>&1
 fi
 
 # Helper function to check if a Dconf Settings Schema exists
@@ -291,7 +291,7 @@ fi
 
 # Power and performance
 
-if powerprofilesctl >/dev/null 2>&1; then
+if powerprofilesctl > /dev/null 2>&1; then
   powerprofilesctl set performance
 fi
 

@@ -52,7 +52,7 @@ fi
 
 # Save a copy of the user cron items
 
-if command -v crontab >/dev/null 2>&1 ; then
+if command -v crontab > /dev/null 2>&1 ; then
   crontab -l > "$CONFIG_BACKUP_DIR/crontab-user.txt"
 fi
 
@@ -62,37 +62,37 @@ ls -lah "$SOURCE_DIR" > "$CONFIG_BACKUP_DIR/dir-list-user.txt"
 
 # Save Pytxis Terminal config
 
-if command -v /usr/bin/ptyxis >/dev/null 2>&1 ; then
+if command -v /usr/bin/ptyxis > /dev/null 2>&1 ; then
   dconf dump /org/gnome/Ptyxis/ > "$CONFIG_BACKUP_DIR/ptyxis-terminal-config.txt"
 fi
 
 # Save a list of all installed Pacman packages
 
-if command -v pacman >/dev/null 2>&1 ; then
+if command -v pacman > /dev/null 2>&1 ; then
   pacman -Qqen > "$CONFIG_BACKUP_DIR/package-list-pacman.txt"
 fi
 
 # Save a list of all installed Flatpak packages
 
-if command -v flatpak >/dev/null 2>&1 ; then
+if command -v flatpak > /dev/null 2>&1 ; then
   flatpak list --app --columns=application > "$CONFIG_BACKUP_DIR/package-list-flatpak.txt"
 fi
 
 # Save a list of all installed Snap packages
 
-if command -v snap >/dev/null 2>&1 ; then
+if command -v snap > /dev/null 2>&1 ; then
   snap list --unicode=never | tail -n +2 | grep -v 'core\|gnome-\|snapd\|snap-store\|bare\|canonical-livepatch' | awk '{print $1}' > "$CONFIG_BACKUP_DIR/package-list-snap.txt"
 fi
 
 # Save a list of all installed Homebrew packages
 
-if command -v brew >/dev/null 2>&1 ; then
+if command -v brew > /dev/null 2>&1 ; then
   brew leaves > "$CONFIG_BACKUP_DIR/package-list-homebrew.txt"
 fi
 
 # Save a list of all Dconf settings
 
-if command -v dconf >/dev/null 2>&1 ; then
+if command -v dconf > /dev/null 2>&1 ; then
   dconf dump / > "$CONFIG_BACKUP_DIR/dconf-user-export.conf"
 fi
 
@@ -147,7 +147,7 @@ zip \
   -x "**/uv/*" \
   -x "*.sock" \
   -x "*.pipe" \
-  >/dev/null 2>&1
+  > /dev/null 2>&1
 
 # Done
 

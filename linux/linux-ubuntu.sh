@@ -59,11 +59,11 @@ echo 'Ubuntu: Run Gnome Setup'
 
 bash "$REPO/linux/gnome/gnome-setup.sh"
 
-if command -v flatpak >/dev/null 2>&1 ; then
+if command -v flatpak > /dev/null 2>&1 ; then
   echo 'Ubuntu: Installing Flatpak apps'
 
-  flatpak install --user --reinstall -y flathub net.nokyan.Resources >/dev/null 2>&1
-  flatpak install --user --reinstall -y flathub com.github.tchx84.Flatseal >/dev/null 2>&1
-  flatpak install --user --reinstall -y flathub com.mattjakeman.ExtensionManager >/dev/null 2>&1
-  flatpak install --user --reinstall -y flathub ca.desrt.dconf-editor >/dev/null 2>&1
+  flatpak install --user --reinstall -y flathub net.nokyan.Resources > /dev/null 2>&1
+  flatpak install --user --reinstall -y flathub com.github.tchx84.Flatseal > /dev/null 2>&1
+  flatpak install --user --reinstall -y flathub com.mattjakeman.ExtensionManager > /dev/null 2>&1
+  flatpak install --user --reinstall -y flathub ca.desrt.dconf-editor > /dev/null 2>&1
 fi

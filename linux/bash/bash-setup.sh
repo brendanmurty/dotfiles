@@ -13,34 +13,32 @@ source "$REPO/bin/.helper.sh"
 OS="$(os)"
 
 if [[ "$OS" == "Windows" ]]; then
-  echo "This script requires Linux or macOS."
-  exit 1
+  error "This script requires Linux or macOS."
+  exit 0
 fi
 
-touch "$HOME/.bash_aliases" "$HOME/.bash_prompt" "$HOME/.bash_profile"
+info 'Create backups of current Bash config files for this user'
 
-echo 'Create backups of current Bash config files for this user'
+[ -f "$HOME/.bash_aliases" ] && mv "$HOME/.bash_aliases" "$HOME/.bash_aliases.old"
+[ -f "$HOME/.bash_prompt" ] && mv "$HOME/.bash_prompt" "$HOME/.bash_prompt.old"
+[ -f "$HOME/.bash_profile" ] && mv "$HOME/.bash_profile" "$HOME/.bash_profile.old"
+[ -f "$HOME/.bashrc" ] && mv "$HOME/.bashrc" "$HOME/.bashrc.old"
 
-cp "$HOME/.bash_aliases" "$HOME/.bash_aliases.old"
-cp "$HOME/.bash_prompt" "$HOME/.bash_prompt.old"
-cp "$HOME/.bash_profile" "$HOME/.bash_profile.old"
-cp "$HOME/.bashrc" "$HOME/.bashrc.old"
-
-echo 'Setup Git Bash features'
+info 'Setup Git Bash features'
 
 bash "$REPO/dev/git/git-bash-setup.sh"
 
-echo 'Copy over the customised Bash config files'
+info 'Add symlinks to the customised Bash config files'
 
-cp "$REPO/linux/bash/.bash_aliases" "$HOME/.bash_aliases"
-cp "$REPO/linux/bash/.bash_prompt" "$HOME/.bash_prompt"
-cp "$REPO/linux/bash/.bash_profile" "$HOME/.bash_profile"
+ln -s "$REPO/linux/bash/.bash_aliases" "$HOME/.bash_aliases"
+ln -s "$REPO/linux/bash/.bash_prompt" "$HOME/.bash_prompt"
+ln -s "$REPO/linux/bash/.bash_profile" "$HOME/.bash_profile"
 
-echo 'Load the customisations in to the current terminal session.'
+info "Load the customised Bash config files at the end of '$HOME/.bashrc'"
 
 echo '' >> "$HOME/.bashrc"
 echo 'source "$HOME/.bash_profile"' >> "$HOME/.bashrc"
 
 source "$HOME/.bashrc"
 
-echo 'Future terminal sessions will automatically load via ~/.bash_profile'
+success 'Future terminal sessions will automatically load the customised Bash config files'

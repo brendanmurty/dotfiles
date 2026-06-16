@@ -56,6 +56,19 @@ if command -v fzf > /dev/null 2>&1 ; then
 	eval "$(fzf --bash)"
 fi
 
+# Setup a 'ujust' alias if suitable
+
+if command -v just > /dev/null 2>&1 && [ -f "$HOME/justfile" ] ; then
+	alias ujust="just --justfile $HOME/justfile"
+fi
+
+# Configure NVM if it's installed to the default location
+
+if [ -d "$HOME/.nvm" ]; then
+  export NVM_DIR="$HOME/.nvm"
+  source "$HOME/.nvm/nvm.sh" > /dev/null 2>&1
+fi
+
 # Search for a Homebrew installation and load it if found
 
 if [ -d "$HOME/.brew" ]; then
@@ -84,12 +97,6 @@ if [[ "$BREW_DIR" != "" ]]; then
   alias brew="$BREW_DIR/bin/brew"
 fi
 
-# Configure NVM if it's installed to the default location
-
-if [ -d "$HOME/.nvm" ]; then
-  export NVM_DIR="$HOME/.nvm"
-  source "$HOME/.nvm/nvm.sh" > /dev/null 2>&1
-fi
 
 # Set suitable user level shell variables
 

@@ -7,6 +7,7 @@
 #    - Open that dir in Terminal
 #    - Run: bash ./ai/ai-install.sh
 #  - Uses the first-party suggested installation and update commands for Linux/macOS
+#  - Assumes that Homebrew is already installed
 #
 #
 

@@ -18,11 +18,11 @@ fi
 info 'Linux Setup: Requesting sudo access'
 sudo -v
 
-info 'Linux Setup: Run linux/linux-endeavouros.sh'
-bash "$REPO/linux/linux-endeavouros.sh"
-
 info 'Linux Setup: Run linux/bash/bash-setup.sh'
 bash "$REPO/linux/bash/bash-setup.sh"
+
+info 'Linux Setup: Run linux/linux-fzf.sh'
+bash "$REPO/linux/linux-fzf.sh"
 
 info 'Linux Setup: Run fonts/fonts-setup.sh'
 bash "$REPO/fonts/fonts-setup.sh"
@@ -33,14 +33,17 @@ bash "$REPO/dev/git/git-setup.sh"
 info 'Linux Setup: Run linux/linux-flatpak.sh'
 bash "$REPO/linux/linux-flatpak.sh"
 
+info 'Linux Setup: Run linux/linux-endeavouros.sh'
+bash "$REPO/linux/linux-endeavouros.sh"
+
 info 'Linux Setup: Run linux/linux-debian.sh'
 bash "$REPO/linux/linux-debian.sh"
 
-info 'Linux Setup: Run linux/linux-ubuntu.sh'
-bash "$REPO/linux/linux-ubuntu.sh"
-
 info 'Linux Setup: Run linux/linux-fedora.sh'
 bash "$REPO/linux/linux-fedora.sh"
+
+info 'Linux Setup: Run linux/linux-ubuntu.sh'
+bash "$REPO/linux/linux-ubuntu.sh"
 
 info 'Linux Setup: Run linux/hardware/keychron-keyboards.sh'
 bash "$REPO/linux/hardware/keychron-keyboards.sh"

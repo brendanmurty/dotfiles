@@ -50,6 +50,12 @@ if [ -f "$HOME/.deno/env" ]; then
   source "$HOME/.deno/env"
 fi
 
+# Configure FZF shell integration if it's installed
+
+if command -v fzf > /dev/null 2>&1 ; then
+	eval "$(fzf --bash)"
+fi
+
 # Search for a Homebrew installation and load it if found
 
 if [ -d "$HOME/.brew" ]; then

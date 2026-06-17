@@ -19,14 +19,6 @@ echo 'Ubuntu: Requesting sudo'
 
 sudo -v
 
-echo 'Ubuntu: Fix broken system package dependencies'
-
-sudo dpkg --configure -a
-
-echo 'Ubuntu: Continue interrupted package installs'
-
-sudo apt-get install -f
-
 echo 'Ubuntu: Update package lists'
 
 sudo apt update -qq
@@ -37,11 +29,20 @@ sudo apt autoremove -y
 sudo apt autoclean
 sudo apt clean
 
-echo 'Ubuntu: Install system software management apps'
+echo 'Ubuntu: Install base system packages'
 
 sudo apt -qq --assume-yes install \
   gnome-software \
-  software-properties-gtk
+  software-properties-gtk \
+  gnome-tweaks \
+  curl \
+  git \
+  zip \
+  vim \
+  gnome-sushi \
+  gnome-browser-connector \
+  python3 \
+  pipx
 
 echo 'Ubuntu: Prompt Ubuntu Pro setup process'
 
@@ -51,10 +52,6 @@ echo 'Ubuntu: Fix Security Center display of Ubuntu Pro status'
 
 sudo snap connect desktop-security-center:system-observe
 
-echo 'Ubuntu: Installing Gnome Sushi document preview app'
-
-sudo apt -qq --assume-yes install gnome-sushi
-
 echo 'Ubuntu: Run Gnome Setup'
 
 bash "$REPO/linux/gnome/gnome-setup.sh"
@@ -62,8 +59,8 @@ bash "$REPO/linux/gnome/gnome-setup.sh"
 if command -v flatpak > /dev/null 2>&1 ; then
   echo 'Ubuntu: Installing Flatpak apps'
 
-  flatpak install --user --reinstall -y flathub net.nokyan.Resources > /dev/null 2>&1
-  flatpak install --user --reinstall -y flathub com.github.tchx84.Flatseal > /dev/null 2>&1
-  flatpak install --user --reinstall -y flathub com.mattjakeman.ExtensionManager > /dev/null 2>&1
-  flatpak install --user --reinstall -y flathub ca.desrt.dconf-editor > /dev/null 2>&1
+  flatpak install -y --system flathub net.nokyan.Resources > /dev/null 2>&1
+  flatpak install -y --system flathub com.github.tchx84.Flatseal > /dev/null 2>&1
+  flatpak install -y --system flathub com.mattjakeman.ExtensionManager > /dev/null 2>&1
+  flatpak install -y --system flathub ca.desrt.dconf-editor > /dev/null 2>&1
 fi

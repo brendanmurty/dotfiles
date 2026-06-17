@@ -41,7 +41,7 @@ eval "$($BREW_DIR/bin/brew shellenv bash)"
 
 echo 'Installing GCC via Homebrew'
 
-brew install gcc
+brew reinstall gcc --force > /dev/null 2>&1
 
 if [[ "$OS" == "Fedora" ]]; then
   echo 'Fedora: Installing development-tools package'

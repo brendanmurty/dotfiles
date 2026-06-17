@@ -304,7 +304,7 @@ gsettings set org.gnome.mutter experimental-features '["scale-monitor-framebuffe
 if has_schema "org.gnome.Console"; then
   gsettings set org.gnome.Console audible-bell false
   gsettings set org.gnome.Console visual-bell false
-  gsettings set org.gnome.Console custom-font 'Monospace 14'
+  gsettings set org.gnome.Console custom-font 'Monospace 13'
   gsettings set org.gnome.Console use-system-font false
   gsettings set org.gnome.Console theme 'night'
   gsettings set org.gnome.Console shell '["/bin/bash"]'
@@ -314,15 +314,17 @@ fi
 
 # App: TextEditor
 
+gsettings set org.gnome.TextEditor custom-font 'Monospace 13'
+gsettings set org.gnome.TextEditor style-scheme 'classic-dark'
+gsettings set org.gnome.TextEditor style-variant 'dark'
 gsettings set org.gnome.TextEditor auto-indent true
 gsettings set org.gnome.TextEditor highlight-current-line true
 gsettings set org.gnome.TextEditor highlight-matching-brackets true
-gsettings set org.gnome.TextEditor indent-style 'space'
+gsettings set org.gnome.TextEditor indent-style 'tab'
 gsettings set org.gnome.TextEditor indent-width 2
 gsettings set org.gnome.TextEditor tab-width 2
 gsettings set org.gnome.TextEditor spellcheck false
-gsettings set org.gnome.TextEditor use-system-font true
-gsettings set org.gnome.TextEditor custom-font 'Monospace 11'
+gsettings set org.gnome.TextEditor use-system-font false
 gsettings set org.gnome.TextEditor wrap-text true
 
 # App: Tweaks

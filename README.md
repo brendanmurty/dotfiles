@@ -9,6 +9,7 @@ Configuration files, programs, packages and scripts I use for personal, gaming a
 - **[dev/docker](dev/docker/)**: Docker setup and config
 - **[dev/ghostty](dev/ghostty/)**: [Ghostty](https://github.com/ghostty-org/ghostty) setup and config
 - **[dev/git](dev/git/)**: [Git](https://git-scm.com/) setup and config
+- **[dev/lore](dev/lore/)**: [Lore](https://lore.org/) setup and config
 - **[dev/vscode](dev/vscode/)**: [VS Code](https://code.visualstudio.com/) setup and config
 - **[dev/zed](dev/zed/)**: [Zed](https://zed.dev/) setup and config
 - **[fonts](fonts/)**: Font setup scripts

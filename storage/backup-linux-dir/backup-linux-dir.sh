@@ -30,6 +30,8 @@ if [ ! -f "$ENV_FILE_PATH" ]; then
   exit 1
 fi
 
+source "$ENV_FILE_PATH"
+
 mkdir -p "$BACKUP_DIR"
 
 BACKUP_FILE="${BACKUP_FILE_PREFIX}_$(date +%Y%m%d-%H%M%S).zip"
@@ -44,7 +46,7 @@ fi
 
 # Start backup process
 
-echo $(date "$LOG_FMT") "Starting backup of '$SOURCE_DIR' to '$BACKUP_FILE_PATH'" >> "$LOG_FILE"
+echo $(date "$LOG_FMT") "Starting backup of '$SOURCE_DIR' to '$BACKUP_FILE_PATH' using '$ENV_FILE_NAME'" >> "$LOG_FILE"
 
 mkdir -p "$BACKUP_DIR"
 

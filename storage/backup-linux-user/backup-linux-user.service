@@ -2,13 +2,13 @@
 ;
 ; Service: Runs on user login
 ;   - Script in ExecStart must have the correct absolute path and must be exec enabled:
-;     chmod a+x /home/example/path/to/backup-user.sh
+;     chmod a+x /home/example/path/to/backup-linux-user.sh
 ;   - Update content here, then copy to "/etc/systemd/system"
-;   - Then edit "backup-user.timer"
+;   - Then edit "backup-linux-user.timer"
 ;
 ;
 [Unit]
-Description=Run backup-user script
+Description=Run backup-linux-user script
 [Service]
 Type=oneshot
-ExecStart=/home/example/path/to/backup-user.sh
+ExecStart=/home/example/path/to/backup-linux-user.sh

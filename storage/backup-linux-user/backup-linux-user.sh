@@ -7,19 +7,19 @@
 #  - Saves symlinks as links, not as directories
 #  - Saves output messages to the file set in LOG_FILE
 #  - If your system's scheduler is cron, setup by running 'crontab -e', then adding a line:
-#    0 19 * * * bash /home/username/dotfiles/storage/backup-user/backup-user.sh
-#  - If your system's scheduler is systemd, refer to 'backup-user.service'
+#    0 19 * * * bash /home/username/dotfiles/storage/backup-linux-user/backup-linux-user.sh
+#  - If your system's scheduler is systemd, refer to 'backup-linux-user.service'
 #
 #
 
 DIR="$(dirname "$(readlink -f "$0")")"
 
-LOG_FILE="$DIR/backup-user.log"
+LOG_FILE="$DIR/backup-linux-user.log"
 LOG_FMT="+%Y-%m-%d %H:%M:%S"
 touch "$LOG_FILE"
 
-cp --update=none "$DIR/.backup-user.sample.env" "$DIR/.backup-user.env"
-source "$DIR/.backup-user.env"
+cp --update=none "$DIR/.backup-linux-user.sample.env" "$DIR/.backup-linux-user.env"
+source "$DIR/.backup-linux-user.env"
 
 mkdir -p "$BACKUP_DIR"
 
@@ -39,7 +39,7 @@ echo $(date "$LOG_FMT") "Starting backup of '$SOURCE_DIR' to '$BACKUP_PATH'" >> 
 
 mkdir -p "$BACKUP_DIR"
 
-CONFIG_BACKUP_DIR_NAME=".backup-user-config"
+CONFIG_BACKUP_DIR_NAME=".backup-linux-user-config"
 CONFIG_BACKUP_DIR="$SOURCE_DIR/$CONFIG_BACKUP_DIR_NAME"
 rm -rf "$CONFIG_BACKUP_DIR"
 mkdir -p "$CONFIG_BACKUP_DIR"

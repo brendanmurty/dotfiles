@@ -64,7 +64,7 @@ yearNow = now.year
 
 # Load the configuration values from the ENV file
 script_file_path = os.path.dirname(__file__)
-config = dotenv_values("%s/.media-organise.env" % script_file_path)
+config = dotenv_values("%s/.organise-photos.env" % script_file_path)
 
 # Where the media files are and where they're going
 sourceDir = "%s" % (config["PHOTOMGMT_SOURCE_DIR"])

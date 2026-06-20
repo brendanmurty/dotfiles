@@ -46,7 +46,7 @@ fi
 
 # Start backup process
 
-echo $(date "$LOG_FMT") "Starting backup of '$SOURCE_DIR' to '$BACKUP_FILE_PATH' using '$ENV_FILE_NAME'" >> "$LOG_FILE"
+echo $(date "$LOG_FMT") "Info - Starting backup of '$SOURCE_DIR' to '$BACKUP_FILE_PATH' using '$ENV_FILE_NAME'" >> "$LOG_FILE"
 
 mkdir -p "$BACKUP_DIR"
 
@@ -69,8 +69,8 @@ zip \
   -x "**/.venv/*" \
   -x "**/uv/*" \
   -x "*.sock" \
-  -x "*.pipe" # > /dev/null 2>&1
+  -x "*.pipe" > /dev/null 2>&1
 
 # Done
 
-echo $(date "$LOG_FMT") "Finished." >> "$LOG_FILE"
+echo $(date "$LOG_FMT") "Info - Finished." >> "$LOG_FILE"

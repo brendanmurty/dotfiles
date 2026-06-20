@@ -21,4 +21,5 @@ Configuration files, programs, packages and scripts I use for personal, gaming a
 - **[linux/linux-setup.sh](linux/linux-setup.sh)**: Linux setup script
 - **[obsidian](obsidian/)**: [Obsidian](https://obsidian.md/) config
 - **[storage](storage/)**: File sync systems setup, backup and organisation scripts
-- **[storage/backup-linux-user](storage/backup-linux-user/)**: Backup Linux user data
+- **[storage/backup-linux-dir](storage/backup-linux-dir/)**: Backup a Linux directory
+- **[storage/backup-linux-user](storage/backup-linux-user/)**: Backup some Linux user data

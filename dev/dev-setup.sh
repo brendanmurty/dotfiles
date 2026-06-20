@@ -25,6 +25,9 @@ bash "$REPO/dev/node-setup.sh"
 info 'Run: dev/deno-setup.sh'
 bash "$REPO/dev/deno-setup.sh"
 
+info 'Run: dev/python-setup.sh'
+bash "$REPO/dev/python-setup.sh"
+
 if grep -q "127.0.0.1 site.local" "/etc/hosts"; then
 	success "Found current setup for 'site.local' as an alias for 'localhost'"
 else

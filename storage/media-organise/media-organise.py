@@ -26,8 +26,9 @@
 #   - Python 3: https://www.python.org/downloads/
 #   - ExifRead: https://pypi.org/project/ExifRead/
 #   - Python-dotenv: https://pypi.org/project/python-dotenv/
-#  - For Ubuntu 24.04
-#   - sudo apt install python-is-python3 python3-exifread python3-dotenv
+#  - For Ubuntu
+#   - sudo apt install -y python-is-python3 python3-exifread python3-dotenv pipx
+# 	- pipx ensurepath
 #
 import os
 import os.path
@@ -39,6 +40,7 @@ import exifread
 from dotenv import dotenv_values
 
 ### Functions
+
 
 def photoDate(f):
     "Return the date/time on which the given photo was taken."
@@ -52,6 +54,7 @@ def photoDate(f):
     except:
         # Default to using today's date if the required image properties can't be found
         return datetime.now()
+
 
 ### Main program
 
@@ -160,4 +163,3 @@ if len(problems) > 0:
     print("Problem files:")
     print("%s" % problems)
     print("These can be found in: %s" % errorDir)
-

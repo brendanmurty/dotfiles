@@ -2,12 +2,12 @@
 #
 #
 # Backup a directory as a password-protected ZIP file
-#  - Makes a timestamped and password protected ZIP file of some parts of your User directory
+#  - Accepts optional parameter of the env file name, which must be in this script's dir
 #  - Include and exclude rules (starting with "-x") are set in the "zip" command below
 #  - Saves symlinks as links, not as directories
 #  - Saves output messages to the file set in LOG_FILE
 #  - If your system's scheduler is cron, setup by running 'crontab -e', then adding a line:
-#    0 19 * * * bash /home/username/dotfiles/storage/backup-linux-dir/backup-linux-dir.sh
+#    0 19 * * * bash /home/username/dotfiles/storage/backup-linux-dir/backup-linux-dir.sh .env-file-name.env
 #  - If your system's scheduler is systemd, refer to 'backup-linux-dir.service'
 #
 #
@@ -18,8 +18,17 @@ LOG_FILE="$DIR/backup-linux-dir.log"
 LOG_FMT="+%Y-%m-%d %H:%M:%S"
 touch "$LOG_FILE"
 
-cp --update=none "$DIR/.backup-linux-dir.sample.env" "$DIR/.backup-linux-dir.env"
-source "$DIR/.backup-linux-dir.env"
+# If the first parameter sent to this script is set, use that as the ENV file name,
+# or fallback to '.backup-linux-dir.env'.
+ENV_FILE_NAME="${1:-.backup-linux-dir.env}"
+ENV_FILE_PATH="$DIR/$ENV_FILE_NAME"
+
+# Exit early if the ENV file isn't found in the current directory
+if [ ! -f "$ENV_FILE_PATH" ]; then
+  echo $(date "$LOG_FMT") "Error - ENV file not found: $ENV_FILE_PATH" >> "$LOG_FILE"
+  echo $(date "$LOG_FMT") "Info - Sample ENV file at $DIR/.backup-linux-dir.sample.env" >> "$LOG_FILE"
+  exit 1
+fi
 
 mkdir -p "$BACKUP_DIR"
 

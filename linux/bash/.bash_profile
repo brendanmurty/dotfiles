@@ -6,6 +6,13 @@
 #
 #
 
+# Load local environment variable file if it exists
+# 	- Expects each line in this file to look like:
+# 		export SOMETHING_API_KEY=aaa
+if [ -f "$HOME/.env.local" ]; then
+  source "$HOME/.env.local"
+fi
+
 # Load other Bash config files if they exist
 
 if [ -f "$HOME/.bash_aliases" ]; then

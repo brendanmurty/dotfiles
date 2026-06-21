@@ -11,26 +11,41 @@ source "$REPO/bin/.helper.sh"
 OS="$(os)"
 
 if [[ "$OS" == "Windows" ]]; then
-  echo 'Please install Node manually - https://nodejs.org/'
+  error 'Please install Node manually - https://nodejs.org/'
   exit 1
 fi
 
-echo 'Setup the NVM directory'
+info 'Setup the NVM directory'
 
 export NVM_DIR="${HOME}/.nvm"
 rm -rf "$NVM_DIR"
 mkdir -p "$NVM_DIR"
 
-echo 'Install NVM'
+info 'Install NVM'
 
 # Command from https://github.com/nvm-sh/nvm?tab=readme-ov-file#git-install
 git clone --quiet "https://github.com/nvm-sh/nvm.git" "$NVM_DIR"
 
-echo 'Load NVM'
+info 'Load NVM'
 
 source "${HOME}/.nvm/nvm.sh"
 
-echo 'Default to Node LTS version and install that'
+info 'Installing Node v26 as the default version'
 
-nvm install --lts > /dev/null 2>&1
-nvm alias default "lts/*" > /dev/null 2>&1
+nvm install 26 > /dev/null 2>&1
+nvm alias default 26 > /dev/null 2>&1
+
+info 'Installing the latest version of NPM'
+
+nvm install-latest-npm > /dev/null 2>&1
+
+info 'Setting defensive default NPM configuration'
+
+npm config set --global engine-strict=true
+npm config set --global package-lock=true
+npm config set --global ignore-scripts=true
+npm config set --global save=true
+npm config set --global fund=false
+npm config set --global audit=false
+
+success 'Node 26 and NPM installed'

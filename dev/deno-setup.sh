@@ -11,15 +11,20 @@ source "$REPO/bin/.helper.sh"
 OS="$(os)"
 
 if [[ "$OS" == "Windows" ]]; then
-  echo 'Please install Deno for Windows manually - https://deno.com/'
+  error 'Please install Deno for Windows manually - https://deno.com/'
   exit 1
 elif [[ "$OS" == "macOS" ]]; then
-  # Install Deno for macOS, command from https://docs.deno.com/runtime/getting_started/installation/
+  info 'Installing Deno for macOS'
+  # From https://docs.deno.com/runtime/getting_started/installation/
   curl -fsSL https://deno.land/install.sh | sh
 else
-  # Install Deno for Linux, command from https://docs.deno.com/runtime/getting_started/installation/
+  info 'Installing Deno for Linux'
+  # From https://docs.deno.com/runtime/getting_started/installation/
   curl -fsSL https://deno.land/install.sh | sh
 fi
 
-# Install the 'dx' alias for 'deno x' - https://docs.deno.com/runtime/reference/cli/x/
+info "Install the 'dx' alias for 'deno x'"
+# From https://docs.deno.com/runtime/reference/cli/x/
 deno x --install-alias
+
+success 'Deno installed'

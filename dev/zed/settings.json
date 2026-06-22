@@ -498,6 +498,7 @@
 		"python-requirements": true,
 		"symbols": true,
 		"sql": true,
+		"terraform": true,
 		"toml": true,
 		"just": true,
 		"env": true

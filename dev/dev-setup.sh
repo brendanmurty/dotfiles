@@ -19,14 +19,14 @@ warn 'Requesting sudo'
 
 sudo -v
 
-info 'Run: dev/node-setup.sh'
-bash "$REPO/dev/node-setup.sh"
+info 'Run: dev/node/node-setup.sh'
+bash "$REPO/dev/node/node-setup.sh"
 
-info 'Run: dev/deno-setup.sh'
-bash "$REPO/dev/deno-setup.sh"
+info 'Run: dev/deno/deno-setup.sh'
+bash "$REPO/dev/deno/deno-setup.sh"
 
-info 'Run: dev/python-setup.sh'
-bash "$REPO/dev/python-setup.sh"
+info 'Run: dev/python/python-setup.sh'
+bash "$REPO/dev/python/python-setup.sh"
 
 if grep -q "127.0.0.1 site.local" "/etc/hosts"; then
 	success "Found current setup for 'site.local' as an alias for 'localhost'"

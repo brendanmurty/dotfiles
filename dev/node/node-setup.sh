@@ -39,7 +39,7 @@ info 'Installing the latest version of NPM'
 
 nvm install-latest-npm > /dev/null 2>&1
 
-info 'Setting defensive default NPM configuration'
+info 'Setup defensive default config for local NPM use'
 
 npm config set --global engine-strict=true
 npm config set --global package-lock=true

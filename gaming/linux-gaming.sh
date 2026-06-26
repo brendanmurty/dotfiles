@@ -85,6 +85,8 @@ elif [[ "$OS" == "Ubuntu" ]]; then
   sudo apt -qq --assume-yes install "$STEAM_DEB"
   rm -rf "$STEAM_DEB"
 
+  sudo apt -qq --assume-yes install steam-libs-i386
+
 elif [[ "$OS" == "Fedora" ]]; then
 
   info 'Fedora - Install supporting packages'

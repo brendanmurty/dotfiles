@@ -55,9 +55,9 @@ gnome-extensions-cli install "appindicatorsupport@rgcjonas.gmail.com" > /dev/nul
 gnome-extensions-cli install "arcmenu@arcmenu.com" > /dev/null 2>&1
 gnome-extensions-cli install "dash-to-panel@jderose9.github.com" > /dev/null 2>&1
 gnome-extensions-cli install "just-perfection-desktop@just-perfection" > /dev/null 2>&1
-gnome-extensions-cli install "smarttiling@samuelnovaes" > /dev/null 2>&1
 
 if [[ "$OS" == "Fedora" ]]; then
+	gnome-extensions-cli install "smarttiling@samuelnovaes" > /dev/null 2>&1
   gnome-extensions-cli install "accent-directories@taiwbi.com" > /dev/null 2>&1
 fi
 

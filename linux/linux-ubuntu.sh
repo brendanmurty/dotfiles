@@ -42,7 +42,10 @@ sudo apt -qq --assume-yes install \
   gnome-sushi \
   gnome-browser-connector \
   python3 \
-  pipx
+  python3-gpg \
+  python-is-python3 \
+  pipx \
+  xclip
 
 echo 'Ubuntu: Prompt Ubuntu Pro setup process'
 

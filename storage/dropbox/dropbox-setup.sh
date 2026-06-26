@@ -27,6 +27,10 @@ else
   if command -v dropbox > /dev/null 2>&1 ; then
     echo 'Dropbox is already installed.'
   else
+	 	if [[ "$OS" == "Ubuntu" ]]; then
+	    sudo apt -qq --assume-yes install python3 python-is-python3 python3-gpg
+  	fi
+
     if command -v flatpak > /dev/null 2>&1 ; then
       echo 'Installing Dropbox via Flatpak'
 

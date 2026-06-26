@@ -8,7 +8,7 @@
 #
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
-REPO="$(cd "$(dirname "$0")/../.." && pwd)"
+REPO="$(cd "$(dirname "$0")/../../.." && pwd)"
 cd "$REPO"
 source "$REPO/bin/.helper.sh"
 OS="$(os)"
@@ -26,7 +26,7 @@ sudo -v
 echo '==> Installing dependencies'
 
 if [[ "$OS" == "Ubuntu" ]]; then
-  sudo apt -qq --assume-yes install python3 python-is-python3 python3-pyqt5 pipx
+  sudo apt -qq --assume-yes install python3 python-is-python3 python3-gpg python3-pyqt5 pipx
 elif [[ "$OS" == "Fedora" ]]; then
   sudo dnf install -y python3 python3-qt5 pipx
 fi

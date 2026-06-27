@@ -21,6 +21,8 @@ os() {
       echo 'Fedora';
     elif [[ "$DISTRO_NAME" == 'Debian GNU/Linux' ]]; then
       echo 'Debian';
+    elif [[ "$DISTRO_NAME" == 'Linux Mint' ]]; then
+      echo 'Mint';
     else
       echo "${DISTRO_NAME}";
     fi
@@ -36,4 +38,25 @@ os() {
 # Returns the name of the Operating System, lowercase and with dashes instead of spaces
 os_clean() {
   echo "$(os | tr '[:upper:]' '[:lower:]' | tr ' ' '-')";
+}
+
+# Checks if the OS is Debian based, returns "true" or "false" as strings.
+os_debian_based() {
+  OS="$(os)"
+
+  if [[ "$OS" == "macOS" || "$OS" == "Windows" ]]; then
+    echo "false"
+  fi
+
+  if [ ! -f "/etc/os-release" ]; then
+    echo "false"
+  fi
+
+  source "/etc/os-release"
+
+  if [[ "$ID" == "debian" || "$ID_LIKE" == *"debian"* ]]; then
+    echo "true"
+  fi
+
+  echo "false"
 }

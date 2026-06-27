@@ -32,3 +32,8 @@ os() {
     echo "${OS}";
   fi
 }
+
+# Returns the name of the Operating System, lowercase and with dashes instead of spaces
+os_clean() {
+  echo "$(os | tr '[:upper:]' '[:lower:]' | tr ' ' '-')";
+}

@@ -39,10 +39,16 @@ echo $(date "$LOG_FMT") "Starting backup of '$SOURCE_DIR' to '$BACKUP_PATH'" >> 
 
 mkdir -p "$BACKUP_DIR"
 
-CONFIG_BACKUP_DIR_NAME=".backup-linux-user-config"
+CONFIG_BACKUP_DIR_NAME="backup-config"
 CONFIG_BACKUP_DIR="$SOURCE_DIR/$CONFIG_BACKUP_DIR_NAME"
 rm -rf "$CONFIG_BACKUP_DIR"
 mkdir -p "$CONFIG_BACKUP_DIR"
+
+# Create a copy of the current file at /etc/fstab
+
+if [ -f "/etc/fstab" ]; then
+  cp -f "/etc/fstab" "$CONFIG_BACKUP_DIR/fstab-config.txt"
+fi
 
 # Create a copy of the current Grub config file
 
@@ -150,5 +156,7 @@ zip \
   > /dev/null 2>&1
 
 # Done
+
+rm -rf "$CONFIG_BACKUP_DIR"
 
 echo $(date "$LOG_FMT") "Finished." >> "$LOG_FILE"

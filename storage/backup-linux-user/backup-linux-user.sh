@@ -13,6 +13,13 @@
 #
 
 DIR="$(dirname "$(readlink -f "$0")")"
+REPO="$(cd "$(dirname "$0")/../.." && pwd)"
+source "$REPO/bin/.helper.sh"
+OS="$(os)"
+
+OS_CLEAN="$(echo "$OS" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')"
+
+cd "$DIR"
 
 LOG_FILE="$DIR/backup-linux-user.log"
 LOG_FMT="+%Y-%m-%d %H:%M:%S"
@@ -23,7 +30,7 @@ source "$DIR/.backup-linux-user.env"
 
 mkdir -p "$BACKUP_DIR"
 
-BACKUP_FILE="user-${BACKUP_USER_NAME}_$(date +%Y%m%d-%H%M%S).zip"
+BACKUP_FILE="${OS_CLEAN}-user-${BACKUP_USER_NAME}_$(date +%Y%m%d-%H%M%S).zip"
 BACKUP_PATH="$BACKUP_DIR/$BACKUP_FILE"
 
 # Exit if the source directory doesn't exist

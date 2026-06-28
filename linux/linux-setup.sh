@@ -30,8 +30,8 @@ bash "$REPO/fonts/fonts-setup.sh"
 info 'Linux Setup: Run dev/git/git-setup.sh'
 bash "$REPO/dev/git/git-setup.sh"
 
-info 'Linux Setup: Run linux/linux-flatpak.sh'
-bash "$REPO/linux/linux-flatpak.sh"
+info 'Linux Setup: Run linux/packages/linux-flatpak.sh'
+bash "$REPO/linux/packages/linux-flatpak.sh"
 
 info 'Linux Setup: Run linux/distros/linux-endeavouros.sh'
 bash "$REPO/linux/distros/linux-endeavouros.sh"
@@ -60,7 +60,7 @@ bash "$REPO/just/just-setup.sh"
 info 'Linux Setup: Run linux/vim/vim.sh'
 bash "$REPO/linux/vim/vim.sh"
 
-info 'Linux Setup: Run linux/linux-google-chrome.sh'
-bash "$REPO/linux/linux-google-chrome.sh"
+info 'Linux Setup: Run linux/packages/linux-google-chrome.sh'
+bash "$REPO/linux/packages/linux-google-chrome.sh"
 
 info 'Linux Setup: Finished, a system reboot is recommended'

@@ -5,7 +5,7 @@
 #
 #
 
-REPO="$(cd "$(dirname "$0")/.." && pwd)"
+REPO="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$REPO"
 source "$REPO/bin/.helper.sh"
 OS="$(os)"
@@ -16,10 +16,10 @@ if [[ "$OS" == "macOS" || "$OS" == "Windows" ]]; then
 fi
 
 # Install Google Chrome via Flatpak
-flatpak install --reinstall -y --user flathub com.google.Chrome
+flatpak install -y com.google.Chrome
 
 # Allow Chrome to access files in the user home dir
-flatpak override --user --filesystem=home com.google.Chrome
+sudo flatpak override --filesystem=home com.google.Chrome
 
 # Fix Webcam video output display issues
-flatpak override --user --env="CHROME_EXTRA_FLAGS=--disable-gpu-compositing" com.google.Chrome
+sudo flatpak override --env="CHROME_EXTRA_FLAGS=--disable-gpu-compositing" com.google.Chrome

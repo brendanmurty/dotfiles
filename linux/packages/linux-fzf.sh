@@ -6,7 +6,7 @@
 #
 #
 
-REPO="$(cd "$(dirname "$0")/.." && pwd)"
+REPO="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$REPO"
 source "$REPO/bin/.helper.sh"
 OS="$(os)"
@@ -19,7 +19,7 @@ fi
 if [[ "$OS" == "Fedora" ]]; then
   info 'Fedora: Install FZF package'
   sudo dnf install -y fzf
-elif [[ "$OS" == "Ubuntu" || "$OS" == "Debian" ]]; then
+elif [ "$(os_debian_based)" ]; then
   info "$OS: Install FZF package"
   sudo apt install -qq --assume-yes --reinstall fzf
 fi

@@ -5,7 +5,7 @@
 #
 #
 
-REPO="$(cd "$(dirname "$0")/.." && pwd)"
+REPO="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$REPO"
 source "$REPO/bin/.helper.sh"
 OS="$(os)"

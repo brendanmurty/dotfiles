@@ -10,7 +10,7 @@ cd "$REPO"
 source "$REPO/bin/.helper.sh"
 OS="$(os)"
 
-if [[ "$(os_debian_based)" == "false" ]]; then
+if [ ! "$(os_debian_based)" ]; then
   error "This script requires a Debian-based OS."
   exit 0
 fi

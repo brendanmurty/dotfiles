@@ -56,7 +56,7 @@ os_debian_based() {
 
   if [[ "$ID" == "debian" || "$ID_LIKE" == *"debian"* ]]; then
     echo "true"
+  else
+  	echo "false"
   fi
-
-  echo "false"
 }

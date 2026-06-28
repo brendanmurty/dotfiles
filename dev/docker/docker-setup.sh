@@ -9,13 +9,14 @@ REPO="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$REPO"
 source "$REPO/bin/.helper.sh"
 OS="$(os)"
+
 DIR="$REPO/dev/docker"
 
 if [[ "$OS" == "macOS" || "$OS" == "Windows" ]]; then
   error "This script requires Linux."
   exit 0
 fi
-  
+
 if [[ "$OS" == "EndeavourOS" ]]; then
   info "Requesting sudo"
   sudo -v
@@ -63,7 +64,7 @@ if [[ "$OS" == "Fedora" ]]; then
   exit 0
 fi
 
-if [[ "$(os_debian_based)" == "true" ]]; then
+if [ "$(os_debian_based)" ]; then
   # Request Sudo
   sudo -v
 

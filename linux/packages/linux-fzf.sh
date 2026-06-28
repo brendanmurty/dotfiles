@@ -3,6 +3,7 @@
 #
 # Linux: Install FZF - https://github.com/junegunn/fzf
 # 	- Assumes that 'linux/bash/bash-setup.sh' has already been run
+#   - Assumes that the system already has Homebrew installed
 #
 #
 
@@ -21,5 +22,5 @@ if [[ "$OS" == "Fedora" ]]; then
   sudo dnf install -y fzf
 elif [ "$(os_debian_based)" ]; then
   info "$OS: Install FZF package"
-  sudo apt install -qq --assume-yes --reinstall fzf
+  brew install fzf
 fi

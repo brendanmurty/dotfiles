@@ -11,14 +11,16 @@ source "$REPO/bin/.helper.sh"
 OS="$(os)"
 DIR="$REPO/dev/docker"
 
-if [[ "$OS" != "EndeavourOS" && "$OS" != "Fedora" && "$OS" != "Ubuntu" ]]; then
-  error "This script requires EndeavourOS, Fedora or Ubuntu."
+if [[ "$OS" == "macOS" || "$OS" == "Windows" ]]; then
+  error "This script requires Linux."
   exit 0
-elif [[ "$OS" == "EndeavourOS" ]]; then
+fi
+  
+if [[ "$OS" == "EndeavourOS" ]]; then
   info "Requesting sudo"
   sudo -v
 
-	info "Installing Podman and Docker packages"
+  info "Installing Podman and Docker packages"
   yay -Syu --noconfirm \
     podman \
     podman-compose \
@@ -29,12 +31,16 @@ elif [[ "$OS" == "EndeavourOS" ]]; then
   cp -n "$DIR/registries.conf" "$HOME/.config/containers/registries.conf"
   cp -n "$DIR/containers.conf" "$HOME/.config/containers/containers.conf"
 
-	info "Suppressing notices about running Docker features via Podman"
+  info "Suppressing notices about running Docker features via Podman"
   sudo touch /etc/containers/nodocker
 
-	info "Add user subids to improve rootless Docker support in Podman"
+  info "Add user subids to improve rootless Docker support in Podman"
   sudo usermod --add-subuids 100000-165535 --add-subgids 100000-165535 $USER
-elif [[ "$OS" == "Fedora" ]]; then
+
+  exit 0
+fi
+
+if [[ "$OS" == "Fedora" ]]; then
   # Request Sudo
   sudo -v
 
@@ -53,7 +59,11 @@ elif [[ "$OS" == "Fedora" ]]; then
   curl --output "$DOCKER_RPM" "https://desktop.docker.com/linux/main/amd64/docker-desktop-x86_64.rpm"
   sudo dnf -y install "$DOCKER_RPM"
   rm -rf "$DOCKER_RPM"
-elif [[ "$OS" == "Ubuntu" ]]; then
+
+  exit 0
+fi
+
+if [[ "$(os_debian_based)" == "true" ]]; then
   # Request Sudo
   sudo -v
 
@@ -97,4 +107,7 @@ EOF
   sudo apt update -qq
   sudo apt -qq --assume-yes install "$DOCKER_DEB"
   rm -rf "$DOCKER_DEB"
+
+  exit 0
 fi
+

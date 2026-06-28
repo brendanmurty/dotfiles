@@ -43,6 +43,10 @@ os:
     DISTRO_NAME="$(source /etc/os-release && echo $NAME)";
     if [[ "$DISTRO_NAME" == 'Fedora Linux' ]]; then
       echo 'Fedora';
+    elif [[ "$DISTRO_NAME" == 'Debian GNU/Linux' ]]; then
+      echo 'Debian';
+    elif [[ "$DISTRO_NAME" == 'Linux Mint' ]]; then
+      echo 'Mint';
     else
       echo "${DISTRO_NAME}";
     fi
@@ -53,6 +57,12 @@ os:
   else
     echo "${OS}";
   fi
+
+# Get the OS name, in lowercase and with dashes instead of spaces
+[group('system')]
+os_clean:
+  #!/usr/bin/env bash
+  echo "$(just --justfile "{{ justfile() }}" os | tr '[:upper:]' '[:lower:]' | tr ' ' '-')";
 
 # List local users
 [group('system')]

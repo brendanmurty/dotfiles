@@ -12,9 +12,8 @@
 REPO="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$REPO"
 source "$REPO/bin/.helper.sh"
-OS="$(os)"
 
-if [[ "$OS" != "Ubuntu" ]]; then
+if [[ "$(os_debian_based)" == "false" ]]; then
   error 'Please install Python 3 manually - https://www.python.org/downloads/'
   exit 1
 fi

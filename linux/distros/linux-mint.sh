@@ -26,8 +26,8 @@ sudo apt update -qq > /dev/null 2>&1
 if command -v flatpak > /dev/null 2>&1 ; then
   info 'Linux Mint: Installing Flatpak apps'
 
-  flatpak install -y com.mattjakeman.ExtensionManager > /dev/null 2>&1
   flatpak install -y io.missioncenter.MissionCenter > /dev/null 2>&1
+  flatpak install -y net.nokyan.Resources > /dev/null 2>&1
   flatpak install -y ca.desrt.dconf-editor > /dev/null 2>&1
 fi
 

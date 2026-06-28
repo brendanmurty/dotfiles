@@ -45,6 +45,9 @@ bash "$REPO/linux/distros/linux-fedora.sh"
 info 'Linux Setup: Run linux/distros/linux-ubuntu.sh'
 bash "$REPO/linux/distros/linux-ubuntu.sh"
 
+info 'Linux Setup: Run linux/distros/linux-mint.sh'
+bash "$REPO/linux/distros/linux-mint.sh"
+
 info 'Linux Setup: Run linux/hardware/keychron-keyboards.sh'
 bash "$REPO/linux/hardware/keychron-keyboards.sh"
 

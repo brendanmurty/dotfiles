@@ -5,7 +5,7 @@
 #   - To run this script:
 #     - Clone this repo
 #     - Open that dir in Terminal
-#     - Run: bash ./dev/node/node-setup.sh
+#     - Run: bash ./dev/python/python-setup.sh
 #
 #
 

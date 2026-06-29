@@ -24,14 +24,30 @@ info "Installing Mise"
 
 curl https://mise.run | sh
 
-info "Reloading '$HOME/.bashrc' to allow this session to access Mise"
+info "Enabling Mise for this terminal session"
 
 source "$HOME/.bashrc"
+eval "$($HOME/.local/bin/mise activate bash)"
 
 if ! command -v bash-completion > /dev/null 2>&1 ; then
   info "Installing system 'bash-completion' package"
   sudo apt -qq --assume-yes install bash-completion > /dev/null 2>&1
 fi
+
+info "Customising Mise config"
+
+mise settings add quiet true
+mise settings add env_shell_expand true
+mise settings add lockfile true
+mise settings add minimum_release_age 7d
+mise settings add dotfiles.default_mode symlink
+mise settings add dotfiles.root ~/Dotfiles
+mise settings add node.nvm_dir ~/.nvm
+
+mise settings add idiomatic_version_file_enable_tools npm
+mise settings add idiomatic_version_file_enable_tools node
+mise settings add idiomatic_version_file_enable_tools deno
+mise settings add idiomatic_version_file_enable_tools python
 
 info "Installing Bash Completions for Mise"
 

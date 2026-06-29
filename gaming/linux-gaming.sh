@@ -33,60 +33,6 @@ if [[ "$OS" == "EndeavourOS" ]]; then
 
   yay -Syu --noconfirm game-devices-udev > /dev/null 2>&1
 
-elif [[ "$OS" == "Ubuntu" ]]; then
-
-  info 'Ubuntu - Install supporting packages'
-
-  sudo apt update -qq
-
-  sudo apt -qq --assume-yes install \
-    cmake \
-    systemd \
-    libsystemd-dev \
-    systemd-dev \
-    pkg-config \
-    meson \
-    libsystemd-dev \
-    pkg-config \
-    ninja-build \
-    git \
-    dbus-user-session \
-    libdbus-1-dev \
-    libinih-dev \
-    build-essential \
-    dkms \
-    curl \
-    cabextract \
-    cpufrequtils > /dev/null 2>&1
-
-  info 'Ubuntu - Set CPU cores to performance mode'
-
-  sudo cpupower frequency-set -g performance > /dev/null 2>&1
-  echo 'GOVERNOR="performance"' | sudo tee /etc/default/cpufrequtils > /dev/null 2>&1
-  sudo systemctl restart cpufrequtils > /dev/null 2>&1
-
-  info 'Ubuntu - Increase shader size for Nvidia GPUs'
-
-  export __GL_SHADER_DISK_CACHE_SIZE=10000000000
-
-  info 'Ubuntu - Disable mouse pointer accelleration'
-
-  xset m 0 0
-
-  info 'Ubuntu - Installing Steam'
-
-  sudo dpkg --add-architecture i386 > /dev/null 2>&1
-  sudo apt update -qq
-  sudo apt -qq --assume-yes install libnvidia-gl-595:i386 > /dev/null 2>&1
-
-  STEAM_DEB="$HOME/Downloads/temp-steam_latest.deb"
-  rm -rf "$STEAM_DEB"
-  curl --output "$STEAM_DEB" "https://repo.steampowered.com/steam/archive/precise/steam_latest.deb" > /dev/null 2>&1
-  sudo apt -qq --assume-yes install "$STEAM_DEB"
-  rm -rf "$STEAM_DEB"
-
-  sudo apt -qq --assume-yes install steam-libs-i386
-
 elif [[ "$OS" == "Fedora" ]]; then
 
   info 'Fedora - Install supporting packages'
@@ -120,10 +66,65 @@ elif [[ "$OS" == "Fedora" ]]; then
   # From https://docs.fedoraproject.org/en-US/gaming/proton/
   sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
   sudo dnf install -y steam
+
+elif [ "$(os_debian_based)" ]; then
+  info "$OS - Install supporting packages"
+
+  sudo apt update -qq > /dev/null 2>&1
+
+  sudo apt -qq --assume-yes install \
+    cmake \
+    systemd \
+    libsystemd-dev \
+    systemd-dev \
+    pkg-config \
+    meson \
+    libsystemd-dev \
+    pkg-config \
+    ninja-build \
+    git \
+    dbus-user-session \
+    libdbus-1-dev \
+    libinih-dev \
+    build-essential \
+    dkms \
+    curl \
+    cabextract \
+    cpufrequtils > /dev/null 2>&1
+
+  info "$OS - Installing Steam"
+
+  sudo dpkg --add-architecture i386 > /dev/null 2>&1
+  sudo apt update -qq > /dev/null 2>&1
+  sudo apt -qq --assume-yes install libnvidia-gl-595:i386 > /dev/null 2>&1
+
+  STEAM_DEB="$HOME/Downloads/temp-steam_latest.deb"
+  rm -rf "$STEAM_DEB"
+  curl --output "$STEAM_DEB" "https://repo.steampowered.com/steam/archive/stable/steam_latest-stable.deb" > /dev/null 2>&1
+  sudo apt -qq --assume-yes install "$STEAM_DEB"
+  rm -rf "$STEAM_DEB"
+
+  sudo apt -qq --assume-yes install steam-libs-i386
+fi
+
+if [[ "$OS" == "Ubuntu" ]]; then
+  info "Ubuntu - Set CPU cores to performance mode"
+
+  sudo cpupower frequency-set -g performance > /dev/null 2>&1
+  echo 'GOVERNOR="performance"' | sudo tee /etc/default/cpufrequtils > /dev/null 2>&1
+  sudo systemctl restart cpufrequtils > /dev/null 2>&1
+
+  info 'Ubuntu - Increase shader size for Nvidia GPUs'
+
+  export __GL_SHADER_DISK_CACHE_SIZE=10000000000
+
+  info 'Ubuntu - Disable mouse pointer acceleration'
+
+  xset m 0 0
 fi
 
 if command -v gsettings > /dev/null 2>&1 ; then
-	info 'Gnome - Disable mouse pointer accelleration'
+	info 'Gnome - Disable mouse pointer acceleration'
   gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
   gsettings set org.gnome.desktop.peripherals.touchpad accel-profile 'flat'
 
@@ -156,7 +157,7 @@ cp "$HOME/.config/gamemode.ini" "$HOME/.config/gamemode.ini.old"
 cp "$DIR/gamemode.ini" "$HOME/.config/gamemode.ini"
 
 if ! command -v flatpak > /dev/null 2>&1 ; then
-  warn 'Skipping Flatpak installs, please setup Flatpak first - bash linux/linux-flatpak.sh'
+  warn 'Skipping Flatpak installs, please setup Flatpak first - bash ../linux/packages/linux-flatpak.sh'
 else
   info 'Installing Discord via Flatpak'
   flatpak install --reinstall -y --user com.discordapp.Discord

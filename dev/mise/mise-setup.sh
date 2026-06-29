@@ -44,6 +44,9 @@ mise settings add dotfiles.default_mode symlink
 mise settings add dotfiles.root ~/Dotfiles
 mise settings add node.nvm_dir ~/.nvm
 
+mise settings add task.monorepo_depth 2
+mise settings add task.monorepo_respect_gitignore true
+
 mise settings add idiomatic_version_file_enable_tools npm
 mise settings add idiomatic_version_file_enable_tools node
 mise settings add idiomatic_version_file_enable_tools deno

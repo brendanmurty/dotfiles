@@ -51,6 +51,12 @@
 	"agent_ui_font_size": 18.0,
 	"agent_buffer_font_size": 18.0,
 	"languages": {
+		"CSS": {
+			"language_servers": [
+				"!vscode-css",
+				"!tailwind-css"
+			]
+		},
 		"Desktop Entry": {
 			"format_on_save": "off",
 			"auto_indent_on_paste": false,

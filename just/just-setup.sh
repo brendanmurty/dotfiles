@@ -4,7 +4,7 @@
 # Setup 'just' command runner for the current user
 #   - Requires Homebrew (Linux or macOS) to be installed first: https://brew.sh/
 #   - Installs 'just'
-#   - Copies the 'justfile' from this dir to your user dir
+#   - Creates a symlink at '~/justfile' to the 'justfile' in this dir
 #   - You may need to restart your Terminal before 'just' command work properly
 #   - Then you can run from any directory inside of your user dir: just
 #   - More info at https://github.com/casey/just

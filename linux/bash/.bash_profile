@@ -69,6 +69,12 @@ if command -v just > /dev/null 2>&1 && [ -f "$HOME/justfile" ] ; then
 	alias ujust="just --justfile $HOME/justfile"
 fi
 
+# Setup Mise if it's installed to the default location
+
+if command -v mise > /dev/null 2>&1 && [ -f "$HOME/.local/bin/mise" ] ; then
+	eval "$($HOME/.local/bin/mise activate bash)"
+fi
+
 # Configure NVM if it's installed to the default location
 
 if [ -d "$HOME/.nvm" ]; then

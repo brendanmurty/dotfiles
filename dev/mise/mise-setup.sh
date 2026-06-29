@@ -24,4 +24,18 @@ info "Installing Mise"
 
 curl https://mise.run | sh
 
+info "Reloading '$HOME/.bashrc' to allow this session to access Mise"
+
+source "$HOME/.bashrc"
+
+if ! command -v bash-completion > /dev/null 2>&1 ; then
+  info "Installing system 'bash-completion' package"
+  sudo apt -qq --assume-yes install bash-completion > /dev/null 2>&1
+fi
+
+info "Installing Bash Completions for Mise"
+
+mkdir -p "$HOME/.local/share/bash-completion/completions"
+mise completion bash --include-bash-completion-lib > "$HOME/.local/share/bash-completion/completions/mise"
+
 success "Mise installed successfully"

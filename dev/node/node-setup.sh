@@ -2,6 +2,9 @@
 #
 #
 # Node setup
+#   - More info about Node at https://nodejs.org/
+#   - More info about NVM at https://github.com/nvm-sh/nvm
+# 	- NVM install command from https://github.com/nvm-sh/nvm?tab=readme-ov-file#git-install
 #   - To run this script:
 #     - Clone this repo
 #     - Open that dir in Terminal
@@ -27,7 +30,6 @@ mkdir -p "$NVM_DIR"
 
 info 'Install NVM'
 
-# Command from https://github.com/nvm-sh/nvm?tab=readme-ov-file#git-install
 git clone --quiet "https://github.com/nvm-sh/nvm.git" "$NVM_DIR"
 
 info 'Load NVM'

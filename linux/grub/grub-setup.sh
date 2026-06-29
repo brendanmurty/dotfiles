@@ -10,7 +10,7 @@ cd "$REPO"
 source "$REPO/bin/.helper.sh"
 OS="$(os)"
 
-SOURCE_COLOURS="$REPO/linux/grub/06-grub-colours"
+SOURCE_COLOURS="$REPO/linux/grub/grub-colours.config"
 TARGET_COLOURS="/etc/grub.d/06_local_colours"
 
 if [[ "$OS" == "Windows" ]] || [[ "$OS" == "macOS" ]]; then

@@ -29,17 +29,24 @@ source "$DIR/.backup-linux-user.env"
 
 mkdir -p "$BACKUP_DIR"
 
-BACKUP_FILE="${OS_CLEAN}-user-${BACKUP_USER_NAME}_$(date +%Y%m%d-%H%M%S).zip"
-BACKUP_PATH="$BACKUP_DIR/$BACKUP_FILE"
+# Default to backing up the current user's home directory
+
+SOURCE_DIR="$HOME"
+BACKUP_USER_NAME="$(id -un)"
 
 # Exit if the source directory doesn't exist
 
-if [ ! -d $SOURCE_DIR ]; then
+if [ ! -d "$SOURCE_DIR" ]; then
   echo $(date "$LOG_FMT") "Error - Source directory ($SOURCE_DIR) not found, please check the path in the script" >> "$LOG_FILE"
-  exit 0
+  exit 1
 fi
 
-# Start backup process
+# Construct backup paths
+
+BACKUP_FILE="${OS_CLEAN}-user-${BACKUP_USER_NAME}_$(date +%Y%m%d-%H%M%S).zip"
+BACKUP_PATH="$BACKUP_DIR/$BACKUP_FILE"
+
+# Start the backup process
 
 echo $(date "$LOG_FMT") "Starting backup of '$SOURCE_DIR' to '$BACKUP_PATH'" >> "$LOG_FILE"
 
@@ -50,13 +57,13 @@ CONFIG_BACKUP_DIR="$SOURCE_DIR/$CONFIG_BACKUP_DIR_NAME"
 rm -rf "$CONFIG_BACKUP_DIR"
 mkdir -p "$CONFIG_BACKUP_DIR"
 
-# Create a copy of the current file at /etc/fstab
+# Save a copy of the current storage mount config file
 
 if [ -f "/etc/fstab" ]; then
   cp -f "/etc/fstab" "$CONFIG_BACKUP_DIR/fstab-config.txt"
 fi
 
-# Create a copy of the current Grub config file
+# Save a copy of the current Grub config file
 
 if [ -f "/etc/default/grub" ]; then
   cp -f "/etc/default/grub" "$CONFIG_BACKUP_DIR/grub-config.txt"
@@ -72,7 +79,7 @@ fi
 
 ls -lah "$SOURCE_DIR" > "$CONFIG_BACKUP_DIR/dir-list-user.txt"
 
-# Save Pytxis Terminal config
+# Save a copy of the Pytxis Terminal config
 
 if command -v /usr/bin/ptyxis > /dev/null 2>&1 ; then
   dconf dump /org/gnome/Ptyxis/ > "$CONFIG_BACKUP_DIR/ptyxis-terminal-config.txt"

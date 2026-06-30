@@ -10,9 +10,10 @@ cd "$REPO"
 source "$REPO/bin/.helper.sh"
 OS="$(os)"
 
-if [[ "$OS" == "Ubuntu" ]]; then
+if [ "$(os_debian_based)" ]; then
 	sudo apt -qq --assume-yes install \
 		pavucontrol \
+		pulseaudio \
 		pulseaudio-module-bluetooth
 
 	sudo systemctl restart bluetooth

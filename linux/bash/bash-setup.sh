@@ -37,6 +37,7 @@ ln -s "$REPO/linux/bash/.bash_profile" "$HOME/.bash_profile"
 info "Load the customised Bash config files at the end of '$HOME/.bashrc'"
 
 echo '' >> "$HOME/.bashrc"
+echo '# Load customised Bash config, prompt and aliases' >> "$HOME/.bashrc"
 echo 'source "$HOME/.bash_profile"' >> "$HOME/.bashrc"
 
 source "$HOME/.bashrc"

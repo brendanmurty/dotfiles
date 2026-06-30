@@ -2,6 +2,7 @@
 #
 # ~/.bash_prompt
 #   - Customised shell prompt
+#   - Loaded from '~/.bash_profile'
 #		- Helpful tools:
 #			 - https://robotmoon.com/bash-prompt-generator/
 #      - https://bash-prompt-generator.org/

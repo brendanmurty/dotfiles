@@ -1,7 +1,8 @@
 #
 #
 # ~/.bash_profile
-#   - Load other Bash config files if they exist
+# 	- Requires loading in '~/.bashrc'" with: source "$HOME/.bash_profile"
+#   - Loads other Bash config files if they exist
 #   - Contains user specific tools and config
 #
 #
@@ -9,27 +10,15 @@
 # Load local environment variable file if it exists
 # 	- Expects each line in this file to look like:
 # 		export SOMETHING_API_KEY=aaa
-if [ -f "$HOME/.env.local" ]; then
-  source "$HOME/.env.local"
-fi
+
+[ -f "$HOME/.env.local" ] && source "$HOME/.env.local";
 
 # Load other Bash config files if they exist
 
-if [ -f "$HOME/.bash_aliases" ]; then
-  source "$HOME/.bash_aliases"
-fi
-
-if [ -f "$HOME/.git_bash_prompt.sh" ]; then
-  source "$HOME/.git_bash_prompt.sh"
-fi
-
-if [ -f "$HOME/.git_bash_autocomplete.sh" ]; then
-  source "$HOME/.git_bash_autocomplete.sh"
-fi
-
-if [ -f "$HOME/.bash_prompt" ]; then
-  source "$HOME/.bash_prompt"
-fi
+[ -f "$HOME/.bash_aliases" ] && "$HOME/.bash_aliases";
+[ -f "$HOME/.git_bash_prompt.sh" ] && source "$HOME/.git_bash_prompt.sh";
+[ -f "$HOME/.git_bash_autocomplete.sh" ] && source "$HOME/.git_bash_autocomplete.sh";
+[ -f "$HOME/.bash_prompt" ] && source "$HOME/.bash_prompt";
 
 # Helper function to add a dir to the PATH env var if it's not already there
 
@@ -41,48 +30,44 @@ pathadd() {
 
 # Update PATH to include user level bin directories if they exist
 
-pathadd "$HOME/bin"
-
-pathadd "$HOME/.local/bin"
-
 pathadd "/usr/local/bin"
-
+pathadd "$HOME/bin"
+pathadd "$HOME/.local/bin"
 pathadd "$HOME/.deno/bin"
-
 pathadd "$HOME/.cargo/bin"
 
-# Configure Deno if it's installed in the default location
+# Deno - Configure if it's installed to the default location
 
 if [ -f "$HOME/.deno/env" ]; then
   source "$HOME/.deno/env"
 fi
 
-# Configure FZF shell integration if it's installed
+# FZF - Configure shell integration
 
 if command -v fzf > /dev/null 2>&1 ; then
 	eval "$(fzf --bash)"
 fi
 
-# Setup a 'ujust' alias if suitable
+# Just - Setup a 'ujust' alias if appropriate
 
 if command -v just > /dev/null 2>&1 && [ -f "$HOME/justfile" ] ; then
 	alias ujust="just --justfile $HOME/justfile"
 fi
 
-# Setup Mise if it's installed to the default location
+# Mise - Configure if it's installed to the default location
 
 if command -v mise > /dev/null 2>&1 && [ -f "$HOME/.local/bin/mise" ] ; then
 	eval "$($HOME/.local/bin/mise activate bash)"
 fi
 
-# Configure NVM if it's installed to the default location
+# NVM - Configure if it's installed to the default location
 
 if [ -d "$HOME/.nvm" ]; then
   export NVM_DIR="$HOME/.nvm"
   source "$HOME/.nvm/nvm.sh" > /dev/null 2>&1
 fi
 
-# Search for a Homebrew installation and load it if found
+# Homebrew - Search for a current installation
 
 if [ -d "$HOME/.brew" ]; then
   export BREW_DIR="$HOME/.brew"
@@ -94,11 +79,12 @@ elif [ -d "/usr/local" ]; then
   export BREW_DIR="/usr/local"
 fi
 
+# Homebrew - Configure and set an appropriate alias command
+
 if [[ "$BREW_DIR" != "" ]]; then
   export HOMEBREW_RELOCATE_BUILD_PREFIX="$BREW_DIR"
   export HOMEBREW_CELLAR="$BREW_DIR/Cellar"
   export HOMEBREW_PREFIX="$BREW_DIR"
-
 	export HOMEBREW_NO_AUTO_UPDATE=1
   export HOMEBREW_NO_UPDATE_REPORT_FORMULAE=1
   export HOMEBREW_NO_UPDATE_REPORT_CASKS=1
@@ -106,15 +92,10 @@ if [[ "$BREW_DIR" != "" ]]; then
   export HOMEBREW_NO_ANALYTICS=1
 
   pathadd "$BREW_DIR/bin"
-
   alias brew="$BREW_DIR/bin/brew"
 fi
-
 
 # Set suitable user level shell variables
 
 export SHELL=$(which bash)
-
 export TERM=xterm-256color
-
-export BASH_SILENCE_DEPRECATION_WARNING=1

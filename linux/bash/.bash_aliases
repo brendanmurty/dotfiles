@@ -2,6 +2,7 @@
 #
 # ~/.bash_aliases
 #   - Custom command aliases
+#   - Loaded from '~/.bash_profile'
 #
 #
 

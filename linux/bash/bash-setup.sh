@@ -17,29 +17,24 @@ if [[ "$OS" == "Windows" ]]; then
   exit 0
 fi
 
-info 'Create backups of current Bash config files for this user'
+info "Create a backup of '$HOME/.bashrc'"
 
-[ -f "$HOME/.bash_aliases" ] && mv "$HOME/.bash_aliases" "$HOME/.bash_aliases.old"
-[ -f "$HOME/.bash_prompt" ] && mv "$HOME/.bash_prompt" "$HOME/.bash_prompt.old"
-[ -f "$HOME/.bash_profile" ] && mv "$HOME/.bash_profile" "$HOME/.bash_profile.old"
-[ -f "$HOME/.bashrc" ] && mv "$HOME/.bashrc" "$HOME/.bashrc.old"
+[ -f "$HOME/.bashrc" ] && cp "$HOME/.bashrc" "$HOME/.bashrc.old"
 
 info 'Setup Git Bash features'
 
 bash "$REPO/dev/git/git-bash-setup.sh"
 
-info 'Add symlinks to the customised Bash config files'
+info 'Add symlink to the customised Bash config file'
 
-ln -s "$REPO/linux/bash/.bash_aliases" "$HOME/.bash_aliases"
-ln -s "$REPO/linux/bash/.bash_prompt" "$HOME/.bash_prompt"
-ln -s "$REPO/linux/bash/.bash_profile" "$HOME/.bash_profile"
+ln -s "$REPO/linux/bash/bash_profile" "$HOME/.bash_custom"
 
 info "Load the customised Bash config files at the end of '$HOME/.bashrc'"
 
 echo '' >> "$HOME/.bashrc"
 echo '# Load customised Bash config, prompt and aliases' >> "$HOME/.bashrc"
-echo 'source "$HOME/.bash_profile"' >> "$HOME/.bashrc"
+echo 'source "$HOME/.bash_custom"' >> "$HOME/.bashrc"
 
 source "$HOME/.bashrc"
 
-success 'Future terminal sessions will automatically load the customised Bash config files'
+success 'Future terminal sessions will automatically load the customised Bash config file'

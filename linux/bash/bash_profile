@@ -1,9 +1,11 @@
 #
 #
 # ~/.bash_profile
-# 	- Requires loading in '~/.bashrc' with: source "$HOME/.bash_profile"
-#   - Loads other Bash config files if they exist
+# 	- Initial setup required: bash ./linux/bash/bash-setup.sh
+#   - Loads other Bash config files
 #   - Contains user specific tools and config
+#   - Adds command aliases
+#   - Sets a custom prompt style
 #
 #
 
@@ -42,19 +44,19 @@ fi
 
 # FZF - Configure shell integration
 
-if command -v fzf > /dev/null 2>&1 ; then
+if command -v fzf > /dev/null 2>&1; then
 	eval "$(fzf --bash)"
 fi
 
 # Mise - Configure if it's installed to the default location
 
-if command -v mise > /dev/null 2>&1 && [ -f "$HOME/.local/bin/mise" ] ; then
+if command -v mise > /dev/null 2>&1 && [ -f "$HOME/.local/bin/mise" ]; then
 	eval "$($HOME/.local/bin/mise activate bash)"
 fi
 
 # Just - Add 'ujust' alias if suitable
 
-if command -v just > /dev/null 2>&1 && [ -f "$HOME/justfile" ] ; then
+if [ -e "$HOME/justfile" ]; then
 	alias ujust='just --justfile "$HOME/justfile"'
 fi
 
@@ -112,7 +114,7 @@ PS1=$'\[$(tput setaf 242)\]\D{%I:%M:%S} \[$(tput setaf 247)\]\u \h\[$(tput sgr0)
 
 # Aliases - Docker
 
-if command -v docker > /dev/null 2>&1 ; then
+if command -v docker > /dev/null 2>&1; then
   alias docker-compose='docker compose'
   alias docker-up='docker compose up -d'
   alias docker-down='docker compose down'
@@ -133,6 +135,6 @@ alias hist-search='history | cut -c 8- | grep'
 
 # Aliases - Zed Editor
 
-if command -v zeditor > /dev/null 2>&1 ; then
+if command -v zeditor > /dev/null 2>&1; then
   alias zed='zeditor'
 fi

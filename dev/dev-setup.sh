@@ -28,6 +28,9 @@ bash "$REPO/dev/deno/deno-setup.sh"
 info 'Run: dev/python/python-setup.sh'
 bash "$REPO/dev/python/python-setup.sh"
 
+info 'Run: dev/rust/rust-setup.sh'
+bash "$REPO/dev/rust/rust-setup.sh"
+
 if grep -q "127.0.0.1 site.local" "/etc/hosts"; then
 	success "Found current setup for 'site.local' as an alias for 'localhost'"
 else

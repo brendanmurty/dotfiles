@@ -42,6 +42,19 @@ if [ -f "$HOME/.deno/env" ]; then
   source "$HOME/.deno/env"
 fi
 
+# Node - Configure NVM if it's installed to the default location
+
+if [ -d "$HOME/.nvm" ]; then
+  export NVM_DIR="$HOME/.nvm"
+  source "$HOME/.nvm/nvm.sh" > /dev/null 2>&1
+fi
+
+# Rust - Configure tools if they're installed to the default location
+
+if [ -d "$HOME/.cargo" ]; then
+	source "$HOME/.cargo/env" > /dev/null 2>&1
+fi
+
 # FZF - Configure shell integration
 
 if command -v fzf > /dev/null 2>&1; then
@@ -58,13 +71,6 @@ fi
 
 if [ -e "$HOME/justfile" ]; then
 	alias ujust='just --justfile "$HOME/justfile"'
-fi
-
-# NVM - Configure if it's installed to the default location
-
-if [ -d "$HOME/.nvm" ]; then
-  export NVM_DIR="$HOME/.nvm"
-  source "$HOME/.nvm/nvm.sh" > /dev/null 2>&1
 fi
 
 # Homebrew - Search for a current installation
@@ -138,3 +144,4 @@ alias hist-search='history | cut -c 8- | grep'
 if command -v zeditor > /dev/null 2>&1; then
   alias zed='zeditor'
 fi
+. "$HOME/.cargo/env"
